@@ -187,6 +187,9 @@ cython_debug/
 privatecredentials/*
 !privatecredentials/.gitkeep
 
+# Local learning plans, resume guides, and interview notes
+/personal/
+
 # Node (scripts/agui-client)
 node_modules/
 package-lock.json

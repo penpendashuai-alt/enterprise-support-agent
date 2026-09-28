@@ -1,0 +1,609 @@
+{
+  "run_date": "2026-09-28T07:02:30.151228+00:00",
+  "code_version": {
+    "base_commit": "21e2b6a2b78f2cc573514aeb9315a290d75d18fe",
+    "implementation_sha256": "592ebcd32fbf1f5f8961d742722d45c335b05f9a5e5cfc63c6f558fa9b6b78af",
+    "working_tree": "uncommitted changes may be present; fingerprint identifies implementation"
+  },
+  "model": "openai-compatible",
+  "provider_model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "mode": "real configured model; in-process FastAPI; temporary SQLite; fixed mock tools",
+  "assessment": "Automated checks cover intent, tool choice and state only. Read responses for semantic acceptance.",
+  "cases": [
+    {
+      "id": "P2-01",
+      "endpoint": "invoke",
+      "expected": "一般知识回答，无工具",
+      "turns": [
+        {
+          "input": "VPN 是什么？",
+          "intent": "general_question",
+          "entities": {
+            "service_name": null,
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": false,
+          "tool_calls": [],
+          "tool_results": [],
+          "response": "VPN（Virtual Private Network，虚拟专用网络）是一种通过公共网络（如互联网）建立加密隧道，让设备安全访问内部网络资源的技术。\n\n主要作用：\n- **加密传输**：保护数据在传输过程中不被窃听或篡改。\n- **远程访问**：让员工从外部安全访问企业内网系统或文件。\n- **隐藏真实地址**：通过 VPN 服务器转发流量，一定程度上隐藏真实 IP。\n\n常见场景包括远程办公、访问公司内部系统、连接公共 Wi-Fi 时增强安全性等。"
+        }
+      ],
+      "checks": {
+        "expected_fact": true,
+        "no_tool_error": true,
+        "turns_completed": true,
+        "intent": true,
+        "tools": true,
+        "mock_disclosure": true,
+        "no_submission": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "P2-02",
+      "endpoint": "stream",
+      "expected": "未知企业政策说明缺少依据",
+      "turns": [
+        {
+          "input": "我们公司规定 VPN 每天最多能用几个小时？",
+          "intent": "general_question",
+          "entities": {
+            "service_name": null,
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": false,
+          "tool_calls": [],
+          "tool_results": [],
+          "response": "我无法查询到贵公司关于 VPN 每日使用时长上限的具体规定，这类制度需要以公司正式发布的 IT/安全政策或员工手册为准。\n\n建议你：\n- 查阅公司内部知识库或 IT 政策文档；\n- 或联系 IT 支持/网络管理员确认。\n\n如果你能提供相关正式文档或政策名称，我可以帮你解读。"
+        }
+      ],
+      "checks": {
+        "expected_fact": true,
+        "no_tool_error": true,
+        "turns_completed": true,
+        "intent": true,
+        "tools": true,
+        "mock_disclosure": true,
+        "no_submission": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "P2-03",
+      "endpoint": "invoke",
+      "expected": "模拟 GitHub 正常",
+      "turns": [
+        {
+          "input": "GitHub 现在有故障吗？",
+          "intent": "service_status",
+          "entities": {
+            "service_name": "GitHub",
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": false,
+          "tool_calls": [
+            {
+              "name": "query_service_status",
+              "args": {
+                "service_name": "GitHub"
+              },
+              "id": "call_b29c82436542403d837b841f",
+              "type": "tool_call"
+            }
+          ],
+          "tool_results": [
+            {
+              "status": "success",
+              "data": {
+                "service_name": "GitHub",
+                "state": "operational",
+                "detail": "模拟服务正常。"
+              },
+              "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+              "is_mock": true
+            }
+          ],
+          "response": "根据模拟数据查询结果，GitHub 目前状态正常（operational），没有故障。此结果为固定模拟数据，不代表真实系统状态。"
+        }
+      ],
+      "checks": {
+        "expected_fact": true,
+        "no_tool_error": true,
+        "turns_completed": true,
+        "intent": true,
+        "tools": true,
+        "mock_disclosure": true,
+        "no_submission": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "P2-04",
+      "endpoint": "stream",
+      "expected": "模拟邮箱发送延迟",
+      "turns": [
+        {
+          "input": "邮箱服务现在正常吗？",
+          "intent": "service_status",
+          "entities": {
+            "service_name": "邮箱服务",
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": false,
+          "tool_calls": [
+            {
+              "name": "query_service_status",
+              "args": {
+                "service_name": "邮箱"
+              },
+              "id": "call_4fc9888b2c60468c8930249f",
+              "type": "tool_call"
+            }
+          ],
+          "tool_results": [
+            {
+              "status": "success",
+              "data": {
+                "service_name": "邮箱",
+                "state": "degraded",
+                "detail": "模拟邮件发送延迟。"
+              },
+              "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+              "is_mock": true
+            }
+          ],
+          "response": "查询结果（模拟数据，仅用于演示，不代表真实系统）：\n\n**邮箱服务当前状态：性能下降（degraded）**\n- 详情：模拟邮件发送延迟。\n\n即邮箱服务并非完全正常，存在邮件发送延迟问题。如你有具体的收发邮件异常，可以提供更多信息以便进一步排查。"
+        }
+      ],
+      "checks": {
+        "expected_fact": true,
+        "no_tool_error": true,
+        "turns_completed": true,
+        "intent": true,
+        "tools": true,
+        "mock_disclosure": true,
+        "no_submission": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "P2-05",
+      "endpoint": "invoke",
+      "expected": "未覆盖服务，不猜测状态",
+      "turns": [
+        {
+          "input": "Zoom 服务现在正常吗？",
+          "intent": "service_status",
+          "entities": {
+            "service_name": "Zoom",
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": false,
+          "tool_calls": [
+            {
+              "name": "query_service_status",
+              "args": {
+                "service_name": "Zoom"
+              },
+              "id": "call_ab0c138e72884c389c198ecc",
+              "type": "tool_call"
+            }
+          ],
+          "tool_results": [
+            {
+              "status": "not_found",
+              "data": null,
+              "message": "模拟数据未覆盖该服务。",
+              "is_mock": true
+            }
+          ],
+          "response": "查无结果：模拟数据中未覆盖 Zoom 服务，因此无法确认其当前状态（不代表服务正常或异常）。\n\n当前工具仅支持查询 GitHub、VPN、邮箱/email 和 Jira 的固定模拟状态。如需了解 Zoom 状态，建议：\n\n1. 确认您是否可提供其他可查询的服务名称（如 VPN、邮箱等）。\n2. 直接访问 Zoom 官方状态页或联系企业网络管理员确认。"
+        }
+      ],
+      "checks": {
+        "expected_fact": true,
+        "no_tool_error": true,
+        "turns_completed": true,
+        "intent": true,
+        "tools": true,
+        "mock_disclosure": true,
+        "no_submission": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "P2-06",
+      "endpoint": "stream",
+      "expected": "先澄清，再查询 GitHub",
+      "turns": [
+        {
+          "input": "服务挂了吗？",
+          "intent": "service_status",
+          "entities": {
+            "service_name": null,
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": true,
+          "tool_calls": [],
+          "tool_results": [],
+          "response": "你想查询哪个服务的状态？例如 GitHub、VPN、邮箱或 Jira。"
+        },
+        {
+          "input": "GitHub",
+          "intent": "service_status",
+          "entities": {
+            "service_name": "GitHub",
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": false,
+          "tool_calls": [
+            {
+              "name": "query_service_status",
+              "args": {
+                "service_name": "GitHub"
+              },
+              "id": "call_ddc0a3aa9a594162b439805d",
+              "type": "tool_call"
+            }
+          ],
+          "tool_results": [
+            {
+              "status": "success",
+              "data": {
+                "service_name": "GitHub",
+                "state": "operational",
+                "detail": "模拟服务正常。"
+              },
+              "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+              "is_mock": true
+            }
+          ],
+          "response": "GitHub 服务状态（模拟数据）：运行正常（operational）。\n\n如需进一步排查其他服务或问题，请告知。"
+        }
+      ],
+      "checks": {
+        "expected_fact": true,
+        "no_tool_error": true,
+        "turns_completed": true,
+        "intent": true,
+        "tools": true,
+        "mock_disclosure": true,
+        "no_submission": true,
+        "clarification": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "P2-07",
+      "endpoint": "invoke",
+      "expected": "使用 VPN-809 固定条目",
+      "turns": [
+        {
+          "input": "VPN 连不上，报错 809，怎么排查？",
+          "intent": null,
+          "entities": {
+            "service_name": null,
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": true,
+          "tool_calls": [],
+          "tool_results": [],
+          "response": "暂时无法可靠识别请求，请补充或重述服务名和问题。若持续失败，请检查模型是否支持结构化输出。"
+        }
+      ],
+      "checks": {
+        "expected_fact": false,
+        "no_tool_error": true,
+        "turns_completed": false,
+        "intent": false,
+        "tools": false,
+        "mock_disclosure": true,
+        "no_submission": true
+      },
+      "automated_pass": false
+    },
+    {
+      "id": "P2-08",
+      "endpoint": "stream",
+      "expected": "使用 Windows 11 设备信息和故障条目",
+      "turns": [
+        {
+          "input": "设备 DEV-001 上 VPN 报错 809，帮我排查。",
+          "intent": null,
+          "entities": {
+            "service_name": null,
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": true,
+          "tool_calls": [],
+          "tool_results": [],
+          "response": "暂时无法可靠识别请求，请补充或重述服务名和问题。若持续失败，请检查模型是否支持结构化输出。"
+        }
+      ],
+      "checks": {
+        "expected_fact": false,
+        "no_tool_error": true,
+        "turns_completed": false,
+        "intent": false,
+        "tools": false,
+        "mock_disclosure": true,
+        "no_submission": true
+      },
+      "automated_pass": false
+    },
+    {
+      "id": "P2-09",
+      "endpoint": "invoke",
+      "expected": "设备查无结果，不编造配置",
+      "turns": [
+        {
+          "input": "设备 DEV-999 上 VPN 连不上，请查设备信息帮我排查。",
+          "intent": null,
+          "entities": {
+            "service_name": null,
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": true,
+          "tool_calls": [],
+          "tool_results": [],
+          "response": "暂时无法可靠识别请求，请补充或重述服务名和问题。若持续失败，请检查模型是否支持结构化输出。"
+        }
+      ],
+      "checks": {
+        "expected_fact": false,
+        "no_tool_error": true,
+        "turns_completed": false,
+        "intent": false,
+        "tools": false,
+        "mock_disclosure": true,
+        "no_submission": true
+      },
+      "automated_pass": false
+    },
+    {
+      "id": "P2-10",
+      "endpoint": "stream",
+      "expected": "模拟工单处理中",
+      "turns": [
+        {
+          "input": "查一下 INC-1001 的进度。",
+          "intent": null,
+          "entities": {
+            "service_name": null,
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": true,
+          "tool_calls": [],
+          "tool_results": [],
+          "response": "暂时无法可靠识别请求，请补充或重述服务名和问题。若持续失败，请检查模型是否支持结构化输出。"
+        }
+      ],
+      "checks": {
+        "expected_fact": false,
+        "no_tool_error": true,
+        "turns_completed": false,
+        "intent": false,
+        "tools": false,
+        "mock_disclosure": true,
+        "no_submission": true
+      },
+      "automated_pass": false
+    },
+    {
+      "id": "P2-11",
+      "endpoint": "invoke",
+      "expected": "模拟工单查无结果",
+      "turns": [
+        {
+          "input": "查一下 INC-9999 的进度。",
+          "intent": null,
+          "entities": {
+            "service_name": null,
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": true,
+          "tool_calls": [],
+          "tool_results": [],
+          "response": "暂时无法可靠识别请求，请补充或重述服务名和问题。若持续失败，请检查模型是否支持结构化输出。"
+        }
+      ],
+      "checks": {
+        "expected_fact": false,
+        "no_tool_error": true,
+        "turns_completed": false,
+        "intent": false,
+        "tools": false,
+        "mock_disclosure": true,
+        "no_submission": true
+      },
+      "automated_pass": false
+    },
+    {
+      "id": "P2-12",
+      "endpoint": "stream",
+      "expected": "收集信息，明确尚未提交",
+      "turns": [
+        {
+          "input": "帮我提工单。",
+          "intent": null,
+          "entities": {
+            "service_name": null,
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": true,
+          "tool_calls": [],
+          "tool_results": [],
+          "response": "暂时无法可靠识别请求，请补充或重述服务名和问题。若持续失败，请检查模型是否支持结构化输出。"
+        }
+      ],
+      "checks": {
+        "expected_fact": true,
+        "no_tool_error": true,
+        "turns_completed": false,
+        "intent": false,
+        "tools": true,
+        "mock_disclosure": true,
+        "no_submission": false
+      },
+      "automated_pass": false
+    },
+    {
+      "id": "P2-13",
+      "endpoint": "invoke",
+      "expected": "优先创建诉求，保留故障，尚未提交",
+      "turns": [
+        {
+          "input": "VPN 连不上，帮我提工单。",
+          "intent": null,
+          "entities": {
+            "service_name": null,
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": true,
+          "tool_calls": [],
+          "tool_results": [],
+          "response": "暂时无法可靠识别请求，请补充或重述服务名和问题。若持续失败，请检查模型是否支持结构化输出。"
+        }
+      ],
+      "checks": {
+        "expected_fact": true,
+        "no_tool_error": true,
+        "turns_completed": false,
+        "intent": false,
+        "tools": true,
+        "mock_disclosure": true,
+        "no_submission": false
+      },
+      "automated_pass": false
+    },
+    {
+      "id": "P2-14",
+      "endpoint": "stream",
+      "expected": "切换邮箱，不沿用 GitHub 状态",
+      "turns": [
+        {
+          "input": "GitHub 现在正常吗？",
+          "intent": null,
+          "entities": {
+            "service_name": null,
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": true,
+          "tool_calls": [],
+          "tool_results": [],
+          "response": "暂时无法可靠识别请求，请补充或重述服务名和问题。若持续失败，请检查模型是否支持结构化输出。"
+        },
+        {
+          "input": "那邮箱呢？",
+          "intent": null,
+          "entities": {
+            "service_name": null,
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": true,
+          "tool_calls": [],
+          "tool_results": [],
+          "response": "暂时无法可靠识别请求，请补充或重述服务名和问题。若持续失败，请检查模型是否支持结构化输出。"
+        }
+      ],
+      "automated_pass": false,
+      "error_type": "AttributeError"
+    },
+    {
+      "id": "P2-15",
+      "endpoint": "invoke",
+      "expected": "切换知识问答，清理工单实体",
+      "turns": [
+        {
+          "input": "查 INC-1001 的进度。",
+          "intent": null,
+          "entities": {
+            "service_name": null,
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": true,
+          "tool_calls": [],
+          "tool_results": [],
+          "response": "暂时无法可靠识别请求，请补充或重述服务名和问题。若持续失败，请检查模型是否支持结构化输出。"
+        },
+        {
+          "input": "VPN 是什么？",
+          "intent": null,
+          "entities": {
+            "service_name": null,
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": true,
+          "tool_calls": [],
+          "tool_results": [],
+          "response": "暂时无法可靠识别请求，请补充或重述服务名和问题。若持续失败，请检查模型是否支持结构化输出。"
+        }
+      ],
+      "checks": {
+        "expected_fact": true,
+        "no_tool_error": true,
+        "turns_completed": false,
+        "intent": false,
+        "tools": true,
+        "mock_disclosure": true,
+        "no_submission": true,
+        "ticket_cleared": true
+      },
+      "automated_pass": false
+    }
+  ]
+}

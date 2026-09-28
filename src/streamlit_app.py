@@ -266,8 +266,23 @@ async def main() -> None:
     # Draw existing messages
     messages: list[ChatMessage] = st.session_state.messages
 
+    if agent_client.agent == "support-agent":
+        st.info(
+            "企业 IT 支持演示：服务、设备和工单查询均使用固定模拟数据，不代表实时状态。工单创建仅收集信息，尚不提交。"
+        )
+
     if len(messages) == 0:
         match agent_client.agent:
+            case "support-agent":
+                WELCOME = (
+                    "你好，我是 Enterprise Support Agent，可以解答 IT 问题、协助排障，"
+                    "并查询模拟服务、设备和工单。\n\n"
+                    "试试：\n"
+                    "- GitHub 现在有故障吗？\n"
+                    "- VPN 连不上，报错 809，我的设备是 DEV-001。\n"
+                    "- 查一下 INC-1001 的进度。\n"
+                    "- VPN 连不上，帮我提工单。"
+                )
             case "chatbot":
                 WELCOME = "Hello! I'm a simple chatbot. Ask me anything!"
             case "interrupt-agent":

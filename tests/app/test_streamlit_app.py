@@ -9,6 +9,21 @@ from schema import ChatHistory, ChatMessage, ThreadSummary, UserThreads
 from schema.models import OpenAIModelName
 
 
+def test_support_welcome_and_mock_notice(mock_agent_client):
+    from schema import AgentInfo
+
+    mock_agent_client.agent = "support-agent"
+    mock_agent_client.info.default_agent = "support-agent"
+    mock_agent_client.info.agents.append(
+        AgentInfo(key="support-agent", description="Enterprise IT support")
+    )
+    at = AppTest.from_file("../../src/streamlit_app.py", default_timeout=15).run()
+    assert not at.exception
+    assert "Enterprise Support Agent" in at.chat_message[0].markdown[0].value
+    assert "INC-1001" in at.chat_message[0].markdown[0].value
+    assert any("固定模拟数据" in notice.value for notice in at.info)
+
+
 def test_app_simple_non_streaming(mock_agent_client):
     """Test the full app - happy path"""
     at = AppTest.from_file("../../src/streamlit_app.py").run()

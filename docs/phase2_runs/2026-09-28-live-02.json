@@ -1,0 +1,157 @@
+{
+  "run_date": "2026-09-28T06:57:22.715441+00:00",
+  "code_version": {
+    "base_commit": "21e2b6a2b78f2cc573514aeb9315a290d75d18fe",
+    "implementation_sha256": "20d863d68bc2238cb6538669b9f35449c348b04046fe456a629d27c179e15a42",
+    "working_tree": "uncommitted changes may be present; fingerprint identifies implementation"
+  },
+  "model": "openai-compatible",
+  "provider_model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "mode": "real configured model; in-process FastAPI; temporary SQLite; fixed mock tools",
+  "assessment": "Automated checks cover intent, tool choice and state only. Read responses for semantic acceptance.",
+  "cases": [
+    {
+      "id": "P2-03",
+      "endpoint": "invoke",
+      "expected": "模拟 GitHub 正常",
+      "turns": [
+        {
+          "input": "GitHub 现在有故障吗？",
+          "intent": "service_status",
+          "entities": {
+            "service_name": "GitHub",
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": false,
+          "tool_calls": [
+            {
+              "name": "query_service_status",
+              "args": {
+                "service_name": "GitHub"
+              },
+              "id": "call_ef331322922d492db17bf7b6",
+              "type": "tool_call"
+            }
+          ],
+          "tool_results": [
+            {
+              "status": "success",
+              "data": {
+                "service_name": "GitHub",
+                "state": "operational",
+                "detail": "模拟服务正常。"
+              },
+              "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+              "is_mock": true
+            }
+          ],
+          "response": "根据模拟数据查询结果，GitHub 目前状态为**正常（operational）**，暂无故障记录。\n\n需要说明：此结果来自固定模拟数据，仅用于演示，不代表真实系统实时状态。"
+        }
+      ],
+      "checks": {
+        "intent": true,
+        "tools": true,
+        "mock_disclosure": true,
+        "no_submission": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "P2-06",
+      "endpoint": "stream",
+      "expected": "先澄清，再查询 GitHub",
+      "turns": [
+        {
+          "input": "服务挂了吗？",
+          "intent": "service_status",
+          "entities": {
+            "service_name": null,
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": true,
+          "tool_calls": [],
+          "tool_results": [],
+          "response": "你想查询哪个服务的状态？例如 GitHub、VPN、邮箱或 Jira。"
+        },
+        {
+          "input": "GitHub",
+          "intent": "service_status",
+          "entities": {
+            "service_name": "GitHub",
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": false,
+          "tool_calls": [
+            {
+              "name": "query_service_status",
+              "args": {
+                "service_name": "GitHub"
+              },
+              "id": "call_5d5bcdfb439e4db8b3d45929",
+              "type": "tool_call"
+            }
+          ],
+          "tool_results": [
+            {
+              "status": "success",
+              "data": {
+                "service_name": "GitHub",
+                "state": "operational",
+                "detail": "模拟服务正常。"
+              },
+              "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+              "is_mock": true
+            }
+          ],
+          "response": "GitHub 服务状态（模拟数据）：**运行正常（operational）**。\n\n说明：以上为固定模拟数据，仅用于演示，不代表真实系统状态。"
+        }
+      ],
+      "checks": {
+        "intent": true,
+        "tools": true,
+        "mock_disclosure": true,
+        "no_submission": true,
+        "clarification": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "P2-13",
+      "endpoint": "invoke",
+      "expected": "优先创建诉求，保留故障，尚未提交",
+      "turns": [
+        {
+          "input": "VPN 连不上，帮我提工单。",
+          "intent": "ticket_request",
+          "entities": {
+            "service_name": "VPN",
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": "VPN 连不上",
+            "ticket_action": "create"
+          },
+          "needs_clarification": false,
+          "tool_calls": [],
+          "tool_results": [],
+          "response": "已在本次对话中收集问题描述：VPN 连不上\n请补充发生时间、影响范围和已尝试的排查步骤。本阶段仅收集信息，工单尚未提交，也没有生成工单编号。"
+        }
+      ],
+      "checks": {
+        "intent": true,
+        "tools": true,
+        "mock_disclosure": true,
+        "no_submission": true
+      },
+      "automated_pass": true
+    }
+  ]
+}

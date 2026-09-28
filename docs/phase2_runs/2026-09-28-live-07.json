@@ -1,0 +1,863 @@
+{
+  "run_date": "2026-09-28T07:29:43.232240+00:00",
+  "code_version": {
+    "base_commit": "21e2b6a2b78f2cc573514aeb9315a290d75d18fe",
+    "implementation_sha256": "79f07d75acfcf6c0c469e17c2a51583bc7233df073dd7fc0a9c7cb6b67c660a9",
+    "working_tree": "uncommitted changes may be present; fingerprint identifies implementation"
+  },
+  "model": "openai-compatible",
+  "provider_model": "deepseek-v4-pro",
+  "mode": "real configured model; in-process FastAPI; temporary SQLite; fixed mock tools",
+  "assessment": "Automated checks cover intent, tool choice and state only. Read responses for semantic acceptance.",
+  "cases": [
+    {
+      "id": "P2-01",
+      "endpoint": "invoke",
+      "expected": "一般知识回答，无工具",
+      "turns": [
+        {
+          "input": "VPN 是什么？",
+          "intent": "general_question",
+          "entities": {
+            "service_name": null,
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": false,
+          "tool_calls": [],
+          "tool_results": [],
+          "response": "VPN（虚拟专用网络）是一种通过加密隧道在公共网络上建立安全连接的技术，用于保护数据传输、隐藏真实 IP 并访问内部网络资源。"
+        }
+      ],
+      "checks": {
+        "expected_fact": true,
+        "no_tool_error": true,
+        "turns_completed": true,
+        "intent": true,
+        "tools": true,
+        "mock_disclosure": true,
+        "no_submission": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "P2-02",
+      "endpoint": "stream",
+      "expected": "未知企业政策说明缺少依据",
+      "turns": [
+        {
+          "input": "我们公司规定 VPN 每天最多能用几个小时？",
+          "intent": "general_question",
+          "entities": {
+            "service_name": null,
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": false,
+          "tool_calls": [],
+          "tool_results": [],
+          "response": "我没有查到公司关于 VPN 每日使用时长上限的具体规定，因此不能确认“每天最多能用几个小时”。\n\n建议你提供公司相关的正式制度文档或通知，我可以帮你据此核对；或者联系 IT/网络管理员确认当前 VPN 使用政策。"
+        }
+      ],
+      "checks": {
+        "expected_fact": true,
+        "no_tool_error": true,
+        "turns_completed": true,
+        "intent": true,
+        "tools": true,
+        "mock_disclosure": true,
+        "no_submission": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "P2-03",
+      "endpoint": "invoke",
+      "expected": "模拟 GitHub 正常",
+      "turns": [
+        {
+          "input": "GitHub 现在有故障吗？",
+          "intent": "service_status",
+          "entities": {
+            "service_name": "GitHub",
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": false,
+          "tool_calls": [
+            {
+              "name": "query_service_status",
+              "args": {
+                "service_name": "GitHub"
+              },
+              "id": "call_00_GPsHCp9UlYHtIHBhE4rj3381",
+              "type": "tool_call"
+            }
+          ],
+          "tool_results": [
+            {
+              "status": "success",
+              "data": {
+                "service_name": "GitHub",
+                "state": "operational",
+                "detail": "模拟服务正常。"
+              },
+              "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+              "is_mock": true
+            }
+          ],
+          "response": "根据模拟数据，GitHub 当前状态为 **operational（正常运行）**，暂无故障。"
+        }
+      ],
+      "checks": {
+        "expected_fact": true,
+        "no_tool_error": true,
+        "turns_completed": true,
+        "intent": true,
+        "tools": true,
+        "mock_disclosure": true,
+        "no_submission": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "P2-04",
+      "endpoint": "stream",
+      "expected": "模拟邮箱发送延迟",
+      "turns": [
+        {
+          "input": "邮箱服务现在正常吗？",
+          "intent": "service_status",
+          "entities": {
+            "service_name": "邮箱服务",
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": false,
+          "tool_calls": [
+            {
+              "name": "query_service_status",
+              "args": {
+                "service_name": "邮箱服务"
+              },
+              "id": "call_00_y25HvGlGjAOdKIwIN74P3033",
+              "type": "tool_call"
+            }
+          ],
+          "tool_results": [
+            {
+              "status": "success",
+              "data": {
+                "service_name": "邮箱",
+                "state": "degraded",
+                "detail": "模拟邮件发送延迟。"
+              },
+              "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+              "is_mock": true
+            }
+          ],
+          "response": "根据模拟数据，邮箱服务当前处于**降级（degraded）**状态，具体表现为邮件发送延迟。\n\n如需进一步排查，建议联系管理员确认邮件队列情况。"
+        }
+      ],
+      "checks": {
+        "expected_fact": true,
+        "no_tool_error": true,
+        "turns_completed": true,
+        "intent": true,
+        "tools": true,
+        "mock_disclosure": true,
+        "no_submission": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "P2-05",
+      "endpoint": "invoke",
+      "expected": "未覆盖服务，不猜测状态",
+      "turns": [
+        {
+          "input": "Zoom 服务现在正常吗？",
+          "intent": "service_status",
+          "entities": {
+            "service_name": "Zoom",
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": false,
+          "tool_calls": [
+            {
+              "name": "query_service_status",
+              "args": {
+                "service_name": "Zoom"
+              },
+              "id": "call_00_2fUD1uaEZ8JLIYuBC20V9239",
+              "type": "tool_call"
+            }
+          ],
+          "tool_results": [
+            {
+              "status": "not_found",
+              "data": null,
+              "message": "模拟数据未覆盖该服务。",
+              "is_mock": true
+            }
+          ],
+          "response": "查询结果：模拟数据未覆盖 Zoom 服务，无法确认其当前状态。\n\n如需了解 Zoom 状态，建议：\n- 参考 Zoom 官方状态页（status.zoom.us）\n- 或联系企业网络/协作平台管理员确认\n\n如需查询其他已覆盖的服务（如 GitHub、VPN、邮箱、Jira），请告诉我服务名称。"
+        }
+      ],
+      "checks": {
+        "expected_fact": true,
+        "no_tool_error": true,
+        "turns_completed": true,
+        "intent": true,
+        "tools": true,
+        "mock_disclosure": true,
+        "no_submission": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "P2-06",
+      "endpoint": "stream",
+      "expected": "先澄清，再查询 GitHub",
+      "turns": [
+        {
+          "input": "服务挂了吗？",
+          "intent": "service_status",
+          "entities": {
+            "service_name": null,
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": true,
+          "tool_calls": [],
+          "tool_results": [],
+          "response": "你想查询哪个服务的状态？例如 GitHub、VPN、邮箱或 Jira。"
+        },
+        {
+          "input": "GitHub",
+          "intent": "service_status",
+          "entities": {
+            "service_name": "GitHub",
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": false,
+          "tool_calls": [
+            {
+              "name": "query_service_status",
+              "args": {
+                "service_name": "GitHub"
+              },
+              "id": "call_00_eRtvfETu98Pa1LR8GcCp2488",
+              "type": "tool_call"
+            }
+          ],
+          "tool_results": [
+            {
+              "status": "success",
+              "data": {
+                "service_name": "GitHub",
+                "state": "operational",
+                "detail": "模拟服务正常。"
+              },
+              "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+              "is_mock": true
+            }
+          ],
+          "response": "GitHub 服务状态（模拟数据）：**正常（operational）**，服务运行正常。"
+        }
+      ],
+      "checks": {
+        "expected_fact": true,
+        "no_tool_error": true,
+        "turns_completed": true,
+        "intent": true,
+        "tools": true,
+        "mock_disclosure": true,
+        "no_submission": true,
+        "clarification": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "P2-07",
+      "endpoint": "invoke",
+      "expected": "使用 VPN-809 固定条目",
+      "turns": [
+        {
+          "input": "VPN 连不上，报错 809，怎么排查？",
+          "intent": "troubleshooting",
+          "entities": {
+            "service_name": "VPN",
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": "VPN 连不上，报错 809",
+            "ticket_action": null
+          },
+          "needs_clarification": false,
+          "tool_calls": [
+            {
+              "name": "query_service_status",
+              "args": {
+                "service_name": "VPN"
+              },
+              "id": "call_00_J2zWLP9U48jp63I4euVu7368",
+              "type": "tool_call"
+            },
+            {
+              "name": "search_known_issue",
+              "args": {
+                "query": "VPN 报错 809"
+              },
+              "id": "call_01_FjuX2zAfMII5bI2qyJku0574",
+              "type": "tool_call"
+            }
+          ],
+          "tool_results": [
+            {
+              "status": "success",
+              "data": {
+                "service_name": "VPN",
+                "state": "operational",
+                "detail": "模拟网关正常。"
+              },
+              "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+              "is_mock": true
+            },
+            {
+              "status": "success",
+              "data": [
+                {
+                  "issue_id": "VPN-809",
+                  "title": "Windows VPN 错误 809",
+                  "steps": [
+                    "确认网络连接正常。",
+                    "核对 VPN 地址及协议。",
+                    "请管理员检查 UDP 500/4500 的网络策略。"
+                  ]
+                }
+              ],
+              "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+              "is_mock": true
+            }
+          ],
+          "response": "根据查询结果（均为模拟数据）：\n\n**服务状态**：VPN 网关显示 operational（正常），说明服务端未发现异常。\n\n**已知问题 VPN-809（Windows VPN 错误 809）建议步骤**：\n1. 确认本机网络连接正常。\n2. 核对 VPN 地址及协议（IKEv2/L2TP 等）配置是否正确。\n3. 请网络管理员检查 UDP 500/4500 端口的网络策略是否放行。\n\n**一般补充建议**（非企业制度，供参考）：\n- 错误 809 常见于 IKEv2 协商失败，多与 NAT 或防火墙拦截 UDP 500/4500 有关。\n- 可尝试切换网络（如手机热点）验证是否为当前网络环境导致。\n- 涉及网络策略调整请务必联系管理员核查，不要自行关闭防火墙或安全软件。\n\n如需进一步排查，请提供设备编号（如 DEV-XXX），我可以查询设备配置信息。"
+        }
+      ],
+      "checks": {
+        "expected_fact": true,
+        "no_tool_error": true,
+        "turns_completed": true,
+        "intent": true,
+        "tools": true,
+        "mock_disclosure": true,
+        "no_submission": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "P2-08",
+      "endpoint": "stream",
+      "expected": "使用 Windows 11 设备信息和故障条目",
+      "turns": [
+        {
+          "input": "设备 DEV-001 上 VPN 报错 809，帮我排查。",
+          "intent": "troubleshooting",
+          "entities": {
+            "service_name": "VPN",
+            "device_id": "DEV-001",
+            "ticket_id": null,
+            "issue_description": "VPN 报错 809",
+            "ticket_action": null
+          },
+          "needs_clarification": false,
+          "tool_calls": [
+            {
+              "name": "query_service_status",
+              "args": {
+                "service_name": "VPN"
+              },
+              "id": "call_00_rkyarAOCnRVmISlGKzQY3431",
+              "type": "tool_call"
+            },
+            {
+              "name": "get_device_information",
+              "args": {
+                "device_id": "DEV-001"
+              },
+              "id": "call_01_kWkdVPl8SGxERQ514dLU7435",
+              "type": "tool_call"
+            },
+            {
+              "name": "search_known_issue",
+              "args": {
+                "query": "VPN 报错 809"
+              },
+              "id": "call_02_CvbU0aYgPeaYBrZW61vJ0761",
+              "type": "tool_call"
+            }
+          ],
+          "tool_results": [
+            {
+              "status": "success",
+              "data": {
+                "service_name": "VPN",
+                "state": "operational",
+                "detail": "模拟网关正常。"
+              },
+              "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+              "is_mock": true
+            },
+            {
+              "status": "success",
+              "data": {
+                "device_id": "DEV-001",
+                "os": "Windows 11",
+                "vpn_client": "5.0",
+                "type": "laptop"
+              },
+              "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+              "is_mock": true
+            },
+            {
+              "status": "success",
+              "data": [
+                {
+                  "issue_id": "VPN-809",
+                  "title": "Windows VPN 错误 809",
+                  "steps": [
+                    "确认网络连接正常。",
+                    "核对 VPN 地址及协议。",
+                    "请管理员检查 UDP 500/4500 的网络策略。"
+                  ]
+                }
+              ],
+              "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+              "is_mock": true
+            }
+          ],
+          "response": "排查结果如下（均为模拟数据）：\n\n**服务状态**：VPN 网关状态为 operational（模拟网关正常）。\n\n**设备信息**：DEV-001 为 Windows 11 笔记本，VPN 客户端版本 5.0。\n\n**已知问题匹配**：找到条目 VPN-809「Windows VPN 错误 809」，建议步骤：\n1. 确认网络连接正常。\n2. 核对 VPN 地址及协议。\n3. 请管理员检查 UDP 500/4500 的网络策略。\n\n**一般建议**（基于错误 809 的常见原因）：\n- 错误 809 通常表示 IKE/ESP 流量被中间设备（路由器、防火墙或运营商）阻断，或 NAT 穿透失败。\n- 请先确认当前网络（如家庭/公共 Wi-Fi）能正常访问外网。\n- 尝试切换网络（如手机热点）验证是否与本地网络有关。\n- 涉及网络策略（UDP 500/4500 放行）请交由网络管理员核查，不要自行关闭防火墙或绕过安全策略。\n\n如需进一步排查，可提供 VPN 服务器地址或具体报错截图。"
+        }
+      ],
+      "checks": {
+        "expected_fact": true,
+        "no_tool_error": true,
+        "turns_completed": true,
+        "intent": true,
+        "tools": true,
+        "mock_disclosure": true,
+        "no_submission": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "P2-09",
+      "endpoint": "invoke",
+      "expected": "设备查无结果，不编造配置",
+      "turns": [
+        {
+          "input": "设备 DEV-999 上 VPN 连不上，请查设备信息帮我排查。",
+          "intent": "troubleshooting",
+          "entities": {
+            "service_name": null,
+            "device_id": "DEV-999",
+            "ticket_id": null,
+            "issue_description": "VPN 连不上",
+            "ticket_action": null
+          },
+          "needs_clarification": false,
+          "tool_calls": [
+            {
+              "name": "get_device_information",
+              "args": {
+                "device_id": "DEV-999"
+              },
+              "id": "call_00_t8lt6ofOFrEHEWSv8wRN5937",
+              "type": "tool_call"
+            },
+            {
+              "name": "search_known_issue",
+              "args": {
+                "query": "VPN 连不上"
+              },
+              "id": "call_01_CeFUb3M7egB5Qethbon20937",
+              "type": "tool_call"
+            }
+          ],
+          "tool_results": [
+            {
+              "status": "not_found",
+              "data": null,
+              "message": "未找到该模拟设备。",
+              "is_mock": true
+            },
+            {
+              "status": "success",
+              "data": [
+                {
+                  "issue_id": "VPN-809",
+                  "title": "Windows VPN 错误 809",
+                  "steps": [
+                    "确认网络连接正常。",
+                    "核对 VPN 地址及协议。",
+                    "请管理员检查 UDP 500/4500 的网络策略。"
+                  ]
+                }
+              ],
+              "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+              "is_mock": true
+            }
+          ],
+          "response": "查询结果如下（均为模拟数据）：\n\n1. **设备信息**：未找到编号为 DEV-999 的设备，无法获取该设备的配置信息。请确认设备编号是否正确。\n\n2. **已知问题**：匹配到一条模拟故障条目 VPN-809「Windows VPN 错误 809」，建议步骤：\n   - 确认网络连接正常；\n   - 核对 VPN 地址及协议；\n   - 请管理员检查 UDP 500/4500 的网络策略。\n\n由于设备编号查无结果，我无法针对该设备给出具体配置判断。建议你补充正确的设备编号；同时可先按上述一般排查步骤核对 VPN 地址、协议和网络策略。涉及网络策略部分请管理员核查，不要自行关闭防火墙或安全软件。"
+        }
+      ],
+      "checks": {
+        "expected_fact": true,
+        "no_tool_error": true,
+        "turns_completed": true,
+        "intent": true,
+        "tools": true,
+        "mock_disclosure": true,
+        "no_submission": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "P2-10",
+      "endpoint": "stream",
+      "expected": "模拟工单处理中",
+      "turns": [
+        {
+          "input": "查一下 INC-1001 的进度。",
+          "intent": "ticket_request",
+          "entities": {
+            "service_name": null,
+            "device_id": null,
+            "ticket_id": "INC-1001",
+            "issue_description": null,
+            "ticket_action": "query"
+          },
+          "needs_clarification": false,
+          "tool_calls": [
+            {
+              "name": "query_existing_ticket",
+              "args": {
+                "ticket_id": "INC-1001"
+              },
+              "id": "call_00_F09XLXpKX2k765FEGJUz3323",
+              "type": "tool_call"
+            }
+          ],
+          "tool_results": [
+            {
+              "status": "success",
+              "data": {
+                "ticket_id": "INC-1001",
+                "title": "VPN 连接失败",
+                "state": "in_progress",
+                "progress": "模拟网络支持组正在检查 VPN 配置。"
+              },
+              "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+              "is_mock": true
+            }
+          ],
+          "response": "工单 **INC-1001** 的进度如下（模拟数据）：\n\n- **标题**：VPN 连接失败\n- **状态**：处理中（in_progress）\n- **进展**：模拟网络支持组正在检查 VPN 配置。\n\n如需进一步了解，我可以帮你查相关服务状态或已知问题。"
+        }
+      ],
+      "checks": {
+        "expected_fact": true,
+        "no_tool_error": true,
+        "turns_completed": true,
+        "intent": true,
+        "tools": true,
+        "mock_disclosure": true,
+        "no_submission": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "P2-11",
+      "endpoint": "invoke",
+      "expected": "模拟工单查无结果",
+      "turns": [
+        {
+          "input": "查一下 INC-9999 的进度。",
+          "intent": "ticket_request",
+          "entities": {
+            "service_name": null,
+            "device_id": null,
+            "ticket_id": "INC-9999",
+            "issue_description": null,
+            "ticket_action": "query"
+          },
+          "needs_clarification": false,
+          "tool_calls": [
+            {
+              "name": "query_existing_ticket",
+              "args": {
+                "ticket_id": "INC-9999"
+              },
+              "id": "call_00_nGc9Qf4xP5Q90q9b0CHv7112",
+              "type": "tool_call"
+            }
+          ],
+          "tool_results": [
+            {
+              "status": "not_found",
+              "data": null,
+              "message": "未找到该模拟工单。",
+              "is_mock": true
+            }
+          ],
+          "response": "根据模拟数据查询，未找到工单 INC-9999 的记录。\n\n请确认工单编号是否正确（格式应为 INC-四位数字）。如果编号无误但查无结果，可能该工单不在当前模拟数据范围内，建议联系 IT 服务台或提供正式文档核对。"
+        }
+      ],
+      "checks": {
+        "expected_fact": true,
+        "no_tool_error": true,
+        "turns_completed": true,
+        "intent": true,
+        "tools": true,
+        "mock_disclosure": true,
+        "no_submission": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "P2-12",
+      "endpoint": "stream",
+      "expected": "收集信息，明确尚未提交",
+      "turns": [
+        {
+          "input": "帮我提工单。",
+          "intent": "ticket_request",
+          "entities": {
+            "service_name": null,
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": "create"
+          },
+          "needs_clarification": true,
+          "tool_calls": [],
+          "tool_results": [],
+          "response": "请描述遇到的问题、发生时间和影响范围。本阶段仅收集信息，工单尚未提交。"
+        }
+      ],
+      "checks": {
+        "expected_fact": true,
+        "no_tool_error": true,
+        "turns_completed": true,
+        "intent": true,
+        "tools": true,
+        "mock_disclosure": true,
+        "no_submission": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "P2-13",
+      "endpoint": "invoke",
+      "expected": "优先创建诉求，保留故障，尚未提交",
+      "turns": [
+        {
+          "input": "VPN 连不上，帮我提工单。",
+          "intent": "ticket_request",
+          "entities": {
+            "service_name": "VPN",
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": "VPN 连不上",
+            "ticket_action": "create"
+          },
+          "needs_clarification": false,
+          "tool_calls": [],
+          "tool_results": [],
+          "response": "已在本次对话中收集问题描述：VPN 连不上\n请补充发生时间、影响范围和已尝试的排查步骤。本阶段仅收集信息，工单尚未提交，也没有生成工单编号。"
+        }
+      ],
+      "checks": {
+        "expected_fact": true,
+        "no_tool_error": true,
+        "turns_completed": true,
+        "intent": true,
+        "tools": true,
+        "mock_disclosure": true,
+        "no_submission": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "P2-14",
+      "endpoint": "stream",
+      "expected": "切换邮箱，不沿用 GitHub 状态",
+      "turns": [
+        {
+          "input": "GitHub 现在正常吗？",
+          "intent": "service_status",
+          "entities": {
+            "service_name": "GitHub",
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": false,
+          "tool_calls": [
+            {
+              "name": "query_service_status",
+              "args": {
+                "service_name": "GitHub"
+              },
+              "id": "call_00_CeGxEvi1ByHo12aB601B2491",
+              "type": "tool_call"
+            }
+          ],
+          "tool_results": [
+            {
+              "status": "success",
+              "data": {
+                "service_name": "GitHub",
+                "state": "operational",
+                "detail": "模拟服务正常。"
+              },
+              "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+              "is_mock": true
+            }
+          ],
+          "response": "根据模拟数据，GitHub 服务当前状态为 **operational（正常）**。\n\n注意：这是固定模拟数据，不代表真实系统状态。如需确认实际服务情况，请访问 GitHub 官方状态页。"
+        },
+        {
+          "input": "那邮箱呢？",
+          "intent": "service_status",
+          "entities": {
+            "service_name": "邮箱",
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": false,
+          "tool_calls": [
+            {
+              "name": "query_service_status",
+              "args": {
+                "service_name": "邮箱"
+              },
+              "id": "call_00_MBS1zhOqyuQYgpAZzgDn7643",
+              "type": "tool_call"
+            }
+          ],
+          "tool_results": [
+            {
+              "status": "success",
+              "data": {
+                "service_name": "邮箱",
+                "state": "degraded",
+                "detail": "模拟邮件发送延迟。"
+              },
+              "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+              "is_mock": true
+            }
+          ],
+          "response": "邮箱服务当前状态为 **降级（degraded）**。\n\n模拟数据详情：邮件发送存在延迟。\n\n建议：如遇邮件发送缓慢，可稍后重试；若持续异常，请联系管理员核查邮件网关。"
+        }
+      ],
+      "checks": {
+        "expected_fact": true,
+        "no_tool_error": true,
+        "turns_completed": true,
+        "intent": true,
+        "tools": true,
+        "mock_disclosure": true,
+        "no_submission": true,
+        "topic_switch": true
+      },
+      "automated_pass": true
+    },
+    {
+      "id": "P2-15",
+      "endpoint": "invoke",
+      "expected": "切换知识问答，清理工单实体",
+      "turns": [
+        {
+          "input": "查 INC-1001 的进度。",
+          "intent": "ticket_request",
+          "entities": {
+            "service_name": null,
+            "device_id": null,
+            "ticket_id": "INC-1001",
+            "issue_description": null,
+            "ticket_action": "query"
+          },
+          "needs_clarification": false,
+          "tool_calls": [
+            {
+              "name": "query_existing_ticket",
+              "args": {
+                "ticket_id": "INC-1001"
+              },
+              "id": "call_00_0sSJSJ2ezxYqevKyuPtV1219",
+              "type": "tool_call"
+            }
+          ],
+          "tool_results": [
+            {
+              "status": "success",
+              "data": {
+                "ticket_id": "INC-1001",
+                "title": "VPN 连接失败",
+                "state": "in_progress",
+                "progress": "模拟网络支持组正在检查 VPN 配置。"
+              },
+              "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+              "is_mock": true
+            }
+          ],
+          "response": "工单 INC-1001（VPN 连接失败）的进度如下（模拟数据）：\n\n- **状态**：处理中\n- **进展**：模拟网络支持组正在检查 VPN 配置。\n\n如需进一步协助，请补充具体报错信息或设备编号。"
+        },
+        {
+          "input": "VPN 是什么？",
+          "intent": "general_question",
+          "entities": {
+            "service_name": null,
+            "device_id": null,
+            "ticket_id": null,
+            "issue_description": null,
+            "ticket_action": null
+          },
+          "needs_clarification": false,
+          "tool_calls": [],
+          "tool_results": [],
+          "response": "VPN（虚拟专用网络）是一种通过加密隧道在公共网络上建立安全连接的技术，常用于远程访问企业内部资源、保护数据传输隐私或访问受限网络。\n\n如果你需要了解公司 VPN 的接入方式、账号申请或故障排查，建议提供相关服务名称或联系 IT 支持获取正式文档。"
+        }
+      ],
+      "checks": {
+        "expected_fact": true,
+        "no_tool_error": true,
+        "turns_completed": true,
+        "intent": true,
+        "tools": true,
+        "mock_disclosure": true,
+        "no_submission": true,
+        "ticket_cleared": true
+      },
+      "automated_pass": true
+    }
+  ]
+}

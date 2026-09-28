@@ -1,9 +1,19 @@
 from unittest.mock import patch
 
 import pytest
+import streamlit as st
 
 from schema import AgentInfo, ServiceMetadata
 from schema.models import OpenAIModelName
+
+
+@pytest.fixture(autouse=True)
+def stable_toolbar_mode():
+    # AppTest can time out on the app's initial configuration-only st.rerun().
+    original = st.get_option("client.toolbarMode")
+    st.set_option("client.toolbarMode", "minimal")
+    yield
+    st.set_option("client.toolbarMode", original)
 
 
 @pytest.fixture
