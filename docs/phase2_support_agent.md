@@ -1,5 +1,7 @@
 # Phase 2：企业 IT 支持 Agent
 
+> 本文保留 Phase 2 的历史范围与验收结果。当前版本已完成 [Phase 3 工单审批与本地演示创建](phase3_ticket_approval.md)；下文“尚不提交”等描述仅适用于 Phase 2 历史版本。
+
 本阶段在上游 `JoshuaC215/agent-service-toolkit` 上新增企业 IT 支持流程。查询工具全部使用固定模拟数据，没有接入真实企业系统；创建工单仅在对话中收集信息，**尚未提交**。
 
 ## 实现与上游边界

@@ -1,10 +1,11 @@
 from datetime import datetime
 from typing import Any, Literal, NotRequired
 
-from pydantic import BaseModel, Field, SerializeAsAny
+from pydantic import BaseModel, Field, SerializeAsAny, model_validator
 from typing_extensions import TypedDict
 
 from schema.models import AllModelEnum, AnthropicModelName, OpenAIModelName
+from tickets.models import ApprovalInput
 
 
 class AgentInfo(BaseModel):
@@ -41,7 +42,9 @@ class ServiceMetadata(BaseModel):
 class UserInput(BaseModel):
     """Basic user input for the agent."""
 
-    message: str = Field(
+    approval: ApprovalInput | None = None
+    message: str | None = Field(
+        default=None,
         description="User input to the agent.",
         examples=["What is the weather in Tokyo?"],
     )
@@ -66,6 +69,15 @@ class UserInput(BaseModel):
         default={},
         examples=[{"spicy_level": 0.8}],
     )
+
+    @model_validator(mode="after")
+    def validate_input(self):
+        if self.approval is not None:
+            if self.message is not None or not self.thread_id or not self.thread_id.strip():
+                raise ValueError("Approval requires thread_id and no message")
+        elif self.message is None or not self.message.strip():
+            raise ValueError("A nonempty message or approval is required")
+        return self
 
 
 class StreamInput(UserInput):

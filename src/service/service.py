@@ -44,6 +44,7 @@ from schema import (
     UserThreadsInput,
 )
 from service.agui import router as agui_router
+from service.support import execution_lock, interrupt_message, pending_payload, support_input
 from service.threads import list_user_threads
 from service.utils import (
     convert_message_content_to_string,
@@ -162,6 +163,12 @@ async def _handle_input(
     if user_input.agent_config:
         # Check for reserved keys (including 'model' even if not in configurable)
         reserved_keys = {"thread_id", "user_id", "model"}
+        if agent_id == "support-agent":
+            reserved_keys.update(
+                key
+                for key in user_input.agent_config
+                if key.startswith("__") or key.startswith("checkpoint")
+            )
         if overlap := reserved_keys & user_input.agent_config.keys():
             raise HTTPException(
                 status_code=422,
@@ -179,6 +186,13 @@ async def _handle_input(
     # Check for interrupts that need to be resumed
     state = await agent.aget_state(config=config)
 
+    if agent_id == "support-agent":
+        return {**await support_input(user_input, state, config), "config": config}, run_id
+    if user_input.approval is not None:
+        raise HTTPException(
+            status_code=422, detail="Structured approval is only supported by support-agent"
+        )
+
     interrupted_tasks = [
         task for task in state.tasks if hasattr(task, "interrupts") and task.interrupts
     ]
@@ -188,7 +202,7 @@ async def _handle_input(
         # assume user input is response to resume agent execution from interrupt
         input = Command(resume=user_input.message)
     else:
-        input = {"messages": [HumanMessage(content=user_input.message)]}
+        input = {"messages": [HumanMessage(content=user_input.message or "")]}
 
     kwargs = {
         "input": input,
@@ -209,6 +223,11 @@ async def invoke(user_input: UserInput, agent_id: str = DEFAULT_AGENT) -> ChatMe
     is also attached to messages for recording feedback.
     Use user_id to persist and continue a conversation across multiple threads.
     """
+    async with execution_lock(agent_id, user_input.thread_id):
+        return await _invoke(user_input, agent_id)
+
+
+async def _invoke(user_input: UserInput, agent_id: str) -> ChatMessage:
     # NOTE: Currently this only returns the last message or interrupt.
     # In the case of an agent outputting multiple AIMessages (such as the background step
     # in interrupt-agent, or a tool step in research-assistant), it's omitted. Arguably,
@@ -216,6 +235,11 @@ async def invoke(user_input: UserInput, agent_id: str = DEFAULT_AGENT) -> ChatMe
     # in that case.
     agent: AgentGraph = get_agent(agent_id)
     kwargs, run_id = await _handle_input(user_input, agent, agent_id)
+
+    if early := kwargs.pop("support_response", None):
+        output = langchain_to_chat_message(early)
+        output.run_id = str(run_id)
+        return output
 
     try:
         response_events: list[tuple[str, Any]] = await agent.ainvoke(**kwargs, stream_mode=["updates", "values"])  # type: ignore # fmt: skip
@@ -225,7 +249,7 @@ async def invoke(user_input: UserInput, agent_id: str = DEFAULT_AGENT) -> ChatMe
         if "__interrupt__" in response:
             # Return the value of the first interrupt as an AIMessage
             output = langchain_to_chat_message(
-                AIMessage(content=response["__interrupt__"][0].value)
+                interrupt_message(response["__interrupt__"][0].value)
             )
         elif response_type == "values":
             # Normal response, the agent completed successfully
@@ -243,6 +267,21 @@ async def invoke(user_input: UserInput, agent_id: str = DEFAULT_AGENT) -> ChatMe
 async def message_generator(
     user_input: StreamInput, agent_id: str = DEFAULT_AGENT
 ) -> AsyncGenerator[str, None]:
+    async with execution_lock(agent_id, user_input.thread_id):
+        generator = _message_generator(user_input, agent_id)
+        try:
+            async for event in generator:
+                yield event
+        except HTTPException as exc:
+            yield f"data: {json.dumps({'type': 'error', 'content': exc.detail})}\n\n"
+            yield "data: [DONE]\n\n"
+        finally:
+            await generator.aclose()
+
+
+async def _message_generator(
+    user_input: StreamInput, agent_id: str = DEFAULT_AGENT
+) -> AsyncGenerator[str, None]:
     """
     Generate a stream of messages from the agent.
 
@@ -250,6 +289,13 @@ async def message_generator(
     """
     agent: AgentGraph = get_agent(agent_id)
     kwargs, run_id = await _handle_input(user_input, agent, agent_id)
+
+    if early := kwargs.pop("support_response", None):
+        output = langchain_to_chat_message(early)
+        output.run_id = str(run_id)
+        yield f"data: {json.dumps({'type': 'message', 'content': output.model_dump()})}\n\n"
+        yield "data: [DONE]\n\n"
+        return
 
     try:
         # Process streamed events from the graph and yield messages over the SSE stream.
@@ -274,7 +320,7 @@ async def message_generator(
                     if node == "__interrupt__":
                         interrupt: Interrupt
                         for interrupt in updates:
-                            new_messages.append(AIMessage(content=interrupt.value))
+                            new_messages.append(interrupt_message(interrupt.value))
                         continue
                     updates = updates or {}
                     update_messages = updates.get("messages", [])
@@ -349,8 +395,7 @@ async def message_generator(
     except Exception as e:
         logger.error(f"Error in message generator: {e}")
         yield f"data: {json.dumps({'type': 'error', 'content': 'Internal server error'})}\n\n"
-    finally:
-        yield "data: [DONE]\n\n"
+    yield "data: [DONE]\n\n"
 
 
 def _create_ai_message(parts: dict) -> AIMessage:
@@ -396,6 +441,15 @@ async def stream(user_input: StreamInput, agent_id: str = DEFAULT_AGENT) -> Stre
         message_generator(user_input, agent_id),
         media_type="text/event-stream",
     )
+
+
+@router.get("/support-agent/approval")
+async def pending_approval(thread_id: str) -> dict:
+    async with execution_lock("support-agent", thread_id):
+        snapshot = await get_agent("support-agent").aget_state(
+            RunnableConfig(configurable={"thread_id": thread_id})
+        )
+        return {"pending": pending_payload(snapshot)}
 
 
 @router.post("/feedback")

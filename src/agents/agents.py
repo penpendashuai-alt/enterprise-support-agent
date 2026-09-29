@@ -34,7 +34,7 @@ class Agent:
 
 agents: dict[str, Agent] = {
     "support-agent": Agent(
-        description="Enterprise IT support with intent routing and read-only mock queries.",
+        description="Enterprise IT support with mock queries and approval-gated local demonstration tickets.",
         graph_like=support_agent,
     ),
     "chatbot": Agent(description="A simple chatbot.", graph_like=chatbot),

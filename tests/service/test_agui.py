@@ -132,13 +132,13 @@ def test_agui_no_raw_events(mock_agui_agent, test_client) -> None:
 
 
 def test_agui_default_agent_route(mock_agui_agent, test_client) -> None:
-    """POST /agui/run falls back to the default agent."""
-    with patch("service.agui.get_agent", return_value=model_agent) as mock_get_agent:
-        events = collect_events(test_client, "/agui/run", run_input())
-    from agents import DEFAULT_AGENT
-
-    mock_get_agent.assert_called_once_with(DEFAULT_AGENT)
-    assert events[-1]["type"] == "RUN_FINISHED"
+    """The default support agent cannot bypass approval via arbitrary AG-UI state."""
+    with patch("service.agui.get_agent") as mock_get_agent:
+        for path in ["/agui/run", "/agui/support-agent/run"]:
+            response = test_client.post(path, json=run_input())
+            assert response.status_code == 422
+            assert "structured approval" in response.json()["detail"]
+    mock_get_agent.assert_not_called()
 
 
 def test_agui_unknown_agent(mock_agui_agent, test_client) -> None:

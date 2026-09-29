@@ -5,11 +5,16 @@ from typing import Annotated, Any, Literal
 from langchain_core.tools import tool
 from pydantic import BaseModel, ConfigDict, StringConstraints
 
+from tickets.service import repository
+
 NonEmptyText = Annotated[
     str, StringConstraints(strip_whitespace=True, min_length=1, max_length=500)
 ]
 TicketId = Annotated[
-    str, StringConstraints(strip_whitespace=True, to_upper=True, pattern=r"(?i)^INC-\d{4}$")
+    str,
+    StringConstraints(
+        strip_whitespace=True, to_upper=True, pattern=r"(?i)^(INC-\d{4}|DEMO-[0-9a-f]{32})$"
+    ),
 ]
 DeviceId = Annotated[
     str, StringConstraints(strip_whitespace=True, to_upper=True, pattern=r"(?i)^DEV-\d{3}$")
@@ -112,7 +117,14 @@ def query_service_status(service_name: str) -> dict[str, Any]:
 
 @tool(args_schema=TicketInput)
 def query_existing_ticket(ticket_id: str) -> dict[str, Any]:
-    """按用户提供的 INC-四位数字编号查询模拟工单，不创建或修改工单。"""
+    """查询 INC-四位数字固定样例或 DEMO-32位十六进制本地演示工单，不创建或修改。"""
+    if ticket_id.upper().startswith("DEMO-"):
+        record = repository().get(ticket_id)
+        return (
+            tool_result("success", record.model_dump(), "本地演示工单，未提交真实企业系统。")
+            if record
+            else tool_result("not_found", message="未找到该本地演示工单。")
+        )
     data = TICKETS.get(ticket_id.upper())
     return (
         tool_result("success", data)

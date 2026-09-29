@@ -103,6 +103,11 @@ async def agui_run(
     Use the same threadId across runs to continue a conversation - threads are
     persisted in the service's checkpointer and shared with the vanilla API.
     """
+    if agent_id == "support-agent":
+        raise HTTPException(
+            status_code=422,
+            detail="Support Agent requires /support-agent/invoke or /support-agent/stream and structured approval",
+        )
     try:
         graph: AgentGraph = get_agent(agent_id)
     except KeyError:

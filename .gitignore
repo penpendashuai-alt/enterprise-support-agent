@@ -199,3 +199,9 @@ smoke_live_app_failure.png
 
 # Claude Code agent worktrees (ephemeral, per-agent git checkouts)
 .claude/worktrees/
+
+# SQLite sidecars and local Phase 3 verification output
+*.db-wal
+*.db-shm
+*.db-journal
+phase3-*.log

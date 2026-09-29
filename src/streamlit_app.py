@@ -11,6 +11,7 @@ from pydantic import ValidationError
 from client import AgentClient, AgentClientError
 from schema import ChatHistory, ChatMessage, UserThreads
 from schema.task_data import TaskData, TaskDataStatus
+from tickets.ui import render_approval
 from voice import VoiceManager
 
 # A Streamlit app for interacting with the langgraph agent via a simple chat interface.
@@ -268,7 +269,7 @@ async def main() -> None:
 
     if agent_client.agent == "support-agent":
         st.info(
-            "企业 IT 支持演示：服务、设备和工单查询均使用固定模拟数据，不代表实时状态。工单创建仅收集信息，尚不提交。"
+            "企业 IT 支持演示：服务、设备和 INC 工单使用固定模拟数据；确认草稿后可创建和查询 DEMO 本地演示工单，不提交真实企业系统。"
         )
 
     if len(messages) == 0:
@@ -281,7 +282,7 @@ async def main() -> None:
                     "- GitHub 现在有故障吗？\n"
                     "- VPN 连不上，报错 809，我的设备是 DEV-001。\n"
                     "- 查一下 INC-1001 的进度。\n"
-                    "- VPN 连不上，帮我提工单。"
+                    "- VPN 连不上，只有我受影响，帮我提工单。"
                 )
             case "chatbot":
                 WELCOME = "Hello! I'm a simple chatbot. Ask me anything!"
@@ -304,6 +305,8 @@ async def main() -> None:
             yield m
 
     await draw_messages(amessage_iter())
+    if agent_client.agent == "support-agent":
+        await render_approval(agent_client, st.session_state.thread_id, user_id, model)
 
     # Render saved audio for the last AI message (if it exists)
     # This ensures audio persists across st.rerun() calls

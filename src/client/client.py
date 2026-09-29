@@ -16,6 +16,7 @@ from schema import (
     UserThreads,
     UserThreadsInput,
 )
+from tickets.models import ApprovalInput
 
 
 class AgentClientError(Exception):
@@ -87,11 +88,12 @@ class AgentClient:
 
     async def ainvoke(
         self,
-        message: str,
+        message: str | None = None,
         model: str | None = None,
         thread_id: str | None = None,
         user_id: str | None = None,
         agent_config: dict[str, Any] | None = None,
+        approval: ApprovalInput | None = None,
     ) -> ChatMessage:
         """
         Invoke the agent asynchronously. Only the final message is returned.
@@ -108,7 +110,7 @@ class AgentClient:
         """
         if not self.agent:
             raise AgentClientError("No agent selected. Use update_agent() to select an agent.")
-        request = UserInput(message=message)
+        request = UserInput(message=message, approval=approval, thread_id=thread_id)
         if thread_id:
             request.thread_id = thread_id
         if model:
@@ -127,17 +129,20 @@ class AgentClient:
                 )
                 response.raise_for_status()
             except httpx.HTTPError as e:
-                raise AgentClientError(f"Error: {e}")
+                raise AgentClientError(
+                    f"Error: {e}; {e.response.text if isinstance(e, httpx.HTTPStatusError) else ''}"
+                )
 
         return ChatMessage.model_validate(response.json())
 
     def invoke(
         self,
-        message: str,
+        message: str | None = None,
         model: str | None = None,
         thread_id: str | None = None,
         user_id: str | None = None,
         agent_config: dict[str, Any] | None = None,
+        approval: ApprovalInput | None = None,
     ) -> ChatMessage:
         """
         Invoke the agent synchronously. Only the final message is returned.
@@ -154,7 +159,7 @@ class AgentClient:
         """
         if not self.agent:
             raise AgentClientError("No agent selected. Use update_agent() to select an agent.")
-        request = UserInput(message=message)
+        request = UserInput(message=message, approval=approval, thread_id=thread_id)
         if thread_id:
             request.thread_id = thread_id
         if model:
@@ -172,7 +177,9 @@ class AgentClient:
             )
             response.raise_for_status()
         except httpx.HTTPError as e:
-            raise AgentClientError(f"Error: {e}")
+            raise AgentClientError(
+                f"Error: {e}; {e.response.text if isinstance(e, httpx.HTTPStatusError) else ''}"
+            )
 
         return ChatMessage.model_validate(response.json())
 
@@ -197,18 +204,19 @@ class AgentClient:
                     # Yield the str token directly
                     return parsed["content"]
                 case "error":
-                    error_msg = "Error: " + parsed["content"]
+                    error_msg = "Error: " + str(parsed["content"])
                     return ChatMessage(type="ai", content=error_msg)
         return None
 
     def stream(
         self,
-        message: str,
+        message: str | None = None,
         model: str | None = None,
         thread_id: str | None = None,
         user_id: str | None = None,
         agent_config: dict[str, Any] | None = None,
         stream_tokens: bool = True,
+        approval: ApprovalInput | None = None,
     ) -> Generator[ChatMessage | str, None, None]:
         """
         Stream the agent's response synchronously.
@@ -231,7 +239,9 @@ class AgentClient:
         """
         if not self.agent:
             raise AgentClientError("No agent selected. Use update_agent() to select an agent.")
-        request = StreamInput(message=message, stream_tokens=stream_tokens)
+        request = StreamInput(
+            message=message, stream_tokens=stream_tokens, approval=approval, thread_id=thread_id
+        )
         if thread_id:
             request.thread_id = thread_id
         if user_id:
@@ -256,16 +266,19 @@ class AgentClient:
                             break
                         yield parsed
         except httpx.HTTPError as e:
-            raise AgentClientError(f"Error: {e}")
+            raise AgentClientError(
+                f"Error: {e}; {e.response.text if isinstance(e, httpx.HTTPStatusError) else ''}"
+            )
 
     async def astream(
         self,
-        message: str,
+        message: str | None = None,
         model: str | None = None,
         thread_id: str | None = None,
         user_id: str | None = None,
         agent_config: dict[str, Any] | None = None,
         stream_tokens: bool = True,
+        approval: ApprovalInput | None = None,
     ) -> AsyncGenerator[ChatMessage | str, None]:
         """
         Stream the agent's response asynchronously.
@@ -288,7 +301,9 @@ class AgentClient:
         """
         if not self.agent:
             raise AgentClientError("No agent selected. Use update_agent() to select an agent.")
-        request = StreamInput(message=message, stream_tokens=stream_tokens)
+        request = StreamInput(
+            message=message, stream_tokens=stream_tokens, approval=approval, thread_id=thread_id
+        )
         if thread_id:
             request.thread_id = thread_id
         if model:
@@ -316,7 +331,36 @@ class AgentClient:
                             if parsed != "":
                                 yield parsed
             except httpx.HTTPError as e:
-                raise AgentClientError(f"Error: {e}")
+                raise AgentClientError(
+                    f"Error: {e}; {e.response.text if isinstance(e, httpx.HTTPStatusError) else ''}"
+                )
+
+    def get_pending_approval(self, thread_id: str) -> dict | None:
+        try:
+            response = httpx.get(
+                f"{self.base_url}/support-agent/approval",
+                params={"thread_id": thread_id},
+                headers=self._headers,
+                timeout=self.timeout,
+            )
+            response.raise_for_status()
+            return response.json()["pending"]
+        except httpx.HTTPError as exc:
+            raise AgentClientError(f"Error reading approval: {exc}") from exc
+
+    async def aget_pending_approval(self, thread_id: str) -> dict | None:
+        async with httpx.AsyncClient() as client:
+            try:
+                response = await client.get(
+                    f"{self.base_url}/support-agent/approval",
+                    params={"thread_id": thread_id},
+                    headers=self._headers,
+                    timeout=self.timeout,
+                )
+                response.raise_for_status()
+                return response.json()["pending"]
+            except httpx.HTTPError as exc:
+                raise AgentClientError(f"Error reading approval: {exc}") from exc
 
     async def acreate_feedback(
         self, run_id: str, key: str, score: float, kwargs: dict[str, Any] = {}
@@ -340,7 +384,9 @@ class AgentClient:
                 response.raise_for_status()
                 response.json()
             except httpx.HTTPError as e:
-                raise AgentClientError(f"Error: {e}")
+                raise AgentClientError(
+                    f"Error: {e}; {e.response.text if isinstance(e, httpx.HTTPStatusError) else ''}"
+                )
 
     def get_history(self, thread_id: str, agent: str | None = None) -> ChatHistory:
         """
@@ -362,7 +408,9 @@ class AgentClient:
             )
             response.raise_for_status()
         except httpx.HTTPError as e:
-            raise AgentClientError(f"Error: {e}")
+            raise AgentClientError(
+                f"Error: {e}; {e.response.text if isinstance(e, httpx.HTTPStatusError) else ''}"
+            )
 
         return ChatHistory.model_validate(response.json())
 
@@ -394,7 +442,9 @@ class AgentClient:
             )
             response.raise_for_status()
         except httpx.HTTPError as e:
-            raise AgentClientError(f"Error: {e}")
+            raise AgentClientError(
+                f"Error: {e}; {e.response.text if isinstance(e, httpx.HTTPStatusError) else ''}"
+            )
 
         return UserThreads.model_validate(response.json())
 
@@ -420,6 +470,8 @@ class AgentClient:
                 )
                 response.raise_for_status()
             except httpx.HTTPError as e:
-                raise AgentClientError(f"Error: {e}")
+                raise AgentClientError(
+                    f"Error: {e}; {e.response.text if isinstance(e, httpx.HTTPStatusError) else ''}"
+                )
 
         return UserThreads.model_validate(response.json())

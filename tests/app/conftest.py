@@ -1,4 +1,4 @@
-from unittest.mock import patch
+from unittest.mock import AsyncMock, patch
 
 import pytest
 import streamlit as st
@@ -38,4 +38,5 @@ def mock_agent_client(mock_env):
         mock_agent_client_instance.info = mock_info
         # Give the mock a deterministic selected agent.
         mock_agent_client_instance.agent = "test-agent"
+        mock_agent_client_instance.aget_pending_approval = AsyncMock(return_value=None)
         yield mock_agent_client_instance

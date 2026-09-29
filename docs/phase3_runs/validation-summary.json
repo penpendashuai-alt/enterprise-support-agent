@@ -1,0 +1,46 @@
+{
+  "date": "2026-09-29",
+  "status": "local implementation and acceptance complete",
+  "base_commit": "776a83d997ae43f08b249a0475abdd62381b86c1",
+  "final_source_sha256": "71d9a1ec08f465668ab5940de4e8eca419899d568a351c0e2cbea9a251841d78",
+  "source_scope": "all src/**/*.py plus scripts/run_phase3_scenarios.py",
+  "environment": {
+    "os": "Windows",
+    "python": "3.13.15"
+  },
+  "deterministic_tests": {
+    "command": "python -m pytest -q --disable-warnings",
+    "passed": 271,
+    "skipped": 4,
+    "warnings": 17,
+    "duration_seconds": 46.19,
+    "baseline_passed": 240
+  },
+  "checks": {
+    "ruff_check": "passed",
+    "ruff_format": "passed",
+    "pyrefly": "passed",
+    "pymarkdown": "passed",
+    "git_diff_check": "passed"
+  },
+  "live_phase3": {
+    "model": "deepseek-v4-pro",
+    "final_report": "2026-09-29-live-03.json",
+    "passed": 6,
+    "total": 6,
+    "semantic_review": "drafts and final replies reviewed"
+  },
+  "live_phase2_regression": {
+    "report": "2026-09-29-phase2-regression.json",
+    "passed": 15,
+    "total": 15,
+    "timing": "Before the final DEMO query wording fix; later deterministic full suite and Phase 3 live suite cover the fix."
+  },
+  "not_validated": [
+    "Docker builds and container restart persistence",
+    "external database deployments",
+    "multiple workers or service instances",
+    "future strict checkpoint deserialization"
+  ],
+  "data_scope": "isolated temporary SQLite databases; no real enterprise ticket integration"
+}

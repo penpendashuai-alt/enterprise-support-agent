@@ -23,6 +23,9 @@ services:
       - "8080:8080"
     env_file:
       - .env
+    environment:
+      - TICKET_DB_PATH=/app/data/tickets.db
+      - SQLITE_DB_PATH=/app/data/checkpoints.db
     depends_on:
       postgres:
         condition: service_healthy
@@ -34,11 +37,15 @@ services:
     # Volume mount of development-only credentials since compose watch doesn't sync ignored files and doesn't do initial sync when the service starts
     volumes:
       - ./privatecredentials:/privatecredentials
+      - support_data:/app/data
     develop:
       watch:
         - path: src/agents/
           action: sync+restart
           target: /app/agents/
+        - path: src/tickets/
+          action: sync+restart
+          target: /app/tickets/
         - path: src/schema/
           action: sync+restart
           target: /app/schema/
@@ -71,6 +78,9 @@ services:
         - path: src/client/
           action: sync+restart
           target: /app/client/
+        - path: src/tickets/
+          action: sync+restart
+          target: /app/tickets/
         - path: src/schema/
           action: sync+restart
           target: /app/schema/
@@ -80,3 +90,4 @@ services:
 
 volumes:
   postgres_data:
+  support_data:

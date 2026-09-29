@@ -11,3 +11,10 @@ venv
 .venv
 *.db
 privatecredentials/*
+
+# Keep private planning and local execution data out of build contexts.
+personal/
+*.db-wal
+*.db-shm
+*.db-journal
+phase3-*.log

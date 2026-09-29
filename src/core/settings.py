@@ -124,6 +124,7 @@ class Settings(BaseSettings):
         DatabaseType.SQLITE
     )  # Options: DatabaseType.SQLITE or DatabaseType.POSTGRES
     SQLITE_DB_PATH: str = "checkpoints.db"
+    TICKET_DB_PATH: str = "tickets.db"
 
     # PostgreSQL Configuration
     POSTGRES_USER: str | None = None
