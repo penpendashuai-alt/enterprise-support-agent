@@ -1,0 +1,170 @@
+{
+  "dataset_version": "synthetic-support-v1",
+  "description": "Synthetic enterprise support dataset / public technical documentation (original summaries)",
+  "documents": [
+    {
+      "doc_id": "vpn-policy",
+      "title": "演示企业 VPN 使用要求",
+      "path": "policies/vpn-policy.md",
+      "version": "1.0",
+      "source_type": "synthetic",
+      "usage": "Original synthetic demonstration content, released with project MIT license"
+    },
+    {
+      "doc_id": "email-policy",
+      "title": "演示企业邮箱使用规范",
+      "path": "policies/email-policy.md",
+      "version": "1.0",
+      "source_type": "synthetic",
+      "usage": "Original synthetic demonstration content, released with project MIT license"
+    },
+    {
+      "doc_id": "github-policy",
+      "title": "演示企业代码托管规范",
+      "path": "policies/github-policy.md",
+      "version": "1.0",
+      "source_type": "synthetic",
+      "usage": "Original synthetic demonstration content, released with project MIT license"
+    },
+    {
+      "doc_id": "ticket-priority",
+      "title": "演示工单优先级规则",
+      "path": "policies/ticket-priority.md",
+      "version": "1.0",
+      "source_type": "synthetic",
+      "usage": "Original synthetic demonstration content, released with project MIT license"
+    },
+    {
+      "doc_id": "ticket-approval",
+      "title": "本地演示工单审批流程",
+      "path": "policies/ticket-approval.md",
+      "version": "1.0",
+      "source_type": "synthetic",
+      "usage": "Original synthetic demonstration content, released with project MIT license"
+    },
+    {
+      "doc_id": "data-security",
+      "title": "演示企业敏感数据处理",
+      "path": "policies/data-security.md",
+      "version": "1.0",
+      "source_type": "synthetic",
+      "usage": "Original synthetic demonstration content, released with project MIT license"
+    },
+    {
+      "doc_id": "remote-work",
+      "title": "演示企业远程办公设备要求",
+      "path": "policies/remote-work.md",
+      "version": "1.0",
+      "source_type": "synthetic",
+      "usage": "Original synthetic demonstration content, released with project MIT license"
+    },
+    {
+      "doc_id": "vpn-809",
+      "title": "VPN 错误 809 排障演示",
+      "path": "troubleshooting/vpn-809.md",
+      "version": "1.0",
+      "source_type": "synthetic",
+      "usage": "Original synthetic demonstration content, released with project MIT license"
+    },
+    {
+      "doc_id": "vpn-691",
+      "title": "VPN 错误 691 身份验证排障",
+      "path": "troubleshooting/vpn-691.md",
+      "version": "1.0",
+      "source_type": "synthetic",
+      "usage": "Original synthetic demonstration content, released with project MIT license"
+    },
+    {
+      "doc_id": "email-delay",
+      "title": "邮箱发信延迟排障",
+      "path": "troubleshooting/email-delay.md",
+      "version": "1.0",
+      "source_type": "synthetic",
+      "usage": "Original synthetic demonstration content, released with project MIT license"
+    },
+    {
+      "doc_id": "github-sso",
+      "title": "GitHub 登录与 SSO 排障",
+      "path": "troubleshooting/github-sso.md",
+      "version": "1.0",
+      "source_type": "synthetic",
+      "usage": "Original synthetic demonstration content, released with project MIT license"
+    },
+    {
+      "doc_id": "device-repair",
+      "title": "演示设备报修操作指南",
+      "path": "guides/device-repair.md",
+      "version": "1.0",
+      "source_type": "synthetic",
+      "usage": "Original synthetic demonstration content, released with project MIT license"
+    },
+    {
+      "doc_id": "password-reset",
+      "title": "演示密码重置与账号解锁",
+      "path": "guides/password-reset.md",
+      "version": "1.0",
+      "source_type": "synthetic",
+      "usage": "Original synthetic demonstration content, released with project MIT license"
+    },
+    {
+      "doc_id": "account-request",
+      "title": "演示账号与访问权限申请",
+      "path": "guides/account-request.md",
+      "version": "1.0",
+      "source_type": "synthetic",
+      "usage": "Original synthetic demonstration content, released with project MIT license"
+    },
+    {
+      "doc_id": "mfa-lost",
+      "title": "演示多因素认证设备丢失处理",
+      "path": "guides/mfa-lost.md",
+      "version": "1.0",
+      "source_type": "synthetic",
+      "usage": "Original synthetic demonstration content, released with project MIT license"
+    },
+    {
+      "doc_id": "printer-paper",
+      "title": "演示打印机卡纸排障",
+      "path": "troubleshooting/printer-paper.md",
+      "version": "1.0",
+      "source_type": "synthetic",
+      "usage": "Original synthetic demonstration content, released with project MIT license"
+    },
+    {
+      "doc_id": "meeting-audio",
+      "title": "演示视频会议无声排障",
+      "path": "troubleshooting/meeting-audio.md",
+      "version": "1.0",
+      "source_type": "synthetic",
+      "usage": "Original synthetic demonstration content, released with project MIT license"
+    },
+    {
+      "doc_id": "shared-folder",
+      "title": "演示共享目录权限排查",
+      "path": "guides/shared-folder.md",
+      "version": "1.0",
+      "source_type": "synthetic",
+      "usage": "Original synthetic demonstration content, released with project MIT license"
+    },
+    {
+      "doc_id": "public-github-auth",
+      "title": "GitHub 官方认证方式摘要",
+      "path": "guides/public-github-auth.md",
+      "version": "1.0",
+      "source_type": "public_summary",
+      "usage": "Original concise paraphrase with attribution; no copied article",
+      "url": "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github",
+      "accessed": "2026-09-30"
+    },
+    {
+      "doc_id": "public-gmail-auth",
+      "title": "Gmail 官方第三方客户端登录摘要",
+      "path": "guides/public-gmail-auth.md",
+      "version": "1.0",
+      "source_type": "public_summary",
+      "usage": "Original concise paraphrase with attribution; no copied article",
+      "url": "https://support.google.com/mail/answer/7126229",
+      "accessed": "2026-09-30"
+    }
+  ]
+}

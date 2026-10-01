@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-30",
+  "full_suite": {
+    "passed": 304,
+    "skipped": 4,
+    "warnings": 18,
+    "seconds": 59.68,
+    "skipped_reason": "Existing Docker integration tests opt-in"
+  },
+  "checks": [
+    "Ruff",
+    "Ruff format",
+    "Pyrefly: 0 errors (11 suppressed, 3 warnings hidden)",
+    "Markdown",
+    "uv lock --check --offline",
+    "git diff --check",
+    "Public files exact-match scan for local API secrets and personal Qdrant URL"
+  ],
+  "privacy": {
+    "files_scanned": 217,
+    "sensitive_matches": 0,
+    "personal_and_env_ignored": true
+  },
+  "limits": [
+    "Full suite used existing Windows venv; not a clean frozen environment",
+    "No Docker build or end-to-end browser validation",
+    "Source-card rendering tested with Streamlit AppTest; API invoke/SSE/history tested",
+    "Live acceptance records precede final error-accounting and stream-preamble hardening; those changes have deterministic regression coverage"
+  ]
+}

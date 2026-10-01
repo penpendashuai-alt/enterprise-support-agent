@@ -90,6 +90,7 @@ dependencies = [
     { name = "numexpr" },
     { name = "numpy" },
     { name = "onnxruntime" },
+    { name = "openai" },
     { name = "pandas" },
     { name = "psycopg", extra = ["binary", "pool"] },
     { name = "pyarrow" },
@@ -98,6 +99,7 @@ dependencies = [
     { name = "pyowm" },
     { name = "pypdf" },
     { name = "python-dotenv" },
+    { name = "qdrant-client" },
     { name = "setuptools" },
     { name = "streamlit" },
     { name = "tiktoken" },
@@ -155,6 +157,7 @@ requires-dist = [
     { name = "numexpr", specifier = "~=2.14.1" },
     { name = "numpy", specifier = "~=2.5.0" },
     { name = "onnxruntime", specifier = "~=1.27.0" },
+    { name = "openai", specifier = "~=2.54.0" },
     { name = "pandas", specifier = "~=3.0.3" },
     { name = "psycopg", extras = ["binary", "pool"], specifier = "~=3.3.4" },
     { name = "pyarrow", specifier = ">=23.0.1" },
@@ -163,6 +166,7 @@ requires-dist = [
     { name = "pyowm", specifier = "~=3.5.0" },
     { name = "pypdf", specifier = ">=6.14.2,<6.17.0" },
     { name = "python-dotenv", specifier = "~=1.2.2" },
+    { name = "qdrant-client", specifier = "~=1.19.0" },
     { name = "setuptools", specifier = "~=84.0.0" },
     { name = "streamlit", specifier = "~=1.59.1" },
     { name = "tiktoken", specifier = ">=0.13.0" },
@@ -3534,6 +3538,18 @@ wheels = [
 ]
 
 [[package]]
+name = "portalocker"
+version = "3.2.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pywin32", marker = "sys_platform == 'win32'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/5e/77/65b857a69ed876e1951e88aaba60f5ce6120c33703f7cb61a3c894b8c1b6/portalocker-3.2.0.tar.gz", hash = "sha256:1f3002956a54a8c3730586c5c77bf18fae4149e07eaf1c29fc3faf4d5a3f89ac", size = 95644, upload-time = "2025-06-14T13:20:40.03Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4b/a6/38c8e2f318bf67d338f4d629e93b0b4b9af331f455f0390ea8ce4a099b26/portalocker-3.2.0-py3-none-any.whl", hash = "sha256:3cdc5f565312224bc570c49337bd21428bba0ef363bbcf58b9ef4a9f11779968", size = 22424, upload-time = "2025-06-14T13:20:38.083Z" },
+]
+
+[[package]]
 name = "pre-commit"
 version = "4.6.2"
 source = { registry = "https://pypi.org/simple" }
@@ -4521,6 +4537,24 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/da/92/1446574745d74df0c92e6aa4a7b0b3130706a4142b2d1a5869f2eaa423c6/pyyaml-6.0.3-cp314-cp314t-musllinux_1_2_x86_64.whl", hash = "sha256:16249ee61e95f858e83976573de0f5b2893b3677ba71c9dd36b9cf8be9ac6d65", size = 829923, upload-time = "2025-09-25T21:32:54.537Z" },
     { url = "https://files.pythonhosted.org/packages/f0/7a/1c7270340330e575b92f397352af856a8c06f230aa3e76f86b39d01b416a/pyyaml-6.0.3-cp314-cp314t-win_amd64.whl", hash = "sha256:4ad1906908f2f5ae4e5a8ddfce73c320c2a1429ec52eafd27138b7f1cbe341c9", size = 174062, upload-time = "2025-09-25T21:32:55.767Z" },
     { url = "https://files.pythonhosted.org/packages/f1/12/de94a39c2ef588c7e6455cfbe7343d3b2dc9d6b6b2f40c4c6565744c873d/pyyaml-6.0.3-cp314-cp314t-win_arm64.whl", hash = "sha256:ebc55a14a21cb14062aa4162f906cd962b28e2e9ea38f9b4391244cd8de4ae0b", size = 149341, upload-time = "2025-09-25T21:32:56.828Z" },
+]
+
+[[package]]
+name = "qdrant-client"
+version = "1.19.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "grpcio" },
+    { name = "httpx", extra = ["http2"] },
+    { name = "numpy" },
+    { name = "portalocker" },
+    { name = "protobuf" },
+    { name = "pydantic" },
+    { name = "urllib3" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/3a/33/c6e4ec45b4fca5a0b808e8804e60be54a6d7505b68b53c0b1d0d62ba86c1/qdrant_client-1.19.0.tar.gz", hash = "sha256:365395a04b0a26c309b25b7d8b1c99ef2071ec9a2b74bc8a5fd3b7a3642fe963", size = 350953, upload-time = "2026-08-04T14:32:56.923Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/fc/3c/480c61cc8d5a3e76bb44e86231f408c93643e5498beadbbeb381ab55d02b/qdrant_client-1.19.0-py3-none-any.whl", hash = "sha256:13602a2b3478a95ecdf42f97b93d7f703b63a3361cd912a04495a33a5ac14121", size = 396157, upload-time = "2026-08-04T14:32:55.734Z" },
 ]
 
 [[package]]

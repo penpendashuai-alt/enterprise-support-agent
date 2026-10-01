@@ -113,7 +113,12 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
                 agent.checkpointer = saver
                 # Set store for long-term memory (cross-conversation knowledge)
                 agent.store = store
-            yield
+            try:
+                yield
+            finally:
+                from rag.retriever import close_retriever
+
+                await close_retriever()
     except Exception as e:
         logger.error(f"Error during database/store/agents initialization: {e}")
         raise

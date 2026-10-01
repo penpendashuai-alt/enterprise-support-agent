@@ -35,6 +35,8 @@ def router_message(service=None):
                     "intent": "service_status",
                     "entities": SupportEntities(service_name=service).model_dump(),
                     "needs_clarification": False,
+                    "knowledge_required": False,
+                    "retrieval_query": None,
                     "clarification_question": None,
                 },
             }

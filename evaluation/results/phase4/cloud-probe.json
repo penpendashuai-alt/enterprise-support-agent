@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-30T02:35:38.069224+00:00",
+  "collection": "enterprise_support_dense_probe_f6979a76178e48be90eed26dd5b44d1b",
+  "network": "local Windows to user-configured Europe Qdrant Cloud; provider DashScope Beijing",
+  "contract": {
+    "provider": "dashscope",
+    "model": "text-embedding-v3",
+    "dimensions": 1024,
+    "distance": "cosine",
+    "chunk_size": 800,
+    "overlap": 100,
+    "preprocessing": "text-v1",
+    "chunker": "paragraph-char-v1"
+  },
+  "existing_point_counts": {
+    "hello_agents_vectors": 0,
+    "rag_knowledge_base": 0
+  },
+  "status": "passed",
+  "dimensions": [
+    1024,
+    1024
+  ],
+  "score": 0.98364455,
+  "embedding_tokens": 7,
+  "existing_unchanged": true,
+  "probe_deleted": true
+}

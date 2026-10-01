@@ -37,6 +37,8 @@ class DraftModel:
                     ticket_action="create", issue_description="VPN 报错 809"
                 ).model_dump(),
                 "needs_clarification": False,
+                "knowledge_required": False,
+                "retrieval_query": None,
                 "clarification_question": None,
             }
             if schema.__name__ == "RouteDecision"

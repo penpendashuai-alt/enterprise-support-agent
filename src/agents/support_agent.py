@@ -23,6 +23,8 @@ from agents.ticket_flow import (
 )
 from core import get_model, settings
 from core.llm import ModelT
+from rag.answers import evidence_message, finalize, unavailable_answer
+from rag.models import RetrievalResult
 from tickets.models import TicketRecord
 
 logger = logging.getLogger(__name__)
@@ -55,6 +57,8 @@ class ExtractedEntities(SupportEntities):
 class RouteDecision(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
+    knowledge_required: bool
+    retrieval_query: str | None
     intent: Intent
     entities: ExtractedEntities
     needs_clarification: bool
@@ -62,6 +66,9 @@ class RouteDecision(BaseModel):
 
 
 class SupportState(MessagesState, total=False):
+    knowledge_required: bool
+    retrieval_query: str | None
+    retrieval: dict | None
     intent: Intent | None
     entities: SupportEntities
     needs_clarification: bool
@@ -82,12 +89,12 @@ ALLOWED_TOOLS: dict[str, tuple[str, ...]] = {
     "troubleshooting": (
         "query_service_status",
         "get_device_information",
-        "search_known_issue",
     ),
     "ticket_request": ("query_existing_ticket",),
 }
 
 ROUTER_PROMPT = """你是企业 IT 支持的内部路由器，只输出规定的结构化结果。
+knowledge_required 和 retrieval_query 必须输出。公司制度、内部操作指南以及 troubleshooting 故障排查需要知识库；检索问题结合相关历史补全为独立问题，例如“公司 VPN 使用要求”之后“那邮箱呢”应查询公司邮箱使用要求。普通概念问题如“VPN是什么”无需检索。service_status 和 ticket_request 只处理业务，不检索。无需检索时 retrieval_query=null。
 四类意图：general_question 一般知识或政策；troubleshooting 故障排查；
 service_status 服务运行状态查询；ticket_request 工单查询或创建诉求。
 明确要求创建/提交工单时优先 ticket_request，ticket_action=create，同时保留故障描述。
@@ -112,7 +119,7 @@ HANDLER_PROMPT = """你是企业 IT 支持助手。用中文简洁回答，并�
 error 说明查询失败，不把失败解读成正常状态。不得编造编号、企业内部政策或系统事实。
 一般 IT 知识可直接回答；没有依据的企业制度须说明信息不足，并请用户提供正式文档。
 service_status 必须查询指定服务；工单查询必须查询指定编号。
-troubleshooting 应查已知问题；有服务名可查状态，有用户提供的设备编号应查设备。
+troubleshooting 已通过独立节点检索文档；有服务名可查模拟状态，有用户提供的设备编号应查设备。不要调用 search_known_issue；文档不能代表服务实时状态。
 只用当前实体和本轮工具结果，不使用其他问题的旧结果。工具参数不能猜测。
 工具完成后总结有依据的建议；没有匹配条目可给出标为一般建议的排查步骤。
 不要建议关闭防火墙、安全软件或绕过企业安全策略；涉及网络策略应请管理员核查。
@@ -172,6 +179,9 @@ async def route_request(state: SupportState, config: RunnableConfig) -> dict:
     except Exception as exc:
         logger.warning("Support router failed: %s", type(exc).__name__)
         return {
+            "knowledge_required": False,
+            "retrieval_query": None,
+            "retrieval": None,
             "intent": None,
             "entities": SupportEntities(),
             "needs_clarification": True,
@@ -194,7 +204,20 @@ async def route_request(state: SupportState, config: RunnableConfig) -> dict:
         elif entities.ticket_action == "create" and not entities.issue_description:
             question = "请描述遇到的问题、发生时间和影响范围。工单尚未提交，信息齐全后需确认草稿。"
     needs_clarification = decision.needs_clarification or bool(question)
+    knowledge_required = (
+        decision.knowledge_required or decision.intent == "troubleshooting"
+    ) and decision.intent not in {"service_status", "ticket_request"}
     return {
+        "knowledge_required": knowledge_required,
+        "retrieval_query": (
+            decision.retrieval_query
+            or next(
+                str(m.content) for m in reversed(state["messages"]) if isinstance(m, HumanMessage)
+            )
+        )
+        if knowledge_required
+        else None,
+        "retrieval": None,
         "intent": decision.intent,
         "entities": entities,
         "needs_clarification": needs_clarification,
@@ -214,7 +237,22 @@ def turn_messages(state: SupportState) -> list:
     return messages[start:]
 
 
+async def retrieve_knowledge(state: SupportState) -> dict:
+    from rag.retriever import retrieve
+
+    result = await retrieve(state.get("retrieval_query") or "")
+    return {"retrieval": result.model_dump()}
+
+
 async def handle_request(state: SupportState, config: RunnableConfig) -> dict:
+    retrieval = (
+        RetrievalResult.model_validate(state["retrieval"]) if state.get("retrieval") else None
+    )
+    if state.get("knowledge_required") and (retrieval is None or retrieval.status != "ok"):
+        result = retrieval or RetrievalResult(
+            status="configuration_error", query="", error_code="missing_retrieval"
+        )
+        return {"messages": [unavailable_answer(result)]}
     last = state["messages"][-1]
     if (
         state["intent"] == "ticket_request"
@@ -246,15 +284,21 @@ async def handle_request(state: SupportState, config: RunnableConfig) -> dict:
             model = get_support_model(config)
             tools = [SUPPORT_TOOLS[name] for name in allowed_tools(state)]
             runnable = model.bind_tools(tools) if tools else model
+            handler_config: RunnableConfig = (
+                {**config, "tags": [*config.get("tags", []), "skip_stream"]}
+                if retrieval
+                else config
+            )
             response = await runnable.ainvoke(
                 [
                     SystemMessage(content=HANDLER_PROMPT),
                     SystemMessage(
                         content=f"当前意图：{state['intent']}\n当前实体：{state['entities'].model_dump_json()}"
                     ),
+                    *([evidence_message(retrieval)] if retrieval else []),
                     *turn_messages(state),
                 ],
-                config,
+                handler_config,
             )
         if not isinstance(response, AIMessage) or response.invalid_tool_calls:
             raise ValueError("Invalid model response")
@@ -271,6 +315,13 @@ async def handle_request(state: SupportState, config: RunnableConfig) -> dict:
             or len({call["id"] for call in response.tool_calls}) != len(response.tool_calls)
         ):
             raise ValueError("Invalid tool call IDs")
+        if retrieval:
+            # Tool-call preambles have not passed citation checks and must not enter history/SSE.
+            response = (
+                response.model_copy(update={"content": ""})
+                if response.tool_calls
+                else finalize(response, retrieval)
+            )
         return {"messages": [response]}
     except Exception as exc:
         logger.warning("Support handler failed: %s", type(exc).__name__)
@@ -314,11 +365,13 @@ async def execute_tools(state: SupportState, config: RunnableConfig) -> dict:
     return {"messages": results}
 
 
-def after_route(state: SupportState) -> Literal["clarify", "handler", "draft"]:
+def after_route(state: SupportState) -> Literal["clarify", "handler", "draft", "retrieve"]:
     if state["needs_clarification"]:
         return "clarify"
     if state["intent"] == "ticket_request" and state["entities"].ticket_action == "create":
         return "draft"
+    if state.get("knowledge_required"):
+        return "retrieve"
     return "handler"
 
 
@@ -329,6 +382,8 @@ def after_handler(state: SupportState) -> Literal["tools", "done"]:
 
 builder = StateGraph(SupportState)
 builder.add_node("router", route_request)
+builder.add_node("retrieve", retrieve_knowledge)
+builder.add_edge("retrieve", "handler")
 builder.add_node("clarify", clarify)
 builder.add_node("handler", handle_request)
 builder.add_node("tools", execute_tools)

@@ -9,6 +9,7 @@ from dotenv import load_dotenv
 from pydantic import ValidationError
 
 from client import AgentClient, AgentClientError
+from rag.ui import render_sources
 from schema import ChatHistory, ChatMessage, UserThreads
 from schema.task_data import TaskData, TaskDataStatus
 from tickets.ui import render_approval
@@ -269,7 +270,7 @@ async def main() -> None:
 
     if agent_client.agent == "support-agent":
         st.info(
-            "企业 IT 支持演示：服务、设备和 INC 工单使用固定模拟数据；确认草稿后可创建和查询 DEMO 本地演示工单，不提交真实企业系统。"
+            "知识库包含合成演示制度和公开技术摘要，回答附来源。服务、设备和 INC 工单是固定模拟数据；DEMO 工单仅写入本地演示库。"
         )
 
     if len(messages) == 0:
@@ -371,6 +372,7 @@ async def main() -> None:
                         voice.render_message(response.content)
                     else:
                         st.write(response.content)
+                    render_sources(response.custom_data)
             if is_first_message:
                 fetch_user_threads_cached.clear()
             st.rerun()  # Clear stale containers
@@ -464,6 +466,7 @@ async def draw_messages(
                         else:
                             st.write(msg.content)
 
+                    render_sources(msg.custom_data)
                     if msg.tool_calls:
                         # Create a status container for each tool call and store the
                         # status container by ID to ensure results are mapped to the

@@ -1,0 +1,631 @@
+{
+  "version": "dense-questions-v1",
+  "corpus_version": "synthetic-support-v1",
+  "label_policy": "Relevant document IDs plus named evidence sections; no-answer has no relevant document. Dev may calibrate threshold; heldout must not be used for tuning.",
+  "cases": [
+    {
+      "id": "dev-vpn-policy",
+      "split": "dev",
+      "question": "我们公司的 VPN 使用要求是什么？",
+      "relevant_documents": [
+        "vpn-policy"
+      ],
+      "evidence_locations": [
+        "VPN 使用",
+        "例外与权限"
+      ],
+      "answerable": true,
+      "expected_topic": "演示企业 VPN 使用要求"
+    },
+    {
+      "id": "heldout-vpn-policy",
+      "split": "heldout",
+      "question": "出差用公司虚拟专用网络，有哪些规矩？",
+      "relevant_documents": [
+        "vpn-policy"
+      ],
+      "evidence_locations": [
+        "VPN 使用",
+        "例外与权限"
+      ],
+      "answerable": true,
+      "expected_topic": "演示企业 VPN 使用要求"
+    },
+    {
+      "id": "dev-email-policy",
+      "split": "dev",
+      "question": "公司邮箱可以自动转发到私人邮箱吗？",
+      "relevant_documents": [
+        "email-policy"
+      ],
+      "evidence_locations": [
+        "邮箱使用",
+        "可疑邮件"
+      ],
+      "answerable": true,
+      "expected_topic": "演示企业邮箱使用规范"
+    },
+    {
+      "id": "heldout-email-policy",
+      "split": "heldout",
+      "question": "那邮箱呢？公司邮件外发有哪些规定？",
+      "relevant_documents": [
+        "email-policy"
+      ],
+      "evidence_locations": [
+        "邮箱使用",
+        "可疑邮件"
+      ],
+      "answerable": true,
+      "expected_topic": "演示企业邮箱使用规范"
+    },
+    {
+      "id": "dev-github-policy",
+      "split": "dev",
+      "question": "公司代码仓库能提交 API 密钥吗？",
+      "relevant_documents": [
+        "github-policy"
+      ],
+      "evidence_locations": [
+        "仓库访问",
+        "离职与变更"
+      ],
+      "answerable": true,
+      "expected_topic": "演示企业代码托管规范"
+    },
+    {
+      "id": "heldout-github-policy",
+      "split": "heldout",
+      "question": "PAT 能直接写进 GitHub 仓库配置文件吗？",
+      "relevant_documents": [
+        "github-policy"
+      ],
+      "evidence_locations": [
+        "仓库访问",
+        "离职与变更"
+      ],
+      "answerable": true,
+      "expected_topic": "演示企业代码托管规范"
+    },
+    {
+      "id": "dev-ticket-priority",
+      "split": "dev",
+      "question": "不指定优先级会用哪个值？",
+      "relevant_documents": [
+        "ticket-priority"
+      ],
+      "evidence_locations": [
+        "优先级",
+        "边界"
+      ],
+      "answerable": true,
+      "expected_topic": "演示工单优先级规则"
+    },
+    {
+      "id": "heldout-ticket-priority",
+      "split": "heldout",
+      "question": "紧急工单 P1 是否有承诺的处理分钟数？",
+      "relevant_documents": [
+        "ticket-priority"
+      ],
+      "evidence_locations": [
+        "优先级",
+        "边界"
+      ],
+      "answerable": true,
+      "expected_topic": "演示工单优先级规则"
+    },
+    {
+      "id": "dev-ticket-approval",
+      "split": "dev",
+      "question": "工单修改后还要确认吗？",
+      "relevant_documents": [
+        "ticket-approval"
+      ],
+      "evidence_locations": [
+        "创建与修改",
+        "持久化范围"
+      ],
+      "answerable": true,
+      "expected_topic": "本地演示工单审批流程"
+    },
+    {
+      "id": "heldout-ticket-approval",
+      "split": "heldout",
+      "question": "聊天发确认能直接创建正式 Jira 工单吗？",
+      "relevant_documents": [
+        "ticket-approval"
+      ],
+      "evidence_locations": [
+        "创建与修改",
+        "持久化范围"
+      ],
+      "answerable": true,
+      "expected_topic": "本地演示工单审批流程"
+    },
+    {
+      "id": "dev-data-security",
+      "split": "dev",
+      "question": "排障截图需要遮盖哪些数据？",
+      "relevant_documents": [
+        "data-security"
+      ],
+      "evidence_locations": [
+        "最小披露",
+        "知识库边界"
+      ],
+      "answerable": true,
+      "expected_topic": "演示企业敏感数据处理"
+    },
+    {
+      "id": "heldout-data-security",
+      "split": "heldout",
+      "question": "可以把整个项目和 .env 自动导入知识库吗？",
+      "relevant_documents": [
+        "data-security"
+      ],
+      "evidence_locations": [
+        "最小披露",
+        "知识库边界"
+      ],
+      "answerable": true,
+      "expected_topic": "演示企业敏感数据处理"
+    },
+    {
+      "id": "dev-remote-work",
+      "split": "dev",
+      "question": "远程办公电脑需要哪些保护？",
+      "relevant_documents": [
+        "remote-work"
+      ],
+      "evidence_locations": [
+        "远程设备",
+        "报修边界"
+      ],
+      "answerable": true,
+      "expected_topic": "演示企业远程办公设备要求"
+    },
+    {
+      "id": "heldout-remote-work",
+      "split": "heldout",
+      "question": "在家工作电脑能给家人共用公司账号吗？",
+      "relevant_documents": [
+        "remote-work"
+      ],
+      "evidence_locations": [
+        "远程设备",
+        "报修边界"
+      ],
+      "answerable": true,
+      "expected_topic": "演示企业远程办公设备要求"
+    },
+    {
+      "id": "dev-vpn-809",
+      "split": "dev",
+      "question": "VPN 报错 809 怎么处理？",
+      "relevant_documents": [
+        "vpn-809"
+      ],
+      "evidence_locations": [
+        "处理步骤",
+        "管理员核查"
+      ],
+      "answerable": true,
+      "expected_topic": "VPN 错误 809 排障演示"
+    },
+    {
+      "id": "heldout-vpn-809",
+      "split": "heldout",
+      "question": "Windows VPN error 809，应该先核对什么？",
+      "relevant_documents": [
+        "vpn-809"
+      ],
+      "evidence_locations": [
+        "处理步骤",
+        "管理员核查"
+      ],
+      "answerable": true,
+      "expected_topic": "VPN 错误 809 排障演示"
+    },
+    {
+      "id": "dev-vpn-691",
+      "split": "dev",
+      "question": "VPN 报错 691 要检查什么？",
+      "relevant_documents": [
+        "vpn-691"
+      ],
+      "evidence_locations": [
+        "处理步骤",
+        "升级支持"
+      ],
+      "answerable": true,
+      "expected_topic": "VPN 错误 691 身份验证排障"
+    },
+    {
+      "id": "heldout-vpn-691",
+      "split": "heldout",
+      "question": "VPN authentication failed，错误代码 691 如何排查？",
+      "relevant_documents": [
+        "vpn-691"
+      ],
+      "evidence_locations": [
+        "处理步骤",
+        "升级支持"
+      ],
+      "answerable": true,
+      "expected_topic": "VPN 错误 691 身份验证排障"
+    },
+    {
+      "id": "dev-email-delay",
+      "split": "dev",
+      "question": "邮件一直在发件箱怎么办？",
+      "relevant_documents": [
+        "email-delay"
+      ],
+      "evidence_locations": [
+        "处理步骤",
+        "范围与升级"
+      ],
+      "answerable": true,
+      "expected_topic": "邮箱发信延迟排障"
+    },
+    {
+      "id": "heldout-email-delay",
+      "split": "heldout",
+      "question": "email delivery delay 应收集哪些排查信息？",
+      "relevant_documents": [
+        "email-delay"
+      ],
+      "evidence_locations": [
+        "处理步骤",
+        "范围与升级"
+      ],
+      "answerable": true,
+      "expected_topic": "邮箱发信延迟排障"
+    },
+    {
+      "id": "dev-github-sso",
+      "split": "dev",
+      "question": "GitHub 能登录但企业仓库进不去怎么办？",
+      "relevant_documents": [
+        "github-sso"
+      ],
+      "evidence_locations": [
+        "处理步骤",
+        "权限检查"
+      ],
+      "answerable": true,
+      "expected_topic": "GitHub 登录与 SSO 排障"
+    },
+    {
+      "id": "heldout-github-sso",
+      "split": "heldout",
+      "question": "公司 GitHub SAML SSO 登录循环如何排查？",
+      "relevant_documents": [
+        "github-sso"
+      ],
+      "evidence_locations": [
+        "处理步骤",
+        "权限检查"
+      ],
+      "answerable": true,
+      "expected_topic": "GitHub 登录与 SSO 排障"
+    },
+    {
+      "id": "dev-device-repair",
+      "split": "dev",
+      "question": "电脑坏了报修要提供什么？",
+      "relevant_documents": [
+        "device-repair"
+      ],
+      "evidence_locations": [
+        "报修信息",
+        "送修安排"
+      ],
+      "answerable": true,
+      "expected_topic": "演示设备报修操作指南"
+    },
+    {
+      "id": "heldout-device-repair",
+      "split": "heldout",
+      "question": "device repair 没有资产号能先报告故障吗？",
+      "relevant_documents": [
+        "device-repair"
+      ],
+      "evidence_locations": [
+        "报修信息",
+        "送修安排"
+      ],
+      "answerable": true,
+      "expected_topic": "演示设备报修操作指南"
+    },
+    {
+      "id": "dev-password-reset",
+      "split": "dev",
+      "question": "忘记密码应该怎么重置？",
+      "relevant_documents": [
+        "password-reset"
+      ],
+      "evidence_locations": [
+        "重置操作",
+        "无法自助"
+      ],
+      "answerable": true,
+      "expected_topic": "演示密码重置与账号解锁"
+    },
+    {
+      "id": "heldout-password-reset",
+      "split": "heldout",
+      "question": "password reset 时可以把验证码给支持人员吗？",
+      "relevant_documents": [
+        "password-reset"
+      ],
+      "evidence_locations": [
+        "重置操作",
+        "无法自助"
+      ],
+      "answerable": true,
+      "expected_topic": "演示密码重置与账号解锁"
+    },
+    {
+      "id": "dev-account-request",
+      "split": "dev",
+      "question": "申请新系统账号要哪些信息？",
+      "relevant_documents": [
+        "account-request"
+      ],
+      "evidence_locations": [
+        "申请步骤",
+        "执行边界"
+      ],
+      "answerable": true,
+      "expected_topic": "演示账号与访问权限申请"
+    },
+    {
+      "id": "heldout-account-request",
+      "split": "heldout",
+      "question": "access request 想临时访问一个项目怎么申请？",
+      "relevant_documents": [
+        "account-request"
+      ],
+      "evidence_locations": [
+        "申请步骤",
+        "执行边界"
+      ],
+      "answerable": true,
+      "expected_topic": "演示账号与访问权限申请"
+    },
+    {
+      "id": "dev-mfa-lost",
+      "split": "dev",
+      "question": "MFA 手机丢了怎么办？",
+      "relevant_documents": [
+        "mfa-lost"
+      ],
+      "evidence_locations": [
+        "应急处理",
+        "安全核查"
+      ],
+      "answerable": true,
+      "expected_topic": "演示多因素认证设备丢失处理"
+    },
+    {
+      "id": "heldout-mfa-lost",
+      "split": "heldout",
+      "question": "换手机后收不到双因素验证码怎么恢复？",
+      "relevant_documents": [
+        "mfa-lost"
+      ],
+      "evidence_locations": [
+        "应急处理",
+        "安全核查"
+      ],
+      "answerable": true,
+      "expected_topic": "演示多因素认证设备丢失处理"
+    },
+    {
+      "id": "dev-printer-paper",
+      "split": "dev",
+      "question": "打印机总是卡纸怎么办？",
+      "relevant_documents": [
+        "printer-paper"
+      ],
+      "evidence_locations": [
+        "处理步骤",
+        "升级支持"
+      ],
+      "answerable": true,
+      "expected_topic": "演示打印机卡纸排障"
+    },
+    {
+      "id": "heldout-printer-paper",
+      "split": "heldout",
+      "question": "printer paper jam 应记录哪些信息给维修人员？",
+      "relevant_documents": [
+        "printer-paper"
+      ],
+      "evidence_locations": [
+        "处理步骤",
+        "升级支持"
+      ],
+      "answerable": true,
+      "expected_topic": "演示打印机卡纸排障"
+    },
+    {
+      "id": "dev-meeting-audio",
+      "split": "dev",
+      "question": "会议里别人听不到我说话怎么办？",
+      "relevant_documents": [
+        "meeting-audio"
+      ],
+      "evidence_locations": [
+        "处理步骤",
+        "范围判断"
+      ],
+      "answerable": true,
+      "expected_topic": "演示视频会议无声排障"
+    },
+    {
+      "id": "heldout-meeting-audio",
+      "split": "heldout",
+      "question": "会议 microphone 没声音先检查哪些项？",
+      "relevant_documents": [
+        "meeting-audio"
+      ],
+      "evidence_locations": [
+        "处理步骤",
+        "范围判断"
+      ],
+      "answerable": true,
+      "expected_topic": "演示视频会议无声排障"
+    },
+    {
+      "id": "dev-shared-folder",
+      "split": "dev",
+      "question": "共享文件夹没有权限怎么办？",
+      "relevant_documents": [
+        "shared-folder"
+      ],
+      "evidence_locations": [
+        "访问检查",
+        "权限申请"
+      ],
+      "answerable": true,
+      "expected_topic": "演示共享目录权限排查"
+    },
+    {
+      "id": "heldout-shared-folder",
+      "split": "heldout",
+      "question": "network share access denied 如何申请只读权限？",
+      "relevant_documents": [
+        "shared-folder"
+      ],
+      "evidence_locations": [
+        "访问检查",
+        "权限申请"
+      ],
+      "answerable": true,
+      "expected_topic": "演示共享目录权限排查"
+    },
+    {
+      "id": "dev-public-github-auth",
+      "split": "dev",
+      "question": "GitHub 命令行能用哪些认证方式？",
+      "relevant_documents": [
+        "public-github-auth"
+      ],
+      "evidence_locations": [
+        "公开资料摘要",
+        "使用范围"
+      ],
+      "answerable": true,
+      "expected_topic": "GitHub 官方认证方式摘要"
+    },
+    {
+      "id": "heldout-public-github-auth",
+      "split": "heldout",
+      "question": "git clone 用 HTTPS 和 SSH 时认证有什么不同？",
+      "relevant_documents": [
+        "public-github-auth"
+      ],
+      "evidence_locations": [
+        "公开资料摘要",
+        "使用范围"
+      ],
+      "answerable": true,
+      "expected_topic": "GitHub 官方认证方式摘要"
+    },
+    {
+      "id": "dev-public-gmail-auth",
+      "split": "dev",
+      "question": "Gmail 在其他邮件客户端怎么登录？",
+      "relevant_documents": [
+        "public-gmail-auth"
+      ],
+      "evidence_locations": [
+        "公开资料摘要",
+        "使用范围"
+      ],
+      "answerable": true,
+      "expected_topic": "Gmail 官方第三方客户端登录摘要"
+    },
+    {
+      "id": "heldout-public-gmail-auth",
+      "split": "heldout",
+      "question": "第三方邮箱客户端要直接保存 Google 密码吗？",
+      "relevant_documents": [
+        "public-gmail-auth"
+      ],
+      "evidence_locations": [
+        "公开资料摘要",
+        "使用范围"
+      ],
+      "answerable": true,
+      "expected_topic": "Gmail 官方第三方客户端登录摘要"
+    },
+    {
+      "id": "dev-no-answer-1",
+      "split": "dev",
+      "question": "公司工资每月几号发？",
+      "relevant_documents": [],
+      "evidence_locations": [],
+      "answerable": false
+    },
+    {
+      "id": "dev-no-answer-2",
+      "split": "dev",
+      "question": "北京办公室的停车费报销多少？",
+      "relevant_documents": [],
+      "evidence_locations": [],
+      "answerable": false
+    },
+    {
+      "id": "dev-no-answer-3",
+      "split": "dev",
+      "question": "工单 P1 保证几分钟解决？",
+      "relevant_documents": [],
+      "evidence_locations": [],
+      "answerable": false
+    },
+    {
+      "id": "dev-no-answer-4",
+      "split": "dev",
+      "question": "我们公司 CEO 的电话是什么？",
+      "relevant_documents": [],
+      "evidence_locations": [],
+      "answerable": false
+    },
+    {
+      "id": "heldout-no-answer-1",
+      "split": "heldout",
+      "question": "员工餐补是多少钱？",
+      "relevant_documents": [],
+      "evidence_locations": [],
+      "answerable": false
+    },
+    {
+      "id": "heldout-no-answer-2",
+      "split": "heldout",
+      "question": "邮箱自动保留几年？",
+      "relevant_documents": [],
+      "evidence_locations": [],
+      "answerable": false
+    },
+    {
+      "id": "heldout-no-answer-3",
+      "split": "heldout",
+      "question": "VPN 每天最多用几个小时？",
+      "relevant_documents": [],
+      "evidence_locations": [],
+      "answerable": false
+    },
+    {
+      "id": "heldout-no-answer-4",
+      "split": "heldout",
+      "question": "请给我公司文件服务器的真实 IP 地址。",
+      "relevant_documents": [],
+      "evidence_locations": [],
+      "answerable": false
+    }
+  ]
+}

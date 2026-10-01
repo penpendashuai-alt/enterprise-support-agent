@@ -43,6 +43,9 @@ services:
         - path: src/agents/
           action: sync+restart
           target: /app/agents/
+        - path: src/rag/
+          action: sync+restart
+          target: /app/rag/
         - path: src/tickets/
           action: sync+restart
           target: /app/tickets/
@@ -78,6 +81,9 @@ services:
         - path: src/client/
           action: sync+restart
           target: /app/client/
+        - path: src/rag/
+          action: sync+restart
+          target: /app/rag/
         - path: src/tickets/
           action: sync+restart
           target: /app/tickets/

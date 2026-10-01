@@ -29,6 +29,8 @@ async def test_deepseek_non_thinking_router_and_tool_round_trip(monkeypatch):
                                 "intent": "service_status",
                                 "entities": SupportEntities(service_name="GitHub").model_dump(),
                                 "needs_clarification": False,
+                                "knowledge_required": False,
+                                "retrieval_query": None,
                                 "clarification_question": None,
                             }
                         ),

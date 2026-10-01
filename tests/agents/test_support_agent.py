@@ -19,6 +19,8 @@ class ScriptedModel(FakeMessagesListChatModel):
 
 def route(intent="general_question", **kwargs):
     kwargs["entities"] = SupportEntities(**kwargs.get("entities", {})).model_dump()
+    kwargs.setdefault("knowledge_required", intent == "troubleshooting")
+    kwargs.setdefault("retrieval_query", "VPN 故障排查" if intent == "troubleshooting" else None)
     kwargs.setdefault("needs_clarification", False)
     kwargs.setdefault("clarification_question", None)
     return AIMessage(
@@ -47,6 +49,32 @@ def call(name="query_service_status", args=None, call_id="call-1"):
 
 
 def setup_graph(monkeypatch, responses):
+    from rag.models import Evidence, RetrievalResult
+
+    evidence = Evidence(
+        doc_id="test",
+        chunk_id="test:1",
+        title="演示排障",
+        source_type="synthetic",
+        source_path="test.md",
+        url=None,
+        document_version="1",
+        location="行 1",
+        text="演示指南：检查网络与客户端配置。",
+        content_hash="test",
+        number=1,
+        score=0.9,
+        collection="test",
+        index_version="test",
+    )
+    monkeypatch.setattr(
+        "rag.retriever.retrieve",
+        AsyncMock(
+            return_value=RetrievalResult(
+                status="ok", query="VPN 故障排查", evidence=[evidence], candidates=[evidence]
+            )
+        ),
+    )
     model = ScriptedModel(responses=responses)
     monkeypatch.setattr(module, "get_model", lambda _: model)
     return builder.compile(checkpointer=MemorySaver())
@@ -86,8 +114,8 @@ def assert_paired(messages):
         (
             "troubleshooting",
             {"issue_description": "VPN 809"},
-            "search_known_issue",
-            {"query": "VPN 809"},
+            "query_service_status",
+            {"service_name": "VPN"},
         ),
         (
             "troubleshooting",
@@ -109,7 +137,7 @@ async def test_tool_loop(monkeypatch, intent, entities, tool, args):
         [
             route(intent, entities=entities),
             call(tool, args),
-            AIMessage(content="根据模拟数据给出建议"),
+            AIMessage(content="根据模拟数据和演示文档给出建议 [1]"),
         ],
     )
     result = await ask(graph, "请查询")

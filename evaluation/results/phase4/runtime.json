@@ -1,0 +1,18 @@
+{
+  "python": "3.13.15",
+  "platform": "Windows",
+  "packages": {
+    "qdrant-client": "1.19.0",
+    "openai": "2.54.0",
+    "langchain-core": "1.4.9",
+    "langchain-openai": "1.3.5",
+    "langgraph": "1.2.12",
+    "pydantic": "2.13.5",
+    "streamlit": "1.59.2",
+    "pypdf": "6.16.2",
+    "httpx": "0.28.1",
+    "uv": "0.12.5"
+  },
+  "note": "Existing development venv; some preexisting transitive versions differ from uv.lock. Lock consistency checked offline; not a clean frozen-environment test.",
+  "report_version_note": "Initial agent reports use the shared Phase 3 code_version helper, whose hash covers all src/**/*.py and scripts/run_phase3_scenarios.py. Later Phase 4 reports also include scenario_sha256 for scripts/run_phase4_scenarios.py. Reported source hashes reflect each run start, not final post-validation edits."
+}

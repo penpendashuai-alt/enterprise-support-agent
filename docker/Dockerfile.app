@@ -17,6 +17,7 @@ RUN uv sync --frozen --only-group client
 COPY src/client/ ./client/
 COPY src/schema/ ./schema/
 COPY src/tickets/ ./tickets/
+COPY src/rag/ ./rag/
 COPY src/voice/ ./voice/
 COPY src/streamlit_app.py .
 

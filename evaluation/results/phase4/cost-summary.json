@@ -1,0 +1,79 @@
+{
+  "date": "2026-09-30",
+  "budget_cny": 50,
+  "rows": [
+    {
+      "source": "initial read-only connection probe (local .cache/phase4-probe.json)",
+      "embedding_tokens": 8,
+      "chat_input_tokens": 0,
+      "chat_output_tokens": 0
+    },
+    {
+      "source": "cloud-probe.json",
+      "embedding_tokens": 7,
+      "chat_input_tokens": 0,
+      "chat_output_tokens": 0
+    },
+    {
+      "source": "ingestion-v1.json",
+      "embedding_tokens": 2554,
+      "chat_input_tokens": 0,
+      "chat_output_tokens": 0
+    },
+    {
+      "source": "ingestion-v1-repeat.json",
+      "embedding_tokens": 0,
+      "chat_input_tokens": 0,
+      "chat_output_tokens": 0
+    },
+    {
+      "source": "dense-dev-v1.json",
+      "embedding_tokens": 204,
+      "chat_input_tokens": 0,
+      "chat_output_tokens": 0
+    },
+    {
+      "source": "dense-heldout-v1.json",
+      "embedding_tokens": 276,
+      "chat_input_tokens": 0,
+      "chat_output_tokens": 0
+    },
+    {
+      "source": "agent-live-v1.json",
+      "embedding_tokens": 53,
+      "chat_input_tokens": 33957,
+      "chat_output_tokens": 4025
+    },
+    {
+      "source": "agent-robustness-v1.json",
+      "embedding_tokens": 27,
+      "chat_input_tokens": 13711,
+      "chat_output_tokens": 1583
+    },
+    {
+      "source": "agent-grounding-recheck-v1.json",
+      "embedding_tokens": 18,
+      "chat_input_tokens": 7434,
+      "chat_output_tokens": 776
+    }
+  ],
+  "totals": {
+    "embedding_tokens": 3147,
+    "chat_input_tokens": 55102,
+    "chat_output_tokens": 6384,
+    "embedding_estimated_cny": 0.0015735,
+    "chat_estimated_cny": 0.668286,
+    "total_estimated_cny": 0.6698595
+  },
+  "rates": {
+    "embedding_cny_per_1000_tokens": 0.0005,
+    "chat_input_cny_per_million_tokens": 9,
+    "chat_output_cny_per_million_tokens": 27
+  },
+  "notes": [
+    "Usage reported by APIs; conservative peak chat pricing, all input cache miss. Not an invoice; balance/free-credit expiry not inspected.",
+    "Existing Qdrant plan costs unavailable and not included; no upgrade or recharge.",
+    "No paid retries reported in these runs; unreported provider-side charges cannot be determined.",
+    "Two controlled evidence robustness cases use real chat but no cloud retrieval; never counted as retrieval-quality evidence."
+  ]
+}

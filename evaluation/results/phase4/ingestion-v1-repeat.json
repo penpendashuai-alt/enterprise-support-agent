@@ -1,0 +1,25 @@
+{
+  "files": 20,
+  "failures": [],
+  "chunks": 40,
+  "collection": "enterprise_support_dense_v1",
+  "contract": {
+    "provider": "dashscope",
+    "model": "text-embedding-v3",
+    "dimensions": 1024,
+    "distance": "cosine",
+    "chunk_size": 800,
+    "overlap": 100,
+    "preprocessing": "text-v1",
+    "chunker": "paragraph-char-v1"
+  },
+  "parse_policy": "all documents must succeed; no activation on partial ingestion",
+  "status": "ready",
+  "reused": true,
+  "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93",
+  "corpus_hash": "d83dbb3cf89ee0b7119946733f742cb514a43d2fdd1163863e96b8e39a27adb5",
+  "seconds": 3.9277145999949425,
+  "embedding_tokens": 0,
+  "embedding_requests": 0,
+  "retries": 0
+}

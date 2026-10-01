@@ -256,6 +256,11 @@ class Settings(BaseSettings):
     def BASE_URL(self) -> str:
         return f"http://{self.HOST}:{self.PORT}"
 
+    def rag_settings(self):
+        from rag.config import get_settings
+
+        return get_settings()
+
     def is_dev(self) -> bool:
         return self.MODE == "dev"
 

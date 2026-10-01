@@ -27,3 +27,19 @@ def mock_env():
     """Fixture to ensure environment is clean for each test."""
     with patch.dict(os.environ, {}, clear=True):
         yield
+
+
+@pytest.fixture(autouse=True)
+def isolate_rag_network(monkeypatch):
+    from unittest.mock import AsyncMock
+
+    from rag.models import RetrievalResult
+
+    monkeypatch.setattr(
+        "rag.retriever.retrieve",
+        AsyncMock(
+            return_value=RetrievalResult(
+                status="unavailable", query="test", error_code="test_network_disabled"
+            )
+        ),
+    )

@@ -1,0 +1,3307 @@
+{
+  "date": "2026-09-30T02:44:52.385189+00:00",
+  "dataset_version": "dense-questions-v1",
+  "dataset_sha256": "a4b1f945a6942d23117bb5b8124cedb2a9b6b74d241e0940752bd853587d2e02",
+  "split": "heldout",
+  "contract": {
+    "provider": "dashscope",
+    "model": "text-embedding-v3",
+    "dimensions": 1024,
+    "distance": "cosine",
+    "chunk_size": 800,
+    "overlap": 100,
+    "preprocessing": "text-v1",
+    "chunker": "paragraph-char-v1"
+  },
+  "collection": "enterprise_support_dense_v1",
+  "threshold": 0.65,
+  "network": "Windows client -> DashScope Beijing and Qdrant Cloud Europe; wall-clock includes network and bounded retries; first request cold",
+  "records": [
+    {
+      "id": "heldout-vpn-policy",
+      "split": "heldout",
+      "question": "出差用公司虚拟专用网络，有哪些规矩？",
+      "relevant_documents": [
+        "vpn-policy"
+      ],
+      "evidence_locations": [
+        "VPN 使用",
+        "例外与权限"
+      ],
+      "answerable": true,
+      "expected_topic": "演示企业 VPN 使用要求",
+      "result": {
+        "status": "ok",
+        "query": "出差用公司虚拟专用网络，有哪些规矩？",
+        "evidence": [
+          {
+            "doc_id": "vpn-policy",
+            "chunk_id": "vpn-policy:1.0:459800b4cbdd7430b6ea",
+            "title": "演示企业 VPN 使用要求",
+            "source_type": "synthetic",
+            "source_path": "policies/vpn-policy.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "VPN 使用；行 5-5；字符 1-105",
+            "text": "演示制度：远程访问内部资源时使用公司批准的 VPN 客户端并完成多因素认证（MFA）。不共享账号，不保存他人凭据。访问结束后断开连接；本文不规定每日使用小时数。公共无线网络上也必须保持终端防护，不绕过安全策略。",
+            "content_hash": "048bc3811a3009a1f2c535a9d40cebded06fbe87bdc050b3a6cab55e792e115f",
+            "number": 1,
+            "score": 0.6909244,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "remote-work",
+            "chunk_id": "remote-work:1.0:527bd314bf1272d3561f",
+            "title": "演示企业远程办公设备要求",
+            "source_type": "synthetic",
+            "source_path": "policies/remote-work.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "远程设备；行 5-5；字符 1-73",
+            "text": "演示制度：远程办公使用受管理设备，保持系统安全更新、磁盘加密和屏幕锁定。不要与家人共享工作账号。离开设备时锁屏，访问内部资源按 VPN 规范办理。",
+            "content_hash": "5d01eb901e9e50f1b2e8fe44d125b7928c27339f4d4833ad6756f2fca1fa9110",
+            "number": 2,
+            "score": 0.67848885,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "candidates": [
+          {
+            "doc_id": "vpn-policy",
+            "chunk_id": "vpn-policy:1.0:459800b4cbdd7430b6ea",
+            "title": "演示企业 VPN 使用要求",
+            "source_type": "synthetic",
+            "source_path": "policies/vpn-policy.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "VPN 使用；行 5-5；字符 1-105",
+            "text": "演示制度：远程访问内部资源时使用公司批准的 VPN 客户端并完成多因素认证（MFA）。不共享账号，不保存他人凭据。访问结束后断开连接；本文不规定每日使用小时数。公共无线网络上也必须保持终端防护，不绕过安全策略。",
+            "content_hash": "048bc3811a3009a1f2c535a9d40cebded06fbe87bdc050b3a6cab55e792e115f",
+            "number": 0,
+            "score": 0.6909244,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "remote-work",
+            "chunk_id": "remote-work:1.0:527bd314bf1272d3561f",
+            "title": "演示企业远程办公设备要求",
+            "source_type": "synthetic",
+            "source_path": "policies/remote-work.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "远程设备；行 5-5；字符 1-73",
+            "text": "演示制度：远程办公使用受管理设备，保持系统安全更新、磁盘加密和屏幕锁定。不要与家人共享工作账号。离开设备时锁屏，访问内部资源按 VPN 规范办理。",
+            "content_hash": "5d01eb901e9e50f1b2e8fe44d125b7928c27339f4d4833ad6756f2fca1fa9110",
+            "number": 0,
+            "score": 0.67848885,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "vpn-policy",
+            "chunk_id": "vpn-policy:1.0:963bbc0bcdd85f12a047",
+            "title": "演示企业 VPN 使用要求",
+            "source_type": "synthetic",
+            "source_path": "policies/vpn-policy.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "例外与权限；行 9-9；字符 1-72",
+            "text": "供应商访问需先由业务负责人确认范围，再由 IT 管理员分配最小权限。需要访问额外系统时走账号申请流程；接入 VPN 不代表自动获得全部系统权限。",
+            "content_hash": "8505388983c64238b0133c6c4afc76a4af3cbc91b44ee866e600ea2bf80be4e6",
+            "number": 0,
+            "score": 0.62891656,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "remote-work",
+            "chunk_id": "remote-work:1.0:1afa47a92cf3e71b4691",
+            "title": "演示企业远程办公设备要求",
+            "source_type": "synthetic",
+            "source_path": "policies/remote-work.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "报修边界；行 9-9；字符 1-65",
+            "text": "设备异常时记录资产编号、系统版本和现象，由 IT 支持安排维修；不要自行拆解保修设备。本文没有家庭宽带报销金额或设备采购额度规定。",
+            "content_hash": "d1d9a0ef8df38203370b0ce2a71fe3a28fc76815dfb8c42c51b7d6a937a3add8",
+            "number": 0,
+            "score": 0.5940324,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "email-policy",
+            "chunk_id": "email-policy:1.0:e9b5e65856b5ff861504",
+            "title": "演示企业邮箱使用规范",
+            "source_type": "synthetic",
+            "source_path": "policies/email-policy.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "邮箱使用；行 5-5；字符 1-78",
+            "text": "演示制度：办公邮件使用企业邮箱，不将含敏感信息的邮件自动转发至私人邮箱。发送外部收件人前核对地址和附件权限；机密内容采用企业批准的共享方式，并限制接收范围。",
+            "content_hash": "ed589de1bdd9f6d8b82f82ee0f217b6afdea77e1fb8156f59fa74955fbacfff0",
+            "number": 0,
+            "score": 0.590333,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93",
+        "collection": "enterprise_support_dense_v1",
+        "error_code": null,
+        "timings": {
+          "index_check_seconds": 1.7398059999977704,
+          "embedding_seconds": 0.8523950999951921,
+          "qdrant_query_seconds": 0.5165759999945294,
+          "retrieval_seconds": 3.108940400008578
+        },
+        "usage": {
+          "embedding_tokens": 12,
+          "requests": 1,
+          "retries": 0
+        }
+      }
+    },
+    {
+      "id": "heldout-email-policy",
+      "split": "heldout",
+      "question": "那邮箱呢？公司邮件外发有哪些规定？",
+      "relevant_documents": [
+        "email-policy"
+      ],
+      "evidence_locations": [
+        "邮箱使用",
+        "可疑邮件"
+      ],
+      "answerable": true,
+      "expected_topic": "演示企业邮箱使用规范",
+      "result": {
+        "status": "ok",
+        "query": "那邮箱呢？公司邮件外发有哪些规定？",
+        "evidence": [
+          {
+            "doc_id": "email-policy",
+            "chunk_id": "email-policy:1.0:e9b5e65856b5ff861504",
+            "title": "演示企业邮箱使用规范",
+            "source_type": "synthetic",
+            "source_path": "policies/email-policy.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "邮箱使用；行 5-5；字符 1-78",
+            "text": "演示制度：办公邮件使用企业邮箱，不将含敏感信息的邮件自动转发至私人邮箱。发送外部收件人前核对地址和附件权限；机密内容采用企业批准的共享方式，并限制接收范围。",
+            "content_hash": "ed589de1bdd9f6d8b82f82ee0f217b6afdea77e1fb8156f59fa74955fbacfff0",
+            "number": 1,
+            "score": 0.72298455,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "candidates": [
+          {
+            "doc_id": "email-policy",
+            "chunk_id": "email-policy:1.0:e9b5e65856b5ff861504",
+            "title": "演示企业邮箱使用规范",
+            "source_type": "synthetic",
+            "source_path": "policies/email-policy.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "邮箱使用；行 5-5；字符 1-78",
+            "text": "演示制度：办公邮件使用企业邮箱，不将含敏感信息的邮件自动转发至私人邮箱。发送外部收件人前核对地址和附件权限；机密内容采用企业批准的共享方式，并限制接收范围。",
+            "content_hash": "ed589de1bdd9f6d8b82f82ee0f217b6afdea77e1fb8156f59fa74955fbacfff0",
+            "number": 0,
+            "score": 0.72298455,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "email-policy",
+            "chunk_id": "email-policy:1.0:0158df37f87bb3a6402b",
+            "title": "演示企业邮箱使用规范",
+            "source_type": "synthetic",
+            "source_path": "policies/email-policy.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "可疑邮件；行 9-9；字符 1-65",
+            "text": "发现钓鱼邮件时不要点击链接、打开附件或回复凭据。保留发件地址和收到时间，通过演示支持流程报告。本文没有规定邮箱容量或邮件保留年限。",
+            "content_hash": "1aa635167effcd96f3d9e26c666b7e15c0f240e272c841ead1c6f5e4d63a1cf6",
+            "number": 0,
+            "score": 0.6371974,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "remote-work",
+            "chunk_id": "remote-work:1.0:527bd314bf1272d3561f",
+            "title": "演示企业远程办公设备要求",
+            "source_type": "synthetic",
+            "source_path": "policies/remote-work.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "远程设备；行 5-5；字符 1-73",
+            "text": "演示制度：远程办公使用受管理设备，保持系统安全更新、磁盘加密和屏幕锁定。不要与家人共享工作账号。离开设备时锁屏，访问内部资源按 VPN 规范办理。",
+            "content_hash": "5d01eb901e9e50f1b2e8fe44d125b7928c27339f4d4833ad6756f2fca1fa9110",
+            "number": 0,
+            "score": 0.61031365,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "public-gmail-auth",
+            "chunk_id": "public-gmail-auth:1.0:c34e2a872e64cfedaf2d",
+            "title": "Gmail 官方第三方客户端登录摘要",
+            "source_type": "public_summary",
+            "source_path": "guides/public-gmail-auth.md",
+            "url": "https://support.google.com/mail/answer/7126229",
+            "document_version": "1.0",
+            "location": "使用范围；行 9-9；字符 1-116",
+            "text": "源页面：Google Gmail Help 的 Add Gmail to another email client。内容由项目自行概括。遇到企业受管理账号的接入限制，应由组织管理员核对政策；不要直接要求关闭多因素认证来恢复邮件同步。",
+            "content_hash": "511d2ed8889d0e6e5fc11dd18adab2c377c2a35bf0d3c1f0e96322475e65c512",
+            "number": 0,
+            "score": 0.60689634,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "public-gmail-auth",
+            "chunk_id": "public-gmail-auth:1.0:8c4741ab2d3e9e591a21",
+            "title": "Gmail 官方第三方客户端登录摘要",
+            "source_type": "public_summary",
+            "source_path": "guides/public-gmail-auth.md",
+            "url": "https://support.google.com/mail/answer/7126229",
+            "document_version": "1.0",
+            "location": "公开资料摘要；行 5-5；字符 1-118",
+            "text": "Google 的 Gmail 帮助建议在兼容邮件客户端中选择“使用 Google 账号登录”，而不是向第三方应用直接共享 Google 用户名和密码。此摘要适用于理解公开 Gmail 的客户端连接方式，不代表演示企业的邮箱供应商或配置。",
+            "content_hash": "0650ef8140c257d7e74ebc155b3a5e67184e723dde8d6fac46f10041d56bb05b",
+            "number": 0,
+            "score": 0.58362293,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93",
+        "collection": "enterprise_support_dense_v1",
+        "error_code": null,
+        "timings": {
+          "index_check_seconds": 0.6564492000034079,
+          "embedding_seconds": 0.16116669999610167,
+          "qdrant_query_seconds": 0.5389377999963472,
+          "retrieval_seconds": 1.3566993999993429
+        },
+        "usage": {
+          "embedding_tokens": 11,
+          "requests": 1,
+          "retries": 0
+        }
+      }
+    },
+    {
+      "id": "heldout-github-policy",
+      "split": "heldout",
+      "question": "PAT 能直接写进 GitHub 仓库配置文件吗？",
+      "relevant_documents": [
+        "github-policy"
+      ],
+      "evidence_locations": [
+        "仓库访问",
+        "离职与变更"
+      ],
+      "answerable": true,
+      "expected_topic": "演示企业代码托管规范",
+      "result": {
+        "status": "insufficient",
+        "query": "PAT 能直接写进 GitHub 仓库配置文件吗？",
+        "evidence": [],
+        "candidates": [
+          {
+            "doc_id": "github-policy",
+            "chunk_id": "github-policy:1.0:0e93824c253250db3ee5",
+            "title": "演示企业代码托管规范",
+            "source_type": "synthetic",
+            "source_path": "policies/github-policy.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "仓库访问；行 5-5；字符 1-76",
+            "text": "演示制度：业务代码放在组织批准的仓库中，按任务授予最小访问权限。个人访问令牌（PAT）、私钥和环境变量密钥不得提交代码仓库；使用组织批准的秘密存储方式。",
+            "content_hash": "6cafceca90afb438ebbc475855455edbcd71e49704240c141d41c066292574ae",
+            "number": 0,
+            "score": 0.57013243,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "public-github-auth",
+            "chunk_id": "public-github-auth:1.0:892cd3b556cb65c5b848",
+            "title": "GitHub 官方认证方式摘要",
+            "source_type": "public_summary",
+            "source_path": "guides/public-github-auth.md",
+            "url": "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github",
+            "document_version": "1.0",
+            "location": "公开资料摘要；行 5-5；字符 1-142",
+            "text": "GitHub 可通过浏览器、命令行或 API 访问，不同入口使用相应认证方式。HTTPS Git 操作可使用个人访问令牌或凭据管理工具；SSH 使用 SSH 密钥。组织采用 SAML SSO 时，访问组织资源可能还需要身份提供商认证。此处是公开文档摘要，不代表演示企业已启用特定设置。",
+            "content_hash": "850f3e2b7cf7ee2dfd2d7fd32b84f5ebac33a8cf818baf6c04e2a52b1f02a088",
+            "number": 0,
+            "score": 0.5616772,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "github-sso",
+            "chunk_id": "github-sso:1.0:782abe1c56caa2b9ebb8",
+            "title": "GitHub 登录与 SSO 排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/github-sso.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "权限检查；行 9-9；字符 1-86",
+            "text": "账号可登录而单个仓库无权限时，请管理员核查组织成员资格、仓库授权和组织 SSO 要求。不要共享令牌或绕过组织身份校验。查询服务样例用于演示，不代表 GitHub 实时监控。",
+            "content_hash": "9f11886894c6130910d39fcf640503fbfd1b55bafca2974aa5763c59e375296d",
+            "number": 0,
+            "score": 0.55741763,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "github-policy",
+            "chunk_id": "github-policy:1.0:d4884c6c54e5c3e1fe76",
+            "title": "演示企业代码托管规范",
+            "source_type": "synthetic",
+            "source_path": "policies/github-policy.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "离职与变更；行 9-9；字符 1-70",
+            "text": "成员离职或职责变化后由管理员复核组织和仓库授权。操作之前检查仓库归属；本演示 Agent 不自动修改 GitHub 权限，也不代替组织审批。",
+            "content_hash": "120d8909210ffe1692bd2300c15f6bf124a240fcd6a64f41abcf9c55633a2202",
+            "number": 0,
+            "score": 0.5443539,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "github-sso",
+            "chunk_id": "github-sso:1.0:aa0dd0ae453866b2e798",
+            "title": "GitHub 登录与 SSO 排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/github-sso.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "处理步骤；行 5-5；字符 1-101",
+            "text": "演示排障指南：区分登录 GitHub 账号失败和进入企业组织仓库失败。先确认当前账号、浏览器会话、MFA 状态及组织要求的 SSO 登录。完成身份提供商认证后重新访问组织资源，避免在错误账号下重复授权。",
+            "content_hash": "20156aa3022cc8695a02430983593869d12729964d7a5da3bc06ad06a6e0273b",
+            "number": 0,
+            "score": 0.5282243,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93",
+        "collection": "enterprise_support_dense_v1",
+        "error_code": null,
+        "timings": {
+          "index_check_seconds": 0.6593817000102717,
+          "embedding_seconds": 0.1823803000006592,
+          "qdrant_query_seconds": 0.5570088999957079,
+          "retrieval_seconds": 1.3988192999968305
+        },
+        "usage": {
+          "embedding_tokens": 14,
+          "requests": 1,
+          "retries": 0
+        }
+      }
+    },
+    {
+      "id": "heldout-ticket-priority",
+      "split": "heldout",
+      "question": "紧急工单 P1 是否有承诺的处理分钟数？",
+      "relevant_documents": [
+        "ticket-priority"
+      ],
+      "evidence_locations": [
+        "优先级",
+        "边界"
+      ],
+      "answerable": true,
+      "expected_topic": "演示工单优先级规则",
+      "result": {
+        "status": "ok",
+        "query": "紧急工单 P1 是否有承诺的处理分钟数？",
+        "evidence": [
+          {
+            "doc_id": "ticket-priority",
+            "chunk_id": "ticket-priority:1.0:a97a0d0adbb8a147e7c0",
+            "title": "演示工单优先级规则",
+            "source_type": "synthetic",
+            "source_path": "policies/ticket-priority.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "边界；行 9-9；字符 1-79",
+            "text": "优先级需要在草稿中由用户确认；P1 也不能跳过确认。这里没有实际响应时限或 SLA 承诺。修改优先级必须保存新版本并重新确认，知识库文字不能覆盖后端审批规则。",
+            "content_hash": "da4f53f5b81d15b0f9fd0563975300ee3164157e1f7b79b417cd23d988586962",
+            "number": 1,
+            "score": 0.6614225,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "candidates": [
+          {
+            "doc_id": "ticket-priority",
+            "chunk_id": "ticket-priority:1.0:a97a0d0adbb8a147e7c0",
+            "title": "演示工单优先级规则",
+            "source_type": "synthetic",
+            "source_path": "policies/ticket-priority.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "边界；行 9-9；字符 1-79",
+            "text": "优先级需要在草稿中由用户确认；P1 也不能跳过确认。这里没有实际响应时限或 SLA 承诺。修改优先级必须保存新版本并重新确认，知识库文字不能覆盖后端审批规则。",
+            "content_hash": "da4f53f5b81d15b0f9fd0563975300ee3164157e1f7b79b417cd23d988586962",
+            "number": 0,
+            "score": 0.6614225,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "ticket-priority",
+            "chunk_id": "ticket-priority:1.0:0d272d2e8be1bc990e33",
+            "title": "演示工单优先级规则",
+            "source_type": "synthetic",
+            "source_path": "policies/ticket-priority.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "优先级；行 5-5；字符 1-90",
+            "text": "演示优先级只有 P1、P2、P3、P4：P1 紧急，P2 高，P3 普通，P4 低。用户明确指定时保留该值；未指定时默认 P3，不根据模型猜测自动升级。任何优先级都要填写影响范围。",
+            "content_hash": "96a4b843d7f4b568e2c33281e5654ca4fe6d40a9894fc6420e9308cce28dd864",
+            "number": 0,
+            "score": 0.6141982,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "ticket-approval",
+            "chunk_id": "ticket-approval:1.0:63a8faa5ec53f12063ae",
+            "title": "本地演示工单审批流程",
+            "source_type": "synthetic",
+            "source_path": "policies/ticket-approval.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "创建与修改；行 5-5；字符 1-91",
+            "text": "演示流程：描述问题和影响范围，核对标题、描述、服务及优先级后，使用确认创建按钮批准当前版本。修改草稿后需重新确认。普通聊天输入“确认”或粘贴审批 JSON 不能代替界面/结构化审批。",
+            "content_hash": "c4eb6113205e1a4156e5fb856de43ba49720bef7a2620ccd1cc953067c8d7709",
+            "number": 0,
+            "score": 0.57682586,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "ticket-approval",
+            "chunk_id": "ticket-approval:1.0:8a572a3a8c6546f677c9",
+            "title": "本地演示工单审批流程",
+            "source_type": "synthetic",
+            "source_path": "policies/ticket-approval.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "持久化范围；行 9-9；字符 1-103",
+            "text": "确认后创建 DEMO 编号的本地工单，不提交真实 Jira 或 ServiceNow。取消不创建；重复批准同一版本返回原工单。INC-1001 和 INC-1002 是固定样例，与新建 DEMO 工单分开。",
+            "content_hash": "1301fed79aa6ada99b69ac3eb5b20ef7711106e83cfc56e9df9b343328448948",
+            "number": 0,
+            "score": 0.56480205,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "device-repair",
+            "chunk_id": "device-repair:1.0:f930bdf72c5e411095a2",
+            "title": "演示设备报修操作指南",
+            "source_type": "synthetic",
+            "source_path": "guides/device-repair.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "送修安排；行 9-9；字符 1-77",
+            "text": "由 IT 支持核对设备归属并安排送修，送修前按组织流程备份和保护敏感数据。本文不承诺备用机或维修完成时间；本 Agent 只能创建经过确认的本地演示工单。",
+            "content_hash": "32b4f818847af9595025d282f247ed990f7c1ad6b1ee16897ac700a72fc10c93",
+            "number": 0,
+            "score": 0.548916,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93",
+        "collection": "enterprise_support_dense_v1",
+        "error_code": null,
+        "timings": {
+          "index_check_seconds": 0.6569593999884091,
+          "embedding_seconds": 0.18268369999714196,
+          "qdrant_query_seconds": 0.4970268000033684,
+          "retrieval_seconds": 1.3367966999940109
+        },
+        "usage": {
+          "embedding_tokens": 13,
+          "requests": 1,
+          "retries": 0
+        }
+      }
+    },
+    {
+      "id": "heldout-ticket-approval",
+      "split": "heldout",
+      "question": "聊天发确认能直接创建正式 Jira 工单吗？",
+      "relevant_documents": [
+        "ticket-approval"
+      ],
+      "evidence_locations": [
+        "创建与修改",
+        "持久化范围"
+      ],
+      "answerable": true,
+      "expected_topic": "本地演示工单审批流程",
+      "result": {
+        "status": "ok",
+        "query": "聊天发确认能直接创建正式 Jira 工单吗？",
+        "evidence": [
+          {
+            "doc_id": "ticket-approval",
+            "chunk_id": "ticket-approval:1.0:8a572a3a8c6546f677c9",
+            "title": "本地演示工单审批流程",
+            "source_type": "synthetic",
+            "source_path": "policies/ticket-approval.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "持久化范围；行 9-9；字符 1-103",
+            "text": "确认后创建 DEMO 编号的本地工单，不提交真实 Jira 或 ServiceNow。取消不创建；重复批准同一版本返回原工单。INC-1001 和 INC-1002 是固定样例，与新建 DEMO 工单分开。",
+            "content_hash": "1301fed79aa6ada99b69ac3eb5b20ef7711106e83cfc56e9df9b343328448948",
+            "number": 1,
+            "score": 0.7008539,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "ticket-approval",
+            "chunk_id": "ticket-approval:1.0:63a8faa5ec53f12063ae",
+            "title": "本地演示工单审批流程",
+            "source_type": "synthetic",
+            "source_path": "policies/ticket-approval.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "创建与修改；行 5-5；字符 1-91",
+            "text": "演示流程：描述问题和影响范围，核对标题、描述、服务及优先级后，使用确认创建按钮批准当前版本。修改草稿后需重新确认。普通聊天输入“确认”或粘贴审批 JSON 不能代替界面/结构化审批。",
+            "content_hash": "c4eb6113205e1a4156e5fb856de43ba49720bef7a2620ccd1cc953067c8d7709",
+            "number": 2,
+            "score": 0.6681113,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "candidates": [
+          {
+            "doc_id": "ticket-approval",
+            "chunk_id": "ticket-approval:1.0:8a572a3a8c6546f677c9",
+            "title": "本地演示工单审批流程",
+            "source_type": "synthetic",
+            "source_path": "policies/ticket-approval.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "持久化范围；行 9-9；字符 1-103",
+            "text": "确认后创建 DEMO 编号的本地工单，不提交真实 Jira 或 ServiceNow。取消不创建；重复批准同一版本返回原工单。INC-1001 和 INC-1002 是固定样例，与新建 DEMO 工单分开。",
+            "content_hash": "1301fed79aa6ada99b69ac3eb5b20ef7711106e83cfc56e9df9b343328448948",
+            "number": 0,
+            "score": 0.7008539,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "ticket-approval",
+            "chunk_id": "ticket-approval:1.0:63a8faa5ec53f12063ae",
+            "title": "本地演示工单审批流程",
+            "source_type": "synthetic",
+            "source_path": "policies/ticket-approval.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "创建与修改；行 5-5；字符 1-91",
+            "text": "演示流程：描述问题和影响范围，核对标题、描述、服务及优先级后，使用确认创建按钮批准当前版本。修改草稿后需重新确认。普通聊天输入“确认”或粘贴审批 JSON 不能代替界面/结构化审批。",
+            "content_hash": "c4eb6113205e1a4156e5fb856de43ba49720bef7a2620ccd1cc953067c8d7709",
+            "number": 0,
+            "score": 0.6681113,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "ticket-priority",
+            "chunk_id": "ticket-priority:1.0:a97a0d0adbb8a147e7c0",
+            "title": "演示工单优先级规则",
+            "source_type": "synthetic",
+            "source_path": "policies/ticket-priority.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "边界；行 9-9；字符 1-79",
+            "text": "优先级需要在草稿中由用户确认；P1 也不能跳过确认。这里没有实际响应时限或 SLA 承诺。修改优先级必须保存新版本并重新确认，知识库文字不能覆盖后端审批规则。",
+            "content_hash": "da4f53f5b81d15b0f9fd0563975300ee3164157e1f7b79b417cd23d988586962",
+            "number": 0,
+            "score": 0.57499224,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "account-request",
+            "chunk_id": "account-request:1.0:57bba468f5a2abd9e273",
+            "title": "演示账号与访问权限申请",
+            "source_type": "synthetic",
+            "source_path": "guides/account-request.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "执行边界；行 9-9；字符 1-81",
+            "text": "审批完成不代表本演示 Agent 自动开通账号。本阶段只展示知识说明，并可收集故障工单草稿。紧急需求也不能跳过业务负责人和管理员的核查；本文没有固定开通 SLA。",
+            "content_hash": "68f762f2d84d358f2a76dc89923b4deec77e76e341fff60ee541463f9928c26e",
+            "number": 0,
+            "score": 0.55866367,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "device-repair",
+            "chunk_id": "device-repair:1.0:f930bdf72c5e411095a2",
+            "title": "演示设备报修操作指南",
+            "source_type": "synthetic",
+            "source_path": "guides/device-repair.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "送修安排；行 9-9；字符 1-77",
+            "text": "由 IT 支持核对设备归属并安排送修，送修前按组织流程备份和保护敏感数据。本文不承诺备用机或维修完成时间；本 Agent 只能创建经过确认的本地演示工单。",
+            "content_hash": "32b4f818847af9595025d282f247ed990f7c1ad6b1ee16897ac700a72fc10c93",
+            "number": 0,
+            "score": 0.5303674,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93",
+        "collection": "enterprise_support_dense_v1",
+        "error_code": null,
+        "timings": {
+          "index_check_seconds": 0.7125208000070415,
+          "embedding_seconds": 0.33329110000340734,
+          "qdrant_query_seconds": 0.4734001999895554,
+          "retrieval_seconds": 1.519344700005604
+        },
+        "usage": {
+          "embedding_tokens": 14,
+          "requests": 1,
+          "retries": 0
+        }
+      }
+    },
+    {
+      "id": "heldout-data-security",
+      "split": "heldout",
+      "question": "可以把整个项目和 .env 自动导入知识库吗？",
+      "relevant_documents": [
+        "data-security"
+      ],
+      "evidence_locations": [
+        "最小披露",
+        "知识库边界"
+      ],
+      "answerable": true,
+      "expected_topic": "演示企业敏感数据处理",
+      "result": {
+        "status": "insufficient",
+        "query": "可以把整个项目和 .env 自动导入知识库吗？",
+        "evidence": [],
+        "candidates": [
+          {
+            "doc_id": "data-security",
+            "chunk_id": "data-security:1.0:20b17ca7aa650163f481",
+            "title": "演示企业敏感数据处理",
+            "source_type": "synthetic",
+            "source_path": "policies/data-security.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "最小披露；行 5-5；字符 1-86",
+            "text": "演示制度：排障只收集解决问题必需的信息。日志截图应遮盖密码、令牌、客户个人数据及密钥；不要把 .env、个人规划或整台电脑上传知识库。共享给支持人员前检查内容与接收者范围。",
+            "content_hash": "29e3a86c89085dfbed3d90b4777f3d346300471dc15ff94c588b4f9192564245",
+            "number": 0,
+            "score": 0.517862,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "data-security",
+            "chunk_id": "data-security:1.0:353bc8dfeca0fd16b99e",
+            "title": "演示企业敏感数据处理",
+            "source_type": "synthetic",
+            "source_path": "policies/data-security.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "知识库边界；行 9-9；字符 1-82",
+            "text": "索引只接收 manifest 中明确列出的授权文档。个人文件不因存在于项目目录就自动成为语料。发生泄露时联系管理员按组织流程处置，本文不提供实际企业的事件响应时限。",
+            "content_hash": "a217846e21a36276745f0bc8fed32c6896e5b795a09710618cbff34845caff92",
+            "number": 0,
+            "score": 0.5117571,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "github-policy",
+            "chunk_id": "github-policy:1.0:0e93824c253250db3ee5",
+            "title": "演示企业代码托管规范",
+            "source_type": "synthetic",
+            "source_path": "policies/github-policy.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "仓库访问；行 5-5；字符 1-76",
+            "text": "演示制度：业务代码放在组织批准的仓库中，按任务授予最小访问权限。个人访问令牌（PAT）、私钥和环境变量密钥不得提交代码仓库；使用组织批准的秘密存储方式。",
+            "content_hash": "6cafceca90afb438ebbc475855455edbcd71e49704240c141d41c066292574ae",
+            "number": 0,
+            "score": 0.46925437,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "ticket-priority",
+            "chunk_id": "ticket-priority:1.0:a97a0d0adbb8a147e7c0",
+            "title": "演示工单优先级规则",
+            "source_type": "synthetic",
+            "source_path": "policies/ticket-priority.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "边界；行 9-9；字符 1-79",
+            "text": "优先级需要在草稿中由用户确认；P1 也不能跳过确认。这里没有实际响应时限或 SLA 承诺。修改优先级必须保存新版本并重新确认，知识库文字不能覆盖后端审批规则。",
+            "content_hash": "da4f53f5b81d15b0f9fd0563975300ee3164157e1f7b79b417cd23d988586962",
+            "number": 0,
+            "score": 0.4651541,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "github-policy",
+            "chunk_id": "github-policy:1.0:d4884c6c54e5c3e1fe76",
+            "title": "演示企业代码托管规范",
+            "source_type": "synthetic",
+            "source_path": "policies/github-policy.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "离职与变更；行 9-9；字符 1-70",
+            "text": "成员离职或职责变化后由管理员复核组织和仓库授权。操作之前检查仓库归属；本演示 Agent 不自动修改 GitHub 权限，也不代替组织审批。",
+            "content_hash": "120d8909210ffe1692bd2300c15f6bf124a240fcd6a64f41abcf9c55633a2202",
+            "number": 0,
+            "score": 0.46489626,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93",
+        "collection": "enterprise_support_dense_v1",
+        "error_code": null,
+        "timings": {
+          "index_check_seconds": 0.6567475000047125,
+          "embedding_seconds": 0.24907350000285078,
+          "qdrant_query_seconds": 0.4704607999883592,
+          "retrieval_seconds": 1.376346699995338
+        },
+        "usage": {
+          "embedding_tokens": 17,
+          "requests": 1,
+          "retries": 0
+        }
+      }
+    },
+    {
+      "id": "heldout-remote-work",
+      "split": "heldout",
+      "question": "在家工作电脑能给家人共用公司账号吗？",
+      "relevant_documents": [
+        "remote-work"
+      ],
+      "evidence_locations": [
+        "远程设备",
+        "报修边界"
+      ],
+      "answerable": true,
+      "expected_topic": "演示企业远程办公设备要求",
+      "result": {
+        "status": "insufficient",
+        "query": "在家工作电脑能给家人共用公司账号吗？",
+        "evidence": [],
+        "candidates": [
+          {
+            "doc_id": "remote-work",
+            "chunk_id": "remote-work:1.0:527bd314bf1272d3561f",
+            "title": "演示企业远程办公设备要求",
+            "source_type": "synthetic",
+            "source_path": "policies/remote-work.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "远程设备；行 5-5；字符 1-73",
+            "text": "演示制度：远程办公使用受管理设备，保持系统安全更新、磁盘加密和屏幕锁定。不要与家人共享工作账号。离开设备时锁屏，访问内部资源按 VPN 规范办理。",
+            "content_hash": "5d01eb901e9e50f1b2e8fe44d125b7928c27339f4d4833ad6756f2fca1fa9110",
+            "number": 0,
+            "score": 0.609277,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "account-request",
+            "chunk_id": "account-request:1.0:cc433c6438ba26eeb32c",
+            "title": "演示账号与访问权限申请",
+            "source_type": "synthetic",
+            "source_path": "guides/account-request.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "申请步骤；行 5-5；字符 1-78",
+            "text": "演示指南：申请账号或扩展访问权限时，说明目标系统、业务用途、所需权限和使用期限，由业务负责人确认，再由系统管理员分配最小权限。不要请求共享账号代替个人身份。",
+            "content_hash": "57b3165e918a70d49b6d126f30cf23b12634d4d9a7021e787686c9dcf75942c9",
+            "number": 0,
+            "score": 0.59468234,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "public-gmail-auth",
+            "chunk_id": "public-gmail-auth:1.0:8c4741ab2d3e9e591a21",
+            "title": "Gmail 官方第三方客户端登录摘要",
+            "source_type": "public_summary",
+            "source_path": "guides/public-gmail-auth.md",
+            "url": "https://support.google.com/mail/answer/7126229",
+            "document_version": "1.0",
+            "location": "公开资料摘要；行 5-5；字符 1-118",
+            "text": "Google 的 Gmail 帮助建议在兼容邮件客户端中选择“使用 Google 账号登录”，而不是向第三方应用直接共享 Google 用户名和密码。此摘要适用于理解公开 Gmail 的客户端连接方式，不代表演示企业的邮箱供应商或配置。",
+            "content_hash": "0650ef8140c257d7e74ebc155b3a5e67184e723dde8d6fac46f10041d56bb05b",
+            "number": 0,
+            "score": 0.5591764,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "remote-work",
+            "chunk_id": "remote-work:1.0:1afa47a92cf3e71b4691",
+            "title": "演示企业远程办公设备要求",
+            "source_type": "synthetic",
+            "source_path": "policies/remote-work.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "报修边界；行 9-9；字符 1-65",
+            "text": "设备异常时记录资产编号、系统版本和现象，由 IT 支持安排维修；不要自行拆解保修设备。本文没有家庭宽带报销金额或设备采购额度规定。",
+            "content_hash": "d1d9a0ef8df38203370b0ce2a71fe3a28fc76815dfb8c42c51b7d6a937a3add8",
+            "number": 0,
+            "score": 0.5569109,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "email-policy",
+            "chunk_id": "email-policy:1.0:e9b5e65856b5ff861504",
+            "title": "演示企业邮箱使用规范",
+            "source_type": "synthetic",
+            "source_path": "policies/email-policy.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "邮箱使用；行 5-5；字符 1-78",
+            "text": "演示制度：办公邮件使用企业邮箱，不将含敏感信息的邮件自动转发至私人邮箱。发送外部收件人前核对地址和附件权限；机密内容采用企业批准的共享方式，并限制接收范围。",
+            "content_hash": "ed589de1bdd9f6d8b82f82ee0f217b6afdea77e1fb8156f59fa74955fbacfff0",
+            "number": 0,
+            "score": 0.5563006,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93",
+        "collection": "enterprise_support_dense_v1",
+        "error_code": null,
+        "timings": {
+          "index_check_seconds": 0.7396985000086715,
+          "embedding_seconds": 0.2952576000097906,
+          "qdrant_query_seconds": 0.5044947000133106,
+          "retrieval_seconds": 1.5395126000075834
+        },
+        "usage": {
+          "embedding_tokens": 12,
+          "requests": 1,
+          "retries": 0
+        }
+      }
+    },
+    {
+      "id": "heldout-vpn-809",
+      "split": "heldout",
+      "question": "Windows VPN error 809，应该先核对什么？",
+      "relevant_documents": [
+        "vpn-809"
+      ],
+      "evidence_locations": [
+        "处理步骤",
+        "管理员核查"
+      ],
+      "answerable": true,
+      "expected_topic": "VPN 错误 809 排障演示",
+      "result": {
+        "status": "ok",
+        "query": "Windows VPN error 809，应该先核对什么？",
+        "evidence": [
+          {
+            "doc_id": "vpn-809",
+            "chunk_id": "vpn-809:1.0:79b43a59c54b535f30ab",
+            "title": "VPN 错误 809 排障演示",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/vpn-809.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "处理步骤；行 5-5；字符 1-113",
+            "text": "演示排障指南：Windows VPN 错误 809 表示连接未能建立，不能单凭错误码确定根因。先确认普通网络可用，核对 VPN 服务器地址与协议，记录发生时间和客户端版本。在组织允许的其他网络测试有助于判断是否为网络路径问题。",
+            "content_hash": "6bad9c608c367736acc57db071333c5d8242f9d02dcc9a5d62f4e519eb320756",
+            "number": 1,
+            "score": 0.8267229,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "vpn-809",
+            "chunk_id": "vpn-809:1.0:d827f3ec0dec8850f6d4",
+            "title": "VPN 错误 809 排障演示",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/vpn-809.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "管理员核查；行 9-9；字符 1-112",
+            "text": "若使用 IKEv2 或 L2TP/IPsec，可请管理员核查相关 UDP 500/4500 网络策略。不要自行关闭防火墙或安全软件，也不要擅自改注册表。收集脱敏错误截图后提交支持请求；静态指南不能证明 VPN 服务当前正常。",
+            "content_hash": "45dd65138049b270ec519ed0161a0bfd49c84de4e00cdc29fa6a1a103c4c2ee8",
+            "number": 2,
+            "score": 0.7507185,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "vpn-691",
+            "chunk_id": "vpn-691:1.0:c114736178e419fc0be3",
+            "title": "VPN 错误 691 身份验证排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/vpn-691.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "升级支持；行 9-9；字符 1-88",
+            "text": "若网页登录也失败，按密码重置或账号解锁流程处理；若仅 VPN 失败，请管理员核查认证日志。不要把密码发给支持人员。691 与 809 不同，不能直接将全部问题归为网络端口阻断。",
+            "content_hash": "106d6f26cfdd172a35d295e421ff5a199e95c2b0021fdab842500701c0d1c435",
+            "number": 3,
+            "score": 0.7111051,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "vpn-691",
+            "chunk_id": "vpn-691:1.0:452dd53296446009f9a5",
+            "title": "VPN 错误 691 身份验证排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/vpn-691.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "处理步骤；行 5-5；字符 1-87",
+            "text": "演示排障指南：VPN 错误 691 可能与身份验证失败有关。核对用户名格式、所选认证方式及账号是否可用；不要反复尝试密码导致锁定。确认多因素认证提示是否完成，并记录准确报错。",
+            "content_hash": "6022453a640b11579eb49e68ce1ac3e9d7f37e177ed26c374ce8173acff1f0c4",
+            "number": 4,
+            "score": 0.6741474,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "candidates": [
+          {
+            "doc_id": "vpn-809",
+            "chunk_id": "vpn-809:1.0:79b43a59c54b535f30ab",
+            "title": "VPN 错误 809 排障演示",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/vpn-809.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "处理步骤；行 5-5；字符 1-113",
+            "text": "演示排障指南：Windows VPN 错误 809 表示连接未能建立，不能单凭错误码确定根因。先确认普通网络可用，核对 VPN 服务器地址与协议，记录发生时间和客户端版本。在组织允许的其他网络测试有助于判断是否为网络路径问题。",
+            "content_hash": "6bad9c608c367736acc57db071333c5d8242f9d02dcc9a5d62f4e519eb320756",
+            "number": 0,
+            "score": 0.8267229,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "vpn-809",
+            "chunk_id": "vpn-809:1.0:d827f3ec0dec8850f6d4",
+            "title": "VPN 错误 809 排障演示",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/vpn-809.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "管理员核查；行 9-9；字符 1-112",
+            "text": "若使用 IKEv2 或 L2TP/IPsec，可请管理员核查相关 UDP 500/4500 网络策略。不要自行关闭防火墙或安全软件，也不要擅自改注册表。收集脱敏错误截图后提交支持请求；静态指南不能证明 VPN 服务当前正常。",
+            "content_hash": "45dd65138049b270ec519ed0161a0bfd49c84de4e00cdc29fa6a1a103c4c2ee8",
+            "number": 0,
+            "score": 0.7507185,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "vpn-691",
+            "chunk_id": "vpn-691:1.0:c114736178e419fc0be3",
+            "title": "VPN 错误 691 身份验证排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/vpn-691.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "升级支持；行 9-9；字符 1-88",
+            "text": "若网页登录也失败，按密码重置或账号解锁流程处理；若仅 VPN 失败，请管理员核查认证日志。不要把密码发给支持人员。691 与 809 不同，不能直接将全部问题归为网络端口阻断。",
+            "content_hash": "106d6f26cfdd172a35d295e421ff5a199e95c2b0021fdab842500701c0d1c435",
+            "number": 0,
+            "score": 0.7111051,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "vpn-691",
+            "chunk_id": "vpn-691:1.0:452dd53296446009f9a5",
+            "title": "VPN 错误 691 身份验证排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/vpn-691.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "处理步骤；行 5-5；字符 1-87",
+            "text": "演示排障指南：VPN 错误 691 可能与身份验证失败有关。核对用户名格式、所选认证方式及账号是否可用；不要反复尝试密码导致锁定。确认多因素认证提示是否完成，并记录准确报错。",
+            "content_hash": "6022453a640b11579eb49e68ce1ac3e9d7f37e177ed26c374ce8173acff1f0c4",
+            "number": 0,
+            "score": 0.6741474,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "vpn-policy",
+            "chunk_id": "vpn-policy:1.0:963bbc0bcdd85f12a047",
+            "title": "演示企业 VPN 使用要求",
+            "source_type": "synthetic",
+            "source_path": "policies/vpn-policy.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "例外与权限；行 9-9；字符 1-72",
+            "text": "供应商访问需先由业务负责人确认范围，再由 IT 管理员分配最小权限。需要访问额外系统时走账号申请流程；接入 VPN 不代表自动获得全部系统权限。",
+            "content_hash": "8505388983c64238b0133c6c4afc76a4af3cbc91b44ee866e600ea2bf80be4e6",
+            "number": 0,
+            "score": 0.5894324,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93",
+        "collection": "enterprise_support_dense_v1",
+        "error_code": null,
+        "timings": {
+          "index_check_seconds": 0.6567176999960793,
+          "embedding_seconds": 0.25621849999879487,
+          "qdrant_query_seconds": 0.47116729999834206,
+          "retrieval_seconds": 1.3842550999979721
+        },
+        "usage": {
+          "embedding_tokens": 11,
+          "requests": 1,
+          "retries": 0
+        }
+      }
+    },
+    {
+      "id": "heldout-vpn-691",
+      "split": "heldout",
+      "question": "VPN authentication failed，错误代码 691 如何排查？",
+      "relevant_documents": [
+        "vpn-691"
+      ],
+      "evidence_locations": [
+        "处理步骤",
+        "升级支持"
+      ],
+      "answerable": true,
+      "expected_topic": "VPN 错误 691 身份验证排障",
+      "result": {
+        "status": "ok",
+        "query": "VPN authentication failed，错误代码 691 如何排查？",
+        "evidence": [
+          {
+            "doc_id": "vpn-691",
+            "chunk_id": "vpn-691:1.0:c114736178e419fc0be3",
+            "title": "VPN 错误 691 身份验证排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/vpn-691.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "升级支持；行 9-9；字符 1-88",
+            "text": "若网页登录也失败，按密码重置或账号解锁流程处理；若仅 VPN 失败，请管理员核查认证日志。不要把密码发给支持人员。691 与 809 不同，不能直接将全部问题归为网络端口阻断。",
+            "content_hash": "106d6f26cfdd172a35d295e421ff5a199e95c2b0021fdab842500701c0d1c435",
+            "number": 1,
+            "score": 0.84817153,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "vpn-691",
+            "chunk_id": "vpn-691:1.0:452dd53296446009f9a5",
+            "title": "VPN 错误 691 身份验证排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/vpn-691.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "处理步骤；行 5-5；字符 1-87",
+            "text": "演示排障指南：VPN 错误 691 可能与身份验证失败有关。核对用户名格式、所选认证方式及账号是否可用；不要反复尝试密码导致锁定。确认多因素认证提示是否完成，并记录准确报错。",
+            "content_hash": "6022453a640b11579eb49e68ce1ac3e9d7f37e177ed26c374ce8173acff1f0c4",
+            "number": 2,
+            "score": 0.8405934,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "vpn-809",
+            "chunk_id": "vpn-809:1.0:d827f3ec0dec8850f6d4",
+            "title": "VPN 错误 809 排障演示",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/vpn-809.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "管理员核查；行 9-9；字符 1-112",
+            "text": "若使用 IKEv2 或 L2TP/IPsec，可请管理员核查相关 UDP 500/4500 网络策略。不要自行关闭防火墙或安全软件，也不要擅自改注册表。收集脱敏错误截图后提交支持请求；静态指南不能证明 VPN 服务当前正常。",
+            "content_hash": "45dd65138049b270ec519ed0161a0bfd49c84de4e00cdc29fa6a1a103c4c2ee8",
+            "number": 3,
+            "score": 0.7051947,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "vpn-809",
+            "chunk_id": "vpn-809:1.0:79b43a59c54b535f30ab",
+            "title": "VPN 错误 809 排障演示",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/vpn-809.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "处理步骤；行 5-5；字符 1-113",
+            "text": "演示排障指南：Windows VPN 错误 809 表示连接未能建立，不能单凭错误码确定根因。先确认普通网络可用，核对 VPN 服务器地址与协议，记录发生时间和客户端版本。在组织允许的其他网络测试有助于判断是否为网络路径问题。",
+            "content_hash": "6bad9c608c367736acc57db071333c5d8242f9d02dcc9a5d62f4e519eb320756",
+            "number": 4,
+            "score": 0.6901035,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "candidates": [
+          {
+            "doc_id": "vpn-691",
+            "chunk_id": "vpn-691:1.0:c114736178e419fc0be3",
+            "title": "VPN 错误 691 身份验证排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/vpn-691.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "升级支持；行 9-9；字符 1-88",
+            "text": "若网页登录也失败，按密码重置或账号解锁流程处理；若仅 VPN 失败，请管理员核查认证日志。不要把密码发给支持人员。691 与 809 不同，不能直接将全部问题归为网络端口阻断。",
+            "content_hash": "106d6f26cfdd172a35d295e421ff5a199e95c2b0021fdab842500701c0d1c435",
+            "number": 0,
+            "score": 0.84817153,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "vpn-691",
+            "chunk_id": "vpn-691:1.0:452dd53296446009f9a5",
+            "title": "VPN 错误 691 身份验证排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/vpn-691.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "处理步骤；行 5-5；字符 1-87",
+            "text": "演示排障指南：VPN 错误 691 可能与身份验证失败有关。核对用户名格式、所选认证方式及账号是否可用；不要反复尝试密码导致锁定。确认多因素认证提示是否完成，并记录准确报错。",
+            "content_hash": "6022453a640b11579eb49e68ce1ac3e9d7f37e177ed26c374ce8173acff1f0c4",
+            "number": 0,
+            "score": 0.8405934,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "vpn-809",
+            "chunk_id": "vpn-809:1.0:d827f3ec0dec8850f6d4",
+            "title": "VPN 错误 809 排障演示",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/vpn-809.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "管理员核查；行 9-9；字符 1-112",
+            "text": "若使用 IKEv2 或 L2TP/IPsec，可请管理员核查相关 UDP 500/4500 网络策略。不要自行关闭防火墙或安全软件，也不要擅自改注册表。收集脱敏错误截图后提交支持请求；静态指南不能证明 VPN 服务当前正常。",
+            "content_hash": "45dd65138049b270ec519ed0161a0bfd49c84de4e00cdc29fa6a1a103c4c2ee8",
+            "number": 0,
+            "score": 0.7051947,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "vpn-809",
+            "chunk_id": "vpn-809:1.0:79b43a59c54b535f30ab",
+            "title": "VPN 错误 809 排障演示",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/vpn-809.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "处理步骤；行 5-5；字符 1-113",
+            "text": "演示排障指南：Windows VPN 错误 809 表示连接未能建立，不能单凭错误码确定根因。先确认普通网络可用，核对 VPN 服务器地址与协议，记录发生时间和客户端版本。在组织允许的其他网络测试有助于判断是否为网络路径问题。",
+            "content_hash": "6bad9c608c367736acc57db071333c5d8242f9d02dcc9a5d62f4e519eb320756",
+            "number": 0,
+            "score": 0.6901035,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "github-sso",
+            "chunk_id": "github-sso:1.0:aa0dd0ae453866b2e798",
+            "title": "GitHub 登录与 SSO 排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/github-sso.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "处理步骤；行 5-5；字符 1-101",
+            "text": "演示排障指南：区分登录 GitHub 账号失败和进入企业组织仓库失败。先确认当前账号、浏览器会话、MFA 状态及组织要求的 SSO 登录。完成身份提供商认证后重新访问组织资源，避免在错误账号下重复授权。",
+            "content_hash": "20156aa3022cc8695a02430983593869d12729964d7a5da3bc06ad06a6e0273b",
+            "number": 0,
+            "score": 0.5839822,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93",
+        "collection": "enterprise_support_dense_v1",
+        "error_code": null,
+        "timings": {
+          "index_check_seconds": 0.6787612000043737,
+          "embedding_seconds": 0.18452109998906963,
+          "qdrant_query_seconds": 0.5559128000022611,
+          "retrieval_seconds": 1.4193437000067206
+        },
+        "usage": {
+          "embedding_tokens": 13,
+          "requests": 1,
+          "retries": 0
+        }
+      }
+    },
+    {
+      "id": "heldout-email-delay",
+      "split": "heldout",
+      "question": "email delivery delay 应收集哪些排查信息？",
+      "relevant_documents": [
+        "email-delay"
+      ],
+      "evidence_locations": [
+        "处理步骤",
+        "范围与升级"
+      ],
+      "answerable": true,
+      "expected_topic": "邮箱发信延迟排障",
+      "result": {
+        "status": "ok",
+        "query": "email delivery delay 应收集哪些排查信息？",
+        "evidence": [
+          {
+            "doc_id": "email-delay",
+            "chunk_id": "email-delay:1.0:f94f221e5286178dc6c5",
+            "title": "邮箱发信延迟排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/email-delay.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "范围与升级；行 9-9；字符 1-73",
+            "text": "询问是否仅本人或整个团队受影响，再查询服务状态样例。若多个用户受影响，向管理员提供统一时间窗口以核查队列；不要根据静态文档宣布邮箱当前故障或恢复。",
+            "content_hash": "6730664d95d295c3202070a0d97269de1a3d751bde1508d51e952db4dd86dda3",
+            "number": 1,
+            "score": 0.6804103,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "email-delay",
+            "chunk_id": "email-delay:1.0:3487a82b294940a2ee03",
+            "title": "邮箱发信延迟排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/email-delay.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "处理步骤；行 5-5；字符 1-88",
+            "text": "演示排障指南：先区分无法发送、发送延迟还是收件人未收到。检查发件箱与退信，记录发送时间、脱敏收发地址、附件大小和错误代码。尝试不带敏感附件的测试邮件，并比较网页版与客户端表现。",
+            "content_hash": "e5968d70add982e31d973af8f12cc6667014b30f771f21766e3e621a7ff29d2d",
+            "number": 2,
+            "score": 0.6617981,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "candidates": [
+          {
+            "doc_id": "email-delay",
+            "chunk_id": "email-delay:1.0:f94f221e5286178dc6c5",
+            "title": "邮箱发信延迟排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/email-delay.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "范围与升级；行 9-9；字符 1-73",
+            "text": "询问是否仅本人或整个团队受影响，再查询服务状态样例。若多个用户受影响，向管理员提供统一时间窗口以核查队列；不要根据静态文档宣布邮箱当前故障或恢复。",
+            "content_hash": "6730664d95d295c3202070a0d97269de1a3d751bde1508d51e952db4dd86dda3",
+            "number": 0,
+            "score": 0.6804103,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "email-delay",
+            "chunk_id": "email-delay:1.0:3487a82b294940a2ee03",
+            "title": "邮箱发信延迟排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/email-delay.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "处理步骤；行 5-5；字符 1-88",
+            "text": "演示排障指南：先区分无法发送、发送延迟还是收件人未收到。检查发件箱与退信，记录发送时间、脱敏收发地址、附件大小和错误代码。尝试不带敏感附件的测试邮件，并比较网页版与客户端表现。",
+            "content_hash": "e5968d70add982e31d973af8f12cc6667014b30f771f21766e3e621a7ff29d2d",
+            "number": 0,
+            "score": 0.6617981,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "email-policy",
+            "chunk_id": "email-policy:1.0:0158df37f87bb3a6402b",
+            "title": "演示企业邮箱使用规范",
+            "source_type": "synthetic",
+            "source_path": "policies/email-policy.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "可疑邮件；行 9-9；字符 1-65",
+            "text": "发现钓鱼邮件时不要点击链接、打开附件或回复凭据。保留发件地址和收到时间，通过演示支持流程报告。本文没有规定邮箱容量或邮件保留年限。",
+            "content_hash": "1aa635167effcd96f3d9e26c666b7e15c0f240e272c841ead1c6f5e4d63a1cf6",
+            "number": 0,
+            "score": 0.54296994,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "device-repair",
+            "chunk_id": "device-repair:1.0:f930bdf72c5e411095a2",
+            "title": "演示设备报修操作指南",
+            "source_type": "synthetic",
+            "source_path": "guides/device-repair.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "送修安排；行 9-9；字符 1-77",
+            "text": "由 IT 支持核对设备归属并安排送修，送修前按组织流程备份和保护敏感数据。本文不承诺备用机或维修完成时间；本 Agent 只能创建经过确认的本地演示工单。",
+            "content_hash": "32b4f818847af9595025d282f247ed990f7c1ad6b1ee16897ac700a72fc10c93",
+            "number": 0,
+            "score": 0.53832126,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "data-security",
+            "chunk_id": "data-security:1.0:20b17ca7aa650163f481",
+            "title": "演示企业敏感数据处理",
+            "source_type": "synthetic",
+            "source_path": "policies/data-security.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "最小披露；行 5-5；字符 1-86",
+            "text": "演示制度：排障只收集解决问题必需的信息。日志截图应遮盖密码、令牌、客户个人数据及密钥；不要把 .env、个人规划或整台电脑上传知识库。共享给支持人员前检查内容与接收者范围。",
+            "content_hash": "29e3a86c89085dfbed3d90b4777f3d346300471dc15ff94c588b4f9192564245",
+            "number": 0,
+            "score": 0.53761625,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93",
+        "collection": "enterprise_support_dense_v1",
+        "error_code": null,
+        "timings": {
+          "index_check_seconds": 0.7072855000005802,
+          "embedding_seconds": 0.26486679998924956,
+          "qdrant_query_seconds": 0.4793361000047298,
+          "retrieval_seconds": 1.4516163000080269
+        },
+        "usage": {
+          "embedding_tokens": 11,
+          "requests": 1,
+          "retries": 0
+        }
+      }
+    },
+    {
+      "id": "heldout-github-sso",
+      "split": "heldout",
+      "question": "公司 GitHub SAML SSO 登录循环如何排查？",
+      "relevant_documents": [
+        "github-sso"
+      ],
+      "evidence_locations": [
+        "处理步骤",
+        "权限检查"
+      ],
+      "answerable": true,
+      "expected_topic": "GitHub 登录与 SSO 排障",
+      "result": {
+        "status": "ok",
+        "query": "公司 GitHub SAML SSO 登录循环如何排查？",
+        "evidence": [
+          {
+            "doc_id": "github-sso",
+            "chunk_id": "github-sso:1.0:782abe1c56caa2b9ebb8",
+            "title": "GitHub 登录与 SSO 排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/github-sso.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "权限检查；行 9-9；字符 1-86",
+            "text": "账号可登录而单个仓库无权限时，请管理员核查组织成员资格、仓库授权和组织 SSO 要求。不要共享令牌或绕过组织身份校验。查询服务样例用于演示，不代表 GitHub 实时监控。",
+            "content_hash": "9f11886894c6130910d39fcf640503fbfd1b55bafca2974aa5763c59e375296d",
+            "number": 1,
+            "score": 0.7074455,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "github-sso",
+            "chunk_id": "github-sso:1.0:aa0dd0ae453866b2e798",
+            "title": "GitHub 登录与 SSO 排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/github-sso.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "处理步骤；行 5-5；字符 1-101",
+            "text": "演示排障指南：区分登录 GitHub 账号失败和进入企业组织仓库失败。先确认当前账号、浏览器会话、MFA 状态及组织要求的 SSO 登录。完成身份提供商认证后重新访问组织资源，避免在错误账号下重复授权。",
+            "content_hash": "20156aa3022cc8695a02430983593869d12729964d7a5da3bc06ad06a6e0273b",
+            "number": 2,
+            "score": 0.6852306,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "public-github-auth",
+            "chunk_id": "public-github-auth:1.0:892cd3b556cb65c5b848",
+            "title": "GitHub 官方认证方式摘要",
+            "source_type": "public_summary",
+            "source_path": "guides/public-github-auth.md",
+            "url": "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github",
+            "document_version": "1.0",
+            "location": "公开资料摘要；行 5-5；字符 1-142",
+            "text": "GitHub 可通过浏览器、命令行或 API 访问，不同入口使用相应认证方式。HTTPS Git 操作可使用个人访问令牌或凭据管理工具；SSH 使用 SSH 密钥。组织采用 SAML SSO 时，访问组织资源可能还需要身份提供商认证。此处是公开文档摘要，不代表演示企业已启用特定设置。",
+            "content_hash": "850f3e2b7cf7ee2dfd2d7fd32b84f5ebac33a8cf818baf6c04e2a52b1f02a088",
+            "number": 3,
+            "score": 0.6674982,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "candidates": [
+          {
+            "doc_id": "github-sso",
+            "chunk_id": "github-sso:1.0:782abe1c56caa2b9ebb8",
+            "title": "GitHub 登录与 SSO 排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/github-sso.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "权限检查；行 9-9；字符 1-86",
+            "text": "账号可登录而单个仓库无权限时，请管理员核查组织成员资格、仓库授权和组织 SSO 要求。不要共享令牌或绕过组织身份校验。查询服务样例用于演示，不代表 GitHub 实时监控。",
+            "content_hash": "9f11886894c6130910d39fcf640503fbfd1b55bafca2974aa5763c59e375296d",
+            "number": 0,
+            "score": 0.7074455,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "github-sso",
+            "chunk_id": "github-sso:1.0:aa0dd0ae453866b2e798",
+            "title": "GitHub 登录与 SSO 排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/github-sso.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "处理步骤；行 5-5；字符 1-101",
+            "text": "演示排障指南：区分登录 GitHub 账号失败和进入企业组织仓库失败。先确认当前账号、浏览器会话、MFA 状态及组织要求的 SSO 登录。完成身份提供商认证后重新访问组织资源，避免在错误账号下重复授权。",
+            "content_hash": "20156aa3022cc8695a02430983593869d12729964d7a5da3bc06ad06a6e0273b",
+            "number": 0,
+            "score": 0.6852306,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "public-github-auth",
+            "chunk_id": "public-github-auth:1.0:892cd3b556cb65c5b848",
+            "title": "GitHub 官方认证方式摘要",
+            "source_type": "public_summary",
+            "source_path": "guides/public-github-auth.md",
+            "url": "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github",
+            "document_version": "1.0",
+            "location": "公开资料摘要；行 5-5；字符 1-142",
+            "text": "GitHub 可通过浏览器、命令行或 API 访问，不同入口使用相应认证方式。HTTPS Git 操作可使用个人访问令牌或凭据管理工具；SSH 使用 SSH 密钥。组织采用 SAML SSO 时，访问组织资源可能还需要身份提供商认证。此处是公开文档摘要，不代表演示企业已启用特定设置。",
+            "content_hash": "850f3e2b7cf7ee2dfd2d7fd32b84f5ebac33a8cf818baf6c04e2a52b1f02a088",
+            "number": 0,
+            "score": 0.6674982,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "github-policy",
+            "chunk_id": "github-policy:1.0:d4884c6c54e5c3e1fe76",
+            "title": "演示企业代码托管规范",
+            "source_type": "synthetic",
+            "source_path": "policies/github-policy.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "离职与变更；行 9-9；字符 1-70",
+            "text": "成员离职或职责变化后由管理员复核组织和仓库授权。操作之前检查仓库归属；本演示 Agent 不自动修改 GitHub 权限，也不代替组织审批。",
+            "content_hash": "120d8909210ffe1692bd2300c15f6bf124a240fcd6a64f41abcf9c55633a2202",
+            "number": 0,
+            "score": 0.562099,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "public-gmail-auth",
+            "chunk_id": "public-gmail-auth:1.0:c34e2a872e64cfedaf2d",
+            "title": "Gmail 官方第三方客户端登录摘要",
+            "source_type": "public_summary",
+            "source_path": "guides/public-gmail-auth.md",
+            "url": "https://support.google.com/mail/answer/7126229",
+            "document_version": "1.0",
+            "location": "使用范围；行 9-9；字符 1-116",
+            "text": "源页面：Google Gmail Help 的 Add Gmail to another email client。内容由项目自行概括。遇到企业受管理账号的接入限制，应由组织管理员核对政策；不要直接要求关闭多因素认证来恢复邮件同步。",
+            "content_hash": "511d2ed8889d0e6e5fc11dd18adab2c377c2a35bf0d3c1f0e96322475e65c512",
+            "number": 0,
+            "score": 0.56116205,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93",
+        "collection": "enterprise_support_dense_v1",
+        "error_code": null,
+        "timings": {
+          "index_check_seconds": 0.6623688999970909,
+          "embedding_seconds": 0.23140410000632983,
+          "qdrant_query_seconds": 0.7036956000083592,
+          "retrieval_seconds": 1.5976239000010537
+        },
+        "usage": {
+          "embedding_tokens": 14,
+          "requests": 1,
+          "retries": 0
+        }
+      }
+    },
+    {
+      "id": "heldout-device-repair",
+      "split": "heldout",
+      "question": "device repair 没有资产号能先报告故障吗？",
+      "relevant_documents": [
+        "device-repair"
+      ],
+      "evidence_locations": [
+        "报修信息",
+        "送修安排"
+      ],
+      "answerable": true,
+      "expected_topic": "演示设备报修操作指南",
+      "result": {
+        "status": "ok",
+        "query": "device repair 没有资产号能先报告故障吗？",
+        "evidence": [
+          {
+            "doc_id": "device-repair",
+            "chunk_id": "device-repair:1.0:d69e6b394a531eb4c1df",
+            "title": "演示设备报修操作指南",
+            "source_type": "synthetic",
+            "source_path": "guides/device-repair.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "报修信息；行 5-5；字符 1-88",
+            "text": "演示指南：报修时提供设备资产编号（若可获得）、故障现象、开始时间、影响范围和已尝试的操作；不确定资产号时说明未知，不编造编号。过热、冒烟或电池鼓包时停止使用并联系设备管理人员。",
+            "content_hash": "6b71900ee1d682f79b430ea3779b266c9c7969e36b8edf0161a0bc4809f4edc0",
+            "number": 1,
+            "score": 0.72598267,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "remote-work",
+            "chunk_id": "remote-work:1.0:1afa47a92cf3e71b4691",
+            "title": "演示企业远程办公设备要求",
+            "source_type": "synthetic",
+            "source_path": "policies/remote-work.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "报修边界；行 9-9；字符 1-65",
+            "text": "设备异常时记录资产编号、系统版本和现象，由 IT 支持安排维修；不要自行拆解保修设备。本文没有家庭宽带报销金额或设备采购额度规定。",
+            "content_hash": "d1d9a0ef8df38203370b0ce2a71fe3a28fc76815dfb8c42c51b7d6a937a3add8",
+            "number": 2,
+            "score": 0.65366286,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "candidates": [
+          {
+            "doc_id": "device-repair",
+            "chunk_id": "device-repair:1.0:d69e6b394a531eb4c1df",
+            "title": "演示设备报修操作指南",
+            "source_type": "synthetic",
+            "source_path": "guides/device-repair.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "报修信息；行 5-5；字符 1-88",
+            "text": "演示指南：报修时提供设备资产编号（若可获得）、故障现象、开始时间、影响范围和已尝试的操作；不确定资产号时说明未知，不编造编号。过热、冒烟或电池鼓包时停止使用并联系设备管理人员。",
+            "content_hash": "6b71900ee1d682f79b430ea3779b266c9c7969e36b8edf0161a0bc4809f4edc0",
+            "number": 0,
+            "score": 0.72598267,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "remote-work",
+            "chunk_id": "remote-work:1.0:1afa47a92cf3e71b4691",
+            "title": "演示企业远程办公设备要求",
+            "source_type": "synthetic",
+            "source_path": "policies/remote-work.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "报修边界；行 9-9；字符 1-65",
+            "text": "设备异常时记录资产编号、系统版本和现象，由 IT 支持安排维修；不要自行拆解保修设备。本文没有家庭宽带报销金额或设备采购额度规定。",
+            "content_hash": "d1d9a0ef8df38203370b0ce2a71fe3a28fc76815dfb8c42c51b7d6a937a3add8",
+            "number": 0,
+            "score": 0.65366286,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "device-repair",
+            "chunk_id": "device-repair:1.0:f930bdf72c5e411095a2",
+            "title": "演示设备报修操作指南",
+            "source_type": "synthetic",
+            "source_path": "guides/device-repair.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "送修安排；行 9-9；字符 1-77",
+            "text": "由 IT 支持核对设备归属并安排送修，送修前按组织流程备份和保护敏感数据。本文不承诺备用机或维修完成时间；本 Agent 只能创建经过确认的本地演示工单。",
+            "content_hash": "32b4f818847af9595025d282f247ed990f7c1ad6b1ee16897ac700a72fc10c93",
+            "number": 0,
+            "score": 0.6238301,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "mfa-lost",
+            "chunk_id": "mfa-lost:1.0:fa49850d3351dddbcaf1",
+            "title": "演示多因素认证设备丢失处理",
+            "source_type": "synthetic",
+            "source_path": "guides/mfa-lost.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "安全核查；行 9-9；字符 1-60",
+            "text": "说明丢失时间与受影响账号，请管理员复核现有会话和设备授权。不要自行关闭整个组织的 MFA。本文不提供绕过登录校验的方法。",
+            "content_hash": "5b705c095f7361bfb39d6ad454a7c0f92f587b1f411aac02f49cd2a306c0d2bd",
+            "number": 0,
+            "score": 0.5596516,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "mfa-lost",
+            "chunk_id": "mfa-lost:1.0:5eb81a6e6095b7718a07",
+            "title": "演示多因素认证设备丢失处理",
+            "source_type": "synthetic",
+            "source_path": "guides/mfa-lost.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "应急处理；行 5-5；字符 1-94",
+            "text": "演示指南：手机或 MFA 设备丢失后，停止反复触发认证请求。若有组织批准的备用验证方式，按正式入口操作；否则联系 IT 支持完成身份核验和认证因素重置。不要让同事转发其验证码代替本人认证。",
+            "content_hash": "179a94381f6a7deed238bc4fb5b0cb6d05c5941c13891436438595bd6128a9cd",
+            "number": 0,
+            "score": 0.5591285,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93",
+        "collection": "enterprise_support_dense_v1",
+        "error_code": null,
+        "timings": {
+          "index_check_seconds": 0.7008075999910943,
+          "embedding_seconds": 0.25649970000085887,
+          "qdrant_query_seconds": 0.516323600008036,
+          "retrieval_seconds": 1.4737639000086347
+        },
+        "usage": {
+          "embedding_tokens": 11,
+          "requests": 1,
+          "retries": 0
+        }
+      }
+    },
+    {
+      "id": "heldout-password-reset",
+      "split": "heldout",
+      "question": "password reset 时可以把验证码给支持人员吗？",
+      "relevant_documents": [
+        "password-reset"
+      ],
+      "evidence_locations": [
+        "重置操作",
+        "无法自助"
+      ],
+      "answerable": true,
+      "expected_topic": "演示密码重置与账号解锁",
+      "result": {
+        "status": "ok",
+        "query": "password reset 时可以把验证码给支持人员吗？",
+        "evidence": [
+          {
+            "doc_id": "password-reset",
+            "chunk_id": "password-reset:1.0:5cf64f55f30db67b13aa",
+            "title": "演示密码重置与账号解锁",
+            "source_type": "synthetic",
+            "source_path": "guides/password-reset.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "无法自助；行 9-9；字符 1-77",
+            "text": "无法通过身份核验或账号锁定时，联系 IT 支持走人工核验流程。重置完成后检查受信任设备的登录状态。本文没有密码有效期、历史密码数量或自动解锁等待时间规定。",
+            "content_hash": "6ffcb2cb204609a37c0d80edda71ae913f289eb58698816d5f36d5ac34affc78",
+            "number": 1,
+            "score": 0.6766227,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "password-reset",
+            "chunk_id": "password-reset:1.0:76ddff7bbef86d15a600",
+            "title": "演示密码重置与账号解锁",
+            "source_type": "synthetic",
+            "source_path": "guides/password-reset.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "重置操作；行 5-5；字符 1-68",
+            "text": "演示指南：使用组织批准的自助密码门户，完成身份核验后设置新密码。不要从陌生邮件链接进入重置页面，不向支持人员提供现有密码或一次性验证码。",
+            "content_hash": "b6e15b6b26e6208ade1e4a4d93d7557122b8ac590e74047dd135eeecc3312636",
+            "number": 2,
+            "score": 0.65767753,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "candidates": [
+          {
+            "doc_id": "password-reset",
+            "chunk_id": "password-reset:1.0:5cf64f55f30db67b13aa",
+            "title": "演示密码重置与账号解锁",
+            "source_type": "synthetic",
+            "source_path": "guides/password-reset.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "无法自助；行 9-9；字符 1-77",
+            "text": "无法通过身份核验或账号锁定时，联系 IT 支持走人工核验流程。重置完成后检查受信任设备的登录状态。本文没有密码有效期、历史密码数量或自动解锁等待时间规定。",
+            "content_hash": "6ffcb2cb204609a37c0d80edda71ae913f289eb58698816d5f36d5ac34affc78",
+            "number": 0,
+            "score": 0.6766227,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "password-reset",
+            "chunk_id": "password-reset:1.0:76ddff7bbef86d15a600",
+            "title": "演示密码重置与账号解锁",
+            "source_type": "synthetic",
+            "source_path": "guides/password-reset.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "重置操作；行 5-5；字符 1-68",
+            "text": "演示指南：使用组织批准的自助密码门户，完成身份核验后设置新密码。不要从陌生邮件链接进入重置页面，不向支持人员提供现有密码或一次性验证码。",
+            "content_hash": "b6e15b6b26e6208ade1e4a4d93d7557122b8ac590e74047dd135eeecc3312636",
+            "number": 0,
+            "score": 0.65767753,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "mfa-lost",
+            "chunk_id": "mfa-lost:1.0:5eb81a6e6095b7718a07",
+            "title": "演示多因素认证设备丢失处理",
+            "source_type": "synthetic",
+            "source_path": "guides/mfa-lost.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "应急处理；行 5-5；字符 1-94",
+            "text": "演示指南：手机或 MFA 设备丢失后，停止反复触发认证请求。若有组织批准的备用验证方式，按正式入口操作；否则联系 IT 支持完成身份核验和认证因素重置。不要让同事转发其验证码代替本人认证。",
+            "content_hash": "179a94381f6a7deed238bc4fb5b0cb6d05c5941c13891436438595bd6128a9cd",
+            "number": 0,
+            "score": 0.6081675,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "mfa-lost",
+            "chunk_id": "mfa-lost:1.0:fa49850d3351dddbcaf1",
+            "title": "演示多因素认证设备丢失处理",
+            "source_type": "synthetic",
+            "source_path": "guides/mfa-lost.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "安全核查；行 9-9；字符 1-60",
+            "text": "说明丢失时间与受影响账号，请管理员复核现有会话和设备授权。不要自行关闭整个组织的 MFA。本文不提供绕过登录校验的方法。",
+            "content_hash": "5b705c095f7361bfb39d6ad454a7c0f92f587b1f411aac02f49cd2a306c0d2bd",
+            "number": 0,
+            "score": 0.5717266,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "vpn-691",
+            "chunk_id": "vpn-691:1.0:c114736178e419fc0be3",
+            "title": "VPN 错误 691 身份验证排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/vpn-691.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "升级支持；行 9-9；字符 1-88",
+            "text": "若网页登录也失败，按密码重置或账号解锁流程处理；若仅 VPN 失败，请管理员核查认证日志。不要把密码发给支持人员。691 与 809 不同，不能直接将全部问题归为网络端口阻断。",
+            "content_hash": "106d6f26cfdd172a35d295e421ff5a199e95c2b0021fdab842500701c0d1c435",
+            "number": 0,
+            "score": 0.5703455,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93",
+        "collection": "enterprise_support_dense_v1",
+        "error_code": null,
+        "timings": {
+          "index_check_seconds": 0.6580918999970891,
+          "embedding_seconds": 0.28742090000014286,
+          "qdrant_query_seconds": 0.4814489999989746,
+          "retrieval_seconds": 1.42711090001103
+        },
+        "usage": {
+          "embedding_tokens": 12,
+          "requests": 1,
+          "retries": 0
+        }
+      }
+    },
+    {
+      "id": "heldout-account-request",
+      "split": "heldout",
+      "question": "access request 想临时访问一个项目怎么申请？",
+      "relevant_documents": [
+        "account-request"
+      ],
+      "evidence_locations": [
+        "申请步骤",
+        "执行边界"
+      ],
+      "answerable": true,
+      "expected_topic": "演示账号与访问权限申请",
+      "result": {
+        "status": "insufficient",
+        "query": "access request 想临时访问一个项目怎么申请？",
+        "evidence": [],
+        "candidates": [
+          {
+            "doc_id": "account-request",
+            "chunk_id": "account-request:1.0:cc433c6438ba26eeb32c",
+            "title": "演示账号与访问权限申请",
+            "source_type": "synthetic",
+            "source_path": "guides/account-request.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "申请步骤；行 5-5；字符 1-78",
+            "text": "演示指南：申请账号或扩展访问权限时，说明目标系统、业务用途、所需权限和使用期限，由业务负责人确认，再由系统管理员分配最小权限。不要请求共享账号代替个人身份。",
+            "content_hash": "57b3165e918a70d49b6d126f30cf23b12634d4d9a7021e787686c9dcf75942c9",
+            "number": 0,
+            "score": 0.6419036,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "account-request",
+            "chunk_id": "account-request:1.0:57bba468f5a2abd9e273",
+            "title": "演示账号与访问权限申请",
+            "source_type": "synthetic",
+            "source_path": "guides/account-request.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "执行边界；行 9-9；字符 1-81",
+            "text": "审批完成不代表本演示 Agent 自动开通账号。本阶段只展示知识说明，并可收集故障工单草稿。紧急需求也不能跳过业务负责人和管理员的核查；本文没有固定开通 SLA。",
+            "content_hash": "68f762f2d84d358f2a76dc89923b4deec77e76e341fff60ee541463f9928c26e",
+            "number": 0,
+            "score": 0.61099946,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "vpn-policy",
+            "chunk_id": "vpn-policy:1.0:963bbc0bcdd85f12a047",
+            "title": "演示企业 VPN 使用要求",
+            "source_type": "synthetic",
+            "source_path": "policies/vpn-policy.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "例外与权限；行 9-9；字符 1-72",
+            "text": "供应商访问需先由业务负责人确认范围，再由 IT 管理员分配最小权限。需要访问额外系统时走账号申请流程；接入 VPN 不代表自动获得全部系统权限。",
+            "content_hash": "8505388983c64238b0133c6c4afc76a4af3cbc91b44ee866e600ea2bf80be4e6",
+            "number": 0,
+            "score": 0.5578206,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "shared-folder",
+            "chunk_id": "shared-folder:1.0:cee29572a8cd11615ae9",
+            "title": "演示共享目录权限排查",
+            "source_type": "synthetic",
+            "source_path": "guides/shared-folder.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "访问检查；行 5-5；字符 1-82",
+            "text": "演示指南：访问共享目录被拒绝时，确认使用的个人账号、共享路径及是否需要 VPN。记录错误信息，区分目录不存在、网络不可达和无访问权限。不要通过共享他人凭据绕过限制。",
+            "content_hash": "acd72db9c6130a415746423c18cdc3c968f6dac9aa1798592e57851ce3b7e035",
+            "number": 0,
+            "score": 0.54788905,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "ticket-approval",
+            "chunk_id": "ticket-approval:1.0:63a8faa5ec53f12063ae",
+            "title": "本地演示工单审批流程",
+            "source_type": "synthetic",
+            "source_path": "policies/ticket-approval.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "创建与修改；行 5-5；字符 1-91",
+            "text": "演示流程：描述问题和影响范围，核对标题、描述、服务及优先级后，使用确认创建按钮批准当前版本。修改草稿后需重新确认。普通聊天输入“确认”或粘贴审批 JSON 不能代替界面/结构化审批。",
+            "content_hash": "c4eb6113205e1a4156e5fb856de43ba49720bef7a2620ccd1cc953067c8d7709",
+            "number": 0,
+            "score": 0.54056233,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93",
+        "collection": "enterprise_support_dense_v1",
+        "error_code": null,
+        "timings": {
+          "index_check_seconds": 0.6509409999998752,
+          "embedding_seconds": 0.20152600000437815,
+          "qdrant_query_seconds": 0.537905299992417,
+          "retrieval_seconds": 1.3904175000061514
+        },
+        "usage": {
+          "embedding_tokens": 10,
+          "requests": 1,
+          "retries": 0
+        }
+      }
+    },
+    {
+      "id": "heldout-mfa-lost",
+      "split": "heldout",
+      "question": "换手机后收不到双因素验证码怎么恢复？",
+      "relevant_documents": [
+        "mfa-lost"
+      ],
+      "evidence_locations": [
+        "应急处理",
+        "安全核查"
+      ],
+      "answerable": true,
+      "expected_topic": "演示多因素认证设备丢失处理",
+      "result": {
+        "status": "ok",
+        "query": "换手机后收不到双因素验证码怎么恢复？",
+        "evidence": [
+          {
+            "doc_id": "mfa-lost",
+            "chunk_id": "mfa-lost:1.0:5eb81a6e6095b7718a07",
+            "title": "演示多因素认证设备丢失处理",
+            "source_type": "synthetic",
+            "source_path": "guides/mfa-lost.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "应急处理；行 5-5；字符 1-94",
+            "text": "演示指南：手机或 MFA 设备丢失后，停止反复触发认证请求。若有组织批准的备用验证方式，按正式入口操作；否则联系 IT 支持完成身份核验和认证因素重置。不要让同事转发其验证码代替本人认证。",
+            "content_hash": "179a94381f6a7deed238bc4fb5b0cb6d05c5941c13891436438595bd6128a9cd",
+            "number": 1,
+            "score": 0.6693407,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "candidates": [
+          {
+            "doc_id": "mfa-lost",
+            "chunk_id": "mfa-lost:1.0:5eb81a6e6095b7718a07",
+            "title": "演示多因素认证设备丢失处理",
+            "source_type": "synthetic",
+            "source_path": "guides/mfa-lost.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "应急处理；行 5-5；字符 1-94",
+            "text": "演示指南：手机或 MFA 设备丢失后，停止反复触发认证请求。若有组织批准的备用验证方式，按正式入口操作；否则联系 IT 支持完成身份核验和认证因素重置。不要让同事转发其验证码代替本人认证。",
+            "content_hash": "179a94381f6a7deed238bc4fb5b0cb6d05c5941c13891436438595bd6128a9cd",
+            "number": 0,
+            "score": 0.6693407,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "mfa-lost",
+            "chunk_id": "mfa-lost:1.0:fa49850d3351dddbcaf1",
+            "title": "演示多因素认证设备丢失处理",
+            "source_type": "synthetic",
+            "source_path": "guides/mfa-lost.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "安全核查；行 9-9；字符 1-60",
+            "text": "说明丢失时间与受影响账号，请管理员复核现有会话和设备授权。不要自行关闭整个组织的 MFA。本文不提供绕过登录校验的方法。",
+            "content_hash": "5b705c095f7361bfb39d6ad454a7c0f92f587b1f411aac02f49cd2a306c0d2bd",
+            "number": 0,
+            "score": 0.5934841,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "password-reset",
+            "chunk_id": "password-reset:1.0:5cf64f55f30db67b13aa",
+            "title": "演示密码重置与账号解锁",
+            "source_type": "synthetic",
+            "source_path": "guides/password-reset.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "无法自助；行 9-9；字符 1-77",
+            "text": "无法通过身份核验或账号锁定时，联系 IT 支持走人工核验流程。重置完成后检查受信任设备的登录状态。本文没有密码有效期、历史密码数量或自动解锁等待时间规定。",
+            "content_hash": "6ffcb2cb204609a37c0d80edda71ae913f289eb58698816d5f36d5ac34affc78",
+            "number": 0,
+            "score": 0.58729243,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "password-reset",
+            "chunk_id": "password-reset:1.0:76ddff7bbef86d15a600",
+            "title": "演示密码重置与账号解锁",
+            "source_type": "synthetic",
+            "source_path": "guides/password-reset.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "重置操作；行 5-5；字符 1-68",
+            "text": "演示指南：使用组织批准的自助密码门户，完成身份核验后设置新密码。不要从陌生邮件链接进入重置页面，不向支持人员提供现有密码或一次性验证码。",
+            "content_hash": "b6e15b6b26e6208ade1e4a4d93d7557122b8ac590e74047dd135eeecc3312636",
+            "number": 0,
+            "score": 0.54467213,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "vpn-691",
+            "chunk_id": "vpn-691:1.0:c114736178e419fc0be3",
+            "title": "VPN 错误 691 身份验证排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/vpn-691.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "升级支持；行 9-9；字符 1-88",
+            "text": "若网页登录也失败，按密码重置或账号解锁流程处理；若仅 VPN 失败，请管理员核查认证日志。不要把密码发给支持人员。691 与 809 不同，不能直接将全部问题归为网络端口阻断。",
+            "content_hash": "106d6f26cfdd172a35d295e421ff5a199e95c2b0021fdab842500701c0d1c435",
+            "number": 0,
+            "score": 0.53553224,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93",
+        "collection": "enterprise_support_dense_v1",
+        "error_code": null,
+        "timings": {
+          "index_check_seconds": 0.6701362999883713,
+          "embedding_seconds": 0.2704105000011623,
+          "qdrant_query_seconds": 0.4814378000010038,
+          "retrieval_seconds": 1.4220829999976559
+        },
+        "usage": {
+          "embedding_tokens": 12,
+          "requests": 1,
+          "retries": 0
+        }
+      }
+    },
+    {
+      "id": "heldout-printer-paper",
+      "split": "heldout",
+      "question": "printer paper jam 应记录哪些信息给维修人员？",
+      "relevant_documents": [
+        "printer-paper"
+      ],
+      "evidence_locations": [
+        "处理步骤",
+        "升级支持"
+      ],
+      "answerable": true,
+      "expected_topic": "演示打印机卡纸排障",
+      "result": {
+        "status": "insufficient",
+        "query": "printer paper jam 应记录哪些信息给维修人员？",
+        "evidence": [],
+        "candidates": [
+          {
+            "doc_id": "printer-paper",
+            "chunk_id": "printer-paper:1.0:52c9b6335e08a6efc8f9",
+            "title": "演示打印机卡纸排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/printer-paper.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "升级支持；行 9-9；字符 1-74",
+            "text": "反复卡纸时记录打印机型号、纸张规格、卡纸部位和是否所有用户受影响，交由设备维护人员处理。不要拆开非用户可维护部件；本文不涵盖任何型号的专用维修步骤。",
+            "content_hash": "b35310a6327006245db6cf884859f84d6a6878c0fe9d762a8fb30e1ea4d18468",
+            "number": 0,
+            "score": 0.6478597,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "printer-paper",
+            "chunk_id": "printer-paper:1.0:8d19486dff02c80a5bc6",
+            "title": "演示打印机卡纸排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/printer-paper.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "处理步骤；行 5-5；字符 1-80",
+            "text": "演示指南：先停止继续发送打印任务，按设备操作说明打开可维护的纸路部位，确认没有残留纸屑。重新放入符合规格且未受潮的纸张，检查纸盒导轨位置，避免强行拉拽损坏部件。",
+            "content_hash": "05a80e03ca2affc4676de27c1db72142dd43b2dccbd14d5b0625ab1a09e0cb4d",
+            "number": 0,
+            "score": 0.6311352,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "device-repair",
+            "chunk_id": "device-repair:1.0:d69e6b394a531eb4c1df",
+            "title": "演示设备报修操作指南",
+            "source_type": "synthetic",
+            "source_path": "guides/device-repair.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "报修信息；行 5-5；字符 1-88",
+            "text": "演示指南：报修时提供设备资产编号（若可获得）、故障现象、开始时间、影响范围和已尝试的操作；不确定资产号时说明未知，不编造编号。过热、冒烟或电池鼓包时停止使用并联系设备管理人员。",
+            "content_hash": "6b71900ee1d682f79b430ea3779b266c9c7969e36b8edf0161a0bc4809f4edc0",
+            "number": 0,
+            "score": 0.6278563,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "device-repair",
+            "chunk_id": "device-repair:1.0:f930bdf72c5e411095a2",
+            "title": "演示设备报修操作指南",
+            "source_type": "synthetic",
+            "source_path": "guides/device-repair.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "送修安排；行 9-9；字符 1-77",
+            "text": "由 IT 支持核对设备归属并安排送修，送修前按组织流程备份和保护敏感数据。本文不承诺备用机或维修完成时间；本 Agent 只能创建经过确认的本地演示工单。",
+            "content_hash": "32b4f818847af9595025d282f247ed990f7c1ad6b1ee16897ac700a72fc10c93",
+            "number": 0,
+            "score": 0.6090343,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "remote-work",
+            "chunk_id": "remote-work:1.0:1afa47a92cf3e71b4691",
+            "title": "演示企业远程办公设备要求",
+            "source_type": "synthetic",
+            "source_path": "policies/remote-work.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "报修边界；行 9-9；字符 1-65",
+            "text": "设备异常时记录资产编号、系统版本和现象，由 IT 支持安排维修；不要自行拆解保修设备。本文没有家庭宽带报销金额或设备采购额度规定。",
+            "content_hash": "d1d9a0ef8df38203370b0ce2a71fe3a28fc76815dfb8c42c51b7d6a937a3add8",
+            "number": 0,
+            "score": 0.57082283,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93",
+        "collection": "enterprise_support_dense_v1",
+        "error_code": null,
+        "timings": {
+          "index_check_seconds": 0.7559261999995215,
+          "embedding_seconds": 0.3100246999965748,
+          "qdrant_query_seconds": 0.4734817999997176,
+          "retrieval_seconds": 1.5394880999956513
+        },
+        "usage": {
+          "embedding_tokens": 11,
+          "requests": 1,
+          "retries": 0
+        }
+      }
+    },
+    {
+      "id": "heldout-meeting-audio",
+      "split": "heldout",
+      "question": "会议 microphone 没声音先检查哪些项？",
+      "relevant_documents": [
+        "meeting-audio"
+      ],
+      "evidence_locations": [
+        "处理步骤",
+        "范围判断"
+      ],
+      "answerable": true,
+      "expected_topic": "演示视频会议无声排障",
+      "result": {
+        "status": "ok",
+        "query": "会议 microphone 没声音先检查哪些项？",
+        "evidence": [
+          {
+            "doc_id": "meeting-audio",
+            "chunk_id": "meeting-audio:1.0:dd3d1fdc6a0943039b22",
+            "title": "演示视频会议无声排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/meeting-audio.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "处理步骤；行 5-5；字符 1-80",
+            "text": "演示指南：先确认是听不到别人还是别人听不到自己。检查会议内静音、正确的麦克风和扬声器设备、系统音量与应用麦克风权限。用本地录音或设备测试区分硬件和会议应用问题。",
+            "content_hash": "751d7c7df7bb069a778e3d1050e51adf5cd5bd4bb88cdbccd7bd1fbcdf842cbf",
+            "number": 1,
+            "score": 0.72220564,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "meeting-audio",
+            "chunk_id": "meeting-audio:1.0:bc272f7adfa5a856649c",
+            "title": "演示视频会议无声排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/meeting-audio.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "范围判断；行 9-9；字符 1-77",
+            "text": "更换受信任耳机或重进会议后仍失败时，记录系统版本、会议客户端版本及影响方向。不要为恢复音频授予无关的系统权限，不能将单人音频问题推断为全公司会议服务故障。",
+            "content_hash": "f628a774159dc5a0a0ee2aa91813e8e59018803d553fb4a96e8b383968875f24",
+            "number": 2,
+            "score": 0.66838133,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "candidates": [
+          {
+            "doc_id": "meeting-audio",
+            "chunk_id": "meeting-audio:1.0:dd3d1fdc6a0943039b22",
+            "title": "演示视频会议无声排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/meeting-audio.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "处理步骤；行 5-5；字符 1-80",
+            "text": "演示指南：先确认是听不到别人还是别人听不到自己。检查会议内静音、正确的麦克风和扬声器设备、系统音量与应用麦克风权限。用本地录音或设备测试区分硬件和会议应用问题。",
+            "content_hash": "751d7c7df7bb069a778e3d1050e51adf5cd5bd4bb88cdbccd7bd1fbcdf842cbf",
+            "number": 0,
+            "score": 0.72220564,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "meeting-audio",
+            "chunk_id": "meeting-audio:1.0:bc272f7adfa5a856649c",
+            "title": "演示视频会议无声排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/meeting-audio.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "范围判断；行 9-9；字符 1-77",
+            "text": "更换受信任耳机或重进会议后仍失败时，记录系统版本、会议客户端版本及影响方向。不要为恢复音频授予无关的系统权限，不能将单人音频问题推断为全公司会议服务故障。",
+            "content_hash": "f628a774159dc5a0a0ee2aa91813e8e59018803d553fb4a96e8b383968875f24",
+            "number": 0,
+            "score": 0.66838133,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "device-repair",
+            "chunk_id": "device-repair:1.0:d69e6b394a531eb4c1df",
+            "title": "演示设备报修操作指南",
+            "source_type": "synthetic",
+            "source_path": "guides/device-repair.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "报修信息；行 5-5；字符 1-88",
+            "text": "演示指南：报修时提供设备资产编号（若可获得）、故障现象、开始时间、影响范围和已尝试的操作；不确定资产号时说明未知，不编造编号。过热、冒烟或电池鼓包时停止使用并联系设备管理人员。",
+            "content_hash": "6b71900ee1d682f79b430ea3779b266c9c7969e36b8edf0161a0bc4809f4edc0",
+            "number": 0,
+            "score": 0.5467564,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "mfa-lost",
+            "chunk_id": "mfa-lost:1.0:fa49850d3351dddbcaf1",
+            "title": "演示多因素认证设备丢失处理",
+            "source_type": "synthetic",
+            "source_path": "guides/mfa-lost.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "安全核查；行 9-9；字符 1-60",
+            "text": "说明丢失时间与受影响账号，请管理员复核现有会话和设备授权。不要自行关闭整个组织的 MFA。本文不提供绕过登录校验的方法。",
+            "content_hash": "5b705c095f7361bfb39d6ad454a7c0f92f587b1f411aac02f49cd2a306c0d2bd",
+            "number": 0,
+            "score": 0.54139966,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "mfa-lost",
+            "chunk_id": "mfa-lost:1.0:5eb81a6e6095b7718a07",
+            "title": "演示多因素认证设备丢失处理",
+            "source_type": "synthetic",
+            "source_path": "guides/mfa-lost.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "应急处理；行 5-5；字符 1-94",
+            "text": "演示指南：手机或 MFA 设备丢失后，停止反复触发认证请求。若有组织批准的备用验证方式，按正式入口操作；否则联系 IT 支持完成身份核验和认证因素重置。不要让同事转发其验证码代替本人认证。",
+            "content_hash": "179a94381f6a7deed238bc4fb5b0cb6d05c5941c13891436438595bd6128a9cd",
+            "number": 0,
+            "score": 0.538874,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93",
+        "collection": "enterprise_support_dense_v1",
+        "error_code": null,
+        "timings": {
+          "index_check_seconds": 0.653536100013298,
+          "embedding_seconds": 0.31003120000241324,
+          "qdrant_query_seconds": 0.4757079999981215,
+          "retrieval_seconds": 1.439415699991514
+        },
+        "usage": {
+          "embedding_tokens": 11,
+          "requests": 1,
+          "retries": 0
+        }
+      }
+    },
+    {
+      "id": "heldout-shared-folder",
+      "split": "heldout",
+      "question": "network share access denied 如何申请只读权限？",
+      "relevant_documents": [
+        "shared-folder"
+      ],
+      "evidence_locations": [
+        "访问检查",
+        "权限申请"
+      ],
+      "answerable": true,
+      "expected_topic": "演示共享目录权限排查",
+      "result": {
+        "status": "ok",
+        "query": "network share access denied 如何申请只读权限？",
+        "evidence": [
+          {
+            "doc_id": "shared-folder",
+            "chunk_id": "shared-folder:1.0:cee29572a8cd11615ae9",
+            "title": "演示共享目录权限排查",
+            "source_type": "synthetic",
+            "source_path": "guides/shared-folder.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "访问检查；行 5-5；字符 1-82",
+            "text": "演示指南：访问共享目录被拒绝时，确认使用的个人账号、共享路径及是否需要 VPN。记录错误信息，区分目录不存在、网络不可达和无访问权限。不要通过共享他人凭据绕过限制。",
+            "content_hash": "acd72db9c6130a415746423c18cdc3c968f6dac9aa1798592e57851ce3b7e035",
+            "number": 1,
+            "score": 0.653239,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "candidates": [
+          {
+            "doc_id": "shared-folder",
+            "chunk_id": "shared-folder:1.0:cee29572a8cd11615ae9",
+            "title": "演示共享目录权限排查",
+            "source_type": "synthetic",
+            "source_path": "guides/shared-folder.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "访问检查；行 5-5；字符 1-82",
+            "text": "演示指南：访问共享目录被拒绝时，确认使用的个人账号、共享路径及是否需要 VPN。记录错误信息，区分目录不存在、网络不可达和无访问权限。不要通过共享他人凭据绕过限制。",
+            "content_hash": "acd72db9c6130a415746423c18cdc3c968f6dac9aa1798592e57851ce3b7e035",
+            "number": 0,
+            "score": 0.653239,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "account-request",
+            "chunk_id": "account-request:1.0:cc433c6438ba26eeb32c",
+            "title": "演示账号与访问权限申请",
+            "source_type": "synthetic",
+            "source_path": "guides/account-request.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "申请步骤；行 5-5；字符 1-78",
+            "text": "演示指南：申请账号或扩展访问权限时，说明目标系统、业务用途、所需权限和使用期限，由业务负责人确认，再由系统管理员分配最小权限。不要请求共享账号代替个人身份。",
+            "content_hash": "57b3165e918a70d49b6d126f30cf23b12634d4d9a7021e787686c9dcf75942c9",
+            "number": 0,
+            "score": 0.6265572,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "vpn-policy",
+            "chunk_id": "vpn-policy:1.0:963bbc0bcdd85f12a047",
+            "title": "演示企业 VPN 使用要求",
+            "source_type": "synthetic",
+            "source_path": "policies/vpn-policy.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "例外与权限；行 9-9；字符 1-72",
+            "text": "供应商访问需先由业务负责人确认范围，再由 IT 管理员分配最小权限。需要访问额外系统时走账号申请流程；接入 VPN 不代表自动获得全部系统权限。",
+            "content_hash": "8505388983c64238b0133c6c4afc76a4af3cbc91b44ee866e600ea2bf80be4e6",
+            "number": 0,
+            "score": 0.59354734,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "shared-folder",
+            "chunk_id": "shared-folder:1.0:9d33f39e023290093e24",
+            "title": "演示共享目录权限排查",
+            "source_type": "synthetic",
+            "source_path": "guides/shared-folder.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "权限申请；行 9-9；字符 1-73",
+            "text": "如果需要新增权限，提供目录名称、工作用途、读写范围和期限，由目录负责人确认后交管理员处理。本文不列出实际企业的服务器地址、共享路径或文件权限名单。",
+            "content_hash": "eed00fa451918958ccebb7c7c3024fbabd8858d8311c95985e42934d0797bad1",
+            "number": 0,
+            "score": 0.5827541,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "vpn-691",
+            "chunk_id": "vpn-691:1.0:c114736178e419fc0be3",
+            "title": "VPN 错误 691 身份验证排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/vpn-691.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "升级支持；行 9-9；字符 1-88",
+            "text": "若网页登录也失败，按密码重置或账号解锁流程处理；若仅 VPN 失败，请管理员核查认证日志。不要把密码发给支持人员。691 与 809 不同，不能直接将全部问题归为网络端口阻断。",
+            "content_hash": "106d6f26cfdd172a35d295e421ff5a199e95c2b0021fdab842500701c0d1c435",
+            "number": 0,
+            "score": 0.56442314,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93",
+        "collection": "enterprise_support_dense_v1",
+        "error_code": null,
+        "timings": {
+          "index_check_seconds": 0.6653470999881392,
+          "embedding_seconds": 0.21195529999386054,
+          "qdrant_query_seconds": 0.4821421999949962,
+          "retrieval_seconds": 1.359578599993256
+        },
+        "usage": {
+          "embedding_tokens": 13,
+          "requests": 1,
+          "retries": 0
+        }
+      }
+    },
+    {
+      "id": "heldout-public-github-auth",
+      "split": "heldout",
+      "question": "git clone 用 HTTPS 和 SSH 时认证有什么不同？",
+      "relevant_documents": [
+        "public-github-auth"
+      ],
+      "evidence_locations": [
+        "公开资料摘要",
+        "使用范围"
+      ],
+      "answerable": true,
+      "expected_topic": "GitHub 官方认证方式摘要",
+      "result": {
+        "status": "ok",
+        "query": "git clone 用 HTTPS 和 SSH 时认证有什么不同？",
+        "evidence": [
+          {
+            "doc_id": "public-github-auth",
+            "chunk_id": "public-github-auth:1.0:892cd3b556cb65c5b848",
+            "title": "GitHub 官方认证方式摘要",
+            "source_type": "public_summary",
+            "source_path": "guides/public-github-auth.md",
+            "url": "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github",
+            "document_version": "1.0",
+            "location": "公开资料摘要；行 5-5；字符 1-142",
+            "text": "GitHub 可通过浏览器、命令行或 API 访问，不同入口使用相应认证方式。HTTPS Git 操作可使用个人访问令牌或凭据管理工具；SSH 使用 SSH 密钥。组织采用 SAML SSO 时，访问组织资源可能还需要身份提供商认证。此处是公开文档摘要，不代表演示企业已启用特定设置。",
+            "content_hash": "850f3e2b7cf7ee2dfd2d7fd32b84f5ebac33a8cf818baf6c04e2a52b1f02a088",
+            "number": 1,
+            "score": 0.71628,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "public-github-auth",
+            "chunk_id": "public-github-auth:1.0:3f1200f6251c5e86f64c",
+            "title": "GitHub 官方认证方式摘要",
+            "source_type": "public_summary",
+            "source_path": "guides/public-github-auth.md",
+            "url": "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github",
+            "document_version": "1.0",
+            "location": "使用范围；行 9-9；字符 1-121",
+            "text": "源页面：GitHub Docs 的 About authentication to GitHub。内容由项目自行概括；具体可用方式以账号类型、组织配置和原始文档为准。不要把 GitHub 账号密码直接当作 Git HTTPS 的密码认证方案。",
+            "content_hash": "b32a28507de7fdf729e22085dd517b6567051255ac792e58239b6897c1aa2cd0",
+            "number": 2,
+            "score": 0.6574947,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "candidates": [
+          {
+            "doc_id": "public-github-auth",
+            "chunk_id": "public-github-auth:1.0:892cd3b556cb65c5b848",
+            "title": "GitHub 官方认证方式摘要",
+            "source_type": "public_summary",
+            "source_path": "guides/public-github-auth.md",
+            "url": "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github",
+            "document_version": "1.0",
+            "location": "公开资料摘要；行 5-5；字符 1-142",
+            "text": "GitHub 可通过浏览器、命令行或 API 访问，不同入口使用相应认证方式。HTTPS Git 操作可使用个人访问令牌或凭据管理工具；SSH 使用 SSH 密钥。组织采用 SAML SSO 时，访问组织资源可能还需要身份提供商认证。此处是公开文档摘要，不代表演示企业已启用特定设置。",
+            "content_hash": "850f3e2b7cf7ee2dfd2d7fd32b84f5ebac33a8cf818baf6c04e2a52b1f02a088",
+            "number": 0,
+            "score": 0.71628,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "public-github-auth",
+            "chunk_id": "public-github-auth:1.0:3f1200f6251c5e86f64c",
+            "title": "GitHub 官方认证方式摘要",
+            "source_type": "public_summary",
+            "source_path": "guides/public-github-auth.md",
+            "url": "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github",
+            "document_version": "1.0",
+            "location": "使用范围；行 9-9；字符 1-121",
+            "text": "源页面：GitHub Docs 的 About authentication to GitHub。内容由项目自行概括；具体可用方式以账号类型、组织配置和原始文档为准。不要把 GitHub 账号密码直接当作 Git HTTPS 的密码认证方案。",
+            "content_hash": "b32a28507de7fdf729e22085dd517b6567051255ac792e58239b6897c1aa2cd0",
+            "number": 0,
+            "score": 0.6574947,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "github-sso",
+            "chunk_id": "github-sso:1.0:782abe1c56caa2b9ebb8",
+            "title": "GitHub 登录与 SSO 排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/github-sso.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "权限检查；行 9-9；字符 1-86",
+            "text": "账号可登录而单个仓库无权限时，请管理员核查组织成员资格、仓库授权和组织 SSO 要求。不要共享令牌或绕过组织身份校验。查询服务样例用于演示，不代表 GitHub 实时监控。",
+            "content_hash": "9f11886894c6130910d39fcf640503fbfd1b55bafca2974aa5763c59e375296d",
+            "number": 0,
+            "score": 0.6332234,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "github-sso",
+            "chunk_id": "github-sso:1.0:aa0dd0ae453866b2e798",
+            "title": "GitHub 登录与 SSO 排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/github-sso.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "处理步骤；行 5-5；字符 1-101",
+            "text": "演示排障指南：区分登录 GitHub 账号失败和进入企业组织仓库失败。先确认当前账号、浏览器会话、MFA 状态及组织要求的 SSO 登录。完成身份提供商认证后重新访问组织资源，避免在错误账号下重复授权。",
+            "content_hash": "20156aa3022cc8695a02430983593869d12729964d7a5da3bc06ad06a6e0273b",
+            "number": 0,
+            "score": 0.6179746,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "public-gmail-auth",
+            "chunk_id": "public-gmail-auth:1.0:c34e2a872e64cfedaf2d",
+            "title": "Gmail 官方第三方客户端登录摘要",
+            "source_type": "public_summary",
+            "source_path": "guides/public-gmail-auth.md",
+            "url": "https://support.google.com/mail/answer/7126229",
+            "document_version": "1.0",
+            "location": "使用范围；行 9-9；字符 1-116",
+            "text": "源页面：Google Gmail Help 的 Add Gmail to another email client。内容由项目自行概括。遇到企业受管理账号的接入限制，应由组织管理员核对政策；不要直接要求关闭多因素认证来恢复邮件同步。",
+            "content_hash": "511d2ed8889d0e6e5fc11dd18adab2c377c2a35bf0d3c1f0e96322475e65c512",
+            "number": 0,
+            "score": 0.5551578,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93",
+        "collection": "enterprise_support_dense_v1",
+        "error_code": null,
+        "timings": {
+          "index_check_seconds": 0.6562679999915417,
+          "embedding_seconds": 0.18746590000228025,
+          "qdrant_query_seconds": 0.5010335999977542,
+          "retrieval_seconds": 1.344898600000306
+        },
+        "usage": {
+          "embedding_tokens": 16,
+          "requests": 1,
+          "retries": 0
+        }
+      }
+    },
+    {
+      "id": "heldout-public-gmail-auth",
+      "split": "heldout",
+      "question": "第三方邮箱客户端要直接保存 Google 密码吗？",
+      "relevant_documents": [
+        "public-gmail-auth"
+      ],
+      "evidence_locations": [
+        "公开资料摘要",
+        "使用范围"
+      ],
+      "answerable": true,
+      "expected_topic": "Gmail 官方第三方客户端登录摘要",
+      "result": {
+        "status": "ok",
+        "query": "第三方邮箱客户端要直接保存 Google 密码吗？",
+        "evidence": [
+          {
+            "doc_id": "public-gmail-auth",
+            "chunk_id": "public-gmail-auth:1.0:8c4741ab2d3e9e591a21",
+            "title": "Gmail 官方第三方客户端登录摘要",
+            "source_type": "public_summary",
+            "source_path": "guides/public-gmail-auth.md",
+            "url": "https://support.google.com/mail/answer/7126229",
+            "document_version": "1.0",
+            "location": "公开资料摘要；行 5-5；字符 1-118",
+            "text": "Google 的 Gmail 帮助建议在兼容邮件客户端中选择“使用 Google 账号登录”，而不是向第三方应用直接共享 Google 用户名和密码。此摘要适用于理解公开 Gmail 的客户端连接方式，不代表演示企业的邮箱供应商或配置。",
+            "content_hash": "0650ef8140c257d7e74ebc155b3a5e67184e723dde8d6fac46f10041d56bb05b",
+            "number": 1,
+            "score": 0.724227,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "candidates": [
+          {
+            "doc_id": "public-gmail-auth",
+            "chunk_id": "public-gmail-auth:1.0:8c4741ab2d3e9e591a21",
+            "title": "Gmail 官方第三方客户端登录摘要",
+            "source_type": "public_summary",
+            "source_path": "guides/public-gmail-auth.md",
+            "url": "https://support.google.com/mail/answer/7126229",
+            "document_version": "1.0",
+            "location": "公开资料摘要；行 5-5；字符 1-118",
+            "text": "Google 的 Gmail 帮助建议在兼容邮件客户端中选择“使用 Google 账号登录”，而不是向第三方应用直接共享 Google 用户名和密码。此摘要适用于理解公开 Gmail 的客户端连接方式，不代表演示企业的邮箱供应商或配置。",
+            "content_hash": "0650ef8140c257d7e74ebc155b3a5e67184e723dde8d6fac46f10041d56bb05b",
+            "number": 0,
+            "score": 0.724227,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "public-gmail-auth",
+            "chunk_id": "public-gmail-auth:1.0:c34e2a872e64cfedaf2d",
+            "title": "Gmail 官方第三方客户端登录摘要",
+            "source_type": "public_summary",
+            "source_path": "guides/public-gmail-auth.md",
+            "url": "https://support.google.com/mail/answer/7126229",
+            "document_version": "1.0",
+            "location": "使用范围；行 9-9；字符 1-116",
+            "text": "源页面：Google Gmail Help 的 Add Gmail to another email client。内容由项目自行概括。遇到企业受管理账号的接入限制，应由组织管理员核对政策；不要直接要求关闭多因素认证来恢复邮件同步。",
+            "content_hash": "511d2ed8889d0e6e5fc11dd18adab2c377c2a35bf0d3c1f0e96322475e65c512",
+            "number": 0,
+            "score": 0.64475983,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "email-policy",
+            "chunk_id": "email-policy:1.0:0158df37f87bb3a6402b",
+            "title": "演示企业邮箱使用规范",
+            "source_type": "synthetic",
+            "source_path": "policies/email-policy.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "可疑邮件；行 9-9；字符 1-65",
+            "text": "发现钓鱼邮件时不要点击链接、打开附件或回复凭据。保留发件地址和收到时间，通过演示支持流程报告。本文没有规定邮箱容量或邮件保留年限。",
+            "content_hash": "1aa635167effcd96f3d9e26c666b7e15c0f240e272c841ead1c6f5e4d63a1cf6",
+            "number": 0,
+            "score": 0.576081,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "password-reset",
+            "chunk_id": "password-reset:1.0:76ddff7bbef86d15a600",
+            "title": "演示密码重置与账号解锁",
+            "source_type": "synthetic",
+            "source_path": "guides/password-reset.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "重置操作；行 5-5；字符 1-68",
+            "text": "演示指南：使用组织批准的自助密码门户，完成身份核验后设置新密码。不要从陌生邮件链接进入重置页面，不向支持人员提供现有密码或一次性验证码。",
+            "content_hash": "b6e15b6b26e6208ade1e4a4d93d7557122b8ac590e74047dd135eeecc3312636",
+            "number": 0,
+            "score": 0.55172795,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "public-github-auth",
+            "chunk_id": "public-github-auth:1.0:3f1200f6251c5e86f64c",
+            "title": "GitHub 官方认证方式摘要",
+            "source_type": "public_summary",
+            "source_path": "guides/public-github-auth.md",
+            "url": "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github",
+            "document_version": "1.0",
+            "location": "使用范围；行 9-9；字符 1-121",
+            "text": "源页面：GitHub Docs 的 About authentication to GitHub。内容由项目自行概括；具体可用方式以账号类型、组织配置和原始文档为准。不要把 GitHub 账号密码直接当作 Git HTTPS 的密码认证方案。",
+            "content_hash": "b32a28507de7fdf729e22085dd517b6567051255ac792e58239b6897c1aa2cd0",
+            "number": 0,
+            "score": 0.5318001,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93",
+        "collection": "enterprise_support_dense_v1",
+        "error_code": null,
+        "timings": {
+          "index_check_seconds": 0.6954814999917289,
+          "embedding_seconds": 0.27495859999908134,
+          "qdrant_query_seconds": 0.48107599999639206,
+          "retrieval_seconds": 1.4516250000015134
+        },
+        "usage": {
+          "embedding_tokens": 11,
+          "requests": 1,
+          "retries": 0
+        }
+      }
+    },
+    {
+      "id": "heldout-no-answer-1",
+      "split": "heldout",
+      "question": "员工餐补是多少钱？",
+      "relevant_documents": [],
+      "evidence_locations": [],
+      "answerable": false,
+      "result": {
+        "status": "insufficient",
+        "query": "员工餐补是多少钱？",
+        "evidence": [],
+        "candidates": [
+          {
+            "doc_id": "remote-work",
+            "chunk_id": "remote-work:1.0:1afa47a92cf3e71b4691",
+            "title": "演示企业远程办公设备要求",
+            "source_type": "synthetic",
+            "source_path": "policies/remote-work.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "报修边界；行 9-9；字符 1-65",
+            "text": "设备异常时记录资产编号、系统版本和现象，由 IT 支持安排维修；不要自行拆解保修设备。本文没有家庭宽带报销金额或设备采购额度规定。",
+            "content_hash": "d1d9a0ef8df38203370b0ce2a71fe3a28fc76815dfb8c42c51b7d6a937a3add8",
+            "number": 0,
+            "score": 0.47840983,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "remote-work",
+            "chunk_id": "remote-work:1.0:527bd314bf1272d3561f",
+            "title": "演示企业远程办公设备要求",
+            "source_type": "synthetic",
+            "source_path": "policies/remote-work.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "远程设备；行 5-5；字符 1-73",
+            "text": "演示制度：远程办公使用受管理设备，保持系统安全更新、磁盘加密和屏幕锁定。不要与家人共享工作账号。离开设备时锁屏，访问内部资源按 VPN 规范办理。",
+            "content_hash": "5d01eb901e9e50f1b2e8fe44d125b7928c27339f4d4833ad6756f2fca1fa9110",
+            "number": 0,
+            "score": 0.41759184,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "device-repair",
+            "chunk_id": "device-repair:1.0:d69e6b394a531eb4c1df",
+            "title": "演示设备报修操作指南",
+            "source_type": "synthetic",
+            "source_path": "guides/device-repair.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "报修信息；行 5-5；字符 1-88",
+            "text": "演示指南：报修时提供设备资产编号（若可获得）、故障现象、开始时间、影响范围和已尝试的操作；不确定资产号时说明未知，不编造编号。过热、冒烟或电池鼓包时停止使用并联系设备管理人员。",
+            "content_hash": "6b71900ee1d682f79b430ea3779b266c9c7969e36b8edf0161a0bc4809f4edc0",
+            "number": 0,
+            "score": 0.41599435,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "github-policy",
+            "chunk_id": "github-policy:1.0:d4884c6c54e5c3e1fe76",
+            "title": "演示企业代码托管规范",
+            "source_type": "synthetic",
+            "source_path": "policies/github-policy.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "离职与变更；行 9-9；字符 1-70",
+            "text": "成员离职或职责变化后由管理员复核组织和仓库授权。操作之前检查仓库归属；本演示 Agent 不自动修改 GitHub 权限，也不代替组织审批。",
+            "content_hash": "120d8909210ffe1692bd2300c15f6bf124a240fcd6a64f41abcf9c55633a2202",
+            "number": 0,
+            "score": 0.40071705,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "shared-folder",
+            "chunk_id": "shared-folder:1.0:9d33f39e023290093e24",
+            "title": "演示共享目录权限排查",
+            "source_type": "synthetic",
+            "source_path": "guides/shared-folder.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "权限申请；行 9-9；字符 1-73",
+            "text": "如果需要新增权限，提供目录名称、工作用途、读写范围和期限，由目录负责人确认后交管理员处理。本文不列出实际企业的服务器地址、共享路径或文件权限名单。",
+            "content_hash": "eed00fa451918958ccebb7c7c3024fbabd8858d8311c95985e42934d0797bad1",
+            "number": 0,
+            "score": 0.3911942,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93",
+        "collection": "enterprise_support_dense_v1",
+        "error_code": null,
+        "timings": {
+          "index_check_seconds": 1.0420268000016222,
+          "embedding_seconds": 0.2161234999948647,
+          "qdrant_query_seconds": 0.4760584000032395,
+          "retrieval_seconds": 1.7342610000050627
+        },
+        "usage": {
+          "embedding_tokens": 6,
+          "requests": 1,
+          "retries": 0
+        }
+      }
+    },
+    {
+      "id": "heldout-no-answer-2",
+      "split": "heldout",
+      "question": "邮箱自动保留几年？",
+      "relevant_documents": [],
+      "evidence_locations": [],
+      "answerable": false,
+      "result": {
+        "status": "insufficient",
+        "query": "邮箱自动保留几年？",
+        "evidence": [],
+        "candidates": [
+          {
+            "doc_id": "email-policy",
+            "chunk_id": "email-policy:1.0:0158df37f87bb3a6402b",
+            "title": "演示企业邮箱使用规范",
+            "source_type": "synthetic",
+            "source_path": "policies/email-policy.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "可疑邮件；行 9-9；字符 1-65",
+            "text": "发现钓鱼邮件时不要点击链接、打开附件或回复凭据。保留发件地址和收到时间，通过演示支持流程报告。本文没有规定邮箱容量或邮件保留年限。",
+            "content_hash": "1aa635167effcd96f3d9e26c666b7e15c0f240e272c841ead1c6f5e4d63a1cf6",
+            "number": 0,
+            "score": 0.6140694,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "email-delay",
+            "chunk_id": "email-delay:1.0:f94f221e5286178dc6c5",
+            "title": "邮箱发信延迟排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/email-delay.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "范围与升级；行 9-9；字符 1-73",
+            "text": "询问是否仅本人或整个团队受影响，再查询服务状态样例。若多个用户受影响，向管理员提供统一时间窗口以核查队列；不要根据静态文档宣布邮箱当前故障或恢复。",
+            "content_hash": "6730664d95d295c3202070a0d97269de1a3d751bde1508d51e952db4dd86dda3",
+            "number": 0,
+            "score": 0.5746328,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "email-policy",
+            "chunk_id": "email-policy:1.0:e9b5e65856b5ff861504",
+            "title": "演示企业邮箱使用规范",
+            "source_type": "synthetic",
+            "source_path": "policies/email-policy.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "邮箱使用；行 5-5；字符 1-78",
+            "text": "演示制度：办公邮件使用企业邮箱，不将含敏感信息的邮件自动转发至私人邮箱。发送外部收件人前核对地址和附件权限；机密内容采用企业批准的共享方式，并限制接收范围。",
+            "content_hash": "ed589de1bdd9f6d8b82f82ee0f217b6afdea77e1fb8156f59fa74955fbacfff0",
+            "number": 0,
+            "score": 0.5644996,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "email-delay",
+            "chunk_id": "email-delay:1.0:3487a82b294940a2ee03",
+            "title": "邮箱发信延迟排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/email-delay.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "处理步骤；行 5-5；字符 1-88",
+            "text": "演示排障指南：先区分无法发送、发送延迟还是收件人未收到。检查发件箱与退信，记录发送时间、脱敏收发地址、附件大小和错误代码。尝试不带敏感附件的测试邮件，并比较网页版与客户端表现。",
+            "content_hash": "e5968d70add982e31d973af8f12cc6667014b30f771f21766e3e621a7ff29d2d",
+            "number": 0,
+            "score": 0.5340054,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "public-gmail-auth",
+            "chunk_id": "public-gmail-auth:1.0:c34e2a872e64cfedaf2d",
+            "title": "Gmail 官方第三方客户端登录摘要",
+            "source_type": "public_summary",
+            "source_path": "guides/public-gmail-auth.md",
+            "url": "https://support.google.com/mail/answer/7126229",
+            "document_version": "1.0",
+            "location": "使用范围；行 9-9；字符 1-116",
+            "text": "源页面：Google Gmail Help 的 Add Gmail to another email client。内容由项目自行概括。遇到企业受管理账号的接入限制，应由组织管理员核对政策；不要直接要求关闭多因素认证来恢复邮件同步。",
+            "content_hash": "511d2ed8889d0e6e5fc11dd18adab2c377c2a35bf0d3c1f0e96322475e65c512",
+            "number": 0,
+            "score": 0.5039526,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93",
+        "collection": "enterprise_support_dense_v1",
+        "error_code": null,
+        "timings": {
+          "index_check_seconds": 0.6748684999911347,
+          "embedding_seconds": 0.23373500000161584,
+          "qdrant_query_seconds": 0.4709718000085559,
+          "retrieval_seconds": 1.3796253000036813
+        },
+        "usage": {
+          "embedding_tokens": 5,
+          "requests": 1,
+          "retries": 0
+        }
+      }
+    },
+    {
+      "id": "heldout-no-answer-3",
+      "split": "heldout",
+      "question": "VPN 每天最多用几个小时？",
+      "relevant_documents": [],
+      "evidence_locations": [],
+      "answerable": false,
+      "result": {
+        "status": "ok",
+        "query": "VPN 每天最多用几个小时？",
+        "evidence": [
+          {
+            "doc_id": "vpn-policy",
+            "chunk_id": "vpn-policy:1.0:459800b4cbdd7430b6ea",
+            "title": "演示企业 VPN 使用要求",
+            "source_type": "synthetic",
+            "source_path": "policies/vpn-policy.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "VPN 使用；行 5-5；字符 1-105",
+            "text": "演示制度：远程访问内部资源时使用公司批准的 VPN 客户端并完成多因素认证（MFA）。不共享账号，不保存他人凭据。访问结束后断开连接；本文不规定每日使用小时数。公共无线网络上也必须保持终端防护，不绕过安全策略。",
+            "content_hash": "048bc3811a3009a1f2c535a9d40cebded06fbe87bdc050b3a6cab55e792e115f",
+            "number": 1,
+            "score": 0.68198633,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "candidates": [
+          {
+            "doc_id": "vpn-policy",
+            "chunk_id": "vpn-policy:1.0:459800b4cbdd7430b6ea",
+            "title": "演示企业 VPN 使用要求",
+            "source_type": "synthetic",
+            "source_path": "policies/vpn-policy.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "VPN 使用；行 5-5；字符 1-105",
+            "text": "演示制度：远程访问内部资源时使用公司批准的 VPN 客户端并完成多因素认证（MFA）。不共享账号，不保存他人凭据。访问结束后断开连接；本文不规定每日使用小时数。公共无线网络上也必须保持终端防护，不绕过安全策略。",
+            "content_hash": "048bc3811a3009a1f2c535a9d40cebded06fbe87bdc050b3a6cab55e792e115f",
+            "number": 0,
+            "score": 0.68198633,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "vpn-policy",
+            "chunk_id": "vpn-policy:1.0:963bbc0bcdd85f12a047",
+            "title": "演示企业 VPN 使用要求",
+            "source_type": "synthetic",
+            "source_path": "policies/vpn-policy.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "例外与权限；行 9-9；字符 1-72",
+            "text": "供应商访问需先由业务负责人确认范围，再由 IT 管理员分配最小权限。需要访问额外系统时走账号申请流程；接入 VPN 不代表自动获得全部系统权限。",
+            "content_hash": "8505388983c64238b0133c6c4afc76a4af3cbc91b44ee866e600ea2bf80be4e6",
+            "number": 0,
+            "score": 0.6198573,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "vpn-809",
+            "chunk_id": "vpn-809:1.0:d827f3ec0dec8850f6d4",
+            "title": "VPN 错误 809 排障演示",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/vpn-809.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "管理员核查；行 9-9；字符 1-112",
+            "text": "若使用 IKEv2 或 L2TP/IPsec，可请管理员核查相关 UDP 500/4500 网络策略。不要自行关闭防火墙或安全软件，也不要擅自改注册表。收集脱敏错误截图后提交支持请求；静态指南不能证明 VPN 服务当前正常。",
+            "content_hash": "45dd65138049b270ec519ed0161a0bfd49c84de4e00cdc29fa6a1a103c4c2ee8",
+            "number": 0,
+            "score": 0.57974505,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "vpn-691",
+            "chunk_id": "vpn-691:1.0:c114736178e419fc0be3",
+            "title": "VPN 错误 691 身份验证排障",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/vpn-691.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "升级支持；行 9-9；字符 1-88",
+            "text": "若网页登录也失败，按密码重置或账号解锁流程处理；若仅 VPN 失败，请管理员核查认证日志。不要把密码发给支持人员。691 与 809 不同，不能直接将全部问题归为网络端口阻断。",
+            "content_hash": "106d6f26cfdd172a35d295e421ff5a199e95c2b0021fdab842500701c0d1c435",
+            "number": 0,
+            "score": 0.5418711,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "remote-work",
+            "chunk_id": "remote-work:1.0:527bd314bf1272d3561f",
+            "title": "演示企业远程办公设备要求",
+            "source_type": "synthetic",
+            "source_path": "policies/remote-work.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "远程设备；行 5-5；字符 1-73",
+            "text": "演示制度：远程办公使用受管理设备，保持系统安全更新、磁盘加密和屏幕锁定。不要与家人共享工作账号。离开设备时锁屏，访问内部资源按 VPN 规范办理。",
+            "content_hash": "5d01eb901e9e50f1b2e8fe44d125b7928c27339f4d4833ad6756f2fca1fa9110",
+            "number": 0,
+            "score": 0.5323717,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93",
+        "collection": "enterprise_support_dense_v1",
+        "error_code": null,
+        "timings": {
+          "index_check_seconds": 1.0956728000019211,
+          "embedding_seconds": 0.21426910000445787,
+          "qdrant_query_seconds": 0.48693510000885,
+          "retrieval_seconds": 1.7970271999947727
+        },
+        "usage": {
+          "embedding_tokens": 7,
+          "requests": 1,
+          "retries": 0
+        }
+      }
+    },
+    {
+      "id": "heldout-no-answer-4",
+      "split": "heldout",
+      "question": "请给我公司文件服务器的真实 IP 地址。",
+      "relevant_documents": [],
+      "evidence_locations": [],
+      "answerable": false,
+      "result": {
+        "status": "insufficient",
+        "query": "请给我公司文件服务器的真实 IP 地址。",
+        "evidence": [],
+        "candidates": [
+          {
+            "doc_id": "remote-work",
+            "chunk_id": "remote-work:1.0:1afa47a92cf3e71b4691",
+            "title": "演示企业远程办公设备要求",
+            "source_type": "synthetic",
+            "source_path": "policies/remote-work.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "报修边界；行 9-9；字符 1-65",
+            "text": "设备异常时记录资产编号、系统版本和现象，由 IT 支持安排维修；不要自行拆解保修设备。本文没有家庭宽带报销金额或设备采购额度规定。",
+            "content_hash": "d1d9a0ef8df38203370b0ce2a71fe3a28fc76815dfb8c42c51b7d6a937a3add8",
+            "number": 0,
+            "score": 0.5189951,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "shared-folder",
+            "chunk_id": "shared-folder:1.0:9d33f39e023290093e24",
+            "title": "演示共享目录权限排查",
+            "source_type": "synthetic",
+            "source_path": "guides/shared-folder.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "权限申请；行 9-9；字符 1-73",
+            "text": "如果需要新增权限，提供目录名称、工作用途、读写范围和期限，由目录负责人确认后交管理员处理。本文不列出实际企业的服务器地址、共享路径或文件权限名单。",
+            "content_hash": "eed00fa451918958ccebb7c7c3024fbabd8858d8311c95985e42934d0797bad1",
+            "number": 0,
+            "score": 0.5147683,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "data-security",
+            "chunk_id": "data-security:1.0:353bc8dfeca0fd16b99e",
+            "title": "演示企业敏感数据处理",
+            "source_type": "synthetic",
+            "source_path": "policies/data-security.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "知识库边界；行 9-9；字符 1-82",
+            "text": "索引只接收 manifest 中明确列出的授权文档。个人文件不因存在于项目目录就自动成为语料。发生泄露时联系管理员按组织流程处置，本文不提供实际企业的事件响应时限。",
+            "content_hash": "a217846e21a36276745f0bc8fed32c6896e5b795a09710618cbff34845caff92",
+            "number": 0,
+            "score": 0.50876915,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "vpn-809",
+            "chunk_id": "vpn-809:1.0:d827f3ec0dec8850f6d4",
+            "title": "VPN 错误 809 排障演示",
+            "source_type": "synthetic",
+            "source_path": "troubleshooting/vpn-809.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "管理员核查；行 9-9；字符 1-112",
+            "text": "若使用 IKEv2 或 L2TP/IPsec，可请管理员核查相关 UDP 500/4500 网络策略。不要自行关闭防火墙或安全软件，也不要擅自改注册表。收集脱敏错误截图后提交支持请求；静态指南不能证明 VPN 服务当前正常。",
+            "content_hash": "45dd65138049b270ec519ed0161a0bfd49c84de4e00cdc29fa6a1a103c4c2ee8",
+            "number": 0,
+            "score": 0.4831045,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          },
+          {
+            "doc_id": "email-policy",
+            "chunk_id": "email-policy:1.0:e9b5e65856b5ff861504",
+            "title": "演示企业邮箱使用规范",
+            "source_type": "synthetic",
+            "source_path": "policies/email-policy.md",
+            "url": null,
+            "document_version": "1.0",
+            "location": "邮箱使用；行 5-5；字符 1-78",
+            "text": "演示制度：办公邮件使用企业邮箱，不将含敏感信息的邮件自动转发至私人邮箱。发送外部收件人前核对地址和附件权限；机密内容采用企业批准的共享方式，并限制接收范围。",
+            "content_hash": "ed589de1bdd9f6d8b82f82ee0f217b6afdea77e1fb8156f59fa74955fbacfff0",
+            "number": 0,
+            "score": 0.47370118,
+            "collection": "enterprise_support_dense_v1",
+            "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93"
+          }
+        ],
+        "index_version": "47b61e7889b8d24ebf8ed1c9e61770abbb52ae002d49753d47f3346b2b26df93",
+        "collection": "enterprise_support_dense_v1",
+        "error_code": null,
+        "timings": {
+          "index_check_seconds": 0.6698673000064446,
+          "embedding_seconds": 0.2218188000115333,
+          "qdrant_query_seconds": 0.4709642000088934,
+          "retrieval_seconds": 1.3627069999929518
+        },
+        "usage": {
+          "embedding_tokens": 9,
+          "requests": 1,
+          "retries": 0
+        }
+      }
+    }
+  ],
+  "metrics": {
+    "answerable_n": 20,
+    "recall_at_5": 1.0,
+    "mrr_at_5": 1.0,
+    "definition": "Top 5 chunks -> map to document IDs -> stable dedup -> truncate at 5 documents; no additional chunks fetched. No-answer excluded from recall/MRR.",
+    "accepted_gold_document_coverage": 0.75,
+    "coverage_note": "Computed offline from unchanged recorded results; correct document retained after score and context filtering, distinct from raw candidate Recall@5"
+  },
+  "service_failures": 0,
+  "latency": {
+    "embedding_seconds": {
+      "n": 24,
+      "mean": 0.2662290708334088,
+      "p95_nearest_rank": 0.33329110000340734
+    },
+    "qdrant_query_seconds": {
+      "n": 24,
+      "mean": 0.5043126583338259,
+      "p95_nearest_rank": 0.5570088999957079
+    },
+    "retrieval_seconds": {
+      "n": 24,
+      "mean": 1.5254708583343017,
+      "p95_nearest_rank": 1.7970271999947727
+    }
+  },
+  "usage": {
+    "embedding_tokens": 276,
+    "requests": 24,
+    "retries": 0,
+    "estimated_cny": 0.00013800000000000002,
+    "tariff": "DashScope Beijing text-embedding-v3: CNY 0.0005 / 1000 reported tokens; no free-credit assumption"
+  },
+  "no_answer": {
+    "n": 4,
+    "candidate_evidence_returned": 1,
+    "note": "Not a hallucination measure; generation must still judge if the evidence answers the question."
+  }
+}

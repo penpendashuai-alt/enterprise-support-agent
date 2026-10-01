@@ -15,6 +15,7 @@ COPY src/core/ ./core/
 COPY src/memory/ ./memory/
 COPY src/schema/ ./schema/
 COPY src/tickets/ ./tickets/
+COPY src/rag/ ./rag/
 COPY src/service/ ./service/
 COPY src/run_service.py .
 
