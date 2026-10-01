@@ -91,7 +91,7 @@ class Retriever:
             )
 
 
-_runtimes: dict[asyncio.AbstractEventLoop, Retriever] = {}
+_runtimes: dict = {}
 
 
 async def retrieve(query: str) -> RetrievalResult:
@@ -99,8 +99,13 @@ async def retrieve(query: str) -> RetrievalResult:
     try:
         if loop not in _runtimes:
             settings = get_settings()
-            settings.require_connections()
-            _runtimes[loop] = Retriever(settings)
+            settings.require_mode()
+            if settings.RAG_RETRIEVAL_MODE == "dense" and settings.RAG_DENSE_LEGACY:
+                _runtimes[loop] = Retriever(settings)
+            else:
+                from rag.hybrid_retriever import HybridRetriever
+
+                _runtimes[loop] = HybridRetriever(settings)
         return await _runtimes[loop].retrieve(query)
     except (ValueError, RAGError):
         return RetrievalResult(

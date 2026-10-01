@@ -118,8 +118,9 @@ async def run(output: Path, budget: float, selected: str | None = None):
     if output.exists():
         raise ValueError("Use a new report filename to preserve paid-run usage history")
     prior_cost = sum(
-        json.loads(p.read_text(encoding="utf-8")).get("chat_usage", {}).get("estimated_cny", 0)
+        data.get("chat_usage", {}).get("estimated_cny", 0)
         for p in output.parent.glob("*.json")
+        if isinstance(data := json.loads(p.read_text(encoding="utf-8")), dict)
     )
     if prior_cost >= budget - 5:
         raise ValueError("Prior recorded cost leaves insufficient budget headroom")

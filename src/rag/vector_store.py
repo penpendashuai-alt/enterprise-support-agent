@@ -106,7 +106,13 @@ class VectorStore:
         await self.write_manifest(manifest)
         return True
 
-    async def upsert(self, chunks: list[Chunk], vectors: list[list[float]], version: str):
+    async def upsert(
+        self,
+        chunks: list[Chunk],
+        vectors: list[list[float]],
+        version: str,
+        snapshot_id: str | None = None,
+    ):
         if len(chunks) != len(vectors):
             raise RAGError("embedding_count_mismatch")
         await self.call(
@@ -116,7 +122,12 @@ class VectorStore:
                 models.PointStruct(
                     id=c.point_id,
                     vector=v,
-                    payload={**c.model_dump(), "kind": "chunk", "index_version": version},
+                    payload={
+                        **c.model_dump(),
+                        "kind": "chunk",
+                        "index_version": version,
+                        **({"snapshot_id": snapshot_id} if snapshot_id else {}),
+                    },
                 )
                 for c, v in zip(chunks, vectors, strict=True)
             ],
@@ -148,3 +159,22 @@ class VectorStore:
             with_payload=True,
         )
         return result.points
+
+    async def inventory(self):
+        items, offset = [], None
+        while True:
+            points, offset = await self.call(
+                self.client.scroll,
+                collection_name=self.collection,
+                scroll_filter=self.chunk_filter(),
+                limit=100,
+                offset=offset,
+                with_payload=True,
+                with_vectors=False,
+            )
+            items.extend(
+                {k: (p.payload or {}).get(k) for k in ["chunk_id", "content_hash", "snapshot_id"]}
+                for p in points
+            )
+            if offset is None:
+                return items

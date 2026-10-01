@@ -53,16 +53,36 @@ class Evidence(Chunk):
     index_version: str
 
 
+class Candidate(Evidence):
+    snapshot_id: str
+    score_type: Literal["dense", "bm25", "rrf", "rerank"]
+    dense_score: float | None = None
+    bm25_score: float | None = None
+    rrf_score: float | None = None
+    rerank_score: float | None = None
+    dense_rank: int | None = None
+    bm25_rank: int | None = None
+
+
 class RetrievalResult(BaseModel):
-    status: Literal["ok", "empty", "insufficient", "configuration_error", "unavailable"]
+    status: Literal[
+        "ok", "empty", "insufficient", "configuration_error", "index_inconsistent", "unavailable"
+    ]
     query: str
-    evidence: list[Evidence] = Field(default_factory=list)
-    candidates: list[Evidence] = Field(default_factory=list)
+    evidence: list[Candidate | Evidence] = Field(default_factory=list)
+    candidates: list[Candidate | Evidence] = Field(default_factory=list)
     index_version: str | None = None
     collection: str | None = None
     error_code: str | None = None
     timings: dict[str, float] = Field(default_factory=dict)
     usage: dict = Field(default_factory=dict)
+    requested_mode: str = "dense"
+    actual_mode: str = "dense"
+    snapshot_id: str | None = None
+    backend_versions: dict = Field(default_factory=dict)
+    failures: list[dict] = Field(default_factory=list)
+    selection: list[dict] = Field(default_factory=list)
+    counts: dict = Field(default_factory=dict)
 
 
 class RAGError(Exception):

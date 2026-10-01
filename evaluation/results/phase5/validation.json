@@ -1,0 +1,28 @@
+{
+  "tests": {
+    "passed": 323,
+    "skipped": 4,
+    "skip_reason": "Existing Docker tests require --run-docker",
+    "warnings": 18
+  },
+  "static_checks": [
+    "ruff check",
+    "ruff format --check",
+    "pyrefly: 0 errors, existing suppressions retained",
+    "uv lock --check --offline",
+    "pymarkdown for changed public documentation",
+    "git diff --check"
+  ],
+  "baseline_archive_hash_and_contents": "verified",
+  "phase4_corpus_and_result_files_unchanged": 34,
+  "frozen_retrieval_source_unchanged": true,
+  "public_files_scanned_for_actual_local_credentials_and_cloud_address": 308,
+  "credential_matches": 0,
+  "private_paths": "personal/, .env and local backup remain ignored",
+  "local_profile": "v2 Dense20 / 0.65; legacy compatibility available",
+  "not_completed": [
+    "Docker runtime build/start; Docker unavailable",
+    "Independent human label/answer review",
+    "P1 short-question completeness and conflict-answer unsupported advice remain recorded quality failures"
+  ]
+}

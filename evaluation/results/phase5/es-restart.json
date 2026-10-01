@@ -1,0 +1,15 @@
+{
+  "restart_method": "Stop and start only task-owned local ES process, same persisted data directory",
+  "status": "ready",
+  "snapshot_id": "5b61873311a832a29a4289ef9607daf4391004fd8c00af146fd397bc19bf682c",
+  "chunks_after_restart": 72,
+  "analyzer_after_restart": [
+    "vpn",
+    "809",
+    "dev",
+    "001",
+    "企业",
+    "访问",
+    "权限"
+  ]
+}

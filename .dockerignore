@@ -18,3 +18,7 @@ personal/
 *.db-shm
 *.db-journal
 phase3-*.log
+.cache/
+.pytest_cache/
+.ruff_cache/
+*.log

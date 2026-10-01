@@ -1,0 +1,238 @@
+{
+  "date": "2026-10-01T02:54:42.233737+00:00",
+  "dataset_sha256": "19c966cdbe889678f66894b612fd2fb41581e360947ddda950ea63a7ab42d35c",
+  "snapshot_id": "5b61873311a832a29a4289ef9607daf4391004fd8c00af146fd397bc19bf682c",
+  "groups": {
+    "dense_original": {
+      "RAG_RETRIEVAL_MODE": "dense",
+      "RAG_DENSE_LEGACY": true,
+      "RAG_TOP_K": 5,
+      "RAG_MIN_SCORE": 0.65
+    },
+    "dense20": {
+      "RAG_RETRIEVAL_MODE": "dense",
+      "RAG_DENSE_CANDIDATES": 20,
+      "RAG_DENSE_THRESHOLD": 0.65
+    },
+    "dense40": {
+      "RAG_RETRIEVAL_MODE": "dense",
+      "RAG_DENSE_CANDIDATES": 40,
+      "RAG_DENSE_THRESHOLD": 0.65
+    },
+    "bm25": {
+      "RAG_RETRIEVAL_MODE": "bm25",
+      "RAG_BM25_THRESHOLD": 8
+    },
+    "hybrid": {
+      "RAG_RETRIEVAL_MODE": "hybrid",
+      "RAG_RRF_THRESHOLD": 0
+    },
+    "hybrid_rerank": {
+      "RAG_RETRIEVAL_MODE": "hybrid_rerank",
+      "RAG_RERANK_THRESHOLD": 0.3
+    },
+    "dense_rerank": {
+      "RAG_RETRIEVAL_MODE": "dense_rerank",
+      "RAG_DENSE_CANDIDATES": 40,
+      "RAG_RERANK_THRESHOLD": 0.3
+    }
+  },
+  "calibration": {
+    "dense20": [
+      {
+        "threshold": 0.3,
+        "complete": 1.0,
+        "no_answer_rejected": 0.0,
+        "balanced": 0.5
+      },
+      {
+        "threshold": 0.4,
+        "complete": 1.0,
+        "no_answer_rejected": 0.0,
+        "balanced": 0.5
+      },
+      {
+        "threshold": 0.5,
+        "complete": 1.0,
+        "no_answer_rejected": 0.375,
+        "balanced": 0.6875
+      },
+      {
+        "threshold": 0.6,
+        "complete": 0.9666666666666667,
+        "no_answer_rejected": 0.625,
+        "balanced": 0.7958333333333334
+      },
+      {
+        "threshold": 0.65,
+        "complete": 0.9,
+        "no_answer_rejected": 0.875,
+        "balanced": 0.8875
+      }
+    ],
+    "dense40": [
+      {
+        "threshold": 0.3,
+        "complete": 1.0,
+        "no_answer_rejected": 0.0,
+        "balanced": 0.5
+      },
+      {
+        "threshold": 0.4,
+        "complete": 1.0,
+        "no_answer_rejected": 0.0,
+        "balanced": 0.5
+      },
+      {
+        "threshold": 0.5,
+        "complete": 1.0,
+        "no_answer_rejected": 0.375,
+        "balanced": 0.6875
+      },
+      {
+        "threshold": 0.6,
+        "complete": 0.9666666666666667,
+        "no_answer_rejected": 0.625,
+        "balanced": 0.7958333333333334
+      },
+      {
+        "threshold": 0.65,
+        "complete": 0.9,
+        "no_answer_rejected": 0.875,
+        "balanced": 0.8875
+      }
+    ],
+    "bm25": [
+      {
+        "threshold": 0,
+        "complete": 0.9666666666666667,
+        "no_answer_rejected": 0.0,
+        "balanced": 0.48333333333333334
+      },
+      {
+        "threshold": 2,
+        "complete": 0.9666666666666667,
+        "no_answer_rejected": 0.0,
+        "balanced": 0.48333333333333334
+      },
+      {
+        "threshold": 4,
+        "complete": 0.9666666666666667,
+        "no_answer_rejected": 0.375,
+        "balanced": 0.6708333333333334
+      },
+      {
+        "threshold": 6,
+        "complete": 0.9666666666666667,
+        "no_answer_rejected": 0.375,
+        "balanced": 0.6708333333333334
+      },
+      {
+        "threshold": 8,
+        "complete": 0.9666666666666667,
+        "no_answer_rejected": 0.625,
+        "balanced": 0.7958333333333334
+      }
+    ],
+    "hybrid": [
+      {
+        "threshold": 0,
+        "complete": 0.9833333333333333,
+        "no_answer_rejected": 0.0,
+        "balanced": 0.49166666666666664
+      },
+      {
+        "threshold": 0.012,
+        "complete": 0.9833333333333333,
+        "no_answer_rejected": 0.0,
+        "balanced": 0.49166666666666664
+      },
+      {
+        "threshold": 0.016,
+        "complete": 0.9833333333333333,
+        "no_answer_rejected": 0.0,
+        "balanced": 0.49166666666666664
+      },
+      {
+        "threshold": 0.02,
+        "complete": 0.9833333333333333,
+        "no_answer_rejected": 0.0,
+        "balanced": 0.49166666666666664
+      },
+      {
+        "threshold": 0.025,
+        "complete": 0.9833333333333333,
+        "no_answer_rejected": 0.0,
+        "balanced": 0.49166666666666664
+      }
+    ],
+    "hybrid_rerank": [
+      {
+        "threshold": 0.05,
+        "complete": 1.0,
+        "no_answer_rejected": 0.125,
+        "balanced": 0.5625
+      },
+      {
+        "threshold": 0.15,
+        "complete": 1.0,
+        "no_answer_rejected": 0.5,
+        "balanced": 0.75
+      },
+      {
+        "threshold": 0.3,
+        "complete": 0.6833333333333333,
+        "no_answer_rejected": 1.0,
+        "balanced": 0.8416666666666667
+      },
+      {
+        "threshold": 0.5,
+        "complete": 0.45,
+        "no_answer_rejected": 1.0,
+        "balanced": 0.725
+      },
+      {
+        "threshold": 0.7,
+        "complete": 0.3333333333333333,
+        "no_answer_rejected": 1.0,
+        "balanced": 0.6666666666666666
+      }
+    ],
+    "dense_rerank": [
+      {
+        "threshold": 0.05,
+        "complete": 1.0,
+        "no_answer_rejected": 0.0,
+        "balanced": 0.5
+      },
+      {
+        "threshold": 0.15,
+        "complete": 1.0,
+        "no_answer_rejected": 0.5,
+        "balanced": 0.75
+      },
+      {
+        "threshold": 0.3,
+        "complete": 0.6833333333333333,
+        "no_answer_rejected": 1.0,
+        "balanced": 0.8416666666666667
+      },
+      {
+        "threshold": 0.5,
+        "complete": 0.45,
+        "no_answer_rejected": 1.0,
+        "balanced": 0.725
+      },
+      {
+        "threshold": 0.7,
+        "complete": 0.3333333333333333,
+        "no_answer_rejected": 1.0,
+        "balanced": 0.6666666666666666
+      }
+    ]
+  },
+  "rule": "Maximize mean of complete necessary-evidence rate and no-answer evidence rejection on dev only, ties completeness then lower threshold; five thresholds per tuned group, fixed other parameters",
+  "retrieval_code_sha256": "45c176a8506ca8b62c121ea8c5c354da9d14ae8536929586f0d77b4e8c899a95",
+  "provisional_default": "dense20",
+  "default_rule": "Highest dev balanced completeness/no-answer-rejection score; Dense20 and Dense40 tie, prefer smaller candidate budget. Selected before heldout. Generation review may qualify recommendation; no retuning on heldout."
+}

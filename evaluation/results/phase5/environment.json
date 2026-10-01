@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-01",
+  "elasticsearch": "9.5.3",
+  "plugin": "analysis-smartcn 9.5.3",
+  "docker_available": false,
+  "real_validation_environment": "Official Windows archive with bundled JDK, verified SHA-512; task-owned loopback-only process",
+  "http_bind": "127.0.0.1:19200",
+  "heap": "512 MiB",
+  "storage": "project-local ignored cache, persistent across process restart",
+  "local_disk_watermarks_free_gib": {
+    "low": 8,
+    "high": 6,
+    "flood_stage": 4
+  },
+  "archives": {
+    "elasticsearch.zip": "ad4974b600948b2765dba8bcc33f3ec999c3a31fa0f045c5235e43106b2cb040b6b7ff7598e3f3f19f7f45049a4ff0823bd7d260e2e1525f6acb7222412d0ee9",
+    "smartcn.zip": "926ce95a663712329a342305a7dce2426349415e116f297f1a8ed180e78090323ec61a14719020b830b224caafa19286178ef178fe1339833a55252e1ae9451e"
+  },
+  "qdrant": "Existing user cloud, Europe; original collections preserved",
+  "embedding": "DashScope Beijing text-embedding-v3 1024",
+  "reranker": "DashScope Beijing gte-rerank-v2; legacy native endpoint verified with explicitly authorized workspace key reuse",
+  "prices_checked": "2026-10-01",
+  "rate_cny_per_million": {
+    "embedding_input": 0.5,
+    "rerank_input": 0.8,
+    "deepseek_v4_pro_input_cache_miss_peak": 9,
+    "deepseek_v4_pro_output_peak": 27
+  },
+  "price_sources": [
+    "https://help.aliyun.com/zh/model-studio/model-pricing",
+    "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/"
+  ],
+  "billing_note": "Conservative list prices; no free-credit/cache/holiday assumptions, not actual invoice; existing cloud subscription charge unavailable"
+}

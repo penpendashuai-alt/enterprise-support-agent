@@ -10,7 +10,7 @@ from langchain_core.outputs import ChatGenerationChunk
 from langgraph.checkpoint.sqlite.aio import AsyncSqliteSaver
 
 from agents.support_agent import SupportEntities, builder
-from rag.models import Evidence, RetrievalResult
+from rag.models import Candidate, RetrievalResult
 from service import app
 
 
@@ -73,7 +73,7 @@ async def test_rag_citations_history_no_token_leak_and_evidence_reset(
         ]
     )
     monkeypatch.setattr("agents.support_agent.get_support_model", lambda _: model)
-    evidence = Evidence(
+    evidence = Candidate(
         doc_id="vpn",
         chunk_id="vpn:1",
         title="VPN",
@@ -88,6 +88,10 @@ async def test_rag_citations_history_no_token_leak_and_evidence_reset(
         score=0.8,
         collection="dense",
         index_version="v1",
+        snapshot_id="snapshot-v2",
+        score_type="rerank",
+        rerank_score=0.8,
+        dense_score=0.7,
     )
     retrieve = AsyncMock(
         return_value=RetrievalResult(
@@ -96,6 +100,10 @@ async def test_rag_citations_history_no_token_leak_and_evidence_reset(
             evidence=[evidence],
             candidates=[evidence],
             index_version="v1",
+            requested_mode="hybrid_rerank",
+            actual_mode="hybrid_rerank",
+            snapshot_id="snapshot-v2",
+            backend_versions={"dense": "v1", "bm25": "lex-v1"},
         )
     )
     monkeypatch.setattr("rag.retriever.retrieve", retrieve)
@@ -122,6 +130,10 @@ async def test_rag_citations_history_no_token_leak_and_evidence_reset(
             else:
                 answer = response.json()
             assert answer["custom_data"]["citations"][0]["location"] == "行 3-5"
+            assert answer["custom_data"]["actual_mode"] == "hybrid_rerank"
+            assert answer["custom_data"]["snapshot_id"] == "snapshot-v2"
+            assert answer["custom_data"]["citations"][0]["score_type"] == "rerank"
+            assert answer["custom_data"]["citations"][0]["dense_score"] == 0.7
             history = (
                 await client.post("/support-agent/history", json={"thread_id": "rag"})
             ).json()

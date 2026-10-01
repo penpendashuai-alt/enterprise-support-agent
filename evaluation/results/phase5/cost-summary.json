@@ -1,0 +1,126 @@
+{
+  "budget_cny": 50,
+  "rates_cny_per_million": {
+    "embedding_tokens": 0.5,
+    "rerank_tokens": 0.8,
+    "chat_input_tokens": 9,
+    "chat_output_tokens": 27
+  },
+  "entries": [
+    {
+      "source": "ingestion-v2.json",
+      "embedding_tokens": 4313,
+      "estimated_cny": 0.0021565
+    },
+    {
+      "source": "ingestion-v2-repeat.json",
+      "embedding_tokens": 0,
+      "estimated_cny": 0.0
+    },
+    {
+      "source": "rerank-probe.json",
+      "rerank_tokens": 61,
+      "rerank_requests": 1,
+      "estimated_cny": 4.880000000000001e-05
+    },
+    {
+      "source": "integration-probe.json:dense",
+      "embedding_tokens": 22,
+      "requests": 1,
+      "retries": 0,
+      "estimated_cny": 1.1e-05
+    },
+    {
+      "source": "integration-probe.json:bm25",
+      "estimated_cny": 0.0
+    },
+    {
+      "source": "integration-probe.json:hybrid",
+      "embedding_tokens": 22,
+      "requests": 1,
+      "retries": 0,
+      "estimated_cny": 1.1e-05
+    },
+    {
+      "source": "integration-probe.json:hybrid_rerank",
+      "embedding_tokens": 22,
+      "requests": 1,
+      "retries": 0,
+      "rerank_tokens": 2732,
+      "rerank_requests": 1,
+      "estimated_cny": 0.0021966
+    },
+    {
+      "source": "dependency-faults.json:es_offline",
+      "embedding_tokens": 6,
+      "requests": 1,
+      "retries": 0,
+      "estimated_cny": 3e-06
+    },
+    {
+      "source": "dependency-faults.json:rerank_offline",
+      "embedding_tokens": 6,
+      "requests": 1,
+      "retries": 0,
+      "estimated_cny": 3e-06
+    },
+    {
+      "source": "dependency-faults.json:old_dense_new_es",
+      "estimated_cny": 0.0
+    },
+    {
+      "source": "dev-v1.json",
+      "embedding_tokens": 6132,
+      "rerank_tokens": 371906,
+      "estimated_cny": 0.3005908
+    },
+    {
+      "source": "heldout-v1.json",
+      "embedding_tokens": 4758,
+      "rerank_tokens": 323935,
+      "estimated_cny": 0.261527
+    },
+    {
+      "source": "business-regression.json",
+      "chat_input_tokens": 18806,
+      "chat_output_tokens": 2754,
+      "calls": 19,
+      "estimated_cny": 0.243612
+    },
+    {
+      "source": "generation-v1.json",
+      "chat_input_tokens": 77530,
+      "chat_output_tokens": 6044,
+      "calls": 54,
+      "estimated_cny": 0.860958
+    },
+    {
+      "source": "agent-extended-v1.json",
+      "chat_input_tokens": 5226,
+      "chat_output_tokens": 612,
+      "embedding_tokens": 30,
+      "rerank_tokens": 0,
+      "estimated_cny": 0.063573
+    },
+    {
+      "source": "agent-v1.json",
+      "chat_input_tokens": 30415,
+      "chat_output_tokens": 3079,
+      "embedding_tokens": 45,
+      "rerank_tokens": 0,
+      "estimated_cny": 0.3568905
+    }
+  ],
+  "total_usage": {
+    "embedding_tokens": 15356,
+    "rerank_tokens": 698634,
+    "chat_input_tokens": 131977,
+    "chat_output_tokens": 12489
+  },
+  "total_estimated_cny": 2.0915812,
+  "note": "API-reported successful usage only; no free-credit/cache/holiday assumptions. Not an invoice; Qdrant subscription, local electricity and unreported failed-provider usage unavailable. Derived summaries and raw journals not double counted.",
+  "prices": [
+    "https://help.aliyun.com/zh/model-studio/model-pricing",
+    "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/"
+  ]
+}

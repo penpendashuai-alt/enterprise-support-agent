@@ -14,7 +14,7 @@ def evidence_message(result: RetrievalResult) -> SystemMessage:
 
 
 def unavailable_answer(result: RetrievalResult) -> AIMessage:
-    if result.status in {"configuration_error", "unavailable"}:
+    if result.status in {"configuration_error", "unavailable", "index_inconsistent"}:
         text = "知识库检索暂不可用，无法据此确认企业制度或文档结论。请稍后重试；这不代表知识库没有相关资料。"
     else:
         text = "知识库暂无足够证据支持这个问题。请补充具体服务、错误信息或制度范围；不能据此编造企业规定。"
@@ -49,6 +49,11 @@ def finalize(response: AIMessage, result: RetrievalResult, check: bool = True) -
         "error_code": result.error_code,
         "timings": result.timings,
         "usage": result.usage,
+        "requested_mode": result.requested_mode,
+        "actual_mode": result.actual_mode,
+        "snapshot_id": result.snapshot_id,
+        "backend_versions": result.backend_versions,
+        "failures": result.failures,
     }
     return response.model_copy(
         update={

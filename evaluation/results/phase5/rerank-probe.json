@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "model": "gte-rerank-v2",
+  "usage": {
+    "rerank_tokens": 61,
+    "rerank_requests": 1
+  },
+  "order": [
+    "probe-0",
+    "probe-1"
+  ],
+  "scores": [
+    0.8017582897991509,
+    0.006064789406968529
+  ]
+}

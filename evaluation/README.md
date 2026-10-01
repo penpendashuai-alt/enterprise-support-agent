@@ -1,6 +1,25 @@
 # Phase 4 评测资产
 
-本目录记录 Synthetic enterprise support dataset / public technical documentation 的 Dense 基线。真实评测结果来自 DashScope Embedding、Qdrant Cloud 和单独的聊天模型验收；本地假向量只用于程序行为测试。
+本目录保留 Synthetic enterprise support dataset / public technical documentation 的 Phase 4 Dense 基线和 Phase 5 对照实验。真实评测使用 DashScope Embedding、Qdrant Cloud、Elasticsearch、Reranker 和聊天模型；Mock 只用于程序行为测试。
+
+## Phase 5
+
+- [开发与结果说明](../docs/phase5_hybrid_rag.md)：安装、配置、指标、取舍及已知质量问题。
+- `baselines/phase4/`：Phase 5 开始前的可恢复源码 ZIP、dirty 状态和逐文件哈希。
+- `datasets/hybrid_v1.json`、`snapshot_v2.json`：128 题（68 dev / 60 heldout），36 文档 / 72 个共享分块；同源改写分组划分。
+- `datasets/generation_v1.json`：批量实验前选定的 9 道生成审阅题，七组共 63 个回答。
+- `results/phase5/frozen-v1.json`：dev 校准、阈值网格、数据/检索源码指纹与留出运行前的默认选择。
+- `dev-v1.json`、`heldout-v1.json` 及同名 `.jsonl.gz`：896 次真实检索的原始候选、分数、排名、选取原因、用量和延迟。dev 原始门槛为 0，正式 dev 指标需离线按冻结门槛重放。
+- `results/phase5/comparison.json`：离线重放 dev 与首次 heldout 的七组指标、候选数量和必要块流失原因；未覆盖原始数据。
+- `generation-v1.json`、`generation-review-blinded.json`、`generation-review.json`、`generation-summary.json`：完整最终回答、隐藏组名审阅文件、逐条判断及汇总。同一编码助手审阅，不是独立人工标注或盲评；首次未保存校验前模型文本。
+- `agent-v1.json`、`agent-extended-v1.json`、`agent-answer-review.md`：真实 Router、invoke/SSE、多轮状态与语义审阅。11/11 结构检查通过，但 P1 短问不完整、冲突场景有无依据扩展。
+- `business-regression.json`：6/6 工单审批真实模型回归，临时 SQLite。
+- `ingestion-v2*.json`、`integration-probe.json`、`rerank-probe.json`、`dependency-faults.json`、`es-restart.json`：真实索引、分词、Reranker、故障和重启验证。
+- `environment.json`、`cost-summary.json`：环境、官方单价和完整成功 API 用量估价；不是供应商账单。
+
+运行 `python scripts/summarize_phase5.py` 可不调用外部 API 重建对照及费用汇总。主要实验文档 Recall@5 均已饱和；必要条款覆盖、回答有据性和无答案边界必须分开看。数据集由编码助手编写和逐源核对，独立人工标注复核尚未完成，不能用于声称生产泛化或独立基准领先。
+
+## Phase 4 原始记录
 
 - `datasets/dense_v1.json`：48 条人工构造并标注文档 ID、章节的查询，dev/heldout 各 24 条，各含 20 条有答案与 4 条无答案问题。
 - `results/phase4/cloud-probe.json`：临时 collection 的真实读写、维度校验及清理。

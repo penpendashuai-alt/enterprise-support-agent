@@ -1,0 +1,24 @@
+{
+  "version": "generation-review-v1",
+  "selection": "Chosen before dev results: multi-clause policy, close error codes, permissions, conflict/injection and two kinds of no-answer. Same questions for all groups. Descriptive small sample, not statistically representative.",
+  "case_ids": [
+    "p5-ticket-priority-4",
+    "p5-vpn-809-4",
+    "p5-vpn-cert-4",
+    "p5-email-ndr-4",
+    "p5-git-permissions-4",
+    "p5-usb-current-4",
+    "p5-usb-conflict-3",
+    "p5-unknown-vpn-hours-1",
+    "p5-unknown-parking-1"
+  ],
+  "review_rubric": {
+    "answer_point_coverage": "Supported requested points covered / answerable requested points; do not require unrelated details from a full annotated paragraph",
+    "complete": "All answerable subquestions addressed and missing information explicitly identified",
+    "unsupported": "A factual claim about policy, cause, SLA or real service state lacks support in the supplied evidence",
+    "false_refusal": "Answerable request rejected despite corpus support",
+    "wrong_answer": "Provides a concrete unsupported answer to a no-answer question",
+    "citation_validity": "Backend number validation, separate from factual support",
+    "review_limit": "Coding assistant authored and reviews the materials; group labels can be hidden in the review artifact but prior familiarity prevents independent blind-review claims"
+  }
+}

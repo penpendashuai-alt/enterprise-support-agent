@@ -4,6 +4,8 @@ import streamlit as st
 def render_sources(data: dict):
     if data.get("kind") != "knowledge_answer":
         return
+    if data.get("failures"):
+        st.caption("部分知识检索能力暂不可用，本次结果仅依据已获取的资料。")
     for title, items in [
         ("回答引用", data.get("citations", [])),
         ("候选资料（未作为回答引用）", data.get("candidates", [])),

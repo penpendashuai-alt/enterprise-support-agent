@@ -1,0 +1,6 @@
+# Frozen evaluation records hash source bytes; reproduce the original checkout line endings.
+src/rag/*.py text eol=lf
+src/rag/embeddings.py text eol=crlf
+src/rag/loader.py text eol=crlf
+src/rag/retriever.py text eol=crlf
+src/rag/vector_store.py text eol=crlf

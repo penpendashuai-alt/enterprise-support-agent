@@ -1,0 +1,13 @@
+{
+  "snapshot_id": "5b61873311a832a29a4289ef9607daf4391004fd8c00af146fd397bc19bf682c",
+  "chunks": 72,
+  "dense_collection": "enterprise_support_dense_v2",
+  "es_index": "enterprise-support-lexical-v2",
+  "dense_version": "9ce657399b560e4dfc560134d8c84270fb2c861e2965727cfe38b2212aee0d6d",
+  "es_version": "ae472d4d89aa811949a19bb289ff52a5e1c1ca2727a4165c61a06500afbd3266",
+  "status": "ready",
+  "reused": true,
+  "seconds": 4.068527900002664,
+  "embedding_tokens": 0,
+  "embedding_requests": 0
+}

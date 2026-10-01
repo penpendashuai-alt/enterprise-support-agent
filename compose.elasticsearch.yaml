@@ -1,0 +1,23 @@
+services:
+  elasticsearch:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.elasticsearch
+    image: enterprise-support-elasticsearch:9.5.3-smartcn
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - xpack.ml.enabled=false
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+    ports:
+      - "127.0.0.1:19200:9200"
+    volumes:
+      - phase5-es-data:/usr/share/elasticsearch/data
+    mem_limit: 2g
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS 'http://localhost:9200/_cluster/health?wait_for_status=yellow&timeout=5s' >/dev/null"]
+      interval: 10s
+      timeout: 8s
+      retries: 20
+volumes:
+  phase5-es-data:

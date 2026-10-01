@@ -1,0 +1,1940 @@
+{
+  "method": "Derived offline; dev reselected with frozen thresholds; original journals untouched",
+  "default": "dense20",
+  "splits": {
+    "dev": {
+      "dense_original": {
+        "n": 68,
+        "normal_n": 68,
+        "error_n": 0,
+        "degraded_n": 0,
+        "metrics": {
+          "candidate_evidence_recall": {
+            "n": 60,
+            "mean": 1.0
+          },
+          "evidence_recall_at_5": {
+            "n": 60,
+            "mean": 1.0
+          },
+          "evidence_mrr_at_5": {
+            "n": 60,
+            "mean": 0.9347222222222222
+          },
+          "document_recall_at_5_chunks": {
+            "n": 60,
+            "mean": 1.0
+          },
+          "document_mrr_at_5_chunks": {
+            "n": 60,
+            "mean": 0.9527777777777777
+          },
+          "selected_evidence_coverage": {
+            "n": 60,
+            "mean": 0.9138888888888889
+          },
+          "all_required_evidence": {
+            "n": 60,
+            "mean": 0.9
+          },
+          "false_refusal_proxy": {
+            "n": 60,
+            "mean": 0.05
+          },
+          "evidence_accepted_without_answer_label": {
+            "n": 8,
+            "mean": 0.125
+          }
+        },
+        "latency_all_requests": {
+          "retrieval_seconds": {
+            "n": 68,
+            "p50": 1.7488218999933451,
+            "p95_nearest_rank": 2.19836400001077
+          },
+          "embedding_seconds": {
+            "n": 68,
+            "p50": 0.18839139997726306,
+            "p95_nearest_rank": 0.28410609997808933
+          },
+          "index_check_seconds": {
+            "n": 68,
+            "p50": 1.059037150000222,
+            "p95_nearest_rank": 1.4829558999917936
+          },
+          "qdrant_query_seconds": {
+            "n": 68,
+            "p50": 0.5043228499998804,
+            "p95_nearest_rank": 0.5634790000040084
+          }
+        },
+        "actual_modes": {
+          "dense": 68
+        },
+        "usage": {
+          "embedding_tokens": 1022,
+          "rerank_tokens": 0
+        },
+        "candidate_counts": {},
+        "excluded_required_chunks": {},
+        "excluded_required_note": "Candidate exclusion events, not failed-question count; alternative gold groups may overlap"
+      },
+      "dense20": {
+        "n": 68,
+        "normal_n": 68,
+        "error_n": 0,
+        "degraded_n": 0,
+        "metrics": {
+          "candidate_evidence_recall": {
+            "n": 60,
+            "mean": 1.0
+          },
+          "evidence_recall_at_5": {
+            "n": 60,
+            "mean": 1.0
+          },
+          "evidence_mrr_at_5": {
+            "n": 60,
+            "mean": 0.9347222222222222
+          },
+          "document_recall_at_5_chunks": {
+            "n": 60,
+            "mean": 1.0
+          },
+          "document_mrr_at_5_chunks": {
+            "n": 60,
+            "mean": 0.9527777777777777
+          },
+          "selected_evidence_coverage": {
+            "n": 60,
+            "mean": 0.9138888888888889
+          },
+          "all_required_evidence": {
+            "n": 60,
+            "mean": 0.9
+          },
+          "false_refusal_proxy": {
+            "n": 60,
+            "mean": 0.05
+          },
+          "evidence_accepted_without_answer_label": {
+            "n": 8,
+            "mean": 0.125
+          }
+        },
+        "latency_all_requests": {
+          "dense_seconds": {
+            "n": 68,
+            "p50": 0.6955321999994339,
+            "p95_nearest_rank": 0.7942188000015449
+          },
+          "embedding_seconds": {
+            "n": 68,
+            "p50": 0.17841525000403635,
+            "p95_nearest_rank": 0.25349020000430755
+          },
+          "qdrant_query_seconds": {
+            "n": 68,
+            "p50": 0.507940099996631,
+            "p95_nearest_rank": 0.5435949999955483
+          },
+          "retrieval_seconds": {
+            "n": 68,
+            "p50": 1.7649793500022497,
+            "p95_nearest_rank": 1.963200099999085
+          },
+          "dense_index_seconds": {
+            "n": 68,
+            "p50": 1.0661783500108868,
+            "p95_nearest_rank": 1.295653899986064
+          }
+        },
+        "actual_modes": {
+          "dense": 68
+        },
+        "usage": {
+          "embedding_tokens": 1022,
+          "rerank_tokens": 0
+        },
+        "candidate_counts": {
+          "dense": {
+            "min": 20,
+            "mean": 20,
+            "max": 20
+          },
+          "union": {
+            "min": 20,
+            "mean": 20,
+            "max": 20
+          }
+        },
+        "excluded_required_chunks": {
+          "threshold": [
+            {
+              "case_id": "p5-git-permissions-2",
+              "chunk_id": "git-permissions:1.0:f185403bf8757c02e767"
+            },
+            {
+              "case_id": "p5-usb-conflict-4",
+              "chunk_id": "usb-current:1.0:430e6106f242b3e0b585"
+            },
+            {
+              "case_id": "p5-usb-conflict-4",
+              "chunk_id": "usb-conflict:1.0:35b6c2d1015b701ea40c"
+            },
+            {
+              "case_id": "p5-vpn-policy-2",
+              "chunk_id": "vpn-policy:1.0:459800b4cbdd7430b6ea"
+            },
+            {
+              "case_id": "p5-github-sso-3",
+              "chunk_id": "github-sso:1.0:782abe1c56caa2b9ebb8"
+            },
+            {
+              "case_id": "p5-account-request-3",
+              "chunk_id": "account-request:1.0:57bba468f5a2abd9e273"
+            },
+            {
+              "case_id": "p5-public-github-auth-3",
+              "chunk_id": "public-github-auth:1.0:892cd3b556cb65c5b848"
+            }
+          ]
+        },
+        "excluded_required_note": "Candidate exclusion events, not failed-question count; alternative gold groups may overlap"
+      },
+      "dense40": {
+        "n": 68,
+        "normal_n": 68,
+        "error_n": 0,
+        "degraded_n": 0,
+        "metrics": {
+          "candidate_evidence_recall": {
+            "n": 60,
+            "mean": 1.0
+          },
+          "evidence_recall_at_5": {
+            "n": 60,
+            "mean": 1.0
+          },
+          "evidence_mrr_at_5": {
+            "n": 60,
+            "mean": 0.9347222222222222
+          },
+          "document_recall_at_5_chunks": {
+            "n": 60,
+            "mean": 1.0
+          },
+          "document_mrr_at_5_chunks": {
+            "n": 60,
+            "mean": 0.9527777777777777
+          },
+          "selected_evidence_coverage": {
+            "n": 60,
+            "mean": 0.9138888888888889
+          },
+          "all_required_evidence": {
+            "n": 60,
+            "mean": 0.9
+          },
+          "false_refusal_proxy": {
+            "n": 60,
+            "mean": 0.05
+          },
+          "evidence_accepted_without_answer_label": {
+            "n": 8,
+            "mean": 0.125
+          }
+        },
+        "latency_all_requests": {
+          "dense_seconds": {
+            "n": 68,
+            "p50": 0.6894046499946853,
+            "p95_nearest_rank": 0.7929029999941122
+          },
+          "embedding_seconds": {
+            "n": 68,
+            "p50": 0.17523370000708383,
+            "p95_nearest_rank": 0.2791842999868095
+          },
+          "qdrant_query_seconds": {
+            "n": 68,
+            "p50": 0.5142424999939976,
+            "p95_nearest_rank": 0.5491286999895237
+          },
+          "retrieval_seconds": {
+            "n": 68,
+            "p50": 1.753639150003437,
+            "p95_nearest_rank": 1.9266218999982812
+          },
+          "dense_index_seconds": {
+            "n": 68,
+            "p50": 1.0587977999966824,
+            "p95_nearest_rank": 1.2088866000121925
+          }
+        },
+        "actual_modes": {
+          "dense": 68
+        },
+        "usage": {
+          "embedding_tokens": 1022,
+          "rerank_tokens": 0
+        },
+        "candidate_counts": {
+          "dense": {
+            "min": 40,
+            "mean": 40,
+            "max": 40
+          },
+          "union": {
+            "min": 40,
+            "mean": 40,
+            "max": 40
+          }
+        },
+        "excluded_required_chunks": {
+          "threshold": [
+            {
+              "case_id": "p5-git-permissions-2",
+              "chunk_id": "git-permissions:1.0:f185403bf8757c02e767"
+            },
+            {
+              "case_id": "p5-usb-conflict-4",
+              "chunk_id": "usb-current:1.0:430e6106f242b3e0b585"
+            },
+            {
+              "case_id": "p5-usb-conflict-4",
+              "chunk_id": "usb-conflict:1.0:35b6c2d1015b701ea40c"
+            },
+            {
+              "case_id": "p5-vpn-policy-2",
+              "chunk_id": "vpn-policy:1.0:459800b4cbdd7430b6ea"
+            },
+            {
+              "case_id": "p5-github-sso-3",
+              "chunk_id": "github-sso:1.0:782abe1c56caa2b9ebb8"
+            },
+            {
+              "case_id": "p5-account-request-3",
+              "chunk_id": "account-request:1.0:57bba468f5a2abd9e273"
+            },
+            {
+              "case_id": "p5-public-github-auth-3",
+              "chunk_id": "public-github-auth:1.0:892cd3b556cb65c5b848"
+            }
+          ]
+        },
+        "excluded_required_note": "Candidate exclusion events, not failed-question count; alternative gold groups may overlap"
+      },
+      "bm25": {
+        "n": 68,
+        "normal_n": 68,
+        "error_n": 0,
+        "degraded_n": 0,
+        "metrics": {
+          "candidate_evidence_recall": {
+            "n": 60,
+            "mean": 1.0
+          },
+          "evidence_recall_at_5": {
+            "n": 60,
+            "mean": 0.9861111111111112
+          },
+          "evidence_mrr_at_5": {
+            "n": 60,
+            "mean": 0.8741666666666666
+          },
+          "document_recall_at_5_chunks": {
+            "n": 60,
+            "mean": 1.0
+          },
+          "document_mrr_at_5_chunks": {
+            "n": 60,
+            "mean": 0.9277777777777778
+          },
+          "selected_evidence_coverage": {
+            "n": 60,
+            "mean": 0.9861111111111112
+          },
+          "all_required_evidence": {
+            "n": 60,
+            "mean": 0.9666666666666667
+          },
+          "false_refusal_proxy": {
+            "n": 60,
+            "mean": 0
+          },
+          "evidence_accepted_without_answer_label": {
+            "n": 8,
+            "mean": 0.375
+          }
+        },
+        "latency_all_requests": {
+          "retrieval_seconds": {
+            "n": 68,
+            "p50": 0.02477825000823941,
+            "p95_nearest_rank": 0.031397300015669316
+          },
+          "bm25_seconds": {
+            "n": 68,
+            "p50": 0.014758150005945936,
+            "p95_nearest_rank": 0.01907989999745041
+          },
+          "bm25_index_seconds": {
+            "n": 68,
+            "p50": 0.009383700002217665,
+            "p95_nearest_rank": 0.011521499982336536
+          }
+        },
+        "actual_modes": {
+          "bm25": 68
+        },
+        "usage": {
+          "embedding_tokens": 0,
+          "rerank_tokens": 0
+        },
+        "candidate_counts": {
+          "bm25": {
+            "min": 5,
+            "mean": 19.058823529411764,
+            "max": 20
+          },
+          "union": {
+            "min": 5,
+            "mean": 19.058823529411764,
+            "max": 20
+          }
+        },
+        "excluded_required_chunks": {
+          "threshold": [
+            {
+              "case_id": "p5-access-expiry-4",
+              "chunk_id": "access-expiry:1.0:46d46ff4a0486e5690f8"
+            },
+            {
+              "case_id": "p5-usb-conflict-4",
+              "chunk_id": "usb-conflict:1.0:35b6c2d1015b701ea40c"
+            }
+          ]
+        },
+        "excluded_required_note": "Candidate exclusion events, not failed-question count; alternative gold groups may overlap"
+      },
+      "hybrid": {
+        "n": 68,
+        "normal_n": 68,
+        "error_n": 0,
+        "degraded_n": 0,
+        "metrics": {
+          "candidate_evidence_recall": {
+            "n": 60,
+            "mean": 1.0
+          },
+          "evidence_recall_at_5": {
+            "n": 60,
+            "mean": 0.9944444444444445
+          },
+          "evidence_mrr_at_5": {
+            "n": 60,
+            "mean": 0.9194444444444444
+          },
+          "document_recall_at_5_chunks": {
+            "n": 60,
+            "mean": 1.0
+          },
+          "document_mrr_at_5_chunks": {
+            "n": 60,
+            "mean": 0.9388888888888889
+          },
+          "selected_evidence_coverage": {
+            "n": 60,
+            "mean": 0.9944444444444445
+          },
+          "all_required_evidence": {
+            "n": 60,
+            "mean": 0.9833333333333333
+          },
+          "false_refusal_proxy": {
+            "n": 60,
+            "mean": 0
+          },
+          "evidence_accepted_without_answer_label": {
+            "n": 8,
+            "mean": 1
+          }
+        },
+        "latency_all_requests": {
+          "dense_seconds": {
+            "n": 68,
+            "p50": 0.6839272499928484,
+            "p95_nearest_rank": 0.7838555000198539
+          },
+          "embedding_seconds": {
+            "n": 68,
+            "p50": 0.18194715000572614,
+            "p95_nearest_rank": 0.23749219998717308
+          },
+          "qdrant_query_seconds": {
+            "n": 68,
+            "p50": 0.5061419999838108,
+            "p95_nearest_rank": 0.5479557000217028
+          },
+          "bm25_seconds": {
+            "n": 68,
+            "p50": 0.01559535002161283,
+            "p95_nearest_rank": 0.022210100025404245
+          },
+          "retrieval_seconds": {
+            "n": 68,
+            "p50": 1.7367302500206279,
+            "p95_nearest_rank": 1.9109735999954864
+          },
+          "bm25_index_seconds": {
+            "n": 68,
+            "p50": 0.009645850004744716,
+            "p95_nearest_rank": 0.011404599994421005
+          },
+          "dense_index_seconds": {
+            "n": 68,
+            "p50": 1.0593173499946715,
+            "p95_nearest_rank": 1.1768726000154857
+          }
+        },
+        "actual_modes": {
+          "hybrid": 68
+        },
+        "usage": {
+          "embedding_tokens": 1022,
+          "rerank_tokens": 0
+        },
+        "candidate_counts": {
+          "bm25": {
+            "min": 5,
+            "mean": 19.058823529411764,
+            "max": 20
+          },
+          "dense": {
+            "min": 20,
+            "mean": 20,
+            "max": 20
+          },
+          "union": {
+            "min": 23,
+            "mean": 28.16176470588235,
+            "max": 34
+          }
+        },
+        "excluded_required_chunks": {
+          "final_k": [
+            {
+              "case_id": "p5-usb-conflict-4",
+              "chunk_id": "usb-conflict:1.0:35b6c2d1015b701ea40c"
+            }
+          ]
+        },
+        "excluded_required_note": "Candidate exclusion events, not failed-question count; alternative gold groups may overlap"
+      },
+      "hybrid_rerank": {
+        "n": 68,
+        "normal_n": 68,
+        "error_n": 0,
+        "degraded_n": 0,
+        "metrics": {
+          "candidate_evidence_recall": {
+            "n": 60,
+            "mean": 1.0
+          },
+          "evidence_recall_at_5": {
+            "n": 60,
+            "mean": 1.0
+          },
+          "evidence_mrr_at_5": {
+            "n": 60,
+            "mean": 0.9722222222222222
+          },
+          "document_recall_at_5_chunks": {
+            "n": 60,
+            "mean": 1.0
+          },
+          "document_mrr_at_5_chunks": {
+            "n": 60,
+            "mean": 0.9888888888888889
+          },
+          "selected_evidence_coverage": {
+            "n": 60,
+            "mean": 0.7333333333333333
+          },
+          "all_required_evidence": {
+            "n": 60,
+            "mean": 0.6833333333333333
+          },
+          "false_refusal_proxy": {
+            "n": 60,
+            "mean": 0.21666666666666667
+          },
+          "evidence_accepted_without_answer_label": {
+            "n": 8,
+            "mean": 0
+          }
+        },
+        "latency_all_requests": {
+          "dense_seconds": {
+            "n": 68,
+            "p50": 0.69572825000796,
+            "p95_nearest_rank": 0.7941905000188854
+          },
+          "embedding_seconds": {
+            "n": 68,
+            "p50": 0.18217255000490695,
+            "p95_nearest_rank": 0.2684976999880746
+          },
+          "rerank_seconds": {
+            "n": 68,
+            "p50": 0.1671113000193145,
+            "p95_nearest_rank": 0.2213767000066582
+          },
+          "qdrant_query_seconds": {
+            "n": 68,
+            "p50": 0.5096759000007296,
+            "p95_nearest_rank": 0.5680053000105545
+          },
+          "bm25_seconds": {
+            "n": 68,
+            "p50": 0.015594199998304248,
+            "p95_nearest_rank": 0.0216937999939546
+          },
+          "retrieval_seconds": {
+            "n": 68,
+            "p50": 1.9473746000003302,
+            "p95_nearest_rank": 2.175926800002344
+          },
+          "bm25_index_seconds": {
+            "n": 68,
+            "p50": 0.0096458499901928,
+            "p95_nearest_rank": 0.011348200001521036
+          },
+          "dense_index_seconds": {
+            "n": 68,
+            "p50": 1.064889300003415,
+            "p95_nearest_rank": 1.1698262999998406
+          }
+        },
+        "actual_modes": {
+          "hybrid_rerank": 68
+        },
+        "usage": {
+          "embedding_tokens": 1022,
+          "rerank_tokens": 154157
+        },
+        "candidate_counts": {
+          "bm25": {
+            "min": 5,
+            "mean": 19.058823529411764,
+            "max": 20
+          },
+          "dense": {
+            "min": 20,
+            "mean": 20,
+            "max": 20
+          },
+          "rerank_input": {
+            "min": 23,
+            "mean": 28.16176470588235,
+            "max": 34
+          },
+          "union": {
+            "min": 23,
+            "mean": 28.16176470588235,
+            "max": 34
+          }
+        },
+        "excluded_required_chunks": {
+          "threshold": [
+            {
+              "case_id": "p5-vpn-dns-2",
+              "chunk_id": "vpn-dns:1.0:2f4bbd30f87d6ad541c2"
+            },
+            {
+              "case_id": "p5-email-quota-3",
+              "chunk_id": "email-quota:1.0:af15039f9679d4181582"
+            },
+            {
+              "case_id": "p5-email-quota-4",
+              "chunk_id": "email-quota:1.0:9d4fc3753d04568a10ef"
+            },
+            {
+              "case_id": "p5-device-assets-4",
+              "chunk_id": "device-assets:1.0:4eac5348e5799b41e831"
+            },
+            {
+              "case_id": "p5-access-expiry-4",
+              "chunk_id": "access-expiry:1.0:c6ea3ae86fe0edee154b"
+            },
+            {
+              "case_id": "p5-access-expiry-4",
+              "chunk_id": "access-expiry:1.0:46d46ff4a0486e5690f8"
+            },
+            {
+              "case_id": "p5-printer-offline-3",
+              "chunk_id": "printer-offline:1.0:d4993901f38fa1fce0f1"
+            },
+            {
+              "case_id": "p5-printer-offline-4",
+              "chunk_id": "printer-offline:1.0:00fdb2a59f40e15b0721"
+            },
+            {
+              "case_id": "p5-printer-offline-4",
+              "chunk_id": "printer-offline:1.0:d4993901f38fa1fce0f1"
+            },
+            {
+              "case_id": "p5-shared-readonly-4",
+              "chunk_id": "shared-readonly:1.0:850c8bbf498152708777"
+            },
+            {
+              "case_id": "p5-shared-readonly-4",
+              "chunk_id": "shared-readonly:1.0:5d530dd1ab83d72b7830"
+            },
+            {
+              "case_id": "p5-usb-conflict-1",
+              "chunk_id": "usb-current:1.0:430e6106f242b3e0b585"
+            },
+            {
+              "case_id": "p5-usb-conflict-4",
+              "chunk_id": "usb-conflict:1.0:ce5cb7265e6473efe340"
+            },
+            {
+              "case_id": "p5-usb-conflict-4",
+              "chunk_id": "usb-current:1.0:430e6106f242b3e0b585"
+            },
+            {
+              "case_id": "p5-usb-conflict-4",
+              "chunk_id": "usb-conflict:1.0:35b6c2d1015b701ea40c"
+            },
+            {
+              "case_id": "p5-vpn-policy-4",
+              "chunk_id": "vpn-policy:1.0:459800b4cbdd7430b6ea"
+            },
+            {
+              "case_id": "p5-ticket-priority-4",
+              "chunk_id": "ticket-priority:1.0:0d272d2e8be1bc990e33"
+            },
+            {
+              "case_id": "p5-vpn-809-2",
+              "chunk_id": "vpn-809:1.0:79b43a59c54b535f30ab"
+            },
+            {
+              "case_id": "p5-vpn-809-2",
+              "chunk_id": "vpn-809:1.0:d827f3ec0dec8850f6d4"
+            },
+            {
+              "case_id": "p5-github-sso-3",
+              "chunk_id": "github-sso:1.0:782abe1c56caa2b9ebb8"
+            },
+            {
+              "case_id": "p5-account-request-1",
+              "chunk_id": "account-request:1.0:cc433c6438ba26eeb32c"
+            },
+            {
+              "case_id": "p5-account-request-2",
+              "chunk_id": "account-request:1.0:cc433c6438ba26eeb32c"
+            },
+            {
+              "case_id": "p5-account-request-3",
+              "chunk_id": "account-request:1.0:57bba468f5a2abd9e273"
+            },
+            {
+              "case_id": "p5-account-request-3",
+              "chunk_id": "account-request:1.0:cc433c6438ba26eeb32c"
+            },
+            {
+              "case_id": "p5-account-request-4",
+              "chunk_id": "account-request:1.0:57bba468f5a2abd9e273"
+            },
+            {
+              "case_id": "p5-public-github-auth-3",
+              "chunk_id": "public-github-auth:1.0:892cd3b556cb65c5b848"
+            }
+          ]
+        },
+        "excluded_required_note": "Candidate exclusion events, not failed-question count; alternative gold groups may overlap"
+      },
+      "dense_rerank": {
+        "n": 68,
+        "normal_n": 68,
+        "error_n": 0,
+        "degraded_n": 0,
+        "metrics": {
+          "candidate_evidence_recall": {
+            "n": 60,
+            "mean": 1.0
+          },
+          "evidence_recall_at_5": {
+            "n": 60,
+            "mean": 1.0
+          },
+          "evidence_mrr_at_5": {
+            "n": 60,
+            "mean": 0.9722222222222222
+          },
+          "document_recall_at_5_chunks": {
+            "n": 60,
+            "mean": 1.0
+          },
+          "document_mrr_at_5_chunks": {
+            "n": 60,
+            "mean": 0.9888888888888889
+          },
+          "selected_evidence_coverage": {
+            "n": 60,
+            "mean": 0.7333333333333333
+          },
+          "all_required_evidence": {
+            "n": 60,
+            "mean": 0.6833333333333333
+          },
+          "false_refusal_proxy": {
+            "n": 60,
+            "mean": 0.21666666666666667
+          },
+          "evidence_accepted_without_answer_label": {
+            "n": 8,
+            "mean": 0
+          }
+        },
+        "latency_all_requests": {
+          "dense_seconds": {
+            "n": 68,
+            "p50": 0.6994332499889424,
+            "p95_nearest_rank": 0.9026205999834929
+          },
+          "embedding_seconds": {
+            "n": 68,
+            "p50": 0.18079539999598637,
+            "p95_nearest_rank": 0.3482772000133991
+          },
+          "rerank_seconds": {
+            "n": 68,
+            "p50": 0.18012330000055954,
+            "p95_nearest_rank": 0.2767485000076704
+          },
+          "qdrant_query_seconds": {
+            "n": 68,
+            "p50": 0.515037500008475,
+            "p95_nearest_rank": 0.5903068000043277
+          },
+          "retrieval_seconds": {
+            "n": 68,
+            "p50": 1.9658509000000777,
+            "p95_nearest_rank": 2.559910599986324
+          },
+          "dense_index_seconds": {
+            "n": 68,
+            "p50": 1.0668678999936674,
+            "p95_nearest_rank": 1.280815900012385
+          }
+        },
+        "actual_modes": {
+          "dense_rerank": 68
+        },
+        "usage": {
+          "embedding_tokens": 1022,
+          "rerank_tokens": 217749
+        },
+        "candidate_counts": {
+          "dense": {
+            "min": 40,
+            "mean": 40,
+            "max": 40
+          },
+          "rerank_input": {
+            "min": 40,
+            "mean": 40,
+            "max": 40
+          },
+          "union": {
+            "min": 40,
+            "mean": 40,
+            "max": 40
+          }
+        },
+        "excluded_required_chunks": {
+          "threshold": [
+            {
+              "case_id": "p5-vpn-dns-2",
+              "chunk_id": "vpn-dns:1.0:2f4bbd30f87d6ad541c2"
+            },
+            {
+              "case_id": "p5-email-quota-3",
+              "chunk_id": "email-quota:1.0:af15039f9679d4181582"
+            },
+            {
+              "case_id": "p5-email-quota-4",
+              "chunk_id": "email-quota:1.0:9d4fc3753d04568a10ef"
+            },
+            {
+              "case_id": "p5-device-assets-4",
+              "chunk_id": "device-assets:1.0:4eac5348e5799b41e831"
+            },
+            {
+              "case_id": "p5-access-expiry-4",
+              "chunk_id": "access-expiry:1.0:c6ea3ae86fe0edee154b"
+            },
+            {
+              "case_id": "p5-access-expiry-4",
+              "chunk_id": "access-expiry:1.0:46d46ff4a0486e5690f8"
+            },
+            {
+              "case_id": "p5-printer-offline-3",
+              "chunk_id": "printer-offline:1.0:d4993901f38fa1fce0f1"
+            },
+            {
+              "case_id": "p5-printer-offline-4",
+              "chunk_id": "printer-offline:1.0:00fdb2a59f40e15b0721"
+            },
+            {
+              "case_id": "p5-printer-offline-4",
+              "chunk_id": "printer-offline:1.0:d4993901f38fa1fce0f1"
+            },
+            {
+              "case_id": "p5-shared-readonly-4",
+              "chunk_id": "shared-readonly:1.0:850c8bbf498152708777"
+            },
+            {
+              "case_id": "p5-shared-readonly-4",
+              "chunk_id": "shared-readonly:1.0:5d530dd1ab83d72b7830"
+            },
+            {
+              "case_id": "p5-usb-conflict-1",
+              "chunk_id": "usb-current:1.0:430e6106f242b3e0b585"
+            },
+            {
+              "case_id": "p5-usb-conflict-4",
+              "chunk_id": "usb-conflict:1.0:ce5cb7265e6473efe340"
+            },
+            {
+              "case_id": "p5-usb-conflict-4",
+              "chunk_id": "usb-current:1.0:430e6106f242b3e0b585"
+            },
+            {
+              "case_id": "p5-usb-conflict-4",
+              "chunk_id": "usb-conflict:1.0:35b6c2d1015b701ea40c"
+            },
+            {
+              "case_id": "p5-vpn-policy-4",
+              "chunk_id": "vpn-policy:1.0:459800b4cbdd7430b6ea"
+            },
+            {
+              "case_id": "p5-ticket-priority-4",
+              "chunk_id": "ticket-priority:1.0:0d272d2e8be1bc990e33"
+            },
+            {
+              "case_id": "p5-vpn-809-2",
+              "chunk_id": "vpn-809:1.0:79b43a59c54b535f30ab"
+            },
+            {
+              "case_id": "p5-vpn-809-2",
+              "chunk_id": "vpn-809:1.0:d827f3ec0dec8850f6d4"
+            },
+            {
+              "case_id": "p5-github-sso-3",
+              "chunk_id": "github-sso:1.0:782abe1c56caa2b9ebb8"
+            },
+            {
+              "case_id": "p5-account-request-1",
+              "chunk_id": "account-request:1.0:cc433c6438ba26eeb32c"
+            },
+            {
+              "case_id": "p5-account-request-2",
+              "chunk_id": "account-request:1.0:cc433c6438ba26eeb32c"
+            },
+            {
+              "case_id": "p5-account-request-3",
+              "chunk_id": "account-request:1.0:57bba468f5a2abd9e273"
+            },
+            {
+              "case_id": "p5-account-request-3",
+              "chunk_id": "account-request:1.0:cc433c6438ba26eeb32c"
+            },
+            {
+              "case_id": "p5-account-request-4",
+              "chunk_id": "account-request:1.0:57bba468f5a2abd9e273"
+            },
+            {
+              "case_id": "p5-public-github-auth-3",
+              "chunk_id": "public-github-auth:1.0:892cd3b556cb65c5b848"
+            }
+          ]
+        },
+        "excluded_required_note": "Candidate exclusion events, not failed-question count; alternative gold groups may overlap"
+      }
+    },
+    "heldout": {
+      "dense_original": {
+        "n": 60,
+        "normal_n": 60,
+        "error_n": 0,
+        "degraded_n": 0,
+        "metrics": {
+          "candidate_evidence_recall": {
+            "n": 52,
+            "mean": 1.0
+          },
+          "evidence_recall_at_5": {
+            "n": 52,
+            "mean": 1.0
+          },
+          "evidence_mrr_at_5": {
+            "n": 52,
+            "mean": 0.9006410256410257
+          },
+          "document_recall_at_5_chunks": {
+            "n": 52,
+            "mean": 1.0
+          },
+          "document_mrr_at_5_chunks": {
+            "n": 52,
+            "mean": 0.9615384615384616
+          },
+          "selected_evidence_coverage": {
+            "n": 52,
+            "mean": 0.8557692307692307
+          },
+          "all_required_evidence": {
+            "n": 52,
+            "mean": 0.8461538461538461
+          },
+          "false_refusal_proxy": {
+            "n": 52,
+            "mean": 0.11538461538461539
+          },
+          "evidence_accepted_without_answer_label": {
+            "n": 8,
+            "mean": 0.375
+          }
+        },
+        "latency_all_requests": {
+          "retrieval_seconds": {
+            "n": 60,
+            "p50": 1.7913559000007808,
+            "p95_nearest_rank": 1.9905891999951564
+          },
+          "embedding_seconds": {
+            "n": 60,
+            "p50": 0.20226539998839144,
+            "p95_nearest_rank": 0.27983990000211634
+          },
+          "index_check_seconds": {
+            "n": 60,
+            "p50": 1.0781102000037208,
+            "p95_nearest_rank": 1.1643905999953859
+          },
+          "qdrant_query_seconds": {
+            "n": 60,
+            "p50": 0.5094320000061998,
+            "p95_nearest_rank": 0.5905984999844804
+          }
+        },
+        "actual_modes": {
+          "dense": 60
+        },
+        "usage": {
+          "embedding_tokens": 793,
+          "rerank_tokens": 0
+        },
+        "candidate_counts": {},
+        "excluded_required_chunks": {},
+        "excluded_required_note": "Candidate exclusion events, not failed-question count; alternative gold groups may overlap"
+      },
+      "dense20": {
+        "n": 60,
+        "normal_n": 60,
+        "error_n": 0,
+        "degraded_n": 0,
+        "metrics": {
+          "candidate_evidence_recall": {
+            "n": 52,
+            "mean": 1.0
+          },
+          "evidence_recall_at_5": {
+            "n": 52,
+            "mean": 1.0
+          },
+          "evidence_mrr_at_5": {
+            "n": 52,
+            "mean": 0.9006410256410257
+          },
+          "document_recall_at_5_chunks": {
+            "n": 52,
+            "mean": 1.0
+          },
+          "document_mrr_at_5_chunks": {
+            "n": 52,
+            "mean": 0.9615384615384616
+          },
+          "selected_evidence_coverage": {
+            "n": 52,
+            "mean": 0.8557692307692307
+          },
+          "all_required_evidence": {
+            "n": 52,
+            "mean": 0.8461538461538461
+          },
+          "false_refusal_proxy": {
+            "n": 52,
+            "mean": 0.11538461538461539
+          },
+          "evidence_accepted_without_answer_label": {
+            "n": 8,
+            "mean": 0.375
+          }
+        },
+        "latency_all_requests": {
+          "dense_seconds": {
+            "n": 60,
+            "p50": 0.7102600999933202,
+            "p95_nearest_rank": 0.8909878999984358
+          },
+          "embedding_seconds": {
+            "n": 60,
+            "p50": 0.19707629999902565,
+            "p95_nearest_rank": 0.2837994000001345
+          },
+          "qdrant_query_seconds": {
+            "n": 60,
+            "p50": 0.5095767499879003,
+            "p95_nearest_rank": 0.716327200003434
+          },
+          "retrieval_seconds": {
+            "n": 60,
+            "p50": 1.7998676499992143,
+            "p95_nearest_rank": 2.2520913999760523
+          },
+          "dense_index_seconds": {
+            "n": 60,
+            "p50": 1.0721975500055123,
+            "p95_nearest_rank": 1.2760785999998916
+          }
+        },
+        "actual_modes": {
+          "dense": 60
+        },
+        "usage": {
+          "embedding_tokens": 793,
+          "rerank_tokens": 0
+        },
+        "candidate_counts": {
+          "dense": {
+            "min": 20,
+            "mean": 20,
+            "max": 20
+          },
+          "union": {
+            "min": 20,
+            "mean": 20,
+            "max": 20
+          }
+        },
+        "excluded_required_chunks": {
+          "threshold": [
+            {
+              "case_id": "p5-email-ndr-4",
+              "chunk_id": "email-ndr:1.0:a10eaac6aef5cd60f2b3"
+            },
+            {
+              "case_id": "p5-email-ndr-4",
+              "chunk_id": "email-ndr:1.0:6917d828c46dd52cbfac"
+            },
+            {
+              "case_id": "p5-email-policy-2",
+              "chunk_id": "email-policy:1.0:e9b5e65856b5ff861504"
+            },
+            {
+              "case_id": "p5-email-policy-4",
+              "chunk_id": "email-policy:1.0:e9b5e65856b5ff861504"
+            },
+            {
+              "case_id": "p5-ticket-approval-3",
+              "chunk_id": "ticket-approval:1.0:8a572a3a8c6546f677c9"
+            },
+            {
+              "case_id": "p5-ticket-approval-3",
+              "chunk_id": "ticket-approval:1.0:63a8faa5ec53f12063ae"
+            },
+            {
+              "case_id": "p5-ticket-approval-4",
+              "chunk_id": "ticket-approval:1.0:63a8faa5ec53f12063ae"
+            },
+            {
+              "case_id": "p5-ticket-approval-4",
+              "chunk_id": "ticket-approval:1.0:8a572a3a8c6546f677c9"
+            },
+            {
+              "case_id": "p5-vpn-691-3",
+              "chunk_id": "vpn-691:1.0:452dd53296446009f9a5"
+            },
+            {
+              "case_id": "p5-password-reset-2",
+              "chunk_id": "password-reset:1.0:76ddff7bbef86d15a600"
+            },
+            {
+              "case_id": "p5-public-gmail-auth-2",
+              "chunk_id": "public-gmail-auth:1.0:8c4741ab2d3e9e591a21"
+            }
+          ]
+        },
+        "excluded_required_note": "Candidate exclusion events, not failed-question count; alternative gold groups may overlap"
+      },
+      "dense40": {
+        "n": 60,
+        "normal_n": 60,
+        "error_n": 0,
+        "degraded_n": 0,
+        "metrics": {
+          "candidate_evidence_recall": {
+            "n": 52,
+            "mean": 1.0
+          },
+          "evidence_recall_at_5": {
+            "n": 52,
+            "mean": 1.0
+          },
+          "evidence_mrr_at_5": {
+            "n": 52,
+            "mean": 0.9006410256410257
+          },
+          "document_recall_at_5_chunks": {
+            "n": 52,
+            "mean": 1.0
+          },
+          "document_mrr_at_5_chunks": {
+            "n": 52,
+            "mean": 0.9615384615384616
+          },
+          "selected_evidence_coverage": {
+            "n": 52,
+            "mean": 0.8557692307692307
+          },
+          "all_required_evidence": {
+            "n": 52,
+            "mean": 0.8461538461538461
+          },
+          "false_refusal_proxy": {
+            "n": 52,
+            "mean": 0.11538461538461539
+          },
+          "evidence_accepted_without_answer_label": {
+            "n": 8,
+            "mean": 0.375
+          }
+        },
+        "latency_all_requests": {
+          "dense_seconds": {
+            "n": 60,
+            "p50": 0.7334098999999696,
+            "p95_nearest_rank": 0.9308164999820292
+          },
+          "embedding_seconds": {
+            "n": 60,
+            "p50": 0.2072550000011688,
+            "p95_nearest_rank": 0.37922540001454763
+          },
+          "qdrant_query_seconds": {
+            "n": 60,
+            "p50": 0.5184928499948,
+            "p95_nearest_rank": 0.6220258999965154
+          },
+          "retrieval_seconds": {
+            "n": 60,
+            "p50": 1.8144981000077678,
+            "p95_nearest_rank": 2.457389899995178
+          },
+          "dense_index_seconds": {
+            "n": 60,
+            "p50": 1.0806162999942899,
+            "p95_nearest_rank": 1.4188473999965936
+          }
+        },
+        "actual_modes": {
+          "dense": 60
+        },
+        "usage": {
+          "embedding_tokens": 793,
+          "rerank_tokens": 0
+        },
+        "candidate_counts": {
+          "dense": {
+            "min": 40,
+            "mean": 40,
+            "max": 40
+          },
+          "union": {
+            "min": 40,
+            "mean": 40,
+            "max": 40
+          }
+        },
+        "excluded_required_chunks": {
+          "threshold": [
+            {
+              "case_id": "p5-email-ndr-4",
+              "chunk_id": "email-ndr:1.0:a10eaac6aef5cd60f2b3"
+            },
+            {
+              "case_id": "p5-email-ndr-4",
+              "chunk_id": "email-ndr:1.0:6917d828c46dd52cbfac"
+            },
+            {
+              "case_id": "p5-email-policy-2",
+              "chunk_id": "email-policy:1.0:e9b5e65856b5ff861504"
+            },
+            {
+              "case_id": "p5-email-policy-4",
+              "chunk_id": "email-policy:1.0:e9b5e65856b5ff861504"
+            },
+            {
+              "case_id": "p5-ticket-approval-3",
+              "chunk_id": "ticket-approval:1.0:8a572a3a8c6546f677c9"
+            },
+            {
+              "case_id": "p5-ticket-approval-3",
+              "chunk_id": "ticket-approval:1.0:63a8faa5ec53f12063ae"
+            },
+            {
+              "case_id": "p5-ticket-approval-4",
+              "chunk_id": "ticket-approval:1.0:63a8faa5ec53f12063ae"
+            },
+            {
+              "case_id": "p5-ticket-approval-4",
+              "chunk_id": "ticket-approval:1.0:8a572a3a8c6546f677c9"
+            },
+            {
+              "case_id": "p5-vpn-691-3",
+              "chunk_id": "vpn-691:1.0:452dd53296446009f9a5"
+            },
+            {
+              "case_id": "p5-password-reset-2",
+              "chunk_id": "password-reset:1.0:76ddff7bbef86d15a600"
+            },
+            {
+              "case_id": "p5-public-gmail-auth-2",
+              "chunk_id": "public-gmail-auth:1.0:8c4741ab2d3e9e591a21"
+            }
+          ]
+        },
+        "excluded_required_note": "Candidate exclusion events, not failed-question count; alternative gold groups may overlap"
+      },
+      "bm25": {
+        "n": 60,
+        "normal_n": 60,
+        "error_n": 0,
+        "degraded_n": 0,
+        "metrics": {
+          "candidate_evidence_recall": {
+            "n": 52,
+            "mean": 1.0
+          },
+          "evidence_recall_at_5": {
+            "n": 52,
+            "mean": 0.9807692307692307
+          },
+          "evidence_mrr_at_5": {
+            "n": 52,
+            "mean": 0.8564102564102564
+          },
+          "document_recall_at_5_chunks": {
+            "n": 52,
+            "mean": 1.0
+          },
+          "document_mrr_at_5_chunks": {
+            "n": 52,
+            "mean": 0.9326923076923077
+          },
+          "selected_evidence_coverage": {
+            "n": 52,
+            "mean": 0.9711538461538461
+          },
+          "all_required_evidence": {
+            "n": 52,
+            "mean": 0.9423076923076923
+          },
+          "false_refusal_proxy": {
+            "n": 52,
+            "mean": 0
+          },
+          "evidence_accepted_without_answer_label": {
+            "n": 8,
+            "mean": 0.5
+          }
+        },
+        "latency_all_requests": {
+          "retrieval_seconds": {
+            "n": 60,
+            "p50": 0.021271499994327314,
+            "p95_nearest_rank": 0.023667900008149445
+          },
+          "bm25_seconds": {
+            "n": 60,
+            "p50": 0.012482350008212961,
+            "p95_nearest_rank": 0.014200400008121505
+          },
+          "bm25_index_seconds": {
+            "n": 60,
+            "p50": 0.008317200001329184,
+            "p95_nearest_rank": 0.009286399988923222
+          }
+        },
+        "actual_modes": {
+          "bm25": 60
+        },
+        "usage": {
+          "embedding_tokens": 0,
+          "rerank_tokens": 0
+        },
+        "candidate_counts": {
+          "bm25": {
+            "min": 1,
+            "mean": 19.1,
+            "max": 20
+          },
+          "union": {
+            "min": 1,
+            "mean": 19.1,
+            "max": 20
+          }
+        },
+        "excluded_required_chunks": {
+          "final_k": [
+            {
+              "case_id": "p5-email-policy-4",
+              "chunk_id": "email-policy:1.0:e9b5e65856b5ff861504"
+            }
+          ],
+          "threshold": [
+            {
+              "case_id": "p5-ticket-approval-4",
+              "chunk_id": "ticket-approval:1.0:8a572a3a8c6546f677c9"
+            },
+            {
+              "case_id": "p5-mfa-lost-3",
+              "chunk_id": "mfa-lost:1.0:fa49850d3351dddbcaf1"
+            }
+          ]
+        },
+        "excluded_required_note": "Candidate exclusion events, not failed-question count; alternative gold groups may overlap"
+      },
+      "hybrid": {
+        "n": 60,
+        "normal_n": 60,
+        "error_n": 0,
+        "degraded_n": 0,
+        "metrics": {
+          "candidate_evidence_recall": {
+            "n": 52,
+            "mean": 1.0
+          },
+          "evidence_recall_at_5": {
+            "n": 52,
+            "mean": 0.9903846153846154
+          },
+          "evidence_mrr_at_5": {
+            "n": 52,
+            "mean": 0.9102564102564102
+          },
+          "document_recall_at_5_chunks": {
+            "n": 52,
+            "mean": 1.0
+          },
+          "document_mrr_at_5_chunks": {
+            "n": 52,
+            "mean": 0.9903846153846154
+          },
+          "selected_evidence_coverage": {
+            "n": 52,
+            "mean": 0.9903846153846154
+          },
+          "all_required_evidence": {
+            "n": 52,
+            "mean": 0.9807692307692307
+          },
+          "false_refusal_proxy": {
+            "n": 52,
+            "mean": 0
+          },
+          "evidence_accepted_without_answer_label": {
+            "n": 8,
+            "mean": 1
+          }
+        },
+        "latency_all_requests": {
+          "dense_seconds": {
+            "n": 60,
+            "p50": 0.7139800999866566,
+            "p95_nearest_rank": 0.8293766000133473
+          },
+          "embedding_seconds": {
+            "n": 60,
+            "p50": 0.19542059999366757,
+            "p95_nearest_rank": 0.2925497000105679
+          },
+          "qdrant_query_seconds": {
+            "n": 60,
+            "p50": 0.5121230999939144,
+            "p95_nearest_rank": 0.596016099996632
+          },
+          "bm25_seconds": {
+            "n": 60,
+            "p50": 0.013222200010204688,
+            "p95_nearest_rank": 0.015300700004445389
+          },
+          "retrieval_seconds": {
+            "n": 60,
+            "p50": 1.7913682500075083,
+            "p95_nearest_rank": 2.2047708999889437
+          },
+          "bm25_index_seconds": {
+            "n": 60,
+            "p50": 0.008566250005969778,
+            "p95_nearest_rank": 0.009785099973669276
+          },
+          "dense_index_seconds": {
+            "n": 60,
+            "p50": 1.0693815499835182,
+            "p95_nearest_rank": 1.4440067000105046
+          }
+        },
+        "actual_modes": {
+          "hybrid": 60
+        },
+        "usage": {
+          "embedding_tokens": 793,
+          "rerank_tokens": 0
+        },
+        "candidate_counts": {
+          "bm25": {
+            "min": 1,
+            "mean": 19.1,
+            "max": 20
+          },
+          "dense": {
+            "min": 20,
+            "mean": 20,
+            "max": 20
+          },
+          "union": {
+            "min": 20,
+            "mean": 28.65,
+            "max": 34
+          }
+        },
+        "excluded_required_chunks": {
+          "final_k": [
+            {
+              "case_id": "p5-mfa-lost-3",
+              "chunk_id": "mfa-lost:1.0:fa49850d3351dddbcaf1"
+            }
+          ]
+        },
+        "excluded_required_note": "Candidate exclusion events, not failed-question count; alternative gold groups may overlap"
+      },
+      "hybrid_rerank": {
+        "n": 60,
+        "normal_n": 60,
+        "error_n": 0,
+        "degraded_n": 0,
+        "metrics": {
+          "candidate_evidence_recall": {
+            "n": 52,
+            "mean": 1.0
+          },
+          "evidence_recall_at_5": {
+            "n": 52,
+            "mean": 1.0
+          },
+          "evidence_mrr_at_5": {
+            "n": 52,
+            "mean": 0.9615384615384616
+          },
+          "document_recall_at_5_chunks": {
+            "n": 52,
+            "mean": 1.0
+          },
+          "document_mrr_at_5_chunks": {
+            "n": 52,
+            "mean": 0.9903846153846154
+          },
+          "selected_evidence_coverage": {
+            "n": 52,
+            "mean": 0.7307692307692307
+          },
+          "all_required_evidence": {
+            "n": 52,
+            "mean": 0.6923076923076923
+          },
+          "false_refusal_proxy": {
+            "n": 52,
+            "mean": 0.19230769230769232
+          },
+          "evidence_accepted_without_answer_label": {
+            "n": 8,
+            "mean": 0.125
+          }
+        },
+        "latency_all_requests": {
+          "dense_seconds": {
+            "n": 60,
+            "p50": 0.7098079000134021,
+            "p95_nearest_rank": 0.8359362999908626
+          },
+          "embedding_seconds": {
+            "n": 60,
+            "p50": 0.19561855000210926,
+            "p95_nearest_rank": 0.2714912999945227
+          },
+          "rerank_seconds": {
+            "n": 60,
+            "p50": 0.16864329999953043,
+            "p95_nearest_rank": 0.23027749999891967
+          },
+          "qdrant_query_seconds": {
+            "n": 60,
+            "p50": 0.5114154499897268,
+            "p95_nearest_rank": 0.6108392000023741
+          },
+          "bm25_seconds": {
+            "n": 60,
+            "p50": 0.013046049993135966,
+            "p95_nearest_rank": 0.014630499994382262
+          },
+          "retrieval_seconds": {
+            "n": 60,
+            "p50": 1.9899079500028165,
+            "p95_nearest_rank": 2.3709980999992695
+          },
+          "bm25_index_seconds": {
+            "n": 60,
+            "p50": 0.008600400018622167,
+            "p95_nearest_rank": 0.011039199976949021
+          },
+          "dense_index_seconds": {
+            "n": 60,
+            "p50": 1.0774083500000415,
+            "p95_nearest_rank": 1.3689780000131577
+          }
+        },
+        "actual_modes": {
+          "hybrid_rerank": 60
+        },
+        "usage": {
+          "embedding_tokens": 793,
+          "rerank_tokens": 135745
+        },
+        "candidate_counts": {
+          "bm25": {
+            "min": 1,
+            "mean": 19.1,
+            "max": 20
+          },
+          "dense": {
+            "min": 20,
+            "mean": 20,
+            "max": 20
+          },
+          "rerank_input": {
+            "min": 20,
+            "mean": 28.65,
+            "max": 34
+          },
+          "union": {
+            "min": 20,
+            "mean": 28.65,
+            "max": 34
+          }
+        },
+        "excluded_required_chunks": {
+          "threshold": [
+            {
+              "case_id": "p5-email-ndr-4",
+              "chunk_id": "email-ndr:1.0:6917d828c46dd52cbfac"
+            },
+            {
+              "case_id": "p5-mfa-time-4",
+              "chunk_id": "mfa-time:1.0:78b83c6bea94b29380fe"
+            },
+            {
+              "case_id": "p5-data-link-2",
+              "chunk_id": "data-link:1.0:77c8ab1d2415078e6dda"
+            },
+            {
+              "case_id": "p5-data-link-4",
+              "chunk_id": "data-link:1.0:ce1090dec7b7fc06548c"
+            },
+            {
+              "case_id": "p5-email-policy-4",
+              "chunk_id": "email-policy:1.0:0158df37f87bb3a6402b"
+            },
+            {
+              "case_id": "p5-email-policy-4",
+              "chunk_id": "email-policy:1.0:e9b5e65856b5ff861504"
+            },
+            {
+              "case_id": "p5-ticket-approval-1",
+              "chunk_id": "ticket-approval:1.0:8a572a3a8c6546f677c9"
+            },
+            {
+              "case_id": "p5-ticket-approval-1",
+              "chunk_id": "ticket-approval:1.0:63a8faa5ec53f12063ae"
+            },
+            {
+              "case_id": "p5-ticket-approval-2",
+              "chunk_id": "ticket-approval:1.0:63a8faa5ec53f12063ae"
+            },
+            {
+              "case_id": "p5-ticket-approval-3",
+              "chunk_id": "ticket-approval:1.0:8a572a3a8c6546f677c9"
+            },
+            {
+              "case_id": "p5-ticket-approval-3",
+              "chunk_id": "ticket-approval:1.0:63a8faa5ec53f12063ae"
+            },
+            {
+              "case_id": "p5-ticket-approval-4",
+              "chunk_id": "ticket-approval:1.0:63a8faa5ec53f12063ae"
+            },
+            {
+              "case_id": "p5-ticket-approval-4",
+              "chunk_id": "ticket-approval:1.0:8a572a3a8c6546f677c9"
+            },
+            {
+              "case_id": "p5-vpn-691-2",
+              "chunk_id": "vpn-691:1.0:452dd53296446009f9a5"
+            },
+            {
+              "case_id": "p5-password-reset-1",
+              "chunk_id": "password-reset:1.0:76ddff7bbef86d15a600"
+            },
+            {
+              "case_id": "p5-password-reset-2",
+              "chunk_id": "password-reset:1.0:76ddff7bbef86d15a600"
+            },
+            {
+              "case_id": "p5-password-reset-4",
+              "chunk_id": "password-reset:1.0:5cf64f55f30db67b13aa"
+            },
+            {
+              "case_id": "p5-password-reset-4",
+              "chunk_id": "password-reset:1.0:76ddff7bbef86d15a600"
+            },
+            {
+              "case_id": "p5-mfa-lost-3",
+              "chunk_id": "mfa-lost:1.0:5eb81a6e6095b7718a07"
+            },
+            {
+              "case_id": "p5-mfa-lost-3",
+              "chunk_id": "mfa-lost:1.0:fa49850d3351dddbcaf1"
+            },
+            {
+              "case_id": "p5-public-gmail-auth-2",
+              "chunk_id": "public-gmail-auth:1.0:8c4741ab2d3e9e591a21"
+            },
+            {
+              "case_id": "p5-public-gmail-auth-3",
+              "chunk_id": "public-gmail-auth:1.0:8c4741ab2d3e9e591a21"
+            }
+          ]
+        },
+        "excluded_required_note": "Candidate exclusion events, not failed-question count; alternative gold groups may overlap"
+      },
+      "dense_rerank": {
+        "n": 60,
+        "normal_n": 60,
+        "error_n": 0,
+        "degraded_n": 0,
+        "metrics": {
+          "candidate_evidence_recall": {
+            "n": 52,
+            "mean": 1.0
+          },
+          "evidence_recall_at_5": {
+            "n": 52,
+            "mean": 1.0
+          },
+          "evidence_mrr_at_5": {
+            "n": 52,
+            "mean": 0.9615384615384616
+          },
+          "document_recall_at_5_chunks": {
+            "n": 52,
+            "mean": 1.0
+          },
+          "document_mrr_at_5_chunks": {
+            "n": 52,
+            "mean": 0.9903846153846154
+          },
+          "selected_evidence_coverage": {
+            "n": 52,
+            "mean": 0.7307692307692307
+          },
+          "all_required_evidence": {
+            "n": 52,
+            "mean": 0.6923076923076923
+          },
+          "false_refusal_proxy": {
+            "n": 52,
+            "mean": 0.19230769230769232
+          },
+          "evidence_accepted_without_answer_label": {
+            "n": 8,
+            "mean": 0.125
+          }
+        },
+        "latency_all_requests": {
+          "dense_seconds": {
+            "n": 60,
+            "p50": 0.7144917000114219,
+            "p95_nearest_rank": 0.7971599999873433
+          },
+          "embedding_seconds": {
+            "n": 60,
+            "p50": 0.19346944999415427,
+            "p95_nearest_rank": 0.2737939999788068
+          },
+          "rerank_seconds": {
+            "n": 60,
+            "p50": 0.1794450499874074,
+            "p95_nearest_rank": 0.30430230000638403
+          },
+          "qdrant_query_seconds": {
+            "n": 60,
+            "p50": 0.5175770500063663,
+            "p95_nearest_rank": 0.5720771000196692
+          },
+          "retrieval_seconds": {
+            "n": 60,
+            "p50": 2.00514714999008,
+            "p95_nearest_rank": 2.1858583000139333
+          },
+          "dense_index_seconds": {
+            "n": 60,
+            "p50": 1.0778906999912579,
+            "p95_nearest_rank": 1.2276189000112936
+          }
+        },
+        "actual_modes": {
+          "dense_rerank": 60
+        },
+        "usage": {
+          "embedding_tokens": 793,
+          "rerank_tokens": 188190
+        },
+        "candidate_counts": {
+          "dense": {
+            "min": 40,
+            "mean": 40,
+            "max": 40
+          },
+          "rerank_input": {
+            "min": 40,
+            "mean": 40,
+            "max": 40
+          },
+          "union": {
+            "min": 40,
+            "mean": 40,
+            "max": 40
+          }
+        },
+        "excluded_required_chunks": {
+          "threshold": [
+            {
+              "case_id": "p5-email-ndr-4",
+              "chunk_id": "email-ndr:1.0:6917d828c46dd52cbfac"
+            },
+            {
+              "case_id": "p5-mfa-time-4",
+              "chunk_id": "mfa-time:1.0:78b83c6bea94b29380fe"
+            },
+            {
+              "case_id": "p5-data-link-2",
+              "chunk_id": "data-link:1.0:77c8ab1d2415078e6dda"
+            },
+            {
+              "case_id": "p5-data-link-4",
+              "chunk_id": "data-link:1.0:ce1090dec7b7fc06548c"
+            },
+            {
+              "case_id": "p5-email-policy-4",
+              "chunk_id": "email-policy:1.0:0158df37f87bb3a6402b"
+            },
+            {
+              "case_id": "p5-email-policy-4",
+              "chunk_id": "email-policy:1.0:e9b5e65856b5ff861504"
+            },
+            {
+              "case_id": "p5-ticket-approval-1",
+              "chunk_id": "ticket-approval:1.0:8a572a3a8c6546f677c9"
+            },
+            {
+              "case_id": "p5-ticket-approval-1",
+              "chunk_id": "ticket-approval:1.0:63a8faa5ec53f12063ae"
+            },
+            {
+              "case_id": "p5-ticket-approval-2",
+              "chunk_id": "ticket-approval:1.0:63a8faa5ec53f12063ae"
+            },
+            {
+              "case_id": "p5-ticket-approval-3",
+              "chunk_id": "ticket-approval:1.0:8a572a3a8c6546f677c9"
+            },
+            {
+              "case_id": "p5-ticket-approval-3",
+              "chunk_id": "ticket-approval:1.0:63a8faa5ec53f12063ae"
+            },
+            {
+              "case_id": "p5-ticket-approval-4",
+              "chunk_id": "ticket-approval:1.0:63a8faa5ec53f12063ae"
+            },
+            {
+              "case_id": "p5-ticket-approval-4",
+              "chunk_id": "ticket-approval:1.0:8a572a3a8c6546f677c9"
+            },
+            {
+              "case_id": "p5-vpn-691-2",
+              "chunk_id": "vpn-691:1.0:452dd53296446009f9a5"
+            },
+            {
+              "case_id": "p5-password-reset-1",
+              "chunk_id": "password-reset:1.0:76ddff7bbef86d15a600"
+            },
+            {
+              "case_id": "p5-password-reset-2",
+              "chunk_id": "password-reset:1.0:76ddff7bbef86d15a600"
+            },
+            {
+              "case_id": "p5-password-reset-4",
+              "chunk_id": "password-reset:1.0:5cf64f55f30db67b13aa"
+            },
+            {
+              "case_id": "p5-password-reset-4",
+              "chunk_id": "password-reset:1.0:76ddff7bbef86d15a600"
+            },
+            {
+              "case_id": "p5-mfa-lost-3",
+              "chunk_id": "mfa-lost:1.0:5eb81a6e6095b7718a07"
+            },
+            {
+              "case_id": "p5-mfa-lost-3",
+              "chunk_id": "mfa-lost:1.0:fa49850d3351dddbcaf1"
+            },
+            {
+              "case_id": "p5-public-gmail-auth-2",
+              "chunk_id": "public-gmail-auth:1.0:8c4741ab2d3e9e591a21"
+            },
+            {
+              "case_id": "p5-public-gmail-auth-3",
+              "chunk_id": "public-gmail-auth:1.0:8c4741ab2d3e9e591a21"
+            }
+          ]
+        },
+        "excluded_required_note": "Candidate exclusion events, not failed-question count; alternative gold groups may overlap"
+      }
+    }
+  }
+}
