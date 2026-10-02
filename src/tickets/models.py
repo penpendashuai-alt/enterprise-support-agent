@@ -46,6 +46,8 @@ class TicketRecord(BaseModel):
     draft: TicketDraft
     state: Literal["open"] = "open"
     created_at: str
+    user_id: str | None = None
+    source: Literal["sqlite", "postgres", "sqlite_import"] = "sqlite"
 
 
 def fingerprint(draft: TicketDraft) -> str:

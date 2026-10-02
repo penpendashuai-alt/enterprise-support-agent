@@ -23,9 +23,12 @@ async def test_local_ticket_reply_uses_database_facts(monkeypatch, tmp_path, exi
             "draft-" + "a" * 32,
             1,
             "thread",
+            "test-user",
         )
         ticket_id = record.ticket_id
-    result = await query_existing_ticket.ainvoke({"ticket_id": ticket_id})
+    result = await query_existing_ticket.ainvoke(
+        {"ticket_id": ticket_id}, {"configurable": {"user_id": "test-user"}}
+    )
     model = Mock(side_effect=AssertionError("A stored ticket result needs no model rewriting"))
     monkeypatch.setattr("agents.support_agent.get_support_model", model)
     response = await handle_request(
@@ -44,7 +47,7 @@ async def test_local_ticket_reply_uses_database_facts(monkeypatch, tmp_path, exi
         {},
     )
     content = response["messages"][0].content
-    assert "本地演示工单" in content
+    assert "演示工单" in content
     if exists:
         assert all(
             value in content for value in [ticket_id, "P1", "809", "open", "未提交到真实企业系统"]

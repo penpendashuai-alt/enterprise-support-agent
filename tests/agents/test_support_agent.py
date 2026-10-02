@@ -83,7 +83,7 @@ def setup_graph(monkeypatch, responses):
 async def ask(graph, text, thread="one", **config):
     return await graph.ainvoke(
         {"messages": [HumanMessage(content=text)]},
-        {"configurable": {"thread_id": thread}, **config},
+        {"configurable": {"thread_id": thread, "user_id": "test-user"}, **config},
     )
 
 

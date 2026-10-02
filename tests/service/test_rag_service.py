@@ -115,7 +115,7 @@ async def test_rag_citations_history_no_token_leak_and_evidence_reset(
         ) as client:
             response = await client.post(
                 f"/support-agent/{endpoint}",
-                json={"thread_id": "rag", "message": "公司 VPN 要求？"},
+                json={"user_id": "test-user", "thread_id": "rag", "message": "公司 VPN 要求？"},
             )
             assert response.status_code == 200
             assert "未经验证" not in response.text
@@ -135,12 +135,15 @@ async def test_rag_citations_history_no_token_leak_and_evidence_reset(
             assert answer["custom_data"]["citations"][0]["score_type"] == "rerank"
             assert answer["custom_data"]["citations"][0]["dense_score"] == 0.7
             history = (
-                await client.post("/support-agent/history", json={"thread_id": "rag"})
+                await client.post(
+                    "/support-agent/history", json={"user_id": "test-user", "thread_id": "rag"}
+                )
             ).json()
             assert history["messages"][-1]["custom_data"] == answer["custom_data"]
             assert all("未经验证" not in m["content"] for m in history["messages"])
             await client.post(
-                "/support-agent/invoke", json={"thread_id": "rag", "message": "VPN 是什么？"}
+                "/support-agent/invoke",
+                json={"user_id": "test-user", "thread_id": "rag", "message": "VPN 是什么？"},
             )
             snapshot = await graph.aget_state({"configurable": {"thread_id": "rag"}})
             assert (

@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-01T15:27:01.102765+00:00",
+  "database": "phase6_live_951878f058974d50b75ad1f45f3be373",
+  "budget_cny": 10,
+  "model": "deepseek-v4-pro",
+  "pricing": {
+    "input_cny_per_million": 9,
+    "output_cny_per_million": 27,
+    "embedding_cny_per_million": 0.5,
+    "note": "Conservative peak uncached estimate; not provider invoice",
+    "sources": [
+      "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "https://help.aliyun.com/zh/model-studio/embedding"
+    ]
+  },
+  "cases": [
+    {
+      "case": "saved_english",
+      "question": "DNS 是什么？",
+      "response": {
+        "type": "ai",
+        "content": "DNS (Domain Name System) translates human-readable domain names (like `example.com`) into IP addresses that computers use to communicate. It works like a phonebook for the internet.",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a0f813-7b95-7fd2-b240-cecac0d026f0",
+        "response_metadata": {
+          "finish_reason": "stop",
+          "model_name": "deepseek-v4-pro",
+          "system_fingerprint": "a307abda487cd1b463329ccb945ce396",
+          "model_provider": "openai"
+        },
+        "custom_data": {}
+      },
+      "intent": "general_question",
+      "retrieval": null,
+      "thread_id": "live-16d585def57a43c58695887eaa991e39"
+    },
+    {
+      "case": "same_user_new_thread",
+      "question": "VPN 是什么？",
+      "response": {
+        "type": "ai",
+        "content": "VPN (Virtual Private Network) creates an encrypted tunnel between your device and a private network over the public internet. It protects data in transit and allows secure access to internal resources.",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a0f813-8e6e-7741-b04c-cf4aef28d4e0",
+        "response_metadata": {
+          "finish_reason": "stop",
+          "model_name": "deepseek-v4-pro",
+          "system_fingerprint": "a307abda487cd1b463329ccb945ce396",
+          "model_provider": "openai"
+        },
+        "custom_data": {}
+      },
+      "intent": "general_question",
+      "retrieval": null,
+      "thread_id": "live-de2393959eec4879b3bea1bdb254c456"
+    },
+    {
+      "case": "current_request_overrides",
+      "question": "请用中文详细解释 DNS 的作用，列出三个要点。",
+      "response": {
+        "type": "ai",
+        "content": "DNS 的作用可以概括为以下三个要点：\n\n1. **域名解析（名称到地址的映射）**  \n   DNS 将人类易记的域名（如 `www.example.com`）转换为机器可路由的 IP 地址（如 `93.184.216.34`），使网络通信能够建立连接。\n\n2. **分布式、分层的目录服务**  \n   DNS 采用全球分布式架构，从根域、顶级域（如 `.com`）到权威域名服务器逐级查询，避免单点故障并提高查询效率。\n\n3. **支持负载均衡与服务发现**  \n   同一域名可返回多个 IP 地址，实现流量分发；同时 DNS 记录类型（如 A、AAAA、CNAME、MX、SRV）支持邮件路由、服务定位等多种网络功能。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a0f813-a0ae-7991-9811-c64943107e84",
+        "response_metadata": {
+          "finish_reason": "stop",
+          "model_name": "deepseek-v4-pro",
+          "system_fingerprint": "a307abda487cd1b463329ccb945ce396",
+          "model_provider": "openai"
+        },
+        "custom_data": {}
+      },
+      "intent": "general_question",
+      "retrieval": null,
+      "thread_id": "live-d83bfbc6c9234f9d8262f88f011c487d"
+    },
+    {
+      "case": "deleted_not_revived",
+      "question": "请解释 DHCP 的用途。",
+      "response": {
+        "type": "ai",
+        "content": "DHCP（动态主机配置协议）用于自动给网络中的设备分配 IP 地址、子网掩码、默认网关和 DNS 等网络参数，避免手动配置，减少地址冲突并便于集中管理。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a0f813-ba2c-76e3-85ca-201f086aea0d",
+        "response_metadata": {
+          "finish_reason": "stop",
+          "model_name": "deepseek-v4-pro",
+          "system_fingerprint": "a307abda487cd1b463329ccb945ce396",
+          "model_provider": "openai"
+        },
+        "custom_data": {}
+      },
+      "intent": "general_question",
+      "retrieval": null,
+      "thread_id": "live-16d585def57a43c58695887eaa991e39"
+    }
+  ],
+  "rag": {
+    "candidate_k": 20,
+    "final_k": 5,
+    "min_score": 0.65,
+    "collection": "enterprise_support_dense_v2"
+  },
+  "execution_status": "completed; preference repair regression",
+  "usage": {
+    "calls": 8,
+    "chat_input_tokens": 6462,
+    "chat_output_tokens": 929,
+    "embedding_tokens": 0
+  },
+  "estimated_cny": 0.083241
+}

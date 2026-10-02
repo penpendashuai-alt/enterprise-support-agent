@@ -176,6 +176,7 @@ class FeedbackResponse(BaseModel):
 
 
 class ChatHistoryInput(BaseModel):
+    user_id: str | None = None
     """Input for retrieving chat history."""
 
     thread_id: str = Field(

@@ -24,7 +24,9 @@ from langfuse.langchain import CallbackHandler  # type: ignore[import-untyped]
 
 from agents import DEFAULT_AGENT, AgentGraph, get_agent
 from core import settings
+from service.support import execution_lock
 from service.utils import ensure_model_available
+from support_storage.identity import guard_thread
 
 logger = logging.getLogger(__name__)
 
@@ -80,15 +82,17 @@ async def _event_stream(
 ) -> AsyncGenerator[str, None]:
     # A new LangGraphAgent per request: it holds per-run state and is cheap to build.
     agent = LangGraphAgent(name=agent_id, graph=graph, config=config)  # type: ignore[arg-type]
-    async for event in agent.run(input_data):
-        # Don't forward RAW passthrough events. Standard AG-UI clients ignore them,
-        # and they expose server-side internals - including fully rendered prompts
-        # from on_chat_model_start - to the caller. Remove this filter only if the
-        # endpoint is consumed by a trusted middle layer and you want the full
-        # event firehose (e.g. for the AG-UI Event Inspector).
-        if event.type == EventType.RAW:
-            continue
-        yield encoder.encode(event)
+    async with execution_lock(agent_id, input_data.thread_id):
+        await guard_thread(input_data.thread_id, config["configurable"].get("user_id"), agent_id)
+        async for event in agent.run(input_data):
+            # Don't forward RAW passthrough events. Standard AG-UI clients ignore them,
+            # and they expose server-side internals - including fully rendered prompts
+            # from on_chat_model_start - to the caller. Remove this filter only if the
+            # endpoint is consumed by a trusted middle layer and you want the full
+            # event firehose (e.g. for the AG-UI Event Inspector).
+            if event.type == EventType.RAW:
+                continue
+            yield encoder.encode(event)
 
 
 @router.post("/run", operation_id="agui_run_default")
@@ -114,6 +118,7 @@ async def agui_run(
         raise HTTPException(status_code=404, detail=f"Agent {agent_id} not found")
 
     config = _base_config(input_data, agent_id)
+    await guard_thread(input_data.thread_id, config["configurable"].get("user_id"), agent_id)
     encoder = EventEncoder(accept=request.headers.get("accept", ""))
     return StreamingResponse(
         _event_stream(agent_id, graph, input_data, config, encoder),

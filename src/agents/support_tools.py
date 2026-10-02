@@ -2,9 +2,12 @@
 
 from typing import Annotated, Any, Literal
 
+from langchain_core.runnables import RunnableConfig
 from langchain_core.tools import tool
 from pydantic import BaseModel, ConfigDict, StringConstraints
 
+from core import settings
+from support_storage.identity import context_user
 from tickets.service import repository
 
 NonEmptyText = Annotated[
@@ -116,20 +119,28 @@ def query_service_status(service_name: str) -> dict[str, Any]:
 
 
 @tool(args_schema=TicketInput)
-def query_existing_ticket(ticket_id: str) -> dict[str, Any]:
-    """查询 INC-四位数字固定样例或 DEMO-32位十六进制本地演示工单，不创建或修改。"""
+async def query_existing_ticket(ticket_id: str, config: RunnableConfig) -> dict[str, Any]:
+    """按当前用户查询 DEMO 工单；INC 固定样例仅在显式演示开关启用时可用。不创建或修改。"""
+    user_id = context_user(config)
     if ticket_id.upper().startswith("DEMO-"):
-        record = repository().get(ticket_id)
+        record = await repository().get(ticket_id, user_id)
         return (
-            tool_result("success", record.model_dump(), "本地演示工单，未提交真实企业系统。")
+            {
+                **tool_result(
+                    "success", record.model_dump(), "演示业务数据库记录，未提交真实企业系统。"
+                ),
+                "source": "business_database",
+                "is_mock": False,
+                "is_demo": True,
+            }
             if record
             else tool_result("not_found", message="未找到该本地演示工单。")
         )
-    data = TICKETS.get(ticket_id.upper())
+    data = TICKETS.get(ticket_id.upper()) if settings.SUPPORT_DEMO_SAMPLES else None
     return (
-        tool_result("success", data)
+        {**tool_result("success", data), "source": "fixed_mock_sample"}
         if data
-        else tool_result("not_found", message="未找到该模拟工单。")
+        else tool_result("not_found", message="固定样例路径未启用或未找到该模拟工单。")
     )
 
 

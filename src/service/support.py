@@ -7,7 +7,15 @@ from langchain_core.runnables import RunnableConfig
 from langgraph.types import Command
 
 from schema import UserInput
-from tickets.models import approval_payload, approval_summary, result_summary, ticket_result
+from tickets.models import (
+    TicketDraft,
+    approval_payload,
+    approval_summary,
+    fingerprint,
+    result_summary,
+    ticket_result,
+)
+from tickets.repository import TicketConflict
 from tickets.service import repository
 
 _locks: dict[str, tuple[asyncio.Lock, int]] = {}
@@ -15,7 +23,7 @@ _locks: dict[str, tuple[asyncio.Lock, int]] = {}
 
 @asynccontextmanager
 async def execution_lock(agent_id: str, thread_id: str | None):
-    if agent_id != "support-agent" or not thread_id:
+    if not thread_id:
         yield
         return
     lock, count = _locks.get(thread_id, (asyncio.Lock(), 0))
@@ -60,9 +68,13 @@ async def support_input(user_input: UserInput, snapshot, config: RunnableConfig)
         return {"input": {"messages": [HumanMessage(content=user_input.message or "")]}}
 
     try:
-        existing = await asyncio.to_thread(
-            repository().by_request, approval.draft_id, config["configurable"]["thread_id"]
+        existing = await repository().by_request(
+            approval.draft_id,
+            config["configurable"]["thread_id"],
+            config["configurable"]["user_id"],
         )
+    except TicketConflict:
+        reject("request_conflict", "创建请求归属冲突。")
     except Exception:
         reject("storage_unavailable", "工单库暂不可用，无法核查该请求；请稍后重试。")
     if existing:
@@ -72,6 +84,10 @@ async def support_input(user_input: UserInput, snapshot, config: RunnableConfig)
             reject("already_created", "该草稿已创建工单，不能修改或取消。")
         # Complete the checkpoint if the process stopped after committing the ticket.
         if pending and values.get("draft_id") == approval.draft_id:
+            if existing.fingerprint != fingerprint(
+                TicketDraft.model_validate(values["ticket_draft"])
+            ):
+                reject("content_conflict", "已保存工单与当前草稿内容不一致。")
             if values.get("approval_status") == "approved" and "create" in snapshot.next:
                 return {"input": None}
             return {"input": Command(resume=approval.model_dump())}

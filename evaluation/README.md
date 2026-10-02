@@ -1,6 +1,16 @@
-# Phase 4 评测资产
+# 评测与验收资产
 
 本目录保留 Synthetic enterprise support dataset / public technical documentation 的 Phase 4 Dense 基线和 Phase 5 对照实验。真实评测使用 DashScope Embedding、Qdrant Cloud、Elasticsearch、Reranker 和聊天模型；Mock 只用于程序行为测试。
+
+## Phase 6
+
+- [开发与复现](../docs/phase6_memory_postgres.md)：PostgreSQL、会话归属、显式偏好及旧环境边界。
+- `baselines/phase5/manifest.json`：Phase 5 Git 基线和源码/配置/评测摘要。
+- `phase6/storage-final.json`：真实 PostgreSQL 多连接、导入、服务重启、提交后退出与数据库停机恢复；确定性模型，无付费调用。
+- `phase6/live.json`、`live-preferences-retry.json`、[回答审阅](phase6/answer-review.md)：真实模型首轮及偏好修复复测，累计保守估价 0.348176 元；包含失败记录。
+- `phase6/service-startup.json`：实际服务入口连接 PostgreSQL 的启动检查。
+- `phase6/legacy-preflight.json`：现有本地 SQLite 的只读格式检查；没有认领或导入未知归属。
+- `phase6/validation.json`、`integrity.json`：自动化检查、冻结边界与隐私检查；不代表生产授权或多 worker 保证。
 
 ## Phase 5
 

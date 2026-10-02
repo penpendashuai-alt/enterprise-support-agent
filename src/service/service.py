@@ -53,6 +53,15 @@ from service.utils import (
     messages_from_checkpoint,
     remove_tool_calls,
 )
+from support_storage.identity import guard_thread, identity
+from support_storage.preferences import (
+    Preferences,
+    delete_preferences,
+    read_preferences,
+    save_preferences,
+)
+from support_storage.runtime import initialize_support_storage
+from support_storage.runtime import repository as support_repository
 
 warnings.filterwarnings("ignore", category=LangChainBetaWarning)
 logger = logging.getLogger(__name__)
@@ -84,7 +93,11 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
     """
     try:
         # Initialize both checkpointer (for short-term memory) and store (for long-term memory)
-        async with initialize_database() as saver, initialize_store() as store:
+        async with (
+            initialize_database() as saver,
+            initialize_store() as store,
+            initialize_support_storage(),
+        ):
             # Set up both components
             if hasattr(saver, "setup"):  # ignore: union-attr
                 await saver.setup()
@@ -105,7 +118,7 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
                     await load_agent(a.key)
                     logger.info(f"Agent loaded: {a.key}")
                 except Exception as e:
-                    logger.error(f"Failed to load agent {a.key}: {e}")
+                    logger.error("Failed to load agent %s: %s", a.key, type(e).__name__)
                     # Continue with other agents rather than failing startup
 
                 agent = get_agent(a.key)
@@ -120,8 +133,10 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
 
                 await close_retriever()
     except Exception as e:
-        logger.error(f"Error during database/store/agents initialization: {e}")
-        raise
+        logger.error("Database/store/agents initialization failed: %s", type(e).__name__)
+        raise RuntimeError(
+            "Database initialization failed; verify connection and business migrations"
+        ) from None
 
 
 app = FastAPI(lifespan=lifespan, generate_unique_id_function=custom_generate_unique_id)
@@ -151,7 +166,19 @@ async def _handle_input(
     """
     run_id = uuid7()
     thread_id = user_input.thread_id or str(uuid4())
-    user_id = user_input.user_id or str(uuid4())
+    user_id = (
+        identity(user_input.user_id)
+        if agent_id == "support-agent"
+        else user_input.user_id or str(uuid4())
+    )
+    await guard_thread(
+        thread_id,
+        user_id,
+        agent_id,
+        create=agent_id == "support-agent",
+        title=user_input.message or "",
+        checkpointer=getattr(agent, "checkpointer", None),
+    )
 
     configurable = {"thread_id": thread_id, "user_id": user_id}
     if user_input.model is not None:
@@ -166,6 +193,8 @@ async def _handle_input(
         callbacks.append(langfuse_handler)
 
     if user_input.agent_config:
+        if agent_id == "support-agent":
+            raise HTTPException(422, detail="Support Agent does not accept agent_config overrides")
         # Check for reserved keys (including 'model' even if not in configurable)
         reserved_keys = {"thread_id", "user_id", "model"}
         if agent_id == "support-agent":
@@ -265,7 +294,7 @@ async def _invoke(user_input: UserInput, agent_id: str) -> ChatMessage:
         output.run_id = str(run_id)
         return output
     except Exception as e:
-        logger.error(f"An exception occurred: {e}")
+        logger.error("Agent execution failed: %s", type(e).__name__)
         raise HTTPException(status_code=500, detail="Unexpected error")
 
 
@@ -398,7 +427,7 @@ async def _message_generator(
                     # So we only print non-empty content.
                     yield f"data: {json.dumps({'type': 'token', 'content': convert_message_content_to_string(content)})}\n\n"
     except Exception as e:
-        logger.error(f"Error in message generator: {e}")
+        logger.error("Error in message generator: %s", type(e).__name__)
         yield f"data: {json.dumps({'type': 'error', 'content': 'Internal server error'})}\n\n"
     yield "data: [DONE]\n\n"
 
@@ -449,8 +478,9 @@ async def stream(user_input: StreamInput, agent_id: str = DEFAULT_AGENT) -> Stre
 
 
 @router.get("/support-agent/approval")
-async def pending_approval(thread_id: str) -> dict:
+async def pending_approval(thread_id: str, user_id: str | None = None) -> dict:
     async with execution_lock("support-agent", thread_id):
+        await guard_thread(thread_id, user_id, "support-agent")
         snapshot = await get_agent("support-agent").aget_state(
             RunnableConfig(configurable={"thread_id": thread_id})
         )
@@ -486,6 +516,7 @@ async def history(input: ChatHistoryInput, agent_id: str = DEFAULT_AGENT) -> Cha
     If agent_id is not provided, the default agent will be used.
     """
     agent: AgentGraph = get_agent(agent_id)
+    await guard_thread(input.thread_id, input.user_id, agent_id)
     config = RunnableConfig(configurable={"thread_id": input.thread_id})
     try:
         messages: list[BaseMessage] = []
@@ -498,11 +529,11 @@ async def history(input: ChatHistoryInput, agent_id: str = DEFAULT_AGENT) -> Cha
                 messages = messages_from_checkpoint(tup.checkpoint)
         if not messages:
             state_snapshot = await agent.aget_state(config=config)
-            messages = state_snapshot.values["messages"]
+            messages = state_snapshot.values.get("messages", [])
         chat_messages: list[ChatMessage] = [langchain_to_chat_message(m) for m in messages]
         return ChatHistory(messages=chat_messages)
     except Exception as e:
-        logger.error(f"An exception occurred: {e}")
+        logger.error("History read failed: %s", type(e).__name__)
         raise HTTPException(status_code=500, detail="Unexpected error")
 
 
@@ -520,6 +551,25 @@ async def threads(
     users can reach it.
     """
     agent: AgentGraph = get_agent(agent_id)
+    if agent_id == "support-agent":
+        user_id = identity(input.user_id)
+        try:
+            rows = await support_repository().sessions(user_id, input.limit)
+            from schema import ThreadSummary
+
+            return UserThreads(
+                threads=[
+                    ThreadSummary(
+                        thread_id=r["thread_id"],
+                        agent_id=r["agent_id"],
+                        title=r["title"],
+                        updated_at=r["updated_at"],
+                    )
+                    for r in rows
+                ]
+            )
+        except Exception:
+            raise HTTPException(503, detail="Support session list unavailable") from None
     checkpointer = getattr(agent, "checkpointer", None)
     if not checkpointer:
         return UserThreads(threads=[])
@@ -527,10 +577,51 @@ async def threads(
     try:
         summaries = await list_user_threads(checkpointer, input.user_id, agent_id, input.limit)
     except Exception as e:
-        logger.error(f"An exception occurred: {e}")
+        logger.error("Thread list read failed: %s", type(e).__name__)
         raise HTTPException(status_code=500, detail="Unexpected error")
 
     return UserThreads(threads=summaries)
+
+
+@router.get("/support-agent/preferences")
+async def preferences_get(user_id: str):
+    return await read_preferences(
+        getattr(get_agent("support-agent"), "store", None), identity(user_id)
+    )
+
+
+@router.put("/support-agent/preferences")
+async def preferences_put(preferences: Preferences, user_id: str):
+    user_id = identity(user_id)
+    try:
+        return await save_preferences(
+            getattr(get_agent("support-agent"), "store", None), user_id, preferences
+        )
+    except Exception:
+        raise HTTPException(503, detail="Preferences were not saved") from None
+
+
+@router.delete("/support-agent/preferences")
+async def preferences_delete(user_id: str):
+    user_id = identity(user_id)
+    try:
+        return await delete_preferences(getattr(get_agent("support-agent"), "store", None), user_id)
+    except Exception:
+        raise HTTPException(503, detail="Preference deletion was not confirmed") from None
+
+
+@router.get("/support-agent/tickets")
+async def tickets_list(user_id: str, limit: int = 20):
+    user_id = identity(user_id)
+    if not 1 <= limit <= 100:
+        raise HTTPException(422, detail="limit must be 1..100")
+    try:
+        return {
+            "tickets": [r.model_dump() for r in await support_repository().tickets(user_id, limit)],
+            "is_demo": True,
+        }
+    except Exception:
+        raise HTTPException(503, detail="Ticket storage unavailable") from None
 
 
 @app.get("/health")

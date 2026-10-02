@@ -12,18 +12,18 @@ async def test_lifespan(monkeypatch, caplog) -> None:
     """Test that the lifespan sets up the database and store, loads the agents, and logs errors."""
     from service import service
 
-    fake_saver_setup = False
-    fake_store_setup = False
+    fake_saver_setup = 0
+    fake_store_setup = 0
 
     class FakeSaver:
         async def setup(self) -> None:
             nonlocal fake_saver_setup
-            fake_saver_setup = True
+            fake_saver_setup += 1
 
     class FakeStore:
         async def setup(self) -> None:
             nonlocal fake_store_setup
-            fake_store_setup = True
+            fake_store_setup += 1
 
     fake_saver = FakeSaver()
     fake_store = FakeStore()
@@ -66,12 +66,13 @@ async def test_lifespan(monkeypatch, caplog) -> None:
     async with service.lifespan(FastAPI()):
         pass
 
-    assert fake_saver_setup
-    assert fake_store_setup
+    assert fake_saver_setup == 1
+    assert fake_store_setup == 1
     assert agents["good"].checkpointer is fake_saver
     assert agents["good"].store is fake_store
     assert agents["bad"].checkpointer is fake_saver
     assert agents["bad"].store is fake_store
 
     assert "Agent loaded: good" in caplog.text
-    assert "Failed to load agent bad: boom" in caplog.text
+    assert "Failed to load agent bad: RuntimeError" in caplog.text
+    assert "boom" not in caplog.text

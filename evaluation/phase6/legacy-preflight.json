@@ -1,0 +1,10 @@
+{
+  "status": "not_applicable_missing_ticket_table",
+  "source": "tickets.db",
+  "source_sha256": "d7129cbcd0490f80a05b3a0be9c484273df09235f62f30d0938875f5caaf87a9",
+  "source_unchanged": true,
+  "source_opened_readonly": true,
+  "business_rows_imported": 0,
+  "ownership_mapping_applied": false,
+  "note": "Existing file has users/support_sessions only; valid legacy-ticket import was tested using isolated fixtures."
+}

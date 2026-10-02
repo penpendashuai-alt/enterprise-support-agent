@@ -3,6 +3,7 @@ from uuid import uuid4
 
 import pytest
 
+from support_storage.sqlite import SQLiteRepository
 from tickets.models import TicketDraft
 from tickets.repository import TicketConflict, TicketRepository
 from tickets.service import create_ticket
@@ -34,12 +35,13 @@ async def test_concurrent_idempotency_reopen_and_conflicts(tmp_path):
 @pytest.mark.asyncio
 @pytest.mark.parametrize("failure", ["before_commit", "after_commit", "unknown"])
 async def test_storage_failure_reconciliation(monkeypatch, tmp_path, failure):
-    repo = TicketRepository(str(tmp_path / "tickets.db"))
+    repo = SQLiteRepository(str(tmp_path / "tickets.db"))
+    await repo.register("test-user", "thread", "")
     original = repo.create
 
-    def failing(*args):
+    async def failing(*args):
         if failure == "after_commit":
-            original(*args)
+            await original(*args)
         raise OSError("simulated response failure")
 
     monkeypatch.setattr(repo, "create", failing)
@@ -51,6 +53,7 @@ async def test_storage_failure_reconciliation(monkeypatch, tmp_path, failure):
         f"draft-{uuid4().hex}",
         1,
         "thread",
+        "test-user",
     )
     assert (
         result["status"]

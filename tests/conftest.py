@@ -30,6 +30,16 @@ def mock_env():
 
 
 @pytest.fixture(autouse=True)
+def isolate_support_storage(monkeypatch, tmp_path):
+    from core import settings
+    from core.settings import DatabaseType
+
+    monkeypatch.setattr(settings, "DATABASE_TYPE", DatabaseType.SQLITE)
+    monkeypatch.setattr(settings, "TICKET_DB_PATH", str(tmp_path / "support-business.db"))
+    monkeypatch.setattr(settings, "SUPPORT_DEMO_SAMPLES", True)
+
+
+@pytest.fixture(autouse=True)
 def isolate_rag_network(monkeypatch):
     from unittest.mock import AsyncMock
 

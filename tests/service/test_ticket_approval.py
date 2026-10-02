@@ -80,13 +80,16 @@ def approval(payload, action="approve", **kwargs):
 async def send(client, *, text=None, decision=None, thread="one", endpoint="invoke"):
     body = {
         "thread_id": thread,
+        "user_id": "test-user",
         **({"message": text} if text is not None else {"approval": decision}),
     }
     return await client.post(f"/support-agent/{endpoint}", json=body)
 
 
 async def pending(client, thread="one"):
-    response = await client.get("/support-agent/approval", params={"thread_id": thread})
+    response = await client.get(
+        "/support-agent/approval", params={"thread_id": thread, "user_id": "test-user"}
+    )
     assert response.status_code == 200
     return response.json()["pending"]
 
@@ -132,9 +135,11 @@ async def test_full_creation_edit_replay_second_request(environment, endpoint):
         ticket = done["custom_data"]["ticket"]
         assert ticket["draft"] == changed
         assert ticket["ticket_id"].startswith("DEMO-")
-        assert (await query_existing_ticket.ainvoke({"ticket_id": ticket["ticket_id"]}))["data"][
-            "draft"
-        ] == changed
+        assert (
+            await query_existing_ticket.ainvoke(
+                {"ticket_id": ticket["ticket_id"]}, {"configurable": {"user_id": "test-user"}}
+            )
+        )["data"]["draft"] == changed
         assert await pending(client) is None
         replay = output(await send(client, decision=approval(edited), endpoint=endpoint), endpoint)
         assert replay["custom_data"] == done["custom_data"]

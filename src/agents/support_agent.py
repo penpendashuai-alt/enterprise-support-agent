@@ -11,6 +11,7 @@ from langchain_core.runnables import RunnableConfig
 from langchain_openai import ChatOpenAI
 from langgraph.graph import END, MessagesState, StateGraph
 from langgraph.managed import RemainingSteps
+from langgraph.store.base import BaseStore
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
 
 from agents.support_tools import SUPPORT_TOOLS, NonEmptyText, tool_result
@@ -25,6 +26,7 @@ from core import get_model, settings
 from core.llm import ModelT
 from rag.answers import evidence_message, finalize, unavailable_answer
 from rag.models import RetrievalResult
+from support_storage.preferences import preference_message
 from tickets.models import TicketRecord
 
 logger = logging.getLogger(__name__)
@@ -244,7 +246,9 @@ async def retrieve_knowledge(state: SupportState) -> dict:
     return {"retrieval": result.model_dump()}
 
 
-async def handle_request(state: SupportState, config: RunnableConfig) -> dict:
+async def handle_request(
+    state: SupportState, config: RunnableConfig, *, store: BaseStore | None = None
+) -> dict:
     retrieval = (
         RetrievalResult.model_validate(state["retrieval"]) if state.get("retrieval") else None
     )
@@ -265,7 +269,7 @@ async def handle_request(state: SupportState, config: RunnableConfig) -> dict:
             ticket = TicketRecord.model_validate(result["data"])
             d = ticket.draft
             content = (
-                f"本地演示工单（模拟数据）：{ticket.ticket_id}\n状态：{ticket.state}\n"
+                f"演示工单（业务数据库记录）：{ticket.ticket_id}\n状态：{ticket.state}\n"
                 f"标题：{d.title}\n描述：{d.description}\n服务：{d.service_name or '未指定'}\n"
                 f"影响范围：{d.impact}\n优先级：{d.priority}\n创建时间：{ticket.created_at}\n"
                 "未提交到真实企业系统；演示库不自动更新处理进展。"
@@ -292,6 +296,15 @@ async def handle_request(state: SupportState, config: RunnableConfig) -> dict:
             response = await runnable.ainvoke(
                 [
                     SystemMessage(content=HANDLER_PROMPT),
+                    *(
+                        (
+                            await preference_message(
+                                store, config.get("configurable", {}).get("user_id")
+                            )
+                        )
+                        if config.get("configurable", {}).get("user_id")
+                        else []
+                    ),
                     SystemMessage(
                         content=f"当前意图：{state['intent']}\n当前实体：{state['entities'].model_dump_json()}"
                     ),

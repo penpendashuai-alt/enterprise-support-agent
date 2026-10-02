@@ -16,7 +16,7 @@ def test_invoke(test_client, mock_agent) -> None:
     ANSWER = "The weather in Tokyo is 70 degrees."
     mock_agent.ainvoke.return_value = [("values", {"messages": [AIMessage(content=ANSWER)]})]
 
-    response = test_client.post("/invoke", json={"message": QUESTION})
+    response = test_client.post("/chatbot/invoke", json={"message": QUESTION})
     assert response.status_code == 200
 
     mock_agent.ainvoke.assert_awaited_once()
@@ -73,7 +73,9 @@ def test_invoke_model_param(test_client, mock_agent) -> None:
     CUSTOM_MODEL = OpenAIModelName.GPT_5_MINI
     mock_agent.ainvoke.return_value = [("values", {"messages": [AIMessage(content=ANSWER)]})]
 
-    response = test_client.post("/invoke", json={"message": QUESTION, "model": CUSTOM_MODEL})
+    response = test_client.post(
+        "/chatbot/invoke", json={"message": QUESTION, "model": CUSTOM_MODEL}
+    )
     assert response.status_code == 200
 
     # Verify the model was passed correctly in the config
@@ -88,13 +90,17 @@ def test_invoke_model_param(test_client, mock_agent) -> None:
 
     # Verify a valid enum outside the configured allowlist returns a 400.
     unavailable_model = AnthropicModelName.SONNET_45
-    response = test_client.post("/invoke", json={"message": QUESTION, "model": unavailable_model})
+    response = test_client.post(
+        "/chatbot/invoke", json={"message": QUESTION, "model": unavailable_model}
+    )
     assert response.status_code == 400
     assert "not available" in response.json()["detail"]
 
     # Verify a malformed model string still fails request validation.
     INVALID_MODEL = "gpt-7-notreal"
-    response = test_client.post("/invoke", json={"message": QUESTION, "model": INVALID_MODEL})
+    response = test_client.post(
+        "/chatbot/invoke", json={"message": QUESTION, "model": INVALID_MODEL}
+    )
     assert response.status_code == 422
 
 
@@ -105,7 +111,7 @@ def test_invoke_no_model_param_uses_none_default(test_client, mock_agent) -> Non
     mock_agent.ainvoke.return_value = [("values", {"messages": [AIMessage(content=ANSWER)]})]
 
     # Don't specify model in the request
-    response = test_client.post("/invoke", json={"message": QUESTION})
+    response = test_client.post("/chatbot/invoke", json={"message": QUESTION})
     assert response.status_code == 200
 
     mock_agent.ainvoke.assert_awaited_once()
@@ -127,7 +133,7 @@ def test_invoke_custom_agent_config(test_client, mock_agent) -> None:
     mock_agent.ainvoke.return_value = [("values", {"messages": [AIMessage(content=ANSWER)]})]
 
     response = test_client.post(
-        "/invoke", json={"message": QUESTION, "agent_config": CUSTOM_CONFIG}
+        "/chatbot/invoke", json={"message": QUESTION, "agent_config": CUSTOM_CONFIG}
     )
     assert response.status_code == 200
 
@@ -145,7 +151,7 @@ def test_invoke_custom_agent_config(test_client, mock_agent) -> None:
     # Verify a reserved key in agent_config throws a validation error
     INVALID_CONFIG = {"model": "gpt-5-nano"}
     response = test_client.post(
-        "/invoke", json={"message": QUESTION, "agent_config": INVALID_CONFIG}
+        "/chatbot/invoke", json={"message": QUESTION, "agent_config": INVALID_CONFIG}
     )
     assert response.status_code == 422
 
@@ -159,7 +165,7 @@ def test_invoke_interrupt(test_client, mock_agent) -> None:
         ("updates", {"__interrupt__": [Interrupt(value=INTERRUPT)]}),
     ]
 
-    response = test_client.post("/invoke", json={"message": QUESTION})
+    response = test_client.post("/chatbot/invoke", json={"message": QUESTION})
     assert response.status_code == 200
 
     mock_agent.ainvoke.assert_awaited_once()
@@ -207,7 +213,7 @@ def test_history(test_client, mock_agent) -> None:
     )
 
     response = test_client.post(
-        "/history", json={"thread_id": "7bcc7cc1-99d7-4b1d-bdb5-e6f90ed44de6"}
+        "/chatbot/history", json={"thread_id": "7bcc7cc1-99d7-4b1d-bdb5-e6f90ed44de6"}
     )
     assert response.status_code == 200
 
@@ -308,7 +314,7 @@ async def test_stream(test_client, mock_agent) -> None:
 
     # Make request with streaming
     with test_client.stream(
-        "POST", "/stream", json={"message": QUESTION, "stream_tokens": True}
+        "POST", "/chatbot/stream", json={"message": QUESTION, "stream_tokens": True}
     ) as response:
         assert response.status_code == 200
 
@@ -363,7 +369,7 @@ async def test_stream_no_tokens(test_client, mock_agent) -> None:
 
     # Make request with streaming disabled
     with test_client.stream(
-        "POST", "/stream", json={"message": QUESTION, "stream_tokens": False}
+        "POST", "/chatbot/stream", json={"message": QUESTION, "stream_tokens": False}
     ) as response:
         assert response.status_code == 200
 
@@ -403,7 +409,7 @@ def test_stream_interrupt(test_client, mock_agent) -> None:
 
     # Make request with streaming disabled
     with test_client.stream(
-        "POST", "/stream", json={"message": QUESTION, "stream_tokens": False}
+        "POST", "/chatbot/stream", json={"message": QUESTION, "stream_tokens": False}
     ) as response:
         assert response.status_code == 200
 

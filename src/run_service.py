@@ -33,5 +33,7 @@ if __name__ == "__main__":
         host=settings.HOST,
         port=settings.PORT,
         reload=settings.is_dev(),
+        loop="memory.postgres:selector_loop_factory" if sys.platform == "win32" else "auto",
+        workers=1,
         timeout_graceful_shutdown=settings.GRACEFUL_SHUTDOWN_TIMEOUT,
     )

@@ -8,6 +8,7 @@ from langchain_openai import ChatOpenAI
 from langgraph.types import interrupt
 from pydantic import BaseModel, ConfigDict, ValidationError
 
+from support_storage.identity import context_user
 from tickets.models import (
     ApprovalInput,
     Priority,
@@ -185,7 +186,11 @@ async def execute_creation(state: dict, config: RunnableConfig) -> dict:
     ):
         raise ValueError("An unchanged, approved draft is required")
     result = await create_ticket(
-        draft, state["draft_id"], state["draft_version"], config["configurable"]["thread_id"]
+        draft,
+        state["draft_id"],
+        state["draft_version"],
+        config["configurable"]["thread_id"],
+        context_user(config),
     )
     if result["status"] == "success":
         return {

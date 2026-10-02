@@ -335,28 +335,67 @@ class AgentClient:
                     f"Error: {e}; {e.response.text if isinstance(e, httpx.HTTPStatusError) else ''}"
                 )
 
-    def get_pending_approval(self, thread_id: str) -> dict | None:
+    def support_preferences(
+        self, user_id: str, preferences: dict | None = None, *, delete: bool = False
+    ) -> dict:
+        method = "DELETE" if delete else "PUT" if preferences is not None else "GET"
         try:
-            response = httpx.get(
-                f"{self.base_url}/support-agent/approval",
-                params={"thread_id": thread_id},
+            response = httpx.request(
+                method,
+                f"{self.base_url}/support-agent/preferences",
+                params={"user_id": user_id},
+                json=preferences,
                 headers=self._headers,
                 timeout=self.timeout,
             )
+            response.raise_for_status()
+            return response.json()
+        except httpx.HTTPError as exc:
+            raise AgentClientError(
+                "Preference operation failed; changes were not confirmed"
+            ) from exc
+
+    def support_tickets(self, user_id: str) -> dict:
+        try:
+            response = httpx.get(
+                f"{self.base_url}/support-agent/tickets",
+                params={"user_id": user_id, "limit": 20},
+                headers=self._headers,
+                timeout=self.timeout,
+            )
+            response.raise_for_status()
+            return response.json()
+        except httpx.HTTPError as exc:
+            raise AgentClientError("Could not load business tickets") from exc
+
+    def get_pending_approval(self, thread_id: str, user_id: str | None = None) -> dict | None:
+        try:
+            response = httpx.get(
+                f"{self.base_url}/support-agent/approval",
+                params={"thread_id": thread_id, **({"user_id": user_id} if user_id else {})},
+                headers=self._headers,
+                timeout=self.timeout,
+            )
+            if response.status_code == 404:
+                return None
             response.raise_for_status()
             return response.json()["pending"]
         except httpx.HTTPError as exc:
             raise AgentClientError(f"Error reading approval: {exc}") from exc
 
-    async def aget_pending_approval(self, thread_id: str) -> dict | None:
+    async def aget_pending_approval(
+        self, thread_id: str, user_id: str | None = None
+    ) -> dict | None:
         async with httpx.AsyncClient() as client:
             try:
                 response = await client.get(
                     f"{self.base_url}/support-agent/approval",
-                    params={"thread_id": thread_id},
+                    params={"thread_id": thread_id, **({"user_id": user_id} if user_id else {})},
                     headers=self._headers,
                     timeout=self.timeout,
                 )
+                if response.status_code == 404:
+                    return None
                 response.raise_for_status()
                 return response.json()["pending"]
             except httpx.HTTPError as exc:
@@ -388,7 +427,9 @@ class AgentClient:
                     f"Error: {e}; {e.response.text if isinstance(e, httpx.HTTPStatusError) else ''}"
                 )
 
-    def get_history(self, thread_id: str, agent: str | None = None) -> ChatHistory:
+    def get_history(
+        self, thread_id: str, agent: str | None = None, user_id: str | None = None
+    ) -> ChatHistory:
         """
         Get chat history.
 
@@ -397,7 +438,7 @@ class AgentClient:
             agent (str, optional): The agent whose graph should interpret the thread.
         """
         agent = agent or self.agent
-        request = ChatHistoryInput(thread_id=thread_id)
+        request = ChatHistoryInput(thread_id=thread_id, user_id=user_id)
         url = f"{self.base_url}/{agent}/history" if agent else f"{self.base_url}/history"
         try:
             response = httpx.post(

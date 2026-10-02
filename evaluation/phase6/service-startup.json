@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "entrypoint": "src/run_service.py",
+  "agent_count": 11,
+  "postgres_preferences": {
+    "status": "default",
+    "preferences": null
+  },
+  "paid_model_calls": 0
+}

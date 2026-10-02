@@ -1,0 +1,81 @@
+{
+  "database": "phase6_test_5603887bfa014741a13f6d90b002cab0",
+  "postgres_version": "PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit",
+  "model": "deterministic test fixture; zero paid calls",
+  "compose": "not executed",
+  "repository": {
+    "independent_connections": 4,
+    "concurrent_requests": 16,
+    "created_rows": 1,
+    "content_version_owner_conflicts": "passed",
+    "migration_repeat": "passed",
+    "sqlite_import": {
+      "preflight": {
+        "created": 0,
+        "reused": 0,
+        "conflicts": 0,
+        "unprocessed": 1
+      },
+      "first": {
+        "created": 2,
+        "reused": 0,
+        "conflicts": 0,
+        "unprocessed": 1
+      },
+      "repeat": {
+        "created": 0,
+        "reused": 2,
+        "conflicts": 0,
+        "unprocessed": 1
+      },
+      "conflict": {
+        "created": 0,
+        "reused": 0,
+        "conflicts": 1,
+        "unprocessed": 1
+      }
+    },
+    "source_unchanged": true,
+    "import_does_not_create_sessions": true
+  },
+  "process_recovery": {
+    "pids": [
+      14992,
+      33452,
+      18680,
+      29476
+    ],
+    "pending_preserved": true,
+    "crash_exit_code": 73,
+    "business_rows_before_recovery": 1,
+    "same_ticket_after_recovery": true,
+    "checkpoint_completed": true,
+    "preferences_delete_not_revived": true,
+    "ownership_checks": "passed"
+  },
+  "postgres_stop_restart": "passed; Store read degraded, writes/business returned 503, original data recovered",
+  "business_ticket_rows": 5,
+  "status": "passed",
+  "source_sha256": {
+    "src/support_storage/identity.py": "6193d221d7cab8ba5adcd10b8ded06eae5ab4313ff7f9cc9e6e05b0a85b549dc",
+    "src/support_storage/import_sqlite.py": "e90657266857fed282aae55a1be32b9f3a55df0d4eb282c339c1aaae9dc5f4cb",
+    "src/support_storage/migrations.py": "35a0d8e99f084e5b0ee8c1d65e08acd527263dccf56be1e54f97bd1d2f49561a",
+    "src/support_storage/postgres.py": "dc2e22fbddb6c37cc131d829fef8237c9ce9e25904c196ae5b963e4aebebdc76",
+    "src/support_storage/preferences.py": "d0fa3a1cec9e0f5ab025f0f94612a63768177903deecae0cee4665de4b88b034",
+    "src/support_storage/repository.py": "b327c1336e9ba74370693171d48c6a37fe9f574815a69d8aa4a3fcd2c4d78244",
+    "src/support_storage/runtime.py": "accf02d84fcbfabb9daaf784791441edae86b606a93add7d34e05b0ccf1e41ce",
+    "src/support_storage/sqlite.py": "f94658795afaf49ec5b8902e0c0a2e0b750f290a1e87cab8ff629fc41e93d2f3",
+    "src/support_storage/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/memory/mongodb.py": "f997831c4a7823a148dcdbacc963db4f895bba13519755b01900eba300ff846b",
+    "src/memory/postgres.py": "02401d00eeff4e796b3dc487a0fea4711338b841d170bed77ffc6f9b1bbcd382",
+    "src/memory/sqlite.py": "27ff15793d1fa583344d27769fe847adff1bfe9c0d7449d34ba12076d9b7a04b",
+    "src/memory/__init__.py": "f94259075b8af4ff82b68ce61bbb8ca67ab9e029c5b2156843ee7cd0eca8ac25",
+    "src/tickets/models.py": "180875d89adf98ff14a5c58c1a76c66f69d4283301b19816b0421fdc2f660562",
+    "src/tickets/preferences_ui.py": "34d6e33892971ed62267a1a67a316dd5ce3b579a68c33a9b4b11d6239460a567",
+    "src/tickets/repository.py": "ac2a01c82a5d56e0cc11d53c31c33c4620b952ceacf3ac31479f4b1f15d81f6a",
+    "src/tickets/service.py": "899a77665938bde395766457ce9695e68a6eb84bb19c84ce9fbba31480ea1267",
+    "src/tickets/ui.py": "f120bf36e4b79b13b408604ffbd30edefd40a2c85d61e89c691b318edc3cb437",
+    "src/tickets/__init__.py": "ddf747dc4680d4bcded8e8fca0e38d99ca4e1674b79da98f0f43aa6b48e37c31",
+    "migrations/001_support.sql": "dd213972dd4af50c04005d4ec920e0b902b743c0d762c2371614c14980362312"
+  }
+}

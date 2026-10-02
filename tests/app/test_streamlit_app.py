@@ -104,7 +104,9 @@ def test_app_thread_id_history(mock_agent_client):
     print(at)
     assert at.session_state.thread_id == "1234"
     # No agent in the URL, so history is read through the client's selected agent.
-    mock_agent_client.get_history.assert_called_with(thread_id="1234", agent="test-agent")
+    mock_agent_client.get_history.assert_called_with(
+        thread_id="1234", agent="test-agent", user_id=at.session_state.user_id
+    )
     assert at.chat_message[0].avatar == "user"
     assert at.chat_message[0].markdown[0].value == "What is the weather?"
     assert at.chat_message[1].avatar == "assistant"
@@ -127,7 +129,9 @@ def test_app_resume_with_agent_param(mock_agent_client):
     print(at)
     assert at.session_state.thread_id == "1234"
     # History is fetched through the agent named in the URL, not the default.
-    mock_agent_client.get_history.assert_called_with(thread_id="1234", agent="chatbot")
+    mock_agent_client.get_history.assert_called_with(
+        thread_id="1234", agent="chatbot", user_id=at.session_state.user_id
+    )
     assert at.chat_message[0].markdown[0].value == "What is the weather?"
     assert at.chat_message[1].markdown[0].value == "The weather is sunny."
     assert not at.exception
@@ -652,7 +656,7 @@ def test_app_thread_click_loads_history(mock_agent_client, mock_threads_data):
     at.button(key="thread_thread-1111-2222").click().run()
 
     mock_agent_client.get_history.assert_called_with(
-        thread_id="thread-1111-2222", agent="test-agent"
+        thread_id="thread-1111-2222", agent="test-agent", user_id=at.session_state.user_id
     )
     assert at.session_state.thread_id == "thread-1111-2222"
     assert [m.content for m in at.session_state.messages] == [

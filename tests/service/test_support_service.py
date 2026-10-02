@@ -84,7 +84,8 @@ async def test_support_endpoints_and_router_privacy(monkeypatch, tmp_path, endpo
             assert "support-agent" in [a["key"] for a in info["agents"]]
             for text in ["服务挂了吗？", "GitHub"]:
                 response = await client.post(
-                    f"/support-agent/{endpoint}", json={"message": text, "thread_id": "thread"}
+                    f"/support-agent/{endpoint}",
+                    json={"user_id": "test-user", "message": text, "thread_id": "thread"},
                 )
                 assert response.status_code == 200
                 assert "INTERNAL_ROUTER_JSON" not in response.text
@@ -104,7 +105,8 @@ async def test_support_endpoints_and_router_privacy(monkeypatch, tmp_path, endpo
                 assert any(m["type"] == "tool" and m["tool_call_id"] == "status" for m in messages)
                 assert messages[-1]["content"] == "根据模拟数据，GitHub 运行正常。"
             fresh = await client.post(
-                "/support-agent/invoke", json={"message": "服务挂了吗？", "thread_id": "fresh"}
+                "/support-agent/invoke",
+                json={"user_id": "test-user", "message": "服务挂了吗？", "thread_id": "fresh"},
             )
             assert "哪个服务" in fresh.json()["content"]
         state = await graph.aget_state({"configurable": {"thread_id": "thread"}})

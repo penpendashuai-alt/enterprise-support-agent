@@ -31,7 +31,12 @@ class TicketRepository:
             connection.close()
 
     def create(
-        self, draft: TicketDraft, draft_id: str, version: int, thread_id: str
+        self,
+        draft: TicketDraft,
+        draft_id: str,
+        version: int,
+        thread_id: str,
+        user_id: str | None = None,
     ) -> TicketRecord:
         draft = TicketDraft.model_validate(draft.model_dump())
         key = request_key(draft_id, version)
@@ -48,6 +53,7 @@ class TicketRepository:
                     existing.idempotency_key != key
                     or existing.fingerprint != fingerprint(draft)
                     or existing.thread_id != thread_id
+                    or existing.user_id != user_id
                 ):
                     raise TicketConflict("Request already exists with different content or context")
                 return existing
@@ -60,6 +66,7 @@ class TicketRepository:
                 fingerprint=fingerprint(draft),
                 draft=draft,
                 created_at=datetime.now(UTC).isoformat(),
+                user_id=user_id,
             )
             connection.execute(
                 "INSERT INTO tickets VALUES (?, ?, ?, ?)",

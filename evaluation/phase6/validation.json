@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-01T15:35:18.897376+00:00",
+  "status": "passed_with_documented_limits",
+  "pytest": {
+    "passed": 328,
+    "skipped": 4,
+    "warnings": 18,
+    "seconds": 65.42,
+    "log_sha256": "4992714a13d13a972dfd2306624f823a2e4053437a39dc44bd37875ea869efb7"
+  },
+  "ruff_check": "passed",
+  "ruff_format": "155 files formatted",
+  "pyrefly": "0 errors; 9 suppressed, 3 warnings",
+  "markdown": "passed",
+  "uv_lock_offline": "passed; 253 packages",
+  "git_diff_check": "passed",
+  "postgres_integration": "storage-final.json",
+  "actual_service_entrypoint": "service-startup.json",
+  "paid_validation": {
+    "reports": [
+      "live.json",
+      "live-preferences-retry.json"
+    ],
+    "estimated_cny": 0.348176,
+    "budget_cny": 10,
+    "chat_calls": 28,
+    "initial_preference_failures": 2,
+    "preference_retest_passed": 4,
+    "pricing_basis": "Peak uncached estimate, not invoice"
+  },
+  "dependencies": {
+    "psycopg": "3.3.6",
+    "psycopg-pool": "3.3.3",
+    "langgraph": "1.2.12",
+    "langgraph-checkpoint-postgres": "3.1.2",
+    "uvicorn": "0.52.4"
+  },
+  "prior_failed_runs": [
+    {
+      "report": "storage.json",
+      "stage": "loop factory returned class instead of instance; corrected"
+    },
+    {
+      "report": "storage-retry1.json",
+      "stage": "local HTTP proxy returned 502 during controlled crash; fixture switched to trust_env=False"
+    }
+  ],
+  "known_limits": [
+    "Caller-declared identities are not authentication",
+    "Single worker only",
+    "Docker build/start not executed",
+    "Phase5 P1 short question incomplete; reproduced",
+    "Phase5 conflict-answer unsupported extension not retested or fixed",
+    "No historical checkpoint migration or automatic ownership claim",
+    "Deterministic approval/error templates remain Chinese",
+    "No GitHub push for Phase6"
+  ]
+}

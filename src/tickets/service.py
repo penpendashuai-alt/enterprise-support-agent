@@ -1,25 +1,25 @@
-import asyncio
-
-from core import settings
+from support_storage.identity import identity
+from support_storage.runtime import repository
 from tickets.models import TicketDraft, fingerprint, request_key, ticket_result
-from tickets.repository import TicketConflict, TicketRepository
+from tickets.repository import TicketConflict
 
 
-def repository() -> TicketRepository:
-    return TicketRepository(settings.TICKET_DB_PATH)
-
-
-async def create_ticket(draft: TicketDraft, draft_id: str, version: int, thread_id: str) -> dict:
+async def create_ticket(
+    draft: TicketDraft, draft_id: str, version: int, thread_id: str, user_id: str
+) -> dict:
+    user_id = identity(user_id)
     repo = repository()
     try:
-        record = await asyncio.to_thread(repo.create, draft, draft_id, version, thread_id)
+        record = await repo.create(draft, draft_id, version, thread_id, user_id)
         return ticket_result(record)
     except TicketConflict:
         return {"status": "conflict", "message": "创建请求与已保存内容冲突，未覆盖已有工单。"}
     except Exception:
-        # A failed response does not establish whether the SQLite commit happened.
+        # Business commit and graph checkpoint are separate transactions.
         try:
-            record = await asyncio.to_thread(repo.by_request, draft_id, thread_id)
+            record = await repo.by_request(draft_id, thread_id, user_id)
+        except TicketConflict:
+            return {"status": "conflict", "message": "创建请求的归属或内容与已有工单冲突。"}
         except Exception:
             return {
                 "status": "unknown",

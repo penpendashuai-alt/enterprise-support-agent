@@ -14,10 +14,11 @@ from agents.support_tools import SUPPORT_TOOLS
         ("search_known_issue", {"query": "VPN 错误 809"}),
     ],
 )
-def test_stable_mock_results(name, args):
+@pytest.mark.asyncio
+async def test_stable_mock_results(name, args):
     tool = SUPPORT_TOOLS[name]
-    result = tool.invoke(args)
-    assert result == tool.invoke(args)
+    result = await tool.ainvoke(args, {"configurable": {"user_id": "test-user"}})
+    assert result == await tool.ainvoke(args, {"configurable": {"user_id": "test-user"}})
     assert result["is_mock"] is True
     assert result["status"] == "success"
     assert result["data"]
@@ -39,8 +40,9 @@ def test_service_alias_with_suffix(service):
         ("search_known_issue", {"query": "打印机缺纸"}),
     ],
 )
-def test_not_found(name, args):
-    result = SUPPORT_TOOLS[name].invoke(args)
+@pytest.mark.asyncio
+async def test_not_found(name, args):
+    result = await SUPPORT_TOOLS[name].ainvoke(args, {"configurable": {"user_id": "test-user"}})
     assert result["status"] == "not_found"
     assert result["is_mock"] is True
     assert not result["data"]

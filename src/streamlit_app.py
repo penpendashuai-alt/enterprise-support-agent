@@ -12,6 +12,7 @@ from client import AgentClient, AgentClientError
 from rag.ui import render_sources
 from schema import ChatHistory, ChatMessage, UserThreads
 from schema.task_data import TaskData, TaskDataStatus
+from tickets.preferences_ui import render_preferences
 from tickets.ui import render_approval
 from voice import VoiceManager
 
@@ -125,7 +126,7 @@ async def main() -> None:
             resume_agent = st.query_params.get("agent") or agent_client.agent
             try:
                 messages: ChatHistory = agent_client.get_history(
-                    thread_id=thread_id, agent=resume_agent
+                    thread_id=thread_id, agent=resume_agent, user_id=user_id
                 ).messages
             except AgentClientError:
                 st.error("No message history found for this Thread ID.")
@@ -175,7 +176,7 @@ async def main() -> None:
                 if st.button(label, key=f"thread_{t.thread_id}", use_container_width=True):
                     try:
                         history: ChatHistory = agent_client.get_history(
-                            thread_id=t.thread_id, agent=t.agent_id
+                            thread_id=t.thread_id, agent=t.agent_id, user_id=user_id
                         )
                     except AgentClientError:
                         st.error("Could not load that conversation.")
@@ -307,6 +308,7 @@ async def main() -> None:
 
     await draw_messages(amessage_iter())
     if agent_client.agent == "support-agent":
+        render_preferences(agent_client, user_id)
         await render_approval(agent_client, st.session_state.thread_id, user_id, model)
 
     # Render saved audio for the last AI message (if it exists)

@@ -135,6 +135,11 @@ class Settings(BaseSettings):
     POSTGRES_APPLICATION_NAME: str = "agent-service-toolkit"
     POSTGRES_MIN_CONNECTIONS_PER_POOL: int = 1
     POSTGRES_MAX_CONNECTIONS_PER_POOL: int = 1
+    POSTGRES_POOL_TIMEOUT: float = Field(default=10, gt=0, le=60)
+    POSTGRES_CONNECT_TIMEOUT: int = Field(default=5, ge=1, le=30)
+    POSTGRES_STATEMENT_TIMEOUT_MS: int = Field(default=10000, ge=100, le=120000)
+    POSTGRES_POOL_MAX_WAITING: int = Field(default=20, ge=1, le=100)
+    SUPPORT_DEMO_SAMPLES: bool = False
 
     # MongoDB Configuration
     MONGO_HOST: str | None = None

@@ -13,7 +13,7 @@ async def render_approval(client: AgentClient, thread_id: str, user_id: str, mod
 
 async def _render_approval(client, thread_id, user_id, model, slot):
     try:
-        pending = await client.aget_pending_approval(thread_id)
+        pending = await client.aget_pending_approval(thread_id, user_id=user_id)
     except AgentClientError:
         st.error("暂时无法读取工单审批状态，请刷新后重试。")
         return
