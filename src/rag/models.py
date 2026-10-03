@@ -65,6 +65,7 @@ class Candidate(Evidence):
 
 
 class RetrievalResult(BaseModel):
+    cache: dict = Field(default_factory=dict)
     status: Literal[
         "ok", "empty", "insufficient", "configuration_error", "index_inconsistent", "unavailable"
     ]

@@ -3,6 +3,7 @@ from uuid import uuid4
 
 from psycopg.types.json import Jsonb
 
+from execution.telemetry import measured
 from support_storage.repository import OwnershipConflict
 from tickets.models import TicketDraft, TicketRecord, fingerprint, request_key
 from tickets.repository import TicketConflict
@@ -26,6 +27,7 @@ class PostgresRepository:
     def __init__(self, pool):
         self.pool = pool
 
+    @measured("business_database")
     async def session(self, thread_id):
         async with self.pool.connection() as conn:
             return await (
@@ -34,6 +36,7 @@ class PostgresRepository:
                 )
             ).fetchone()
 
+    @measured("business_database")
     async def register(self, user_id, thread_id, title):
         async with self.pool.connection() as conn, conn.transaction():
             await conn.execute(
@@ -56,6 +59,7 @@ class PostgresRepository:
             )
             return row
 
+    @measured("business_database")
     async def sessions(self, user_id, limit):
         async with self.pool.connection() as conn:
             return await (
@@ -65,6 +69,7 @@ class PostgresRepository:
                 )
             ).fetchall()
 
+    @measured("business_database")
     async def create(self, draft, draft_id, version, thread_id, user_id):
         draft = TicketDraft.model_validate(draft.model_dump())
         record = TicketRecord(
@@ -123,6 +128,7 @@ class PostgresRepository:
                 raise TicketConflict("Request already exists with different content or context")
             return existing
 
+    @measured("business_database")
     async def get(self, ticket_id, user_id):
         async with self.pool.connection() as conn:
             return ticket_from_row(
@@ -134,6 +140,7 @@ class PostgresRepository:
                 ).fetchone()
             )
 
+    @measured("business_database")
     async def by_request(self, draft_id, thread_id, user_id):
         async with self.pool.connection() as conn:
             record = ticket_from_row(
@@ -149,6 +156,7 @@ class PostgresRepository:
                 raise TicketConflict("Request context mismatch")
             return record
 
+    @measured("business_database")
     async def tickets(self, user_id, limit):
         async with self.pool.connection() as conn:
             rows = await (

@@ -1,0 +1,9 @@
+{
+  "mode": "full",
+  "source": ".",
+  "database": "phase7_bench_948bc4fc685b4576a92ed558beaa70f3",
+  "pool_size_per_role": 1,
+  "worker_count": 1,
+  "model": "deterministic; NOT real LLM throughput",
+  "batches": []
+}

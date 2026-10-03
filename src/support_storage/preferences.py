@@ -5,6 +5,7 @@ from typing import Literal
 from langchain_core.messages import SystemMessage
 from pydantic import BaseModel, ConfigDict
 
+from execution.telemetry import measured
 from support_storage.identity import identity
 
 logger = logging.getLogger(__name__)
@@ -20,6 +21,7 @@ def namespace(user_id):
     return ("support", identity(user_id), "preferences")
 
 
+@measured("preferences")
 async def read_preferences(store, user_id):
     if store is None:
         return {"status": "unavailable", "preferences": None, "reason": "store_not_initialized"}

@@ -63,6 +63,9 @@ def mock_httpx():
             path = url.replace("http://0.0.0.0", "")
             return client.get(path, **kwargs)
 
-        with patch("httpx.stream", mock_stream):
-            with patch("httpx.get", mock_get):
-                yield
+        from types import SimpleNamespace
+        from unittest.mock import PropertyMock
+
+        with patch("client.client.AgentClient.http", new_callable=PropertyMock) as prop:
+            prop.return_value = SimpleNamespace(stream=mock_stream, get=mock_get)
+            yield

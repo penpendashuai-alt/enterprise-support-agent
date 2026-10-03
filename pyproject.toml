@@ -60,6 +60,7 @@ dependencies = [
     "ag-ui-langgraph~=0.0.42",
     "qdrant-client~=1.19.0",
     "openai~=2.54.0",
+    "redis>=6.4,<7",
 ]
 
 # Supply-chain cooldown: resolution only considers releases >=14 days old. Needs the

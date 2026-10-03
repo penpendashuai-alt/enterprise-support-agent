@@ -54,14 +54,14 @@ def test_invoke(agent_client):
         json={"type": "ai", "content": ANSWER},
         request=mock_request,
     )
-    with patch("httpx.post", return_value=mock_response):
+    with patch("httpx.Client.post", return_value=mock_response):
         response = agent_client.invoke(QUESTION)
         assert isinstance(response, ChatMessage)
         assert response.type == "ai"
         assert response.content == ANSWER
 
     # Test with model and thread_id
-    with patch("httpx.post", return_value=mock_response) as mock_post:
+    with patch("httpx.Client.post", return_value=mock_response) as mock_post:
         response = agent_client.invoke(
             QUESTION,
             model="gpt-5-nano",
@@ -76,7 +76,7 @@ def test_invoke(agent_client):
 
     # Test error response
     error_response = Response(500, text="Internal Server Error", request=mock_request)
-    with patch("httpx.post", return_value=error_response):
+    with patch("httpx.Client.post", return_value=error_response):
         with pytest.raises(AgentClientError) as exc:
             agent_client.invoke(QUESTION)
         assert "500 Internal Server Error" in str(exc.value)
@@ -144,7 +144,7 @@ def test_stream(agent_client):
     mock_response.__enter__ = Mock(return_value=mock_response)
     mock_response.__exit__ = Mock(return_value=None)
 
-    with patch("httpx.stream", return_value=mock_response):
+    with patch("httpx.Client.stream", return_value=mock_response):
         # Collect all streamed responses
         responses = list(agent_client.stream(QUESTION))
 
@@ -166,7 +166,7 @@ def test_stream(agent_client):
     error_response_mock = Mock()
     error_response_mock.__enter__ = Mock(return_value=error_response)
     error_response_mock.__exit__ = Mock(return_value=None)
-    with patch("httpx.stream", return_value=error_response_mock):
+    with patch("httpx.Client.stream", return_value=error_response_mock):
         with pytest.raises(AgentClientError) as exc:
             list(agent_client.stream(QUESTION))
         assert "500 Internal Server Error" in str(exc.value)
@@ -279,7 +279,7 @@ def test_get_history(agent_client):
 
     # Mock successful response - defaults to the client's selected agent
     mock_response = Response(200, json=HISTORY, request=Request("POST", "http://test/history"))
-    with patch("httpx.post", return_value=mock_response) as mock_post:
+    with patch("httpx.Client.post", return_value=mock_response) as mock_post:
         history = agent_client.get_history(THREAD_ID)
         assert isinstance(history, ChatHistory)
         assert len(history.messages) == 2
@@ -289,7 +289,7 @@ def test_get_history(agent_client):
         assert mock_post.call_args.args[0] == "http://test/test-agent/history"
 
     # An explicit agent overrides the client's selected agent
-    with patch("httpx.post", return_value=mock_response) as mock_post:
+    with patch("httpx.Client.post", return_value=mock_response) as mock_post:
         agent_client.get_history(THREAD_ID, agent="chatbot")
         assert mock_post.call_args.args[0] == "http://test/chatbot/history"
 
@@ -297,7 +297,7 @@ def test_get_history(agent_client):
     error_response = Response(
         500, text="Internal Server Error", request=Request("POST", "http://test/history")
     )
-    with patch("httpx.post", return_value=error_response):
+    with patch("httpx.Client.post", return_value=error_response):
         with pytest.raises(AgentClientError) as exc:
             agent_client.get_history(THREAD_ID)
         assert "500 Internal Server Error" in str(exc.value)
@@ -319,7 +319,7 @@ def test_info(agent_client):
     )
 
     # Update an existing client with info
-    with patch("httpx.get", return_value=test_response):
+    with patch("httpx.Client.get", return_value=test_response):
         agent_client.retrieve_info()
 
     assert agent_client.info == test_info
@@ -331,7 +331,7 @@ def test_info(agent_client):
     assert "Agent unknown-agent not found in available agents: custom-agent" in str(exc.value)
 
     # Test a fresh client with info
-    with patch("httpx.get", return_value=test_response):
+    with patch("httpx.Client.get", return_value=test_response):
         agent_client = AgentClient(base_url="http://test")
     assert agent_client.info == test_info
     assert agent_client.agent == "custom-agent"
@@ -371,7 +371,7 @@ def test_get_user_threads(agent_client):
     mock_request = Request("GET", "http://test/test-agent/threads")
     mock_response = Response(200, json=MOCK_THREADS_RESPONSE, request=mock_request)
 
-    with patch("httpx.get", return_value=mock_response) as mock_get:
+    with patch("httpx.Client.get", return_value=mock_response) as mock_get:
         result = agent_client.get_user_threads(USER_ID)
 
         assert isinstance(result, UserThreads)
@@ -386,7 +386,7 @@ def test_get_user_threads(agent_client):
             "limit": 20,
         }
 
-    with patch("httpx.get", return_value=mock_response) as mock_get:
+    with patch("httpx.Client.get", return_value=mock_response) as mock_get:
         agent_client.get_user_threads(USER_ID, agent="custom-agent", limit=50)
 
         args, kwargs = mock_get.call_args
@@ -397,7 +397,7 @@ def test_get_user_threads(agent_client):
         }
 
     agent_client.agent = None
-    with patch("httpx.get", return_value=mock_response) as mock_get:
+    with patch("httpx.Client.get", return_value=mock_response) as mock_get:
         agent_client.get_user_threads(USER_ID)
 
         args, kwargs = mock_get.call_args
@@ -407,7 +407,7 @@ def test_get_user_threads(agent_client):
     agent_client.agent = "test-agent"
 
     error_response = Response(500, text="Internal Server Error", request=mock_request)
-    with patch("httpx.get", return_value=error_response):
+    with patch("httpx.Client.get", return_value=error_response):
         with pytest.raises(AgentClientError) as exc:
             agent_client.get_user_threads(USER_ID)
         assert "Error:" in str(exc.value)

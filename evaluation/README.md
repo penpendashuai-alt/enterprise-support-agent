@@ -2,6 +2,10 @@
 
 本目录保留 Synthetic enterprise support dataset / public technical documentation 的 Phase 4 Dense 基线和 Phase 5 对照实验。真实评测使用 DashScope Embedding、Qdrant Cloud、Elasticsearch、Reranker 和聊天模型；Mock 只用于程序行为测试。
 
+## Phase 7
+
+Phase 7 的 Redis 缓存、并发控制、真实网络取消和性能对照见 [Phase 7 记录索引](phase7/README.md) 与 [开发文档](../docs/phase7_async_redis_performance.md)。四组最终服务矩阵、真实检索和小规模真实模型分别记录，拒绝不计为成功吞吐；没有证明真实 Agent 整体提速。
+
 ## Phase 6
 
 - [开发与复现](../docs/phase6_memory_postgres.md)：PostgreSQL、会话归属、显式偏好及旧环境边界。

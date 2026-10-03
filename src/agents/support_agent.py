@@ -24,6 +24,8 @@ from agents.ticket_flow import (
 )
 from core import get_model, settings
 from core.llm import ModelT
+from execution.control import model_stage
+from execution.telemetry import ControlError
 from rag.answers import evidence_message, finalize, unavailable_answer
 from rag.models import RetrievalResult
 from support_storage.preferences import preference_message
@@ -151,7 +153,7 @@ def get_support_model(config: RunnableConfig) -> ModelT:
 
 async def route_request(state: SupportState, config: RunnableConfig) -> dict:
     try:
-        async with asyncio.timeout(MODEL_TIMEOUT):
+        async with model_stage("router", MODEL_TIMEOUT):
             model = get_support_model(config)
             if isinstance(model, ChatOpenAI):
                 router = model.with_structured_output(RouteDecision, method="function_calling")
@@ -178,6 +180,8 @@ async def route_request(state: SupportState, config: RunnableConfig) -> dict:
                 route_config,
             )
             decision = RouteDecision.model_validate(raw)
+    except ControlError:
+        raise
     except Exception as exc:
         logger.warning("Support router failed: %s", type(exc).__name__)
         return {
@@ -284,7 +288,7 @@ async def handle_request(
             ]
         }
     try:
-        async with asyncio.timeout(MODEL_TIMEOUT):
+        async with model_stage("handler", MODEL_TIMEOUT):
             model = get_support_model(config)
             tools = [SUPPORT_TOOLS[name] for name in allowed_tools(state)]
             runnable = model.bind_tools(tools) if tools else model
@@ -336,6 +340,8 @@ async def handle_request(
                 else finalize(response, retrieval)
             )
         return {"messages": [response]}
+    except ControlError:
+        raise
     except Exception as exc:
         logger.warning("Support handler failed: %s", type(exc).__name__)
         return {

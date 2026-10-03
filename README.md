@@ -1,5 +1,7 @@
 # Enterprise Support Agent
 
+**Phase 7** adds versioned exact retrieval caching in Redis, atomic service/user rate limits, bounded request/model concurrency, deadlines, and HTTP/SSE cancellation cleanup. See the [Phase 7 implementation and performance guide](docs/phase7_async_redis_performance.md) for local Redis setup, four-way benchmarks, fault recovery and costs. Real retrieval cache hits avoided embedding/search calls; the small real-model comparison did **not** establish an end-to-end speedup. Single-worker scope and existing answer-quality limitations remain.
+
 This fork adapts Agent Service Toolkit into an enterprise knowledge and ticket support demonstration. **Phase 6** adds PostgreSQL business persistence, declared-user session ownership, explicit reply preferences, and recovery after a ticket commits but the graph checkpoint does not. Start with the [Phase 6 setup and recovery guide](docs/phase6_memory_postgres.md); run the business migration before starting the service. User IDs are caller-declared demo identities, not login authentication, and graph execution supports a single worker.
 
 Phase 5 added Elasticsearch BM25, RRF fusion, real DashScope reranking, shared versioned Qdrant/ES snapshots, and seven-way retrieval evaluation. The version 2 corpus has 36 documents / 72 chunks and 128 labeled questions. These are **synthetic enterprise support data and attributed public technical summaries**, not real company policies.

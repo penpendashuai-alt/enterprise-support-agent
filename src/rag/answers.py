@@ -3,6 +3,7 @@ import re
 
 from langchain_core.messages import AIMessage, SystemMessage
 
+from execution.telemetry import measured
 from rag.models import RetrievalResult
 
 
@@ -21,6 +22,7 @@ def unavailable_answer(result: RetrievalResult) -> AIMessage:
     return finalize(AIMessage(content=text), result, check=False)
 
 
+@measured("answer_validation", asynchronous=False)
 def finalize(response: AIMessage, result: RetrievalResult, check: bool = True) -> AIMessage:
     text = str(response.content)
     numbers = {int(n) for n in re.findall(r"\[(\d+)\]", text)}
@@ -32,6 +34,7 @@ def finalize(response: AIMessage, result: RetrievalResult, check: bool = True) -
     used = [available[n].model_dump() for n in sorted(numbers) if n in available]
     used_ids = {item["chunk_id"] for item in used}
     metadata = {
+        "cache": result.cache,
         "kind": "knowledge_answer",
         "retrieval_status": result.status,
         "query": result.query,

@@ -5,7 +5,7 @@ from unittest.mock import patch
 import httpx
 import pytest
 
-from client import AgentClient
+from client import AgentClient, AgentClientError
 from schema import ChatMessage, UserInput
 from tickets.models import ApprovalInput
 
@@ -24,7 +24,8 @@ async def test_sync_async_approval_and_pending_contract():
     )
     for method in ["invoke", "ainvoke"]:
         with patch(
-            "httpx.post" if method == "invoke" else "httpx.AsyncClient.post", return_value=response
+            "httpx.Client.post" if method == "invoke" else "httpx.AsyncClient.post",
+            return_value=response,
         ) as post:
             result = (
                 client.invoke(approval=approval, thread_id="one")
@@ -41,7 +42,7 @@ async def test_sync_async_approval_and_pending_contract():
         request=httpx.Request("GET", "http://test"),
     )
     with (
-        patch("httpx.get", return_value=response),
+        patch("httpx.Client.get", return_value=response),
         patch("httpx.AsyncClient.get", return_value=response),
     ):
         assert (
@@ -49,10 +50,10 @@ async def test_sync_async_approval_and_pending_contract():
             == await client.aget_pending_approval("one")
             == {"draft_id": approval.draft_id}
         )
-    error = client._parse_stream_line(
-        'data: {"type":"error","content":{"code":"stale_version","message":"expired"}}'
-    )
-    assert "stale_version" in error.content
+    with pytest.raises(AgentClientError, match="stale_version"):
+        client._parse_stream_line(
+            'data: {"type":"error","content":{"code":"stale_version","message":"expired"}}'
+        )
 
 
 @pytest.mark.asyncio
@@ -81,7 +82,7 @@ async def test_stream_clients_send_structured_approval():
         bodies.append(kwargs["json"])
         yield response
 
-    with patch("httpx.stream", stream), patch("httpx.AsyncClient.stream", astream):
+    with patch("httpx.Client.stream", stream), patch("httpx.AsyncClient.stream", astream):
         sync = list(client.stream(approval=approval, thread_id="one"))
         asynchronous = [item async for item in client.astream(approval=approval, thread_id="one")]
     assert sync == asynchronous

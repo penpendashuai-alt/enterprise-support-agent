@@ -6,6 +6,8 @@ from langchain_core.messages import AIMessage, HumanMessage
 from langchain_core.runnables import RunnableConfig
 from langgraph.types import Command
 
+from core import settings
+from execution.telemetry import ControlError, current, measure
 from schema import UserInput
 from tickets.models import (
     TicketDraft,
@@ -23,14 +25,30 @@ _locks: dict[str, tuple[asyncio.Lock, int]] = {}
 
 @asynccontextmanager
 async def execution_lock(agent_id: str, thread_id: str | None):
+    if (trace := current.get()) and thread_id and trace.locked_thread == thread_id:
+        yield
+        return
     if not thread_id:
         yield
         return
     lock, count = _locks.get(thread_id, (asyncio.Lock(), 0))
     _locks[thread_id] = (lock, count + 1)
     try:
-        async with lock:
+        acquired = False
+        try:
+            with measure("thread_wait"):
+                try:
+                    async with asyncio.timeout(
+                        settings.THREAD_WAIT_TIMEOUT if settings.ADMISSION_ENABLED else None
+                    ):
+                        await lock.acquire()
+                        acquired = True
+                except TimeoutError:
+                    raise ControlError("thread_busy") from None
             yield
+        finally:
+            if acquired:
+                lock.release()
     finally:
         _, count = _locks[thread_id]
         if count == 1:

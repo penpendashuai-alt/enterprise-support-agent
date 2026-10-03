@@ -4,6 +4,7 @@ from fastapi import HTTPException
 from langchain_core.runnables import RunnableConfig
 
 from core.settings import DatabaseType, settings
+from execution.telemetry import measured
 from support_storage.repository import OwnershipConflict
 from support_storage.runtime import repository
 
@@ -24,7 +25,10 @@ def context_user(config) -> str:
     return identity(config.get("configurable", {}).get("user_id"))
 
 
-async def guard_thread(thread_id, user_id, agent_id, *, create=False, title="", checkpointer=None):
+@measured("ownership")
+async def guard_thread(
+    thread_id, user_id, agent_id, *, create=False, title="", checkpointer=None, allow_new=False
+):
     if settings.DATABASE_TYPE == DatabaseType.MONGO and agent_id != "support-agent":
         return user_id
     if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}", thread_id):
@@ -38,7 +42,7 @@ async def guard_thread(thread_id, user_id, agent_id, *, create=False, title="", 
             if row["user_id"] != user_id or row["agent_id"] != agent_id:
                 raise HTTPException(403, detail="Thread ownership mismatch")
         elif agent_id == "support-agent":
-            if not create:
+            if not create and not allow_new:
                 raise HTTPException(404, detail="Support session not found")
             if checkpointer and await checkpointer.aget_tuple(
                 RunnableConfig(configurable={"thread_id": thread_id})

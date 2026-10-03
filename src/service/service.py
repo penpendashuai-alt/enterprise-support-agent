@@ -30,6 +30,10 @@ from langsmith import uuid7
 
 from agents import DEFAULT_AGENT, AgentGraph, get_agent, get_all_agent_info, load_agent
 from core import settings
+from execution.middleware import SupportExecutionMiddleware
+from execution.redis_runtime import initialize_redis
+from execution.streaming import SupportStreamingResponse
+from execution.telemetry import ControlError, current
 from memory import initialize_database, initialize_store
 from schema import (
     ChatHistory,
@@ -97,6 +101,7 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
             initialize_database() as saver,
             initialize_store() as store,
             initialize_support_storage(),
+            initialize_redis(),
         ):
             # Set up both components
             if hasattr(saver, "setup"):  # ignore: union-attr
@@ -140,6 +145,7 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
 
 
 app = FastAPI(lifespan=lifespan, generate_unique_id_function=custom_generate_unique_id)
+app.add_middleware(SupportExecutionMiddleware)
 router = APIRouter(dependencies=[Depends(verify_bearer)])
 # AG-UI protocol endpoints inherit the same bearer auth - see service/agui.py
 router.include_router(agui_router)
@@ -165,6 +171,8 @@ async def _handle_input(
     Returns kwargs for agent invocation and the run_id.
     """
     run_id = uuid7()
+    if trace := current.get():
+        trace.run_id = str(run_id)
     thread_id = user_input.thread_id or str(uuid4())
     user_id = (
         identity(user_input.user_id)
@@ -293,6 +301,8 @@ async def _invoke(user_input: UserInput, agent_id: str) -> ChatMessage:
 
         output.run_id = str(run_id)
         return output
+    except ControlError:
+        raise
     except Exception as e:
         logger.error("Agent execution failed: %s", type(e).__name__)
         raise HTTPException(status_code=500, detail="Unexpected error")
@@ -331,11 +341,11 @@ async def _message_generator(
         yield "data: [DONE]\n\n"
         return
 
+    graph_stream = agent.astream(  # type: ignore[no-matching-overload]
+        **kwargs, stream_mode=["updates", "messages", "custom"], subgraphs=True
+    )
     try:
-        # Process streamed events from the graph and yield messages over the SSE stream.
-        async for stream_event in agent.astream(  # type: ignore[no-matching-overload]
-            **kwargs, stream_mode=["updates", "messages", "custom"], subgraphs=True
-        ):
+        async for stream_event in graph_stream:
             if not isinstance(stream_event, tuple):
                 continue
             # Handle different stream event structures based on subgraphs
@@ -426,9 +436,15 @@ async def _message_generator(
                     # that the model is asking for a tool to be invoked.
                     # So we only print non-empty content.
                     yield f"data: {json.dumps({'type': 'token', 'content': convert_message_content_to_string(content)})}\n\n"
+    except ControlError:
+        raise
     except Exception as e:
         logger.error("Error in message generator: %s", type(e).__name__)
+        if trace := current.get():
+            trace.outcome = "sse_error"
         yield f"data: {json.dumps({'type': 'error', 'content': 'Internal server error'})}\n\n"
+    finally:
+        await graph_stream.aclose()
     yield "data: [DONE]\n\n"
 
 
@@ -471,7 +487,8 @@ async def stream(user_input: StreamInput, agent_id: str = DEFAULT_AGENT) -> Stre
 
     Set `stream_tokens=false` to return intermediate messages but not token-by-token.
     """
-    return StreamingResponse(
+    response_class = SupportStreamingResponse if agent_id == "support-agent" else StreamingResponse
+    return response_class(
         message_generator(user_input, agent_id),
         media_type="text/event-stream",
     )

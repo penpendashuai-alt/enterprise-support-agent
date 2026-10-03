@@ -1,0 +1,217 @@
+{
+  "mode": "full",
+  "source": ".",
+  "database": "phase7_bench_099c7c3576474ec5962d75dbba1d876b",
+  "pool_size_per_role": 1,
+  "worker_count": 1,
+  "model": "deterministic; NOT real LLM throughput",
+  "batches": [],
+  "network_checks": [
+    {
+      "check": "sse_preflight_identity_http422",
+      "status": "passed"
+    },
+    {
+      "check": "real_sse_close_cancels_model_releases_lock_and_capacity",
+      "status": "passed"
+    },
+    {
+      "check": "same_thread_usable_after_disconnect",
+      "status": "passed"
+    },
+    {
+      "check": "real_invoke_close_releases_resources",
+      "status": "passed"
+    },
+    {
+      "check": "sse_after_headers_structured_deadline_error",
+      "seconds": 1.5024306999985129,
+      "status": "passed"
+    },
+    {
+      "check": "thread_wait_timeout_and_cleanup",
+      "status": "passed"
+    },
+    {
+      "check": "validated_answer_sse_timing",
+      "status": "passed",
+      "first_event": 0.23806990002049133,
+      "first_content": 0.23806990002049133,
+      "first_validated_answer": 0.23806990002049133,
+      "end": 0.24083950003841892,
+      "ttft": null
+    },
+    {
+      "check": "final_resources",
+      "status": "passed",
+      "stats": {
+        "model": 8,
+        "embedding": 2,
+        "search": 2,
+        "index": 4,
+        "active_model": 0,
+        "peak_model": 1,
+        "control": {
+          "model": {
+            "present": 0,
+            "active": 0
+          },
+          "approval": {
+            "present": 0,
+            "active": 0
+          },
+          "read": {
+            "present": 0,
+            "active": 0
+          },
+          "model_calls": {
+            "present": 0,
+            "active": 0
+          }
+        },
+        "completed": [
+          {
+            "request_id": "1ed0eb3e1be1479a8a8972c2b9f7411e",
+            "run_id": null,
+            "category": "read",
+            "outcome": "invalid_request",
+            "status": 422,
+            "total_seconds": 0.00037940003676339984,
+            "timings": {}
+          },
+          {
+            "request_id": "c38e81831d534a02ad32289876bf528c",
+            "run_id": "01a0fccb-f4aa-7fc3-9446-30917681ffd9",
+            "category": "model",
+            "outcome": "disconnected",
+            "status": 200,
+            "total_seconds": 0.05396930000279099,
+            "timings": {
+              "rate_check": 0.0036353999748826027,
+              "thread_wait": 1.8700025975704193e-05,
+              "execution_wait": 1.7599959392100573e-05,
+              "ownership": 0.01919580000685528,
+              "ownership_preflight": 0.006918500002939254,
+              "output_send": 9.330001194030046e-05,
+              "model_wait": 1.3399985618889332e-05,
+              "router": 0.0190681999665685,
+              "execution": 0.04298879997804761
+            }
+          },
+          {
+            "request_id": "5b46ed4ae3a344489e3abb1eccff7edf",
+            "run_id": "01a0fccb-f4f4-7510-a797-a7c5b6de823d",
+            "category": "model",
+            "outcome": "success",
+            "status": 200,
+            "total_seconds": 0.23671670001931489,
+            "timings": {
+              "rate_check": 0.0008702999912202358,
+              "thread_wait": 1.1899974197149277e-05,
+              "execution_wait": 8.100003469735384e-06,
+              "ownership": 0.0039882000419311225,
+              "ownership_preflight": 0.0011139999842271209,
+              "model_wait": 2.3400061763823032e-05,
+              "router": 0.030988099984824657,
+              "preferences": 0.004877999948803335,
+              "handler": 0.07562830002279952,
+              "answer_validation": 0.00025669997557997704,
+              "output_send": 0.00014379998901858926,
+              "execution": 0.23437320004450157
+            }
+          },
+          {
+            "request_id": "5696168a0cb242c89626671395881b82",
+            "run_id": "01a0fccb-f5e4-7111-a803-ae473310c44d",
+            "category": "model",
+            "outcome": "disconnected",
+            "status": 200,
+            "total_seconds": 0.021420600009150803,
+            "timings": {
+              "rate_check": 0.0007672999636270106,
+              "thread_wait": 9.09995287656784e-06,
+              "execution_wait": 7.499998901039362e-06,
+              "ownership": 0.005145200004335493,
+              "ownership_preflight": 0.0009757000370882452,
+              "model_wait": 9.700015652924776e-06,
+              "router": 0.011871499998960644,
+              "execution": 0.019367199973203242
+            }
+          },
+          {
+            "request_id": "a797c703235b4f8cb43204d09b1656c2",
+            "run_id": "01a0fccb-f600-7de0-9fe4-0705d4a9e6d7",
+            "category": "model",
+            "outcome": "request_timeout",
+            "status": 504,
+            "total_seconds": 1.5015562999760732,
+            "timings": {
+              "rate_check": 0.0007402999908663332,
+              "thread_wait": 8.300004992634058e-06,
+              "execution_wait": 7.599999662488699e-06,
+              "ownership": 0.004322800028603524,
+              "ownership_preflight": 0.0010127999703399837,
+              "output_send": 7.699994603171945e-05,
+              "model_wait": 1.1700030881911516e-05,
+              "router": 1.49102130002575,
+              "execution": 1.4993175000417978
+            }
+          },
+          {
+            "request_id": "125bd76eb892411d87a30c685099a185",
+            "run_id": null,
+            "category": "model",
+            "outcome": "thread_busy",
+            "status": 503,
+            "total_seconds": 0.15955589996883646,
+            "timings": {
+              "rate_check": 0.0007431999547407031,
+              "thread_wait": 0.1582238999544643
+            }
+          },
+          {
+            "request_id": "9feb94399533405c8bdefc27812f8efe",
+            "run_id": "01a0fccb-fbe0-7c21-93cd-f7f740a9534e",
+            "category": "model",
+            "outcome": "request_timeout",
+            "status": 504,
+            "total_seconds": 1.5034070000401698,
+            "timings": {
+              "rate_check": 0.000764199998229742,
+              "thread_wait": 8.399947546422482e-06,
+              "execution_wait": 6.999995093792677e-06,
+              "ownership": 0.0036752999876625836,
+              "ownership_preflight": 0.0009510999661870301,
+              "model_wait": 1.899997005239129e-05,
+              "router": 1.4948010999942198,
+              "execution": 1.5010010999976657
+            }
+          },
+          {
+            "request_id": "45867d67cc8646c7be6e198e2e2a96bc",
+            "run_id": "01a0fccc-01c2-75e0-819c-47f73ff8acd6",
+            "category": "model",
+            "outcome": "success",
+            "status": 200,
+            "total_seconds": 0.24033999996026978,
+            "timings": {
+              "rate_check": 0.0007547999848611653,
+              "thread_wait": 8.200004231184721e-06,
+              "execution_wait": 7.299997378140688e-06,
+              "ownership": 0.005554900038987398,
+              "ownership_preflight": 0.001306299993302673,
+              "output_send": 0.000374399998690933,
+              "model_wait": 2.1199986804276705e-05,
+              "router": 0.03138200001558289,
+              "preferences": 0.0032118000090122223,
+              "handler": 0.06786439998541027,
+              "answer_validation": 0.00012019998393952847,
+              "execution": 0.23801289999391884
+            }
+          }
+        ],
+        "thread_locks": 0
+      }
+    }
+  ]
+}

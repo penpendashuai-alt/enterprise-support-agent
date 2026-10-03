@@ -316,9 +316,10 @@ async def test_handler_exception_after_tools(monkeypatch):
             ToolMessage(content="{}", tool_call_id="call-1"),
         ],
     }
-    result = await handle_request(state, {})
-    assert "处理失败" in result["messages"][0].content
-    assert_paired([*state["messages"], *result["messages"]])
+    from execution.telemetry import ControlError
+
+    with pytest.raises(ControlError, match="model_timeout"):
+        await handle_request(state, {})
 
 
 @pytest.mark.asyncio

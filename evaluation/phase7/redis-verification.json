@@ -1,0 +1,13 @@
+{
+  "checks": [
+    "equivalent_hit_zero_usage",
+    "real_ttl_expiry_recomputes",
+    "corruption_recompute_index_check_before_hit",
+    "100_concurrent_exactly_7_all_or_nothing_debits",
+    "redis_time_refill_and_expiry",
+    "service_exhaustion_does_not_create_or_debit_user"
+  ],
+  "namespace": "esa:p7:verify:669706eb755a4d9abb2d82feb2e6a57d",
+  "redis_version": "7.0.15",
+  "status": "passed"
+}

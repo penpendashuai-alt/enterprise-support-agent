@@ -1,0 +1,15 @@
+{
+  "mode": "full",
+  "source": ".",
+  "database": "phase7_bench_73dcac78e12d48c2859c802d3e43702d",
+  "pool_size_per_role": 1,
+  "worker_count": 1,
+  "model": "deterministic; NOT real LLM throughput",
+  "batches": [],
+  "network_checks": [
+    {
+      "check": "redis_unreachable_expensive_closed_read_available",
+      "status": "passed"
+    }
+  ]
+}

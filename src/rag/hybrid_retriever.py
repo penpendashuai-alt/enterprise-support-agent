@@ -71,6 +71,19 @@ class HybridRetriever:
                 await client.close()
 
     async def retrieve(self, query: str):
+        from core import settings
+
+        if (
+            settings.RAG_CACHE_ENABLED
+            and self.settings.RAG_RETRIEVAL_MODE == "dense"
+            and not self.settings.RAG_DENSE_LEGACY
+        ):
+            from rag.cache import runtime
+
+            return await runtime().retrieve(self, query)
+        return await self._retrieve(query)
+
+    async def _retrieve(self, query: str):
         settings = self.settings
         requested = settings.RAG_RETRIEVAL_MODE
         actual = requested

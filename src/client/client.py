@@ -1,6 +1,10 @@
+import asyncio
 import json
 import os
+import weakref
 from collections.abc import AsyncGenerator, Generator
+from contextlib import asynccontextmanager
+from contextvars import ContextVar
 from typing import Any
 
 import httpx
@@ -21,6 +25,9 @@ from tickets.models import ApprovalInput
 
 class AgentClientError(Exception):
     pass
+
+
+_http_session: ContextVar[tuple | None] = ContextVar("agent_http_session", default=None)
 
 
 class AgentClient:
@@ -46,12 +53,66 @@ class AgentClient:
         self.base_url = base_url
         self.auth_secret = os.getenv("AUTH_SECRET")
         self.timeout = timeout
+        self._http_timeout = httpx.Timeout(
+            timeout if timeout is not None else float(os.getenv("REQUEST_TIMEOUT", "120")) + 10,
+            connect=5,
+            write=10,
+            pool=5,
+        )
+        self._sync_http: httpx.Client | None = None
+        self._finalizer = None
         self.info: ServiceMetadata | None = None
         self.agent: str | None = None
         if get_info:
             self.retrieve_info()
         if agent:
             self.update_agent(agent)
+
+    @property
+    def http(self):
+        if self._sync_http is None:
+            self._sync_http = httpx.Client(
+                timeout=self._http_timeout,
+                limits=httpx.Limits(
+                    max_connections=10, max_keepalive_connections=5, keepalive_expiry=30
+                ),
+            )
+            self._finalizer = weakref.finalize(self, self._sync_http.close)
+        return self._sync_http
+
+    def close(self):
+        if self._finalizer:
+            self._finalizer()
+        self._sync_http = None
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        self.close()
+
+    @staticmethod
+    @asynccontextmanager
+    async def session():
+        async with httpx.AsyncClient(
+            limits=httpx.Limits(max_connections=10, max_keepalive_connections=5),
+            timeout=httpx.Timeout(130, connect=5, write=10, pool=5),
+        ) as client:
+            token = _http_session.set((asyncio.get_running_loop(), client))
+            try:
+                yield client
+            finally:
+                _http_session.reset(token)
+
+    @asynccontextmanager
+    async def _async_http(self):
+        async with asyncio.timeout(self._http_timeout.read):
+            bound = _http_session.get()
+            if bound is not None and bound[0] is asyncio.get_running_loop():
+                yield bound[1]
+            else:
+                async with self.session() as client:
+                    yield client
 
     @property
     def _headers(self) -> dict[str, str]:
@@ -62,10 +123,10 @@ class AgentClient:
 
     def retrieve_info(self) -> None:
         try:
-            response = httpx.get(
+            response = self.http.get(
                 f"{self.base_url}/info",
                 headers=self._headers,
-                timeout=self.timeout,
+                timeout=self._http_timeout,
             )
             response.raise_for_status()
         except httpx.HTTPError as e:
@@ -119,18 +180,18 @@ class AgentClient:
             request.agent_config = agent_config
         if user_id:
             request.user_id = user_id
-        async with httpx.AsyncClient() as client:
+        async with self._async_http() as client:
             try:
                 response = await client.post(
                     f"{self.base_url}/{self.agent}/invoke",
                     json=request.model_dump(),
                     headers=self._headers,
-                    timeout=self.timeout,
+                    timeout=self._http_timeout,
                 )
                 response.raise_for_status()
             except httpx.HTTPError as e:
                 raise AgentClientError(
-                    f"Error: {e}; {e.response.text if isinstance(e, httpx.HTTPStatusError) else ''}"
+                    f"Error: {e}; {e.response.headers.get('Retry-After', '') if isinstance(e, httpx.HTTPStatusError) else ''}"
                 )
 
         return ChatMessage.model_validate(response.json())
@@ -169,16 +230,16 @@ class AgentClient:
         if user_id:
             request.user_id = user_id
         try:
-            response = httpx.post(
+            response = self.http.post(
                 f"{self.base_url}/{self.agent}/invoke",
                 json=request.model_dump(),
                 headers=self._headers,
-                timeout=self.timeout,
+                timeout=self._http_timeout,
             )
             response.raise_for_status()
         except httpx.HTTPError as e:
             raise AgentClientError(
-                f"Error: {e}; {e.response.text if isinstance(e, httpx.HTTPStatusError) else ''}"
+                f"Error: {e}; {e.response.headers.get('Retry-After', '') if isinstance(e, httpx.HTTPStatusError) else ''}"
             )
 
         return ChatMessage.model_validate(response.json())
@@ -205,7 +266,7 @@ class AgentClient:
                     return parsed["content"]
                 case "error":
                     error_msg = "Error: " + str(parsed["content"])
-                    return ChatMessage(type="ai", content=error_msg)
+                    raise AgentClientError(error_msg)
         return None
 
     def stream(
@@ -251,23 +312,30 @@ class AgentClient:
         if agent_config:
             request.agent_config = agent_config
         try:
-            with httpx.stream(
+            with self.http.stream(
                 "POST",
                 f"{self.base_url}/{self.agent}/stream",
                 json=request.model_dump(),
                 headers=self._headers,
-                timeout=self.timeout,
+                timeout=self._http_timeout,
             ) as response:
                 response.raise_for_status()
+                done = False
                 for line in response.iter_lines():
+                    if line.strip() == "data: [DONE]":
+                        done = True
+                        break
                     if line.strip():
                         parsed = self._parse_stream_line(line)
-                        if parsed is None:
-                            break
-                        yield parsed
+                        if parsed is not None:
+                            yield parsed
+                if not done:
+                    raise AgentClientError(
+                        "Stream ended without completion; verify the original request before retrying"
+                    )
         except httpx.HTTPError as e:
             raise AgentClientError(
-                f"Error: {e}; {e.response.text if isinstance(e, httpx.HTTPStatusError) else ''}"
+                f"Error: {e}; {e.response.headers.get('Retry-After', '') if isinstance(e, httpx.HTTPStatusError) else ''}"
             )
 
     async def astream(
@@ -312,27 +380,35 @@ class AgentClient:
             request.agent_config = agent_config
         if user_id:
             request.user_id = user_id
-        async with httpx.AsyncClient() as client:
+        async with self._async_http() as client:
             try:
                 async with client.stream(
                     "POST",
                     f"{self.base_url}/{self.agent}/stream",
                     json=request.model_dump(),
                     headers=self._headers,
-                    timeout=self.timeout,
+                    timeout=self._http_timeout,
                 ) as response:
                     response.raise_for_status()
+                    done = False
                     async for line in response.aiter_lines():
+                        if line.strip() == "data: [DONE]":
+                            done = True
+                            break
                         if line.strip():
                             parsed = self._parse_stream_line(line)
                             if parsed is None:
-                                break
+                                continue
                             # Don't yield empty string tokens as they cause generator issues
                             if parsed != "":
                                 yield parsed
+                    if not done:
+                        raise AgentClientError(
+                            "Stream ended without completion; verify the original request before retrying"
+                        )
             except httpx.HTTPError as e:
                 raise AgentClientError(
-                    f"Error: {e}; {e.response.text if isinstance(e, httpx.HTTPStatusError) else ''}"
+                    f"Error: {e}; {e.response.headers.get('Retry-After', '') if isinstance(e, httpx.HTTPStatusError) else ''}"
                 )
 
     def support_preferences(
@@ -340,13 +416,13 @@ class AgentClient:
     ) -> dict:
         method = "DELETE" if delete else "PUT" if preferences is not None else "GET"
         try:
-            response = httpx.request(
+            response = self.http.request(
                 method,
                 f"{self.base_url}/support-agent/preferences",
                 params={"user_id": user_id},
                 json=preferences,
                 headers=self._headers,
-                timeout=self.timeout,
+                timeout=self._http_timeout,
             )
             response.raise_for_status()
             return response.json()
@@ -357,11 +433,11 @@ class AgentClient:
 
     def support_tickets(self, user_id: str) -> dict:
         try:
-            response = httpx.get(
+            response = self.http.get(
                 f"{self.base_url}/support-agent/tickets",
                 params={"user_id": user_id, "limit": 20},
                 headers=self._headers,
-                timeout=self.timeout,
+                timeout=self._http_timeout,
             )
             response.raise_for_status()
             return response.json()
@@ -370,11 +446,11 @@ class AgentClient:
 
     def get_pending_approval(self, thread_id: str, user_id: str | None = None) -> dict | None:
         try:
-            response = httpx.get(
+            response = self.http.get(
                 f"{self.base_url}/support-agent/approval",
                 params={"thread_id": thread_id, **({"user_id": user_id} if user_id else {})},
                 headers=self._headers,
-                timeout=self.timeout,
+                timeout=self._http_timeout,
             )
             if response.status_code == 404:
                 return None
@@ -386,13 +462,13 @@ class AgentClient:
     async def aget_pending_approval(
         self, thread_id: str, user_id: str | None = None
     ) -> dict | None:
-        async with httpx.AsyncClient() as client:
+        async with self._async_http() as client:
             try:
                 response = await client.get(
                     f"{self.base_url}/support-agent/approval",
                     params={"thread_id": thread_id, **({"user_id": user_id} if user_id else {})},
                     headers=self._headers,
-                    timeout=self.timeout,
+                    timeout=self._http_timeout,
                 )
                 if response.status_code == 404:
                     return None
@@ -412,19 +488,19 @@ class AgentClient:
         See: https://api.smith.langchain.com/redoc#tag/feedback/operation/create_feedback_api_v1_feedback_post
         """
         request = Feedback(run_id=run_id, key=key, score=score, kwargs=kwargs)
-        async with httpx.AsyncClient() as client:
+        async with self._async_http() as client:
             try:
                 response = await client.post(
                     f"{self.base_url}/feedback",
                     json=request.model_dump(),
                     headers=self._headers,
-                    timeout=self.timeout,
+                    timeout=self._http_timeout,
                 )
                 response.raise_for_status()
                 response.json()
             except httpx.HTTPError as e:
                 raise AgentClientError(
-                    f"Error: {e}; {e.response.text if isinstance(e, httpx.HTTPStatusError) else ''}"
+                    f"Error: {e}; {e.response.headers.get('Retry-After', '') if isinstance(e, httpx.HTTPStatusError) else ''}"
                 )
 
     def get_history(
@@ -441,16 +517,16 @@ class AgentClient:
         request = ChatHistoryInput(thread_id=thread_id, user_id=user_id)
         url = f"{self.base_url}/{agent}/history" if agent else f"{self.base_url}/history"
         try:
-            response = httpx.post(
+            response = self.http.post(
                 url,
                 json=request.model_dump(),
                 headers=self._headers,
-                timeout=self.timeout,
+                timeout=self._http_timeout,
             )
             response.raise_for_status()
         except httpx.HTTPError as e:
             raise AgentClientError(
-                f"Error: {e}; {e.response.text if isinstance(e, httpx.HTTPStatusError) else ''}"
+                f"Error: {e}; {e.response.headers.get('Retry-After', '') if isinstance(e, httpx.HTTPStatusError) else ''}"
             )
 
         return ChatHistory.model_validate(response.json())
@@ -475,16 +551,16 @@ class AgentClient:
         """
         url, params = self._user_threads_request(user_id, agent, limit)
         try:
-            response = httpx.get(
+            response = self.http.get(
                 url,
                 params=params,
                 headers=self._headers,
-                timeout=self.timeout,
+                timeout=self._http_timeout,
             )
             response.raise_for_status()
         except httpx.HTTPError as e:
             raise AgentClientError(
-                f"Error: {e}; {e.response.text if isinstance(e, httpx.HTTPStatusError) else ''}"
+                f"Error: {e}; {e.response.headers.get('Retry-After', '') if isinstance(e, httpx.HTTPStatusError) else ''}"
             )
 
         return UserThreads.model_validate(response.json())
@@ -501,18 +577,18 @@ class AgentClient:
             limit (int, optional): Maximum number of threads to return.
         """
         url, params = self._user_threads_request(user_id, agent, limit)
-        async with httpx.AsyncClient() as client:
+        async with self._async_http() as client:
             try:
                 response = await client.get(
                     url,
                     params=params,
                     headers=self._headers,
-                    timeout=self.timeout,
+                    timeout=self._http_timeout,
                 )
                 response.raise_for_status()
             except httpx.HTTPError as e:
                 raise AgentClientError(
-                    f"Error: {e}; {e.response.text if isinstance(e, httpx.HTTPStatusError) else ''}"
+                    f"Error: {e}; {e.response.headers.get('Retry-After', '') if isinstance(e, httpx.HTTPStatusError) else ''}"
                 )
 
         return UserThreads.model_validate(response.json())

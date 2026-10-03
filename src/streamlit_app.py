@@ -64,7 +64,10 @@ def fetch_user_threads_cached(
     Fetch and cache user threads using the new synchronous get_user_threads method.
     """
     client = AgentClient(base_url=base_url, get_info=False)
-    return client.get_user_threads(user_id=user_id, agent=agent_id, limit=limit)
+    try:
+        return client.get_user_threads(user_id=user_id, agent=agent_id, limit=limit)
+    finally:
+        client.close()
 
 
 async def main() -> None:
@@ -664,5 +667,10 @@ async def handle_sub_agent_msgs(messages_agen, status, is_new):
                         nested_popovers[tc["id"]] = popover
 
 
+async def run_with_http_session():
+    async with AgentClient.session():
+        await main()
+
+
 if __name__ == "__main__":
-    asyncio.run(main())
+    asyncio.run(run_with_http_session())

@@ -1,0 +1,26 @@
+{
+  "source_hashes_match": {
+    "service-baseline-matrix-v2.json": true,
+    "service-baseline-repeat.json": true,
+    "service-cache-matrix-v2.json": true,
+    "service-cache-repeat.json": true,
+    "service-control-matrix-v2.json": true,
+    "service-control-repeat.json": true,
+    "service-full-matrix.json": true,
+    "service-full-repeat.json": true
+  },
+  "support_prompts_unchanged": true,
+  "old_data_evaluations_migrations_unchanged": true,
+  "tests": {
+    "passed": 341,
+    "skipped_docker": 4
+  },
+  "ruff": "passed",
+  "format": "172 files passed",
+  "pyrefly_errors": 0,
+  "uv_lock": "passed",
+  "diff_check": "passed",
+  "private_files_git_ignored": true,
+  "markdown": "passed",
+  "final_service_requests": 10000
+}

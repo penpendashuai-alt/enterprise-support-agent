@@ -125,6 +125,31 @@ class Settings(BaseSettings):
     )  # Options: DatabaseType.SQLITE or DatabaseType.POSTGRES
     SQLITE_DB_PATH: str = "checkpoints.db"
     TICKET_DB_PATH: str = "tickets.db"
+    REDIS_URL: SecretStr = SecretStr("redis://127.0.0.1:16379/0")
+    REDIS_NAMESPACE: str = Field(default="esa:p7", pattern=r"^[A-Za-z0-9:_-]{1,80}$")
+    REDIS_TIMEOUT: float = Field(default=0.5, gt=0, le=5)
+    REDIS_POOL_SIZE: int = Field(default=24, ge=1, le=100)
+    RAG_CACHE_ENABLED: bool = False
+    RAG_CACHE_TTL: int = Field(default=300, ge=1, le=86400)
+    RAG_CACHE_MAX_BYTES: int = Field(default=262144, ge=1024, le=1048576)
+    RETRIEVAL_INFLIGHT_MAX: int = Field(default=8, ge=1, le=100)
+    RETRIEVAL_WAITERS_MAX: int = Field(default=32, ge=1, le=500)
+    SHARED_RETRIEVAL_TIMEOUT: float = Field(default=90, gt=0, le=180)
+    ADMISSION_ENABLED: bool = False
+    REQUEST_TIMEOUT: float = Field(default=120, gt=0, le=300)
+    EXECUTION_LIMIT: int = Field(default=6, ge=1, le=100)
+    EXECUTION_QUEUE_LIMIT: int = Field(default=12, ge=0, le=1000)
+    PROTECTED_LIMIT: int = Field(default=3, ge=1, le=30)
+    PROTECTED_QUEUE_LIMIT: int = Field(default=8, ge=0, le=100)
+    READ_LIMIT: int = Field(default=4, ge=1, le=30)
+    READ_QUEUE_LIMIT: int = Field(default=8, ge=0, le=100)
+    MODEL_LIMIT: int = Field(default=3, ge=1, le=50)
+    QUEUE_WAIT_TIMEOUT: float = Field(default=3, gt=0, le=60)
+    THREAD_WAIT_TIMEOUT: float = Field(default=2, gt=0, le=60)
+    RATE_SERVICE_CAPACITY: int = Field(default=40, ge=1, le=10000)
+    RATE_SERVICE_REFILL: float = Field(default=20, gt=0, le=10000)
+    RATE_USER_CAPACITY: int = Field(default=20, ge=1, le=10000)
+    RATE_USER_REFILL: float = Field(default=10, gt=0, le=10000)
 
     # PostgreSQL Configuration
     POSTGRES_USER: str | None = None

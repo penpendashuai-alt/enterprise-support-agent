@@ -305,6 +305,27 @@ def run(args):
         request("DELETE", "/support-agent/preferences", params={"user_id": "alice"})
         result = invoke("restart-pending", approval=decision(draft))["custom_data"]
         ticket = result["ticket"]["ticket_id"]
+        if args.restart_test_redis:
+            from core import settings
+
+            assert (
+                settings.ADMISSION_ENABLED
+                and settings.REDIS_URL.get_secret_value() == "redis://127.0.0.1:16380/0"
+            )
+            redis_command = [sys.executable, str(ROOT / "scripts/local_redis.py")]
+            subprocess.run([*redis_command, "stop", "--port", "16380"], check=True)
+            try:
+                assert (
+                    invoke("restart-pending", approval=decision(draft))["custom_data"]["ticket"][
+                        "ticket_id"
+                    ]
+                    == ticket
+                )
+            finally:
+                subprocess.run([*redis_command, "start", "--port", "16380"], check=True)
+            report["redis_outage_duplicate_approval"] = (
+                "same committed ticket returned with Redis stopped; repeated again after restart"
+            )
         assert (
             invoke("restart-pending", approval=decision(draft))["custom_data"]["ticket"][
                 "ticket_id"
@@ -462,4 +483,5 @@ if __name__ == "__main__":
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--pg-ctl", type=Path)
     parser.add_argument("--pg-data", type=Path)
+    parser.add_argument("--restart-test-redis", action="store_true")
     run(parser.parse_args())

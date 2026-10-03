@@ -1,4 +1,3 @@
-import asyncio
 from typing import Literal
 from uuid import uuid4
 
@@ -8,6 +7,8 @@ from langchain_openai import ChatOpenAI
 from langgraph.types import interrupt
 from pydantic import BaseModel, ConfigDict, ValidationError
 
+from execution.control import model_stage
+from execution.telemetry import ControlError
 from support_storage.identity import context_user
 from tickets.models import (
     ApprovalInput,
@@ -55,7 +56,7 @@ async def prepare_draft(state: dict, config: RunnableConfig) -> dict:
             for m in messages[boundary:]
             if isinstance(m, (HumanMessage, AIMessage)) and not getattr(m, "tool_calls", None)
         ]
-        async with asyncio.timeout(MODEL_TIMEOUT):
+        async with model_stage("draft", MODEL_TIMEOUT):
             raw = await extractor.ainvoke(
                 [
                     SystemMessage(
@@ -87,6 +88,8 @@ async def prepare_draft(state: dict, config: RunnableConfig) -> dict:
         draft = TicketDraft.model_validate(
             {**extracted.model_dump(), "priority": extracted.priority or "P3"}
         )
+    except ControlError:
+        raise
     except Exception:
         return {
             "approval_status": "collecting",

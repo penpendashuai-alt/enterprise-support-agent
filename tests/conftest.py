@@ -37,6 +37,8 @@ def isolate_support_storage(monkeypatch, tmp_path):
     monkeypatch.setattr(settings, "DATABASE_TYPE", DatabaseType.SQLITE)
     monkeypatch.setattr(settings, "TICKET_DB_PATH", str(tmp_path / "support-business.db"))
     monkeypatch.setattr(settings, "SUPPORT_DEMO_SAMPLES", True)
+    monkeypatch.setattr(settings, "RAG_CACHE_ENABLED", False)
+    monkeypatch.setattr(settings, "ADMISSION_ENABLED", False)
 
 
 @pytest.fixture(autouse=True)
