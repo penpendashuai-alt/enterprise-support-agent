@@ -1,0 +1,60 @@
+{
+  "method": "Exact annotated source quote coverage; not semantic support or end-to-end success",
+  "router_bypassed": true,
+  "planned_tasks": 5,
+  "completed_tasks": 5,
+  "points": [
+    {
+      "case_id": "P8-R-p1-short",
+      "point_id": "definition",
+      "candidate_covered": true,
+      "evidence_covered": false
+    },
+    {
+      "case_id": "P8-R-p1-short",
+      "point_id": "unknown_sla",
+      "candidate_covered": true,
+      "evidence_covered": true
+    },
+    {
+      "case_id": "P8-R-conflict",
+      "point_id": "a",
+      "candidate_covered": true,
+      "evidence_covered": true
+    },
+    {
+      "case_id": "P8-R-conflict",
+      "point_id": "b",
+      "candidate_covered": true,
+      "evidence_covered": true
+    },
+    {
+      "case_id": "P8-R-conflict",
+      "point_id": "resolve",
+      "candidate_covered": true,
+      "evidence_covered": true
+    },
+    {
+      "case_id": "P8-R-809",
+      "point_id": "steps",
+      "candidate_covered": true,
+      "evidence_covered": true
+    },
+    {
+      "case_id": "P8-R-809",
+      "point_id": "admin",
+      "candidate_covered": true,
+      "evidence_covered": true
+    }
+  ],
+  "candidate_coverage": {
+    "numerator": 7,
+    "denominator": 7,
+    "value": 1.0
+  },
+  "evidence_coverage": {
+    "numerator": 6,
+    "denominator": 7,
+    "value": 0.8571428571428571
+  }
+}

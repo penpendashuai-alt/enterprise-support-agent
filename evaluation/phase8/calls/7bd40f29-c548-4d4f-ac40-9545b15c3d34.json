@@ -1,0 +1,17 @@
+{
+  "call_id": "7bd40f29-c548-4d4f-ac40-9545b15c3d34",
+  "run_id": "1368e47a27934a67b9f745c72a722757",
+  "case_id": "P8-R-p1-short",
+  "turn": 0,
+  "provider_kind": "embedding",
+  "started_at": "2026-10-03T07:58:01.381728+00:00",
+  "status": "complete",
+  "usage": {
+    "total_tokens": 12
+  },
+  "estimated_cny": 6e-06,
+  "reserved_cny": 0.02,
+  "finished_at": "2026-10-03T07:58:01.528563+00:00",
+  "visible_model_output": null,
+  "error_type": null
+}

@@ -1,0 +1,18 @@
+{
+  "verified_at": "2026-10-03T07:46:49.705515+00:00",
+  "currency": "CNY",
+  "budget": 30,
+  "reserve_margin": 1,
+  "max_physical_calls": 1200,
+  "rates_per_million_tokens": {
+    "deepseek-v4-pro_input": 9,
+    "deepseek-v4-pro_output": 27,
+    "text-embedding-v3": 0.5
+  },
+  "sources": [
+    "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
+    "https://help.aliyun.com/zh/model-studio/embedding"
+  ],
+  "deepseek_page_sha256": "f133e9729889067e922579c9e1ddcebb91153fe44f655a77155df6e60cd745c4",
+  "method": "Conservative peak uncached input for all chat tokens, even actual cached/off-peak traffic. API token estimates, not provider invoice. No reranker or paid judge."
+}

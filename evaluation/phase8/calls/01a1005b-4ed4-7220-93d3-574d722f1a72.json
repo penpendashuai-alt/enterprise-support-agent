@@ -1,0 +1,23 @@
+{
+  "call_id": "01a1005b-4ed4-7220-93d3-574d722f1a72",
+  "run_id": "ab704860ba4148568b6f576f3138985d",
+  "case_id": "P8-D-preferences-3",
+  "turn": 3,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T06:02:26.417668+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 336,
+    "output_tokens": 129,
+    "total_tokens": 465,
+    "input_token_details": {
+      "cache_read": 256
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.006507,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T06:02:28.723094+00:00",
+  "visible_model_output": "二因素认证（2FA）是在密码之外增加第二重验证的安全机制，主要用途包括：\n\n1. **增强账号安全**：即使密码泄露，攻击者也无法仅凭密码登录。\n2. **防范常见攻击**：降低撞库、钓鱼、暴力破解等风险。\n3. **保护敏感信息**：适用于邮箱、VPN、财务系统、云管理后台等高价值系统。\n4. **满足合规要求**：许多企业安全规范要求关键系统启用多因素认证。\n\n常见第二因素有：手机验证码、身份验证器 App（如 Microsoft Authenticator）、硬件令牌、生物识别等。",
+  "error_type": null
+}

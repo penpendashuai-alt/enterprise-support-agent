@@ -1,0 +1,23 @@
+{
+  "call_id": "01a10056-5ecd-79e1-ad4c-16e0da0fc427",
+  "run_id": "854b6d27f7e94eafa03fdfc3fc639343",
+  "case_id": "P8-D-ticket_draft-1",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T05:57:02.819189+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 577,
+    "output_tokens": 119,
+    "total_tokens": 696,
+    "input_token_details": {
+      "cache_read": 512
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.008406,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T05:57:04.426280+00:00",
+  "visible_model_output": "",
+  "error_type": null
+}

@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100c3-7ea7-7180-aabd-8f08d6883052",
+  "run_id": "8f1664fee00f435fad3993ce193815d7",
+  "case_id": "P8-H-concept_to_policy-2",
+  "turn": 1,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:56:14.430942+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 980,
+    "output_tokens": 39,
+    "total_tokens": 1019,
+    "input_token_details": {
+      "cache_read": 768
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.009873,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:56:16.256556+00:00",
+  "visible_model_output": "根据本轮文档证据，远程工作账号不能与家人共用。\n\n文档明确写明：“不要与家人共享工作账号”[1]。该内容属于演示制度，适用对象为远程办公场景。",
+  "error_type": null
+}

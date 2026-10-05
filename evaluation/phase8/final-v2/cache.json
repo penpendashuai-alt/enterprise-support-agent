@@ -1,0 +1,442 @@
+{
+  "task_count": 3,
+  "attempt_count": 3,
+  "logical_requests": 8,
+  "counts": {
+    "planned": 3,
+    "intent_total": 4,
+    "intent_correct": 4,
+    "structural_pass": 3,
+    "reviewed": 2,
+    "points_total": 2,
+    "points_supported": 2,
+    "point_task_total": 2,
+    "point_task_sum": 2.0,
+    "answerable_reviewed": 1,
+    "evidence_complete": 1,
+    "incorrect_full_refusal": 0,
+    "factual_answers": 1,
+    "answers_with_unsupported_claims": 0,
+    "cited_claims": 3,
+    "supported_cited_claims": 3,
+    "missing_citations": 0,
+    "confirmed_success": 3
+  },
+  "categories": {
+    "knowledge": {
+      "planned": 1,
+      "confirmed_success": 1
+    },
+    "user_memory": {
+      "planned": 1,
+      "confirmed_success": 1
+    },
+    "approval": {
+      "planned": 1,
+      "confirmed_success": 1
+    }
+  },
+  "intent_accuracy": {
+    "numerator": 4,
+    "denominator": 4,
+    "value": 1.0
+  },
+  "required_tool_completion": {
+    "numerator": 0,
+    "denominator": 0,
+    "value": null
+  },
+  "actual_tool_legality": {
+    "numerator": 0,
+    "denominator": 0,
+    "value": null
+  },
+  "tool_parameter_validity": {
+    "numerator": 0,
+    "denominator": 0,
+    "value": null
+  },
+  "extra_tool_calls": 0,
+  "point_coverage_micro": {
+    "numerator": 2,
+    "denominator": 2,
+    "value": 1.0
+  },
+  "point_coverage_macro": {
+    "numerator": 2.0,
+    "denominator": 2,
+    "value": 1.0
+  },
+  "unsupported_answer_rate": {
+    "numerator": 0,
+    "denominator": 1,
+    "value": 0.0
+  },
+  "evidence_complete_rate": {
+    "numerator": 1,
+    "denominator": 1,
+    "value": 1.0
+  },
+  "incorrect_refusal_rate": {
+    "numerator": 0,
+    "denominator": 1,
+    "value": 0.0
+  },
+  "unanswerable_invention_rate": {
+    "numerator": 0,
+    "denominator": 0,
+    "value": null
+  },
+  "citation_support": {
+    "numerator": 3,
+    "denominator": 3,
+    "value": 1.0
+  },
+  "confirmed_task_success_lower_bound": {
+    "numerator": 3,
+    "denominator": 3,
+    "value": 1.0
+  },
+  "review_coverage": {
+    "numerator": 2,
+    "denominator": 2,
+    "value": 1.0
+  },
+  "tasks": [
+    {
+      "case_id": "P8-D-priority_policy-1",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-D-preferences-1",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 2,
+          "intent_correct": 2
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-H-repair_idempotency-1",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    }
+  ],
+  "quantile_method": "floor((n-1)*p)",
+  "task_latency_seconds": {
+    "count": 3,
+    "p50": 9.004530299978796,
+    "p95": 9.004530299978796
+  },
+  "review_independence": "developer assistant participated in design, implementation and review; independent human review not performed",
+  "healthy": {
+    "task_count": 3,
+    "attempt_count": 3,
+    "logical_requests": 8,
+    "counts": {
+      "planned": 3,
+      "intent_total": 4,
+      "intent_correct": 4,
+      "structural_pass": 3,
+      "reviewed": 2,
+      "points_total": 2,
+      "points_supported": 2,
+      "point_task_total": 2,
+      "point_task_sum": 2.0,
+      "answerable_reviewed": 1,
+      "evidence_complete": 1,
+      "incorrect_full_refusal": 0,
+      "factual_answers": 1,
+      "answers_with_unsupported_claims": 0,
+      "cited_claims": 3,
+      "supported_cited_claims": 3,
+      "missing_citations": 0,
+      "confirmed_success": 3
+    },
+    "categories": {
+      "knowledge": {
+        "planned": 1,
+        "confirmed_success": 1
+      },
+      "user_memory": {
+        "planned": 1,
+        "confirmed_success": 1
+      },
+      "approval": {
+        "planned": 1,
+        "confirmed_success": 1
+      }
+    },
+    "intent_accuracy": {
+      "numerator": 4,
+      "denominator": 4,
+      "value": 1.0
+    },
+    "required_tool_completion": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "actual_tool_legality": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "tool_parameter_validity": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "extra_tool_calls": 0,
+    "point_coverage_micro": {
+      "numerator": 2,
+      "denominator": 2,
+      "value": 1.0
+    },
+    "point_coverage_macro": {
+      "numerator": 2.0,
+      "denominator": 2,
+      "value": 1.0
+    },
+    "unsupported_answer_rate": {
+      "numerator": 0,
+      "denominator": 1,
+      "value": 0.0
+    },
+    "evidence_complete_rate": {
+      "numerator": 1,
+      "denominator": 1,
+      "value": 1.0
+    },
+    "incorrect_refusal_rate": {
+      "numerator": 0,
+      "denominator": 1,
+      "value": 0.0
+    },
+    "unanswerable_invention_rate": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "citation_support": {
+      "numerator": 3,
+      "denominator": 3,
+      "value": 1.0
+    },
+    "confirmed_task_success_lower_bound": {
+      "numerator": 3,
+      "denominator": 3,
+      "value": 1.0
+    },
+    "review_coverage": {
+      "numerator": 2,
+      "denominator": 2,
+      "value": 1.0
+    },
+    "tasks": [
+      {
+        "case_id": "P8-D-priority_policy-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-preferences-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 2,
+            "intent_correct": 2
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-repair_idempotency-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      }
+    ],
+    "quantile_method": "floor((n-1)*p)",
+    "task_latency_seconds": {
+      "count": 3,
+      "p50": 9.004530299978796,
+      "p95": 9.004530299978796
+    },
+    "review_independence": "developer assistant participated in design, implementation and review; independent human review not performed"
+  },
+  "faults": {
+    "task_count": 0,
+    "attempt_count": 0,
+    "logical_requests": 0,
+    "counts": {},
+    "categories": {},
+    "intent_accuracy": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "required_tool_completion": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "actual_tool_legality": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "tool_parameter_validity": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "extra_tool_calls": 0,
+    "point_coverage_micro": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "point_coverage_macro": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "unsupported_answer_rate": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "evidence_complete_rate": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "incorrect_refusal_rate": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "unanswerable_invention_rate": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "citation_support": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "confirmed_task_success_lower_bound": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "review_coverage": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "tasks": [],
+    "quantile_method": "floor((n-1)*p)",
+    "task_latency_seconds": {
+      "count": 0,
+      "p50": null,
+      "p95": null
+    },
+    "review_independence": "developer assistant participated in design, implementation and review; independent human review not performed"
+  },
+  "supplemental_draft_audit": {
+    "scope": "Post-experiment supplemental audit; not preregistered heldout metric",
+    "frozen_contract_success": {
+      "numerator": 3,
+      "denominator": 3,
+      "value": 1.0
+    },
+    "audited_task_success_lower_bound": {
+      "numerator": 2,
+      "denominator": 3,
+      "value": 0.6666666666666666
+    },
+    "drafts_reviewed": 1,
+    "tasks": [
+      {
+        "case_id": "P8-D-priority_policy-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-preferences-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 2,
+            "intent_correct": 2
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-repair_idempotency-1",
+        "outcome": "draft_semantic_failure",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": "draft_generation"
+      }
+    ]
+  }
+}

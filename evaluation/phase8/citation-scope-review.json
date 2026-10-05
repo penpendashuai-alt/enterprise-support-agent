@@ -1,0 +1,10 @@
+{
+  "reviewed_at": "2026-10-03T08:09:42.763430+00:00",
+  "reviewer_type": "developer_assistant_nonindependent",
+  "method": "Explicit manual attribution of preceding paragraph citations to identified claim lines; no answer text or frozen runtime changed. Previous review versions preserved.",
+  "updated_cases": [
+    "P8-H-concept_to_policy-1",
+    "P8-H-vpn691-1",
+    "P8-D-vpn809-1"
+  ]
+}

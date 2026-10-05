@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100c1-342c-7463-9ef2-a2e04a57a8c6",
+  "run_id": "356a38acb21948b69b9e67b7501718cb",
+  "case_id": "P8-H-account_policy-1",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:53:44.287330+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 982,
+    "output_tokens": 79,
+    "total_tokens": 1061,
+    "input_token_details": {
+      "cache_read": 512
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.010971,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:53:46.138453+00:00",
+  "visible_model_output": "根据演示指南，申请新账号或扩展访问权限时，应提供以下信息：\n\n- 目标系统\n- 业务用途\n- 所需权限\n- 使用期限\n\n流程上，先由业务负责人确认，再由系统管理员按最小权限原则分配。同时不要请求共享账号代替个人身份 [1]。\n\n以上为演示制度内容，不构成真实企业规定。",
+  "error_type": null
+}

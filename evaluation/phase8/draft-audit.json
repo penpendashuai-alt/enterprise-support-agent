@@ -1,0 +1,1054 @@
+[
+  {
+    "group": "dev-baseline",
+    "case_id": "P8-D-ownership-1",
+    "run_id": "854b6d27f7e94eafa03fdfc3fc639343",
+    "record_path": "evaluation/phase8/runs/dev-baseline/P8-D-ownership-1.json",
+    "record_sha256": "612c45337888caa92ee627ef5530e59de86301543f9fef4db930ba7c58dc9c30",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.711477+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 掉线",
+        "description": "VPN 掉线，重连无效。",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P3"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-baseline",
+    "case_id": "P8-D-ownership-2",
+    "run_id": "854b6d27f7e94eafa03fdfc3fc639343",
+    "record_path": "evaluation/phase8/runs/dev-baseline/P8-D-ownership-2.json",
+    "record_sha256": "0256af863399720ce392b39d4a054b0e8332f254d481decba7f87d7a1714df38",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.711736+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 掉线",
+        "description": "VPN 掉线，重连无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P3"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-baseline",
+    "case_id": "P8-D-ownership-3",
+    "run_id": "854b6d27f7e94eafa03fdfc3fc639343",
+    "record_path": "evaluation/phase8/runs/dev-baseline/P8-D-ownership-3.json",
+    "record_sha256": "5139503f983027c4ba6a402446cdcc6612db0c2270766066eff29ea078bda701",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.711968+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 掉线",
+        "description": "VPN 掉线，重连无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P3"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-baseline",
+    "case_id": "P8-D-ticket_cancel-1",
+    "run_id": "854b6d27f7e94eafa03fdfc3fc639343",
+    "record_path": "evaluation/phase8/runs/dev-baseline/P8-D-ticket_cancel-1.json",
+    "record_sha256": "49a21d01be4dbc9a9220eb76030c95d5d744b5a8eaf9edea252e36dba33d6432",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.712244+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，重启客户端无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P2"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-baseline",
+    "case_id": "P8-D-ticket_cancel-2",
+    "run_id": "854b6d27f7e94eafa03fdfc3fc639343",
+    "record_path": "evaluation/phase8/runs/dev-baseline/P8-D-ticket_cancel-2.json",
+    "record_sha256": "1c609931ddd852165e3f4bd51b144a959a8ba570b7724fb1522b138dbf5d09fb",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.712465+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，重启客户端无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P3"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-baseline",
+    "case_id": "P8-D-ticket_cancel-3",
+    "run_id": "854b6d27f7e94eafa03fdfc3fc639343",
+    "record_path": "evaluation/phase8/runs/dev-baseline/P8-D-ticket_cancel-3.json",
+    "record_sha256": "7925fc21eff02c3a772e63d221aa708023682bcfcba77e80e64660d5e2e6e644",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.712684+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，重启客户端无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P4"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-baseline",
+    "case_id": "P8-D-ticket_draft-1",
+    "run_id": "854b6d27f7e94eafa03fdfc3fc639343",
+    "record_path": "evaluation/phase8/runs/dev-baseline/P8-D-ticket_draft-1.json",
+    "record_sha256": "f886f7c131a22300a42e1669a6c6a8974265b1635319470324528f9cd7c69f55",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.712877+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，重启客户端无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P2"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-baseline",
+    "case_id": "P8-D-ticket_draft-2",
+    "run_id": "854b6d27f7e94eafa03fdfc3fc639343",
+    "record_path": "evaluation/phase8/runs/dev-baseline/P8-D-ticket_draft-2.json",
+    "record_sha256": "9b33b00d49bcbfbacee8a3c9afc54d28cf4482c6b54748a334d20f6615fa0725",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.713076+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，重启客户端无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P3"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-baseline",
+    "case_id": "P8-D-ticket_draft-3",
+    "run_id": "854b6d27f7e94eafa03fdfc3fc639343",
+    "record_path": "evaluation/phase8/runs/dev-baseline/P8-D-ticket_draft-3.json",
+    "record_sha256": "85ff3ea3052417cf9c5dd1bef23d632f492a54bf7d31889615962872216ea312",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.713274+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，已尝试重启客户端但无效。",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P4"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-baseline",
+    "case_id": "P8-D-ticket_edit-1",
+    "run_id": "854b6d27f7e94eafa03fdfc3fc639343",
+    "record_path": "evaluation/phase8/runs/dev-baseline/P8-D-ticket_edit-1.json",
+    "record_sha256": "4ee068d2a2767da3a4b0151a976d0de2dea1d9765a69e05f295034b588c0011f",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.713634+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，重启客户端无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P2"
+      },
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，重启客户端无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P1"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-baseline",
+    "case_id": "P8-D-ticket_edit-2",
+    "run_id": "854b6d27f7e94eafa03fdfc3fc639343",
+    "record_path": "evaluation/phase8/runs/dev-baseline/P8-D-ticket_edit-2.json",
+    "record_sha256": "f4dd9026340e5335f01f0cd402fbaff8000e872d92feb9f9b957e12e9df15366",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.713943+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，已尝试重启客户端但无效。",
+        "service_name": "VPN",
+        "impact": "仅本人",
+        "priority": "P3"
+      },
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，已尝试重启客户端但无效。",
+        "service_name": "VPN",
+        "impact": "仅本人",
+        "priority": "P1"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-baseline",
+    "case_id": "P8-D-ticket_edit-3",
+    "run_id": "854b6d27f7e94eafa03fdfc3fc639343",
+    "record_path": "evaluation/phase8/runs/dev-baseline/P8-D-ticket_edit-3.json",
+    "record_sha256": "46536052b27ecd6b9473bc41a3b8a0852630192d652a9f624e72d73a4aa9c01e",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.714239+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，已尝试重启客户端但无效。",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P4"
+      },
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，已尝试重启客户端但无效。",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P1"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-baseline-v2",
+    "case_id": "P8-D-ownership-1",
+    "run_id": "ab704860ba4148568b6f576f3138985d",
+    "record_path": "evaluation/phase8/runs/dev-baseline-v2/P8-D-ownership-1.json",
+    "record_sha256": "f741e559a24a6a3e9d8601c4f956a7ca5be870216278689deede92fb380e3090",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.714533+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 掉线",
+        "description": "VPN 掉线，重连无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P3"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-baseline-v2",
+    "case_id": "P8-D-ownership-2",
+    "run_id": "ab704860ba4148568b6f576f3138985d",
+    "record_path": "evaluation/phase8/runs/dev-baseline-v2/P8-D-ownership-2.json",
+    "record_sha256": "c508439f119a56677d08ccab3c19add77c05308c2c39d79233b28b2460f5fb8b",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.714770+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 掉线",
+        "description": "VPN 掉线，重连无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P3"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-baseline-v2",
+    "case_id": "P8-D-ownership-3",
+    "run_id": "ab704860ba4148568b6f576f3138985d",
+    "record_path": "evaluation/phase8/runs/dev-baseline-v2/P8-D-ownership-3.json",
+    "record_sha256": "965ecf77fa31b74015aa7ef0b0d9b2452ec3e08c4cc42170c89420450cfa0a25",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.714991+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 掉线",
+        "description": "VPN 掉线，重连无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P3"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-baseline-v2",
+    "case_id": "P8-D-ticket_cancel-1",
+    "run_id": "ab704860ba4148568b6f576f3138985d",
+    "record_path": "evaluation/phase8/runs/dev-baseline-v2/P8-D-ticket_cancel-1.json",
+    "record_sha256": "4d37b97bcdc18454831702f2dbad903b75ef986c531185aedda841eef73a25c4",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.715443+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，已尝试重启客户端但无效。",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P2"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-baseline-v2",
+    "case_id": "P8-D-ticket_cancel-2",
+    "run_id": "ab704860ba4148568b6f576f3138985d",
+    "record_path": "evaluation/phase8/runs/dev-baseline-v2/P8-D-ticket_cancel-2.json",
+    "record_sha256": "b1fc662d2b9e95af3d74db7fa97dc570cb690e0bf88b66fb2762f8dfad94ce12",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.715760+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，重启客户端无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P3"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-baseline-v2",
+    "case_id": "P8-D-ticket_cancel-3",
+    "run_id": "ab704860ba4148568b6f576f3138985d",
+    "record_path": "evaluation/phase8/runs/dev-baseline-v2/P8-D-ticket_cancel-3.json",
+    "record_sha256": "cb5f470c2d056a3f3a3407e06b9db6b38ee5d43e15e1ee82f20e592b9fe3bf55",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.715981+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，重启客户端无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P4"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-baseline-v2",
+    "case_id": "P8-D-ticket_draft-1",
+    "run_id": "ab704860ba4148568b6f576f3138985d",
+    "record_path": "evaluation/phase8/runs/dev-baseline-v2/P8-D-ticket_draft-1.json",
+    "record_sha256": "1a32c95acf673655b722f081d50a071a7b57553d389b6596a3f2b39133d5c877",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.716237+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，重启客户端无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P2"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-baseline-v2",
+    "case_id": "P8-D-ticket_draft-2",
+    "run_id": "ab704860ba4148568b6f576f3138985d",
+    "record_path": "evaluation/phase8/runs/dev-baseline-v2/P8-D-ticket_draft-2.json",
+    "record_sha256": "1a45eaa6f11bb2d4d2dee44305a0d7bbc4caa27e8e82a6d90f28fe2f4bbd429c",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.716438+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，重启客户端无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P3"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-baseline-v2",
+    "case_id": "P8-D-ticket_draft-3",
+    "run_id": "ab704860ba4148568b6f576f3138985d",
+    "record_path": "evaluation/phase8/runs/dev-baseline-v2/P8-D-ticket_draft-3.json",
+    "record_sha256": "4fa27c8a694cc86afc6510e648098cfc712991381d97e25ea3964d44231f3e41",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.716631+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，已尝试重启客户端但无效。",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P4"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-baseline-v2",
+    "case_id": "P8-D-ticket_edit-1",
+    "run_id": "ab704860ba4148568b6f576f3138985d",
+    "record_path": "evaluation/phase8/runs/dev-baseline-v2/P8-D-ticket_edit-1.json",
+    "record_sha256": "3409b2fe172c63e3385f9d250b4d37ad5d637bddc47a5d4ff61a100f820ded64",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.716922+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，重启客户端无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P2"
+      },
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，重启客户端无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P1"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-baseline-v2",
+    "case_id": "P8-D-ticket_edit-2",
+    "run_id": "ab704860ba4148568b6f576f3138985d",
+    "record_path": "evaluation/phase8/runs/dev-baseline-v2/P8-D-ticket_edit-2.json",
+    "record_sha256": "9e3d350b2a7054efbc2d2436e58c216f82b1738bdd8bede58bf3478455aba442",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.717272+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，重启客户端无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P3"
+      },
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，重启客户端无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P1"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-baseline-v2",
+    "case_id": "P8-D-ticket_edit-3",
+    "run_id": "ab704860ba4148568b6f576f3138985d",
+    "record_path": "evaluation/phase8/runs/dev-baseline-v2/P8-D-ticket_edit-3.json",
+    "record_sha256": "5bc06b4e54acd8679a0dbb04be2f82cc3de027d71f34fd10e06707631458555f",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.717546+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，重启客户端无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P4"
+      },
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，重启客户端无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P1"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-candidate",
+    "case_id": "P8-D-ownership-1",
+    "run_id": "6d24d8aa9d614c469fd0e65b663b67ef",
+    "record_path": "evaluation/phase8/runs/dev-candidate/P8-D-ownership-1.json",
+    "record_sha256": "9f39efbf2f6e4d318501624b0fc479d63695763f6c370e7fe1b20e6ef2f3fd17",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.717801+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 掉线",
+        "description": "VPN 掉线，重连无效。",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P3"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-candidate",
+    "case_id": "P8-D-ownership-2",
+    "run_id": "6d24d8aa9d614c469fd0e65b663b67ef",
+    "record_path": "evaluation/phase8/runs/dev-candidate/P8-D-ownership-2.json",
+    "record_sha256": "371a09fea51d0953d37839e694faaabaa594e4b4657625402dcdd24793bab632",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.718023+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 掉线",
+        "description": "VPN 掉线，重连无效。",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P3"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-candidate",
+    "case_id": "P8-D-ownership-3",
+    "run_id": "6d24d8aa9d614c469fd0e65b663b67ef",
+    "record_path": "evaluation/phase8/runs/dev-candidate/P8-D-ownership-3.json",
+    "record_sha256": "92c20bce58c70cbb248253eedfc3728428e2ebedf37fb7411ab2e1091fca7290",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.718237+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 掉线",
+        "description": "VPN 掉线，重连无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P3"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-candidate",
+    "case_id": "P8-D-ticket_cancel-1",
+    "run_id": "6d24d8aa9d614c469fd0e65b663b67ef",
+    "record_path": "evaluation/phase8/runs/dev-candidate/P8-D-ticket_cancel-1.json",
+    "record_sha256": "6e5b591308a392ad264e7d6e71a18895098b90db133147a35474f2c89433cfc7",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.718486+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，重启客户端无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P2"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-candidate",
+    "case_id": "P8-D-ticket_cancel-2",
+    "run_id": "6d24d8aa9d614c469fd0e65b663b67ef",
+    "record_path": "evaluation/phase8/runs/dev-candidate/P8-D-ticket_cancel-2.json",
+    "record_sha256": "e456085b9fe63af0697db5e83e2f6b6e1cb1ac346b6a6c67632bcfd1e3144e18",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.718705+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，重启客户端无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P3"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-candidate",
+    "case_id": "P8-D-ticket_cancel-3",
+    "run_id": "6d24d8aa9d614c469fd0e65b663b67ef",
+    "record_path": "evaluation/phase8/runs/dev-candidate/P8-D-ticket_cancel-3.json",
+    "record_sha256": "dd06f2dd742190cc483d4f86e0be5cdb29a81e5db7c946f2337795d86dfe0c8b",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.718912+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，重启客户端无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P4"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-candidate",
+    "case_id": "P8-D-ticket_draft-1",
+    "run_id": "6d24d8aa9d614c469fd0e65b663b67ef",
+    "record_path": "evaluation/phase8/runs/dev-candidate/P8-D-ticket_draft-1.json",
+    "record_sha256": "aec73a4bd81d1439f0fb6b1b7a38d59ad37dddb74080fc6036b1955c0dc4f6a7",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.719206+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，重启客户端无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P2"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-candidate",
+    "case_id": "P8-D-ticket_draft-2",
+    "run_id": "6d24d8aa9d614c469fd0e65b663b67ef",
+    "record_path": "evaluation/phase8/runs/dev-candidate/P8-D-ticket_draft-2.json",
+    "record_sha256": "f7f889716878017bf4dbe0ed848dee6f4a7df9bbd10d5c3b033e3ae8ff9dbd57",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.719450+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，重启客户端无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P3"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-candidate",
+    "case_id": "P8-D-ticket_draft-3",
+    "run_id": "6d24d8aa9d614c469fd0e65b663b67ef",
+    "record_path": "evaluation/phase8/runs/dev-candidate/P8-D-ticket_draft-3.json",
+    "record_sha256": "b65852148f7af58692b373adb8b82a3865a1bfdbec8e38c87ee46a30c5ad99ef",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.719650+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，重启客户端无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P4"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-candidate",
+    "case_id": "P8-D-ticket_edit-1",
+    "run_id": "6d24d8aa9d614c469fd0e65b663b67ef",
+    "record_path": "evaluation/phase8/runs/dev-candidate/P8-D-ticket_edit-1.json",
+    "record_sha256": "09062eb3432e636a6a7d82ba877d0817797fac544b3cdc413ef030ad89d587e5",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.719931+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，重启客户端无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P2"
+      },
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，重启客户端无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P1"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-candidate",
+    "case_id": "P8-D-ticket_edit-2",
+    "run_id": "6d24d8aa9d614c469fd0e65b663b67ef",
+    "record_path": "evaluation/phase8/runs/dev-candidate/P8-D-ticket_edit-2.json",
+    "record_sha256": "5d26f222400424ef93509422aaab7a51470330c1911f8e529a32388349f97af9",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.720218+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，已尝试重启客户端但无效。",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P3"
+      },
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，已尝试重启客户端但无效。",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P1"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "dev-candidate",
+    "case_id": "P8-D-ticket_edit-3",
+    "run_id": "6d24d8aa9d614c469fd0e65b663b67ef",
+    "record_path": "evaluation/phase8/runs/dev-candidate/P8-D-ticket_edit-3.json",
+    "record_sha256": "48a5591bbc58e1013d72c0981c7ecd124c821bdd210763e6d5a1e244808a7006",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.720482+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，重启客户端无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P4"
+      },
+      {
+        "title": "VPN 认证页反复刷新故障",
+        "description": "认证页反复刷新，重启客户端无效",
+        "service_name": "VPN",
+        "impact": "仅我受影响",
+        "priority": "P1"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "cache-heldout",
+    "case_id": "P8-H-repair_idempotency-1",
+    "run_id": "d67ba0761a42409aa9627c2ff0893196",
+    "record_path": "evaluation/phase8/runs/cache-heldout/P8-H-repair_idempotency-1.json",
+    "record_sha256": "fcfb55495b9eb3b0b3ee6d63cfdb709cd976dc6c7382690a111ea5b27354b3a3",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.720808+00:00",
+    "semantic_success": "no",
+    "drafts": [
+      {
+        "title": "设备 DEV-002 电池外壳鼓起维修",
+        "description": "设备 DEV-002 电池外壳鼓起，已尝试安排人工检查。",
+        "service_name": null,
+        "impact": "仅本人",
+        "priority": "P2"
+      }
+    ],
+    "unsupported_excerpt": "已尝试安排人工检查",
+    "rationale": "用户请求未来安排人工检查，被草稿写成已尝试，时间状态改变。审批幂等仍正确，但草稿事实不忠实。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "baseline-heldout",
+    "case_id": "P8-H-repair_idempotency-1",
+    "run_id": "f4be7c74bb15447db736b056f6f18414",
+    "record_path": "evaluation/phase8/heldout/baseline-repair_idempotency/P8-H-repair_idempotency-1.json",
+    "record_sha256": "e74caeda0ffb5a0ae8956266471403066aa848044babdcc123566e5b7aee4cdd",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.721248+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "设备 DEV-002 电池外壳鼓起维修",
+        "description": "设备 DEV-002 电池外壳鼓起，请安排人工检查。",
+        "service_name": null,
+        "impact": "仅本人",
+        "priority": "P2"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "baseline-heldout",
+    "case_id": "P8-H-repair_idempotency-2",
+    "run_id": "f4be7c74bb15447db736b056f6f18414",
+    "record_path": "evaluation/phase8/heldout/baseline-repair_idempotency/P8-H-repair_idempotency-2.json",
+    "record_sha256": "c1c17a3094e84a3dd8aa692617102c841f682c390254866ddf38f51d11a9c073",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.721564+00:00",
+    "semantic_success": "no",
+    "drafts": [
+      {
+        "title": "设备 DEV-002 屏幕闪烁维修",
+        "description": "设备 DEV-002 屏幕出现闪烁，已尝试安排人工检查。",
+        "service_name": null,
+        "impact": "仅本人",
+        "priority": "P2"
+      }
+    ],
+    "unsupported_excerpt": "已尝试安排人工检查",
+    "rationale": "用户请求未来安排人工检查，被草稿写成已尝试，时间状态改变。审批幂等仍正确，但草稿事实不忠实。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "baseline-heldout",
+    "case_id": "P8-H-repair_idempotency-3",
+    "run_id": "f4be7c74bb15447db736b056f6f18414",
+    "record_path": "evaluation/phase8/heldout/baseline-repair_idempotency/P8-H-repair_idempotency-3.json",
+    "record_sha256": "6dd6c5a6b0cff665091aac0bf932c4aa2224dffec21cbf8df990c77aaa20b383",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.721853+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "设备 DEV-002 键盘部分按键失灵维修",
+        "description": "设备 DEV-002 键盘部分按键失灵，请安排人工检查。",
+        "service_name": null,
+        "impact": "仅本人",
+        "priority": "P2"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "candidate-heldout",
+    "case_id": "P8-H-repair_idempotency-1",
+    "run_id": "2a3d1739bd5746e9b88a673a7856abe9",
+    "record_path": "evaluation/phase8/heldout/candidate-repair_idempotency/P8-H-repair_idempotency-1.json",
+    "record_sha256": "f1876f3f00c369c4c90dc8091f59990e025bd4d122eeccb4855797c9bfb6ab53",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.722324+00:00",
+    "semantic_success": "no",
+    "drafts": [
+      {
+        "title": "设备 DEV-002 电池外壳鼓起维修",
+        "description": "设备 DEV-002 电池外壳鼓起，已尝试安排人工检查。",
+        "service_name": null,
+        "impact": "仅本人",
+        "priority": "P2"
+      }
+    ],
+    "unsupported_excerpt": "已尝试安排人工检查",
+    "rationale": "用户请求未来安排人工检查，被草稿写成已尝试，时间状态改变。审批幂等仍正确，但草稿事实不忠实。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "candidate-heldout",
+    "case_id": "P8-H-repair_idempotency-2",
+    "run_id": "2a3d1739bd5746e9b88a673a7856abe9",
+    "record_path": "evaluation/phase8/heldout/candidate-repair_idempotency/P8-H-repair_idempotency-2.json",
+    "record_sha256": "443626d52a681a9aaa915f13cb94d740fac30d6f8af90e490d862100153b1a36",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.722605+00:00",
+    "semantic_success": "no",
+    "drafts": [
+      {
+        "title": "设备 DEV-002 屏幕闪烁维修",
+        "description": "设备 DEV-002 屏幕出现闪烁，已尝试安排人工检查。",
+        "service_name": null,
+        "impact": "仅本人",
+        "priority": "P2"
+      }
+    ],
+    "unsupported_excerpt": "已尝试安排人工检查",
+    "rationale": "用户请求未来安排人工检查，被草稿写成已尝试，时间状态改变。审批幂等仍正确，但草稿事实不忠实。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  },
+  {
+    "group": "candidate-heldout",
+    "case_id": "P8-H-repair_idempotency-3",
+    "run_id": "2a3d1739bd5746e9b88a673a7856abe9",
+    "record_path": "evaluation/phase8/heldout/candidate-repair_idempotency/P8-H-repair_idempotency-3.json",
+    "record_sha256": "58bfc2ab851ff25afe77ec7bcc25a710a9970b0f026a26bc618adf966f219924",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-03T08:04:28.722911+00:00",
+    "semantic_success": "yes",
+    "drafts": [
+      {
+        "title": "设备 DEV-002 键盘部分按键失灵维修",
+        "description": "设备 DEV-002 键盘部分按键失灵，请安排人工检查。",
+        "service_name": null,
+        "impact": "仅本人",
+        "priority": "P2"
+      }
+    ],
+    "unsupported_excerpt": null,
+    "rationale": "已逐项核对用户描述、服务、影响和优先级；编辑后只把优先级改为 P1，其他信息保留。维修草稿未把未来请求改为已做。",
+    "scope": "Post-heldout supplemental semantic review of draft fields omitted by original structural-only scenario contract; no runtime tuning."
+  }
+]

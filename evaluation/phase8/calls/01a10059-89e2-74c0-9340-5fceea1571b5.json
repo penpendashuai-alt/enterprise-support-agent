@@ -1,0 +1,23 @@
+{
+  "call_id": "01a10059-89e2-74c0-9340-5fceea1571b5",
+  "run_id": "ab704860ba4148568b6f576f3138985d",
+  "case_id": "P8-D-priority_policy-2",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T06:00:30.460059+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1607,
+    "output_tokens": 140,
+    "total_tokens": 1747,
+    "input_token_details": {
+      "cache_read": 640
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.018243,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T06:00:32.887417+00:00",
+  "visible_model_output": "不能省略。\n\n根据演示制度：\n\n- 优先级只有 P1、P2、P3、P4；P1 为紧急，但**任何优先级都要填写影响范围**，不能省略 [2]。\n- P1 也不能跳过确认；优先级需要在草稿中由用户确认，修改优先级必须保存新版本并重新确认 [1]。\n- 创建或修改工单需核对标题、描述、服务及优先级后，使用“确认创建”按钮批准当前版本；普通聊天输入“确认”不能代替界面/结构化审批 [3]。\n\n所以标为 P1 时，仍需填写影响范围，并完成界面上的确认/审批流程。",
+  "error_type": null
+}

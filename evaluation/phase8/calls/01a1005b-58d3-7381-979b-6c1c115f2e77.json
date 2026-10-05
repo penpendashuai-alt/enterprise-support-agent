@@ -1,0 +1,23 @@
+{
+  "call_id": "01a1005b-58d3-7381-979b-6c1c115f2e77",
+  "run_id": "ab704860ba4148568b6f576f3138985d",
+  "case_id": "P8-D-retrieval_outage-1",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T06:02:28.971050+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1219,
+    "output_tokens": 165,
+    "total_tokens": 1384,
+    "input_token_details": {
+      "cache_read": 1152
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.015426,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T06:02:31.112780+00:00",
+  "visible_model_output": "",
+  "error_type": null
+}

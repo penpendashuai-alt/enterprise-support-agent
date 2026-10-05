@@ -1,0 +1,25 @@
+{
+  "version": "phase8-design-v1",
+  "dataset_sha256": "7f7b8205b9cbca45249546566e0e024c9d61c1b223c9932d3de6f36b54b3e3f5",
+  "rubric_sha256": "3eb3128a05ee49f56f7980151f1884f702c47032578a17d7f423b284865dbddd",
+  "budget_cny": 30,
+  "max_physical_calls": 1200,
+  "main_cache_enabled": false,
+  "split_counts": {
+    "dev": 36,
+    "heldout": 24
+  },
+  "pilot_cases": [
+    "P8-D-known_status-1",
+    "P8-D-priority_policy-1"
+  ],
+  "cache_subset": [
+    "P8-D-priority_policy-1",
+    "P8-D-preferences-1",
+    "P8-H-repair_idempotency-1"
+  ],
+  "fixed_repeats": 1,
+  "order": "baseline dev; candidate dev; freeze; heldout case order alternates baseline/candidate by family; pilot and historical regressions excluded from 60 tasks",
+  "reviewer": "developer assistant nonindependent",
+  "new_heldout_claim": "New scenario families on same corpus; not independent enterprise data; Phase 5 heldout not reused as unseen"
+}

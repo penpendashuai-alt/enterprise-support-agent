@@ -1,0 +1,23 @@
+{
+  "call_id": "01a10058-8d40-7af1-950f-a947ec6ef22f",
+  "run_id": "ab704860ba4148568b6f576f3138985d",
+  "case_id": "P8-D-known_status-2",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T05:59:25.791549+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 753,
+    "output_tokens": 39,
+    "total_tokens": 792,
+    "input_token_details": {
+      "cache_read": 640
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.00783,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T05:59:27.069252+00:00",
+  "visible_model_output": "VPN 演示服务状态：**正常（operational）**，模拟网关正常。\n\n数据来源说明：以上结果为**固定模拟数据**，仅用于演示，不代表真实系统状态。",
+  "error_type": null
+}

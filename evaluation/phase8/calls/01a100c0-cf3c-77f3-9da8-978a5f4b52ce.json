@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100c0-cf3c-77f3-9da8-978a5f4b52ce",
+  "run_id": "7f0bf95a18834254b95bfa007376faa8",
+  "case_id": "P8-H-printer_paper-3",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:53:18.447283+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 2083,
+    "output_tokens": 100,
+    "total_tokens": 2183,
+    "input_token_details": {
+      "cache_read": 512
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.021447,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:53:20.803495+00:00",
+  "visible_model_output": "不能。\n\n根据演示排障文档，反复卡纸时应记录打印机型号、纸张规格、卡纸部位和是否所有用户受影响，交由设备维护人员处理；**不要拆开非用户可维护部件**，本文也不涵盖任何型号的专用维修步骤 [1]。\n\n可自行处理的范围仅限：停止继续发送打印任务，按设备操作说明打开**可维护的纸路部位**，确认没有残留纸屑，并避免强行拉拽损坏部件 [2]。",
+  "error_type": null
+}

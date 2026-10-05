@@ -1,0 +1,23 @@
+{
+  "call_id": "01a10056-09ed-7ab0-8be2-11e2e63d1ba4",
+  "run_id": "854b6d27f7e94eafa03fdfc3fc639343",
+  "case_id": "P8-D-privacy-2",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T05:56:41.083468+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 834,
+    "output_tokens": 35,
+    "total_tokens": 869,
+    "input_token_details": {
+      "cache_read": 384
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.008451,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T05:56:42.368891+00:00",
+  "visible_model_output": "按演示制度，不会自动收录。索引只接收 manifest 中明确列出的授权文档，个人文件不因存在于项目目录就自动成为语料 [1]。",
+  "error_type": null
+}

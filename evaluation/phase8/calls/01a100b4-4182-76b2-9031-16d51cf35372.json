@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100b4-4182-76b2-9031-16d51cf35372",
+  "run_id": "6d24d8aa9d614c469fd0e65b663b67ef",
+  "case_id": "P8-D-preferences-2",
+  "turn": 1,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:39:35.721607+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 465,
+    "output_tokens": 147,
+    "total_tokens": 612,
+    "input_token_details": {
+      "cache_read": 384
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.008154,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:39:38.176506+00:00",
+  "visible_model_output": "HTTP (Hypertext Transfer Protocol) is the foundation protocol for data exchange on the web. It defines how clients (like browsers) request resources from servers and how servers respond.\n\nKey points:\n- **Request/response model**: Client sends a request (e.g., GET /page), server returns a response (status code + content).\n- **Stateless**: Each request is independent; no built-in memory of previous requests.\n- **Common methods**: GET, POST, PUT, DELETE.\n- **Status codes**: 2xx success, 3xx redirect, 4xx client error, 5xx server error.\n- **Runs over TCP**, typically port 80 (HTTPS uses port 443 with TLS encryption).",
+  "error_type": null
+}

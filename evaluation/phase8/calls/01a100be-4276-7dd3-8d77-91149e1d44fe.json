@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100be-4276-7dd3-8d77-91149e1d44fe",
+  "run_id": "ceb93a4063c64d8c8fe55f3647c24b3b",
+  "case_id": "P8-H-remote_policy-3",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:50:31.335558+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1342,
+    "output_tokens": 99,
+    "total_tokens": 1441,
+    "input_token_details": {
+      "cache_read": 768
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.014751,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:50:33.217325+00:00",
+  "visible_model_output": "根据演示制度文档，远程办公设备的安全设置要求如下 [1]：\n\n- 使用受管理设备\n- 保持系统安全更新\n- 开启磁盘加密\n- 设置屏幕锁定\n- 不与家人共享工作账号\n- 离开设备时锁屏\n- 访问内部资源按 VPN 规范办理\n\n关于采购额度：该文档明确说明“本文没有家庭宽带报销金额或设备采购额度规定” [2]，因此没有给出采购额度。",
+  "error_type": null
+}

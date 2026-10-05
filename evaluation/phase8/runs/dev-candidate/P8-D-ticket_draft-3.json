@@ -1,0 +1,98 @@
+{
+  "run_id": "6d24d8aa9d614c469fd0e65b663b67ef",
+  "case_id": "P8-D-ticket_draft-3",
+  "attempt": 1,
+  "variant": "candidate",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-03T07:38:44.811128+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请创建 VPN 故障演示工单：认证页反复刷新，重启客户端无效，仅我受影响，优先级 P4。",
+      "http_status": 200,
+      "seconds": 3.7340492000221275,
+      "request_id": "85231e2cbd524ebdad21a4c70c4198b4",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：VPN 认证页反复刷新故障\n描述：认证页反复刷新，重启客户端无效\n服务：VPN\n影响范围：仅我受影响\n优先级：P4（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a100b3-7acf-7a40-a4eb-9e6d82c77fa8",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-3ff718d9df9f441eadd34bb95bd5a51c",
+          "draft_version": 1,
+          "draft": {
+            "title": "VPN 认证页反复刷新故障",
+            "description": "认证页反复刷新，重启客户端无效",
+            "service_name": "VPN",
+            "impact": "仅我受影响",
+            "priority": "P4"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "VPN",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "认证页反复刷新，重启客户端无效，仅我受影响，优先级 P4",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "VPN 认证页反复刷新故障",
+          "description": "认证页反复刷新，重启客户端无效",
+          "service_name": "VPN",
+          "impact": "仅我受影响",
+          "priority": "P4"
+        },
+        "draft_id": "draft-3ff718d9df9f441eadd34bb95bd5a51c",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-6d24d8aa-P8-D-ticket_draft-3-alice",
+    "bob": "p8-6d24d8aa-P8-D-ticket_draft-3-bob"
+  },
+  "threads": {
+    "primary": "06cade4443884c549f9f5c0425be5e2d",
+    "secondary": "d4d198558c5e4227a2bf5650f54f867d"
+  },
+  "seconds": 3.8914710999815725,
+  "final_ticket_count": 0,
+  "final_draft_version": 1,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {
+      "intent_total": 1,
+      "intent_correct": 1
+    }
+  },
+  "model_calls": [
+    "01a100b3-7ad7-79b2-b09c-06be172a6315",
+    "01a100b3-82b6-74b1-b914-954da2ac67f5"
+  ]
+}

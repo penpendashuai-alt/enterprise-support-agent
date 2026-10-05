@@ -1,0 +1,23 @@
+{
+  "call_id": "01a10058-b9af-7792-8504-d02cf53097b4",
+  "run_id": "ab704860ba4148568b6f576f3138985d",
+  "case_id": "P8-D-clarify_service-1",
+  "turn": 1,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T05:59:37.159195+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 747,
+    "output_tokens": 37,
+    "total_tokens": 784,
+    "input_token_details": {
+      "cache_read": 640
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.007722,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T05:59:38.469587+00:00",
+  "visible_model_output": "GitHub 服务状态（模拟数据）：**运行正常（operational）**，模拟服务正常。\n\n如需进一步排查具体问题，请提供设备编号或工单编号。",
+  "error_type": null
+}

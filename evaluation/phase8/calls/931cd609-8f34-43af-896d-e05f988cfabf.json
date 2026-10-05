@@ -1,0 +1,17 @@
+{
+  "call_id": "931cd609-8f34-43af-896d-e05f988cfabf",
+  "run_id": "66bcef1868e345e1a081b09f12c2da57",
+  "case_id": "P8-R-preference-shift",
+  "turn": 1,
+  "provider_kind": "embedding",
+  "started_at": "2026-10-03T07:59:34.303511+00:00",
+  "status": "complete",
+  "usage": {
+    "total_tokens": 12
+  },
+  "estimated_cny": 6e-06,
+  "reserved_cny": 0.02,
+  "finished_at": "2026-10-03T07:59:34.547261+00:00",
+  "visible_model_output": null,
+  "error_type": null
+}

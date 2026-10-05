@@ -1,0 +1,142 @@
+{
+  "run_id": "ab704860ba4148568b6f576f3138985d",
+  "case_id": "P8-D-ticket_cancel-2",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-03T06:01:43.822275+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请创建 VPN 故障演示工单：认证页反复刷新，重启客户端无效，仅我受影响，优先级 P3。",
+      "http_status": 200,
+      "seconds": 3.5582073000259697,
+      "request_id": "890e5444f8974e70a15c5d34bdf1ce7f",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：VPN 认证页反复刷新故障\n描述：认证页反复刷新，重启客户端无效\n服务：VPN\n影响范围：仅我受影响\n优先级：P3（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a1005a-a895-70d0-82fb-e9fdf5a6ca8c",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-a60c4d2976334b619cea32356522d62b",
+          "draft_version": 1,
+          "draft": {
+            "title": "VPN 认证页反复刷新故障",
+            "description": "认证页反复刷新，重启客户端无效",
+            "service_name": "VPN",
+            "impact": "仅我受影响",
+            "priority": "P3"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "VPN",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "认证页反复刷新，重启客户端无效，仅我受影响，优先级 P3",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "VPN 认证页反复刷新故障",
+          "description": "认证页反复刷新，重启客户端无效",
+          "service_name": "VPN",
+          "impact": "仅我受影响",
+          "priority": "P3"
+        },
+        "draft_id": "draft-a60c4d2976334b619cea32356522d62b",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    },
+    {
+      "index": 1,
+      "operation": "cancel",
+      "user_message": null,
+      "http_status": 200,
+      "seconds": 0.017805500014219433,
+      "request_id": "cd278e4563b848f2b44ec9b2e725dc92",
+      "response": {
+        "type": "ai",
+        "content": "已取消本地演示工单草稿，没有创建工单。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a1005a-b717-7582-85b3-0d7dddf289f8",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "VPN",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "认证页反复刷新，重启客户端无效，仅我受影响，优先级 P3",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": null,
+        "draft_id": "draft-a60c4d2976334b619cea32356522d62b",
+        "draft_version": 1,
+        "approval_status": "cancelled",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-ab704860-P8-D-ticket_cancel-2-alice",
+    "bob": "p8-ab704860-P8-D-ticket_cancel-2-bob"
+  },
+  "threads": {
+    "primary": "25f319a5212d47b29098be4a5ddda75a",
+    "secondary": "ab7ede3b9b104d9abcfd74484be913fa"
+  },
+  "seconds": 3.902793199988082,
+  "final_ticket_count": 0,
+  "final_draft_version": 1,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {
+      "intent_total": 1,
+      "intent_correct": 1
+    }
+  },
+  "model_calls": [
+    "01a1005a-a8a1-7e20-808f-e65e69766291",
+    "01a1005a-b004-78e1-988d-99055316be83"
+  ]
+}

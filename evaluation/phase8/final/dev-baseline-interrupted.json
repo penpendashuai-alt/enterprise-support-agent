@@ -1,0 +1,1825 @@
+{
+  "task_count": 36,
+  "attempt_count": 31,
+  "logical_requests": 48,
+  "counts": {
+    "planned": 36,
+    "intent_total": 34,
+    "intent_correct": 34,
+    "required_tool_total": 11,
+    "required_tool_completed": 11,
+    "actual_tool_total": 11,
+    "actual_tool_legal": 11,
+    "tool_parameters_valid": 11,
+    "structural_pass": 30,
+    "reviewed": 19,
+    "points_total": 24,
+    "points_supported": 18,
+    "point_task_total": 19,
+    "point_task_sum": 15.0,
+    "missing_citations": 0,
+    "confirmed_success": 25,
+    "answerable_reviewed": 11,
+    "evidence_complete": 9,
+    "incorrect_full_refusal": 0,
+    "factual_answers": 11,
+    "answers_with_unsupported_claims": 2,
+    "cited_claims": 30,
+    "supported_cited_claims": 28,
+    "semantic_failure": 5,
+    "unanswerable_reviewed": 1,
+    "unanswerable_invented": 0,
+    "evaluator_error": 1,
+    "not_run": 5
+  },
+  "categories": {
+    "intent_tools": {
+      "planned": 3,
+      "confirmed_success": 3
+    },
+    "clarification": {
+      "planned": 3,
+      "confirmed_success": 3
+    },
+    "knowledge": {
+      "planned": 7,
+      "confirmed_success": 4,
+      "semantic_failure": 3
+    },
+    "partial_answer": {
+      "planned": 1,
+      "semantic_failure": 1
+    },
+    "no_answer": {
+      "planned": 1,
+      "confirmed_success": 1
+    },
+    "conflict_injection": {
+      "planned": 3,
+      "confirmed_success": 2,
+      "semantic_failure": 1
+    },
+    "approval": {
+      "planned": 9,
+      "confirmed_success": 9
+    },
+    "user_memory": {
+      "planned": 6,
+      "confirmed_success": 3,
+      "evaluator_error": 1,
+      "not_run": 2
+    },
+    "dependency_fault": {
+      "planned": 3,
+      "not_run": 3
+    }
+  },
+  "intent_accuracy": {
+    "numerator": 34,
+    "denominator": 34,
+    "value": 1.0
+  },
+  "required_tool_completion": {
+    "numerator": 11,
+    "denominator": 11,
+    "value": 1.0
+  },
+  "actual_tool_legality": {
+    "numerator": 11,
+    "denominator": 11,
+    "value": 1.0
+  },
+  "tool_parameter_validity": {
+    "numerator": 11,
+    "denominator": 11,
+    "value": 1.0
+  },
+  "extra_tool_calls": 0,
+  "point_coverage_micro": {
+    "numerator": 18,
+    "denominator": 24,
+    "value": 0.75
+  },
+  "point_coverage_macro": {
+    "numerator": 15.0,
+    "denominator": 19,
+    "value": 0.7894736842105263
+  },
+  "unsupported_answer_rate": {
+    "numerator": 2,
+    "denominator": 11,
+    "value": 0.18181818181818182
+  },
+  "evidence_complete_rate": {
+    "numerator": 9,
+    "denominator": 11,
+    "value": 0.8181818181818182
+  },
+  "incorrect_refusal_rate": {
+    "numerator": 0,
+    "denominator": 11,
+    "value": 0.0
+  },
+  "unanswerable_invention_rate": {
+    "numerator": 0,
+    "denominator": 1,
+    "value": 0.0
+  },
+  "citation_support": {
+    "numerator": 28,
+    "denominator": 30,
+    "value": 0.9333333333333333
+  },
+  "confirmed_task_success_lower_bound": {
+    "numerator": 25,
+    "denominator": 36,
+    "value": 0.6944444444444444
+  },
+  "review_coverage": {
+    "numerator": 19,
+    "denominator": 24,
+    "value": 0.7916666666666666
+  },
+  "tasks": [
+    {
+      "case_id": "P8-D-known_status-1",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1,
+          "required_tool_total": 1,
+          "required_tool_completed": 1,
+          "actual_tool_total": 1,
+          "actual_tool_legal": 1,
+          "tool_parameters_valid": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-D-known_status-2",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1,
+          "required_tool_total": 1,
+          "required_tool_completed": 1,
+          "actual_tool_total": 1,
+          "actual_tool_legal": 1,
+          "tool_parameters_valid": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-D-known_status-3",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1,
+          "required_tool_total": 1,
+          "required_tool_completed": 1,
+          "actual_tool_total": 1,
+          "actual_tool_legal": 1,
+          "tool_parameters_valid": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-D-clarify_service-1",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 2,
+          "intent_correct": 2,
+          "required_tool_total": 1,
+          "required_tool_completed": 1,
+          "actual_tool_total": 1,
+          "actual_tool_legal": 1,
+          "tool_parameters_valid": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-D-clarify_service-2",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 2,
+          "intent_correct": 2,
+          "required_tool_total": 1,
+          "required_tool_completed": 1,
+          "actual_tool_total": 1,
+          "actual_tool_legal": 1,
+          "tool_parameters_valid": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-D-clarify_service-3",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 2,
+          "intent_correct": 2,
+          "required_tool_total": 1,
+          "required_tool_completed": 1,
+          "actual_tool_total": 1,
+          "actual_tool_legal": 1,
+          "tool_parameters_valid": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-D-vpn809-1",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1,
+          "required_tool_total": 2,
+          "required_tool_completed": 2,
+          "actual_tool_total": 2,
+          "actual_tool_legal": 2,
+          "tool_parameters_valid": 2
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-D-vpn809-2",
+      "outcome": "semantic_failure",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1,
+          "required_tool_total": 2,
+          "required_tool_completed": 2,
+          "actual_tool_total": 2,
+          "actual_tool_legal": 2,
+          "tool_parameters_valid": 2
+        }
+      },
+      "primary_cause": "generation"
+    },
+    {
+      "case_id": "P8-D-vpn809-3",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1,
+          "required_tool_total": 1,
+          "required_tool_completed": 1,
+          "actual_tool_total": 1,
+          "actual_tool_legal": 1,
+          "tool_parameters_valid": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-D-priority_policy-1",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-D-priority_policy-2",
+      "outcome": "semantic_failure",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": "annotation_scope"
+    },
+    {
+      "case_id": "P8-D-priority_policy-3",
+      "outcome": "semantic_failure",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": "annotation_scope"
+    },
+    {
+      "case_id": "P8-D-privacy-1",
+      "outcome": "semantic_failure",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": "annotation_scope"
+    },
+    {
+      "case_id": "P8-D-privacy-2",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-D-privacy-3",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-D-usb_conflict-1",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-D-usb_conflict-2",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-D-usb_conflict-3",
+      "outcome": "semantic_failure",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": "generation"
+    },
+    {
+      "case_id": "P8-D-ticket_draft-1",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-D-ticket_draft-2",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-D-ticket_draft-3",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-D-ticket_edit-1",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-D-ticket_edit-2",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-D-ticket_edit-3",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-D-ticket_cancel-1",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-D-ticket_cancel-2",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-D-ticket_cancel-3",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-D-ownership-1",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-D-ownership-2",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-D-ownership-3",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-D-preferences-1",
+      "outcome": "evaluator_error",
+      "structural": {
+        "passed": false,
+        "failures": [
+          {
+            "stage": "evaluator",
+            "reason": "evaluator_error"
+          }
+        ],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": "evaluator"
+    },
+    {
+      "case_id": "P8-D-preferences-2",
+      "outcome": "not_run"
+    },
+    {
+      "case_id": "P8-D-preferences-3",
+      "outcome": "not_run"
+    },
+    {
+      "case_id": "P8-D-retrieval_outage-1",
+      "outcome": "not_run"
+    },
+    {
+      "case_id": "P8-D-retrieval_outage-2",
+      "outcome": "not_run"
+    },
+    {
+      "case_id": "P8-D-retrieval_outage-3",
+      "outcome": "not_run"
+    }
+  ],
+  "quantile_method": "floor((n-1)*p)",
+  "task_latency_seconds": {
+    "count": 31,
+    "p50": 4.535392099991441,
+    "p95": 8.913942000013776
+  },
+  "review_independence": "developer assistant participated in design, implementation and review; independent human review not performed",
+  "healthy": {
+    "task_count": 33,
+    "attempt_count": 31,
+    "logical_requests": 48,
+    "counts": {
+      "planned": 33,
+      "intent_total": 34,
+      "intent_correct": 34,
+      "required_tool_total": 11,
+      "required_tool_completed": 11,
+      "actual_tool_total": 11,
+      "actual_tool_legal": 11,
+      "tool_parameters_valid": 11,
+      "structural_pass": 30,
+      "reviewed": 19,
+      "points_total": 24,
+      "points_supported": 18,
+      "point_task_total": 19,
+      "point_task_sum": 15.0,
+      "missing_citations": 0,
+      "confirmed_success": 25,
+      "answerable_reviewed": 11,
+      "evidence_complete": 9,
+      "incorrect_full_refusal": 0,
+      "factual_answers": 11,
+      "answers_with_unsupported_claims": 2,
+      "cited_claims": 30,
+      "supported_cited_claims": 28,
+      "semantic_failure": 5,
+      "unanswerable_reviewed": 1,
+      "unanswerable_invented": 0,
+      "evaluator_error": 1,
+      "not_run": 2
+    },
+    "categories": {
+      "intent_tools": {
+        "planned": 3,
+        "confirmed_success": 3
+      },
+      "clarification": {
+        "planned": 3,
+        "confirmed_success": 3
+      },
+      "knowledge": {
+        "planned": 7,
+        "confirmed_success": 4,
+        "semantic_failure": 3
+      },
+      "partial_answer": {
+        "planned": 1,
+        "semantic_failure": 1
+      },
+      "no_answer": {
+        "planned": 1,
+        "confirmed_success": 1
+      },
+      "conflict_injection": {
+        "planned": 3,
+        "confirmed_success": 2,
+        "semantic_failure": 1
+      },
+      "approval": {
+        "planned": 9,
+        "confirmed_success": 9
+      },
+      "user_memory": {
+        "planned": 6,
+        "confirmed_success": 3,
+        "evaluator_error": 1,
+        "not_run": 2
+      }
+    },
+    "intent_accuracy": {
+      "numerator": 34,
+      "denominator": 34,
+      "value": 1.0
+    },
+    "required_tool_completion": {
+      "numerator": 11,
+      "denominator": 11,
+      "value": 1.0
+    },
+    "actual_tool_legality": {
+      "numerator": 11,
+      "denominator": 11,
+      "value": 1.0
+    },
+    "tool_parameter_validity": {
+      "numerator": 11,
+      "denominator": 11,
+      "value": 1.0
+    },
+    "extra_tool_calls": 0,
+    "point_coverage_micro": {
+      "numerator": 18,
+      "denominator": 24,
+      "value": 0.75
+    },
+    "point_coverage_macro": {
+      "numerator": 15.0,
+      "denominator": 19,
+      "value": 0.7894736842105263
+    },
+    "unsupported_answer_rate": {
+      "numerator": 2,
+      "denominator": 11,
+      "value": 0.18181818181818182
+    },
+    "evidence_complete_rate": {
+      "numerator": 9,
+      "denominator": 11,
+      "value": 0.8181818181818182
+    },
+    "incorrect_refusal_rate": {
+      "numerator": 0,
+      "denominator": 11,
+      "value": 0.0
+    },
+    "unanswerable_invention_rate": {
+      "numerator": 0,
+      "denominator": 1,
+      "value": 0.0
+    },
+    "citation_support": {
+      "numerator": 28,
+      "denominator": 30,
+      "value": 0.9333333333333333
+    },
+    "confirmed_task_success_lower_bound": {
+      "numerator": 25,
+      "denominator": 33,
+      "value": 0.7575757575757576
+    },
+    "review_coverage": {
+      "numerator": 19,
+      "denominator": 21,
+      "value": 0.9047619047619048
+    },
+    "tasks": [
+      {
+        "case_id": "P8-D-known_status-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1,
+            "required_tool_total": 1,
+            "required_tool_completed": 1,
+            "actual_tool_total": 1,
+            "actual_tool_legal": 1,
+            "tool_parameters_valid": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-known_status-2",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1,
+            "required_tool_total": 1,
+            "required_tool_completed": 1,
+            "actual_tool_total": 1,
+            "actual_tool_legal": 1,
+            "tool_parameters_valid": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-known_status-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1,
+            "required_tool_total": 1,
+            "required_tool_completed": 1,
+            "actual_tool_total": 1,
+            "actual_tool_legal": 1,
+            "tool_parameters_valid": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-clarify_service-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 2,
+            "intent_correct": 2,
+            "required_tool_total": 1,
+            "required_tool_completed": 1,
+            "actual_tool_total": 1,
+            "actual_tool_legal": 1,
+            "tool_parameters_valid": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-clarify_service-2",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 2,
+            "intent_correct": 2,
+            "required_tool_total": 1,
+            "required_tool_completed": 1,
+            "actual_tool_total": 1,
+            "actual_tool_legal": 1,
+            "tool_parameters_valid": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-clarify_service-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 2,
+            "intent_correct": 2,
+            "required_tool_total": 1,
+            "required_tool_completed": 1,
+            "actual_tool_total": 1,
+            "actual_tool_legal": 1,
+            "tool_parameters_valid": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-vpn809-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1,
+            "required_tool_total": 2,
+            "required_tool_completed": 2,
+            "actual_tool_total": 2,
+            "actual_tool_legal": 2,
+            "tool_parameters_valid": 2
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-vpn809-2",
+        "outcome": "semantic_failure",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1,
+            "required_tool_total": 2,
+            "required_tool_completed": 2,
+            "actual_tool_total": 2,
+            "actual_tool_legal": 2,
+            "tool_parameters_valid": 2
+          }
+        },
+        "primary_cause": "generation"
+      },
+      {
+        "case_id": "P8-D-vpn809-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1,
+            "required_tool_total": 1,
+            "required_tool_completed": 1,
+            "actual_tool_total": 1,
+            "actual_tool_legal": 1,
+            "tool_parameters_valid": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-priority_policy-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-priority_policy-2",
+        "outcome": "semantic_failure",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": "annotation_scope"
+      },
+      {
+        "case_id": "P8-D-priority_policy-3",
+        "outcome": "semantic_failure",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": "annotation_scope"
+      },
+      {
+        "case_id": "P8-D-privacy-1",
+        "outcome": "semantic_failure",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": "annotation_scope"
+      },
+      {
+        "case_id": "P8-D-privacy-2",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-privacy-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-usb_conflict-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-usb_conflict-2",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-usb_conflict-3",
+        "outcome": "semantic_failure",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": "generation"
+      },
+      {
+        "case_id": "P8-D-ticket_draft-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-ticket_draft-2",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-ticket_draft-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-ticket_edit-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-ticket_edit-2",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-ticket_edit-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-ticket_cancel-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-ticket_cancel-2",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-ticket_cancel-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-ownership-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-ownership-2",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-ownership-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-preferences-1",
+        "outcome": "evaluator_error",
+        "structural": {
+          "passed": false,
+          "failures": [
+            {
+              "stage": "evaluator",
+              "reason": "evaluator_error"
+            }
+          ],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": "evaluator"
+      },
+      {
+        "case_id": "P8-D-preferences-2",
+        "outcome": "not_run"
+      },
+      {
+        "case_id": "P8-D-preferences-3",
+        "outcome": "not_run"
+      }
+    ],
+    "quantile_method": "floor((n-1)*p)",
+    "task_latency_seconds": {
+      "count": 31,
+      "p50": 4.535392099991441,
+      "p95": 8.913942000013776
+    },
+    "review_independence": "developer assistant participated in design, implementation and review; independent human review not performed"
+  },
+  "faults": {
+    "task_count": 3,
+    "attempt_count": 0,
+    "logical_requests": 0,
+    "counts": {
+      "planned": 3,
+      "not_run": 3
+    },
+    "categories": {
+      "dependency_fault": {
+        "planned": 3,
+        "not_run": 3
+      }
+    },
+    "intent_accuracy": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "required_tool_completion": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "actual_tool_legality": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "tool_parameter_validity": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "extra_tool_calls": 0,
+    "point_coverage_micro": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "point_coverage_macro": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "unsupported_answer_rate": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "evidence_complete_rate": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "incorrect_refusal_rate": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "unanswerable_invention_rate": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "citation_support": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "confirmed_task_success_lower_bound": {
+      "numerator": 0,
+      "denominator": 3,
+      "value": 0.0
+    },
+    "review_coverage": {
+      "numerator": 0,
+      "denominator": 3,
+      "value": 0.0
+    },
+    "tasks": [
+      {
+        "case_id": "P8-D-retrieval_outage-1",
+        "outcome": "not_run"
+      },
+      {
+        "case_id": "P8-D-retrieval_outage-2",
+        "outcome": "not_run"
+      },
+      {
+        "case_id": "P8-D-retrieval_outage-3",
+        "outcome": "not_run"
+      }
+    ],
+    "quantile_method": "floor((n-1)*p)",
+    "task_latency_seconds": {
+      "count": 0,
+      "p50": null,
+      "p95": null
+    },
+    "review_independence": "developer assistant participated in design, implementation and review; independent human review not performed"
+  },
+  "supplemental_draft_audit": {
+    "scope": "Post-experiment supplemental audit; not preregistered heldout metric",
+    "frozen_contract_success": {
+      "numerator": 25,
+      "denominator": 36,
+      "value": 0.6944444444444444
+    },
+    "audited_task_success_lower_bound": {
+      "numerator": 25,
+      "denominator": 36,
+      "value": 0.6944444444444444
+    },
+    "drafts_reviewed": 12,
+    "tasks": [
+      {
+        "case_id": "P8-D-known_status-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1,
+            "required_tool_total": 1,
+            "required_tool_completed": 1,
+            "actual_tool_total": 1,
+            "actual_tool_legal": 1,
+            "tool_parameters_valid": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-known_status-2",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1,
+            "required_tool_total": 1,
+            "required_tool_completed": 1,
+            "actual_tool_total": 1,
+            "actual_tool_legal": 1,
+            "tool_parameters_valid": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-known_status-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1,
+            "required_tool_total": 1,
+            "required_tool_completed": 1,
+            "actual_tool_total": 1,
+            "actual_tool_legal": 1,
+            "tool_parameters_valid": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-clarify_service-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 2,
+            "intent_correct": 2,
+            "required_tool_total": 1,
+            "required_tool_completed": 1,
+            "actual_tool_total": 1,
+            "actual_tool_legal": 1,
+            "tool_parameters_valid": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-clarify_service-2",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 2,
+            "intent_correct": 2,
+            "required_tool_total": 1,
+            "required_tool_completed": 1,
+            "actual_tool_total": 1,
+            "actual_tool_legal": 1,
+            "tool_parameters_valid": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-clarify_service-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 2,
+            "intent_correct": 2,
+            "required_tool_total": 1,
+            "required_tool_completed": 1,
+            "actual_tool_total": 1,
+            "actual_tool_legal": 1,
+            "tool_parameters_valid": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-vpn809-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1,
+            "required_tool_total": 2,
+            "required_tool_completed": 2,
+            "actual_tool_total": 2,
+            "actual_tool_legal": 2,
+            "tool_parameters_valid": 2
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-vpn809-2",
+        "outcome": "semantic_failure",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1,
+            "required_tool_total": 2,
+            "required_tool_completed": 2,
+            "actual_tool_total": 2,
+            "actual_tool_legal": 2,
+            "tool_parameters_valid": 2
+          }
+        },
+        "primary_cause": "generation"
+      },
+      {
+        "case_id": "P8-D-vpn809-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1,
+            "required_tool_total": 1,
+            "required_tool_completed": 1,
+            "actual_tool_total": 1,
+            "actual_tool_legal": 1,
+            "tool_parameters_valid": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-priority_policy-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-priority_policy-2",
+        "outcome": "semantic_failure",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": "annotation_scope"
+      },
+      {
+        "case_id": "P8-D-priority_policy-3",
+        "outcome": "semantic_failure",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": "annotation_scope"
+      },
+      {
+        "case_id": "P8-D-privacy-1",
+        "outcome": "semantic_failure",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": "annotation_scope"
+      },
+      {
+        "case_id": "P8-D-privacy-2",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-privacy-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-usb_conflict-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-usb_conflict-2",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-usb_conflict-3",
+        "outcome": "semantic_failure",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": "generation"
+      },
+      {
+        "case_id": "P8-D-ticket_draft-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-ticket_draft-2",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-ticket_draft-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-ticket_edit-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-ticket_edit-2",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-ticket_edit-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-ticket_cancel-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-ticket_cancel-2",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-ticket_cancel-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-ownership-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-ownership-2",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-ownership-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-D-preferences-1",
+        "outcome": "evaluator_error",
+        "structural": {
+          "passed": false,
+          "failures": [
+            {
+              "stage": "evaluator",
+              "reason": "evaluator_error"
+            }
+          ],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": "evaluator"
+      },
+      {
+        "case_id": "P8-D-preferences-2",
+        "outcome": "not_run"
+      },
+      {
+        "case_id": "P8-D-preferences-3",
+        "outcome": "not_run"
+      },
+      {
+        "case_id": "P8-D-retrieval_outage-1",
+        "outcome": "not_run"
+      },
+      {
+        "case_id": "P8-D-retrieval_outage-2",
+        "outcome": "not_run"
+      },
+      {
+        "case_id": "P8-D-retrieval_outage-3",
+        "outcome": "not_run"
+      }
+    ]
+  }
+}

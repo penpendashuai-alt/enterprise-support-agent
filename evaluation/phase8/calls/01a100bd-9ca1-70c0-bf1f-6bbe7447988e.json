@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100bd-9ca1-70c0-bf1f-6bbe7447988e",
+  "run_id": "f3fa0ed6d479484c968fb1a68efdce62",
+  "case_id": "P8-H-remote_policy-2",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:49:48.878106+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 837,
+    "output_tokens": 53,
+    "total_tokens": 890,
+    "input_token_details": {
+      "cache_read": 384
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.008964,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:49:50.590704+00:00",
+  "visible_model_output": "按本轮提供的演示制度文档，其中明确写明“本文没有家庭宽带报销金额或设备采购额度规定”[1]。因此，关于在家办公每月宽带补贴的具体金额，目前没有依据可查。\n\n如需确认，请提供正式的企业补贴政策文档。",
+  "error_type": null
+}

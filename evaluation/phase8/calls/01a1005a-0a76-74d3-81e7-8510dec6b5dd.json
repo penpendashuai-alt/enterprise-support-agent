@@ -1,0 +1,23 @@
+{
+  "call_id": "01a1005a-0a76-74d3-81e7-8510dec6b5dd",
+  "run_id": "ab704860ba4148568b6f576f3138985d",
+  "case_id": "P8-D-usb_conflict-2",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T06:01:03.383487+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1228,
+    "output_tokens": 172,
+    "total_tokens": 1400,
+    "input_token_details": {
+      "cache_read": 1152
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.015696,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T06:01:05.412045+00:00",
+  "visible_model_output": "",
+  "error_type": null
+}

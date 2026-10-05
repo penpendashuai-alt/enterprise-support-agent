@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100b9-322d-7850-ae59-f346fe6e8c4f",
+  "run_id": "d5038abeb17d4a798b6fb54545d5fa98",
+  "case_id": "P8-R-809",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:44:59.467943+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 2343,
+    "output_tokens": 207,
+    "total_tokens": 2550,
+    "input_token_details": {
+      "cache_read": 640
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.026676,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:45:02.537355+00:00",
+  "visible_model_output": "我先查一下设备 DEV-001 的模拟配置，并参考 VPN 809 的排障文档。\n\n**设备信息（模拟数据）**：查无 DEV-001 的设备记录，无法确认其配置。\n\n**VPN 错误 809 排查建议（依据演示排障指南）**：\n\n1. 先确认普通网络是否可用，核对 VPN 服务器地址与协议是否正确，并记录发生时间和客户端版本 [1]。\n2. 在组织允许的其他网络测试，有助于判断是否为网络路径问题 [1]。\n3. 若使用 IKEv2 或 L2TP/IPsec，可请管理员核查 UDP 500/4500 网络策略；不要自行关闭防火墙、安全软件或改注册表 [2]。\n4. 收集脱敏错误截图后提交支持请求；静态指南不能证明 VPN 服务当前正常 [2]。\n\n需要补充：请提供 VPN 服务器地址、协议类型、客户端版本和发生时间，以便进一步判断。",
+  "error_type": null
+}

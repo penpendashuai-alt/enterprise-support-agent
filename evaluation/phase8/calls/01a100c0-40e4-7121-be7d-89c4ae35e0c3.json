@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100c0-40e4-7121-be7d-89c4ae35e0c3",
+  "run_id": "6bb2cec6d7c1419ea88b03ce930279c7",
+  "case_id": "P8-H-printer_paper-3",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:52:42.005254+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1938,
+    "output_tokens": 54,
+    "total_tokens": 1992,
+    "input_token_details": {
+      "cache_read": 384
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.0189,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:52:43.352078+00:00",
+  "visible_model_output": "不能。文档明确说明：不要拆开非用户可维护部件，也不要强行拉拽损坏部件 [1][2]。反复卡纸时应记录打印机型号、纸张规格、卡纸部位及是否所有用户受影响，交由设备维护人员处理 [1]。",
+  "error_type": null
+}

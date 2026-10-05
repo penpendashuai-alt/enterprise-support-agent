@@ -1,0 +1,17 @@
+{
+  "call_id": "0b90bc76-6058-4599-bf3a-30e9416503f9",
+  "run_id": "cf99c98dd3844d8bad60993e07895afb",
+  "case_id": "P8-R-tool-not-found",
+  "turn": 0,
+  "provider_kind": "embedding",
+  "started_at": "2026-10-03T07:43:16.701927+00:00",
+  "status": "complete",
+  "usage": {
+    "total_tokens": 17
+  },
+  "estimated_cny": 8.5e-06,
+  "reserved_cny": 0.02,
+  "finished_at": "2026-10-03T07:43:16.849902+00:00",
+  "visible_model_output": null,
+  "error_type": null
+}

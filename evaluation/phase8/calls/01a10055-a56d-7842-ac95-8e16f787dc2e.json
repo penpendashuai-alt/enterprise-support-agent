@@ -1,0 +1,23 @@
+{
+  "call_id": "01a10055-a56d-7842-ac95-8e16f787dc2e",
+  "run_id": "854b6d27f7e94eafa03fdfc3fc639343",
+  "case_id": "P8-D-vpn809-3",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T05:56:15.355631+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 2896,
+    "output_tokens": 271,
+    "total_tokens": 3167,
+    "input_token_details": {
+      "cache_read": 2688
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.033381,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T05:56:18.400751+00:00",
+  "visible_model_output": "根据排障文档，VPN 错误 809 表示连接未能建立，不能单凭错误码确定根因 [1]。建议按以下步骤排查：\n\n1. **确认普通网络可用**：先检查本机能否正常访问互联网，排除基础网络问题 [1]。\n2. **核对 VPN 配置**：确认 VPN 服务器地址、协议（IKEv2/L2TP/IPsec 等）填写正确，并记录客户端版本 [1]。\n3. **换网络测试**：在组织允许的其他网络（如手机热点）测试，判断是否为当前网络路径问题 [1]。\n4. **请管理员核查网络策略**：若使用 IKEv2 或 L2TP/IPsec，可请管理员核查 UDP 500/4500 相关网络策略 [2]。\n\n注意：不要自行关闭防火墙、安全软件或修改注册表 [2]。收集脱敏的错误截图后提交支持请求 [2]。\n\n关于服务状态：模拟数据显示 VPN 网关当前为 operational（模拟网关正常），但这是固定模拟数据，不代表真实系统，也不能据此判断你的连接问题根因。\n\n你已记录发生时间，这是有用的信息。请补充：VPN 客户端版本、使用的协议类型、以及是否在多个网络下都报 809，便于进一步定位。",
+  "error_type": null
+}

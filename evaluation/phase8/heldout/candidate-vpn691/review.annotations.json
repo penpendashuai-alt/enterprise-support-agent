@@ -1,0 +1,80 @@
+[
+  {
+    "case_id": "P8-H-vpn691-1",
+    "record_sha256": "3545f5e2cb6db72cea04f1f3825b760a2c1b2a74109cf841588701b0db930916",
+    "status": "reviewed",
+    "points": {
+      "answer": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "已逐轮阅读本次回答、当前 evidence 与工具轨迹。所问必要要点覆盖，引用与相邻结论匹配，没有编造未提供的金额、SLA 或业务成功。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "f42d05ef671ddabc0fb7771bf30ccdf55a7c0d5c3313aa3f80ae213e4441e6b9",
+        "default_supported": "yes",
+        "reason": "逐行复核当前来源：[1] vpn-691/升级支持；行 9-9；字符 1-88；[2] vpn-691/处理步骤；行 5-5；字符 1-87；[3] vpn-809/管理员核查；行 9-9；字符 1-112；[4] vpn-cert/证书检查；行 5-5；字符 1-86；[5] vpn-809/处理步骤；行 5-5；字符 1-113",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-H-vpn691-2",
+    "record_sha256": "f9660704c0dfec63a3ad5f0f72fca8f28c271ab9636e4f6d31c0a696242973bd",
+    "status": "reviewed",
+    "points": {
+      "answer": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "已逐轮阅读本次回答、当前 evidence 与工具轨迹。所问必要要点覆盖，引用与相邻结论匹配，没有编造未提供的金额、SLA 或业务成功。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "587a5d351064a1f3a16638f54a86f5583ebec8637e5caa3d6566b8b717ecfbb2",
+        "default_supported": "yes",
+        "reason": "逐行复核当前来源：[1] vpn-691/升级支持；行 9-9；字符 1-88；[2] vpn-691/处理步骤；行 5-5；字符 1-87；[3] vpn-809/管理员核查；行 9-9；字符 1-112；[4] vpn-cert/证书检查；行 5-5；字符 1-86；[5] vpn-809/处理步骤；行 5-5；字符 1-113",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-H-vpn691-3",
+    "record_sha256": "84b8e51345feab1b6fb91e587f06ef039e4fbf624eaedfdc7a4775ad1817b4e1",
+    "status": "reviewed",
+    "points": {
+      "answer": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "no",
+    "rationale": "核查认证日志的必要点已覆盖，但把不能直接归为端口问题写成“而不是网络端口阻断”，排除了文档并未排除的根因；结尾从其他故障条款借用客户端版本和发生时间。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "43282a1b8ddc4df5fd53354de4eca10a129ff5ca8218bac280bf1486ab08556e",
+        "default_supported": "yes",
+        "reason": "逐行复核当前来源：[1] vpn-691/升级支持；行 9-9；字符 1-88；[2] vpn-691/处理步骤；行 5-5；字符 1-87；[3] vpn-809/管理员核查；行 9-9；字符 1-112；[4] vpn-cert/证书检查；行 5-5；字符 1-86；[5] vpn-809/处理步骤；行 5-5；字符 1-113",
+        "overrides": [
+          {
+            "quote": "而不是网络端口阻断",
+            "supported": "no",
+            "reason": "证据要求不直接将全部问题归为端口阻断，并未排除网络因素。"
+          },
+          {
+            "quote": "客户端版本和发生时间",
+            "supported": "no",
+            "reason": "这些采集项出自其他故障条款，691 的本轮步骤未要求它们；不能忽略适用对象扩写。"
+          }
+        ]
+      }
+    ],
+    "primary_cause": "generation"
+  }
+]

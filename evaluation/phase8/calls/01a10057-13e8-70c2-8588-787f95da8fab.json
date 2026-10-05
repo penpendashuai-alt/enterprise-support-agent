@@ -1,0 +1,23 @@
+{
+  "call_id": "01a10057-13e8-70c2-8588-787f95da8fab",
+  "run_id": "854b6d27f7e94eafa03fdfc3fc639343",
+  "case_id": "P8-D-ownership-3",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T05:57:49.179672+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1230,
+    "output_tokens": 179,
+    "total_tokens": 1409,
+    "input_token_details": {
+      "cache_read": 1152
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.015903,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T05:57:51.104085+00:00",
+  "visible_model_output": "",
+  "error_type": null
+}

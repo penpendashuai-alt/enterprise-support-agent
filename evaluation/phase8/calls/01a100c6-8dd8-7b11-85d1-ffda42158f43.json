@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100c6-8dd8-7b11-85d1-ffda42158f43",
+  "run_id": "66bcef1868e345e1a081b09f12c2da57",
+  "case_id": "P8-R-preference-shift",
+  "turn": 1,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:59:34.936381+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1061,
+    "output_tokens": 89,
+    "total_tokens": 1150,
+    "input_token_details": {
+      "cache_read": 384
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.011952,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:59:37.067158+00:00",
+  "visible_model_output": "Based on the provided document [1], the priority rules are a **演示制度 (demo policy)**:\n\n- P1 priority must be confirmed by the user in the draft; even P1 cannot skip confirmation.\n- The document states there is **no actual response time or SLA commitment** — so there is no \"must resolve within X minutes\" rule in this evidence.\n\nNo other criteria for determining P1 are provided in this round's documents.",
+  "error_type": null
+}

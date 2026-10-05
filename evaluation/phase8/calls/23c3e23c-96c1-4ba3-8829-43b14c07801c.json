@@ -1,0 +1,17 @@
+{
+  "call_id": "23c3e23c-96c1-4ba3-8829-43b14c07801c",
+  "run_id": "ab704860ba4148568b6f576f3138985d",
+  "case_id": "P8-D-usb_conflict-1",
+  "turn": 0,
+  "provider_kind": "embedding",
+  "started_at": "2026-10-03T06:00:59.640735+00:00",
+  "status": "complete",
+  "usage": {
+    "total_tokens": 20
+  },
+  "estimated_cny": 1e-05,
+  "reserved_cny": 0.02,
+  "finished_at": "2026-10-03T06:00:59.805109+00:00",
+  "visible_model_output": null,
+  "error_type": null
+}

@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100c6-1e8c-7810-a52a-76c2d3876b0c",
+  "run_id": "66bcef1868e345e1a081b09f12c2da57",
+  "case_id": "P8-R-p1-short",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:59:06.441084+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 987,
+    "output_tokens": 105,
+    "total_tokens": 1092,
+    "input_token_details": {
+      "cache_read": 512
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.011718,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:59:08.892306+00:00",
+  "visible_model_output": "关于 P1 工单的判定和解决时限，本轮文档只提供了以下依据：\n\n- 优先级需要在草稿中由用户确认，P1 也不能跳过确认 [1]。\n- 文档明确说明“这里没有实际响应时限或 SLA 承诺” [1]。\n\n因此，**P1 的具体判定标准**和**必须在几分钟内解决**的要求，本轮文档均未提供依据，我无法确认。如需了解贵公司的正式判定规则或 SLA，请提供相关制度文档。",
+  "error_type": null
+}

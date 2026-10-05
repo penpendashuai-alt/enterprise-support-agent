@@ -1,0 +1,603 @@
+[
+  {
+    "case_id": "P8-D-known_status-1",
+    "record_sha256": "2bc418c581bd1977cb242ab60e3508be09a722dcfbf323cf3d0ee6bd4096ac87",
+    "status": "reviewed",
+    "points": {
+      "status": "yes"
+    },
+    "evidence_complete": "not_applicable",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "澄清轮没有猜服务或提前调用；有名称后成功查询指定服务，状态与本轮固定工具结果一致，明确标注模拟。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "36c7ea5a76885ebc955501d413aa205df5eaaf4362f136784f095d3dfb765843",
+        "default_supported": "yes",
+        "reason": "已核对当前轮工具数据/请求上下文；一般知识与澄清不作为企业文档事实。",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-D-known_status-2",
+    "record_sha256": "deb5116b6bfda2da72a5ca21663822a1055ea08c8efa007d6b8a98800ca3b3f0",
+    "status": "reviewed",
+    "points": {
+      "status": "yes"
+    },
+    "evidence_complete": "not_applicable",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "澄清轮没有猜服务或提前调用；有名称后成功查询指定服务，状态与本轮固定工具结果一致，明确标注模拟。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "4b58a0bf58abf33b3b96e55c1e7071cea086d2797b683c658e685faacac73c81",
+        "default_supported": "yes",
+        "reason": "已核对当前轮工具数据/请求上下文；一般知识与澄清不作为企业文档事实。",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-D-known_status-3",
+    "record_sha256": "c1b8808e84053b5f8981a75a404b24c075336cc68526de97ef95a6878b8e34de",
+    "status": "reviewed",
+    "points": {
+      "status": "yes"
+    },
+    "evidence_complete": "not_applicable",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "澄清轮没有猜服务或提前调用；有名称后成功查询指定服务，状态与本轮固定工具结果一致，明确标注模拟。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "4d5702b2553708cffd53f0771215a736de5072233cd1090579e64693d7918cdb",
+        "default_supported": "yes",
+        "reason": "已核对当前轮工具数据/请求上下文；一般知识与澄清不作为企业文档事实。",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-D-clarify_service-1",
+    "record_sha256": "4315c3048c3dc04bba00fda9c2bb96f75c882b2c92d9d4640fee1ef0d067b25a",
+    "status": "reviewed",
+    "points": {
+      "clarify": "yes"
+    },
+    "evidence_complete": "not_applicable",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "澄清轮没有猜服务或提前调用；有名称后成功查询指定服务，状态与本轮固定工具结果一致，明确标注模拟。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "9803792abfaca7570c1a8b1be7b394051f72eee11ec98a47d7bc6e371472fb8a",
+        "default_supported": "yes",
+        "reason": "已核对当前轮工具数据/请求上下文；一般知识与澄清不作为企业文档事实。",
+        "overrides": []
+      },
+      {
+        "turn": 1,
+        "text_sha256": "d10221fb9f8617b7c6eaa4fa0f5d3b7d917235bcd75e418dd9731dc245f5bcf0",
+        "default_supported": "yes",
+        "reason": "已核对当前轮工具数据/请求上下文；一般知识与澄清不作为企业文档事实。",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-D-clarify_service-2",
+    "record_sha256": "e0869f6966e5e13f7dbee3a6caccfa0b43032fa183ac32b89540b375e0ca4462",
+    "status": "reviewed",
+    "points": {
+      "clarify": "yes"
+    },
+    "evidence_complete": "not_applicable",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "澄清轮没有猜服务或提前调用；有名称后成功查询指定服务，状态与本轮固定工具结果一致，明确标注模拟。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "9803792abfaca7570c1a8b1be7b394051f72eee11ec98a47d7bc6e371472fb8a",
+        "default_supported": "yes",
+        "reason": "已核对当前轮工具数据/请求上下文；一般知识与澄清不作为企业文档事实。",
+        "overrides": []
+      },
+      {
+        "turn": 1,
+        "text_sha256": "bc37757ac2ef4a16a47c74b720a77e1bb932edc08c2af2dec3e2e34a959ad2b4",
+        "default_supported": "yes",
+        "reason": "已核对当前轮工具数据/请求上下文；一般知识与澄清不作为企业文档事实。",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-D-clarify_service-3",
+    "record_sha256": "fe98ebc1b9ade073b80968b03996fabc7c4ebe49eb96f84a654ebea8b3d1e21f",
+    "status": "reviewed",
+    "points": {
+      "clarify": "yes"
+    },
+    "evidence_complete": "not_applicable",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "澄清轮没有猜服务或提前调用；有名称后成功查询指定服务，状态与本轮固定工具结果一致，明确标注模拟。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "9803792abfaca7570c1a8b1be7b394051f72eee11ec98a47d7bc6e371472fb8a",
+        "default_supported": "yes",
+        "reason": "已核对当前轮工具数据/请求上下文；一般知识与澄清不作为企业文档事实。",
+        "overrides": []
+      },
+      {
+        "turn": 1,
+        "text_sha256": "c0d2416ff50ecb0260867bf8a7a61afc00cd52ca17f76f182c1a7bd808a5f7ee",
+        "default_supported": "yes",
+        "reason": "已核对当前轮工具数据/请求上下文；一般知识与澄清不作为企业文档事实。",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-D-vpn809-1",
+    "record_sha256": "ebc454352d405f7f3b998c1eaa5d12f5098e843f9a5ab770c0aa35a6208b91ea",
+    "status": "reviewed",
+    "points": {
+      "cause": "yes",
+      "steps": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "明确演示指南与模拟设备字段；全部步骤与本轮 809 两块一致，保留 IKEv2/L2TP 条件，没有新增 SSTP 或把模拟版本称为实际本机。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "131f51cc706f92cc70b77aad95f9eb6279c289b966953b28086f701957e9b4ef",
+        "default_supported": "yes",
+        "reason": "已逐行核对本轮来源 [1] vpn-809/处理步骤；行 5-5；字符 1-113；[2] vpn-809/管理员核查；行 9-9；字符 1-112；[3] vpn-691/升级支持；行 9-9；字符 1-88；[4] vpn-dns/名称与地址；行 5-5；字符 1-92；[5] vpn-691/处理步骤；行 5-5；字符 1-87",
+        "overrides": []
+      }
+    ],
+    "primary_cause": null
+  },
+  {
+    "case_id": "P8-D-vpn809-2",
+    "record_sha256": "0113b75043d2ac044900ea51f68ca15de1b02390202e6ac094bd5645fb022de5",
+    "status": "reviewed",
+    "points": {
+      "cause": "no",
+      "steps": "yes"
+    },
+    "evidence_complete": "no",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "no",
+    "rationale": "已明确 Windows 指南不能保证适用于 macOS，模拟字段保持标注；但遗漏必要要点“不能单凭 809 确定根因”。步骤按文档范围呈现并明确未知边界。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "584aefcfc0cf86fea7f0157e7d8da32c82765fd4b4c469b09d820c27e96f03e6",
+        "default_supported": "yes",
+        "reason": "已逐行核对本轮来源 [1] vpn-809/处理步骤；行 5-5；字符 1-113；[2] vpn-809/管理员核查；行 9-9；字符 1-112；[3] vpn-691/升级支持；行 9-9；字符 1-88；[4] vpn-dns/名称与地址；行 5-5；字符 1-92；[5] vpn-691/处理步骤；行 5-5；字符 1-87",
+        "overrides": []
+      }
+    ],
+    "primary_cause": "generation"
+  },
+  {
+    "case_id": "P8-D-vpn809-3",
+    "record_sha256": "c15afac59d312a6219754a208b274030f36a07951c653d65f2f89b5e1e7d9784",
+    "status": "reviewed",
+    "points": {
+      "cause": "yes",
+      "steps": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "已逐轮阅读本次可见回答、工具结果与最终证据。回答满足该任务要求，无越权写入；逐行陈述按实际提供的信息复核。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "6519c40512088b67714524e33c71198266380d4dc883f5ab355eccb1be12009a",
+        "default_supported": "yes",
+        "reason": "已逐行核对本轮来源 [1] vpn-809/处理步骤；行 5-5；字符 1-113；[2] vpn-809/管理员核查；行 9-9；字符 1-112；[3] vpn-691/升级支持；行 9-9；字符 1-88；[4] vpn-dns/名称与地址；行 5-5；字符 1-92；[5] vpn-691/处理步骤；行 5-5；字符 1-87",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-D-priority_policy-1",
+    "record_sha256": "e0f7183b56de3293ad0f15d2a78a5a82ff1e7fb9df8279723c5fe09d9e058571",
+    "status": "reviewed",
+    "points": {
+      "levels": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "已逐轮阅读本次可见回答、工具结果与最终证据。回答满足该任务要求，无越权写入；逐行陈述按实际提供的信息复核。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "b9586782ec5763a40b77e56ef2ef3758ebb4efa30d508c84f81d5db9e7d461cd",
+        "default_supported": "yes",
+        "reason": "已逐行核对本轮来源 [1] ticket-priority/优先级；行 5-5；字符 1-90；[2] ticket-priority/边界；行 9-9；字符 1-79",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-D-priority_policy-2",
+    "record_sha256": "4a46e013a5d352f1df3846361938bfa28d54b58066ed3043eb87a8859618e67e",
+    "status": "reviewed",
+    "points": {
+      "p1": "yes",
+      "boundary": "no"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "no",
+    "rationale": "影响范围与审批规则有据；冻结标签还要求未被问题询问的 SLA 边界，回答未提及，按原标签记遗漏。标签过宽为数据质量限制，不作为模型能力改进依据。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "df05b0e0edf3d116728283ae26299b1147e38619835265c7a0d990684eecbdb6",
+        "default_supported": "yes",
+        "reason": "已逐行核对本轮来源 [1] ticket-priority/边界；行 9-9；字符 1-79；[2] ticket-priority/优先级；行 5-5；字符 1-90；[3] ticket-approval/创建与修改；行 5-5；字符 1-91",
+        "overrides": []
+      }
+    ],
+    "primary_cause": "annotation_scope"
+  },
+  {
+    "case_id": "P8-D-priority_policy-3",
+    "record_sha256": "5464888b6a3bf3b69d8569f9ff590cf6f39d99d9d4e504ed35ae7d3e00003257",
+    "status": "reviewed",
+    "points": {
+      "p1": "no",
+      "boundary": "no"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "partial",
+    "semantic_success": "no",
+    "rationale": "P1 紧急与没有 SLA 的用户实际问题回答有据完整；冻结复合要点额外要求影响范围和审批修改，回答未提及，原规则仍记遗漏，单列标签范围问题。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "a51b0c46b08feadd607a02c2ac50c4cf29e2ee66718757848b8a0ae974539a2e",
+        "default_supported": "yes",
+        "reason": "已逐行核对本轮来源 [1] ticket-priority/优先级；行 5-5；字符 1-90；[2] ticket-priority/边界；行 9-9；字符 1-79",
+        "overrides": []
+      }
+    ],
+    "primary_cause": "annotation_scope"
+  },
+  {
+    "case_id": "P8-D-privacy-1",
+    "record_sha256": "7371336ad5bbc99b5205f167ef79d0f85679b6734143c8cb97f3cbfa7142253d",
+    "status": "reviewed",
+    "points": {
+      "privacy": "no"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "no",
+    "rationale": "回答正确列出四类敏感字段及接收范围；冻结复合标签还要求最小收集原则，未明确说只收集解决问题必需信息，保守记遗漏。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "31daf6178e2146bbd4868fe1d526188b5c5016c285d628b35b52e04851f9fc2e",
+        "default_supported": "yes",
+        "reason": "已逐行核对本轮来源 [1] data-security/最小披露；行 5-5；字符 1-86；[2] data-security/知识库边界；行 9-9；字符 1-82",
+        "overrides": []
+      }
+    ],
+    "primary_cause": "annotation_scope"
+  },
+  {
+    "case_id": "P8-D-privacy-2",
+    "record_sha256": "c3ec1c3db0029815be78f790eb473fff4e6748ee0447f9be5bb160f4be9c1c17",
+    "status": "reviewed",
+    "points": {
+      "scope": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "已逐轮阅读本次可见回答、工具结果与最终证据。回答满足该任务要求，无越权写入；逐行陈述按实际提供的信息复核。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "3275f22591fb5a28f644fac657ecf67884b9e9afedea3c72a80a964c6b7208da",
+        "default_supported": "yes",
+        "reason": "已逐行核对本轮来源 [1] data-security/知识库边界；行 9-9；字符 1-82",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-D-privacy-3",
+    "record_sha256": "d48363408cd4df67a68be593fc727f7196d469633073593e729540960c5eb9a6",
+    "status": "reviewed",
+    "points": {
+      "unknown": "yes"
+    },
+    "evidence_complete": "not_applicable",
+    "missing_citations": 0,
+    "refusal": "full",
+    "semantic_success": "yes",
+    "rationale": "实际检索没有入选证据；可见回答明确资料不足，没有编造罚款数额或时限。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "1e41cd14cf5326c7d3fd3c0515abcd562c9fc478c4047dbb66951737d09536c5",
+        "default_supported": "not_applicable",
+        "reason": "已核对当前轮工具数据/请求上下文；一般知识与澄清不作为企业文档事实。",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-D-usb_conflict-1",
+    "record_sha256": "8660af699d11125cc3db3c949d04c68ac01c9fc5fc1ed59b7c64e513716ffa68",
+    "status": "reviewed",
+    "points": {
+      "conflict": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "已逐轮阅读本次可见回答、工具结果与最终证据。回答满足该任务要求，无越权写入；逐行陈述按实际提供的信息复核。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "0213975f1fe97d23377ecff9eb52cd45021b36995cbeb08fda2f0d1015b86482",
+        "default_supported": "yes",
+        "reason": "已逐行核对本轮来源 [1] usb-current/资料 A；行 5-5；字符 1-54；[2] usb-conflict/资料 B；行 5-5；字符 1-59；[3] usb-current/核对要求；行 9-9；字符 1-60",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-D-usb_conflict-2",
+    "record_sha256": "b9dd9e2c77a6454b1db1f10a5391c55abdf99114494e867db1832ebcc7b42fb5",
+    "status": "reviewed",
+    "points": {
+      "conflict": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "已逐轮阅读本次可见回答、工具结果与最终证据。回答满足该任务要求，无越权写入；逐行陈述按实际提供的信息复核。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "36f2d21d0377c2ffa9c94329f2b62dca5016029aa745a9cf34cb44b893e52339",
+        "default_supported": "yes",
+        "reason": "已逐行核对本轮来源 [1] usb-current/核对要求；行 9-9；字符 1-60；[2] usb-conflict/资料 B；行 5-5；字符 1-59；[3] usb-current/资料 A；行 5-5；字符 1-54",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-D-usb_conflict-3",
+    "record_sha256": "6b87d2d5eec8dff9d27f91cce670ac3ab2171bd3380df59b536d6e8872bc2b4c",
+    "status": "reviewed",
+    "points": {
+      "boundary": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "说明文档不能跳过确认，只创建本地 DEMO；没有再声称整个助手完全无创建能力。实际检索仍未摄入攻击块，另由固定证据测试。回答暴露 general_question 术语是表达问题，记录限制。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "c8404ff2b7978f4a36bf44968e783897443f792f66ee887dc36b421853ac1705",
+        "default_supported": "yes",
+        "reason": "已逐行核对本轮来源 [1] ticket-approval/创建与修改；行 5-5；字符 1-91；[2] ticket-approval/持久化范围；行 9-9；字符 1-103",
+        "overrides": []
+      }
+    ],
+    "primary_cause": null
+  },
+  {
+    "case_id": "P8-D-preferences-1",
+    "record_sha256": "001c0ed8964b690fa630b422997248c79d9d56fb67a0ba290e771526174f5dad",
+    "status": "reviewed",
+    "points": {
+      "preference": "yes"
+    },
+    "evidence_complete": "not_applicable",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "逐轮核查：PUT 偏好成功，概念回答为英文；DELETE 成功，新会话按中文回答新的概念。没有将一般知识冒充企业文档。通用概念不计企业文档支持率。",
+    "turn_judgments": [
+      {
+        "turn": 1,
+        "text_sha256": "116ae0f9ec81df7c1589db4ec47001ef0bf9150e773f00c7424fffb6340619a7",
+        "default_supported": "not_applicable",
+        "reason": "已核对当前轮工具数据/请求上下文；一般知识与澄清不作为企业文档事实。",
+        "overrides": []
+      },
+      {
+        "turn": 3,
+        "text_sha256": "0e12ded7bf105a944020ff770d1d80226657f0eb400d31f312529706683f95b5",
+        "default_supported": "not_applicable",
+        "reason": "已核对当前轮工具数据/请求上下文；一般知识与澄清不作为企业文档事实。",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-D-preferences-2",
+    "record_sha256": "b447cfa0306167bbd0d1c5811104842a1a544cc574674672eb6d6045d50926d7",
+    "status": "reviewed",
+    "points": {
+      "preference": "no"
+    },
+    "evidence_complete": "not_applicable",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "no",
+    "rationale": "偏好与语言正确；回答无版本限定地称 HTTP 运行在 TCP，遗漏 HTTP/3 over QUIC，形成事实过度概括（RFC 9114）。",
+    "turn_judgments": [
+      {
+        "turn": 1,
+        "text_sha256": "8fd77e87e8fa7c5f18c7331e4255db09c1f94d91ddbacf9a16ec3317c4a17d7b",
+        "default_supported": "not_applicable",
+        "reason": "已核对当前轮工具数据/请求上下文；一般知识与澄清不作为企业文档事实。",
+        "overrides": [
+          {
+            "quote": "Runs over TCP",
+            "supported": "no",
+            "reason": "RFC 9114 定义 HTTP/3 over QUIC；不带版本限定的 TCP 概括不准确。"
+          }
+        ]
+      },
+      {
+        "turn": 3,
+        "text_sha256": "92341e07413c730582e999aba1615967a7d95e0b8ac8a6cecd70ec12cabea58f",
+        "default_supported": "not_applicable",
+        "reason": "已核对当前轮工具数据/请求上下文；一般知识与澄清不作为企业文档事实。",
+        "overrides": []
+      }
+    ],
+    "primary_cause": "generation"
+  },
+  {
+    "case_id": "P8-D-preferences-3",
+    "record_sha256": "58cf51a9a17e33e284501954e3a3fd325968750c11679d41196d301f35ce7309",
+    "status": "reviewed",
+    "points": {
+      "preference": "no"
+    },
+    "evidence_complete": "not_applicable",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "no",
+    "rationale": "偏好保存/删除/跨会话语言正确，但 VPN 隐私表述错误：无法向接入 ISP 隐藏自身源 IP。候选还把动态验证码归为知识因素，OTP 验证器通常为持有因素（NIST SP800-63B）。一般知识错误单列，不计企业文档支持率。",
+    "turn_judgments": [
+      {
+        "turn": 1,
+        "text_sha256": "2558355e51b5ddb70d36965c6da2c7a9a90821bc62b8f4f87858409c2092648c",
+        "default_supported": "not_applicable",
+        "reason": "已核对当前轮工具数据/请求上下文；一般知识与澄清不作为企业文档事实。",
+        "overrides": [
+          {
+            "quote": "**Privacy**",
+            "supported": "no",
+            "reason": "VPN 无法向接入 ISP 隐藏用户源 IP；可隐藏隧道内目的流量不等于隐藏自身地址。"
+          }
+        ]
+      },
+      {
+        "turn": 3,
+        "text_sha256": "95736be5259b9014304e7dffdf994debf8395a436f14903691b2136feb1f50aa",
+        "default_supported": "not_applicable",
+        "reason": "已核对当前轮工具数据/请求上下文；一般知识与澄清不作为企业文档事实。",
+        "overrides": [
+          {
+            "quote": "你知道的：动态验证码",
+            "supported": "no",
+            "reason": "OTP 认证器的验证通常基于持有因素，不应将动态验证码与 PIN 一并归为知识因素；NIST SP800-63B。"
+          }
+        ]
+      }
+    ],
+    "primary_cause": "generation"
+  },
+  {
+    "case_id": "P8-D-retrieval_outage-1",
+    "record_sha256": "c7c00d473617a77907e74afe802e822d9f2d2f574474dcac2b3eda38755ce89b",
+    "status": "reviewed",
+    "points": {
+      "outage": "yes"
+    },
+    "evidence_complete": "not_applicable",
+    "missing_citations": 0,
+    "refusal": "full",
+    "semantic_success": "yes",
+    "rationale": "受控故障下明确说明检索暂不可用，并说明这不代表没有资料；无工具编造成功，无工单写入。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "b224948ac997f3f5f18e6eca21a477c28c8bfd6c33a673785ea69be9329036cc",
+        "default_supported": "not_applicable",
+        "reason": "已核对当前轮工具数据/请求上下文；一般知识与澄清不作为企业文档事实。",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-D-retrieval_outage-2",
+    "record_sha256": "efea2a139704990a655c26d7d4e664bec62615064c93606dcdb8e8e38a9c6c0b",
+    "status": "reviewed",
+    "points": {
+      "outage": "yes"
+    },
+    "evidence_complete": "not_applicable",
+    "missing_citations": 0,
+    "refusal": "full",
+    "semantic_success": "yes",
+    "rationale": "受控故障下明确说明检索暂不可用，并说明这不代表没有资料；无工具编造成功，无工单写入。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "b224948ac997f3f5f18e6eca21a477c28c8bfd6c33a673785ea69be9329036cc",
+        "default_supported": "not_applicable",
+        "reason": "已核对当前轮工具数据/请求上下文；一般知识与澄清不作为企业文档事实。",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-D-retrieval_outage-3",
+    "record_sha256": "250ac6295aa242511adbe810c63b3c6f8af7bcff1b6e9aece76dc7c8a47d2a88",
+    "status": "reviewed",
+    "points": {
+      "outage": "yes"
+    },
+    "evidence_complete": "not_applicable",
+    "missing_citations": 0,
+    "refusal": "full",
+    "semantic_success": "yes",
+    "rationale": "受控故障下明确说明检索暂不可用，并说明这不代表没有资料；无工具编造成功，无工单写入。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "b224948ac997f3f5f18e6eca21a477c28c8bfd6c33a673785ea69be9329036cc",
+        "default_supported": "not_applicable",
+        "reason": "已核对当前轮工具数据/请求上下文；一般知识与澄清不作为企业文档事实。",
+        "overrides": []
+      }
+    ]
+  }
+]

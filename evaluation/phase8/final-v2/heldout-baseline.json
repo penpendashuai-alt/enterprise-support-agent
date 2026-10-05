@@ -1,0 +1,1376 @@
+{
+  "task_count": 24,
+  "attempt_count": 24,
+  "logical_requests": 33,
+  "counts": {
+    "planned": 24,
+    "intent_total": 27,
+    "intent_correct": 25,
+    "structural_pass": 22,
+    "reviewed": 21,
+    "points_total": 22,
+    "points_supported": 22,
+    "point_task_total": 21,
+    "point_task_sum": 21.0,
+    "answerable_reviewed": 20,
+    "evidence_complete": 19,
+    "incorrect_full_refusal": 0,
+    "factual_answers": 21,
+    "answers_with_unsupported_claims": 2,
+    "cited_claims": 51,
+    "supported_cited_claims": 47,
+    "missing_citations": 0,
+    "confirmed_success": 20,
+    "unanswerable_reviewed": 1,
+    "unanswerable_invented": 0,
+    "required_tool_total": 3,
+    "required_tool_completed": 3,
+    "actual_tool_total": 3,
+    "actual_tool_legal": 3,
+    "tool_parameters_valid": 3,
+    "semantic_failure": 2,
+    "structural_failure": 2
+  },
+  "categories": {
+    "knowledge": {
+      "planned": 15,
+      "confirmed_success": 12,
+      "semantic_failure": 1,
+      "structural_failure": 2
+    },
+    "no_answer": {
+      "planned": 1,
+      "confirmed_success": 1
+    },
+    "partial_answer": {
+      "planned": 2,
+      "confirmed_success": 2
+    },
+    "approval": {
+      "planned": 3,
+      "confirmed_success": 3
+    },
+    "clarification": {
+      "planned": 3,
+      "semantic_failure": 1,
+      "confirmed_success": 2
+    }
+  },
+  "intent_accuracy": {
+    "numerator": 25,
+    "denominator": 27,
+    "value": 0.9259259259259259
+  },
+  "required_tool_completion": {
+    "numerator": 3,
+    "denominator": 3,
+    "value": 1.0
+  },
+  "actual_tool_legality": {
+    "numerator": 3,
+    "denominator": 3,
+    "value": 1.0
+  },
+  "tool_parameter_validity": {
+    "numerator": 3,
+    "denominator": 3,
+    "value": 1.0
+  },
+  "extra_tool_calls": 0,
+  "point_coverage_micro": {
+    "numerator": 22,
+    "denominator": 22,
+    "value": 1.0
+  },
+  "point_coverage_macro": {
+    "numerator": 21.0,
+    "denominator": 21,
+    "value": 1.0
+  },
+  "unsupported_answer_rate": {
+    "numerator": 2,
+    "denominator": 21,
+    "value": 0.09523809523809523
+  },
+  "evidence_complete_rate": {
+    "numerator": 19,
+    "denominator": 20,
+    "value": 0.95
+  },
+  "incorrect_refusal_rate": {
+    "numerator": 0,
+    "denominator": 20,
+    "value": 0.0
+  },
+  "unanswerable_invention_rate": {
+    "numerator": 0,
+    "denominator": 1,
+    "value": 0.0
+  },
+  "citation_support": {
+    "numerator": 47,
+    "denominator": 51,
+    "value": 0.9215686274509803
+  },
+  "confirmed_task_success_lower_bound": {
+    "numerator": 20,
+    "denominator": 24,
+    "value": 0.8333333333333334
+  },
+  "review_coverage": {
+    "numerator": 21,
+    "denominator": 21,
+    "value": 1.0
+  },
+  "tasks": [
+    {
+      "case_id": "P8-H-mail_policy-1",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-H-mail_policy-2",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-H-mail_policy-3",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-H-code_policy-1",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-H-code_policy-2",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-H-code_policy-3",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-H-remote_policy-1",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-H-remote_policy-2",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-H-remote_policy-3",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-H-vpn691-1",
+      "outcome": "semantic_failure",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1,
+          "required_tool_total": 1,
+          "required_tool_completed": 1,
+          "actual_tool_total": 1,
+          "actual_tool_legal": 1,
+          "tool_parameters_valid": 1
+        }
+      },
+      "primary_cause": "generation"
+    },
+    {
+      "case_id": "P8-H-vpn691-2",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1,
+          "required_tool_total": 1,
+          "required_tool_completed": 1,
+          "actual_tool_total": 1,
+          "actual_tool_legal": 1,
+          "tool_parameters_valid": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-H-vpn691-3",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1,
+          "required_tool_total": 1,
+          "required_tool_completed": 1,
+          "actual_tool_total": 1,
+          "actual_tool_legal": 1,
+          "tool_parameters_valid": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-H-printer_paper-1",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-H-printer_paper-2",
+      "outcome": "structural_failure",
+      "structural": {
+        "passed": false,
+        "failures": [
+          {
+            "stage": "router",
+            "turn": 0,
+            "reason": "intent"
+          }
+        ],
+        "metrics": {
+          "intent_total": 1
+        }
+      },
+      "primary_cause": "annotation_scope"
+    },
+    {
+      "case_id": "P8-H-printer_paper-3",
+      "outcome": "structural_failure",
+      "structural": {
+        "passed": false,
+        "failures": [
+          {
+            "stage": "router",
+            "turn": 0,
+            "reason": "intent"
+          }
+        ],
+        "metrics": {
+          "intent_total": 1
+        }
+      },
+      "primary_cause": "annotation_scope"
+    },
+    {
+      "case_id": "P8-H-account_policy-1",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-H-account_policy-2",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-H-account_policy-3",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-H-repair_idempotency-1",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-H-repair_idempotency-2",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-H-repair_idempotency-3",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 1,
+          "intent_correct": 1
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-H-concept_to_policy-1",
+      "outcome": "semantic_failure",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 2,
+          "intent_correct": 2
+        }
+      },
+      "primary_cause": "generation"
+    },
+    {
+      "case_id": "P8-H-concept_to_policy-2",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 2,
+          "intent_correct": 2
+        }
+      },
+      "primary_cause": null
+    },
+    {
+      "case_id": "P8-H-concept_to_policy-3",
+      "outcome": "confirmed_success",
+      "structural": {
+        "passed": true,
+        "failures": [],
+        "metrics": {
+          "intent_total": 2,
+          "intent_correct": 2
+        }
+      },
+      "primary_cause": null
+    }
+  ],
+  "quantile_method": "floor((n-1)*p)",
+  "task_latency_seconds": {
+    "count": 24,
+    "p50": 6.198355000000447,
+    "p95": 9.9784273999976
+  },
+  "review_independence": "developer assistant participated in design, implementation and review; independent human review not performed",
+  "healthy": {
+    "task_count": 24,
+    "attempt_count": 24,
+    "logical_requests": 33,
+    "counts": {
+      "planned": 24,
+      "intent_total": 27,
+      "intent_correct": 25,
+      "structural_pass": 22,
+      "reviewed": 21,
+      "points_total": 22,
+      "points_supported": 22,
+      "point_task_total": 21,
+      "point_task_sum": 21.0,
+      "answerable_reviewed": 20,
+      "evidence_complete": 19,
+      "incorrect_full_refusal": 0,
+      "factual_answers": 21,
+      "answers_with_unsupported_claims": 2,
+      "cited_claims": 51,
+      "supported_cited_claims": 47,
+      "missing_citations": 0,
+      "confirmed_success": 20,
+      "unanswerable_reviewed": 1,
+      "unanswerable_invented": 0,
+      "required_tool_total": 3,
+      "required_tool_completed": 3,
+      "actual_tool_total": 3,
+      "actual_tool_legal": 3,
+      "tool_parameters_valid": 3,
+      "semantic_failure": 2,
+      "structural_failure": 2
+    },
+    "categories": {
+      "knowledge": {
+        "planned": 15,
+        "confirmed_success": 12,
+        "semantic_failure": 1,
+        "structural_failure": 2
+      },
+      "no_answer": {
+        "planned": 1,
+        "confirmed_success": 1
+      },
+      "partial_answer": {
+        "planned": 2,
+        "confirmed_success": 2
+      },
+      "approval": {
+        "planned": 3,
+        "confirmed_success": 3
+      },
+      "clarification": {
+        "planned": 3,
+        "semantic_failure": 1,
+        "confirmed_success": 2
+      }
+    },
+    "intent_accuracy": {
+      "numerator": 25,
+      "denominator": 27,
+      "value": 0.9259259259259259
+    },
+    "required_tool_completion": {
+      "numerator": 3,
+      "denominator": 3,
+      "value": 1.0
+    },
+    "actual_tool_legality": {
+      "numerator": 3,
+      "denominator": 3,
+      "value": 1.0
+    },
+    "tool_parameter_validity": {
+      "numerator": 3,
+      "denominator": 3,
+      "value": 1.0
+    },
+    "extra_tool_calls": 0,
+    "point_coverage_micro": {
+      "numerator": 22,
+      "denominator": 22,
+      "value": 1.0
+    },
+    "point_coverage_macro": {
+      "numerator": 21.0,
+      "denominator": 21,
+      "value": 1.0
+    },
+    "unsupported_answer_rate": {
+      "numerator": 2,
+      "denominator": 21,
+      "value": 0.09523809523809523
+    },
+    "evidence_complete_rate": {
+      "numerator": 19,
+      "denominator": 20,
+      "value": 0.95
+    },
+    "incorrect_refusal_rate": {
+      "numerator": 0,
+      "denominator": 20,
+      "value": 0.0
+    },
+    "unanswerable_invention_rate": {
+      "numerator": 0,
+      "denominator": 1,
+      "value": 0.0
+    },
+    "citation_support": {
+      "numerator": 47,
+      "denominator": 51,
+      "value": 0.9215686274509803
+    },
+    "confirmed_task_success_lower_bound": {
+      "numerator": 20,
+      "denominator": 24,
+      "value": 0.8333333333333334
+    },
+    "review_coverage": {
+      "numerator": 21,
+      "denominator": 21,
+      "value": 1.0
+    },
+    "tasks": [
+      {
+        "case_id": "P8-H-mail_policy-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-mail_policy-2",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-mail_policy-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-code_policy-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-code_policy-2",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-code_policy-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-remote_policy-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-remote_policy-2",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-remote_policy-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-vpn691-1",
+        "outcome": "semantic_failure",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1,
+            "required_tool_total": 1,
+            "required_tool_completed": 1,
+            "actual_tool_total": 1,
+            "actual_tool_legal": 1,
+            "tool_parameters_valid": 1
+          }
+        },
+        "primary_cause": "generation"
+      },
+      {
+        "case_id": "P8-H-vpn691-2",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1,
+            "required_tool_total": 1,
+            "required_tool_completed": 1,
+            "actual_tool_total": 1,
+            "actual_tool_legal": 1,
+            "tool_parameters_valid": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-vpn691-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1,
+            "required_tool_total": 1,
+            "required_tool_completed": 1,
+            "actual_tool_total": 1,
+            "actual_tool_legal": 1,
+            "tool_parameters_valid": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-printer_paper-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-printer_paper-2",
+        "outcome": "structural_failure",
+        "structural": {
+          "passed": false,
+          "failures": [
+            {
+              "stage": "router",
+              "turn": 0,
+              "reason": "intent"
+            }
+          ],
+          "metrics": {
+            "intent_total": 1
+          }
+        },
+        "primary_cause": "annotation_scope"
+      },
+      {
+        "case_id": "P8-H-printer_paper-3",
+        "outcome": "structural_failure",
+        "structural": {
+          "passed": false,
+          "failures": [
+            {
+              "stage": "router",
+              "turn": 0,
+              "reason": "intent"
+            }
+          ],
+          "metrics": {
+            "intent_total": 1
+          }
+        },
+        "primary_cause": "annotation_scope"
+      },
+      {
+        "case_id": "P8-H-account_policy-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-account_policy-2",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-account_policy-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-repair_idempotency-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-repair_idempotency-2",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-repair_idempotency-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-concept_to_policy-1",
+        "outcome": "semantic_failure",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 2,
+            "intent_correct": 2
+          }
+        },
+        "primary_cause": "generation"
+      },
+      {
+        "case_id": "P8-H-concept_to_policy-2",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 2,
+            "intent_correct": 2
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-concept_to_policy-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 2,
+            "intent_correct": 2
+          }
+        },
+        "primary_cause": null
+      }
+    ],
+    "quantile_method": "floor((n-1)*p)",
+    "task_latency_seconds": {
+      "count": 24,
+      "p50": 6.198355000000447,
+      "p95": 9.9784273999976
+    },
+    "review_independence": "developer assistant participated in design, implementation and review; independent human review not performed"
+  },
+  "faults": {
+    "task_count": 0,
+    "attempt_count": 0,
+    "logical_requests": 0,
+    "counts": {},
+    "categories": {},
+    "intent_accuracy": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "required_tool_completion": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "actual_tool_legality": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "tool_parameter_validity": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "extra_tool_calls": 0,
+    "point_coverage_micro": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "point_coverage_macro": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "unsupported_answer_rate": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "evidence_complete_rate": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "incorrect_refusal_rate": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "unanswerable_invention_rate": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "citation_support": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "confirmed_task_success_lower_bound": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "review_coverage": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "tasks": [],
+    "quantile_method": "floor((n-1)*p)",
+    "task_latency_seconds": {
+      "count": 0,
+      "p50": null,
+      "p95": null
+    },
+    "review_independence": "developer assistant participated in design, implementation and review; independent human review not performed"
+  },
+  "supplemental_draft_audit": {
+    "scope": "Post-experiment supplemental audit; not preregistered heldout metric",
+    "frozen_contract_success": {
+      "numerator": 20,
+      "denominator": 24,
+      "value": 0.8333333333333334
+    },
+    "audited_task_success_lower_bound": {
+      "numerator": 19,
+      "denominator": 24,
+      "value": 0.7916666666666666
+    },
+    "drafts_reviewed": 3,
+    "tasks": [
+      {
+        "case_id": "P8-H-mail_policy-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-mail_policy-2",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-mail_policy-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-code_policy-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-code_policy-2",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-code_policy-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-remote_policy-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-remote_policy-2",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-remote_policy-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-vpn691-1",
+        "outcome": "semantic_failure",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1,
+            "required_tool_total": 1,
+            "required_tool_completed": 1,
+            "actual_tool_total": 1,
+            "actual_tool_legal": 1,
+            "tool_parameters_valid": 1
+          }
+        },
+        "primary_cause": "generation"
+      },
+      {
+        "case_id": "P8-H-vpn691-2",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1,
+            "required_tool_total": 1,
+            "required_tool_completed": 1,
+            "actual_tool_total": 1,
+            "actual_tool_legal": 1,
+            "tool_parameters_valid": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-vpn691-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1,
+            "required_tool_total": 1,
+            "required_tool_completed": 1,
+            "actual_tool_total": 1,
+            "actual_tool_legal": 1,
+            "tool_parameters_valid": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-printer_paper-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-printer_paper-2",
+        "outcome": "structural_failure",
+        "structural": {
+          "passed": false,
+          "failures": [
+            {
+              "stage": "router",
+              "turn": 0,
+              "reason": "intent"
+            }
+          ],
+          "metrics": {
+            "intent_total": 1
+          }
+        },
+        "primary_cause": "annotation_scope"
+      },
+      {
+        "case_id": "P8-H-printer_paper-3",
+        "outcome": "structural_failure",
+        "structural": {
+          "passed": false,
+          "failures": [
+            {
+              "stage": "router",
+              "turn": 0,
+              "reason": "intent"
+            }
+          ],
+          "metrics": {
+            "intent_total": 1
+          }
+        },
+        "primary_cause": "annotation_scope"
+      },
+      {
+        "case_id": "P8-H-account_policy-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-account_policy-2",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-account_policy-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-repair_idempotency-1",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-repair_idempotency-2",
+        "outcome": "draft_semantic_failure",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": "draft_generation"
+      },
+      {
+        "case_id": "P8-H-repair_idempotency-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 1,
+            "intent_correct": 1
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-concept_to_policy-1",
+        "outcome": "semantic_failure",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 2,
+            "intent_correct": 2
+          }
+        },
+        "primary_cause": "generation"
+      },
+      {
+        "case_id": "P8-H-concept_to_policy-2",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 2,
+            "intent_correct": 2
+          }
+        },
+        "primary_cause": null
+      },
+      {
+        "case_id": "P8-H-concept_to_policy-3",
+        "outcome": "confirmed_success",
+        "structural": {
+          "passed": true,
+          "failures": [],
+          "metrics": {
+            "intent_total": 2,
+            "intent_correct": 2
+          }
+        },
+        "primary_cause": null
+      }
+    ]
+  }
+}

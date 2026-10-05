@@ -1,0 +1,180 @@
+[
+  {
+    "run_id": "8f1664fee00f435fad3993ce193815d7",
+    "case_id": "P8-H-concept_to_policy-1",
+    "attempt": 1,
+    "record_sha256": "18d6635b2b4a1d4b5b034bd36a1e92d2b76f9a75a4e774011a8487e261296073",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewer": "Codex development assistant (same designer and implementer)",
+    "reviewed_at": "2026-10-03T08:00:41.537364+00:00",
+    "rubric_version": "phase8-rubric-v1",
+    "points": {
+      "switch": "yes"
+    },
+    "evidence_complete": "no",
+    "claims": [
+      {
+        "turn": 0,
+        "quote": "DNS（域名系统）的用途是把人类易记的域名（如 `www.example.com`）解析成计算机通信所需的 IP 地址（如 `93.184.216.34`），相当于互联网的“电话簿”。",
+        "supported": "not_applicable",
+        "reason": "通用 DNS 概念，不计入企业文档陈述分母。",
+        "citation_numbers": []
+      },
+      {
+        "turn": 1,
+        "quote": "根据本轮文档证据，这是演示企业代码托管规范中的要求：",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] github-policy/仓库访问；行 5-5；字符 1-76",
+        "citation_numbers": []
+      },
+      {
+        "turn": 1,
+        "quote": "- 个人访问令牌（PAT）、私钥和环境变量密钥不得提交代码仓库，应使用组织批准的秘密存储方式 [1]。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] github-policy/仓库访问；行 5-5；字符 1-76",
+        "citation_numbers": [
+          1
+        ]
+      },
+      {
+        "turn": 1,
+        "quote": "原因在于：私钥一旦进入代码仓库，会随提交历史长期留存，任何有仓库访问权限的人都可能看到，扩大泄露面；同时也不符合“按任务授予最小访问权限”的原则 [1]。",
+        "supported": "no",
+        "reason": "本轮 github-policy/仓库访问只列禁止规则和存储要求，没有这些技术原因；合理常识不能替代当前引用依据。",
+        "citation_numbers": [
+          1
+        ]
+      },
+      {
+        "turn": 1,
+        "quote": "需要说明的是，该文档标注为“演示制度”，不是真实企业制度；文档只给出了禁止性规定，没有进一步解释具体的技术理由或处罚措施，这部分缺少依据。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] github-policy/仓库访问；行 5-5；字符 1-76",
+        "citation_numbers": []
+      }
+    ],
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "no",
+    "primary_cause": "generation",
+    "secondary_causes": [],
+    "rationale": "话题切换与禁止提交密钥规则正确；当前来源没有技术原因，却把提交历史/泄露面作为该引用支持的原因。候选虽最后承认文档无技术解释，前文仍输出并引用不支持的解释。",
+    "uncertainties": []
+  },
+  {
+    "run_id": "8f1664fee00f435fad3993ce193815d7",
+    "case_id": "P8-H-concept_to_policy-2",
+    "attempt": 1,
+    "record_sha256": "fb5ba95bb0e1cfdac7345873f32f13e6cb281fd62787ff5607d8c68f0bf7fb8b",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewer": "Codex development assistant (same designer and implementer)",
+    "reviewed_at": "2026-10-03T08:00:41.540029+00:00",
+    "rubric_version": "phase8-rubric-v1",
+    "points": {
+      "switch": "yes"
+    },
+    "evidence_complete": "yes",
+    "claims": [
+      {
+        "turn": 0,
+        "quote": "DNS（域名系统）的用途是把人类易记的域名（如 `www.example.com`）解析为计算机通信所需的 IP 地址（如 `93.184.216.34`），相当于互联网的“电话簿”。它让用户无需记住数字 IP 即可访问网站、邮件等服务。",
+        "supported": "not_applicable",
+        "reason": "通用 DNS 概念，不计入企业文档陈述分母。",
+        "citation_numbers": []
+      },
+      {
+        "turn": 1,
+        "quote": "根据本轮文档证据，远程工作账号不能与家人共用。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] remote-work/远程设备；行 5-5；字符 1-73",
+        "citation_numbers": []
+      },
+      {
+        "turn": 1,
+        "quote": "文档明确写明：“不要与家人共享工作账号”[1]。该内容属于演示制度，适用对象为远程办公场景。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] remote-work/远程设备；行 5-5；字符 1-73",
+        "citation_numbers": [
+          1
+        ]
+      }
+    ],
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "primary_cause": null,
+    "secondary_causes": [],
+    "rationale": "首轮 DNS 普通知识正确，后续切换到本轮文档；实体已清空，没有旧工具结果污染。",
+    "uncertainties": []
+  },
+  {
+    "run_id": "8f1664fee00f435fad3993ce193815d7",
+    "case_id": "P8-H-concept_to_policy-3",
+    "attempt": 1,
+    "record_sha256": "cd79ecf25ba729cd7e0d4e61e5d82ff6563805748511f932264ce2f6a9c47880",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewer": "Codex development assistant (same designer and implementer)",
+    "reviewed_at": "2026-10-03T08:00:41.542487+00:00",
+    "rubric_version": "phase8-rubric-v1",
+    "points": {
+      "switch": "yes"
+    },
+    "evidence_complete": "yes",
+    "claims": [
+      {
+        "turn": 0,
+        "quote": "DNS（域名系统）的用途是把人类易记的域名（如 `www.example.com`）解析成计算机通信所需的 IP 地址（如 `93.184.216.34`），相当于互联网的“电话簿”。",
+        "supported": "not_applicable",
+        "reason": "通用 DNS 概念，不计入企业文档陈述分母。",
+        "citation_numbers": []
+      },
+      {
+        "turn": 1,
+        "quote": "根据演示企业邮箱使用规范 [1]：",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] email-policy/可疑邮件；行 9-9；字符 1-65",
+        "citation_numbers": [
+          1
+        ]
+      },
+      {
+        "turn": 1,
+        "quote": "- 不要点击链接、打开附件或回复凭据。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] email-policy/可疑邮件；行 9-9；字符 1-65",
+        "citation_numbers": []
+      },
+      {
+        "turn": 1,
+        "quote": "- 保留发件地址和收到时间。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] email-policy/可疑邮件；行 9-9；字符 1-65",
+        "citation_numbers": []
+      },
+      {
+        "turn": 1,
+        "quote": "- 通过演示支持流程报告。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] email-policy/可疑邮件；行 9-9；字符 1-65",
+        "citation_numbers": []
+      },
+      {
+        "turn": 1,
+        "quote": "该文档未规定邮箱容量或邮件保留年限。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] email-policy/可疑邮件；行 9-9；字符 1-65",
+        "citation_numbers": []
+      }
+    ],
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "primary_cause": null,
+    "secondary_causes": [],
+    "rationale": "首轮 DNS 普通知识正确，后续切换到本轮文档；实体已清空，没有旧工具结果污染。",
+    "uncertainties": []
+  }
+]

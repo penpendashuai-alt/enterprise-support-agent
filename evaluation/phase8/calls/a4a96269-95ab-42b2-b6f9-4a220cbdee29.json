@@ -1,0 +1,17 @@
+{
+  "call_id": "a4a96269-95ab-42b2-b6f9-4a220cbdee29",
+  "run_id": "ab704860ba4148568b6f576f3138985d",
+  "case_id": "P8-D-priority_policy-1",
+  "turn": 0,
+  "provider_kind": "embedding",
+  "started_at": "2026-10-03T06:00:24.247390+00:00",
+  "status": "complete",
+  "usage": {
+    "total_tokens": 23
+  },
+  "estimated_cny": 1.15e-05,
+  "reserved_cny": 0.02,
+  "finished_at": "2026-10-03T06:00:24.410070+00:00",
+  "visible_model_output": null,
+  "error_type": null
+}

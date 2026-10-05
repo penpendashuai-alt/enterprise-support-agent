@@ -1,0 +1,23 @@
+{
+  "call_id": "01a10059-a550-7771-8ea5-e6d3c4e7b290",
+  "run_id": "ab704860ba4148568b6f576f3138985d",
+  "case_id": "P8-D-priority_policy-3",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T06:00:37.479650+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1234,
+    "output_tokens": 41,
+    "total_tokens": 1275,
+    "input_token_details": {
+      "cache_read": 640
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.012213,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T06:00:40.056346+00:00",
+  "visible_model_output": "按演示工单优先级规则，P1 表示“紧急”[1]。\n\n该规则没有承诺具体解决分钟数，文档明确说明“这里没有实际响应时限或 SLA 承诺”[2]。",
+  "error_type": null
+}

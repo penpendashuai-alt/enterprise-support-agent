@@ -1,0 +1,290 @@
+{
+  "run_id": "d67ba0761a42409aa9627c2ff0893196",
+  "case_id": "P8-H-repair_idempotency-1",
+  "attempt": 1,
+  "variant": "candidate-cache",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-03T08:00:45.321861+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请建维修演示工单：设备 DEV-002 电池外壳鼓起，影响我一人，请安排人工检查，优先级 P2。",
+      "http_status": 200,
+      "seconds": 4.777304199989885,
+      "request_id": "1bbb008410c14fd49d297fef26eca86f",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：设备 DEV-002 电池外壳鼓起维修\n描述：设备 DEV-002 电池外壳鼓起，已尝试安排人工检查。\n服务：未指定\n影响范围：仅本人\n优先级：P2（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a100c7-a12a-7e12-a284-d92444a7317c",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-905d973313c24c9682bef0f391d2c306",
+          "draft_version": 1,
+          "draft": {
+            "title": "设备 DEV-002 电池外壳鼓起维修",
+            "description": "设备 DEV-002 电池外壳鼓起，已尝试安排人工检查。",
+            "service_name": null,
+            "impact": "仅本人",
+            "priority": "P2"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": "DEV-002",
+          "ticket_id": null,
+          "issue_description": "设备 DEV-002 电池外壳鼓起，影响一人，请安排人工检查，优先级 P2",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "设备 DEV-002 电池外壳鼓起维修",
+          "description": "设备 DEV-002 电池外壳鼓起，已尝试安排人工检查。",
+          "service_name": null,
+          "impact": "仅本人",
+          "priority": "P2"
+        },
+        "draft_id": "draft-905d973313c24c9682bef0f391d2c306",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    },
+    {
+      "index": 1,
+      "operation": "approve",
+      "user_message": null,
+      "http_status": 200,
+      "seconds": 0.029368799994699657,
+      "request_id": "8549552959df4f5b906a705bbb7494b5",
+      "response": {
+        "type": "ai",
+        "content": "本地演示工单已创建：DEMO-AA6208A6F0E14D84BE70552092EE4E35，状态：open。标题：设备 DEV-002 电池外壳鼓起维修。未提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a100c7-b463-73b0-ab77-949fbbd54003",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_result",
+          "status": "success",
+          "ticket": {
+            "ticket_id": "DEMO-AA6208A6F0E14D84BE70552092EE4E35",
+            "draft_id": "draft-905d973313c24c9682bef0f391d2c306",
+            "draft_version": 1,
+            "thread_id": "9e6759ca3eca474eb2bd7d7513c62704",
+            "idempotency_key": "draft-905d973313c24c9682bef0f391d2c306:v1",
+            "fingerprint": "d2299d0b95489a679f1f4c19d7cd2040491d55674d75624e428c35cef7073f45",
+            "draft": {
+              "title": "设备 DEV-002 电池外壳鼓起维修",
+              "description": "设备 DEV-002 电池外壳鼓起，已尝试安排人工检查。",
+              "service_name": null,
+              "impact": "仅本人",
+              "priority": "P2"
+            },
+            "state": "open",
+            "created_at": "2026-10-03T16:00:50.289925+08:00",
+            "user_id": "p8-d67ba076-P8-H-repair_idempotency-1-alice",
+            "source": "postgres"
+          },
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": "DEV-002",
+          "ticket_id": null,
+          "issue_description": "设备 DEV-002 电池外壳鼓起，影响一人，请安排人工检查，优先级 P2",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "设备 DEV-002 电池外壳鼓起维修",
+          "description": "设备 DEV-002 电池外壳鼓起，已尝试安排人工检查。",
+          "service_name": null,
+          "impact": "仅本人",
+          "priority": "P2"
+        },
+        "draft_id": "draft-905d973313c24c9682bef0f391d2c306",
+        "draft_version": 1,
+        "approval_status": "completed",
+        "approved_fingerprint": "d2299d0b95489a679f1f4c19d7cd2040491d55674d75624e428c35cef7073f45",
+        "approved_request_key": "draft-905d973313c24c9682bef0f391d2c306:v1",
+        "ticket_result": {
+          "kind": "ticket_result",
+          "status": "success",
+          "ticket": {
+            "ticket_id": "DEMO-AA6208A6F0E14D84BE70552092EE4E35",
+            "draft_id": "draft-905d973313c24c9682bef0f391d2c306",
+            "draft_version": 1,
+            "thread_id": "9e6759ca3eca474eb2bd7d7513c62704",
+            "idempotency_key": "draft-905d973313c24c9682bef0f391d2c306:v1",
+            "fingerprint": "d2299d0b95489a679f1f4c19d7cd2040491d55674d75624e428c35cef7073f45",
+            "draft": {
+              "title": "设备 DEV-002 电池外壳鼓起维修",
+              "description": "设备 DEV-002 电池外壳鼓起，已尝试安排人工检查。",
+              "service_name": null,
+              "impact": "仅本人",
+              "priority": "P2"
+            },
+            "state": "open",
+            "created_at": "2026-10-03T16:00:50.289925+08:00",
+            "user_id": "p8-d67ba076-P8-H-repair_idempotency-1-alice",
+            "source": "postgres"
+          },
+          "is_demo": true
+        }
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 1
+    },
+    {
+      "index": 2,
+      "operation": "approve",
+      "user_message": null,
+      "http_status": 200,
+      "seconds": 0.01106760004768148,
+      "request_id": "c6b7c68852cf4847b9068f715db44d02",
+      "response": {
+        "type": "ai",
+        "content": "本地演示工单已创建：DEMO-AA6208A6F0E14D84BE70552092EE4E35，状态：open。标题：设备 DEV-002 电池外壳鼓起维修。未提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a100c7-b520-78a0-bfea-3c1c7b90e3be",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_result",
+          "status": "success",
+          "ticket": {
+            "ticket_id": "DEMO-AA6208A6F0E14D84BE70552092EE4E35",
+            "draft_id": "draft-905d973313c24c9682bef0f391d2c306",
+            "draft_version": 1,
+            "thread_id": "9e6759ca3eca474eb2bd7d7513c62704",
+            "idempotency_key": "draft-905d973313c24c9682bef0f391d2c306:v1",
+            "fingerprint": "d2299d0b95489a679f1f4c19d7cd2040491d55674d75624e428c35cef7073f45",
+            "draft": {
+              "title": "设备 DEV-002 电池外壳鼓起维修",
+              "description": "设备 DEV-002 电池外壳鼓起，已尝试安排人工检查。",
+              "service_name": null,
+              "impact": "仅本人",
+              "priority": "P2"
+            },
+            "state": "open",
+            "created_at": "2026-10-03T16:00:50.289925+08:00",
+            "user_id": "p8-d67ba076-P8-H-repair_idempotency-1-alice",
+            "source": "postgres"
+          },
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": "DEV-002",
+          "ticket_id": null,
+          "issue_description": "设备 DEV-002 电池外壳鼓起，影响一人，请安排人工检查，优先级 P2",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "设备 DEV-002 电池外壳鼓起维修",
+          "description": "设备 DEV-002 电池外壳鼓起，已尝试安排人工检查。",
+          "service_name": null,
+          "impact": "仅本人",
+          "priority": "P2"
+        },
+        "draft_id": "draft-905d973313c24c9682bef0f391d2c306",
+        "draft_version": 1,
+        "approval_status": "completed",
+        "approved_fingerprint": "d2299d0b95489a679f1f4c19d7cd2040491d55674d75624e428c35cef7073f45",
+        "approved_request_key": "draft-905d973313c24c9682bef0f391d2c306:v1",
+        "ticket_result": {
+          "kind": "ticket_result",
+          "status": "success",
+          "ticket": {
+            "ticket_id": "DEMO-AA6208A6F0E14D84BE70552092EE4E35",
+            "draft_id": "draft-905d973313c24c9682bef0f391d2c306",
+            "draft_version": 1,
+            "thread_id": "9e6759ca3eca474eb2bd7d7513c62704",
+            "idempotency_key": "draft-905d973313c24c9682bef0f391d2c306:v1",
+            "fingerprint": "d2299d0b95489a679f1f4c19d7cd2040491d55674d75624e428c35cef7073f45",
+            "draft": {
+              "title": "设备 DEV-002 电池外壳鼓起维修",
+              "description": "设备 DEV-002 电池外壳鼓起，已尝试安排人工检查。",
+              "service_name": null,
+              "impact": "仅本人",
+              "priority": "P2"
+            },
+            "state": "open",
+            "created_at": "2026-10-03T16:00:50.289925+08:00",
+            "user_id": "p8-d67ba076-P8-H-repair_idempotency-1-alice",
+            "source": "postgres"
+          },
+          "is_demo": true
+        }
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 1
+    }
+  ],
+  "users": {
+    "alice": "p8-d67ba076-P8-H-repair_idempotency-1-alice",
+    "bob": "p8-d67ba076-P8-H-repair_idempotency-1-bob"
+  },
+  "threads": {
+    "primary": "9e6759ca3eca474eb2bd7d7513c62704",
+    "secondary": "29038d0da4fd43599735617d43fb1e26"
+  },
+  "seconds": 5.307154699985404,
+  "final_ticket_count": 1,
+  "final_draft_version": 1,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {
+      "intent_total": 1,
+      "intent_correct": 1
+    }
+  },
+  "model_calls": [
+    "01a100c7-a140-7621-9508-97367be68ca8",
+    "01a100c7-aa81-7433-afe4-97b40dd32ae0"
+  ]
+}

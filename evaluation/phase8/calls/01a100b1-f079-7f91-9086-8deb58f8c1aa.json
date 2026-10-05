@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100b1-f079-7f91-9086-8deb58f8c1aa",
+  "run_id": "6d24d8aa9d614c469fd0e65b663b67ef",
+  "case_id": "P8-D-clarify_service-2",
+  "turn": 1,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:37:03.898778+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 805,
+    "output_tokens": 33,
+    "total_tokens": 838,
+    "input_token_details": {
+      "cache_read": 640
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.008136,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:37:05.306874+00:00",
+  "visible_model_output": "VPN 服务状态（模拟数据）：**运行正常**，模拟网关正常。\n\n如需进一步排查连接问题，请提供设备编号或具体报错信息。",
+  "error_type": null
+}

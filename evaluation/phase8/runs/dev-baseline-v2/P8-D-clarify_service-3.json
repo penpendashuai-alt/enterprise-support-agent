@@ -1,0 +1,140 @@
+{
+  "run_id": "ab704860ba4148568b6f576f3138985d",
+  "case_id": "P8-D-clarify_service-3",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-03T05:59:44.665701+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "我想查服务是否正常，但还没告诉你服务名。",
+      "http_status": 200,
+      "seconds": 1.5308610000065528,
+      "request_id": "14617c1fa6364b8aafebc36eab73b374",
+      "response": {
+        "type": "ai",
+        "content": "你想查询哪个服务的状态？例如 GitHub、VPN、邮箱或 Jira。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a10058-d720-7141-8222-9d7d146ca981",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "service_status",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": null
+        },
+        "needs_clarification": true,
+        "clarification_question": "你想查询哪个服务的状态？例如 GitHub、VPN、邮箱或 Jira。"
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    },
+    {
+      "index": 1,
+      "operation": "user",
+      "user_message": "要查的是 Jira。",
+      "http_status": 200,
+      "seconds": 4.458983999968041,
+      "request_id": "77f0cca04eee4e09ad74ca1175ca8098",
+      "response": {
+        "type": "ai",
+        "content": "Jira 服务当前状态（模拟数据）：**中断（outage）**，正在排查中。\n\n如需进一步协助，请告知具体问题或提供相关工单编号。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a10058-ddc3-7753-8814-d23ff3c71c83",
+        "response_metadata": {
+          "finish_reason": "stop",
+          "model_name": "deepseek-v4-pro",
+          "system_fingerprint": "a307abda487cd1b463329ccb945ce396",
+          "model_provider": "openai"
+        },
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "service_status",
+        "entities": {
+          "service_name": "Jira",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": null
+        },
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "retrieval": null,
+      "tools": [
+        {
+          "name": "query_service_status",
+          "args": {
+            "service_name": "Jira"
+          },
+          "id": "call_00_aSgR4P4wceMmxquSRSK73995",
+          "type": "tool_call",
+          "result": {
+            "status": "success",
+            "data": {
+              "service_name": "Jira",
+              "state": "outage",
+              "detail": "模拟服务中断，正在排查。"
+            },
+            "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+            "is_mock": true
+          },
+          "validation_error": false
+        }
+      ],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-ab704860-P8-D-clarify_service-3-alice",
+    "bob": "p8-ab704860-P8-D-clarify_service-3-bob"
+  },
+  "threads": {
+    "primary": "6771aa81c805465aae2be58cfc5f0f1e",
+    "secondary": "0a91fe1b812e406cbe84255a3492c865"
+  },
+  "seconds": 6.314315099967644,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {
+      "intent_total": 2,
+      "intent_correct": 2,
+      "required_tool_total": 1,
+      "required_tool_completed": 1,
+      "actual_tool_total": 1,
+      "actual_tool_legal": 1,
+      "tool_parameters_valid": 1
+    }
+  },
+  "model_calls": [
+    "01a10058-d72b-7602-834b-a6c5d9c4e523",
+    "01a10058-ddd3-7c02-acc6-2ad5cb4276c5",
+    "01a10058-e4ff-7fd1-89d8-8a3418f8eabc",
+    "01a10058-e9d6-7e00-ad0a-6237dff7667f"
+  ]
+}

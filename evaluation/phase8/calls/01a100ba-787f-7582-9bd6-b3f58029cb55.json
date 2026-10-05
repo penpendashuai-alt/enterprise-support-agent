@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100ba-787f-7582-9bd6-b3f58029cb55",
+  "run_id": "ce43704d0e264568a62d7441f4e2cea3",
+  "case_id": "P8-R-tool-not-found",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:46:23.007756+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 2094,
+    "output_tokens": 247,
+    "total_tokens": 2341,
+    "input_token_details": {
+      "cache_read": 512
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.025515,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:46:26.146645+00:00",
+  "visible_model_output": "我先按你提供的编号查询设备，并同时查 VPN 服务状态。\n\n- 设备 DEV-999：查无结果（not_found），说明本地演示工单库中没有该编号的设备记录。按演示规则，标签缺失时应先向资产管理员核实，不能从型号猜编号 [3]。\n- VPN 服务状态：需要你提供具体服务名才能查询；本轮未提供，无法给出模拟服务状态。\n\n关于 VPN 报错 809，本轮文档只支持以下演示排障步骤 [1][2]：\n1. 先确认普通网络可用，核对 VPN 服务器地址与协议，记录发生时间和客户端版本。\n2. 在组织允许的其他网络测试，有助于判断是否为网络路径问题。\n3. 若使用 IKEv2 或 L2TP/IPsec，可请管理员核查 UDP 500/4500 网络策略；不要自行关闭防火墙、安全软件或改注册表。\n4. 收集脱敏错误截图后提交支持请求；静态指南不能证明 VPN 服务当前正常。\n\n需要我继续的话，请提供：\n- 正确的设备编号（DEV-三位数字）\n- 要查询的 VPN 服务名",
+  "error_type": null
+}

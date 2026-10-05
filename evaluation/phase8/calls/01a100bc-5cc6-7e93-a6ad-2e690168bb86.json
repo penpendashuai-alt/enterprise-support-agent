@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100bc-5cc6-7e93-a6ad-2e690168bb86",
+  "run_id": "89816f6c77e94397b355dba8df850d15",
+  "case_id": "P8-H-code_policy-1",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:48:26.992151+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1224,
+    "output_tokens": 174,
+    "total_tokens": 1398,
+    "input_token_details": {
+      "cache_read": 1152
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.015714,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:48:28.677579+00:00",
+  "visible_model_output": "",
+  "error_type": null
+}

@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100b3-d34c-7943-8fb0-ef5799860c2b",
+  "run_id": "6d24d8aa9d614c469fd0e65b663b67ef",
+  "case_id": "P8-D-ticket_cancel-2",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:39:07.507096+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 577,
+    "output_tokens": 119,
+    "total_tokens": 696,
+    "input_token_details": {
+      "cache_read": 512
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.008406,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:39:09.241903+00:00",
+  "visible_model_output": "",
+  "error_type": null
+}

@@ -1,0 +1,23 @@
+{
+  "call_id": "01a10059-7463-7a50-923b-499ceccef2c1",
+  "run_id": "ab704860ba4148568b6f576f3138985d",
+  "case_id": "P8-D-priority_policy-1",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T06:00:24.947248+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1237,
+    "output_tokens": 103,
+    "total_tokens": 1340,
+    "input_token_details": {
+      "cache_read": 1152
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.013914,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T06:00:26.749820+00:00",
+  "visible_model_output": "根据演示工单优先级规则 [1]：\n\n- **P1**：紧急\n- **P2**：高\n- **P3**：普通\n- **P4**：低\n\n未指定优先级时，默认填 **P3（普通）**，不根据模型猜测自动升级；任何优先级都要填写影响范围 [1]。\n\n另外，优先级需要在草稿中由用户确认，P1 也不能跳过确认；修改优先级必须保存新版本并重新确认 [2]。",
+  "error_type": null
+}

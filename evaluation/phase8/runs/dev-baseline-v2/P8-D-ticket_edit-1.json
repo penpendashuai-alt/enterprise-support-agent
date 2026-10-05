@@ -1,0 +1,258 @@
+{
+  "run_id": "ab704860ba4148568b6f576f3138985d",
+  "case_id": "P8-D-ticket_edit-1",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-03T06:01:27.613177+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请创建 VPN 故障演示工单：认证页反复刷新，重启客户端无效，仅我受影响，优先级 P2。",
+      "http_status": 200,
+      "seconds": 3.872493700007908,
+      "request_id": "1fa29023e30245528a9dda9da8e6d9b6",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：VPN 认证页反复刷新故障\n描述：认证页反复刷新，重启客户端无效\n服务：VPN\n影响范围：仅我受影响\n优先级：P2（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a1005a-6944-75a0-99e8-bea6ec3ecad6",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-5080f56ce2aa4151b892abbade5389e9",
+          "draft_version": 1,
+          "draft": {
+            "title": "VPN 认证页反复刷新故障",
+            "description": "认证页反复刷新，重启客户端无效",
+            "service_name": "VPN",
+            "impact": "仅我受影响",
+            "priority": "P2"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "VPN",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "认证页反复刷新，重启客户端无效，仅我受影响，优先级 P2",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "VPN 认证页反复刷新故障",
+          "description": "认证页反复刷新，重启客户端无效",
+          "service_name": "VPN",
+          "impact": "仅我受影响",
+          "priority": "P2"
+        },
+        "draft_id": "draft-5080f56ce2aa4151b892abbade5389e9",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    },
+    {
+      "index": 1,
+      "operation": "edit",
+      "user_message": null,
+      "http_status": 200,
+      "seconds": 0.029644199996255338,
+      "request_id": "4f8f19dc942749a191a7de61d06ec0e9",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 2）：\n标题：VPN 认证页反复刷新故障\n描述：认证页反复刷新，重启客户端无效\n服务：VPN\n影响范围：仅我受影响\n优先级：P1（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a1005a-7901-7ae0-b1ce-f0fb99d4a792",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-5080f56ce2aa4151b892abbade5389e9",
+          "draft_version": 2,
+          "draft": {
+            "title": "VPN 认证页反复刷新故障",
+            "description": "认证页反复刷新，重启客户端无效",
+            "service_name": "VPN",
+            "impact": "仅我受影响",
+            "priority": "P1"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "VPN",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "认证页反复刷新，重启客户端无效，仅我受影响，优先级 P2",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "VPN 认证页反复刷新故障",
+          "description": "认证页反复刷新，重启客户端无效",
+          "service_name": "VPN",
+          "impact": "仅我受影响",
+          "priority": "P1"
+        },
+        "draft_id": "draft-5080f56ce2aa4151b892abbade5389e9",
+        "draft_version": 2,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    },
+    {
+      "index": 2,
+      "operation": "approve",
+      "user_message": null,
+      "http_status": 200,
+      "seconds": 0.032711800013203174,
+      "request_id": "4a8bfa8ba1c948a18ac9600ace506090",
+      "response": {
+        "type": "ai",
+        "content": "本地演示工单已创建：DEMO-3E641F4CBE8D44479EA46782537A5455，状态：open。标题：VPN 认证页反复刷新故障。未提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a1005a-79bf-78b0-a930-534c1f8e6506",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_result",
+          "status": "success",
+          "ticket": {
+            "ticket_id": "DEMO-3E641F4CBE8D44479EA46782537A5455",
+            "draft_id": "draft-5080f56ce2aa4151b892abbade5389e9",
+            "draft_version": 2,
+            "thread_id": "a8840472ca924761871573637a0017bc",
+            "idempotency_key": "draft-5080f56ce2aa4151b892abbade5389e9:v2",
+            "fingerprint": "004e4e75e72ca9337877eea15f300a107c3399d977eacfcf47826fb9f861cede",
+            "draft": {
+              "title": "VPN 认证页反复刷新故障",
+              "description": "认证页反复刷新，重启客户端无效",
+              "service_name": "VPN",
+              "impact": "仅我受影响",
+              "priority": "P1"
+            },
+            "state": "open",
+            "created_at": "2026-10-03T14:01:31.851285+08:00",
+            "user_id": "p8-ab704860-P8-D-ticket_edit-1-alice",
+            "source": "postgres"
+          },
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "VPN",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "认证页反复刷新，重启客户端无效，仅我受影响，优先级 P2",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "VPN 认证页反复刷新故障",
+          "description": "认证页反复刷新，重启客户端无效",
+          "service_name": "VPN",
+          "impact": "仅我受影响",
+          "priority": "P1"
+        },
+        "draft_id": "draft-5080f56ce2aa4151b892abbade5389e9",
+        "draft_version": 2,
+        "approval_status": "completed",
+        "approved_fingerprint": "004e4e75e72ca9337877eea15f300a107c3399d977eacfcf47826fb9f861cede",
+        "approved_request_key": "draft-5080f56ce2aa4151b892abbade5389e9:v2",
+        "ticket_result": {
+          "kind": "ticket_result",
+          "status": "success",
+          "ticket": {
+            "ticket_id": "DEMO-3E641F4CBE8D44479EA46782537A5455",
+            "draft_id": "draft-5080f56ce2aa4151b892abbade5389e9",
+            "draft_version": 2,
+            "thread_id": "a8840472ca924761871573637a0017bc",
+            "idempotency_key": "draft-5080f56ce2aa4151b892abbade5389e9:v2",
+            "fingerprint": "004e4e75e72ca9337877eea15f300a107c3399d977eacfcf47826fb9f861cede",
+            "draft": {
+              "title": "VPN 认证页反复刷新故障",
+              "description": "认证页反复刷新，重启客户端无效",
+              "service_name": "VPN",
+              "impact": "仅我受影响",
+              "priority": "P1"
+            },
+            "state": "open",
+            "created_at": "2026-10-03T14:01:31.851285+08:00",
+            "user_id": "p8-ab704860-P8-D-ticket_edit-1-alice",
+            "source": "postgres"
+          },
+          "is_demo": true
+        }
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 1
+    }
+  ],
+  "users": {
+    "alice": "p8-ab704860-P8-D-ticket_edit-1-alice",
+    "bob": "p8-ab704860-P8-D-ticket_edit-1-bob"
+  },
+  "threads": {
+    "primary": "a8840472ca924761871573637a0017bc",
+    "secondary": "c2cab56c6bb94306a4e284608a5cea72"
+  },
+  "seconds": 4.408676599967293,
+  "final_ticket_count": 1,
+  "final_draft_version": 2,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {
+      "intent_total": 1,
+      "intent_correct": 1
+    }
+  },
+  "model_calls": [
+    "01a1005a-6953-7523-bc28-83000260fced",
+    "01a1005a-7118-7290-92ef-86ad0e73a1dd"
+  ]
+}

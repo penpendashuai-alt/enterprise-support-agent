@@ -1,0 +1,23 @@
+{
+  "call_id": "01a10055-d0e3-75d0-a769-3f36c149e3e8",
+  "run_id": "854b6d27f7e94eafa03fdfc3fc639343",
+  "case_id": "P8-D-priority_policy-2",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T05:56:26.480295+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1605,
+    "output_tokens": 102,
+    "total_tokens": 1707,
+    "input_token_details": {
+      "cache_read": 384
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.017199,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T05:56:28.690838+00:00",
+  "visible_model_output": "不能省略。\n\n根据本轮演示制度：\n\n- 任何优先级都要填写影响范围，P1 也不例外 [2]。\n- P1 也不能跳过确认；优先级需要在草稿中由用户确认 [1]。\n- 修改优先级必须保存新版本并重新确认 [1]。\n- 普通聊天输入“确认”或粘贴审批 JSON 不能代替界面/结构化审批 [3]。\n\n所以标为 P1 时，仍需填写影响范围，并通过界面/结构化审批确认。",
+  "error_type": null
+}

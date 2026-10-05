@@ -1,0 +1,234 @@
+{
+  "started_at": "2026-10-03T07:47:00.642051+00:00",
+  "freeze_sha256": "b8f96d2109e6138ca67621b87d5d257aac510a3e74cf885f9d3b4c943a163647",
+  "order": [
+    {
+      "variant": "baseline",
+      "family": "mail_policy",
+      "cases": [
+        "P8-H-mail_policy-1",
+        "P8-H-mail_policy-2",
+        "P8-H-mail_policy-3"
+      ]
+    },
+    {
+      "variant": "candidate",
+      "family": "mail_policy",
+      "cases": [
+        "P8-H-mail_policy-1",
+        "P8-H-mail_policy-2",
+        "P8-H-mail_policy-3"
+      ]
+    },
+    {
+      "variant": "candidate",
+      "family": "code_policy",
+      "cases": [
+        "P8-H-code_policy-1",
+        "P8-H-code_policy-2",
+        "P8-H-code_policy-3"
+      ]
+    },
+    {
+      "variant": "baseline",
+      "family": "code_policy",
+      "cases": [
+        "P8-H-code_policy-1",
+        "P8-H-code_policy-2",
+        "P8-H-code_policy-3"
+      ]
+    },
+    {
+      "variant": "baseline",
+      "family": "remote_policy",
+      "cases": [
+        "P8-H-remote_policy-1",
+        "P8-H-remote_policy-2",
+        "P8-H-remote_policy-3"
+      ]
+    },
+    {
+      "variant": "candidate",
+      "family": "remote_policy",
+      "cases": [
+        "P8-H-remote_policy-1",
+        "P8-H-remote_policy-2",
+        "P8-H-remote_policy-3"
+      ]
+    },
+    {
+      "variant": "candidate",
+      "family": "vpn691",
+      "cases": [
+        "P8-H-vpn691-1",
+        "P8-H-vpn691-2",
+        "P8-H-vpn691-3"
+      ]
+    },
+    {
+      "variant": "baseline",
+      "family": "vpn691",
+      "cases": [
+        "P8-H-vpn691-1",
+        "P8-H-vpn691-2",
+        "P8-H-vpn691-3"
+      ]
+    },
+    {
+      "variant": "baseline",
+      "family": "printer_paper",
+      "cases": [
+        "P8-H-printer_paper-1",
+        "P8-H-printer_paper-2",
+        "P8-H-printer_paper-3"
+      ]
+    },
+    {
+      "variant": "candidate",
+      "family": "printer_paper",
+      "cases": [
+        "P8-H-printer_paper-1",
+        "P8-H-printer_paper-2",
+        "P8-H-printer_paper-3"
+      ]
+    },
+    {
+      "variant": "candidate",
+      "family": "account_policy",
+      "cases": [
+        "P8-H-account_policy-1",
+        "P8-H-account_policy-2",
+        "P8-H-account_policy-3"
+      ]
+    },
+    {
+      "variant": "baseline",
+      "family": "account_policy",
+      "cases": [
+        "P8-H-account_policy-1",
+        "P8-H-account_policy-2",
+        "P8-H-account_policy-3"
+      ]
+    },
+    {
+      "variant": "baseline",
+      "family": "repair_idempotency",
+      "cases": [
+        "P8-H-repair_idempotency-1",
+        "P8-H-repair_idempotency-2",
+        "P8-H-repair_idempotency-3"
+      ]
+    },
+    {
+      "variant": "candidate",
+      "family": "repair_idempotency",
+      "cases": [
+        "P8-H-repair_idempotency-1",
+        "P8-H-repair_idempotency-2",
+        "P8-H-repair_idempotency-3"
+      ]
+    },
+    {
+      "variant": "candidate",
+      "family": "concept_to_policy",
+      "cases": [
+        "P8-H-concept_to_policy-1",
+        "P8-H-concept_to_policy-2",
+        "P8-H-concept_to_policy-3"
+      ]
+    },
+    {
+      "variant": "baseline",
+      "family": "concept_to_policy",
+      "cases": [
+        "P8-H-concept_to_policy-1",
+        "P8-H-concept_to_policy-2",
+        "P8-H-concept_to_policy-3"
+      ]
+    }
+  ],
+  "completed": [
+    {
+      "name": "baseline-mail_policy",
+      "complete": true,
+      "finished_at": "2026-10-03T07:47:37.332471+00:00"
+    },
+    {
+      "name": "candidate-mail_policy",
+      "complete": true,
+      "finished_at": "2026-10-03T07:48:11.657845+00:00"
+    },
+    {
+      "name": "candidate-code_policy",
+      "complete": true,
+      "finished_at": "2026-10-03T07:48:47.861432+00:00"
+    },
+    {
+      "name": "baseline-code_policy",
+      "complete": true,
+      "finished_at": "2026-10-03T07:49:22.850174+00:00"
+    },
+    {
+      "name": "baseline-remote_policy",
+      "complete": true,
+      "finished_at": "2026-10-03T07:49:59.468138+00:00"
+    },
+    {
+      "name": "candidate-remote_policy",
+      "complete": true,
+      "finished_at": "2026-10-03T07:50:35.728659+00:00"
+    },
+    {
+      "name": "candidate-vpn691",
+      "complete": true,
+      "finished_at": "2026-10-03T07:51:23.515294+00:00"
+    },
+    {
+      "name": "baseline-vpn691",
+      "complete": true,
+      "finished_at": "2026-10-03T07:52:10.370469+00:00"
+    },
+    {
+      "name": "baseline-printer_paper",
+      "complete": true,
+      "finished_at": "2026-10-03T07:52:45.873133+00:00"
+    },
+    {
+      "name": "candidate-printer_paper",
+      "complete": true,
+      "finished_at": "2026-10-03T07:53:23.263013+00:00"
+    },
+    {
+      "name": "candidate-account_policy",
+      "complete": true,
+      "finished_at": "2026-10-03T07:53:58.810123+00:00"
+    },
+    {
+      "name": "baseline-account_policy",
+      "complete": true,
+      "finished_at": "2026-10-03T07:54:35.719520+00:00"
+    },
+    {
+      "name": "baseline-repair_idempotency",
+      "complete": true,
+      "finished_at": "2026-10-03T07:55:07.230289+00:00"
+    },
+    {
+      "name": "candidate-repair_idempotency",
+      "complete": true,
+      "finished_at": "2026-10-03T07:55:38.674995+00:00"
+    },
+    {
+      "name": "candidate-concept_to_policy",
+      "complete": true,
+      "finished_at": "2026-10-03T07:56:28.740661+00:00"
+    },
+    {
+      "name": "baseline-concept_to_policy",
+      "complete": true,
+      "finished_at": "2026-10-03T07:57:17.695324+00:00"
+    }
+  ],
+  "status": "complete",
+  "finished_at": "2026-10-03T07:57:17.698349+00:00"
+}

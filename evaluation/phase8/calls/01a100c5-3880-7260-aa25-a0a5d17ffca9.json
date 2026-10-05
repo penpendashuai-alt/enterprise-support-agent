@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100c5-3880-7260-aa25-a0a5d17ffca9",
+  "run_id": "1368e47a27934a67b9f745c72a722757",
+  "case_id": "P8-R-conflict",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:58:07.546011+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1538,
+    "output_tokens": 107,
+    "total_tokens": 1645,
+    "input_token_details": {
+      "cache_read": 384
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.016731,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:58:09.668449+00:00",
+  "visible_model_output": "关于外接 U 盘，本轮检索到的两份演示制度存在冲突：\n\n- 演示材料 A：外接 U 盘只允许在负责人批准后读取，不允许写入 [1]。\n- 演示材料 B：外接 U 盘一律禁止使用，包括读取和写入 [3]。\n\n处理建议：应同时呈现双方说法，并向制度管理员确认哪份是当前生效文件，不能按检索排名自动决定版本优先 [2]。\n\n注意：以上均为“演示制度”，不代表真实企业制度。",
+  "error_type": null
+}

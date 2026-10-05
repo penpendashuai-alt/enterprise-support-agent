@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100c5-864d-79a3-99ad-f9b50c995f23",
+  "run_id": "1368e47a27934a67b9f745c72a722757",
+  "case_id": "P8-R-preference-shift",
+  "turn": 1,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:58:27.465394+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 916,
+    "output_tokens": 56,
+    "total_tokens": 972,
+    "input_token_details": {
+      "cache_read": 384
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.009756,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:58:29.063363+00:00",
+  "visible_model_output": "Based on the provided document [1], P1 priority must be confirmed by the user in the draft; even P1 cannot skip confirmation. The document states there is no actual response time or SLA commitment, so there is no basis for a \"must resolve within minutes\" requirement.",
+  "error_type": null
+}

@@ -1,0 +1,147 @@
+[
+  {
+    "run_id": "89816f6c77e94397b355dba8df850d15",
+    "case_id": "P8-H-code_policy-1",
+    "attempt": 1,
+    "record_sha256": "51d7eee2855fd222ee09cb0518050ad9484d6d35cdd701e0c87edbe998513736",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewer": "Codex development assistant (same designer and implementer)",
+    "reviewed_at": "2026-10-03T08:00:41.459901+00:00",
+    "rubric_version": "phase8-rubric-v1",
+    "points": {
+      "answer": "yes"
+    },
+    "evidence_complete": "yes",
+    "claims": [
+      {
+        "turn": 0,
+        "quote": "根据本轮文档证据，这是一条“演示制度”，内容如下：",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] github-policy/仓库访问；行 5-5；字符 1-76",
+        "citation_numbers": []
+      },
+      {
+        "turn": 0,
+        "quote": "- 业务代码：放在组织批准的仓库中，按任务授予最小访问权限 [1]。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] github-policy/仓库访问；行 5-5；字符 1-76",
+        "citation_numbers": [
+          1
+        ]
+      },
+      {
+        "turn": 0,
+        "quote": "- 个人访问令牌（PAT）、私钥和环境变量密钥：不得提交代码仓库；应使用组织批准的秘密存储方式 [1]。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] github-policy/仓库访问；行 5-5；字符 1-76",
+        "citation_numbers": [
+          1
+        ]
+      },
+      {
+        "turn": 0,
+        "quote": "文档未进一步说明“组织批准的秘密存储方式”具体指哪种工具或流程，这部分缺少依据。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] github-policy/仓库访问；行 5-5；字符 1-76",
+        "citation_numbers": []
+      }
+    ],
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "primary_cause": null,
+    "secondary_causes": [],
+    "rationale": "已逐轮阅读本次回答、当前 evidence 与工具轨迹。所问必要要点覆盖，引用与相邻结论匹配，没有编造未提供的金额、SLA 或业务成功。",
+    "uncertainties": []
+  },
+  {
+    "run_id": "89816f6c77e94397b355dba8df850d15",
+    "case_id": "P8-H-code_policy-2",
+    "attempt": 1,
+    "record_sha256": "6a4528c224c776e9c7aaf015be26f54cb45e481d06a8b4565b12977b8be3dd34",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewer": "Codex development assistant (same designer and implementer)",
+    "reviewed_at": "2026-10-03T08:00:41.462395+00:00",
+    "rubric_version": "phase8-rubric-v1",
+    "points": {
+      "answer": "yes"
+    },
+    "evidence_complete": "yes",
+    "claims": [
+      {
+        "turn": 0,
+        "quote": "根据演示企业代码托管规范 [1]：",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] github-policy/离职与变更；行 9-9；字符 1-70",
+        "citation_numbers": [
+          1
+        ]
+      },
+      {
+        "turn": 0,
+        "quote": "- **谁复核**：成员离职或职责变化后，由**管理员**复核组织和仓库授权。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] github-policy/离职与变更；行 9-9；字符 1-70",
+        "citation_numbers": []
+      },
+      {
+        "turn": 0,
+        "quote": "- **演示 Agent 能否直接改**：不能。该规范明确说明，本演示 Agent 不自动修改 GitHub 权限，也不代替组织审批 [1]。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] github-policy/离职与变更；行 9-9；字符 1-70",
+        "citation_numbers": [
+          1
+        ]
+      },
+      {
+        "turn": 0,
+        "quote": "需要提醒：以上是“演示制度”内容，不是真实企业制度。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] github-policy/离职与变更；行 9-9；字符 1-70",
+        "citation_numbers": []
+      }
+    ],
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "primary_cause": null,
+    "secondary_causes": [],
+    "rationale": "已逐轮阅读本次回答、当前 evidence 与工具轨迹。所问必要要点覆盖，引用与相邻结论匹配，没有编造未提供的金额、SLA 或业务成功。",
+    "uncertainties": []
+  },
+  {
+    "run_id": "89816f6c77e94397b355dba8df850d15",
+    "case_id": "P8-H-code_policy-3",
+    "attempt": 1,
+    "record_sha256": "d020d5c4d43a34e4a55c6d13080e979203617db6070057d48319f1973167a09a",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewer": "Codex development assistant (same designer and implementer)",
+    "reviewed_at": "2026-10-03T08:00:41.464715+00:00",
+    "rubric_version": "phase8-rubric-v1",
+    "points": {
+      "answer": "yes"
+    },
+    "evidence_complete": "yes",
+    "claims": [
+      {
+        "turn": 0,
+        "quote": "不能。根据演示企业代码托管规范，个人访问令牌（PAT）、私钥和环境变量密钥不得提交代码仓库，应使用组织批准的秘密存储方式 [1]。.env 通常包含环境变量密钥，因此也不应提交。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] github-policy/仓库访问；行 5-5；字符 1-76",
+        "citation_numbers": [
+          1
+        ]
+      }
+    ],
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "primary_cause": null,
+    "secondary_causes": [],
+    "rationale": "已逐轮阅读本次回答、当前 evidence 与工具轨迹。所问必要要点覆盖，引用与相邻结论匹配，没有编造未提供的金额、SLA 或业务成功。",
+    "uncertainties": []
+  }
+]

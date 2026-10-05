@@ -1,0 +1,23 @@
+{
+  "call_id": "01a10059-e10b-7dc2-8a2f-0ca09b25e84a",
+  "run_id": "ab704860ba4148568b6f576f3138985d",
+  "case_id": "P8-D-privacy-3",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T06:00:52.767775+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1223,
+    "output_tokens": 172,
+    "total_tokens": 1395,
+    "input_token_details": {
+      "cache_read": 1152
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.015651,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T06:00:55.383598+00:00",
+  "visible_model_output": "",
+  "error_type": null
+}

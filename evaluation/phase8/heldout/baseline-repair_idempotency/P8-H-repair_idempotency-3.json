@@ -1,0 +1,290 @@
+{
+  "run_id": "f4be7c74bb15447db736b056f6f18414",
+  "case_id": "P8-H-repair_idempotency-3",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-03T07:55:00.285996+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请建维修演示工单：设备 DEV-002 键盘部分按键失灵，影响我一人，请安排人工检查，优先级 P2。",
+      "http_status": 200,
+      "seconds": 4.080842700030189,
+      "request_id": "a68aed1373ba4820bb0a6555e69011ab",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：设备 DEV-002 键盘部分按键失灵维修\n描述：设备 DEV-002 键盘部分按键失灵，请安排人工检查。\n服务：未指定\n影响范围：仅本人\n优先级：P2（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a100c2-5d42-7181-a428-e9e11f567d5d",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-8c103259839a4bafae00d4210040c826",
+          "draft_version": 1,
+          "draft": {
+            "title": "设备 DEV-002 键盘部分按键失灵维修",
+            "description": "设备 DEV-002 键盘部分按键失灵，请安排人工检查。",
+            "service_name": null,
+            "impact": "仅本人",
+            "priority": "P2"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": "DEV-002",
+          "ticket_id": null,
+          "issue_description": "设备 DEV-002 键盘部分按键失灵，影响一人，请安排人工检查，优先级 P2",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "设备 DEV-002 键盘部分按键失灵维修",
+          "description": "设备 DEV-002 键盘部分按键失灵，请安排人工检查。",
+          "service_name": null,
+          "impact": "仅本人",
+          "priority": "P2"
+        },
+        "draft_id": "draft-8c103259839a4bafae00d4210040c826",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    },
+    {
+      "index": 1,
+      "operation": "approve",
+      "user_message": null,
+      "http_status": 200,
+      "seconds": 0.020925800024997443,
+      "request_id": "c8604fd00b3e47d88081da9e50573d40",
+      "response": {
+        "type": "ai",
+        "content": "本地演示工单已创建：DEMO-CCDE5DD93C16422D9CEDD00E166CC8F8，状态：open。标题：设备 DEV-002 键盘部分按键失灵维修。未提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a100c2-6dd5-7f00-9882-62a5640c774e",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_result",
+          "status": "success",
+          "ticket": {
+            "ticket_id": "DEMO-CCDE5DD93C16422D9CEDD00E166CC8F8",
+            "draft_id": "draft-8c103259839a4bafae00d4210040c826",
+            "draft_version": 1,
+            "thread_id": "bebbc4729681412991ccb3d78f6e010c",
+            "idempotency_key": "draft-8c103259839a4bafae00d4210040c826:v1",
+            "fingerprint": "8e703febe3b579605370a50976d639cb94cbe5af11eedebe350ce94876ba4a97",
+            "draft": {
+              "title": "设备 DEV-002 键盘部分按键失灵维修",
+              "description": "设备 DEV-002 键盘部分按键失灵，请安排人工检查。",
+              "service_name": null,
+              "impact": "仅本人",
+              "priority": "P2"
+            },
+            "state": "open",
+            "created_at": "2026-10-03T15:55:04.540408+08:00",
+            "user_id": "p8-f4be7c74-P8-H-repair_idempotency-3-alice",
+            "source": "postgres"
+          },
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": "DEV-002",
+          "ticket_id": null,
+          "issue_description": "设备 DEV-002 键盘部分按键失灵，影响一人，请安排人工检查，优先级 P2",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "设备 DEV-002 键盘部分按键失灵维修",
+          "description": "设备 DEV-002 键盘部分按键失灵，请安排人工检查。",
+          "service_name": null,
+          "impact": "仅本人",
+          "priority": "P2"
+        },
+        "draft_id": "draft-8c103259839a4bafae00d4210040c826",
+        "draft_version": 1,
+        "approval_status": "completed",
+        "approved_fingerprint": "8e703febe3b579605370a50976d639cb94cbe5af11eedebe350ce94876ba4a97",
+        "approved_request_key": "draft-8c103259839a4bafae00d4210040c826:v1",
+        "ticket_result": {
+          "kind": "ticket_result",
+          "status": "success",
+          "ticket": {
+            "ticket_id": "DEMO-CCDE5DD93C16422D9CEDD00E166CC8F8",
+            "draft_id": "draft-8c103259839a4bafae00d4210040c826",
+            "draft_version": 1,
+            "thread_id": "bebbc4729681412991ccb3d78f6e010c",
+            "idempotency_key": "draft-8c103259839a4bafae00d4210040c826:v1",
+            "fingerprint": "8e703febe3b579605370a50976d639cb94cbe5af11eedebe350ce94876ba4a97",
+            "draft": {
+              "title": "设备 DEV-002 键盘部分按键失灵维修",
+              "description": "设备 DEV-002 键盘部分按键失灵，请安排人工检查。",
+              "service_name": null,
+              "impact": "仅本人",
+              "priority": "P2"
+            },
+            "state": "open",
+            "created_at": "2026-10-03T15:55:04.540408+08:00",
+            "user_id": "p8-f4be7c74-P8-H-repair_idempotency-3-alice",
+            "source": "postgres"
+          },
+          "is_demo": true
+        }
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 1
+    },
+    {
+      "index": 2,
+      "operation": "approve",
+      "user_message": null,
+      "http_status": 200,
+      "seconds": 0.010576299973763525,
+      "request_id": "22ccb50ca53c44cd9a7b85eae2f99e3d",
+      "response": {
+        "type": "ai",
+        "content": "本地演示工单已创建：DEMO-CCDE5DD93C16422D9CEDD00E166CC8F8，状态：open。标题：设备 DEV-002 键盘部分按键失灵维修。未提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a100c2-6e92-7b12-8505-f1f12e63a750",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_result",
+          "status": "success",
+          "ticket": {
+            "ticket_id": "DEMO-CCDE5DD93C16422D9CEDD00E166CC8F8",
+            "draft_id": "draft-8c103259839a4bafae00d4210040c826",
+            "draft_version": 1,
+            "thread_id": "bebbc4729681412991ccb3d78f6e010c",
+            "idempotency_key": "draft-8c103259839a4bafae00d4210040c826:v1",
+            "fingerprint": "8e703febe3b579605370a50976d639cb94cbe5af11eedebe350ce94876ba4a97",
+            "draft": {
+              "title": "设备 DEV-002 键盘部分按键失灵维修",
+              "description": "设备 DEV-002 键盘部分按键失灵，请安排人工检查。",
+              "service_name": null,
+              "impact": "仅本人",
+              "priority": "P2"
+            },
+            "state": "open",
+            "created_at": "2026-10-03T15:55:04.540408+08:00",
+            "user_id": "p8-f4be7c74-P8-H-repair_idempotency-3-alice",
+            "source": "postgres"
+          },
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": "DEV-002",
+          "ticket_id": null,
+          "issue_description": "设备 DEV-002 键盘部分按键失灵，影响一人，请安排人工检查，优先级 P2",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "设备 DEV-002 键盘部分按键失灵维修",
+          "description": "设备 DEV-002 键盘部分按键失灵，请安排人工检查。",
+          "service_name": null,
+          "impact": "仅本人",
+          "priority": "P2"
+        },
+        "draft_id": "draft-8c103259839a4bafae00d4210040c826",
+        "draft_version": 1,
+        "approval_status": "completed",
+        "approved_fingerprint": "8e703febe3b579605370a50976d639cb94cbe5af11eedebe350ce94876ba4a97",
+        "approved_request_key": "draft-8c103259839a4bafae00d4210040c826:v1",
+        "ticket_result": {
+          "kind": "ticket_result",
+          "status": "success",
+          "ticket": {
+            "ticket_id": "DEMO-CCDE5DD93C16422D9CEDD00E166CC8F8",
+            "draft_id": "draft-8c103259839a4bafae00d4210040c826",
+            "draft_version": 1,
+            "thread_id": "bebbc4729681412991ccb3d78f6e010c",
+            "idempotency_key": "draft-8c103259839a4bafae00d4210040c826:v1",
+            "fingerprint": "8e703febe3b579605370a50976d639cb94cbe5af11eedebe350ce94876ba4a97",
+            "draft": {
+              "title": "设备 DEV-002 键盘部分按键失灵维修",
+              "description": "设备 DEV-002 键盘部分按键失灵，请安排人工检查。",
+              "service_name": null,
+              "impact": "仅本人",
+              "priority": "P2"
+            },
+            "state": "open",
+            "created_at": "2026-10-03T15:55:04.540408+08:00",
+            "user_id": "p8-f4be7c74-P8-H-repair_idempotency-3-alice",
+            "source": "postgres"
+          },
+          "is_demo": true
+        }
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 1
+    }
+  ],
+  "users": {
+    "alice": "p8-f4be7c74-P8-H-repair_idempotency-3-alice",
+    "bob": "p8-f4be7c74-P8-H-repair_idempotency-3-bob"
+  },
+  "threads": {
+    "primary": "bebbc4729681412991ccb3d78f6e010c",
+    "secondary": "d4304ddff22a4a63ada3a095f86b1d15"
+  },
+  "seconds": 4.599799699964933,
+  "final_ticket_count": 1,
+  "final_draft_version": 1,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {
+      "intent_total": 1,
+      "intent_correct": 1
+    }
+  },
+  "model_calls": [
+    "01a100c2-5d4b-7d20-9089-d8ba5cc0ddb9",
+    "01a100c2-656c-7562-8c1a-eac7108f0f2a"
+  ]
+}

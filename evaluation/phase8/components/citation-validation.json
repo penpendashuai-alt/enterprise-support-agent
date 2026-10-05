@@ -1,0 +1,10 @@
+{
+  "mode": "deterministic invalid-number injection; no model call",
+  "recorded_at": "2026-10-03T07:54:35.586379+00:00",
+  "source_record_sha256": "352d2f38838a1df4f92aa9a0a1b488b852aa3369f0350b99fd43dddf3c9be16b",
+  "before": "根据演示制度，P1 需要确认 [999]。",
+  "after": "本次回答未通过来源编号校验，不能作为有依据的结论。请细化问题后重试；下方仅展示检索候选资料。",
+  "citation_check": "rejected",
+  "passed": true,
+  "limitation": "Valid numbers are not proof of semantic support; actual paid generation did not necessarily trigger this substitution."
+}

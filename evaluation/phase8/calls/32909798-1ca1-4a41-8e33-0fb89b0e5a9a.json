@@ -1,0 +1,17 @@
+{
+  "call_id": "32909798-1ca1-4a41-8e33-0fb89b0e5a9a",
+  "run_id": "7f0bf95a18834254b95bfa007376faa8",
+  "case_id": "P8-H-printer_paper-1",
+  "turn": 0,
+  "provider_kind": "embedding",
+  "started_at": "2026-10-03T07:53:05.611237+00:00",
+  "status": "complete",
+  "usage": {
+    "total_tokens": 12
+  },
+  "estimated_cny": 6e-06,
+  "reserved_cny": 0.02,
+  "finished_at": "2026-10-03T07:53:05.822323+00:00",
+  "visible_model_output": null,
+  "error_type": null
+}

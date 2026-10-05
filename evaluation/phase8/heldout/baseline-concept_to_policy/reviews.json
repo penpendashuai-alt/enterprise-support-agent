@@ -1,0 +1,191 @@
+[
+  {
+    "run_id": "9467b5b3772d4cff8bf5505f3e4a86d3",
+    "case_id": "P8-H-concept_to_policy-1",
+    "attempt": 1,
+    "record_sha256": "d99ab4cf348522ab041da3c8242efe2b6d4d8f4f66c431c79efe5bdf4ee790b5",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewer": "Codex development assistant (same designer and implementer)",
+    "reviewed_at": "2026-10-03T08:09:42.747798+00:00",
+    "rubric_version": "phase8-rubric-v1",
+    "points": {
+      "switch": "yes"
+    },
+    "evidence_complete": "no",
+    "claims": [
+      {
+        "turn": 0,
+        "quote": "DNS（域名系统）的用途是把人类易记的域名（如 `www.example.com`）解析成计算机通信所需的 IP 地址（如 `93.184.216.34`），相当于互联网的“电话簿”。它让用户无需记忆数字地址即可访问网站、邮件等服务。",
+        "supported": "not_applicable",
+        "reason": "通用 DNS 概念，不计入企业文档陈述分母。",
+        "citation_numbers": []
+      },
+      {
+        "turn": 1,
+        "quote": "根据本轮检索到的演示制度，业务代码仓库不能提交私钥的原因如下 [1]：",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] github-policy/仓库访问；行 5-5；字符 1-76",
+        "citation_numbers": [
+          1
+        ]
+      },
+      {
+        "turn": 1,
+        "quote": "- 私钥属于敏感凭据，一旦提交到代码仓库，可能被所有有仓库访问权限的人员看到，扩大泄露面。",
+        "supported": "no",
+        "reason": "本轮 github-policy/仓库访问只列禁止规则和存储要求，没有这些技术原因；合理常识不能替代当前引用依据。 人工复核段落作用域：这些条目承接前文引用，不因条目本身未重复数字而漏计引用关系。",
+        "citation_numbers": [
+          1
+        ]
+      },
+      {
+        "turn": 1,
+        "quote": "- 代码仓库通常有提交历史，即使后续删除，私钥仍可能残留在历史记录中，难以彻底清除。",
+        "supported": "no",
+        "reason": "本轮 github-policy/仓库访问只列禁止规则和存储要求，没有这些技术原因；合理常识不能替代当前引用依据。 人工复核段落作用域：这些条目承接前文引用，不因条目本身未重复数字而漏计引用关系。",
+        "citation_numbers": [
+          1
+        ]
+      },
+      {
+        "turn": 1,
+        "quote": "- 演示制度要求：个人访问令牌（PAT）、私钥和环境变量密钥不得提交代码仓库，应使用组织批准的秘密存储方式 [1]。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] github-policy/仓库访问；行 5-5；字符 1-76",
+        "citation_numbers": [
+          1
+        ]
+      },
+      {
+        "turn": 1,
+        "quote": "这是演示制度中的规定，实际企业制度请以正式文档为准。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] github-policy/仓库访问；行 5-5；字符 1-76",
+        "citation_numbers": []
+      }
+    ],
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "no",
+    "primary_cause": "generation",
+    "secondary_causes": [],
+    "rationale": "话题切换与禁止提交密钥规则正确；当前来源没有技术原因，却把提交历史/泄露面作为该引用支持的原因。候选虽最后承认文档无技术解释，前文仍输出并引用不支持的解释。 补充人工核对段落引用范围，原始回答与判定保持不变。",
+    "uncertainties": []
+  },
+  {
+    "run_id": "9467b5b3772d4cff8bf5505f3e4a86d3",
+    "case_id": "P8-H-concept_to_policy-2",
+    "attempt": 1,
+    "record_sha256": "aab82a358a9647e035ffcaff6798d4ca2abe0d2147cd5c698f59a65bd30bf7ca",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewer": "Codex development assistant (same designer and implementer)",
+    "reviewed_at": "2026-10-03T08:00:41.350301+00:00",
+    "rubric_version": "phase8-rubric-v1",
+    "points": {
+      "switch": "yes"
+    },
+    "evidence_complete": "yes",
+    "claims": [
+      {
+        "turn": 0,
+        "quote": "DNS（域名系统）的作用是把人类易记的域名（如 `www.example.com`）解析成计算机通信所需的 IP 地址（如 `93.184.216.34`），相当于互联网的“电话簿”。",
+        "supported": "not_applicable",
+        "reason": "通用 DNS 概念，不计入企业文档陈述分母。",
+        "citation_numbers": []
+      },
+      {
+        "turn": 1,
+        "quote": "根据本轮文档，演示制度明确要求：**不要与家人共享工作账号** [1]。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] remote-work/远程设备；行 5-5；字符 1-73",
+        "citation_numbers": [
+          1
+        ]
+      },
+      {
+        "turn": 1,
+        "quote": "这是文档中关于远程办公设备要求的明确规定。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] remote-work/远程设备；行 5-5；字符 1-73",
+        "citation_numbers": []
+      }
+    ],
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "primary_cause": null,
+    "secondary_causes": [],
+    "rationale": "首轮 DNS 普通知识正确，后续切换到本轮文档；实体已清空，没有旧工具结果污染。",
+    "uncertainties": []
+  },
+  {
+    "run_id": "9467b5b3772d4cff8bf5505f3e4a86d3",
+    "case_id": "P8-H-concept_to_policy-3",
+    "attempt": 1,
+    "record_sha256": "72d4415a11410edbd1a175f872f535608c684d39b4cd22c1c75a0e209df9a314",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewer": "Codex development assistant (same designer and implementer)",
+    "reviewed_at": "2026-10-03T08:00:41.352693+00:00",
+    "rubric_version": "phase8-rubric-v1",
+    "points": {
+      "switch": "yes"
+    },
+    "evidence_complete": "yes",
+    "claims": [
+      {
+        "turn": 0,
+        "quote": "DNS（域名系统）的作用是把人类易记的域名（如 `www.example.com`）解析成计算机通信所需的 IP 地址（如 `93.184.216.34`），相当于互联网的“电话簿”。它让用户无需记住数字 IP 即可访问网站和服务。",
+        "supported": "not_applicable",
+        "reason": "通用 DNS 概念，不计入企业文档陈述分母。",
+        "citation_numbers": []
+      },
+      {
+        "turn": 1,
+        "quote": "根据演示制度《演示企业邮箱使用规范》[1]：",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] email-policy/可疑邮件；行 9-9；字符 1-65",
+        "citation_numbers": [
+          1
+        ]
+      },
+      {
+        "turn": 1,
+        "quote": "- 不要点击链接、打开附件或回复凭据。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] email-policy/可疑邮件；行 9-9；字符 1-65",
+        "citation_numbers": []
+      },
+      {
+        "turn": 1,
+        "quote": "- 保留发件地址和收到时间。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] email-policy/可疑邮件；行 9-9；字符 1-65",
+        "citation_numbers": []
+      },
+      {
+        "turn": 1,
+        "quote": "- 通过演示支持流程报告。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] email-policy/可疑邮件；行 9-9；字符 1-65",
+        "citation_numbers": []
+      },
+      {
+        "turn": 1,
+        "quote": "该文档未规定邮箱容量或邮件保留年限。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] email-policy/可疑邮件；行 9-9；字符 1-65",
+        "citation_numbers": []
+      }
+    ],
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "primary_cause": null,
+    "secondary_causes": [],
+    "rationale": "首轮 DNS 普通知识正确，后续切换到本轮文档；实体已清空，没有旧工具结果污染。",
+    "uncertainties": []
+  }
+]

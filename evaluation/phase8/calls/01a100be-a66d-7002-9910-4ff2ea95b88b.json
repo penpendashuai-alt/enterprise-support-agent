@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100be-a66d-7002-9910-4ff2ea95b88b",
+  "run_id": "c55b1a0982a549cebe23945f7aa81b09",
+  "case_id": "P8-H-vpn691-1",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:50:56.922704+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 2891,
+    "output_tokens": 62,
+    "total_tokens": 2953,
+    "input_token_details": {
+      "cache_read": 256
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.027693,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:50:58.171075+00:00",
+  "visible_model_output": "我先查一下 VPN 服务的模拟状态，同时结合文档证据说明应核对的内容。",
+  "error_type": null
+}

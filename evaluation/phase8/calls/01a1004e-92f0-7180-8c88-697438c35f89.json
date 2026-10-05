@@ -1,0 +1,23 @@
+{
+  "call_id": "01a1004e-92f0-7180-8c88-697438c35f89",
+  "run_id": "4969cea187604dd4b92b47a6138d2c65",
+  "case_id": "P8-D-known_status-1",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T05:48:31.857115+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1223,
+    "output_tokens": 162,
+    "total_tokens": 1385,
+    "input_token_details": {
+      "cache_read": 1152
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.015381,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T05:48:33.894351+00:00",
+  "visible_model_output": "",
+  "error_type": null
+}

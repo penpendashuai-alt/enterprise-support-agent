@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100c0-bb89-7c60-baaa-c895c25a257e",
+  "run_id": "7f0bf95a18834254b95bfa007376faa8",
+  "case_id": "P8-H-printer_paper-2",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:53:13.403562+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1734,
+    "output_tokens": 78,
+    "total_tokens": 1812,
+    "input_token_details": {
+      "cache_read": 512
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.017712,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:53:15.039077+00:00",
+  "visible_model_output": "按演示排障文档，反复卡纸转交维护人员前应记录：打印机型号、纸张规格、卡纸部位、是否所有用户受影响 [1]。\n\n另外，送修前还应记录现象与影响、备份获准保留的工作文件并按要求保护存储介质；不得向维修方提供账号密码，故障诊断和资产归属需由相应管理员确认 [3]。",
+  "error_type": null
+}

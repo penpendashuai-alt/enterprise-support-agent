@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100c7-145a-7432-84ce-73c0500bd9b2",
+  "run_id": "ce846e6c15c744278ce6d5511dee69ae",
+  "case_id": "P8-D-priority_policy-1",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T08:00:09.368203+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1232,
+    "output_tokens": 178,
+    "total_tokens": 1410,
+    "input_token_details": {
+      "cache_read": 1152
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.015894,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T08:00:11.523062+00:00",
+  "visible_model_output": "",
+  "error_type": null
+}

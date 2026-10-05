@@ -1,0 +1,102 @@
+{
+  "run_id": "ab704860ba4148568b6f576f3138985d",
+  "case_id": "P8-D-known_status-3",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-03T05:59:27.285092+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "只核查 Jira 的演示服务状态，并说明数据来源。",
+      "http_status": 200,
+      "seconds": 4.667946300003678,
+      "request_id": "0ec3ccf69c0b490c888c5c1ceef0e7c0",
+      "response": {
+        "type": "ai",
+        "content": "Jira 服务当前状态：**中断（outage）**，详情为“模拟服务中断，正在排查”。\n\n数据来源说明：以上为**固定模拟数据**，仅用于演示，不代表真实系统状态。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a10058-933b-7132-a5e7-7a2b1eb8092c",
+        "response_metadata": {
+          "finish_reason": "stop",
+          "model_name": "deepseek-v4-pro",
+          "system_fingerprint": "a307abda487cd1b463329ccb945ce396",
+          "model_provider": "openai"
+        },
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "service_status",
+        "entities": {
+          "service_name": "Jira",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": null
+        },
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "retrieval": null,
+      "tools": [
+        {
+          "name": "query_service_status",
+          "args": {
+            "service_name": "Jira"
+          },
+          "id": "call_00_XDTztiJnhubrtFNTUzr30101",
+          "type": "tool_call",
+          "result": {
+            "status": "success",
+            "data": {
+              "service_name": "Jira",
+              "state": "outage",
+              "detail": "模拟服务中断，正在排查。"
+            },
+            "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+            "is_mock": true
+          },
+          "validation_error": false
+        }
+      ],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-ab704860-P8-D-known_status-3-alice",
+    "bob": "p8-ab704860-P8-D-known_status-3-bob"
+  },
+  "threads": {
+    "primary": "be64ba68dce643e4ba3f8f8223bc3bcf",
+    "secondary": "12a679b3de864b5eb922b315825b0cb5"
+  },
+  "seconds": 4.8355035999557,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {
+      "intent_total": 1,
+      "intent_correct": 1,
+      "required_tool_total": 1,
+      "required_tool_completed": 1,
+      "actual_tool_total": 1,
+      "actual_tool_legal": 1,
+      "tool_parameters_valid": 1
+    }
+  },
+  "model_calls": [
+    "01a10058-9344-7850-a95d-184273ada6ae",
+    "01a10058-9a62-7a00-96d4-07771e815a8c",
+    "01a10058-9f68-7121-ae79-6502195181b3"
+  ]
+}

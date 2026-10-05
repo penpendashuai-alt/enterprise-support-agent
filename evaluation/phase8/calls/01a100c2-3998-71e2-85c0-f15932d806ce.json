@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100c2-3998-71e2-85c0-f15932d806ce",
+  "run_id": "f4be7c74bb15447db736b056f6f18414",
+  "case_id": "P8-H-repair_idempotency-1",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:54:51.211629+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1238,
+    "output_tokens": 186,
+    "total_tokens": 1424,
+    "input_token_details": {
+      "cache_read": 1152
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.016164,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:54:53.009491+00:00",
+  "visible_model_output": "",
+  "error_type": null
+}

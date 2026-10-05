@@ -1,0 +1,23 @@
+[
+  {
+    "run_id": "d67ba0761a42409aa9627c2ff0893196",
+    "case_id": "P8-H-repair_idempotency-1",
+    "attempt": 1,
+    "record_sha256": "fcfb55495b9eb3b0b3ee6d63cfdb709cd976dc6c7382690a111ea5b27354b3a3",
+    "status": "pending",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewer": "",
+    "reviewed_at": null,
+    "rubric_version": "phase8-rubric-v1",
+    "points": {},
+    "evidence_complete": "uncertain",
+    "claims": [],
+    "missing_citations": null,
+    "refusal": "uncertain",
+    "semantic_success": "uncertain",
+    "primary_cause": null,
+    "secondary_causes": [],
+    "rationale": "",
+    "uncertainties": []
+  }
+]

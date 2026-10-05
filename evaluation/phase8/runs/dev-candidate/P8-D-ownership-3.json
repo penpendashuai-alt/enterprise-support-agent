@@ -1,0 +1,142 @@
+{
+  "run_id": "6d24d8aa9d614c469fd0e65b663b67ef",
+  "case_id": "P8-D-ownership-3",
+  "attempt": 1,
+  "variant": "candidate",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-03T07:39:21.856858+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请创建 VPN 掉线演示工单：仅我受影响，重连无效，P3。",
+      "http_status": 200,
+      "seconds": 3.7706299000419676,
+      "request_id": "8111a70bd33845b589377532fe2c4f97",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：VPN 掉线\n描述：VPN 掉线，重连无效\n服务：VPN\n影响范围：仅我受影响\n优先级：P3（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a100b4-0b85-7d02-a0b5-608f0171780f",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-114baae1a4324d3cbd410696e2a9b4fc",
+          "draft_version": 1,
+          "draft": {
+            "title": "VPN 掉线",
+            "description": "VPN 掉线，重连无效",
+            "service_name": "VPN",
+            "impact": "仅我受影响",
+            "priority": "P3"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "VPN",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "VPN掉线，仅我受影响，重连无效，优先级P3",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "VPN 掉线",
+          "description": "VPN 掉线，重连无效",
+          "service_name": "VPN",
+          "impact": "仅我受影响",
+          "priority": "P3"
+        },
+        "draft_id": "draft-114baae1a4324d3cbd410696e2a9b4fc",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    },
+    {
+      "index": 1,
+      "operation": "history",
+      "user_message": null,
+      "http_status": 403,
+      "seconds": 0.004639699996914715,
+      "request_id": "cb40659b93d541d6924dd959bd84438c",
+      "response": {
+        "detail": "Thread ownership mismatch"
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "VPN",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "VPN掉线，仅我受影响，重连无效，优先级P3",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "VPN 掉线",
+          "description": "VPN 掉线，重连无效",
+          "service_name": "VPN",
+          "impact": "仅我受影响",
+          "priority": "P3"
+        },
+        "draft_id": "draft-114baae1a4324d3cbd410696e2a9b4fc",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-6d24d8aa-P8-D-ownership-3-alice",
+    "bob": "p8-6d24d8aa-P8-D-ownership-3-bob"
+  },
+  "threads": {
+    "primary": "2464cf7fcc1648a5939bdf17489c9e0e",
+    "secondary": "521aa17fe95c4963bdbb09d9f6169de2"
+  },
+  "seconds": 4.100585699954536,
+  "final_ticket_count": 0,
+  "final_draft_version": 1,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {
+      "intent_total": 1,
+      "intent_correct": 1
+    }
+  },
+  "model_calls": [
+    "01a100b4-0b8d-74e3-8c79-0b62b732d575",
+    "01a100b4-13f6-7661-ae87-9b883a7e7d53"
+  ]
+}

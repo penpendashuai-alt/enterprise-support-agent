@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100c5-233d-7581-8e85-a52d0c5bd623",
+  "run_id": "1368e47a27934a67b9f745c72a722757",
+  "case_id": "P8-R-p1-short",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:58:02.102084+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 842,
+    "output_tokens": 112,
+    "total_tokens": 954,
+    "input_token_details": {
+      "cache_read": 768
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.010602,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:58:04.133537+00:00",
+  "visible_model_output": "根据本轮检索到的演示制度，P1 工单的判定和时限说明如下：\n\n- 优先级需要在草稿中由用户确认，P1 也不能跳过确认 [1]。\n- 该演示制度中没有实际响应时限或 SLA 承诺，因此不能声称“必须在几分钟内解决” [1]。\n- 修改优先级必须保存新版本并重新确认，知识库文字不能覆盖后端审批规则 [1]。\n\n如需了解贵公司真实 P1 判定标准和时限，请提供正式制度文档或 SLA 文件。",
+  "error_type": null
+}

@@ -1,0 +1,17 @@
+{
+  "call_id": "13739e61-7741-4acb-8f63-4f75a27221dc",
+  "run_id": "8f1664fee00f435fad3993ce193815d7",
+  "case_id": "P8-H-concept_to_policy-3",
+  "turn": 1,
+  "provider_kind": "embedding",
+  "started_at": "2026-10-03T07:56:23.483050+00:00",
+  "status": "complete",
+  "usage": {
+    "total_tokens": 5
+  },
+  "estimated_cny": 2.5e-06,
+  "reserved_cny": 0.02,
+  "finished_at": "2026-10-03T07:56:23.664374+00:00",
+  "visible_model_output": null,
+  "error_type": null
+}

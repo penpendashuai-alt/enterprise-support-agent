@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100b1-eb36-7081-801c-7b304257ac1b",
+  "run_id": "6d24d8aa9d614c469fd0e65b663b67ef",
+  "case_id": "P8-D-clarify_service-2",
+  "turn": 1,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:37:02.549162+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 693,
+    "output_tokens": 45,
+    "total_tokens": 738,
+    "input_token_details": {
+      "cache_read": 640
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.007452,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:37:03.856446+00:00",
+  "visible_model_output": "",
+  "error_type": null
+}

@@ -1,0 +1,177 @@
+{
+  "run_id": "ab704860ba4148568b6f576f3138985d",
+  "case_id": "P8-D-preferences-2",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-03T06:02:13.132268+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "prefs_put",
+      "user_message": null,
+      "http_status": 200,
+      "seconds": 0.005070900020655245,
+      "request_id": "153c75233eab4f678ef7d3ce16d3aefd",
+      "response": {
+        "status": "saved",
+        "schema_version": 1,
+        "source": "explicit_user_setting",
+        "updated_at": "2026-10-03T06:02:13.135759+00:00",
+        "preferences": {
+          "language": "en",
+          "detail": "concise"
+        }
+      },
+      "state": {},
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    },
+    {
+      "index": 1,
+      "operation": "user",
+      "user_message": "HTTP 是什么？",
+      "http_status": 200,
+      "seconds": 2.9622714999713935,
+      "request_id": "f05a22bb4e964a9fa4ccee87cd2ae07a",
+      "response": {
+        "type": "ai",
+        "content": "HTTP (Hypertext Transfer Protocol) is the foundation protocol for data exchange on the web. It defines how clients (like browsers) request resources from servers and how servers respond.",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a1005b-1bbd-7a93-adb0-cd70f93cbf1e",
+        "response_metadata": {
+          "finish_reason": "stop",
+          "model_name": "deepseek-v4-pro",
+          "system_fingerprint": "a307abda487cd1b463329ccb945ce396",
+          "model_provider": "openai"
+        },
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "general_question",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": null
+        },
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    },
+    {
+      "index": 2,
+      "operation": "prefs_delete",
+      "user_message": null,
+      "http_status": 200,
+      "seconds": 0.005578499985858798,
+      "request_id": "4f7f2b556b85440286dac61eb659ff45",
+      "response": {
+        "status": "deleted",
+        "message": "仅删除后续回答使用的偏好；历史消息、检查点和工单保持不变。"
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "general_question",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": null
+        },
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    },
+    {
+      "index": 3,
+      "operation": "user",
+      "user_message": "请用中文解释 TLS 的用途。",
+      "http_status": 200,
+      "seconds": 3.7705256000044756,
+      "request_id": "5d1cbf186efa4cdfb2fc77fb46c194fd",
+      "response": {
+        "type": "ai",
+        "content": "TLS（传输层安全协议）主要用于在网络上提供加密通信，保障数据传输的机密性、完整性和身份认证。常见用途包括保护网页浏览（HTTPS）、邮件传输、即时通讯等，防止数据被窃听或篡改。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a1005b-2899-7a12-ac20-5a94644c588c",
+        "response_metadata": {
+          "finish_reason": "stop",
+          "model_name": "deepseek-v4-pro",
+          "system_fingerprint": "a307abda487cd1b463329ccb945ce396",
+          "model_provider": "openai"
+        },
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "general_question",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": null
+        },
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-ab704860-P8-D-preferences-2-alice",
+    "bob": "p8-ab704860-P8-D-preferences-2-bob"
+  },
+  "threads": {
+    "primary": "6a28054453024c33a5ea007894855713",
+    "secondary": "caf3f9673cd74254aa12a94d25611129"
+  },
+  "seconds": 7.4029734000214376,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {
+      "intent_total": 2,
+      "intent_correct": 2
+    }
+  },
+  "model_calls": [
+    "01a1005b-1bc6-7562-995f-79ab620d8cfc",
+    "01a1005b-233f-78d1-baec-08b26ed0736d",
+    "01a1005b-28a0-7902-bcec-4153902eeb51",
+    "01a1005b-2f60-7611-b2a3-e8fa0b0a94f2"
+  ]
+}

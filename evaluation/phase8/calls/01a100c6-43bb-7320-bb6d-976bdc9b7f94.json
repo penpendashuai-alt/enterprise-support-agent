@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100c6-43bb-7320-bb6d-976bdc9b7f94",
+  "run_id": "66bcef1868e345e1a081b09f12c2da57",
+  "case_id": "P8-R-809",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:59:15.955184+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1224,
+    "output_tokens": 181,
+    "total_tokens": 1405,
+    "input_token_details": {
+      "cache_read": 1152
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.015903,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:59:18.039684+00:00",
+  "visible_model_output": "",
+  "error_type": null
+}

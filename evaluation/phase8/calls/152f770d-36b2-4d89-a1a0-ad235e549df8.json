@@ -1,0 +1,17 @@
+{
+  "call_id": "152f770d-36b2-4d89-a1a0-ad235e549df8",
+  "run_id": "780b59554c82423d892e50642e4a73cc",
+  "case_id": "P8-H-mail_policy-2",
+  "turn": 0,
+  "provider_kind": "embedding",
+  "started_at": "2026-10-03T07:47:27.585657+00:00",
+  "status": "complete",
+  "usage": {
+    "total_tokens": 16
+  },
+  "estimated_cny": 8e-06,
+  "reserved_cny": 0.02,
+  "finished_at": "2026-10-03T07:47:27.901849+00:00",
+  "visible_model_output": null,
+  "error_type": null
+}

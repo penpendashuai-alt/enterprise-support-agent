@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100bd-889c-74f2-bcfb-831b6a98d9eb",
+  "run_id": "f3fa0ed6d479484c968fb1a68efdce62",
+  "case_id": "P8-H-remote_policy-1",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:49:43.754089+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1944,
+    "output_tokens": 98,
+    "total_tokens": 2042,
+    "input_token_details": {
+      "cache_read": 384
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.020142,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:49:45.551620+00:00",
+  "visible_model_output": "依据演示制度，出门前电脑与工作账号的要求如下 [1]：\n\n- 使用受管理设备，保持系统安全更新、磁盘加密和屏幕锁定。\n- 不要与家人共享工作账号。\n- 离开设备时锁屏。\n- 访问内部资源按 VPN 规范办理。\n\n另外，VPN 使用要求包括：使用公司批准的 VPN 客户端并完成 MFA，不共享账号、不保存他人凭据，访问结束后断开连接 [2]。",
+  "error_type": null
+}

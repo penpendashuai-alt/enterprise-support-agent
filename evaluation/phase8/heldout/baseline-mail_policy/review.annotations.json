@@ -1,0 +1,68 @@
+[
+  {
+    "case_id": "P8-H-mail_policy-1",
+    "record_sha256": "a5663e27875dfb9d8e6cff5bf0d2f40497d3eef4c197b8219d3db812c40e3ba3",
+    "status": "reviewed",
+    "points": {
+      "answer": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "已逐轮阅读本次回答、当前 evidence 与工具轨迹。所问必要要点覆盖，引用与相邻结论匹配，没有编造未提供的金额、SLA 或业务成功。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "c9800c3a4d4fbcfa0620ed27c04d6a1ddf1e5002f9b342315168c4a15e1641c0",
+        "default_supported": "yes",
+        "reason": "逐行复核当前来源：[1] email-policy/邮箱使用；行 5-5；字符 1-78",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-H-mail_policy-2",
+    "record_sha256": "cb8d219f7e69705615ec322fb60982166dfc4d4b155e93df44cd4f403e8334fd",
+    "status": "reviewed",
+    "points": {
+      "answer": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "已逐轮阅读本次回答、当前 evidence 与工具轨迹。所问必要要点覆盖，引用与相邻结论匹配，没有编造未提供的金额、SLA 或业务成功。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "1755e74a148bdee0fc0428001e1f9dc4f1cde8fc3e7d75e50d4b65f18ec0412c",
+        "default_supported": "yes",
+        "reason": "逐行复核当前来源：[1] email-policy/邮箱使用；行 5-5；字符 1-78；[2] email-quota/扩容申请；行 9-9；字符 1-64",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-H-mail_policy-3",
+    "record_sha256": "d2f2b7ffd6d78ca79a0cdb9c8c8f1b3b28025a39b689e01ffac344cf7f432a68",
+    "status": "reviewed",
+    "points": {
+      "answer": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "已逐轮阅读本次回答、当前 evidence 与工具轨迹。所问必要要点覆盖，引用与相邻结论匹配，没有编造未提供的金额、SLA 或业务成功。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "74218fe17161932fb4fe49e79b8f1eabb7e9cf86fd8da04bd40e03ffc712a2d3",
+        "default_supported": "yes",
+        "reason": "逐行复核当前来源：[1] email-policy/可疑邮件；行 9-9；字符 1-65",
+        "overrides": []
+      }
+    ]
+  }
+]

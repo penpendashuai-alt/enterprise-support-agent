@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100c0-2e70-74b1-84c5-bf513ad03331",
+  "run_id": "6bb2cec6d7c1419ea88b03ce930279c7",
+  "case_id": "P8-H-printer_paper-2",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:52:37.282092+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1589,
+    "output_tokens": 29,
+    "total_tokens": 1618,
+    "input_token_details": {
+      "cache_read": 384
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.015084,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:52:38.243852+00:00",
+  "visible_model_output": "根据演示制度，转交维护人员前应记录：打印机型号、纸张规格、卡纸部位、是否所有用户受影响 [1]。",
+  "error_type": null
+}

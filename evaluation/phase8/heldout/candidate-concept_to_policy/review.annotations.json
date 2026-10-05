@@ -1,0 +1,96 @@
+[
+  {
+    "case_id": "P8-H-concept_to_policy-1",
+    "record_sha256": "18d6635b2b4a1d4b5b034bd36a1e92d2b76f9a75a4e774011a8487e261296073",
+    "status": "reviewed",
+    "points": {
+      "switch": "yes"
+    },
+    "evidence_complete": "no",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "no",
+    "rationale": "话题切换与禁止提交密钥规则正确；当前来源没有技术原因，却把提交历史/泄露面作为该引用支持的原因。候选虽最后承认文档无技术解释，前文仍输出并引用不支持的解释。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "bf7ce879a1e6b7ce9fe4edb9f5c1d064c74d8a474d32e94ff8a5c913bb22a4dc",
+        "default_supported": "not_applicable",
+        "reason": "通用 DNS 概念，不计入企业文档陈述分母。",
+        "overrides": []
+      },
+      {
+        "turn": 1,
+        "text_sha256": "7c73a4f1f13a70f01104e004ddc84dd4c93b23297dd057046482aefceeb56424",
+        "default_supported": "yes",
+        "reason": "逐行复核当前来源：[1] github-policy/仓库访问；行 5-5；字符 1-76",
+        "overrides": [
+          {
+            "quote": "原因在于：",
+            "supported": "no",
+            "reason": "本轮 github-policy/仓库访问只列禁止规则和存储要求，没有这些技术原因；合理常识不能替代当前引用依据。"
+          }
+        ]
+      }
+    ],
+    "primary_cause": "generation"
+  },
+  {
+    "case_id": "P8-H-concept_to_policy-2",
+    "record_sha256": "fb5ba95bb0e1cfdac7345873f32f13e6cb281fd62787ff5607d8c68f0bf7fb8b",
+    "status": "reviewed",
+    "points": {
+      "switch": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "首轮 DNS 普通知识正确，后续切换到本轮文档；实体已清空，没有旧工具结果污染。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "edef973cbf2f50eed7eb2a1d3a3fbfdf2e6f9f8b1bffe0aefad05dfe8b9f1a97",
+        "default_supported": "not_applicable",
+        "reason": "通用 DNS 概念，不计入企业文档陈述分母。",
+        "overrides": []
+      },
+      {
+        "turn": 1,
+        "text_sha256": "bdbd32d3d8fc4d233ac433113720e4e48ed0f0242d6cfb49fda9b9797361c7b9",
+        "default_supported": "yes",
+        "reason": "逐行复核当前来源：[1] remote-work/远程设备；行 5-5；字符 1-73",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-H-concept_to_policy-3",
+    "record_sha256": "cd79ecf25ba729cd7e0d4e61e5d82ff6563805748511f932264ce2f6a9c47880",
+    "status": "reviewed",
+    "points": {
+      "switch": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "首轮 DNS 普通知识正确，后续切换到本轮文档；实体已清空，没有旧工具结果污染。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "bf7ce879a1e6b7ce9fe4edb9f5c1d064c74d8a474d32e94ff8a5c913bb22a4dc",
+        "default_supported": "not_applicable",
+        "reason": "通用 DNS 概念，不计入企业文档陈述分母。",
+        "overrides": []
+      },
+      {
+        "turn": 1,
+        "text_sha256": "09281e45ae758774792f0a2c71581678e0da000cf156d1ae6ecff783054bf372",
+        "default_supported": "yes",
+        "reason": "逐行复核当前来源：[1] email-policy/可疑邮件；行 9-9；字符 1-65",
+        "overrides": []
+      }
+    ]
+  }
+]

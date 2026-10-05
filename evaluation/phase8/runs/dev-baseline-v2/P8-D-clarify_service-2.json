@@ -1,0 +1,140 @@
+{
+  "run_id": "ab704860ba4148568b6f576f3138985d",
+  "case_id": "P8-D-clarify_service-2",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-03T05:59:38.680666+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "我想查服务是否正常，但还没告诉你服务名。",
+      "http_status": 200,
+      "seconds": 1.471358800015878,
+      "request_id": "bf6ff6954e4545ce966db3e85a79a1df",
+      "response": {
+        "type": "ai",
+        "content": "你想查询哪个服务的状态？例如 GitHub、VPN、邮箱或 Jira。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a10058-bfbf-7171-a220-3149f247be17",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "service_status",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": null
+        },
+        "needs_clarification": true,
+        "clarification_question": "你想查询哪个服务的状态？例如 GitHub、VPN、邮箱或 Jira。"
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    },
+    {
+      "index": 1,
+      "operation": "user",
+      "user_message": "要查的是 VPN。",
+      "http_status": 200,
+      "seconds": 4.153537100006361,
+      "request_id": "5a8a48dc230b48f29896add47eb5f1be",
+      "response": {
+        "type": "ai",
+        "content": "VPN 服务状态（模拟数据）：**运行正常**，模拟网关正常。\n\n如需进一步排查连接问题，请提供设备编号或具体报错信息。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a10058-c625-7632-917f-d642c2cd10d4",
+        "response_metadata": {
+          "finish_reason": "stop",
+          "model_name": "deepseek-v4-pro",
+          "system_fingerprint": "a307abda487cd1b463329ccb945ce396",
+          "model_provider": "openai"
+        },
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "service_status",
+        "entities": {
+          "service_name": "VPN",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": null
+        },
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "retrieval": null,
+      "tools": [
+        {
+          "name": "query_service_status",
+          "args": {
+            "service_name": "VPN"
+          },
+          "id": "call_00_NrkJNEdBCEoBhHBTucQR6985",
+          "type": "tool_call",
+          "result": {
+            "status": "success",
+            "data": {
+              "service_name": "VPN",
+              "state": "operational",
+              "detail": "模拟网关正常。"
+            },
+            "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+            "is_mock": true
+          },
+          "validation_error": false
+        }
+      ],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-ab704860-P8-D-clarify_service-2-alice",
+    "bob": "p8-ab704860-P8-D-clarify_service-2-bob"
+  },
+  "threads": {
+    "primary": "203ac289de8f4818b1206e6c26713e48",
+    "secondary": "74a4de373c354fe3af4bccedb9c9aa1b"
+  },
+  "seconds": 5.9545878999633715,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {
+      "intent_total": 2,
+      "intent_correct": 2,
+      "required_tool_total": 1,
+      "required_tool_completed": 1,
+      "actual_tool_total": 1,
+      "actual_tool_legal": 1,
+      "tool_parameters_valid": 1
+    }
+  },
+  "model_calls": [
+    "01a10058-bfcf-75c0-a274-f2364ff9d15e",
+    "01a10058-c62f-7ce1-a2bb-f4bd62102162",
+    "01a10058-cd40-7b83-ab18-062df1622c50",
+    "01a10058-d244-7ac1-9f22-039fee510ff0"
+  ]
+}

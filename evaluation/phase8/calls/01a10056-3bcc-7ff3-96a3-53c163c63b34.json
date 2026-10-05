@@ -1,0 +1,23 @@
+{
+  "call_id": "01a10056-3bcc-7ff3-96a3-53c163c63b34",
+  "run_id": "854b6d27f7e94eafa03fdfc3fc639343",
+  "case_id": "P8-D-usb_conflict-2",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T05:56:53.855105+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 831,
+    "output_tokens": 86,
+    "total_tokens": 917,
+    "input_token_details": {
+      "cache_read": 384
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.009801,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T05:56:55.725667+00:00",
+  "visible_model_output": "不能自行判定最终政策。\n\n根据本轮检索到的演示制度材料 [1]：外接存储资料 A 与材料 B 对 U 盘有不同规定，应呈现双方说法并向制度管理员确认生效文件，不按检索排名自动决定哪个版本优先。\n\n因此，即使其中一份更严格，也不能单方面采用它作为最终政策。建议将冲突内容整理后提交制度管理员确认生效版本。",
+  "error_type": null
+}

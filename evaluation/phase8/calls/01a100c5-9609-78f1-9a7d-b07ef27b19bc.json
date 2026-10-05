@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100c5-9609-78f1-9a7d-b07ef27b19bc",
+  "run_id": "1368e47a27934a67b9f745c72a722757",
+  "case_id": "P8-R-preference-shift",
+  "turn": 3,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:58:31.494600+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 636,
+    "output_tokens": 46,
+    "total_tokens": 682,
+    "input_token_details": {
+      "cache_read": 512
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.006966,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:58:32.710093+00:00",
+  "visible_model_output": "",
+  "error_type": null
+}

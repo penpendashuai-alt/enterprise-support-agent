@@ -1,0 +1,70 @@
+[
+  {
+    "case_id": "P8-H-printer_paper-1",
+    "record_sha256": "53ab28d74364841c3821125e7dba38356a28cae430e3ae156494ba2be58b94c3",
+    "status": "reviewed",
+    "points": {
+      "answer": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "已逐轮阅读本次回答、当前 evidence 与工具轨迹。所问必要要点覆盖，引用与相邻结论匹配，没有编造未提供的金额、SLA 或业务成功。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "dd5ffa1cc5e73f954ac7ce596098210cbc739633ddfcee5079a1dab919026076",
+        "default_supported": "yes",
+        "reason": "逐行复核当前来源：[1] printer-paper/升级支持；行 9-9；字符 1-74；[2] printer-paper/处理步骤；行 5-5；字符 1-80",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-H-printer_paper-2",
+    "record_sha256": "047757afd56d8d11bf53cb7dfe3530bceea14990cb9155e3809d3d5ca30630a8",
+    "status": "reviewed",
+    "points": {
+      "answer": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "回答内容符合当前打印机证据；实际 Router 采用 general_question 并正确检索。冻结标签仅允许 troubleshooting，因此结构仍失败。此为合理路径被标签排除的限制，留出后不修改标签或计分。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "f46bfb4f2ac9e591eac710b3647678ce2b7d6ebb8a8c3d2a7c0a88f859165315",
+        "default_supported": "yes",
+        "reason": "逐行复核当前来源：[1] printer-paper/升级支持；行 9-9；字符 1-74；[2] printer-paper/处理步骤；行 5-5；字符 1-80；[3] device-assets/维修准备；行 9-9；字符 1-65",
+        "overrides": []
+      }
+    ],
+    "primary_cause": "annotation_scope"
+  },
+  {
+    "case_id": "P8-H-printer_paper-3",
+    "record_sha256": "3812fa6d1432415ce1495cdda419e6d8eb3dabd6cfa85ceef0eab4fe4cdb5da3",
+    "status": "reviewed",
+    "points": {
+      "answer": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "回答内容符合当前打印机证据；实际 Router 采用 general_question 并正确检索。冻结标签仅允许 troubleshooting，因此结构仍失败。此为合理路径被标签排除的限制，留出后不修改标签或计分。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "60d23b50a57ef5d266b5ed2f5f61217192db230c444ab2b9ea269bc5181552ef",
+        "default_supported": "yes",
+        "reason": "逐行复核当前来源：[1] printer-paper/升级支持；行 9-9；字符 1-74；[2] printer-paper/处理步骤；行 5-5；字符 1-80；[3] printer-offline/离线检查；行 5-5；字符 1-64；[4] printer-offline/队列处理；行 9-9；字符 1-61",
+        "overrides": []
+      }
+    ],
+    "primary_cause": "annotation_scope"
+  }
+]

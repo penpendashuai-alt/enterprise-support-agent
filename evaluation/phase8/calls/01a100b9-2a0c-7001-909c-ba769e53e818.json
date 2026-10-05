@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100b9-2a0c-7001-909c-ba769e53e818",
+  "run_id": "d5038abeb17d4a798b6fb54545d5fa98",
+  "case_id": "P8-R-conflict",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:44:57.387055+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1500,
+    "output_tokens": 120,
+    "total_tokens": 1620,
+    "input_token_details": {
+      "cache_read": 384
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.01674,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:44:59.381537+00:00",
+  "visible_model_output": "检索到的文档显示外接 U 盘规定存在冲突：\n\n- 演示材料 A：外接 U 盘只允许在负责人批准后读取，不允许写入 [3]。\n- 演示材料 B：外接 U 盘一律禁止使用，包括读取和写入 [2]。\n\n材料 A 还明确说明：应呈现双方说法并向制度管理员确认生效文件，不按检索排名自动决定哪个版本优先 [1]。\n\n因此建议：不要自行选择其中一份执行，应把两份材料一并提交给制度管理员或信息安全负责人，确认当前生效版本后再执行。",
+  "error_type": null
+}

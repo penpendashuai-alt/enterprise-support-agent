@@ -1,0 +1,23 @@
+{
+  "call_id": "01a10059-fe0d-76e1-942c-4ce5a50448f0",
+  "run_id": "ab704860ba4148568b6f576f3138985d",
+  "case_id": "P8-D-usb_conflict-1",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T06:01:00.209518+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1550,
+    "output_tokens": 132,
+    "total_tokens": 1682,
+    "input_token_details": {
+      "cache_read": 1536
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.017514,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T06:01:03.096241+00:00",
+  "visible_model_output": "这两份材料确实存在冲突：\n\n- 演示外接存储资料 A：外接 U 盘只允许在负责人批准后读取，不允许写入 [1]。\n- 演示外接存储资料 B：外接 U 盘一律禁止使用，包括读取和写入 [2]。\n\n按核对要求，应同时呈现双方说法，并向制度管理员确认哪份是生效文件，不能按检索排名自动决定优先版本 [3]。这两份材料都标注为演示制度，不代表真实企业制度 [1][2]。\n\n因此建议：向制度管理员核实正式生效版本后再执行；在确认前不要自行选择其中一种规定。",
+  "error_type": null
+}

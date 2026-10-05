@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100c3-8fc4-75b1-88f9-bd85611ee62e",
+  "run_id": "8f1664fee00f435fad3993ce193815d7",
+  "case_id": "P8-H-concept_to_policy-3",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:56:18.813179+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 393,
+    "output_tokens": 48,
+    "total_tokens": 441,
+    "input_token_details": {
+      "cache_read": 384
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.004833,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:56:20.205332+00:00",
+  "visible_model_output": "DNS（域名系统）的用途是把人类易记的域名（如 `www.example.com`）解析成计算机通信所需的 IP 地址（如 `93.184.216.34`），相当于互联网的“电话簿”。",
+  "error_type": null
+}

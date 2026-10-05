@@ -1,0 +1,17 @@
+{
+  "call_id": "da4f9f17-10cd-4667-b251-c4f7c2d4e929",
+  "run_id": "c55b1a0982a549cebe23945f7aa81b09",
+  "case_id": "P8-H-vpn691-2",
+  "turn": 0,
+  "provider_kind": "embedding",
+  "started_at": "2026-10-03T07:51:05.627670+00:00",
+  "status": "complete",
+  "usage": {
+    "total_tokens": 13
+  },
+  "estimated_cny": 6.5e-06,
+  "reserved_cny": 0.02,
+  "finished_at": "2026-10-03T07:51:05.843883+00:00",
+  "visible_model_output": null,
+  "error_type": null
+}

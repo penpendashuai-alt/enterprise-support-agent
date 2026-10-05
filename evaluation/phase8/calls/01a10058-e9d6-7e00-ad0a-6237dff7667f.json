@@ -1,0 +1,23 @@
+{
+  "call_id": "01a10058-e9d6-7e00-ad0a-6237dff7667f",
+  "run_id": "ab704860ba4148568b6f576f3138985d",
+  "case_id": "P8-D-clarify_service-3",
+  "turn": 1,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T05:59:49.500114+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 751,
+    "output_tokens": 37,
+    "total_tokens": 788,
+    "input_token_details": {
+      "cache_read": 640
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.007758,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T05:59:50.810516+00:00",
+  "visible_model_output": "Jira 服务当前状态（模拟数据）：**中断（outage）**，正在排查中。\n\n如需进一步协助，请告知具体问题或提供相关工单编号。",
+  "error_type": null
+}

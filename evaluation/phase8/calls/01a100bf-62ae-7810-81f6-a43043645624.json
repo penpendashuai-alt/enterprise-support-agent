@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100bf-62ae-7810-81f6-a43043645624",
+  "run_id": "a7099cc4843142559a75099cd6eabac6",
+  "case_id": "P8-H-vpn691-1",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:51:45.119913+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 2746,
+    "output_tokens": 45,
+    "total_tokens": 2791,
+    "input_token_details": {
+      "cache_read": 256
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.025929,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:51:46.443823+00:00",
+  "visible_model_output": "",
+  "error_type": null
+}

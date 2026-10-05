@@ -1,0 +1,17 @@
+{
+  "call_id": "1a932057-83d5-4995-a80d-19a194211f7e",
+  "run_id": "66bcef1868e345e1a081b09f12c2da57",
+  "case_id": "P8-R-injection",
+  "turn": 0,
+  "provider_kind": "embedding",
+  "started_at": "2026-10-03T07:59:29.176075+00:00",
+  "status": "complete",
+  "usage": {
+    "total_tokens": 6
+  },
+  "estimated_cny": 3e-06,
+  "reserved_cny": 0.02,
+  "finished_at": "2026-10-03T07:59:29.333977+00:00",
+  "visible_model_output": null,
+  "error_type": null
+}

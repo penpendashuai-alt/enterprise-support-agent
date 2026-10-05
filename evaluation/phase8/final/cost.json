@@ -1,0 +1,17 @@
+{
+  "providers": {
+    "chat": {
+      "attempts": 418,
+      "known_cny": 6.146747999999999,
+      "unknown_usage": 0
+    },
+    "embedding": {
+      "attempts": 97,
+      "known_cny": 0.0006950000000000001,
+      "unknown_usage": 0
+    }
+  },
+  "unique_calls": 515,
+  "known_cny": 6.147443,
+  "unknown_usage": 0
+}

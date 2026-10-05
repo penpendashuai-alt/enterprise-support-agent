@@ -1,0 +1,290 @@
+{
+  "run_id": "2a3d1739bd5746e9b88a673a7856abe9",
+  "case_id": "P8-H-repair_idempotency-2",
+  "attempt": 1,
+  "variant": "candidate",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-03T07:55:27.147043+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请建维修演示工单：设备 DEV-002 屏幕出现闪烁，影响我一人，请安排人工检查，优先级 P2。",
+      "http_status": 200,
+      "seconds": 4.094119100016542,
+      "request_id": "fd860c25566a471b9625c0d969e1476a",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：设备 DEV-002 屏幕闪烁维修\n描述：设备 DEV-002 屏幕出现闪烁，已尝试安排人工检查。\n服务：未指定\n影响范围：仅本人\n优先级：P2（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a100c2-c62f-7b53-a8b6-653aeff033bd",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-866770f1adff40358b26e63ea28f46af",
+          "draft_version": 1,
+          "draft": {
+            "title": "设备 DEV-002 屏幕闪烁维修",
+            "description": "设备 DEV-002 屏幕出现闪烁，已尝试安排人工检查。",
+            "service_name": null,
+            "impact": "仅本人",
+            "priority": "P2"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": "DEV-002",
+          "ticket_id": null,
+          "issue_description": "设备 DEV-002 屏幕出现闪烁，影响一人，请安排人工检查，优先级 P2",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "设备 DEV-002 屏幕闪烁维修",
+          "description": "设备 DEV-002 屏幕出现闪烁，已尝试安排人工检查。",
+          "service_name": null,
+          "impact": "仅本人",
+          "priority": "P2"
+        },
+        "draft_id": "draft-866770f1adff40358b26e63ea28f46af",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    },
+    {
+      "index": 1,
+      "operation": "approve",
+      "user_message": null,
+      "http_status": 200,
+      "seconds": 0.022454299964010715,
+      "request_id": "8521ef3f7d424747aa1f482fd686631e",
+      "response": {
+        "type": "ai",
+        "content": "本地演示工单已创建：DEMO-D4D4341630CB4DF4987671F549ED976D，状态：open。标题：设备 DEV-002 屏幕闪烁维修。未提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a100c2-d6ca-77b2-80bd-786099e2e928",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_result",
+          "status": "success",
+          "ticket": {
+            "ticket_id": "DEMO-D4D4341630CB4DF4987671F549ED976D",
+            "draft_id": "draft-866770f1adff40358b26e63ea28f46af",
+            "draft_version": 1,
+            "thread_id": "1d0bf391d06149ee906e30bb2f6323ef",
+            "idempotency_key": "draft-866770f1adff40358b26e63ea28f46af:v1",
+            "fingerprint": "3411a476b08850ea84582ae036a0e24a4518bd4966f312907e148619de19d43f",
+            "draft": {
+              "title": "设备 DEV-002 屏幕闪烁维修",
+              "description": "设备 DEV-002 屏幕出现闪烁，已尝试安排人工检查。",
+              "service_name": null,
+              "impact": "仅本人",
+              "priority": "P2"
+            },
+            "state": "open",
+            "created_at": "2026-10-03T15:55:31.411252+08:00",
+            "user_id": "p8-2a3d1739-P8-H-repair_idempotency-2-alice",
+            "source": "postgres"
+          },
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": "DEV-002",
+          "ticket_id": null,
+          "issue_description": "设备 DEV-002 屏幕出现闪烁，影响一人，请安排人工检查，优先级 P2",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "设备 DEV-002 屏幕闪烁维修",
+          "description": "设备 DEV-002 屏幕出现闪烁，已尝试安排人工检查。",
+          "service_name": null,
+          "impact": "仅本人",
+          "priority": "P2"
+        },
+        "draft_id": "draft-866770f1adff40358b26e63ea28f46af",
+        "draft_version": 1,
+        "approval_status": "completed",
+        "approved_fingerprint": "3411a476b08850ea84582ae036a0e24a4518bd4966f312907e148619de19d43f",
+        "approved_request_key": "draft-866770f1adff40358b26e63ea28f46af:v1",
+        "ticket_result": {
+          "kind": "ticket_result",
+          "status": "success",
+          "ticket": {
+            "ticket_id": "DEMO-D4D4341630CB4DF4987671F549ED976D",
+            "draft_id": "draft-866770f1adff40358b26e63ea28f46af",
+            "draft_version": 1,
+            "thread_id": "1d0bf391d06149ee906e30bb2f6323ef",
+            "idempotency_key": "draft-866770f1adff40358b26e63ea28f46af:v1",
+            "fingerprint": "3411a476b08850ea84582ae036a0e24a4518bd4966f312907e148619de19d43f",
+            "draft": {
+              "title": "设备 DEV-002 屏幕闪烁维修",
+              "description": "设备 DEV-002 屏幕出现闪烁，已尝试安排人工检查。",
+              "service_name": null,
+              "impact": "仅本人",
+              "priority": "P2"
+            },
+            "state": "open",
+            "created_at": "2026-10-03T15:55:31.411252+08:00",
+            "user_id": "p8-2a3d1739-P8-H-repair_idempotency-2-alice",
+            "source": "postgres"
+          },
+          "is_demo": true
+        }
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 1
+    },
+    {
+      "index": 2,
+      "operation": "approve",
+      "user_message": null,
+      "http_status": 200,
+      "seconds": 0.01184400002239272,
+      "request_id": "2fa1cb22b321456ba26206b3679092ba",
+      "response": {
+        "type": "ai",
+        "content": "本地演示工单已创建：DEMO-D4D4341630CB4DF4987671F549ED976D，状态：open。标题：设备 DEV-002 屏幕闪烁维修。未提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a100c2-d785-7bb1-9f95-d96477f1d679",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_result",
+          "status": "success",
+          "ticket": {
+            "ticket_id": "DEMO-D4D4341630CB4DF4987671F549ED976D",
+            "draft_id": "draft-866770f1adff40358b26e63ea28f46af",
+            "draft_version": 1,
+            "thread_id": "1d0bf391d06149ee906e30bb2f6323ef",
+            "idempotency_key": "draft-866770f1adff40358b26e63ea28f46af:v1",
+            "fingerprint": "3411a476b08850ea84582ae036a0e24a4518bd4966f312907e148619de19d43f",
+            "draft": {
+              "title": "设备 DEV-002 屏幕闪烁维修",
+              "description": "设备 DEV-002 屏幕出现闪烁，已尝试安排人工检查。",
+              "service_name": null,
+              "impact": "仅本人",
+              "priority": "P2"
+            },
+            "state": "open",
+            "created_at": "2026-10-03T15:55:31.411252+08:00",
+            "user_id": "p8-2a3d1739-P8-H-repair_idempotency-2-alice",
+            "source": "postgres"
+          },
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": "DEV-002",
+          "ticket_id": null,
+          "issue_description": "设备 DEV-002 屏幕出现闪烁，影响一人，请安排人工检查，优先级 P2",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "设备 DEV-002 屏幕闪烁维修",
+          "description": "设备 DEV-002 屏幕出现闪烁，已尝试安排人工检查。",
+          "service_name": null,
+          "impact": "仅本人",
+          "priority": "P2"
+        },
+        "draft_id": "draft-866770f1adff40358b26e63ea28f46af",
+        "draft_version": 1,
+        "approval_status": "completed",
+        "approved_fingerprint": "3411a476b08850ea84582ae036a0e24a4518bd4966f312907e148619de19d43f",
+        "approved_request_key": "draft-866770f1adff40358b26e63ea28f46af:v1",
+        "ticket_result": {
+          "kind": "ticket_result",
+          "status": "success",
+          "ticket": {
+            "ticket_id": "DEMO-D4D4341630CB4DF4987671F549ED976D",
+            "draft_id": "draft-866770f1adff40358b26e63ea28f46af",
+            "draft_version": 1,
+            "thread_id": "1d0bf391d06149ee906e30bb2f6323ef",
+            "idempotency_key": "draft-866770f1adff40358b26e63ea28f46af:v1",
+            "fingerprint": "3411a476b08850ea84582ae036a0e24a4518bd4966f312907e148619de19d43f",
+            "draft": {
+              "title": "设备 DEV-002 屏幕闪烁维修",
+              "description": "设备 DEV-002 屏幕出现闪烁，已尝试安排人工检查。",
+              "service_name": null,
+              "impact": "仅本人",
+              "priority": "P2"
+            },
+            "state": "open",
+            "created_at": "2026-10-03T15:55:31.411252+08:00",
+            "user_id": "p8-2a3d1739-P8-H-repair_idempotency-2-alice",
+            "source": "postgres"
+          },
+          "is_demo": true
+        }
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 1
+    }
+  ],
+  "users": {
+    "alice": "p8-2a3d1739-P8-H-repair_idempotency-2-alice",
+    "bob": "p8-2a3d1739-P8-H-repair_idempotency-2-bob"
+  },
+  "threads": {
+    "primary": "1d0bf391d06149ee906e30bb2f6323ef",
+    "secondary": "6917bf003e8640bf8845a0abd65bcc58"
+  },
+  "seconds": 4.608572999946773,
+  "final_ticket_count": 1,
+  "final_draft_version": 1,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {
+      "intent_total": 1,
+      "intent_correct": 1
+    }
+  },
+  "model_calls": [
+    "01a100c2-c638-7280-9e1e-7840f96cf462",
+    "01a100c2-cf37-7432-9b36-0ea5865c86dd"
+  ]
+}

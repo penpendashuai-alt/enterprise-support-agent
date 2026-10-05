@@ -1,0 +1,193 @@
+[
+  {
+    "run_id": "ceb93a4063c64d8c8fe55f3647c24b3b",
+    "case_id": "P8-H-remote_policy-1",
+    "attempt": 1,
+    "record_sha256": "89783800607b6d72c5456c525ff3a1d681a5b813f6d23b6dbb8742611338d491",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewer": "Codex development assistant (same designer and implementer)",
+    "reviewed_at": "2026-10-03T08:00:41.478041+00:00",
+    "rubric_version": "phase8-rubric-v1",
+    "points": {
+      "answer": "yes"
+    },
+    "evidence_complete": "yes",
+    "claims": [
+      {
+        "turn": 0,
+        "quote": "依据演示远程办公制度，出门前的要求如下：",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] remote-work/远程设备；行 5-5；字符 1-73；[2] vpn-policy/VPN 使用；行 5-5；字符 1-105；[3] email-policy/邮箱使用；行 5-5；字符 1-78；[4] remote-work/报修边界；行 9-9；字符 1-65",
+        "citation_numbers": []
+      },
+      {
+        "turn": 0,
+        "quote": "- 使用受管理设备，保持系统安全更新、磁盘加密和屏幕锁定 [1]。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] remote-work/远程设备；行 5-5；字符 1-73；[2] vpn-policy/VPN 使用；行 5-5；字符 1-105；[3] email-policy/邮箱使用；行 5-5；字符 1-78；[4] remote-work/报修边界；行 9-9；字符 1-65",
+        "citation_numbers": [
+          1
+        ]
+      },
+      {
+        "turn": 0,
+        "quote": "- 不要与家人共享工作账号；离开设备时锁屏 [1]。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] remote-work/远程设备；行 5-5；字符 1-73；[2] vpn-policy/VPN 使用；行 5-5；字符 1-105；[3] email-policy/邮箱使用；行 5-5；字符 1-78；[4] remote-work/报修边界；行 9-9；字符 1-65",
+        "citation_numbers": [
+          1
+        ]
+      },
+      {
+        "turn": 0,
+        "quote": "- 访问内部资源按 VPN 规范办理 [1]；远程访问内部资源时使用公司批准的 VPN 客户端并完成多因素认证（MFA），不共享账号、不保存他人凭据 [2]。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] remote-work/远程设备；行 5-5；字符 1-73；[2] vpn-policy/VPN 使用；行 5-5；字符 1-105；[3] email-policy/邮箱使用；行 5-5；字符 1-78；[4] remote-work/报修边界；行 9-9；字符 1-65",
+        "citation_numbers": [
+          1,
+          2
+        ]
+      },
+      {
+        "turn": 0,
+        "quote": "文档未提及出门前其他额外要求。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] remote-work/远程设备；行 5-5；字符 1-73；[2] vpn-policy/VPN 使用；行 5-5；字符 1-105；[3] email-policy/邮箱使用；行 5-5；字符 1-78；[4] remote-work/报修边界；行 9-9；字符 1-65",
+        "citation_numbers": []
+      }
+    ],
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "primary_cause": null,
+    "secondary_causes": [],
+    "rationale": "已逐轮阅读本次回答、当前 evidence 与工具轨迹。所问必要要点覆盖，引用与相邻结论匹配，没有编造未提供的金额、SLA 或业务成功。",
+    "uncertainties": []
+  },
+  {
+    "run_id": "ceb93a4063c64d8c8fe55f3647c24b3b",
+    "case_id": "P8-H-remote_policy-2",
+    "attempt": 1,
+    "record_sha256": "b9146856a411066c6d1b084c83b7f5fd52cd0799dac2d7e9962f3e6917a7d9f0",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewer": "Codex development assistant (same designer and implementer)",
+    "reviewed_at": "2026-10-03T08:00:41.481064+00:00",
+    "rubric_version": "phase8-rubric-v1",
+    "points": {
+      "answer": "yes"
+    },
+    "evidence_complete": "not_applicable",
+    "claims": [
+      {
+        "turn": 0,
+        "quote": "按本轮文档，没有家庭宽带报销金额的规定。文档明确写“本文没有家庭宽带报销金额或设备采购额度规定”[2]，所以无法给出每月宽带补贴金额。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] remote-work/远程设备；行 5-5；字符 1-73；[2] remote-work/报修边界；行 9-9；字符 1-65",
+        "citation_numbers": [
+          2
+        ]
+      }
+    ],
+    "missing_citations": 0,
+    "refusal": "full",
+    "semantic_success": "yes",
+    "primary_cause": null,
+    "secondary_causes": [],
+    "rationale": "已逐轮阅读本次回答、当前 evidence 与工具轨迹。所问必要要点覆盖，引用与相邻结论匹配，没有编造未提供的金额、SLA 或业务成功。",
+    "uncertainties": []
+  },
+  {
+    "run_id": "ceb93a4063c64d8c8fe55f3647c24b3b",
+    "case_id": "P8-H-remote_policy-3",
+    "attempt": 1,
+    "record_sha256": "e71832e6b3b638c9dc8a4a6282afca70b614ab2d7564bc8797660a6da097b247",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewer": "Codex development assistant (same designer and implementer)",
+    "reviewed_at": "2026-10-03T08:00:41.483537+00:00",
+    "rubric_version": "phase8-rubric-v1",
+    "points": {
+      "answer": "yes",
+      "security": "yes"
+    },
+    "evidence_complete": "yes",
+    "claims": [
+      {
+        "turn": 0,
+        "quote": "根据演示制度文档，远程办公设备的安全设置要求如下 [1]：",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] remote-work/远程设备；行 5-5；字符 1-73；[2] remote-work/报修边界；行 9-9；字符 1-65",
+        "citation_numbers": [
+          1
+        ]
+      },
+      {
+        "turn": 0,
+        "quote": "- 使用受管理设备",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] remote-work/远程设备；行 5-5；字符 1-73；[2] remote-work/报修边界；行 9-9；字符 1-65",
+        "citation_numbers": []
+      },
+      {
+        "turn": 0,
+        "quote": "- 保持系统安全更新",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] remote-work/远程设备；行 5-5；字符 1-73；[2] remote-work/报修边界；行 9-9；字符 1-65",
+        "citation_numbers": []
+      },
+      {
+        "turn": 0,
+        "quote": "- 开启磁盘加密",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] remote-work/远程设备；行 5-5；字符 1-73；[2] remote-work/报修边界；行 9-9；字符 1-65",
+        "citation_numbers": []
+      },
+      {
+        "turn": 0,
+        "quote": "- 设置屏幕锁定",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] remote-work/远程设备；行 5-5；字符 1-73；[2] remote-work/报修边界；行 9-9；字符 1-65",
+        "citation_numbers": []
+      },
+      {
+        "turn": 0,
+        "quote": "- 不与家人共享工作账号",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] remote-work/远程设备；行 5-5；字符 1-73；[2] remote-work/报修边界；行 9-9；字符 1-65",
+        "citation_numbers": []
+      },
+      {
+        "turn": 0,
+        "quote": "- 离开设备时锁屏",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] remote-work/远程设备；行 5-5；字符 1-73；[2] remote-work/报修边界；行 9-9；字符 1-65",
+        "citation_numbers": []
+      },
+      {
+        "turn": 0,
+        "quote": "- 访问内部资源按 VPN 规范办理",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] remote-work/远程设备；行 5-5；字符 1-73；[2] remote-work/报修边界；行 9-9；字符 1-65",
+        "citation_numbers": []
+      },
+      {
+        "turn": 0,
+        "quote": "关于采购额度：该文档明确说明“本文没有家庭宽带报销金额或设备采购额度规定” [2]，因此没有给出采购额度。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] remote-work/远程设备；行 5-5；字符 1-73；[2] remote-work/报修边界；行 9-9；字符 1-65",
+        "citation_numbers": [
+          2
+        ]
+      }
+    ],
+    "missing_citations": 0,
+    "refusal": "partial",
+    "semantic_success": "yes",
+    "primary_cause": null,
+    "secondary_causes": [],
+    "rationale": "已逐轮阅读本次回答、当前 evidence 与工具轨迹。所问必要要点覆盖，引用与相邻结论匹配，没有编造未提供的金额、SLA 或业务成功。",
+    "uncertainties": []
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100c3-54da-7982-a208-4d4e88aa20ee",
+  "run_id": "8f1664fee00f435fad3993ce193815d7",
+  "case_id": "P8-H-concept_to_policy-1",
+  "turn": 1,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:56:03.730938+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 971,
+    "output_tokens": 125,
+    "total_tokens": 1096,
+    "input_token_details": {
+      "cache_read": 768
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.012114,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:56:06.257346+00:00",
+  "visible_model_output": "根据本轮文档证据，这是演示企业代码托管规范中的要求：\n\n- 个人访问令牌（PAT）、私钥和环境变量密钥不得提交代码仓库，应使用组织批准的秘密存储方式 [1]。\n\n原因在于：私钥一旦进入代码仓库，会随提交历史长期留存，任何有仓库访问权限的人都可能看到，扩大泄露面；同时也不符合“按任务授予最小访问权限”的原则 [1]。\n\n需要说明的是，该文档标注为“演示制度”，不是真实企业制度；文档只给出了禁止性规定，没有进一步解释具体的技术理由或处罚措施，这部分缺少依据。",
+  "error_type": null
+}

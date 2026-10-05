@@ -1,0 +1,9 @@
+{
+  "checked_at": "2026-10-05T09:15:57.520924+00:00",
+  "source_matches_frozen_candidate": true,
+  "baseline_matches_freeze": true,
+  "frozen_evaluator_unchanged": true,
+  "credential_or_private_endpoint_matches": [],
+  "scan_scope": "Current local secret values and private configured cloud endpoints in Phase 8 public artifacts; no secret values emitted",
+  "personal_files_remain_local": true
+}

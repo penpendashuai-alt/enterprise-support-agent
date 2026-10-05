@@ -1,0 +1,119 @@
+[
+  {
+    "run_id": "ce846e6c15c744278ce6d5511dee69ae",
+    "case_id": "P8-D-priority_policy-1",
+    "attempt": 1,
+    "record_sha256": "87157cb841d9e3e0300cdd653b9978d89977cba344208f24eea005a7a1f6a6d7",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewer": "Codex development assistant (same designer and implementer)",
+    "reviewed_at": "2026-10-03T08:06:15.918291+00:00",
+    "rubric_version": "phase8-rubric-v1",
+    "points": {
+      "levels": "yes"
+    },
+    "evidence_complete": "yes",
+    "claims": [
+      {
+        "turn": 0,
+        "quote": "根据演示工单优先级规则 [1]：",
+        "supported": "yes",
+        "reason": "逐轮复核当前来源与请求；缓存仅保存检索结果，不复用偏好回答。",
+        "citation_numbers": [
+          1
+        ]
+      },
+      {
+        "turn": 0,
+        "quote": "- **P1**：紧急",
+        "supported": "yes",
+        "reason": "逐轮复核当前来源与请求；缓存仅保存检索结果，不复用偏好回答。",
+        "citation_numbers": []
+      },
+      {
+        "turn": 0,
+        "quote": "- **P2**：高",
+        "supported": "yes",
+        "reason": "逐轮复核当前来源与请求；缓存仅保存检索结果，不复用偏好回答。",
+        "citation_numbers": []
+      },
+      {
+        "turn": 0,
+        "quote": "- **P3**：普通",
+        "supported": "yes",
+        "reason": "逐轮复核当前来源与请求；缓存仅保存检索结果，不复用偏好回答。",
+        "citation_numbers": []
+      },
+      {
+        "turn": 0,
+        "quote": "- **P4**：低",
+        "supported": "yes",
+        "reason": "逐轮复核当前来源与请求；缓存仅保存检索结果，不复用偏好回答。",
+        "citation_numbers": []
+      },
+      {
+        "turn": 0,
+        "quote": "未指定优先级时，默认填 **P3（普通）**，不根据模型猜测自动升级；用户明确指定时保留该值。任何优先级都要填写影响范围 [1]。",
+        "supported": "yes",
+        "reason": "逐轮复核当前来源与请求；缓存仅保存检索结果，不复用偏好回答。",
+        "citation_numbers": [
+          1
+        ]
+      },
+      {
+        "turn": 0,
+        "quote": "另外，优先级需要在草稿中由用户确认，P1 也不能跳过确认；这里没有实际响应时限或 SLA 承诺 [2]。",
+        "supported": "yes",
+        "reason": "逐轮复核当前来源与请求；缓存仅保存检索结果，不复用偏好回答。",
+        "citation_numbers": [
+          2
+        ]
+      }
+    ],
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "primary_cause": null,
+    "secondary_causes": [],
+    "rationale": "预选缓存子集：P1 至 P4 及默认值与实际证据一致；偏好保存和删除后新会话语言正确，DNS/DHCP 含义正确。",
+    "uncertainties": []
+  },
+  {
+    "run_id": "ce846e6c15c744278ce6d5511dee69ae",
+    "case_id": "P8-D-preferences-1",
+    "attempt": 1,
+    "record_sha256": "7703361556f7d6546974acdbe6260395572d8512c03b4d1960fb9080a76b99f9",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewer": "Codex development assistant (same designer and implementer)",
+    "reviewed_at": "2026-10-03T08:06:15.919789+00:00",
+    "rubric_version": "phase8-rubric-v1",
+    "points": {
+      "preference": "yes"
+    },
+    "evidence_complete": "not_applicable",
+    "claims": [
+      {
+        "turn": 1,
+        "quote": "DNS (Domain Name System) translates human-readable domain names (e.g., `www.example.com`) into IP addresses (e.g., `93.184.216.34`) that computers use to communicate. It acts like a phonebook for the internet, so users don’t need to remember numeric IPs.",
+        "supported": "not_applicable",
+        "reason": "逐轮复核当前来源与请求；缓存仅保存检索结果，不复用偏好回答。",
+        "citation_numbers": []
+      },
+      {
+        "turn": 3,
+        "quote": "DHCP（动态主机配置协议）用于自动给网络中的设备分配 IP 地址、子网掩码、默认网关、DNS 服务器等网络参数，避免手动配置，减少地址冲突并便于集中管理。",
+        "supported": "not_applicable",
+        "reason": "逐轮复核当前来源与请求；缓存仅保存检索结果，不复用偏好回答。",
+        "citation_numbers": []
+      }
+    ],
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "primary_cause": null,
+    "secondary_causes": [],
+    "rationale": "预选缓存子集：P1 至 P4 及默认值与实际证据一致；偏好保存和删除后新会话语言正确，DNS/DHCP 含义正确。",
+    "uncertainties": []
+  }
+]

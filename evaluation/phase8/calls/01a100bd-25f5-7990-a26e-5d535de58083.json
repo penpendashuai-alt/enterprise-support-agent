@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100bd-25f5-7990-a26e-5d535de58083",
+  "run_id": "c53dedb91d2548cdb596803a814318d1",
+  "case_id": "P8-H-code_policy-3",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:49:18.498501+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 831,
+    "output_tokens": 41,
+    "total_tokens": 872,
+    "input_token_details": {
+      "cache_read": 384
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.008586,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:49:20.340939+00:00",
+  "visible_model_output": "不能。根据演示企业代码托管规范，个人访问令牌（PAT）和环境变量密钥（如 .env 中的密钥）不得提交代码仓库，应使用组织批准的秘密存储方式 [1]。",
+  "error_type": null
+}

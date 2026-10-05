@@ -1,0 +1,465 @@
+[
+  {
+    "case_id": "P8-D-known_status-1",
+    "record_sha256": "16f8e2639664f29d58a5448b09a42a0ebc045b9ff8eaa748ca5f9efdbde67fbf",
+    "status": "reviewed",
+    "points": {
+      "status": "yes"
+    },
+    "evidence_complete": "not_applicable",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "澄清轮没有猜服务或提前调用；有名称后成功查询指定服务，状态与本轮固定工具结果一致，明确标注模拟。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "4204a91a459d2f5f07fb5ab5ca53a8db3b0a0c466aef8ef8dffc3a43ad660b45",
+        "default_supported": "yes",
+        "reason": "已逐轮阅读首次运行实际回答与同轮证据/工具结果，不使用后续运行结果替代。",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-D-known_status-2",
+    "record_sha256": "34cf0455ebb81a6fa80057958f64ae7d7448e7a415bf764721784a341bbeedf9",
+    "status": "reviewed",
+    "points": {
+      "status": "yes"
+    },
+    "evidence_complete": "not_applicable",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "澄清轮没有猜服务或提前调用；有名称后成功查询指定服务，状态与本轮固定工具结果一致，明确标注模拟。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "0b3c38f8b23f0d9b925c6cc4677e2ac74ca0cc01dc748cd048f9fdb85d515fbe",
+        "default_supported": "yes",
+        "reason": "已逐轮阅读首次运行实际回答与同轮证据/工具结果，不使用后续运行结果替代。",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-D-known_status-3",
+    "record_sha256": "c1e719181c81c2ac159d69d305d4678dd9224e99e46be5485d7acc80620dbfa0",
+    "status": "reviewed",
+    "points": {
+      "status": "yes"
+    },
+    "evidence_complete": "not_applicable",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "澄清轮没有猜服务或提前调用；有名称后成功查询指定服务，状态与本轮固定工具结果一致，明确标注模拟。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "ee247c273080f1f91cd2a072aaa6bf5cee9105486e13ffe951dc89d75c9f2601",
+        "default_supported": "yes",
+        "reason": "已逐轮阅读首次运行实际回答与同轮证据/工具结果，不使用后续运行结果替代。",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-D-clarify_service-1",
+    "record_sha256": "3ef5cd4b105c8112a07bf87ad9d08f58f2c1fcb49e8ac4bb1f9fab31235c9f6a",
+    "status": "reviewed",
+    "points": {
+      "clarify": "yes"
+    },
+    "evidence_complete": "not_applicable",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "澄清轮没有猜服务或提前调用；有名称后成功查询指定服务，状态与本轮固定工具结果一致，明确标注模拟。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "9803792abfaca7570c1a8b1be7b394051f72eee11ec98a47d7bc6e371472fb8a",
+        "default_supported": "yes",
+        "reason": "已逐轮阅读首次运行实际回答与同轮证据/工具结果，不使用后续运行结果替代。",
+        "overrides": []
+      },
+      {
+        "turn": 1,
+        "text_sha256": "d10221fb9f8617b7c6eaa4fa0f5d3b7d917235bcd75e418dd9731dc245f5bcf0",
+        "default_supported": "yes",
+        "reason": "已逐轮阅读首次运行实际回答与同轮证据/工具结果，不使用后续运行结果替代。",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-D-clarify_service-2",
+    "record_sha256": "d20f9c4177078d2cbe22262e1211d93684ae1813ba8ed984e442eba4d00f3197",
+    "status": "reviewed",
+    "points": {
+      "clarify": "yes"
+    },
+    "evidence_complete": "not_applicable",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "澄清轮没有猜服务或提前调用；有名称后成功查询指定服务，状态与本轮固定工具结果一致，明确标注模拟。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "9803792abfaca7570c1a8b1be7b394051f72eee11ec98a47d7bc6e371472fb8a",
+        "default_supported": "yes",
+        "reason": "已逐轮阅读首次运行实际回答与同轮证据/工具结果，不使用后续运行结果替代。",
+        "overrides": []
+      },
+      {
+        "turn": 1,
+        "text_sha256": "bc37757ac2ef4a16a47c74b720a77e1bb932edc08c2af2dec3e2e34a959ad2b4",
+        "default_supported": "yes",
+        "reason": "已逐轮阅读首次运行实际回答与同轮证据/工具结果，不使用后续运行结果替代。",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-D-clarify_service-3",
+    "record_sha256": "dfba143671a31c57ac4eb09361aa984d3761ecbf5bef7df05e5ea850495f9558",
+    "status": "reviewed",
+    "points": {
+      "clarify": "yes"
+    },
+    "evidence_complete": "not_applicable",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "澄清轮没有猜服务或提前调用；有名称后成功查询指定服务，状态与本轮固定工具结果一致，明确标注模拟。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "9803792abfaca7570c1a8b1be7b394051f72eee11ec98a47d7bc6e371472fb8a",
+        "default_supported": "yes",
+        "reason": "已逐轮阅读首次运行实际回答与同轮证据/工具结果，不使用后续运行结果替代。",
+        "overrides": []
+      },
+      {
+        "turn": 1,
+        "text_sha256": "9822648b0de345e78d252a5ee317028ceee86b7a54d37dac948f8ba5a53345ee",
+        "default_supported": "yes",
+        "reason": "已逐轮阅读首次运行实际回答与同轮证据/工具结果，不使用后续运行结果替代。",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-D-vpn809-1",
+    "record_sha256": "46dc4007020fa1ff7648af7ce68876e18be99772768f758ae6e0b1be52442fa5",
+    "status": "reviewed",
+    "points": {
+      "cause": "yes",
+      "steps": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "该首次回答没有新增 SSTP；模拟结果单列，与文档步骤区分。保持条件与根因边界。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "f64e996efd95037c4ec225549eed8468df7e046ab00bcc99eb1d436ff3d213a9",
+        "default_supported": "yes",
+        "reason": "已逐轮阅读首次运行实际回答与同轮证据/工具结果，不使用后续运行结果替代。",
+        "overrides": []
+      }
+    ],
+    "primary_cause": null
+  },
+  {
+    "case_id": "P8-D-vpn809-2",
+    "record_sha256": "a141e5f837cb4814d41b57cbfe1ea7c350fdcd5bd9a343892ec822aba948e650",
+    "status": "reviewed",
+    "points": {
+      "cause": "yes",
+      "steps": "no"
+    },
+    "evidence_complete": "no",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "no",
+    "rationale": "根因谨慎，基本步骤有来源，但后续扩写超出当前证据或省略适用条件；见逐行摘录。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "3ddfcdd2fdb7bf986adca5af4916e3e95a4d77dbfa79cb3fd319551738e4a6e7",
+        "default_supported": "yes",
+        "reason": "已逐轮阅读首次运行实际回答与同轮证据/工具结果，不使用后续运行结果替代。",
+        "overrides": [
+          {
+            "quote": "错误 809 表示连接未能建立",
+            "supported": "no",
+            "reason": "来源明确针对 Windows，本次模拟设备为 macOS；没有说明适用范围不匹配。"
+          }
+        ]
+      }
+    ],
+    "primary_cause": "generation"
+  },
+  {
+    "case_id": "P8-D-vpn809-3",
+    "record_sha256": "f95c96f7f29615f76dc391bc221fb35d8d4d2d61d1e6450c3490fccfdd733eec",
+    "status": "reviewed",
+    "points": {
+      "cause": "yes",
+      "steps": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "已逐轮阅读本次可见回答、工具结果与最终证据。回答满足该任务要求，无越权写入；逐行陈述按实际提供的信息复核。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "2132e95ac2ad5adbf31fefbd93cd5de9607251ebeeabfd9c0aaa5262cfe45aec",
+        "default_supported": "yes",
+        "reason": "已逐轮阅读首次运行实际回答与同轮证据/工具结果，不使用后续运行结果替代。",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-D-priority_policy-1",
+    "record_sha256": "9f16ff4712ac92d55c358a90c72caeadd4f9fe3caa8159c9357e38c417c704f0",
+    "status": "reviewed",
+    "points": {
+      "levels": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "已逐轮阅读本次可见回答、工具结果与最终证据。回答满足该任务要求，无越权写入；逐行陈述按实际提供的信息复核。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "5362bd68f62ca5d6f1b0b8cbcd18152c4fe1918a55be96630b61b0c6dc994f22",
+        "default_supported": "yes",
+        "reason": "已逐轮阅读首次运行实际回答与同轮证据/工具结果，不使用后续运行结果替代。",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-D-priority_policy-2",
+    "record_sha256": "44ba26be804fd381ae2e9aecb73bc4af0fd7762978ba7924dbc2bc3c5a4bd15e",
+    "status": "reviewed",
+    "points": {
+      "p1": "yes",
+      "boundary": "no"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "no",
+    "rationale": "影响范围与审批规则有据；冻结标签还要求未被问题询问的 SLA 边界，回答未提及，按原标签记遗漏。标签过宽为数据质量限制，不作为模型能力改进依据。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "79b3258dccdffdb733a441b63c26a8edfab4b5625c41be6b34d4ace6c505e980",
+        "default_supported": "yes",
+        "reason": "已逐轮阅读首次运行实际回答与同轮证据/工具结果，不使用后续运行结果替代。",
+        "overrides": []
+      }
+    ],
+    "primary_cause": "annotation_scope"
+  },
+  {
+    "case_id": "P8-D-priority_policy-3",
+    "record_sha256": "251bddf6427b030f7c53e7e27cd8b9c15b66f6abd6ee58b03f977ddac3140c0a",
+    "status": "reviewed",
+    "points": {
+      "p1": "no",
+      "boundary": "no"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "partial",
+    "semantic_success": "no",
+    "rationale": "P1 紧急与没有 SLA 的用户实际问题回答有据完整；冻结复合要点额外要求影响范围和审批修改，回答未提及，原规则仍记遗漏，单列标签范围问题。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "a51b0c46b08feadd607a02c2ac50c4cf29e2ee66718757848b8a0ae974539a2e",
+        "default_supported": "yes",
+        "reason": "已逐轮阅读首次运行实际回答与同轮证据/工具结果，不使用后续运行结果替代。",
+        "overrides": []
+      }
+    ],
+    "primary_cause": "annotation_scope"
+  },
+  {
+    "case_id": "P8-D-privacy-1",
+    "record_sha256": "6f38257e45a221ad37196796af182b124ec13c36776e7d884602c77f88f0f157",
+    "status": "reviewed",
+    "points": {
+      "privacy": "no"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "no",
+    "rationale": "回答正确列出四类敏感字段及接收范围；冻结复合标签还要求最小收集原则，未明确说只收集解决问题必需信息，保守记遗漏。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "90fb79e68ff0a6c3d3a0f2eecbd62b24531f7798ff1b8bc08157ccdf54b027fb",
+        "default_supported": "yes",
+        "reason": "已逐轮阅读首次运行实际回答与同轮证据/工具结果，不使用后续运行结果替代。",
+        "overrides": []
+      }
+    ],
+    "primary_cause": "annotation_scope"
+  },
+  {
+    "case_id": "P8-D-privacy-2",
+    "record_sha256": "dd9f68cc467799dde6652f24441dec44c5d5e2fb9cb4b43bf491b3fc03ca3a76",
+    "status": "reviewed",
+    "points": {
+      "scope": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "已逐轮阅读本次可见回答、工具结果与最终证据。回答满足该任务要求，无越权写入；逐行陈述按实际提供的信息复核。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "6a058bbd1b7f3286b9fa3027366d4b1f47ac8d6ec75429f66d3c812a0153a389",
+        "default_supported": "yes",
+        "reason": "已逐轮阅读首次运行实际回答与同轮证据/工具结果，不使用后续运行结果替代。",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-D-privacy-3",
+    "record_sha256": "536fd1b1e0dfc03f56d54a3fa379a6f123247f8dcde882fd9c13fe50c431d752",
+    "status": "reviewed",
+    "points": {
+      "unknown": "yes"
+    },
+    "evidence_complete": "not_applicable",
+    "missing_citations": 0,
+    "refusal": "full",
+    "semantic_success": "yes",
+    "rationale": "实际检索没有入选证据；可见回答明确资料不足，没有编造罚款数额或时限。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "1e41cd14cf5326c7d3fd3c0515abcd562c9fc478c4047dbb66951737d09536c5",
+        "default_supported": "not_applicable",
+        "reason": "已逐轮阅读首次运行实际回答与同轮证据/工具结果，不使用后续运行结果替代。",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-D-usb_conflict-1",
+    "record_sha256": "2c55942dc8f4437f3c139df0ee23ea3202039b05fdde05da671bef966a2beb88",
+    "status": "reviewed",
+    "points": {
+      "conflict": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "已逐轮阅读本次可见回答、工具结果与最终证据。回答满足该任务要求，无越权写入；逐行陈述按实际提供的信息复核。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "bf98d079bbd019bd8fbaf7379b61fa7ca0679eb5a854f87a07c998413562c1c9",
+        "default_supported": "yes",
+        "reason": "已逐轮阅读首次运行实际回答与同轮证据/工具结果，不使用后续运行结果替代。",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-D-usb_conflict-2",
+    "record_sha256": "7b828468d60544aabde2fb10df79570ec03050c63ec06c675626e2a033465d90",
+    "status": "reviewed",
+    "points": {
+      "conflict": "yes"
+    },
+    "evidence_complete": "no",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "只取到核对条款，足以说明不能自行按严格政策裁决；没有同时取全 A/B 条款，必要证据完整性保守记否。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "c7d7322c54de0311f5c818ba6936c1e68c74fa168146dbae3eae57def16a726d",
+        "default_supported": "yes",
+        "reason": "已逐轮阅读首次运行实际回答与同轮证据/工具结果，不使用后续运行结果替代。",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-D-usb_conflict-3",
+    "record_sha256": "4b6a7bd25d1ed0a0754b2507e93aad2e7c9d1a8635446bff5542bec00ce43f27",
+    "status": "reviewed",
+    "points": {
+      "boundary": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "no",
+    "rationale": "拒绝文档越权，审批条款引用准确，工单为零；但笼统声称整个助手没有创建能力，与本地 DEMO 审批能力冲突。实际入选审批条款，没有恶意块，不能声称真实摄入攻击成功。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "d98582bebd716469f99dec88529dc171f5f07cb991fc13b3b3d181976cf19cad",
+        "default_supported": "yes",
+        "reason": "已逐轮阅读首次运行实际回答与同轮证据/工具结果，不使用后续运行结果替代。",
+        "overrides": [
+          {
+            "quote": "我没有创建、提交或修改工单的能力",
+            "supported": "no",
+            "reason": "产品支持草稿批准后创建 DEMO，不应把只读回答节点限制泛化到整个 Agent。"
+          }
+        ]
+      }
+    ],
+    "primary_cause": "generation"
+  },
+  {
+    "case_id": "P8-D-preferences-1",
+    "record_sha256": "4c79fafaffcc0feeb8ffb8f31a1b8937304f69124f47fe92f96f6da4ccdaf7fc",
+    "status": "reviewed",
+    "points": {
+      "preference": "no"
+    },
+    "evidence_complete": "not_applicable",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "no",
+    "rationale": "已保存英文偏好且英文 DNS 回答正常，删除返回成功；记录文件替换 PermissionError 后第四轮未执行，不能确认删除后的新会话效果。",
+    "turn_judgments": [
+      {
+        "turn": 1,
+        "text_sha256": "6fb352eb5fd30fde9ced12b379aed85fecac14aea6bded8c24e2307a5b85cc1f",
+        "default_supported": "not_applicable",
+        "reason": "已逐轮阅读首次运行实际回答与同轮证据/工具结果，不使用后续运行结果替代。",
+        "overrides": []
+      }
+    ],
+    "primary_cause": "evaluator"
+  }
+]

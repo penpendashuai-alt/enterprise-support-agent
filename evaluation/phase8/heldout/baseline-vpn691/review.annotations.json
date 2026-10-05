@@ -1,0 +1,85 @@
+[
+  {
+    "case_id": "P8-H-vpn691-1",
+    "record_sha256": "e8a6c46eba65f83ac7e6c3604cb2386d5b2f07c96b25a59d0ddeb7f491b8f1ba",
+    "status": "reviewed",
+    "points": {
+      "answer": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "no",
+    "rationale": "必要核查项齐全，但由模拟服务正常推导故障更偏账号认证侧，不受工具或文档支持；另外补充用户名/认证实例、借用其他故障文档的客户端版本。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "01587073f4a898c10bcdbd5efb8ed43902b5a5eee081b61bd994009bf1eb049d",
+        "default_supported": "yes",
+        "reason": "逐行复核当前来源：[1] vpn-691/升级支持；行 9-9；字符 1-88；[2] vpn-691/处理步骤；行 5-5；字符 1-87；[3] vpn-809/管理员核查；行 9-9；字符 1-112；[4] vpn-cert/证书检查；行 5-5；字符 1-86；[5] vpn-809/处理步骤；行 5-5；字符 1-113",
+        "overrides": [
+          {
+            "quote": "因此更倾向于",
+            "supported": "no",
+            "reason": "模拟正常状态不能提高真实故障的认证侧概率。"
+          },
+          {
+            "quote": "如是否需带域名/前缀",
+            "supported": "no",
+            "reason": "当前证据只要求核对用户名格式，没有给出域名/前缀示例。"
+          },
+          {
+            "quote": "和客户端版本",
+            "supported": "no",
+            "reason": "691 条款只要求准确报错；客户端版本见证书或 809 指南，适用条件不能随意搬用。"
+          }
+        ]
+      }
+    ],
+    "primary_cause": "generation"
+  },
+  {
+    "case_id": "P8-H-vpn691-2",
+    "record_sha256": "365bbd05c06716c79794ab693e1b743b7582aae189c970e5520060268fcde95c",
+    "status": "reviewed",
+    "points": {
+      "answer": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "已逐轮阅读本次回答、当前 evidence 与工具轨迹。所问必要要点覆盖，引用与相邻结论匹配，没有编造未提供的金额、SLA 或业务成功。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "ee588003ccee9d1294ef0d8b022b884630b1405d5caa33b2ec5f6f5b4a556a7a",
+        "default_supported": "yes",
+        "reason": "逐行复核当前来源：[1] vpn-691/升级支持；行 9-9；字符 1-88；[2] vpn-691/处理步骤；行 5-5；字符 1-87；[3] vpn-809/管理员核查；行 9-9；字符 1-112；[4] vpn-cert/证书检查；行 5-5；字符 1-86；[5] vpn-809/处理步骤；行 5-5；字符 1-113",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-H-vpn691-3",
+    "record_sha256": "a337e43d15670e1bcc7e2df982f49860012d25944a645b462b86d1f609de2aa1",
+    "status": "reviewed",
+    "points": {
+      "answer": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "已逐轮阅读本次回答、当前 evidence 与工具轨迹。所问必要要点覆盖，引用与相邻结论匹配，没有编造未提供的金额、SLA 或业务成功。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "dd465293770bf2f8d4721c22db6181e0cefd08e4c597e7cf71d3ec6bafb8f5c7",
+        "default_supported": "yes",
+        "reason": "逐行复核当前来源：[1] vpn-691/升级支持；行 9-9；字符 1-88；[2] vpn-691/处理步骤；行 5-5；字符 1-87；[3] vpn-809/管理员核查；行 9-9；字符 1-112；[4] vpn-cert/证书检查；行 5-5；字符 1-86；[5] vpn-809/处理步骤；行 5-5；字符 1-113",
+        "overrides": []
+      }
+    ]
+  }
+]

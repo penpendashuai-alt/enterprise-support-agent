@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100b1-9766-78c0-a706-f6965d4d0bc7",
+  "run_id": "6d24d8aa9d614c469fd0e65b663b67ef",
+  "case_id": "P8-D-known_status-1",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:36:41.091748+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 817,
+    "output_tokens": 39,
+    "total_tokens": 856,
+    "input_token_details": {
+      "cache_read": 640
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.008406,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:36:42.503376+00:00",
+  "visible_model_output": "GitHub 演示服务状态：**正常（operational）**。\n\n数据来源说明：以上结果为**固定模拟数据**，仅用于演示，不代表真实系统或实时监控状态。",
+  "error_type": null
+}

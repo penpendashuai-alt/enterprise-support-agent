@@ -1,0 +1,23 @@
+{
+  "call_id": "01a10055-be8b-7b00-bbf2-7ec42e131ae5",
+  "run_id": "854b6d27f7e94eafa03fdfc3fc639343",
+  "case_id": "P8-D-priority_policy-1",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T05:56:21.781094+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1237,
+    "output_tokens": 97,
+    "total_tokens": 1334,
+    "input_token_details": {
+      "cache_read": 1152
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.013752,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T05:56:23.279953+00:00",
+  "visible_model_output": "根据演示制度 [1]：\n\n- **P1**：紧急\n- **P2**：高\n- **P3**：普通\n- **P4**：低\n\n未指定优先级时，默认填 **P3**，不根据模型猜测自动升级；任何优先级都要填写影响范围 [1]。\n\n另外，优先级需要在草稿中由用户确认，P1 也不能跳过确认；修改优先级必须保存新版本并重新确认 [2]。",
+  "error_type": null
+}

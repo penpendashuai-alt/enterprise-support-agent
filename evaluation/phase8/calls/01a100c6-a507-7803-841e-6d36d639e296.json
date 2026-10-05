@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100c6-a507-7803-841e-6d36d639e296",
+  "run_id": "66bcef1868e345e1a081b09f12c2da57",
+  "case_id": "P8-R-preference-shift",
+  "turn": 3,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:59:40.875291+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 811,
+    "output_tokens": 18,
+    "total_tokens": 829,
+    "input_token_details": {
+      "cache_read": 640
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.007785,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:59:42.031650+00:00",
+  "visible_model_output": "GitHub 当前运行正常（模拟数据，仅用于演示，不代表真实系统）。",
+  "error_type": null
+}

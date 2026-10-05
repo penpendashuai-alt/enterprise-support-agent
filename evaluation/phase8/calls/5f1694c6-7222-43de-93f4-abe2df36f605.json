@@ -1,0 +1,17 @@
+{
+  "call_id": "5f1694c6-7222-43de-93f4-abe2df36f605",
+  "run_id": "cf99c98dd3844d8bad60993e07895afb",
+  "case_id": "P8-R-809",
+  "turn": 0,
+  "provider_kind": "embedding",
+  "started_at": "2026-10-03T07:43:13.548991+00:00",
+  "status": "complete",
+  "usage": {
+    "total_tokens": 16
+  },
+  "estimated_cny": 8e-06,
+  "reserved_cny": 0.02,
+  "finished_at": "2026-10-03T07:43:13.683887+00:00",
+  "visible_model_output": null,
+  "error_type": null
+}

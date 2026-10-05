@@ -1,0 +1,23 @@
+{
+  "call_id": "01a1005b-3f5a-75a0-b85e-357067379128",
+  "run_id": "ab704860ba4148568b6f576f3138985d",
+  "case_id": "P8-D-preferences-3",
+  "turn": 1,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T06:02:22.455003+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 406,
+    "output_tokens": 85,
+    "total_tokens": 491,
+    "input_token_details": {
+      "cache_read": 384
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.005949,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T06:02:24.097235+00:00",
+  "visible_model_output": "A VPN (Virtual Private Network) creates an encrypted tunnel between your device and a remote server, providing:\n\n- **Privacy**: hides your IP address and browsing activity from your ISP and local network.\n- **Security**: encrypts data, especially on public Wi-Fi.\n- **Remote access**: securely connects to a corporate network from outside.\n- **Geo-access**: appears to be in another location to access region-restricted content.",
+  "error_type": null
+}

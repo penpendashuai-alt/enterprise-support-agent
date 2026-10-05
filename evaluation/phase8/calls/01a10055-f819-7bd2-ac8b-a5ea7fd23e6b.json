@@ -1,0 +1,23 @@
+{
+  "call_id": "01a10055-f819-7bd2-ac8b-a5ea7fd23e6b",
+  "run_id": "854b6d27f7e94eafa03fdfc3fc639343",
+  "case_id": "P8-D-privacy-1",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T05:56:36.521033+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1195,
+    "output_tokens": 65,
+    "total_tokens": 1260,
+    "input_token_details": {
+      "cache_read": 384
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.01251,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T05:56:37.955173+00:00",
+  "visible_model_output": "按演示制度，排障日志交给支持人员前应遮盖以下敏感字段 [1]：\n\n- 密码\n- 令牌\n- 客户个人数据\n- 密钥\n\n同时不要上传 `.env`、个人规划或整台电脑内容；共享前需检查内容与接收者范围 [1]。",
+  "error_type": null
+}

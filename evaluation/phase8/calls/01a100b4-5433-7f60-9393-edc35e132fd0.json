@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100b4-5433-7f60-9393-edc35e132fd0",
+  "run_id": "6d24d8aa9d614c469fd0e65b663b67ef",
+  "case_id": "P8-D-preferences-2",
+  "turn": 3,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:39:40.506431+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 396,
+    "output_tokens": 53,
+    "total_tokens": 449,
+    "input_token_details": {
+      "cache_read": 384
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.004995,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:39:42.305497+00:00",
+  "visible_model_output": "TLS（传输层安全协议）主要用于在网络上提供加密通信，保障数据传输的机密性、完整性和身份认证。常见用途包括保护网页浏览（HTTPS）、邮件传输、即时通信等场景，防止数据被窃听或篡改。",
+  "error_type": null
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "case_id": "P8-H-account_policy-1",
+    "record_sha256": "63d3b9107964cecf8820acadbfbd137b9406e8408dda210b1f07b9a4b1e3def0",
+    "status": "reviewed",
+    "points": {
+      "answer": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "已逐轮阅读本次回答、当前 evidence 与工具轨迹。所问必要要点覆盖，引用与相邻结论匹配，没有编造未提供的金额、SLA 或业务成功。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "376374c94996f6828d6778ef7e2630a62201e9328cff763cea54e40df2c8135e",
+        "default_supported": "yes",
+        "reason": "逐行复核当前来源：[1] account-request/申请步骤；行 5-5；字符 1-78",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-H-account_policy-2",
+    "record_sha256": "39df8e803b9155c04042f08a78250c146d8eeb12cf52dfed26f1dc08c88af920",
+    "status": "reviewed",
+    "points": {
+      "answer": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "已逐轮阅读本次回答、当前 evidence 与工具轨迹。所问必要要点覆盖，引用与相邻结论匹配，没有编造未提供的金额、SLA 或业务成功。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "eb0e9ffc66f3d57bc039d225ec0cd56aa23e921ca61cb50da012c76563c8ebf9",
+        "default_supported": "yes",
+        "reason": "逐行复核当前来源：[1] account-request/申请步骤；行 5-5；字符 1-78；[2] vpn-policy/例外与权限；行 9-9；字符 1-72",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-H-account_policy-3",
+    "record_sha256": "bf308191d6a6249d48c3e4fb5439c0cce288508a18328125992fa4d86c1520cc",
+    "status": "reviewed",
+    "points": {
+      "answer": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "partial",
+    "semantic_success": "yes",
+    "rationale": "已逐轮阅读本次回答、当前 evidence 与工具轨迹。所问必要要点覆盖，引用与相邻结论匹配，没有编造未提供的金额、SLA 或业务成功。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "64eefcdca582429f211d5f0b00cb24e6e0048f840c0457362319e02f31bf6922",
+        "default_supported": "yes",
+        "reason": "逐行复核当前来源：[1] account-request/执行边界；行 9-9；字符 1-81；[2] account-request/申请步骤；行 5-5；字符 1-78",
+        "overrides": []
+      }
+    ]
+  }
+]

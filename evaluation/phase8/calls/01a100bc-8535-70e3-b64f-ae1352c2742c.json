@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100bc-8535-70e3-b64f-ae1352c2742c",
+  "run_id": "89816f6c77e94397b355dba8df850d15",
+  "case_id": "P8-H-code_policy-2",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:48:37.353278+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 980,
+    "output_tokens": 83,
+    "total_tokens": 1063,
+    "input_token_details": {
+      "cache_read": 512
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.011061,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:48:39.183838+00:00",
+  "visible_model_output": "根据演示企业代码托管规范 [1]：\n\n- **谁复核**：成员离职或职责变化后，由**管理员**复核组织和仓库授权。\n- **演示 Agent 能否直接改**：不能。该规范明确说明，本演示 Agent 不自动修改 GitHub 权限，也不代替组织审批 [1]。\n\n需要提醒：以上是“演示制度”内容，不是真实企业制度。",
+  "error_type": null
+}

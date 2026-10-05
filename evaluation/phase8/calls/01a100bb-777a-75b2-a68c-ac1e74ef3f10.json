@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100bb-777a-75b2-a68c-ac1e74ef3f10",
+  "run_id": "780b59554c82423d892e50642e4a73cc",
+  "case_id": "P8-H-mail_policy-2",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:47:28.291964+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1197,
+    "output_tokens": 86,
+    "total_tokens": 1283,
+    "input_token_details": {
+      "cache_read": 640
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.013095,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:47:30.099196+00:00",
+  "visible_model_output": "根据演示制度，给外部收件人发送机密附件时要求：\n\n- 发送前核对收件人地址和附件权限 [1]\n- 机密内容采用企业批准的共享方式，并限制接收范围 [1]\n- 不得将含敏感信息的邮件自动转发至私人邮箱 [1]\n\n关于具体采用哪种企业批准的共享方式、如何设置附件权限，本轮文档未提供更细的操作依据。",
+  "error_type": null
+}

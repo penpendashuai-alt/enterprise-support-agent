@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100be-01f5-7712-b592-e77758c1438a",
+  "run_id": "ceb93a4063c64d8c8fe55f3647c24b3b",
+  "case_id": "P8-H-remote_policy-1",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:50:14.817344+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1224,
+    "output_tokens": 172,
+    "total_tokens": 1396,
+    "input_token_details": {
+      "cache_read": 1152
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.01566,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:50:17.201529+00:00",
+  "visible_model_output": "",
+  "error_type": null
+}

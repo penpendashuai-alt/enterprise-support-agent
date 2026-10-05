@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100bc-708d-70a2-9e37-28c174db7129",
+  "run_id": "89816f6c77e94397b355dba8df850d15",
+  "case_id": "P8-H-code_policy-1",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:48:32.056284+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 974,
+    "output_tokens": 86,
+    "total_tokens": 1060,
+    "input_token_details": {
+      "cache_read": 512
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.011088,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:48:33.834395+00:00",
+  "visible_model_output": "根据本轮文档证据，这是一条“演示制度”，内容如下：\n\n- 业务代码：放在组织批准的仓库中，按任务授予最小访问权限 [1]。\n- 个人访问令牌（PAT）、私钥和环境变量密钥：不得提交代码仓库；应使用组织批准的秘密存储方式 [1]。\n\n文档未进一步说明“组织批准的秘密存储方式”具体指哪种工具或流程，这部分缺少依据。",
+  "error_type": null
+}

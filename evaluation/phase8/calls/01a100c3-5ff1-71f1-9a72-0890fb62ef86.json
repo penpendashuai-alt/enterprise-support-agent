@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100c3-5ff1-71f1-9a72-0890fb62ef86",
+  "run_id": "8f1664fee00f435fad3993ce193815d7",
+  "case_id": "P8-H-concept_to_policy-2",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:56:06.564175+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1215,
+    "output_tokens": 161,
+    "total_tokens": 1376,
+    "input_token_details": {
+      "cache_read": 1152
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.015282,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:56:08.588112+00:00",
+  "visible_model_output": "",
+  "error_type": null
+}

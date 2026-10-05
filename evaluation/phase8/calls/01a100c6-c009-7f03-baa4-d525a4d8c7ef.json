@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100c6-c009-7f03-baa4-d525a4d8c7ef",
+  "run_id": "66bcef1868e345e1a081b09f12c2da57",
+  "case_id": "P8-R-tool-not-found",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:59:47.785934+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 3097,
+    "output_tokens": 244,
+    "total_tokens": 3341,
+    "input_token_details": {
+      "cache_read": 2944
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.034461,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:59:50.999226+00:00",
+  "visible_model_output": "查询结果如下：\n\n**设备查询**：DEV-999 未找到（模拟数据），无法提供该设备的配置信息。\n\n**VPN 服务状态**：模拟数据显示 VPN 网关状态为 operational（正常），但这只是固定模拟数据，不代表真实系统，也不能据此判断你的实际故障。\n\n**关于错误 809 的排障建议**（依据演示排障指南 [1][2]）：\n\n- 错误 809 表示连接未能建立，不能单凭错误码确定根因 [1]。\n- 先确认普通网络可用，核对 VPN 服务器地址与协议，记录发生时间和客户端版本 [1]。\n- 若使用 IKEv2 或 L2TP/IPsec，可请管理员核查 UDP 500/4500 网络策略 [2]。\n- 不要自行关闭防火墙、安全软件或改注册表；收集脱敏错误截图后提交支持请求 [2]。\n\n**缺少依据的部分**：由于 DEV-999 查无结果，我无法说明该设备的具体配置或是否与本次故障相关。如需进一步排查，请提供正确的设备编号，或补充 VPN 服务器地址、协议类型、发生时间等信息。",
+  "error_type": null
+}

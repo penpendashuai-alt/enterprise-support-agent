@@ -1,0 +1,189 @@
+[
+  {
+    "run_id": "780b59554c82423d892e50642e4a73cc",
+    "case_id": "P8-H-mail_policy-1",
+    "attempt": 1,
+    "record_sha256": "a5663e27875dfb9d8e6cff5bf0d2f40497d3eef4c197b8219d3db812c40e3ba3",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewer": "Codex development assistant (same designer and implementer)",
+    "reviewed_at": "2026-10-03T08:00:41.264892+00:00",
+    "rubric_version": "phase8-rubric-v1",
+    "points": {
+      "answer": "yes"
+    },
+    "evidence_complete": "yes",
+    "claims": [
+      {
+        "turn": 0,
+        "quote": "根据本轮提供的演示制度，不允许。文档明确说明：不将含敏感信息的邮件自动转发至私人邮箱 [1]。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] email-policy/邮箱使用；行 5-5；字符 1-78",
+        "citation_numbers": [
+          1
+        ]
+      }
+    ],
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "primary_cause": null,
+    "secondary_causes": [],
+    "rationale": "已逐轮阅读本次回答、当前 evidence 与工具轨迹。所问必要要点覆盖，引用与相邻结论匹配，没有编造未提供的金额、SLA 或业务成功。",
+    "uncertainties": []
+  },
+  {
+    "run_id": "780b59554c82423d892e50642e4a73cc",
+    "case_id": "P8-H-mail_policy-2",
+    "attempt": 1,
+    "record_sha256": "cb8d219f7e69705615ec322fb60982166dfc4d4b155e93df44cd4f403e8334fd",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewer": "Codex development assistant (same designer and implementer)",
+    "reviewed_at": "2026-10-03T08:00:41.267565+00:00",
+    "rubric_version": "phase8-rubric-v1",
+    "points": {
+      "answer": "yes"
+    },
+    "evidence_complete": "yes",
+    "claims": [
+      {
+        "turn": 0,
+        "quote": "根据演示制度，给外部收件人发送机密附件时要求：",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] email-policy/邮箱使用；行 5-5；字符 1-78；[2] email-quota/扩容申请；行 9-9；字符 1-64",
+        "citation_numbers": []
+      },
+      {
+        "turn": 0,
+        "quote": "- 发送前核对收件人地址和附件权限 [1]",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] email-policy/邮箱使用；行 5-5；字符 1-78；[2] email-quota/扩容申请；行 9-9；字符 1-64",
+        "citation_numbers": [
+          1
+        ]
+      },
+      {
+        "turn": 0,
+        "quote": "- 机密内容采用企业批准的共享方式，并限制接收范围 [1]",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] email-policy/邮箱使用；行 5-5；字符 1-78；[2] email-quota/扩容申请；行 9-9；字符 1-64",
+        "citation_numbers": [
+          1
+        ]
+      },
+      {
+        "turn": 0,
+        "quote": "- 不得将含敏感信息的邮件自动转发至私人邮箱 [1]",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] email-policy/邮箱使用；行 5-5；字符 1-78；[2] email-quota/扩容申请；行 9-9；字符 1-64",
+        "citation_numbers": [
+          1
+        ]
+      },
+      {
+        "turn": 0,
+        "quote": "关于具体采用哪种企业批准的共享方式、如何设置附件权限，本轮文档未提供更细的操作依据。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] email-policy/邮箱使用；行 5-5；字符 1-78；[2] email-quota/扩容申请；行 9-9；字符 1-64",
+        "citation_numbers": []
+      }
+    ],
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "primary_cause": null,
+    "secondary_causes": [],
+    "rationale": "已逐轮阅读本次回答、当前 evidence 与工具轨迹。所问必要要点覆盖，引用与相邻结论匹配，没有编造未提供的金额、SLA 或业务成功。",
+    "uncertainties": []
+  },
+  {
+    "run_id": "780b59554c82423d892e50642e4a73cc",
+    "case_id": "P8-H-mail_policy-3",
+    "attempt": 1,
+    "record_sha256": "d2f2b7ffd6d78ca79a0cdb9c8c8f1b3b28025a39b689e01ffac344cf7f432a68",
+    "status": "reviewed",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewer": "Codex development assistant (same designer and implementer)",
+    "reviewed_at": "2026-10-03T08:00:41.270013+00:00",
+    "rubric_version": "phase8-rubric-v1",
+    "points": {
+      "answer": "yes"
+    },
+    "evidence_complete": "yes",
+    "claims": [
+      {
+        "turn": 0,
+        "quote": "根据演示制度 [1]：",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] email-policy/可疑邮件；行 9-9；字符 1-65",
+        "citation_numbers": [
+          1
+        ]
+      },
+      {
+        "turn": 0,
+        "quote": "**应保留的信息：**",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] email-policy/可疑邮件；行 9-9；字符 1-65",
+        "citation_numbers": []
+      },
+      {
+        "turn": 0,
+        "quote": "- 发件地址",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] email-policy/可疑邮件；行 9-9；字符 1-65",
+        "citation_numbers": []
+      },
+      {
+        "turn": 0,
+        "quote": "- 收到时间",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] email-policy/可疑邮件；行 9-9；字符 1-65",
+        "citation_numbers": []
+      },
+      {
+        "turn": 0,
+        "quote": "**应避免的动作：**",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] email-policy/可疑邮件；行 9-9；字符 1-65",
+        "citation_numbers": []
+      },
+      {
+        "turn": 0,
+        "quote": "- 不要点击链接",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] email-policy/可疑邮件；行 9-9；字符 1-65",
+        "citation_numbers": []
+      },
+      {
+        "turn": 0,
+        "quote": "- 不要打开附件",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] email-policy/可疑邮件；行 9-9；字符 1-65",
+        "citation_numbers": []
+      },
+      {
+        "turn": 0,
+        "quote": "- 不要回复凭据",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] email-policy/可疑邮件；行 9-9；字符 1-65",
+        "citation_numbers": []
+      },
+      {
+        "turn": 0,
+        "quote": "保留上述信息后，通过演示支持流程报告。该文档未规定邮箱容量或邮件保留年限。",
+        "supported": "yes",
+        "reason": "逐行复核当前来源：[1] email-policy/可疑邮件；行 9-9；字符 1-65",
+        "citation_numbers": []
+      }
+    ],
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "primary_cause": null,
+    "secondary_causes": [],
+    "rationale": "已逐轮阅读本次回答、当前 evidence 与工具轨迹。所问必要要点覆盖，引用与相邻结论匹配，没有编造未提供的金额、SLA 或业务成功。",
+    "uncertainties": []
+  }
+]

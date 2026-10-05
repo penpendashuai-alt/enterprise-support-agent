@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100b2-2fe1-7270-9ff2-493f913defe4",
+  "run_id": "6d24d8aa9d614c469fd0e65b663b67ef",
+  "case_id": "P8-D-vpn809-1",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:37:20.132524+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 3147,
+    "output_tokens": 273,
+    "total_tokens": 3420,
+    "input_token_details": {
+      "cache_read": 2944
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.035694,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:37:23.535230+00:00",
+  "visible_model_output": "根据排障文档，你已记录发生时间，下一步建议如下：\n\n**有据的排障步骤**（演示排障指南 [1]）：\n1. 先确认普通网络是否可用。\n2. 核对 VPN 服务器地址与协议是否正确。\n3. 记录客户端版本（模拟设备显示 VPN 客户端版本 5.0，Windows 11，均为模拟数据）。\n4. 在组织允许的其他网络测试，有助于判断是否为网络路径问题。\n\n**管理员核查**（[2]）：\n- 若使用 IKEv2 或 L2TP/IPsec，可请管理员核查相关 UDP 500/4500 网络策略。\n- 不要自行关闭防火墙或安全软件，也不要擅自改注册表。\n- 收集脱敏错误截图后提交支持请求。\n\n**关于服务状态**：模拟数据查询显示 VPN 网关状态为 operational（模拟网关正常），但这是固定模拟数据，不代表真实系统，且静态指南不能证明 VPN 服务当前正常 [2]。\n\n**缺少依据的部分**：文档未提供针对 DEV-001 这台设备的具体配置或根因判断，错误 809 不能单凭错误码确定根因 [1]。如需进一步定位，请补充：VPN 服务器地址、使用的协议类型，以及是否已在其他网络测试。",
+  "error_type": null
+}

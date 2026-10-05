@@ -1,0 +1,161 @@
+{
+  "run_id": "6d24d8aa9d614c469fd0e65b663b67ef",
+  "case_id": "P8-D-retrieval_outage-1",
+  "attempt": 1,
+  "variant": "candidate",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-03T07:39:52.657488+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "知识库中演示 VPN 使用规范是什么？",
+      "http_status": 200,
+      "seconds": 1.971834099967964,
+      "request_id": "53b9e39e5b874c748a6cc8a4a05028f8",
+      "response": {
+        "type": "ai",
+        "content": "知识库检索暂不可用，无法据此确认企业制度或文档结论。请稍后重试；这不代表知识库没有相关资料。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a100b4-83d6-7b93-9adc-22ec9dcee0fd",
+        "response_metadata": {},
+        "custom_data": {
+          "cache": {},
+          "kind": "knowledge_answer",
+          "retrieval_status": "unavailable",
+          "query": "演示 VPN 使用规范",
+          "index_version": null,
+          "collection": null,
+          "citations": [],
+          "candidates": [],
+          "citation_check": "no_answer",
+          "error_code": "phase8_injected_dependency_unavailable",
+          "timings": {},
+          "usage": {},
+          "requested_mode": "dense",
+          "actual_mode": "dense",
+          "snapshot_id": null,
+          "backend_versions": {},
+          "failures": []
+        }
+      },
+      "state": {
+        "knowledge_required": true,
+        "retrieval_query": "演示 VPN 使用规范",
+        "intent": "general_question",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": null
+        },
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "retrieval": {
+        "cache": {},
+        "status": "unavailable",
+        "query": "演示 VPN 使用规范",
+        "evidence": [],
+        "candidates": [],
+        "index_version": null,
+        "collection": null,
+        "error_code": "phase8_injected_dependency_unavailable",
+        "timings": {},
+        "usage": {},
+        "requested_mode": "dense",
+        "actual_mode": "dense",
+        "snapshot_id": null,
+        "backend_versions": {},
+        "failures": [],
+        "selection": [],
+        "counts": {}
+      },
+      "tools": [],
+      "validation_records": [
+        {
+          "before": "知识库检索暂不可用，无法据此确认企业制度或文档结论。请稍后重试；这不代表知识库没有相关资料。",
+          "after": "知识库检索暂不可用，无法据此确认企业制度或文档结论。请稍后重试；这不代表知识库没有相关资料。",
+          "retrieval": {
+            "cache": {},
+            "status": "unavailable",
+            "query": "演示 VPN 使用规范",
+            "evidence": [],
+            "candidates": [],
+            "index_version": null,
+            "collection": null,
+            "error_code": "phase8_injected_dependency_unavailable",
+            "timings": {},
+            "usage": {},
+            "requested_mode": "dense",
+            "actual_mode": "dense",
+            "snapshot_id": null,
+            "backend_versions": {},
+            "failures": [],
+            "selection": [],
+            "counts": {}
+          }
+        }
+      ],
+      "sse_events": [
+        {
+          "type": "message",
+          "content": {
+            "type": "ai",
+            "content": "知识库检索暂不可用，无法据此确认企业制度或文档结论。请稍后重试；这不代表知识库没有相关资料。",
+            "tool_calls": [],
+            "tool_call_id": null,
+            "run_id": "01a100b4-83d6-7b93-9adc-22ec9dcee0fd",
+            "response_metadata": {},
+            "custom_data": {
+              "cache": {},
+              "kind": "knowledge_answer",
+              "retrieval_status": "unavailable",
+              "query": "演示 VPN 使用规范",
+              "index_version": null,
+              "collection": null,
+              "citations": [],
+              "candidates": [],
+              "citation_check": "no_answer",
+              "error_code": "phase8_injected_dependency_unavailable",
+              "timings": {},
+              "usage": {},
+              "requested_mode": "dense",
+              "actual_mode": "dense",
+              "snapshot_id": null,
+              "backend_versions": {},
+              "failures": []
+            }
+          }
+        }
+      ],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-6d24d8aa-P8-D-retrieval_outage-1-alice",
+    "bob": "p8-6d24d8aa-P8-D-retrieval_outage-1-bob"
+  },
+  "threads": {
+    "primary": "77464aaf6ef9405bb83d769637d6dc65",
+    "secondary": "66fcb9f10e9443e597928f794fcab0e4"
+  },
+  "seconds": 2.1353910000179894,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {
+      "intent_total": 1,
+      "intent_correct": 1
+    }
+  },
+  "model_calls": [
+    "01a100b4-83df-7fd2-9e69-984f7d73a036"
+  ]
+}

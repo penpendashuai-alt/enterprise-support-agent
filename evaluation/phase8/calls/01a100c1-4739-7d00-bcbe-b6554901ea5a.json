@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100c1-4739-7d00-bcbe-b6554901ea5a",
+  "run_id": "356a38acb21948b69b9e67b7501718cb",
+  "case_id": "P8-H-account_policy-2",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:53:49.168296+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1343,
+    "output_tokens": 51,
+    "total_tokens": 1394,
+    "input_token_details": {
+      "cache_read": 512
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.013464,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:53:50.566190+00:00",
+  "visible_model_output": "不能。按演示制度，申请账号或扩展访问权限时，应由业务负责人确认，再由系统管理员分配最小权限，而不是先给所有权限再审批 [1]。供应商访问同样需先确认范围，再分配最小权限 [2]。",
+  "error_type": null
+}

@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100b2-b2c7-72e0-a1b7-199784a7865c",
+  "run_id": "6d24d8aa9d614c469fd0e65b663b67ef",
+  "case_id": "P8-D-priority_policy-2",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:37:53.641760+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1374,
+    "output_tokens": 88,
+    "total_tokens": 1462,
+    "input_token_details": {
+      "cache_read": 256
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.014742,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:37:56.247144+00:00",
+  "visible_model_output": "不能省略。\n\n依据演示制度 [1]：优先级需要在草稿中由用户确认，P1 也不能跳过确认；修改优先级必须保存新版本并重新确认。  \n依据 [2]：任何优先级都要填写影响范围；用户明确指定时保留该值，未指定时默认 P3。\n\n所以即使你明确指定 P1，也必须填写影响范围，并且仍要经过确认流程，不能跳过审批。",
+  "error_type": null
+}

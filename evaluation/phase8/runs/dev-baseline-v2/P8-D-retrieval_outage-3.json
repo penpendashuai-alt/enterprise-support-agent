@@ -1,0 +1,130 @@
+{
+  "run_id": "ab704860ba4148568b6f576f3138985d",
+  "case_id": "P8-D-retrieval_outage-3",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-03T06:02:33.370589+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "演示工单优先级有哪些规则？",
+      "http_status": 200,
+      "seconds": 1.6294808000093326,
+      "request_id": "c97883a0002843248b2e72d84da8f1b8",
+      "response": {
+        "type": "ai",
+        "content": "知识库检索暂不可用，无法据此确认企业制度或文档结论。请稍后重试；这不代表知识库没有相关资料。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a1005b-6a1e-7181-91c3-e81352c72111",
+        "response_metadata": {},
+        "custom_data": {
+          "cache": {},
+          "kind": "knowledge_answer",
+          "retrieval_status": "unavailable",
+          "query": "演示工单优先级规则",
+          "index_version": null,
+          "collection": null,
+          "citations": [],
+          "candidates": [],
+          "citation_check": "no_answer",
+          "error_code": "phase8_injected_dependency_unavailable",
+          "timings": {},
+          "usage": {},
+          "requested_mode": "dense",
+          "actual_mode": "dense",
+          "snapshot_id": null,
+          "backend_versions": {},
+          "failures": []
+        }
+      },
+      "state": {
+        "knowledge_required": true,
+        "retrieval_query": "演示工单优先级规则",
+        "intent": "general_question",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": null
+        },
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "retrieval": {
+        "cache": {},
+        "status": "unavailable",
+        "query": "演示工单优先级规则",
+        "evidence": [],
+        "candidates": [],
+        "index_version": null,
+        "collection": null,
+        "error_code": "phase8_injected_dependency_unavailable",
+        "timings": {},
+        "usage": {},
+        "requested_mode": "dense",
+        "actual_mode": "dense",
+        "snapshot_id": null,
+        "backend_versions": {},
+        "failures": [],
+        "selection": [],
+        "counts": {}
+      },
+      "tools": [],
+      "validation_records": [
+        {
+          "before": "知识库检索暂不可用，无法据此确认企业制度或文档结论。请稍后重试；这不代表知识库没有相关资料。",
+          "after": "知识库检索暂不可用，无法据此确认企业制度或文档结论。请稍后重试；这不代表知识库没有相关资料。",
+          "retrieval": {
+            "cache": {},
+            "status": "unavailable",
+            "query": "演示工单优先级规则",
+            "evidence": [],
+            "candidates": [],
+            "index_version": null,
+            "collection": null,
+            "error_code": "phase8_injected_dependency_unavailable",
+            "timings": {},
+            "usage": {},
+            "requested_mode": "dense",
+            "actual_mode": "dense",
+            "snapshot_id": null,
+            "backend_versions": {},
+            "failures": [],
+            "selection": [],
+            "counts": {}
+          }
+        }
+      ],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-ab704860-P8-D-retrieval_outage-3-alice",
+    "bob": "p8-ab704860-P8-D-retrieval_outage-3-bob"
+  },
+  "threads": {
+    "primary": "28125818ed28469f956b761d6ebe45c8",
+    "secondary": "aff953904899485c9c72a039a228a66e"
+  },
+  "seconds": 1.797686799953226,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {
+      "intent_total": 1,
+      "intent_correct": 1
+    }
+  },
+  "model_calls": [
+    "01a1005b-6a26-72e3-aa67-1d5f7a52e94c"
+  ]
+}

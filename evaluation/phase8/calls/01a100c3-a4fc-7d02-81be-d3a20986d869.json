@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100c3-a4fc-7d02-81be-d3a20986d869",
+  "run_id": "8f1664fee00f435fad3993ce193815d7",
+  "case_id": "P8-H-concept_to_policy-3",
+  "turn": 1,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:56:24.246014+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 979,
+    "output_tokens": 52,
+    "total_tokens": 1031,
+    "input_token_details": {
+      "cache_read": 512
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.010215,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:56:26.272462+00:00",
+  "visible_model_output": "根据演示企业邮箱使用规范 [1]：\n\n- 不要点击链接、打开附件或回复凭据。\n- 保留发件地址和收到时间。\n- 通过演示支持流程报告。\n\n该文档未规定邮箱容量或邮件保留年限。",
+  "error_type": null
+}

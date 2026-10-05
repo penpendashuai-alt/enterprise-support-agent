@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100b4-23c3-72a3-a086-8c1a0f3a4cba",
+  "run_id": "6d24d8aa9d614c469fd0e65b663b67ef",
+  "case_id": "P8-D-preferences-1",
+  "turn": 1,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:39:28.106221+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 467,
+    "output_tokens": 64,
+    "total_tokens": 531,
+    "input_token_details": {
+      "cache_read": 256
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.005931,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:39:29.663782+00:00",
+  "visible_model_output": "DNS (Domain Name System) translates human-readable domain names (e.g., `www.example.com`) into IP addresses (e.g., `93.184.216.34`) that computers use to communicate. It acts like a phonebook for the internet, so users don’t need to remember numeric IPs.",
+  "error_type": null
+}

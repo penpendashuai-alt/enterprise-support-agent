@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100bb-ed19-7343-8ea3-52066f966734",
+  "run_id": "fe8c91d922d34ff49b8e62d04a8f01ff",
+  "case_id": "P8-H-mail_policy-1",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:47:58.403538+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 986,
+    "output_tokens": 34,
+    "total_tokens": 1020,
+    "input_token_details": {
+      "cache_read": 512
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.009792,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:47:59.860106+00:00",
+  "visible_model_output": "根据本轮文档证据，**不允许**。演示制度明确要求：办公邮件使用企业邮箱，不将含敏感信息的邮件自动转发至私人邮箱 [1]。",
+  "error_type": null
+}

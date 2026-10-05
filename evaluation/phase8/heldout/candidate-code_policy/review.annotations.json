@@ -1,0 +1,68 @@
+[
+  {
+    "case_id": "P8-H-code_policy-1",
+    "record_sha256": "51d7eee2855fd222ee09cb0518050ad9484d6d35cdd701e0c87edbe998513736",
+    "status": "reviewed",
+    "points": {
+      "answer": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "已逐轮阅读本次回答、当前 evidence 与工具轨迹。所问必要要点覆盖，引用与相邻结论匹配，没有编造未提供的金额、SLA 或业务成功。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "b5b962708b8bc075302034331c0209f280ca4ae68e7c841ae117539abea77dd4",
+        "default_supported": "yes",
+        "reason": "逐行复核当前来源：[1] github-policy/仓库访问；行 5-5；字符 1-76",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-H-code_policy-2",
+    "record_sha256": "6a4528c224c776e9c7aaf015be26f54cb45e481d06a8b4565b12977b8be3dd34",
+    "status": "reviewed",
+    "points": {
+      "answer": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "已逐轮阅读本次回答、当前 evidence 与工具轨迹。所问必要要点覆盖，引用与相邻结论匹配，没有编造未提供的金额、SLA 或业务成功。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "75b9092a66184cbd68ea35eb746f656e97e5fdbdf081c0504525005e38160c0c",
+        "default_supported": "yes",
+        "reason": "逐行复核当前来源：[1] github-policy/离职与变更；行 9-9；字符 1-70",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-H-code_policy-3",
+    "record_sha256": "d020d5c4d43a34e4a55c6d13080e979203617db6070057d48319f1973167a09a",
+    "status": "reviewed",
+    "points": {
+      "answer": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "已逐轮阅读本次回答、当前 evidence 与工具轨迹。所问必要要点覆盖，引用与相邻结论匹配，没有编造未提供的金额、SLA 或业务成功。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "1b0a0b72519b7f90fa345ba56a1cf72464bb360068d221c9b551e04e917c6a1e",
+        "default_supported": "yes",
+        "reason": "逐行复核当前来源：[1] github-policy/仓库访问；行 5-5；字符 1-76",
+        "overrides": []
+      }
+    ]
+  }
+]

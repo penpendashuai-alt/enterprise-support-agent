@@ -1,0 +1,23 @@
+{
+  "call_id": "01a1005b-233f-78d1-baec-08b26ed0736d",
+  "run_id": "ab704860ba4148568b6f576f3138985d",
+  "case_id": "P8-D-preferences-2",
+  "turn": 1,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T06:02:15.259485+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 404,
+    "output_tokens": 35,
+    "total_tokens": 439,
+    "input_token_details": {
+      "cache_read": 384
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.004581,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T06:02:16.257132+00:00",
+  "visible_model_output": "HTTP (Hypertext Transfer Protocol) is the foundation protocol for data exchange on the web. It defines how clients (like browsers) request resources from servers and how servers respond.",
+  "error_type": null
+}

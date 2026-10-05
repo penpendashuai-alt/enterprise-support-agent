@@ -1,0 +1,140 @@
+{
+  "run_id": "ab704860ba4148568b6f576f3138985d",
+  "case_id": "P8-D-clarify_service-1",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-03T05:59:32.147213+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "我想查服务是否正常，但还没告诉你服务名。",
+      "http_status": 200,
+      "seconds": 1.8568373000016436,
+      "request_id": "8d7f0398daff4d2dbf31e588f8e68154",
+      "response": {
+        "type": "ai",
+        "content": "你想查询哪个服务的状态？例如 GitHub、VPN、邮箱或 Jira。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a10058-a638-7002-988a-3b26f64bc9ec",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "service_status",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": null
+        },
+        "needs_clarification": true,
+        "clarification_question": "你想查询哪个服务的状态？例如 GitHub、VPN、邮箱或 Jira。"
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    },
+    {
+      "index": 1,
+      "operation": "user",
+      "user_message": "要查的是 GitHub。",
+      "http_status": 200,
+      "seconds": 4.308727299969178,
+      "request_id": "b7eda9577001405093cd1d4e74c91605",
+      "response": {
+        "type": "ai",
+        "content": "GitHub 服务状态（模拟数据）：**运行正常（operational）**，模拟服务正常。\n\n如需进一步排查具体问题，请提供设备编号或工单编号。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a10058-ae22-7121-b66d-5fc1782daff4",
+        "response_metadata": {
+          "finish_reason": "stop",
+          "model_name": "deepseek-v4-pro",
+          "system_fingerprint": "a307abda487cd1b463329ccb945ce396",
+          "model_provider": "openai"
+        },
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "service_status",
+        "entities": {
+          "service_name": "GitHub",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": null
+        },
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "retrieval": null,
+      "tools": [
+        {
+          "name": "query_service_status",
+          "args": {
+            "service_name": "GitHub"
+          },
+          "id": "call_00_DA9Kgfo4QWRnwvcz1ely9528",
+          "type": "tool_call",
+          "result": {
+            "status": "success",
+            "data": {
+              "service_name": "GitHub",
+              "state": "operational",
+              "detail": "模拟服务正常。"
+            },
+            "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+            "is_mock": true
+          },
+          "validation_error": false
+        }
+      ],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-ab704860-P8-D-clarify_service-1-alice",
+    "bob": "p8-ab704860-P8-D-clarify_service-1-bob"
+  },
+  "threads": {
+    "primary": "2908915fc6aa40b89c828917ed7ae878",
+    "secondary": "a2ea6d4a626445959eca3be08966435a"
+  },
+  "seconds": 6.499302700045519,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {
+      "intent_total": 2,
+      "intent_correct": 2,
+      "required_tool_total": 1,
+      "required_tool_completed": 1,
+      "actual_tool_total": 1,
+      "actual_tool_legal": 1,
+      "tool_parameters_valid": 1
+    }
+  },
+  "model_calls": [
+    "01a10058-a641-7b30-bcf8-b52bc6e33429",
+    "01a10058-ae2f-7890-a276-8e53f84dbf61",
+    "01a10058-b646-76d3-bd15-034a54cc4f10",
+    "01a10058-b9af-7792-8504-d02cf53097b4"
+  ]
+}

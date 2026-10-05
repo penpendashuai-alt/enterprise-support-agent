@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100c5-9b0f-7c90-bdc2-b856e5bae3a6",
+  "run_id": "1368e47a27934a67b9f745c72a722757",
+  "case_id": "P8-R-preference-shift",
+  "turn": 3,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:58:32.781701+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 750,
+    "output_tokens": 37,
+    "total_tokens": 787,
+    "input_token_details": {
+      "cache_read": 640
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.007749,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:58:34.151174+00:00",
+  "visible_model_output": "根据模拟数据查询结果，GitHub 服务当前状态为 **operational（正常运行）**。\n\n注意：这是固定模拟数据，仅用于演示，不代表真实系统状态。",
+  "error_type": null
+}

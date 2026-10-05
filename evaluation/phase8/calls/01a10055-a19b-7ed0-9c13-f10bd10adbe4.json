@@ -1,0 +1,23 @@
+{
+  "call_id": "01a10055-a19b-7ed0-9c13-f10bd10adbe4",
+  "run_id": "854b6d27f7e94eafa03fdfc3fc639343",
+  "case_id": "P8-D-vpn809-3",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T05:56:14.375085+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 2784,
+    "output_tokens": 61,
+    "total_tokens": 2845,
+    "input_token_details": {
+      "cache_read": 256
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.026703,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T05:56:15.331940+00:00",
+  "visible_model_output": "我先查一下 VPN 服务的模拟状态，同时结合排障文档给出建议。",
+  "error_type": null
+}

@@ -1,0 +1,23 @@
+{
+  "call_id": "01a10054-f987-7012-8051-cae3250296b6",
+  "run_id": "854b6d27f7e94eafa03fdfc3fc639343",
+  "case_id": "P8-D-known_status-3",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T05:55:31.346426+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 760,
+    "output_tokens": 46,
+    "total_tokens": 806,
+    "input_token_details": {
+      "cache_read": 640
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.008082,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T05:55:32.711071+00:00",
+  "visible_model_output": "Jira 服务当前状态：**中断（outage）**，详情为“模拟服务中断，正在排查”。\n\n数据来源说明：以上为**固定模拟数据**，仅用于演示，不代表真实系统状态。",
+  "error_type": null
+}

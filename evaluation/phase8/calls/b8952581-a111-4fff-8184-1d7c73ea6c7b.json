@@ -1,0 +1,17 @@
+{
+  "call_id": "b8952581-a111-4fff-8184-1d7c73ea6c7b",
+  "run_id": "ceb93a4063c64d8c8fe55f3647c24b3b",
+  "case_id": "P8-H-remote_policy-2",
+  "turn": 0,
+  "provider_kind": "embedding",
+  "started_at": "2026-10-03T07:50:25.823574+00:00",
+  "status": "complete",
+  "usage": {
+    "total_tokens": 13
+  },
+  "estimated_cny": 6.5e-06,
+  "reserved_cny": 0.02,
+  "finished_at": "2026-10-03T07:50:26.065327+00:00",
+  "visible_model_output": null,
+  "error_type": null
+}

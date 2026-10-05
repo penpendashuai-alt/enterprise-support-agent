@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100bb-8aa8-7523-acf9-7e92114e47cd",
+  "run_id": "780b59554c82423d892e50642e4a73cc",
+  "case_id": "P8-H-mail_policy-3",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:47:33.202616+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 834,
+    "output_tokens": 71,
+    "total_tokens": 905,
+    "input_token_details": {
+      "cache_read": 384
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.009423,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:47:34.809437+00:00",
+  "visible_model_output": "根据演示制度 [1]：\n\n**应保留的信息：**\n- 发件地址\n- 收到时间\n\n**应避免的动作：**\n- 不要点击链接\n- 不要打开附件\n- 不要回复凭据\n\n保留上述信息后，通过演示支持流程报告。该文档未规定邮箱容量或邮件保留年限。",
+  "error_type": null
+}

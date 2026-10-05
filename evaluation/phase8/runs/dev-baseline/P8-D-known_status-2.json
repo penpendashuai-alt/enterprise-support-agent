@@ -1,0 +1,102 @@
+{
+  "run_id": "854b6d27f7e94eafa03fdfc3fc639343",
+  "case_id": "P8-D-known_status-2",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-03T05:55:23.401001+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "只核查 VPN 的演示服务状态，并说明数据来源。",
+      "http_status": 200,
+      "seconds": 4.371071800007485,
+      "request_id": "0b7e06ab1f514dcf93bd15631d5b316e",
+      "response": {
+        "type": "ai",
+        "content": "VPN 演示服务状态：**运行正常（operational）**，模拟网关正常。\n\n数据来源说明：以上结果为**固定模拟数据**，仅用于演示，不代表真实系统实时状态。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a10054-da90-7ef0-aa38-a70f05887473",
+        "response_metadata": {
+          "finish_reason": "stop",
+          "model_name": "deepseek-v4-pro",
+          "system_fingerprint": "a307abda487cd1b463329ccb945ce396",
+          "model_provider": "openai"
+        },
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "service_status",
+        "entities": {
+          "service_name": "VPN",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": null
+        },
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "retrieval": null,
+      "tools": [
+        {
+          "name": "query_service_status",
+          "args": {
+            "service_name": "VPN"
+          },
+          "id": "call_00_k4aIXoVTnnoBx1x1TqAN3769",
+          "type": "tool_call",
+          "result": {
+            "status": "success",
+            "data": {
+              "service_name": "VPN",
+              "state": "operational",
+              "detail": "模拟网关正常。"
+            },
+            "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+            "is_mock": true
+          },
+          "validation_error": false
+        }
+      ],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-854b6d27-P8-D-known_status-2-alice",
+    "bob": "p8-854b6d27-P8-D-known_status-2-bob"
+  },
+  "threads": {
+    "primary": "ba8d5b6234984b7ebb3a7a082ca897a2",
+    "secondary": "36318f8dfdb74ce5a14699291ea17f60"
+  },
+  "seconds": 4.535392099991441,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {
+      "intent_total": 1,
+      "intent_correct": 1,
+      "required_tool_total": 1,
+      "required_tool_completed": 1,
+      "actual_tool_total": 1,
+      "actual_tool_legal": 1,
+      "tool_parameters_valid": 1
+    }
+  },
+  "model_calls": [
+    "01a10054-da9d-73f0-bd3e-a948095988e5",
+    "01a10054-e1d9-7d01-b9fa-c0ef471da26d",
+    "01a10054-e5b3-71a1-9eee-ebd9944e3bba"
+  ]
+}

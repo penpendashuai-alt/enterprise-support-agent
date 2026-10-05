@@ -1,0 +1,23 @@
+{
+  "call_id": "01a10055-64ec-70a1-8856-dd8a7f2f71dc",
+  "run_id": "854b6d27f7e94eafa03fdfc3fc639343",
+  "case_id": "P8-D-vpn809-1",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T05:55:58.840261+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 3002,
+    "output_tokens": 247,
+    "total_tokens": 3249,
+    "input_token_details": {
+      "cache_read": 2816
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.033687,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T05:56:01.533414+00:00",
+  "visible_model_output": "根据排障文档和查询结果，下一步建议如下：\n\n**模拟数据查询结果**\n- VPN 服务状态：operational（模拟网关正常，不代表实时状态）\n- DEV-001：Windows 11 笔记本，VPN 客户端版本 5.0\n\n**排障文档建议的下一步** [1][2]\n1. 先确认普通网络可用（能正常上网）。\n2. 核对 VPN 服务器地址与协议是否正确。\n3. 记录发生时间和客户端版本（你已记录时间，客户端版本为 5.0）。\n4. 在组织允许的其他网络测试，判断是否为网络路径问题。\n5. 若使用 IKEv2 或 L2TP/IPsec，可请管理员核查 UDP 500/4500 网络策略——不要自行关闭防火墙或安全软件，也不要擅自改注册表。\n6. 收集脱敏错误截图后提交支持请求。\n\n注意：错误 809 表示连接未能建立，不能单凭错误码确定根因 [1]；静态指南和模拟服务状态都不能证明 VPN 当前实际正常 [2]。\n\n需要我帮你进一步核对服务器地址/协议，或整理提交支持请求所需的信息吗？",
+  "error_type": null
+}

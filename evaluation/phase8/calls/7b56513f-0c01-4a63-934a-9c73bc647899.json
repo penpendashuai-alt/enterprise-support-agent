@@ -1,0 +1,17 @@
+{
+  "call_id": "7b56513f-0c01-4a63-934a-9c73bc647899",
+  "run_id": "ab704860ba4148568b6f576f3138985d",
+  "case_id": "P8-D-privacy-1",
+  "turn": 0,
+  "provider_kind": "embedding",
+  "started_at": "2026-10-03T06:00:43.563594+00:00",
+  "status": "complete",
+  "usage": {
+    "total_tokens": 20
+  },
+  "estimated_cny": 1e-05,
+  "reserved_cny": 0.02,
+  "finished_at": "2026-10-03T06:00:43.711892+00:00",
+  "visible_model_output": null,
+  "error_type": null
+}

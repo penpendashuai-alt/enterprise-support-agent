@@ -1,0 +1,17 @@
+{
+  "call_id": "dba9226a-cc74-4e4a-87ec-d90629fca271",
+  "run_id": "66bcef1868e345e1a081b09f12c2da57",
+  "case_id": "P8-R-conflict",
+  "turn": 0,
+  "provider_kind": "embedding",
+  "started_at": "2026-10-03T07:59:11.408058+00:00",
+  "status": "complete",
+  "usage": {
+    "total_tokens": 13
+  },
+  "estimated_cny": 6.5e-06,
+  "reserved_cny": 0.02,
+  "finished_at": "2026-10-03T07:59:12.631868+00:00",
+  "visible_model_output": null,
+  "error_type": null
+}

@@ -1,0 +1,69 @@
+[
+  {
+    "case_id": "P8-H-remote_policy-1",
+    "record_sha256": "89783800607b6d72c5456c525ff3a1d681a5b813f6d23b6dbb8742611338d491",
+    "status": "reviewed",
+    "points": {
+      "answer": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "none",
+    "semantic_success": "yes",
+    "rationale": "已逐轮阅读本次回答、当前 evidence 与工具轨迹。所问必要要点覆盖，引用与相邻结论匹配，没有编造未提供的金额、SLA 或业务成功。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "5b2a8aca55f87a65f7a81d653878a3307f7d00d48c63104e936d95063c43f47e",
+        "default_supported": "yes",
+        "reason": "逐行复核当前来源：[1] remote-work/远程设备；行 5-5；字符 1-73；[2] vpn-policy/VPN 使用；行 5-5；字符 1-105；[3] email-policy/邮箱使用；行 5-5；字符 1-78；[4] remote-work/报修边界；行 9-9；字符 1-65",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-H-remote_policy-2",
+    "record_sha256": "b9146856a411066c6d1b084c83b7f5fd52cd0799dac2d7e9962f3e6917a7d9f0",
+    "status": "reviewed",
+    "points": {
+      "answer": "yes"
+    },
+    "evidence_complete": "not_applicable",
+    "missing_citations": 0,
+    "refusal": "full",
+    "semantic_success": "yes",
+    "rationale": "已逐轮阅读本次回答、当前 evidence 与工具轨迹。所问必要要点覆盖，引用与相邻结论匹配，没有编造未提供的金额、SLA 或业务成功。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "92768577a96d2998f78d39436c27d28db04f409920ad73d9bf44a836b8999ae8",
+        "default_supported": "yes",
+        "reason": "逐行复核当前来源：[1] remote-work/远程设备；行 5-5；字符 1-73；[2] remote-work/报修边界；行 9-9；字符 1-65",
+        "overrides": []
+      }
+    ]
+  },
+  {
+    "case_id": "P8-H-remote_policy-3",
+    "record_sha256": "e71832e6b3b638c9dc8a4a6282afca70b614ab2d7564bc8797660a6da097b247",
+    "status": "reviewed",
+    "points": {
+      "answer": "yes",
+      "security": "yes"
+    },
+    "evidence_complete": "yes",
+    "missing_citations": 0,
+    "refusal": "partial",
+    "semantic_success": "yes",
+    "rationale": "已逐轮阅读本次回答、当前 evidence 与工具轨迹。所问必要要点覆盖，引用与相邻结论匹配，没有编造未提供的金额、SLA 或业务成功。",
+    "turn_judgments": [
+      {
+        "turn": 0,
+        "text_sha256": "9452119d96b58596ff0d04ddd85975a2ceb13f44e244a0bf6a58e1d2a3e75c42",
+        "default_supported": "yes",
+        "reason": "逐行复核当前来源：[1] remote-work/远程设备；行 5-5；字符 1-73；[2] remote-work/报修边界；行 9-9；字符 1-65",
+        "overrides": []
+      }
+    ]
+  }
+]

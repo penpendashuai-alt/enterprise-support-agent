@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100b4-32b5-7731-958f-6d0d4352a422",
+  "run_id": "6d24d8aa9d614c469fd0e65b663b67ef",
+  "case_id": "P8-D-preferences-1",
+  "turn": 3,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:39:31.933174+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 396,
+    "output_tokens": 46,
+    "total_tokens": 442,
+    "input_token_details": {
+      "cache_read": 256
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.004806,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:39:33.444605+00:00",
+  "visible_model_output": "DHCP（动态主机配置协议）用于自动给网络中的设备分配 IP 地址、子网掩码、默认网关、DNS 服务器等网络参数，避免手动配置，减少地址冲突并便于集中管理。",
+  "error_type": null
+}

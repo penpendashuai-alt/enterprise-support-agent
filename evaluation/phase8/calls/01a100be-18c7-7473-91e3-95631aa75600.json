@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100be-18c7-7473-91e3-95631aa75600",
+  "run_id": "ceb93a4063c64d8c8fe55f3647c24b3b",
+  "case_id": "P8-H-remote_policy-1",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:50:20.662947+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 2089,
+    "output_tokens": 105,
+    "total_tokens": 2194,
+    "input_token_details": {
+      "cache_read": 512
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.021636,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:50:22.868050+00:00",
+  "visible_model_output": "依据演示远程办公制度，出门前的要求如下：\n\n- 使用受管理设备，保持系统安全更新、磁盘加密和屏幕锁定 [1]。\n- 不要与家人共享工作账号；离开设备时锁屏 [1]。\n- 访问内部资源按 VPN 规范办理 [1]；远程访问内部资源时使用公司批准的 VPN 客户端并完成多因素认证（MFA），不共享账号、不保存他人凭据 [2]。\n\n文档未提及出门前其他额外要求。",
+  "error_type": null
+}

@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100c6-aad6-7bf2-ad6b-7854c4e06343",
+  "run_id": "66bcef1868e345e1a081b09f12c2da57",
+  "case_id": "P8-R-tool-not-found",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:59:42.354174+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1223,
+    "output_tokens": 180,
+    "total_tokens": 1403,
+    "input_token_details": {
+      "cache_read": 1152
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.015867,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:59:44.361624+00:00",
+  "visible_model_output": "",
+  "error_type": null
+}

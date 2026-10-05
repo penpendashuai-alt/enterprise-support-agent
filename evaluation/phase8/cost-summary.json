@@ -1,0 +1,24 @@
+{
+  "recorded_at": "2026-10-03T08:06:15.986814+00:00",
+  "unique_physical_calls": 515,
+  "providers": {
+    "chat": {
+      "attempts": 418,
+      "known_cny": 6.146747999999999,
+      "unknown_usage": 0
+    },
+    "embedding": {
+      "attempts": 97,
+      "known_cny": 0.0006950000000000001,
+      "unknown_usage": 0
+    }
+  },
+  "known_cny": 6.147443,
+  "unknown_usage": 0,
+  "budget_cny": 30,
+  "not_called": [
+    "reranker",
+    "judge"
+  ],
+  "scope": "All Phase 8 API attempts, including pilot, interrupted run, new baseline, dev/heldout, components, regressions and cache checks; excludes existing fixed hosting costs; not a provider invoice."
+}

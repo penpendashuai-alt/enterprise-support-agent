@@ -1,0 +1,23 @@
+{
+  "call_id": "01a100c1-ec86-7ba0-950d-54c46b486560",
+  "run_id": "3ccbdd6608754a9f913b9a54f6650e16",
+  "case_id": "P8-H-account_policy-3",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-03T07:54:31.483917+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 1201,
+    "output_tokens": 37,
+    "total_tokens": 1238,
+    "input_token_details": {
+      "cache_read": 384
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.011808,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-03T07:54:33.103029+00:00",
+  "visible_model_output": "不能跳过核查。根据演示制度，紧急需求也不能跳过业务负责人和管理员的核查 [1]。\n\n关于开通 SLA：本文档没有固定开通 SLA，未提供依据 [1]。",
+  "error_type": null
+}
