@@ -19,4 +19,3 @@ services:
       QDRANT_COLLECTION: enterprise_support_dense_ci_v1
     command: [python, scripts/init_ci_index.py]
     restart: on-failure:3
-
