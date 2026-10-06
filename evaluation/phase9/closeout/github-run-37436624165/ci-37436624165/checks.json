@@ -1,0 +1,67 @@
+[
+  {
+    "check": "nonroot_permissions_unmigrated_schema_refused",
+    "at": "2026-10-06T08:32:59.615691+00:00"
+  },
+  {
+    "check": "startup_auth_migration",
+    "at": "2026-10-06T08:33:07.028711+00:00"
+  },
+  {
+    "check": "retrieval_cache_tools_sse",
+    "at": "2026-10-06T08:33:16.368871+00:00"
+  },
+  {
+    "check": "approval_cancel_edit_idempotency_ownership",
+    "at": "2026-10-06T08:33:16.529007+00:00"
+  },
+  {
+    "check": "restart_agent_service",
+    "at": "2026-10-06T08:33:24.462036+00:00"
+  },
+  {
+    "check": "restart_postgres",
+    "at": "2026-10-06T08:33:25.768710+00:00"
+  },
+  {
+    "check": "restart_redis",
+    "at": "2026-10-06T08:33:26.141069+00:00"
+  },
+  {
+    "check": "restart_qdrant",
+    "at": "2026-10-06T08:33:26.425050+00:00"
+  },
+  {
+    "check": "qdrant_persisted_index_query",
+    "at": "2026-10-06T08:33:27.360079+00:00"
+  },
+  {
+    "check": "dependency_outage_and_recovery",
+    "at": "2026-10-06T08:33:32.308978+00:00"
+  },
+  {
+    "check": "backup_restore_new_database",
+    "at": "2026-10-06T08:33:35.412747+00:00",
+    "table_checksums": {
+      "checkpoint_blobs": "63|d9b6e9233ed4ee2a7804822d4d410f07",
+      "checkpoint_migrations": "10|9db86657fcdb3620be00c0dbc25a2af2",
+      "checkpoint_writes": "193|e392602d695191a5c83ede45137e9fb2",
+      "checkpoints": "57|8f816bb8cc4b36e6510099c0a58757fa",
+      "store": "1|c35b37465a67825d77550e60d46b20a5",
+      "store_migrations": "4|879acfd8cbb6ce639e5383198a7a382c",
+      "support_schema_versions": "1|9909d12cd2d0c50f253f8470b5685413",
+      "support_sessions": "8|929af1e18fad5a373b240892f3ac2bfc",
+      "tickets": "2|f6d1f41feea1feb5578d018368051c83",
+      "users": "1|49f7735134b6a753c47bd1a363307ea6"
+    }
+  },
+  {
+    "check": "streamlit_script_service_interaction",
+    "at": "2026-10-06T08:33:37.047782+00:00"
+  },
+  {
+    "check": "runtime_logs_cache_error_timeout_disconnect_filtered",
+    "at": "2026-10-06T08:33:39.558507+00:00",
+    "requests": 54
+  }
+]

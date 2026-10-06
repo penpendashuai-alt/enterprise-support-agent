@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-06",
+  "method": "authenticated_browser_accessibility_inspection",
+  "trace_id": "3360bb924d2d09e2ddb157cc72af97a7",
+  "observed": {
+    "outcome": "router_unavailable",
+    "http_status": 200,
+    "request_id": "71c46e9a267d44b0a8241c6d17db72de",
+    "run_id": "01a11047-6d60-7c82-b57a-e57b2b0bdbac",
+    "input": "null",
+    "output": "undefined",
+    "child_error_visible": true,
+    "raw_conversation_visible": false
+  },
+  "scope": "Supplementary root trace UI inspection; complete remote field scan is in remote-tracing-v1.",
+  "public_trace_sharing_enabled": false
+}

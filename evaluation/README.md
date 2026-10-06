@@ -4,7 +4,7 @@
 
 ## Phase 9
 
-部署、健康、日志过滤、草稿事实状态回归与容器演练见 [Phase 9 记录索引](phase9/README.md) 和 [阶段文档](../docs/phase9_deployment_observability.md)。按实际证据区分配置检查、离线测试、本地追踪导出、容器运行和远程 Langfuse 接收。
+部署、健康、日志过滤、草稿事实状态回归与容器演练见 [Phase 9 记录索引](phase9/README.md) 和 [阶段文档](../docs/phase9_deployment_observability.md)。核心收尾完成，Redis 压力、远程追踪 API/界面和 GitHub Actions 结果见 [收尾记录](phase9/closeout/README.md)；浏览器 WebSocket、付费本地正式导入和 Hybrid 运行仍未验证。
 
 ## Phase 8
 

@@ -1,0 +1,11 @@
+{
+  "historical_files_checked": 922,
+  "historical_changes": [],
+  "private_files_publishable": [],
+  "local_secret_matches": [],
+  "code_commit": "2ac4ed5316ee69a028e8065e19259700bcb26ed4",
+  "excluded_mutable_historical_paths": [
+    "evaluation/phase9/README.md"
+  ],
+  "scan_note": "Public supplier base URLs and documented loopback ES/Redis defaults are not secrets; API keys, tokens, passwords and other private endpoint values were scanned."
+}

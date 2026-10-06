@@ -1,0 +1,556 @@
+{
+  "receiver": "local",
+  "remote_receipt": "unverified",
+  "observation_count": 54,
+  "parent_links_valid": true,
+  "sensitive_scan_passed": true,
+  "queried_field_groups": "complete_OTLP_payload",
+  "roots": {
+    "question": {
+      "code_version": "ci",
+      "prompt_sha256": "52083acff7b9e7b49b5fac7fcd2261699f6396b5eaee370c9543f82fd564b325",
+      "config_sha256": "f48a13b06dd088f0723f92c42edfcdb2602ea4295ce3a5fa7781279a18b87fbc",
+      "trace_id": "a0b75a812ebb7e483f2e489020fbf8d7",
+      "session_hash": "bfabd099181228208b220e0c11e138ad",
+      "nodes": [
+        "router",
+        "router",
+        "router",
+        "retrieve",
+        "handler",
+        "handler"
+      ],
+      "intent": "general_question",
+      "retrieval_mode": "dense",
+      "index_hash": "6dd02ea91de4e09ab16b3e99e415e060",
+      "candidates": 1,
+      "evidence": 1,
+      "cache_status": "miss",
+      "embedding_tokens": 0,
+      "embedding_requests": 0,
+      "model_calls": [
+        {
+          "usage_known": false,
+          "model": "deterministic-fixture",
+          "usage": {}
+        }
+      ],
+      "request_id": "17ed1154960248be94836bd8a0376427",
+      "run_id": "01a1105a-8c30-72d0-a3eb-d6391d04050c",
+      "category": "model",
+      "outcome": "success",
+      "status": 200,
+      "total_seconds": 1.000834551999958,
+      "timings": {
+        "rate_check": 0.0014681760000030408,
+        "thread_wait": 1.9687000019530387e-05,
+        "execution_wait": 1.1139999969600467e-05,
+        "business_database": 0.005463764999944942,
+        "ownership": 0.007200880999960191,
+        "ownership_preflight": 0.0016883849999658196,
+        "model_wait": 2.4686000017482e-05,
+        "router": 0.006912184999976034,
+        "preferences": 0.00285403899999892,
+        "handler": 0.005171563000033075,
+        "answer_validation": 0.00019614399997180954,
+        "output_send": 3.8201000052140444e-05,
+        "execution": 0.9962238100000036
+      }
+    },
+    "cached_question": {
+      "code_version": "ci",
+      "prompt_sha256": "52083acff7b9e7b49b5fac7fcd2261699f6396b5eaee370c9543f82fd564b325",
+      "config_sha256": "f48a13b06dd088f0723f92c42edfcdb2602ea4295ce3a5fa7781279a18b87fbc",
+      "trace_id": "263b4a6a1a6b57e184a8aa07b7927d90",
+      "session_hash": "e78475b5c809c0ebf664f6ccbba730b9",
+      "nodes": [
+        "router",
+        "router",
+        "router",
+        "retrieve",
+        "handler",
+        "handler"
+      ],
+      "intent": "general_question",
+      "retrieval_mode": "dense",
+      "index_hash": "6dd02ea91de4e09ab16b3e99e415e060",
+      "candidates": 1,
+      "evidence": 1,
+      "cache_status": "hit",
+      "embedding_tokens": 0,
+      "embedding_requests": 0,
+      "model_calls": [
+        {
+          "usage_known": false,
+          "model": "deterministic-fixture",
+          "usage": {}
+        }
+      ],
+      "request_id": "b5cceb63e4c64b8489cbbdfa0684ce0e",
+      "run_id": "01a1105a-8ee0-70d0-bbb7-a797bbe46f4d",
+      "category": "model",
+      "outcome": "success",
+      "status": 200,
+      "total_seconds": 0.038831664000042565,
+      "timings": {
+        "rate_check": 0.00029362600002968975,
+        "thread_wait": 1.2012000013328361e-05,
+        "execution_wait": 8.325000010245276e-06,
+        "business_database": 0.0033751870000173767,
+        "ownership": 0.004117166000014549,
+        "ownership_preflight": 0.0007994349999762562,
+        "model_wait": 2.6449000017692015e-05,
+        "router": 0.0039004019999993034,
+        "preferences": 0.002509348999979011,
+        "handler": 0.005584950000013578,
+        "answer_validation": 6.679400001985414e-05,
+        "output_send": 3.939300000865842e-05,
+        "execution": 0.03722391899998456
+      }
+    },
+    "tool": {
+      "code_version": "ci",
+      "prompt_sha256": "52083acff7b9e7b49b5fac7fcd2261699f6396b5eaee370c9543f82fd564b325",
+      "config_sha256": "f48a13b06dd088f0723f92c42edfcdb2602ea4295ce3a5fa7781279a18b87fbc",
+      "trace_id": "7f204aa7658f5d32d4177bb2c3c00230",
+      "session_hash": "7fd7e85a6145191db088d01f663f2487",
+      "nodes": [
+        "router",
+        "router",
+        "router",
+        "handler",
+        "handler",
+        "tools",
+        "handler",
+        "handler"
+      ],
+      "intent": "service_status",
+      "tools": [
+        "query_service_status"
+      ],
+      "model_calls": [
+        {
+          "usage_known": false,
+          "model": "deterministic-fixture",
+          "usage": {}
+        },
+        {
+          "usage_known": false,
+          "model": "deterministic-fixture",
+          "usage": {}
+        }
+      ],
+      "request_id": "f0f973c9d0d24ebba731a24459915517",
+      "run_id": "01a1105a-8f0e-7071-b2c3-d20a00eac773",
+      "category": "model",
+      "outcome": "success",
+      "status": 200,
+      "total_seconds": 0.04089448499996706,
+      "timings": {
+        "rate_check": 0.0003575140000293686,
+        "thread_wait": 1.2202999982946494e-05,
+        "execution_wait": 9.257999977307918e-06,
+        "business_database": 0.0033663799999317234,
+        "ownership": 0.004094242999997277,
+        "ownership_preflight": 0.0008849539999573608,
+        "model_wait": 2.9535000010127987e-05,
+        "router": 0.003033282999979292,
+        "preferences": 0.0035553609999965374,
+        "handler": 0.009973919000003661,
+        "output_send": 3.3893000022544584e-05,
+        "execution": 0.039074484999957804
+      }
+    },
+    "draft": {
+      "code_version": "ci",
+      "prompt_sha256": "52083acff7b9e7b49b5fac7fcd2261699f6396b5eaee370c9543f82fd564b325",
+      "config_sha256": "f48a13b06dd088f0723f92c42edfcdb2602ea4295ce3a5fa7781279a18b87fbc",
+      "trace_id": "579645d1ac20d6124a1912f4c309a906",
+      "session_hash": "081f899665d629e6fed449229ed2b8ac",
+      "nodes": [
+        "router",
+        "router",
+        "router",
+        "draft",
+        "draft",
+        "draft",
+        "approval"
+      ],
+      "intent": "ticket_request",
+      "draft_hash": "c73cea267d13b8bd5afb88d3a97ba15d",
+      "draft_version": 1,
+      "model_calls": [],
+      "request_id": "b2b01d3e9d4848589c9379172b854947",
+      "run_id": "01a1105a-8f38-7cd2-a5d3-227d4b551424",
+      "category": "model",
+      "outcome": "success",
+      "status": 200,
+      "total_seconds": 0.03344590300002892,
+      "timings": {
+        "rate_check": 0.0003704879999872901,
+        "thread_wait": 1.2573999981668749e-05,
+        "execution_wait": 9.096000042063679e-06,
+        "business_database": 0.003033161999951517,
+        "ownership": 0.0037271499999746993,
+        "ownership_preflight": 0.0007365580000282534,
+        "model_wait": 2.5767999943582254e-05,
+        "router": 0.003505066999991868,
+        "draft": 0.007075928000006115,
+        "output_send": 3.2581000027676055e-05,
+        "execution": 0.031918317000020124
+      }
+    },
+    "approval": {
+      "code_version": "ci",
+      "prompt_sha256": "52083acff7b9e7b49b5fac7fcd2261699f6396b5eaee370c9543f82fd564b325",
+      "config_sha256": "f48a13b06dd088f0723f92c42edfcdb2602ea4295ce3a5fa7781279a18b87fbc",
+      "trace_id": "8f131ef8d08f0fd76e6eb6e4194408df",
+      "session_hash": "081f899665d629e6fed449229ed2b8ac",
+      "draft_hash": "c73cea267d13b8bd5afb88d3a97ba15d",
+      "draft_version": 1,
+      "approval_action": "approve",
+      "nodes": [
+        "approval",
+        "approval",
+        "create",
+        "create"
+      ],
+      "model_calls": [],
+      "request_id": "7bb00d8a74fe4daabc455c8ddc7fb22a",
+      "run_id": "01a1105a-9344-7e81-8573-3e1ba292fc5f",
+      "category": "approval",
+      "outcome": "success",
+      "status": 200,
+      "total_seconds": 0.02296125499998425,
+      "timings": {
+        "rate_check": 0.00041622300000199175,
+        "thread_wait": 1.2142000002768327e-05,
+        "execution_wait": 9.108000028845709e-06,
+        "business_database": 0.007226407999951334,
+        "ownership": 0.0037149579999891102,
+        "ownership_preflight": 0.0010388890000285755,
+        "output_send": 3.387300000667892e-05,
+        "execution": 0.020910986999979286
+      }
+    },
+    "router_failure": {
+      "code_version": "ci",
+      "prompt_sha256": "52083acff7b9e7b49b5fac7fcd2261699f6396b5eaee370c9543f82fd564b325",
+      "config_sha256": "f48a13b06dd088f0723f92c42edfcdb2602ea4295ce3a5fa7781279a18b87fbc",
+      "trace_id": "d55fb34f23374a0950524e6fc1143887",
+      "session_hash": "e436c2ff77f7019992b16273d3381852",
+      "nodes": [
+        "router",
+        "router",
+        "router",
+        "clarify"
+      ],
+      "model_calls": [],
+      "request_id": "0739d5b8954b4f45bcedfbc0372cf883",
+      "run_id": "01a1105a-935f-7362-b52f-91d9bf2408a3",
+      "category": "model",
+      "outcome": "router_unavailable",
+      "status": 200,
+      "total_seconds": 0.021402670999975726,
+      "timings": {
+        "rate_check": 0.0002864010000394046,
+        "thread_wait": 1.2111999978969834e-05,
+        "execution_wait": 7.95500000094762e-06,
+        "business_database": 0.0036900419999597034,
+        "ownership": 0.004091577000053803,
+        "ownership_preflight": 0.0007408860000168715,
+        "model_wait": 9.809000005134294e-06,
+        "router": 0.002347988999986228,
+        "output_send": 3.372399999079789e-05,
+        "execution": 0.020032154999967133
+      }
+    },
+    "dependency_failure": {
+      "code_version": "ci",
+      "prompt_sha256": "52083acff7b9e7b49b5fac7fcd2261699f6396b5eaee370c9543f82fd564b325",
+      "config_sha256": "f48a13b06dd088f0723f92c42edfcdb2602ea4295ce3a5fa7781279a18b87fbc",
+      "trace_id": "2c83a2f00e44fd68bbd0bddb7a6979b2",
+      "model_calls": [],
+      "request_id": "d8810984a186461f937c866adb22c888",
+      "category": "model",
+      "outcome": "rate_dependency_unavailable",
+      "status": 503,
+      "total_seconds": 0.006086051000011139,
+      "timings": {
+        "rate_check": 0.005389306999973087
+      }
+    }
+  },
+  "observations": [
+    {
+      "id": "20430d53cb55b08c",
+      "traceId": "a0b75a812ebb7e483f2e489020fbf8d7",
+      "parentObservationId": "93b96d16d4e012d0"
+    },
+    {
+      "id": "5c36f58d87b61983",
+      "traceId": "a0b75a812ebb7e483f2e489020fbf8d7",
+      "parentObservationId": "93b96d16d4e012d0"
+    },
+    {
+      "id": "93b96d16d4e012d0",
+      "traceId": "a0b75a812ebb7e483f2e489020fbf8d7",
+      "parentObservationId": "f9101ba4b9a3ea63"
+    },
+    {
+      "id": "99d76dff269f30a6",
+      "traceId": "a0b75a812ebb7e483f2e489020fbf8d7",
+      "parentObservationId": "f9101ba4b9a3ea63"
+    },
+    {
+      "id": "f2ff18eb79cb5f43",
+      "traceId": "a0b75a812ebb7e483f2e489020fbf8d7",
+      "parentObservationId": "985ee846a947f5dd"
+    },
+    {
+      "id": "bf18fa7cffd4baa1",
+      "traceId": "a0b75a812ebb7e483f2e489020fbf8d7",
+      "parentObservationId": "985ee846a947f5dd"
+    },
+    {
+      "id": "985ee846a947f5dd",
+      "traceId": "a0b75a812ebb7e483f2e489020fbf8d7",
+      "parentObservationId": "f9101ba4b9a3ea63"
+    },
+    {
+      "id": "f9101ba4b9a3ea63",
+      "traceId": "a0b75a812ebb7e483f2e489020fbf8d7",
+      "parentObservationId": "17e13bb4c8357b60"
+    },
+    {
+      "id": "17e13bb4c8357b60",
+      "traceId": "a0b75a812ebb7e483f2e489020fbf8d7",
+      "parentObservationId": null
+    },
+    {
+      "id": "95892881ec507997",
+      "traceId": "263b4a6a1a6b57e184a8aa07b7927d90",
+      "parentObservationId": "aef8f0cc852e5228"
+    },
+    {
+      "id": "66476e79ac9bb02c",
+      "traceId": "263b4a6a1a6b57e184a8aa07b7927d90",
+      "parentObservationId": "aef8f0cc852e5228"
+    },
+    {
+      "id": "aef8f0cc852e5228",
+      "traceId": "263b4a6a1a6b57e184a8aa07b7927d90",
+      "parentObservationId": "93cb24b9d579576a"
+    },
+    {
+      "id": "b6b4cbc7fcb709b3",
+      "traceId": "263b4a6a1a6b57e184a8aa07b7927d90",
+      "parentObservationId": "93cb24b9d579576a"
+    },
+    {
+      "id": "671944f749cf87b3",
+      "traceId": "263b4a6a1a6b57e184a8aa07b7927d90",
+      "parentObservationId": "c03d11092cd5f8f1"
+    },
+    {
+      "id": "847b372505dc6e37",
+      "traceId": "263b4a6a1a6b57e184a8aa07b7927d90",
+      "parentObservationId": "c03d11092cd5f8f1"
+    },
+    {
+      "id": "c03d11092cd5f8f1",
+      "traceId": "263b4a6a1a6b57e184a8aa07b7927d90",
+      "parentObservationId": "93cb24b9d579576a"
+    },
+    {
+      "id": "93cb24b9d579576a",
+      "traceId": "263b4a6a1a6b57e184a8aa07b7927d90",
+      "parentObservationId": "89473035a98c3112"
+    },
+    {
+      "id": "89473035a98c3112",
+      "traceId": "263b4a6a1a6b57e184a8aa07b7927d90",
+      "parentObservationId": null
+    },
+    {
+      "id": "5f68521966c7e2b4",
+      "traceId": "7f204aa7658f5d32d4177bb2c3c00230",
+      "parentObservationId": "a7dbb0874313538b"
+    },
+    {
+      "id": "4007dfde56c19fdc",
+      "traceId": "7f204aa7658f5d32d4177bb2c3c00230",
+      "parentObservationId": "a7dbb0874313538b"
+    },
+    {
+      "id": "a7dbb0874313538b",
+      "traceId": "7f204aa7658f5d32d4177bb2c3c00230",
+      "parentObservationId": "9d2dad7971aac345"
+    },
+    {
+      "id": "5450799574385a8e",
+      "traceId": "7f204aa7658f5d32d4177bb2c3c00230",
+      "parentObservationId": "43638135c0177b47"
+    },
+    {
+      "id": "0f4a13f6bb7c8d1e",
+      "traceId": "7f204aa7658f5d32d4177bb2c3c00230",
+      "parentObservationId": "43638135c0177b47"
+    },
+    {
+      "id": "43638135c0177b47",
+      "traceId": "7f204aa7658f5d32d4177bb2c3c00230",
+      "parentObservationId": "9d2dad7971aac345"
+    },
+    {
+      "id": "5ab7bf36ba46e636",
+      "traceId": "7f204aa7658f5d32d4177bb2c3c00230",
+      "parentObservationId": "45e544fcd38a640d"
+    },
+    {
+      "id": "45e544fcd38a640d",
+      "traceId": "7f204aa7658f5d32d4177bb2c3c00230",
+      "parentObservationId": "9d2dad7971aac345"
+    },
+    {
+      "id": "3e7599a53181fc3d",
+      "traceId": "7f204aa7658f5d32d4177bb2c3c00230",
+      "parentObservationId": "d91597cd82db32ed"
+    },
+    {
+      "id": "148b5356f0eb56be",
+      "traceId": "7f204aa7658f5d32d4177bb2c3c00230",
+      "parentObservationId": "d91597cd82db32ed"
+    },
+    {
+      "id": "d91597cd82db32ed",
+      "traceId": "7f204aa7658f5d32d4177bb2c3c00230",
+      "parentObservationId": "9d2dad7971aac345"
+    },
+    {
+      "id": "9d2dad7971aac345",
+      "traceId": "7f204aa7658f5d32d4177bb2c3c00230",
+      "parentObservationId": "4f64c3b737785405"
+    },
+    {
+      "id": "4f64c3b737785405",
+      "traceId": "7f204aa7658f5d32d4177bb2c3c00230",
+      "parentObservationId": null
+    },
+    {
+      "id": "2efdf56aa417f3be",
+      "traceId": "579645d1ac20d6124a1912f4c309a906",
+      "parentObservationId": "ae0526a9c272df8f"
+    },
+    {
+      "id": "907f8e820304ff31",
+      "traceId": "579645d1ac20d6124a1912f4c309a906",
+      "parentObservationId": "ae0526a9c272df8f"
+    },
+    {
+      "id": "ae0526a9c272df8f",
+      "traceId": "579645d1ac20d6124a1912f4c309a906",
+      "parentObservationId": "3dbccf00b964834e"
+    },
+    {
+      "id": "bfcb5f5fb72d188f",
+      "traceId": "579645d1ac20d6124a1912f4c309a906",
+      "parentObservationId": "c6e7030519eba377"
+    },
+    {
+      "id": "995a16e49ad8b277",
+      "traceId": "579645d1ac20d6124a1912f4c309a906",
+      "parentObservationId": "c6e7030519eba377"
+    },
+    {
+      "id": "c6e7030519eba377",
+      "traceId": "579645d1ac20d6124a1912f4c309a906",
+      "parentObservationId": "3dbccf00b964834e"
+    },
+    {
+      "id": "05fe12b899929bd4",
+      "traceId": "579645d1ac20d6124a1912f4c309a906",
+      "parentObservationId": "3dbccf00b964834e"
+    },
+    {
+      "id": "3dbccf00b964834e",
+      "traceId": "579645d1ac20d6124a1912f4c309a906",
+      "parentObservationId": "84dca2d49c40b479"
+    },
+    {
+      "id": "84dca2d49c40b479",
+      "traceId": "579645d1ac20d6124a1912f4c309a906",
+      "parentObservationId": null
+    },
+    {
+      "id": "ee7a6802a59949ae",
+      "traceId": "8f131ef8d08f0fd76e6eb6e4194408df",
+      "parentObservationId": "b11724e2797e723e"
+    },
+    {
+      "id": "b11724e2797e723e",
+      "traceId": "8f131ef8d08f0fd76e6eb6e4194408df",
+      "parentObservationId": "9a6ad61b6489beb8"
+    },
+    {
+      "id": "a1108663cb467f32",
+      "traceId": "8f131ef8d08f0fd76e6eb6e4194408df",
+      "parentObservationId": "a5d1a817ba4a2149"
+    },
+    {
+      "id": "a5d1a817ba4a2149",
+      "traceId": "8f131ef8d08f0fd76e6eb6e4194408df",
+      "parentObservationId": "9a6ad61b6489beb8"
+    },
+    {
+      "id": "9a6ad61b6489beb8",
+      "traceId": "8f131ef8d08f0fd76e6eb6e4194408df",
+      "parentObservationId": "f88ad8c530c5541d"
+    },
+    {
+      "id": "f88ad8c530c5541d",
+      "traceId": "8f131ef8d08f0fd76e6eb6e4194408df",
+      "parentObservationId": null
+    },
+    {
+      "id": "f804655cdefae11f",
+      "traceId": "04f087a05b0d33b62591dd758b4c80ab",
+      "parentObservationId": null
+    },
+    {
+      "id": "e755179054df90ff",
+      "traceId": "d55fb34f23374a0950524e6fc1143887",
+      "parentObservationId": "3735a280ec2835e8"
+    },
+    {
+      "id": "a6dd8f7ca4d2894b",
+      "traceId": "d55fb34f23374a0950524e6fc1143887",
+      "parentObservationId": "3735a280ec2835e8"
+    },
+    {
+      "id": "3735a280ec2835e8",
+      "traceId": "d55fb34f23374a0950524e6fc1143887",
+      "parentObservationId": "576b1979e99ef725"
+    },
+    {
+      "id": "9a91eb7057ec0f18",
+      "traceId": "d55fb34f23374a0950524e6fc1143887",
+      "parentObservationId": "576b1979e99ef725"
+    },
+    {
+      "id": "576b1979e99ef725",
+      "traceId": "d55fb34f23374a0950524e6fc1143887",
+      "parentObservationId": "51fa0f33614f70f5"
+    },
+    {
+      "id": "51fa0f33614f70f5",
+      "traceId": "d55fb34f23374a0950524e6fc1143887",
+      "parentObservationId": null
+    },
+    {
+      "id": "14572259220f1cd8",
+      "traceId": "2c83a2f00e44fd68bbd0bddb7a6979b2",
+      "parentObservationId": null
+    }
+  ]
+}

@@ -1,14 +1,27 @@
 {
-  "status": "partial_acceptance_pending_ci_and_ui_check",
+  "status": "core_closeout_accepted_optional_scope_unverified",
   "redis_memory": "passed_redis_memory_v2",
-  "compose_variants": ["default", "local", "ci", "dev"],
+  "compose_variants": [
+    "default",
+    "local",
+    "ci",
+    "dev"
+  ],
   "local_business_tracing": "passed_business_tracing_local_v1",
   "remote_tracing": "verified_by_observations_v2_api",
-  "remote_ui": "pending_browser_login",
-  "github_actions": "pending_push",
-  "local_pytest": {"passed": 375, "skipped": 4},
+  "remote_ui": "passed_authenticated_browser_inspection",
+  "github_actions": "passed_five_required_jobs",
+  "local_pytest": {
+    "passed": 375,
+    "skipped": 4
+  },
   "paid_chat_calls": 0,
   "paid_embedding_calls": 0,
   "historical_draft_cost_reinterpreted": false,
-  "optional_unverified": ["browser_websocket", "paid_local_knowledge_import", "hybrid_runtime"]
+  "optional_unverified": [
+    "browser_websocket",
+    "paid_local_knowledge_import",
+    "hybrid_runtime"
+  ],
+  "code_commit": "2ac4ed5316ee69a028e8065e19259700bcb26ed4"
 }

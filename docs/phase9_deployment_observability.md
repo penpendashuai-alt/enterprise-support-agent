@@ -1,6 +1,6 @@
 # Phase 9：部署、业务可观测性与自动化验收
 
-状态（2026-10-06）：实现、离线测试、实际容器业务与恢复验收、本地追踪 HTTP 导出通过。收尾新增 Redis 内存压力与远程 Langfuse API 验收通过；GitHub Actions 正在准备，网页面板辅助检查待登录。最终结果以 closeout 记录为准。以下区分证据范围；不宣称生产上线。
+状态（2026-10-06）：本阶段核心收尾验收完成，可选验证范围见限制。Redis 内存压力、真实业务远程 Langfuse API 与界面核对、GitHub Actions 五个必需 job 均通过；最终证据在 closeout 中。以下区分证据范围，不宣称生产上线。
 
 ## 基线与改造边界
 
@@ -44,7 +44,7 @@ PostgreSQL 备份恢复到同一专属实例的新数据库，10 张表的行数
 
 改造已有 `test.yml`：保留 Ruff、Pyrefly、pytest、Markdown，替换上游固定笑话容器测试为真实 PostgreSQL/Redis/Qdrant 的 Support Agent 验收。普通运行不依赖个人环境或付费密钥，保存脱敏记录并清理本次专属项目。移除了 Fork 不需要的 Codecov 密钥上传步骤。`deploy.yml` 和 `live-smoke-test.yml` 保留上游仓库条件，Fork 不默认发布镜像或部署 Azure。
 
-离线全量 pytest 为 372 通过、4 项运行环境相关跳过；最终路由异常分支修复后，相关 23 项测试通过。Ruff、Pyrefly 与 Markdown 检查通过。容器验收通过独立脚本执行，不把 pytest 的跳过项计为通过。工作流尚未推送执行，不能据本地检查声称 GitHub Actions 已绿。
+离线全量 pytest 为 372 通过、4 项运行环境相关跳过；最终路由异常分支修复后，相关 23 项测试通过。Ruff、Pyrefly 与 Markdown 检查通过。容器验收通过独立脚本执行，不把 pytest 的跳过项计为通过。以上为收尾前的本地结果；实际远端 CI 结果另列如下。
 
 容器尝试的实际阻塞：初始 PATH 缺凭据辅助程序；Docker Hub 直连超时，通过本机代理解决；锁定依赖安装时 C 盘耗尽，Docker 元数据文件系统只读；释放空间后 BuildKit bbolt 缓存页损坏导致引擎启动失败。用户确认新安装环境仅含本次缓存并授权修复后，备份设置、停止 Docker 专属 WSL，将损坏数据盘移至本地忽略目录，让 Docker 重建空盘。引擎 29.8.2 已恢复，代理设置保留，Ubuntu 与项目源码不受影响。不得把引擎恢复或下载完成记作业务验收通过。
 
@@ -52,8 +52,8 @@ PostgreSQL 备份恢复到同一专属实例的新数据库，10 张表的行数
 
 ## 剩余验收与限制
 
-- 远程 Langfuse API 接收与查询已验证；网页面板辅助检查仍待登录，未创建公开分享。
-- GitHub Actions 对应最终提交的运行记录待补录；以 closeout/github-actions.json 为准。
+- 远程 Langfuse API 接收与查询已验证；网页面板辅助检查通过，未创建公开分享。
+- GitHub Actions 已验证代码提交 `2ac4ed5316ee69a028e8065e19259700bcb26ed4`，五个必需 job 全部成功；文档及验收资产随后单独补录。
 - 浏览器 WebSocket、本地正式知识库付费导入和 Hybrid 组合未运行，已通过范围见上述记录。
 - Phase 8 的 854 个原始评测文件摘要不变；本地秘密值扫描无匹配，个人资料、配置及修复备份均被 Git 忽略。
 
@@ -70,3 +70,11 @@ PostgreSQL 备份恢复到同一专属实例的新数据库，10 张表的行数
 本地接收 54 个实际业务 span，远程验收通过用户指定项目的 Observations API v2 查询，并扫描完整字段组中的敏感标记、身份、正文、凭据与内部地址；公开资产只保存白名单摘要和关联 ID。接收器不可达时业务正常返回，服务退出码为 0，关闭约 4 秒内完成。不会用 SDK 发送成功代替远端查询证据。[Langfuse 查询接口说明](https://langfuse.com/docs/api-and-data-platform/features/public-api)。
 
 收尾离线测试 375 通过、4 项容器标记跳过；容器、内存与业务追踪另有独立记录。普通 CI 新增内存压力和本地业务追踪，且 pytest 默认隔离个人 Langfuse 配置。收尾没有聊天模型或 Embedding 付费调用，也未重跑草稿、Phase 8 留出评测、Hybrid 或正式知识库导入。
+
+## 收尾最终 CI 与界面证据
+
+[Build and test 运行 37436624165](https://github.com/penpendashuai-alt/enterprise-support-agent/actions/runs/37436624165) 对代码提交 `2ac4ed5316ee69a028e8065e19259700bcb26ed4` 实际执行成功：Python 3.12/3.13/3.14 各 375 通过、4 跳过，Ruff、格式、Pyrefly、Markdown 均通过。Docker job 构建两个镜像，并完成 13 组业务/恢复检查、6 组 Redis 压力检查及 7 请求/54 observations 的业务追踪检查；资产上传与专属资源清理成功，无必需 job 跳过。
+
+两次 push 后未出现运行或 check 记录，仓库 Actions 已启用且工作流 active，因此新增 workflow_dispatch 并显式触发；未改部署保护条件，push 未触发的根因未确定。公开记录保存运行、job、测试统计、资产下载地址与摘要；GitHub 资产有保留期限，7 份脱敏 JSON 同时归档在 `closeout/github-run-37436624165/`。本次文档补录不改变已验收代码。
+
+在登录后的 Langfuse 界面打开路由降级轨迹，核对 HTTP 200 对应 router_unavailable，request_id/run_id/trace_id 关联可见，Input 为 null、Output 为 undefined，ERROR 子记录可见。辅助核对见 `closeout/remote-tracing-ui.json`；完整远端字段扫描仍以 remote-tracing-v1 为准。未创建公开分享，也未开启正文上传。
