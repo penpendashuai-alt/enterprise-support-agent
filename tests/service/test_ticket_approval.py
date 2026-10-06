@@ -459,3 +459,29 @@ async def test_legacy_agent_text_interrupt_resume(monkeypatch, endpoint):
             f"/interrupt-agent/{endpoint}", json={"message": "1990", "thread_id": "legacy"}
         )
         assert output(second, endpoint)["content"] == "收到：1990"
+
+
+@pytest.mark.asyncio
+@pytest.mark.parametrize(
+    "description",
+    [
+        "希望安排人工检查，尚未执行",
+        "计划今晚重启，目前未重启",
+        "已重新登录，仍未解决",
+        "没有关闭防火墙，也不希望关闭",
+        "更正：尚未重启，此前说已重启有误",
+    ],
+)
+async def test_draft_fact_status_survives_mapping_and_user_edit(environment, description):
+    async with environment() as (client, graph, model):
+        model.draft = {**DRAFT, "description": description}
+        await send(client, text="synthetic structured extraction fixture")
+        first = await pending(client)
+        assert first["draft"]["description"] == description
+        edited = {**first["draft"], "description": description + "；补充影响时间为今天上午"}
+        await send(client, decision=approval(first, "edit", draft=edited))
+        second = await pending(client)
+        assert second["draft"] == edited
+        assert second["draft_version"] == first["draft_version"] + 1
+        await send(client, decision=approval(second, "cancel"))
+        assert (await pending(client)) is None

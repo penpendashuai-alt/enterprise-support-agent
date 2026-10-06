@@ -1,0 +1,37 @@
+{
+  "call_id": "01a10c70-d637-7ff3-b19d-98b3c021690c",
+  "run_id": "drafts-v2",
+  "case_id": "mixed",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-05T14:21:23.902173+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 661,
+    "output_tokens": 129,
+    "total_tokens": 790,
+    "input_token_details": {
+      "cache_read": 640
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.009432,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-05T14:21:26.100938+00:00",
+  "visible_model_output": "",
+  "error_type": null,
+  "structured_tool_calls": [
+    {
+      "name": "DraftExtraction",
+      "args": {
+        "title": "邮箱发送失败，请求管理员检查权限",
+        "description": "邮箱发送失败。用户已重新登录，但问题仍未解决。希望管理员检查邮箱权限。",
+        "service_name": "邮箱",
+        "impact": "团队",
+        "priority": "P2"
+      },
+      "id": "call_00_plJFS4qLGicr2lIekxMf7870",
+      "type": "tool_call"
+    }
+  ]
+}

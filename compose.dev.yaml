@@ -1,0 +1,10 @@
+services:
+  agent_service:
+    environment:
+      MODE: dev
+    volumes:
+      - ./src:/app/src:ro
+  postgres:
+    ports: ["127.0.0.1:15432:5432"]
+  redis:
+    ports: ["127.0.0.1:16379:6379"]

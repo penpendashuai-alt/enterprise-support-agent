@@ -1,0 +1,37 @@
+{
+  "call_id": "01a10c70-e745-7b61-8e3f-0a768b897836",
+  "run_id": "drafts-v2",
+  "case_id": "completion",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-05T14:21:28.269503+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 659,
+    "output_tokens": 125,
+    "total_tokens": 784,
+    "input_token_details": {
+      "cache_read": 640
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.009306,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-05T14:21:30.729049+00:00",
+  "visible_model_output": "",
+  "error_type": null,
+  "structured_tool_calls": [
+    {
+      "name": "DraftExtraction",
+      "args": {
+        "title": "VPN报错无法使用",
+        "description": "VPN报错，影响范围仅本人。用户已尝试重启，重启后仍失败。",
+        "service_name": "VPN",
+        "impact": "仅本人",
+        "priority": null
+      },
+      "id": "call_00_q6T9KndpDsfabMeVmBbT4907",
+      "type": "tool_call"
+    }
+  ]
+}

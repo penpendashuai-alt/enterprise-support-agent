@@ -1,0 +1,19 @@
+{
+  "id": "done",
+  "inputs": [
+    "VPN报809，仅影响本人，已重启电脑但没解决，请创建工单。"
+  ],
+  "criterion": "重启已执行但未解决",
+  "draft": {
+    "title": "VPN 报错 809",
+    "description": "VPN 报错 809。用户已重启电脑，但问题未解决。",
+    "service_name": "VPN",
+    "impact": "仅影响本人",
+    "priority": "P3"
+  },
+  "status": "pending",
+  "review": "pending",
+  "messages": [
+    "请确认本地演示工单草稿（版本 1）：\n标题：VPN 报错 809\n描述：VPN 报错 809。用户已重启电脑，但问题未解决。\n服务：VPN\n影响范围：仅影响本人\n优先级：P3（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。"
+  ]
+}

@@ -262,11 +262,11 @@ def test_log_level_enum():
 
 
 def test_settings_log_level_default():
-    """Test that LOG_LEVEL defaults to WARNING."""
+    """Test that LOG_LEVEL defaults to INFO."""
     with patch.dict(os.environ, {"OPENAI_API_KEY": "test_key"}, clear=True):
         settings = Settings(_env_file=None)
-        assert settings.LOG_LEVEL == LogLevel.WARNING
-        assert settings.LOG_LEVEL.to_logging_level() == logging.WARNING
+        assert settings.LOG_LEVEL == LogLevel.INFO
+        assert settings.LOG_LEVEL.to_logging_level() == logging.INFO
 
 
 def test_settings_log_level_from_env():

@@ -6,8 +6,12 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class RAGSettings(BaseSettings):
-    model_config = SettingsConfigDict(extra="ignore", env_file_encoding="utf-8")
+    model_config = SettingsConfigDict(
+        extra="ignore", env_file_encoding="utf-8", hide_input_in_errors=True
+    )
     QDRANT_URL: str = ""
+    QDRANT_LOCAL: bool = False
+    CI_TEST_MODE: bool = False
     QDRANT_API_KEY: SecretStr | None = None
     QDRANT_COLLECTION: str = Field(
         default="enterprise_support_dense_v1", pattern=r"^enterprise_support_dense_[a-zA-Z0-9_-]+$"
@@ -73,12 +77,26 @@ class RAGSettings(BaseSettings):
         self.require_dense()
 
     def require_dense(self):
-        if not self.QDRANT_URL or not self.EMBED_API_KEY or not self.QDRANT_API_KEY:
-            raise ValueError("RAG connection settings are incomplete")
-        if not self.QDRANT_URL.startswith("https://") or not self.EMBED_BASE_URL.startswith(
-            "https://"
-        ):
-            raise ValueError("Cloud connections require HTTPS")
+        from urllib.parse import urlparse
+
+        url = urlparse(self.QDRANT_URL)
+        if self.QDRANT_LOCAL:
+            if url.scheme != "http" or url.hostname not in {
+                "localhost",
+                "127.0.0.1",
+                "::1",
+                "qdrant",
+            }:
+                raise ValueError("Local Qdrant requires an explicit local HTTP endpoint")
+        elif url.scheme != "https" or not self.QDRANT_API_KEY:
+            raise ValueError("Cloud Qdrant requires HTTPS and a key")
+        if self.CI_TEST_MODE:
+            if not self.QDRANT_LOCAL or not self.QDRANT_COLLECTION.startswith(
+                "enterprise_support_dense_ci_"
+            ):
+                raise ValueError("CI requires a separate local collection")
+        elif not self.EMBED_API_KEY or not self.EMBED_BASE_URL.startswith("https://"):
+            raise ValueError("Embedding requires HTTPS and a key")
 
     def require_mode(self):
         from urllib.parse import urlparse
@@ -100,8 +118,8 @@ class RAGSettings(BaseSettings):
 
     def index_contract(self) -> dict:
         return {
-            "provider": self.EMBED_MODEL_TYPE,
-            "model": self.EMBED_MODEL_NAME,
+            "provider": "deterministic-ci" if self.CI_TEST_MODE else self.EMBED_MODEL_TYPE,
+            "model": "fixture-v1" if self.CI_TEST_MODE else self.EMBED_MODEL_NAME,
             "dimensions": self.EMBED_DIMENSIONS,
             "distance": self.QDRANT_DISTANCE,
             "chunk_size": self.RAG_CHUNK_SIZE,

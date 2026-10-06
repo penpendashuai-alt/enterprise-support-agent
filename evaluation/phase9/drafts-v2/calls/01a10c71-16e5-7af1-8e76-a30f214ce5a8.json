@@ -1,0 +1,37 @@
+{
+  "call_id": "01a10c71-16e5-7af1-8e76-a30f214ce5a8",
+  "run_id": "drafts-v2",
+  "case_id": "correction_scope",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-05T14:21:40.462117+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 672,
+    "output_tokens": 131,
+    "total_tokens": 803,
+    "input_token_details": {
+      "cache_read": 640
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.009585,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-05T14:21:42.791138+00:00",
+  "visible_model_output": "",
+  "error_type": null,
+  "structured_tool_calls": [
+    {
+      "name": "DraftExtraction",
+      "args": {
+        "title": "邮箱收不到信，请求重置密码",
+        "description": "邮箱收不到信。用户已退出重登。希望执行重置密码操作，但目前尚未重置。",
+        "service_name": "邮箱",
+        "impact": "只有本人",
+        "priority": "P2"
+      },
+      "id": "call_00_vjj7lwZDcyuy8GyWmK9P1688",
+      "type": "tool_call"
+    }
+  ]
+}

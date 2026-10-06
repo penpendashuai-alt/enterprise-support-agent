@@ -1,0 +1,37 @@
+{
+  "call_id": "01a10c71-04a7-7813-b424-d1c59f5c8fed",
+  "run_id": "drafts-v2",
+  "case_id": "conditional",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-05T14:21:35.791477+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 658,
+    "output_tokens": 126,
+    "total_tokens": 784,
+    "input_token_details": {
+      "cache_read": 640
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.009324,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-05T14:21:38.014913+00:00",
+  "visible_model_output": "",
+  "error_type": null,
+  "structured_tool_calls": [
+    {
+      "name": "DraftExtraction",
+      "args": {
+        "title": "VPN故障影响本人",
+        "description": "VPN发生故障，影响本人。用户尚未联系管理员，计划若明天仍无法恢复则联系管理员。",
+        "service_name": "VPN",
+        "impact": "本人",
+        "priority": null
+      },
+      "id": "call_00_YwfIt1o6V8hp3yAoOXdj2786",
+      "type": "tool_call"
+    }
+  ]
+}

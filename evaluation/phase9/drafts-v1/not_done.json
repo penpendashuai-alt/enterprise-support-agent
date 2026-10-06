@@ -1,0 +1,16 @@
+{
+  "id": "not_done",
+  "inputs": [
+    "VPN连不上，只有本人，我还没重启，也没联系管理员，请建工单。"
+  ],
+  "criterion": "两个否定操作都不得转为已尝试",
+  "draft": {
+    "title": "VPN 无法连接",
+    "description": "VPN 连不上，影响范围仅本人。用户尚未重启，也未联系管理员。",
+    "service_name": "VPN",
+    "impact": "仅本人",
+    "priority": "P3"
+  },
+  "status": "pending",
+  "review": "pending"
+}

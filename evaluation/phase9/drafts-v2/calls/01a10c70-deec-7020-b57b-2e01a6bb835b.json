@@ -1,0 +1,37 @@
+{
+  "call_id": "01a10c70-deec-7020-b57b-2e01a6bb835b",
+  "run_id": "drafts-v2",
+  "case_id": "correction",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-05T14:21:26.131414+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 666,
+    "output_tokens": 120,
+    "total_tokens": 786,
+    "input_token_details": {
+      "cache_read": 640
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.009234,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-05T14:21:28.238244+00:00",
+  "visible_model_output": "",
+  "error_type": null,
+  "structured_tool_calls": [
+    {
+      "name": "DraftExtraction",
+      "args": {
+        "title": "VPN报错",
+        "description": "VPN报错。用户已说明尚未重启，准备下班后再尝试重启。",
+        "service_name": "VPN",
+        "impact": "只有本人",
+        "priority": null
+      },
+      "id": "call_00_9lq5WAzJx9KCiI5xrOqP2000",
+      "type": "tool_call"
+    }
+  ]
+}

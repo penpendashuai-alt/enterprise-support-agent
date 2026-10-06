@@ -1,0 +1,59 @@
+[
+  {
+    "check": "effective_memory_limits",
+    "at": "2026-10-06T08:04:47.476382+00:00",
+    "compose_command": [
+      "redis-server",
+      "--save",
+      "",
+      "--appendonly",
+      "no",
+      "--maxmemory",
+      "4mb",
+      "--maxmemory-policy",
+      "noeviction"
+    ],
+    "hard_limit_bytes": 134217728,
+    "runtime_config": {
+      "save": "",
+      "appendonly": "no",
+      "maxmemory": "4194304",
+      "maxmemory-policy": "noeviction"
+    },
+    "before": {
+      "memory": {
+        "used_memory": 974608,
+        "used_memory_rss": 10248192,
+        "maxmemory": 4194304,
+        "maxmemory_policy": "noeviction",
+        "mem_not_counted_for_evict": 0
+      },
+      "evicted_keys": 0,
+      "sentinel": {}
+    }
+  },
+  {
+    "check": "noeviction_oom",
+    "at": "2026-10-06T08:04:55.357636+00:00",
+    "oom_type": "OutOfMemoryError",
+    "oom_message": "command not allowed when used memory > 'maxmemory'.",
+    "written_keys": 72,
+    "memory": {
+      "used_memory": 4179256,
+      "used_memory_rss": 10248192,
+      "maxmemory": 4194304,
+      "maxmemory_policy": "noeviction",
+      "mem_not_counted_for_evict": 0
+    },
+    "evicted_keys": 0,
+    "sentinel": {
+      "tokens": "7",
+      "time": "synthetic"
+    }
+  },
+  {
+    "check": "failure",
+    "at": "2026-10-06T08:05:03.010201+00:00",
+    "error_type": "RuntimeError"
+  }
+]

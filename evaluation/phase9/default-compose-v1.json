@@ -1,0 +1,47 @@
+{
+  "at": "2026-10-06T02:57:35.239138+00:00",
+  "startup": "passed",
+  "live": {
+    "status": "ok"
+  },
+  "ready": {
+    "status": "ok",
+    "reason": "core_ready"
+  },
+  "agents": [
+    "support-agent"
+  ],
+  "capabilities": {
+    "core": {
+      "status": "ok",
+      "reason": "core_ready"
+    },
+    "question": {
+      "status": "ok",
+      "reason": "model_configured_callability_unprobed"
+    },
+    "approval_and_read": {
+      "status": "ok",
+      "reason": "available"
+    },
+    "retrieval": {
+      "status": "ok",
+      "reason": "dense_index_ready"
+    },
+    "cache": {
+      "status": "ok",
+      "reason": "reachable"
+    },
+    "tracing": {
+      "status": "disabled",
+      "reason": "not_enabled"
+    },
+    "model": {
+      "status": "configured",
+      "reason": "no_paid_probe"
+    }
+  },
+  "paid_model_calls": 0,
+  "paid_embedding_calls": 0,
+  "scope": "default Compose with existing cloud collection; health and manifest/count only; no business model invocation"
+}

@@ -1,0 +1,49 @@
+{
+  "failures": [
+    {
+      "stage": "docker-build-v1",
+      "reason": "CLI credential helper absent from PATH",
+      "resolution": "process PATH set"
+    },
+    {
+      "stage": "docker-build-v2",
+      "reason": "registry authentication timeout",
+      "resolution": "Desktop and CLI proxies"
+    },
+    {
+      "stage": "docker-build-v3",
+      "reason": "host disk full; BuildKit metadata became read-only",
+      "resolution": "space freed; after explicit authorization, settings and corrupted data disk backed up locally; Docker recreated an empty disk and engine 29.8.2 started successfully"
+    },
+    {
+      "stage": "tracing-v1",
+      "reason": "SDK default filter omitted request roots",
+      "resolution": "explicit scope filter"
+    },
+    {
+      "stage": "tracing-v2",
+      "reason": "model label used configured model instead of actual fixture",
+      "resolution": "v3 captures actual invocation"
+    },
+    {
+      "stage": "containers-v1",
+      "reason": "Streamlit interaction rejected uncited inherited fixture stream response; invoke-only checks had passed",
+      "resolution": "CIModel now implements async streaming from the same deterministic response/tool calls; added streamed tool regression"
+    },
+    {
+      "stage": "containers-v2",
+      "reason": "New error check incorrectly expected HTTP 500 although router errors are handled by the existing clarification fallback",
+      "resolution": "Assert clarification contract and add stable router_unavailable observation"
+    },
+    {
+      "stage": "containers-v3",
+      "reason": "Local telemetry import shadowed the new module import in the router exception branch",
+      "resolution": "Removed redundant local imports; added CI_ERROR route regression; 23 related tests passed"
+    },
+    {
+      "stage": "docker-build-v6",
+      "reason": "Rebuild process did not inherit CLI proxy; registry token lookup timed out",
+      "resolution": "Set process proxy for rebuild; Desktop proxy alone does not cover this BuildKit token request"
+    }
+  ]
+}

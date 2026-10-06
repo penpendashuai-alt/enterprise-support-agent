@@ -1,0 +1,58 @@
+{
+  "default": {
+    "command": [
+      "redis-server",
+      "--save",
+      "",
+      "--appendonly",
+      "no",
+      "--maxmemory",
+      "64mb",
+      "--maxmemory-policy",
+      "noeviction"
+    ],
+    "container_memory_bytes": 134217728
+  },
+  "local": {
+    "command": [
+      "redis-server",
+      "--save",
+      "",
+      "--appendonly",
+      "no",
+      "--maxmemory",
+      "64mb",
+      "--maxmemory-policy",
+      "noeviction"
+    ],
+    "container_memory_bytes": 134217728
+  },
+  "ci": {
+    "command": [
+      "redis-server",
+      "--save",
+      "",
+      "--appendonly",
+      "no",
+      "--maxmemory",
+      "64mb",
+      "--maxmemory-policy",
+      "noeviction"
+    ],
+    "container_memory_bytes": 134217728
+  },
+  "dev": {
+    "command": [
+      "redis-server",
+      "--save",
+      "",
+      "--appendonly",
+      "no",
+      "--maxmemory",
+      "64mb",
+      "--maxmemory-policy",
+      "noeviction"
+    ],
+    "container_memory_bytes": 134217728
+  }
+}

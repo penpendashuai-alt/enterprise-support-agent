@@ -16,13 +16,20 @@ class RequestTrace:
     request_id: str = field(default_factory=lambda: uuid4().hex)
     started: float = field(default_factory=perf_counter)
     run_id: str | None = None
+    metadata: dict = field(default_factory=dict)
+    model_calls: dict = field(default_factory=dict)
     timings: dict[str, float] = field(default_factory=dict)
     locked_thread: str | None = None
     outcome: str = "success"
     status: int = 200
 
     def record(self):
+        from execution.observability import versions
+
         return {
+            **versions(),
+            **self.metadata,
+            "model_calls": list(self.model_calls.values()),
             "request_id": self.request_id,
             "run_id": self.run_id,
             "category": self.category,

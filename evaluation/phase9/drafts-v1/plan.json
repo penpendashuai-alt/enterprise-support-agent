@@ -1,0 +1,16 @@
+{
+  "id": "plan",
+  "inputs": [
+    "我的邮箱无法收信，仅影响本人，请建工单。我计划今晚重启电脑，现在还没有重启。"
+  ],
+  "criterion": "重启为计划，明确未执行",
+  "draft": {
+    "title": "邮箱无法收信",
+    "description": "用户邮箱无法收信，仅影响本人。用户计划今晚重启电脑，目前尚未重启。",
+    "service_name": "邮箱",
+    "impact": "仅影响本人",
+    "priority": "P3"
+  },
+  "status": "pending",
+  "review": "pending"
+}

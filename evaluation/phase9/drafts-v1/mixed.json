@@ -1,0 +1,16 @@
+{
+  "id": "mixed",
+  "inputs": [
+    "邮箱发送失败，影响团队，已重新登录但无效，希望管理员检查权限，请建P2工单。"
+  ],
+  "criterion": "登录已执行，权限检查仅为请求",
+  "draft": {
+    "title": "邮箱发送失败，请求管理员检查权限",
+    "description": "邮箱发送失败。用户已重新登录但无效。希望管理员检查权限。",
+    "service_name": "邮箱",
+    "impact": "团队",
+    "priority": "P2"
+  },
+  "status": "pending",
+  "review": "pending"
+}

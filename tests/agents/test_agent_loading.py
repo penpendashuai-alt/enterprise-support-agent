@@ -8,6 +8,13 @@ from agents.agents import agents, get_agent, load_agent
 from agents.lazy_agent import LazyLoadingAgent
 
 
+@pytest.fixture(autouse=True)
+def enable_examples(monkeypatch):
+    from core import settings
+
+    monkeypatch.setattr(settings, "ENABLED_AGENTS", ["support-agent", "chatbot", "test-lazy-agent"])
+
+
 class TestAgentLoading:
     """Test agent loading functionality."""
 
@@ -36,8 +43,10 @@ class TestAgentLoading:
         with pytest.raises(KeyError):
             await load_agent("nonexistent-agent")
 
-    def test_get_agent_static_agent(self):
+    @pytest.mark.asyncio
+    async def test_get_agent_static_agent(self):
         """Test getting a static agent."""
+        await load_agent("chatbot")
         agent = get_agent("chatbot")
         assert agent is not None
 

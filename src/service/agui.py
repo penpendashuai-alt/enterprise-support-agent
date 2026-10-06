@@ -20,10 +20,9 @@ from ag_ui_langgraph import LangGraphAgent
 from fastapi import APIRouter, HTTPException, Request
 from fastapi.responses import StreamingResponse
 from langchain_core.runnables import RunnableConfig
-from langfuse.langchain import CallbackHandler  # type: ignore[import-untyped]
 
 from agents import DEFAULT_AGENT, AgentGraph, get_agent
-from core import settings
+from execution.observability import callbacks as tracing_callbacks
 from service.support import execution_lock
 from service.utils import ensure_model_available
 from support_storage.identity import guard_thread
@@ -58,9 +57,7 @@ def _base_config(input_data: RunAgentInput, agent_id: str) -> RunnableConfig:
     if (model := configurable.get("model")) is not None:
         ensure_model_available(model)
 
-    callbacks: list[Any] = []
-    if settings.LANGFUSE_TRACING:
-        callbacks.append(CallbackHandler())
+    callbacks = tracing_callbacks()
 
     configurable = dict(configurable)
     user_id = configurable.setdefault("user_id", str(uuid4()))

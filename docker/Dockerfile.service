@@ -1,25 +1,13 @@
 FROM python:3.13.14-slim
-
 WORKDIR /app
-
-ENV UV_PROJECT_ENVIRONMENT="/usr/local/"
-ENV UV_COMPILE_BYTECODE=1
-
-COPY pyproject.toml .
-COPY uv.lock .
-RUN pip install --no-cache-dir uv==0.12.5
-RUN uv sync --frozen --no-install-project --no-dev
-
-COPY src/agents/ ./agents/
-COPY src/core/ ./core/
-COPY src/execution/ ./execution/
-COPY src/memory/ ./memory/
-COPY src/schema/ ./schema/
-COPY src/tickets/ ./tickets/
-COPY src/support_storage/ ./support_storage/
+ENV UV_PROJECT_ENVIRONMENT=/usr/local/ UV_COMPILE_BYTECODE=1 UV_NO_CACHE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/app/src
+COPY pyproject.toml uv.lock ./
+RUN pip install --no-cache-dir uv==0.12.5 && uv sync --frozen --no-install-project --no-dev
+RUN useradd --create-home --uid 10001 app && mkdir /app/data && chown app:app /app/data
+COPY src/ ./src/
+COPY scripts/ ./scripts/
 COPY migrations/ ./migrations/
-COPY src/rag/ ./rag/
-COPY src/service/ ./service/
-COPY src/run_service.py .
-
-CMD ["python", "run_service.py"]
+COPY data/knowledge/ ./data/knowledge/
+COPY evaluation/datasets/snapshot_v2.json ./evaluation/datasets/
+USER 10001:10001
+CMD ["python", "src/run_service.py"]

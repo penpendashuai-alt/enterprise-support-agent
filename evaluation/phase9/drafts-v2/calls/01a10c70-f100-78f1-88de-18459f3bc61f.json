@@ -1,0 +1,37 @@
+{
+  "call_id": "01a10c70-f100-78f1-88de-18459f3bc61f",
+  "run_id": "drafts-v2",
+  "case_id": "third_party",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-05T14:21:30.760683+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 656,
+    "output_tokens": 121,
+    "total_tokens": 777,
+    "input_token_details": {
+      "cache_read": 640
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.009171,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-05T14:21:33.281608+00:00",
+  "visible_model_output": "",
+  "error_type": null,
+  "structured_tool_calls": [
+    {
+      "name": "DraftExtraction",
+      "args": {
+        "title": "团队邮箱无法发送",
+        "description": "团队邮箱无法发送。同事建议重新登录，但用户尚未尝试重新登录。",
+        "service_name": "邮箱",
+        "impact": null,
+        "priority": null
+      },
+      "id": "call_00_wNc5fp3gwjbBDQvaxLFW9943",
+      "type": "tool_call"
+    }
+  ]
+}

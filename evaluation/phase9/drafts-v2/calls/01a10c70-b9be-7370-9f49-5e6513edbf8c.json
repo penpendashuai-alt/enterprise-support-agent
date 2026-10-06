@@ -1,0 +1,37 @@
+{
+  "call_id": "01a10c70-b9be-7370-9f49-5e6513edbf8c",
+  "run_id": "drafts-v2",
+  "case_id": "plan",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-05T14:21:16.613772+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 661,
+    "output_tokens": 126,
+    "total_tokens": 787,
+    "input_token_details": {
+      "cache_read": 640
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.009351,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-05T14:21:18.999048+00:00",
+  "visible_model_output": "",
+  "error_type": null,
+  "structured_tool_calls": [
+    {
+      "name": "DraftExtraction",
+      "args": {
+        "title": "邮箱无法收信",
+        "description": "用户邮箱无法收信，仅影响本人。用户计划今晚重启电脑，目前尚未重启。",
+        "service_name": "邮箱",
+        "impact": "仅影响本人",
+        "priority": null
+      },
+      "id": "call_00_2NosgW31JdH2tBPEnpx01628",
+      "type": "tool_call"
+    }
+  ]
+}

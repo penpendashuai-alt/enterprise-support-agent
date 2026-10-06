@@ -1,0 +1,17 @@
+{
+  "id": "correction",
+  "inputs": [
+    "VPN报错，只有本人，已重启，请建工单。",
+    "更正：还没重启，刚才说错了，只准备下班后试。"
+  ],
+  "criterion": "新更正覆盖旧已执行状态",
+  "draft": {
+    "title": "VPN报错",
+    "description": "VPN报错，影响范围仅本人。用户尚未重启，准备下班后再尝试。此前用户曾表示已重启，后更正为未重启。",
+    "service_name": "VPN",
+    "impact": "仅本人",
+    "priority": "P3"
+  },
+  "status": "pending",
+  "review": "pending"
+}

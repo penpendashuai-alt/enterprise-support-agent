@@ -1,0 +1,100 @@
+{
+  "status": "passed",
+  "transport": "real local OTLP HTTP; locked Langfuse SDK",
+  "remote_langfuse_receipt": "unverified",
+  "synthetic_trace_categories": 4,
+  "spans": 12,
+  "parent_links_valid": true,
+  "sensitive_marker_absent": true,
+  "paid_calls": 0,
+  "records": [
+    {
+      "code_version": "local",
+      "prompt_sha256": "e06f365a4abf014353318abae656bd5b8ee4e9ad5fa3603e7561c85893d46cb5",
+      "config_sha256": "f48a13b06dd088f0723f92c42edfcdb2602ea4295ce3a5fa7781279a18b87fbc",
+      "session_hash": "215f800793a181db8965bd51cf2c25b1",
+      "cache_status": "miss",
+      "trace_id": "97ff9cb477c6e38b446e57e5386d51c4",
+      "model_calls": [
+        {
+          "usage_known": false,
+          "model": "deepseek-v4-pro",
+          "usage": {}
+        }
+      ],
+      "request_id": "de65e8ad1d334614b62636762e112b50",
+      "run_id": null,
+      "category": "model",
+      "outcome": "success",
+      "status": 200,
+      "total_seconds": 0.12488100002519786,
+      "timings": {}
+    },
+    {
+      "code_version": "local",
+      "prompt_sha256": "e06f365a4abf014353318abae656bd5b8ee4e9ad5fa3603e7561c85893d46cb5",
+      "config_sha256": "f48a13b06dd088f0723f92c42edfcdb2602ea4295ce3a5fa7781279a18b87fbc",
+      "session_hash": "215f800793a181db8965bd51cf2c25b1",
+      "cache_status": "hit",
+      "trace_id": "abef30210f1e3ecd0713476fb39a26e0",
+      "model_calls": [
+        {
+          "usage_known": false,
+          "model": "deepseek-v4-pro",
+          "usage": {}
+        }
+      ],
+      "request_id": "3185b3d1d2404ad59dddcd3cbbf5ac2b",
+      "run_id": null,
+      "category": "model",
+      "outcome": "success",
+      "status": 200,
+      "total_seconds": 0.0031485999934375286,
+      "timings": {}
+    },
+    {
+      "code_version": "local",
+      "prompt_sha256": "e06f365a4abf014353318abae656bd5b8ee4e9ad5fa3603e7561c85893d46cb5",
+      "config_sha256": "f48a13b06dd088f0723f92c42edfcdb2602ea4295ce3a5fa7781279a18b87fbc",
+      "session_hash": "215f800793a181db8965bd51cf2c25b1",
+      "cache_status": "miss",
+      "trace_id": "533393a9fe77260137da0788888e3f2f",
+      "model_calls": [
+        {
+          "usage_known": false,
+          "model": "deepseek-v4-pro",
+          "usage": {}
+        }
+      ],
+      "request_id": "2f8a0e4bdeee43eba9b879f38dc1d334",
+      "run_id": null,
+      "category": "approval",
+      "outcome": "success",
+      "status": 200,
+      "total_seconds": 0.002492200001142919,
+      "timings": {}
+    },
+    {
+      "code_version": "local",
+      "prompt_sha256": "e06f365a4abf014353318abae656bd5b8ee4e9ad5fa3603e7561c85893d46cb5",
+      "config_sha256": "f48a13b06dd088f0723f92c42edfcdb2602ea4295ce3a5fa7781279a18b87fbc",
+      "session_hash": "215f800793a181db8965bd51cf2c25b1",
+      "cache_status": "miss",
+      "trace_id": "9c0a65471c98d7f703cab7cb99f67054",
+      "model_calls": [
+        {
+          "usage_known": false,
+          "model": "deepseek-v4-pro",
+          "usage": {}
+        }
+      ],
+      "request_id": "f0dfc40e94824d2190e79f79d8584e6e",
+      "run_id": null,
+      "category": "model",
+      "outcome": "dependency_unavailable",
+      "status": 503,
+      "total_seconds": 0.0025799000868573785,
+      "timings": {}
+    }
+  ]
+}

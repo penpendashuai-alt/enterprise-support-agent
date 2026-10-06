@@ -39,6 +39,7 @@ def isolate_support_storage(monkeypatch, tmp_path):
     monkeypatch.setattr(settings, "SUPPORT_DEMO_SAMPLES", True)
     monkeypatch.setattr(settings, "RAG_CACHE_ENABLED", False)
     monkeypatch.setattr(settings, "ADMISSION_ENABLED", False)
+    monkeypatch.setattr(settings, "LANGFUSE_TRACING", False)
 
 
 @pytest.fixture(autouse=True)

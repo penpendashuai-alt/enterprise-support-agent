@@ -113,6 +113,13 @@ async def test_support_endpoints_and_router_privacy(monkeypatch, tmp_path, endpo
         assert state.values["entities"].service_name == "GitHub"
 
 
-def test_existing_agents_remain_registered():
+def test_existing_agents_remain_registered(monkeypatch):
+    from core import settings
+
+    monkeypatch.setattr(
+        settings,
+        "ENABLED_AGENTS",
+        ["support-agent", "research-assistant", "chatbot", "rag-assistant"],
+    )
     keys = {agent.key for agent in get_all_agent_info()}
     assert {"support-agent", "research-assistant", "chatbot", "rag-assistant"} <= keys

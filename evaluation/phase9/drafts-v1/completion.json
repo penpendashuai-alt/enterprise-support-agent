@@ -1,0 +1,17 @@
+{
+  "id": "completion",
+  "inputs": [
+    "VPN报错只有本人，尚未重启，请建工单。",
+    "补充：现在已重启，仍失败。"
+  ],
+  "criterion": "最新操作已执行且失败",
+  "draft": {
+    "title": "VPN报错重启后仍失败",
+    "description": "VPN报错，影响范围只有本人。用户已重启，重启后仍失败。",
+    "service_name": "VPN",
+    "impact": "只有本人",
+    "priority": "P3"
+  },
+  "status": "pending",
+  "review": "pending"
+}

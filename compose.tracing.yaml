@@ -1,0 +1,9 @@
+services:
+  agent_service:
+    environment:
+      LANGFUSE_TRACING: "true"
+      LANGFUSE_HOST: ${LANGFUSE_HOST:?Set the designated tracing receiver}
+      LANGFUSE_PUBLIC_KEY: ${LANGFUSE_PUBLIC_KEY:?Set a local private tracing key}
+      LANGFUSE_SECRET_KEY: ${LANGFUSE_SECRET_KEY:?Set a local private tracing key}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

@@ -425,9 +425,12 @@ def test_stream_interrupt(test_client, mock_agent) -> None:
         assert messages[0]["content"]["type"] == "ai"
 
 
-def test_info(test_client, mock_settings) -> None:
+def test_info(test_client, mock_settings, monkeypatch) -> None:
     """Test that /info returns the correct service metadata."""
 
+    from core import settings
+
+    monkeypatch.setattr(settings, "ENABLED_AGENTS", ["base-agent"])
     base_agent = Agent(description="A base agent.", graph_like=None)
     mock_settings.AUTH_SECRET = None
     mock_settings.DEFAULT_MODEL = OpenAIModelName.GPT_5_NANO

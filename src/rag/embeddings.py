@@ -11,13 +11,17 @@ from rag.models import RAGError
 class Embeddings:
     def __init__(self, settings: RAGSettings):
         self.settings = settings
-        self.client = AsyncOpenAI(
-            api_key=settings.EMBED_API_KEY.get_secret_value()
-            if settings.EMBED_API_KEY
-            else "not-configured",
-            base_url=settings.EMBED_BASE_URL,
-            timeout=settings.EMBED_TIMEOUT,
-            max_retries=0,
+        self.client = (
+            None
+            if settings.CI_TEST_MODE
+            else AsyncOpenAI(
+                api_key=settings.EMBED_API_KEY.get_secret_value()
+                if settings.EMBED_API_KEY
+                else "not-configured",
+                base_url=settings.EMBED_BASE_URL,
+                timeout=settings.EMBED_TIMEOUT,
+                max_retries=0,
+            )
         )
         self.usage_tokens = 0
         self.requests = 0
@@ -25,12 +29,22 @@ class Embeddings:
         self.elapsed = 0.0
 
     async def close(self):
-        await self.client.close()
+        if self.client:
+            await self.client.close()
 
     async def embed(self, texts: list[str]) -> list[list[float]]:
         return (await self.embed_with_usage(texts))[0]
 
     async def embed_with_usage(self, texts: list[str]) -> tuple[list[list[float]], dict]:
+        if self.settings.CI_TEST_MODE:
+            self.settings.require_dense()
+            return [[1.0] + [0.0] * 1023 for _ in texts], {
+                "embedding_tokens": 0,
+                "requests": 0,
+                "retries": 0,
+                "fixture_calls": 1,
+            }
+        assert self.client is not None
         # UTF-8 bytes conservatively bound byte-token input; this is not billing usage.
         if any(not text.strip() or len(text.encode("utf-8")) > 8000 for text in texts):
             raise RAGError("embedding_input_limit")

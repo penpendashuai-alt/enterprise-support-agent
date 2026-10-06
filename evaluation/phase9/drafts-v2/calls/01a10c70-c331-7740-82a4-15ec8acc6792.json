@@ -1,0 +1,37 @@
+{
+  "call_id": "01a10c70-c331-7740-82a4-15ec8acc6792",
+  "run_id": "drafts-v2",
+  "case_id": "done",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-05T14:21:19.031987+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 656,
+    "output_tokens": 125,
+    "total_tokens": 781,
+    "input_token_details": {
+      "cache_read": 640
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.009279,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-05T14:21:21.253601+00:00",
+  "visible_model_output": "",
+  "error_type": null,
+  "structured_tool_calls": [
+    {
+      "name": "DraftExtraction",
+      "args": {
+        "title": "VPN 报错 809",
+        "description": "VPN 报错 809。用户已重启电脑，但问题未解决。",
+        "service_name": "VPN",
+        "impact": "仅影响本人",
+        "priority": null
+      },
+      "id": "call_00_hfK3Eqq4oP26vAiyEhZB4352",
+      "type": "tool_call"
+    }
+  ]
+}

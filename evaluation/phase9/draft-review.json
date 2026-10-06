@@ -1,0 +1,105 @@
+{
+  "reviewer": "development-assistant; not independent blind review",
+  "cases": 12,
+  "generated": 11,
+  "faithful_generated": 11,
+  "clarification": 1,
+  "records": [
+    {
+      "case_id": "completion",
+      "record_sha256": "c2c97b2f32a2253aefad7628000b30e36b6166b4db540dc7ab2321be7e7bc363",
+      "draft_generated": true,
+      "facts_faithful": true,
+      "task_complete": true,
+      "reason": "最新操作已执行且失败；逐句对照通过"
+    },
+    {
+      "case_id": "conditional",
+      "record_sha256": "5f416bb030d43a1d625a7d7004eafe11b1044543992d0a42ca6ebdb169181837",
+      "draft_generated": true,
+      "facts_faithful": true,
+      "task_complete": true,
+      "reason": "条件计划尚未执行；逐句对照通过"
+    },
+    {
+      "case_id": "correction",
+      "record_sha256": "d410cf867c5f3a68be83e8b0b6e7e5f90f84d23c141a483ce6dee51c77aaa7ed",
+      "draft_generated": true,
+      "facts_faithful": true,
+      "task_complete": true,
+      "reason": "新更正覆盖旧已执行状态；逐句对照通过"
+    },
+    {
+      "case_id": "correction_scope",
+      "record_sha256": "fb16b8819df8ba419b7b93572fd29b7823f6a62aa0538e2d120c02fa1fac6c29",
+      "draft_generated": true,
+      "facts_faithful": true,
+      "task_complete": true,
+      "reason": "更正范围，保留登录事实，重置仅为请求；逐句对照通过"
+    },
+    {
+      "case_id": "done",
+      "record_sha256": "6ba3a76c4b0714ad943e61d81001a404615705a3a78d8809ed56bc8fa6b86f08",
+      "draft_generated": true,
+      "facts_faithful": true,
+      "task_complete": true,
+      "reason": "重启已执行但未解决；逐句对照通过"
+    },
+    {
+      "case_id": "mixed",
+      "record_sha256": "2ae69aa567b31e283dd78b84242b16957489e7c3289d4141e695810e41c31333",
+      "draft_generated": true,
+      "facts_faithful": true,
+      "task_complete": true,
+      "reason": "登录已执行，权限检查仅为请求；逐句对照通过"
+    },
+    {
+      "case_id": "negative",
+      "record_sha256": "f8f5ab13af4248d2896125936c39e05f5da265e7c881d380c335484a539a1b1a",
+      "draft_generated": true,
+      "facts_faithful": true,
+      "task_complete": true,
+      "reason": "禁止将否定操作描述为已执行；逐句对照通过"
+    },
+    {
+      "case_id": "not_done",
+      "record_sha256": "4e7529cb4d4362a7fc35f9ccbea98cb213adbbe385bb4da54b4b50fe00671561",
+      "draft_generated": true,
+      "facts_faithful": true,
+      "task_complete": true,
+      "reason": "两个否定操作都不得转为已尝试；逐句对照通过"
+    },
+    {
+      "case_id": "plan",
+      "record_sha256": "d556eb3280401862f6e648774aea02ca305a8d4fddd4066b8cd3228997eedb01",
+      "draft_generated": true,
+      "facts_faithful": true,
+      "task_complete": true,
+      "reason": "重启为计划，明确未执行；逐句对照通过"
+    },
+    {
+      "case_id": "request",
+      "record_sha256": "6880d7b4b9ac1ad20176a4d127d78c88d02785f0165cc73df783ece394ad9da5",
+      "draft_generated": true,
+      "facts_faithful": true,
+      "task_complete": true,
+      "reason": "人工检查仅为未来请求；逐句对照通过"
+    },
+    {
+      "case_id": "request_after_action",
+      "record_sha256": "ef5b63675aa32d034fdb281d81084f0a834be142fcd61cd5746cdb0fffd32c1d",
+      "draft_generated": true,
+      "facts_faithful": true,
+      "task_complete": true,
+      "reason": "重装已执行，人工检查未执行；逐句对照通过"
+    },
+    {
+      "case_id": "third_party",
+      "record_sha256": "b56f9fa618bca4b185b63ebf054141fec02c67dcce381408d72e12fab22f67b4",
+      "draft_generated": false,
+      "facts_faithful": null,
+      "task_complete": false,
+      "reason": "未生成草稿；团队邮箱表示邮箱对象，不一定是整个团队受影响，补充影响范围是保守澄清。该例不能计入已生成草稿忠实度分母。"
+    }
+  ]
+}

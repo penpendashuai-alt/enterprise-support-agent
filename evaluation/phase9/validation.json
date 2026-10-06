@@ -1,0 +1,26 @@
+{
+  "status": "partial_acceptance",
+  "full_pytest": {
+    "passed": 372,
+    "skipped": 4,
+    "scope": "before final router failure telemetry correction"
+  },
+  "final_related_tests": 23,
+  "ruff": "passed",
+  "pyrefly_errors": 0,
+  "markdown": "passed",
+  "containers": "passed_containers_v4",
+  "remote_langfuse": "unverified",
+  "paid_budget_cny": 20,
+  "returned_usage_estimate_cny": 0.223848,
+  "logical_model_calls": 24,
+  "physical_http_attempts": "not_instrumented_for_first_two_runs",
+  "paid_embedding_calls": 0,
+  "github_pushed": false,
+  "container_check_groups": 13,
+  "runtime_request_summaries": 54,
+  "default_compose": "startup_and_cloud_index_health_passed_no_paid_calls",
+  "browser_websocket": "not_tested",
+  "github_actions": "not_run",
+  "this_continuation_paid_calls": 0
+}

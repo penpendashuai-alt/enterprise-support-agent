@@ -55,7 +55,7 @@ async def test_identity_is_required_and_ownership_precedes_checkpoint_read(
             "state": {},
             "forwardedProps": {"configurable": {"user_id": "test-user"}},
         }
-        assert (await client.post("/agui/chatbot/run", json=agui_body)).status_code == 403
+        assert (await client.post("/agui/chatbot/run", json=agui_body)).status_code == 404
         assert (await client.post("/agui/support-agent/run", json=agui_body)).status_code == 422
         spy.assert_not_awaited()
         assert (await send(client, decision=approval(draft))).status_code == 200

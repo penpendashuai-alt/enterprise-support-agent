@@ -2,6 +2,10 @@
 
 本目录保留 Synthetic enterprise support dataset / public technical documentation 的 Phase 4 Dense 基线和 Phase 5 对照实验。真实评测使用 DashScope Embedding、Qdrant Cloud、Elasticsearch、Reranker 和聊天模型；Mock 只用于程序行为测试。
 
+## Phase 9
+
+部署、健康、日志过滤、草稿事实状态回归与容器演练见 [Phase 9 记录索引](phase9/README.md) 和 [阶段文档](../docs/phase9_deployment_observability.md)。按实际证据区分配置检查、离线测试、本地追踪导出、容器运行和远程 Langfuse 接收。
+
 ## Phase 8
 
 统一 Agent 质量评测见 [记录索引](phase8/README.md) 与 [开发文档](../docs/phase8_agent_evaluation.md)。60 个按家族划分的任务、三层评测、真实 HTTP/PostgreSQL 审批核查、非独立语义审阅及离线复算均已完成。冻结留出契约两组均为 20/24；补审草稿事实后基线 19/24、候选 18/24，**未证明整体质量提升**。P1 缺块、无据扩写、标签范围问题及草稿时态偏差均保留。费用估算 6.147443 元；个人资料不进入公开资产。

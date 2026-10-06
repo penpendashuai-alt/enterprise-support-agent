@@ -1,0 +1,10 @@
+{
+  "id": "third_party",
+  "inputs": [
+    "团队邮箱无法发送，同事建议重新登录，但我没试过，请建工单。"
+  ],
+  "criterion": "建议不等于尝试",
+  "draft": null,
+  "status": "collecting",
+  "review": "pending"
+}

@@ -22,3 +22,9 @@ phase3-*.log
 .pytest_cache/
 .ruff_cache/
 *.log
+
+.env.*
+!**/*.env.example
+
+*.dump
+**/*.env

@@ -1,0 +1,23 @@
+services:
+  elasticsearch:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.elasticsearch
+    environment:
+      discovery.type: single-node
+      xpack.security.enabled: "false"
+      xpack.ml.enabled: "false"
+      ES_JAVA_OPTS: -Xms512m -Xmx512m
+    volumes:
+      - phase9_es:/usr/share/elasticsearch/data
+    mem_limit: 2g
+  agent_service:
+    environment:
+      ES_URL: http://elasticsearch:9200
+      ES_INDEX: ${ES_INDEX:-enterprise-support-lexical-v2}
+      RAG_RETRIEVAL_MODE: hybrid
+    depends_on:
+      elasticsearch:
+        condition: service_started
+volumes:
+  phase9_es:

@@ -1,0 +1,31 @@
+services:
+  qdrant:
+    image: qdrant/qdrant:v1.19.0
+    volumes:
+      - phase9_qdrant:/qdrant/storage
+  agent_service:
+    environment:
+      QDRANT_LOCAL: "true"
+      QDRANT_URL: http://qdrant:6333
+      QDRANT_API_KEY: ""
+      QDRANT_COLLECTION: ${LOCAL_QDRANT_COLLECTION:?Set a new local collection explicitly}
+    depends_on:
+      qdrant:
+        condition: service_started
+  index:
+    image: enterprise-support-service:${CODE_VERSION:-local}
+    profiles: [tools]
+    env_file: ${ESA_ENV_FILE:-.env.compose}
+    environment:
+      QDRANT_LOCAL: "true"
+      QDRANT_URL: http://qdrant:6333
+      QDRANT_API_KEY: ""
+      QDRANT_COLLECTION: ${LOCAL_QDRANT_COLLECTION:?Set a new local collection explicitly}
+      RAG_CHUNK_SIZE: "800"
+      RAG_CHUNK_OVERLAP: "100"
+    command: [python, scripts/import_local_index.py, --budget, "0"]
+    depends_on:
+      qdrant:
+        condition: service_started
+volumes:
+  phase9_qdrant:

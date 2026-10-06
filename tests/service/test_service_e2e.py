@@ -87,8 +87,11 @@ def mock_database_settings(mock_env):
         yield mock_settings
 
 
-def test_agent_stream(mock_database_settings, mock_httpx):
+def test_agent_stream(mock_database_settings, mock_httpx, monkeypatch):
     """Test that streaming from our static agent works correctly with token streaming."""
+    from core import settings
+
+    monkeypatch.setattr(settings, "ENABLED_AGENTS", ["static-agent"])
     agent_meta = Agent(description="A static agent.", graph_like=static_agent)
     with patch.dict("agents.agents.agents", {"static-agent": agent_meta}, clear=True):
         client = AgentClient(agent="static-agent")

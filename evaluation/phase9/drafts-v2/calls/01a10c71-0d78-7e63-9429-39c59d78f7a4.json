@@ -1,0 +1,37 @@
+{
+  "call_id": "01a10c71-0d78-7e63-9429-39c59d78f7a4",
+  "run_id": "drafts-v2",
+  "case_id": "request_after_action",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-05T14:21:38.048429+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 659,
+    "output_tokens": 140,
+    "total_tokens": 799,
+    "input_token_details": {
+      "cache_read": 640
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.009711,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-05T14:21:40.431120+00:00",
+  "visible_model_output": "",
+  "error_type": null,
+  "structured_tool_calls": [
+    {
+      "name": "DraftExtraction",
+      "args": {
+        "title": "VPN 报错 809，重装客户端后仍失败",
+        "description": "VPN 连接报错 809。已重装客户端，仍连接失败。希望建立工单并安排人工检查。",
+        "service_name": "VPN",
+        "impact": "只有本人",
+        "priority": null
+      },
+      "id": "call_00_ombCEBUaxunZWenxeZGe6042",
+      "type": "tool_call"
+    }
+  ]
+}

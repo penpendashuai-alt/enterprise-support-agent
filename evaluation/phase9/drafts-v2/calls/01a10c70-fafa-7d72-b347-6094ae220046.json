@@ -1,0 +1,37 @@
+{
+  "call_id": "01a10c70-fafa-7d72-b347-6094ae220046",
+  "run_id": "drafts-v2",
+  "case_id": "negative",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-05T14:21:33.314782+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 656,
+    "output_tokens": 123,
+    "total_tokens": 779,
+    "input_token_details": {
+      "cache_read": 640
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.009225,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-05T14:21:35.760891+00:00",
+  "visible_model_output": "",
+  "error_type": null,
+  "structured_tool_calls": [
+    {
+      "name": "DraftExtraction",
+      "args": {
+        "title": "VPN无法连接",
+        "description": "VPN无法连接。影响范围只有本人。用户没有关闭防火墙，也不希望关闭防火墙。",
+        "service_name": "VPN",
+        "impact": "只有本人",
+        "priority": null
+      },
+      "id": "call_00_V8S3hisqyQQ2J5uKi1Jk5546",
+      "type": "tool_call"
+    }
+  ]
+}

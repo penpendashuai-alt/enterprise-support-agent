@@ -1,0 +1,65 @@
+[
+  {
+    "check": "real_service_business_scenarios",
+    "at": "2026-10-06T08:08:18.120133+00:00",
+    "requests": {
+      "question": {
+        "request_id": "b244c66bc3d24e13a2427b05bafc3fcb",
+        "trace_id": "9a15eefdbb5d210ce33cab1832e6bf36",
+        "run_id": "01a11041-8f1b-7133-b763-5245a7c4932b",
+        "http_status": 200
+      },
+      "cached_question": {
+        "request_id": "657dbd5c95724101a97c098eb0fdfbcc",
+        "trace_id": "5799c2266de1c9150d604af33255d5a6",
+        "run_id": "01a11041-91a9-7992-a66a-24ad5e5b1e49",
+        "http_status": 200
+      },
+      "tool": {
+        "request_id": "01ad9334687d413db82e23438778f351",
+        "trace_id": "b71fda051f6a9bc57adb9eb6ca6682a0",
+        "run_id": "01a11041-91e8-79e1-8ec7-c8ba1fe94ca7",
+        "http_status": 200
+      },
+      "draft": {
+        "request_id": "3e115c30c38d4d2d9f97585400013fc8",
+        "trace_id": "beea37be6809a54f9ad87a74eb421f8e",
+        "run_id": "01a11041-9235-7e22-b217-5d39b2c2b7e0",
+        "http_status": 200
+      },
+      "approval": {
+        "request_id": "85133e6d197f40eb9aef5d9b751868a4",
+        "trace_id": "ba40a9c535d38d6404a410bed5d527ad",
+        "run_id": "01a11041-965b-7321-be9a-73a56560940d",
+        "http_status": 200
+      },
+      "router_failure": {
+        "request_id": "5486588be6c045c8bb301894d9bfb531",
+        "trace_id": "61553237547dbf963d23f945263a28e6",
+        "run_id": "01a11041-9689-7931-b965-a7ea96cdd14e",
+        "http_status": 200
+      },
+      "dependency_failure": {
+        "request_id": "713aded4fbb64aeeae2325375051a48f",
+        "trace_id": "56afe694429c860331daed409d0379c3",
+        "run_id": null,
+        "http_status": 503
+      }
+    },
+    "receiver": "local",
+    "paid_calls": 0
+  },
+  {
+    "check": "received_queried_and_filtered",
+    "at": "2026-10-06T08:08:23.522881+00:00",
+    "observations": 54,
+    "receiver": "local"
+  },
+  {
+    "check": "receiver_unreachable_business_and_shutdown",
+    "at": "2026-10-06T08:08:43.427727+00:00",
+    "http_status": 200,
+    "shutdown_seconds": 3.660361299989745,
+    "exit_code": 0
+  }
+]

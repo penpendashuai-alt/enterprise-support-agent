@@ -205,3 +205,8 @@ smoke_live_app_failure.png
 *.db-shm
 *.db-journal
 phase3-*.log
+
+.env.*
+!**/*.env.example
+
+*.dump

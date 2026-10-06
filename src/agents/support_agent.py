@@ -25,7 +25,7 @@ from agents.ticket_flow import (
 from core import get_model, settings
 from core.llm import ModelT
 from execution.control import model_stage
-from execution.telemetry import ControlError
+from execution.telemetry import ControlError, current
 from rag.answers import evidence_message, finalize, unavailable_answer
 from rag.models import RetrievalResult
 from support_storage.preferences import preference_message
@@ -138,6 +138,10 @@ def allowed_tools(state: SupportState) -> tuple[str, ...]:
 
 
 def get_support_model(config: RunnableConfig) -> ModelT:
+    if settings.CI_TEST_MODE:
+        from service.ci_model import CIModel
+
+        return CIModel()
     model = get_model(config.get("configurable", {}).get("model", settings.DEFAULT_MODEL))
     if (
         isinstance(model, ChatOpenAI)
@@ -184,6 +188,8 @@ async def route_request(state: SupportState, config: RunnableConfig) -> dict:
         raise
     except Exception as exc:
         logger.warning("Support router failed: %s", type(exc).__name__)
+        if trace := current.get():
+            trace.outcome = "router_unavailable"
         return {
             "knowledge_required": False,
             "retrieval_query": None,
@@ -209,6 +215,8 @@ async def route_request(state: SupportState, config: RunnableConfig) -> dict:
             question = "请提供要查询的工单编号，例如 INC-1001（模拟工单）。"
         elif entities.ticket_action == "create" and not entities.issue_description:
             question = "请描述遇到的问题、发生时间和影响范围。工单尚未提交，信息齐全后需确认草稿。"
+    if trace := current.get():
+        trace.metadata["intent"] = decision.intent
     needs_clarification = decision.needs_clarification or bool(question)
     knowledge_required = (
         decision.knowledge_required or decision.intent == "troubleshooting"
@@ -247,6 +255,18 @@ async def retrieve_knowledge(state: SupportState) -> dict:
     from rag.retriever import retrieve
 
     result = await retrieve(state.get("retrieval_query") or "")
+    from execution.observability import pseudonym
+
+    if trace := current.get():
+        trace.metadata.update(
+            retrieval_mode=result.actual_mode,
+            index_hash=pseudonym(result.index_version),
+            candidates=len(result.candidates),
+            evidence=len(result.evidence),
+            cache_status=result.cache.get("status", "disabled"),
+            embedding_tokens=result.usage.get("embedding_tokens"),
+            embedding_requests=result.usage.get("requests"),
+        )
     return {"retrieval": result.model_dump()}
 
 

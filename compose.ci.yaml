@@ -1,0 +1,22 @@
+services:
+  agent_service:
+    environment:
+      CI_TEST_MODE: "true"
+      USE_FAKE_MODEL: "true"
+      DEFAULT_MODEL: fake
+      LANGFUSE_TRACING: "false"
+      QDRANT_COLLECTION: enterprise_support_dense_ci_v1
+      REQUEST_TIMEOUT: "8"
+      RATE_SERVICE_CAPACITY: "1000"
+      RATE_USER_CAPACITY: "1000"
+    depends_on:
+      index:
+        condition: service_completed_successfully
+  index:
+    profiles: !reset []
+    environment:
+      CI_TEST_MODE: "true"
+      QDRANT_COLLECTION: enterprise_support_dense_ci_v1
+    command: [python, scripts/init_ci_index.py]
+    restart: on-failure:3
+

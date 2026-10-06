@@ -1,0 +1,32 @@
+{
+  "at": "2026-10-06T03:03:09.384320+00:00",
+  "engine_version": "29.8.2",
+  "repair": "settings backed up; Docker-specific WSL stopped; corrupted docker_data.vhdx moved to private backup; fresh data disk created",
+  "settings_preserved": true,
+  "ubuntu_untouched": true,
+  "redis_container_execution": "passed",
+  "images": {
+    "enterprise-support-service:ci": "sha256:c7ff52c3bd93df1d443bf40d337f989aba5c1b8d686091f512aeaf08dcd0b035",
+    "enterprise-support-app:ci": "sha256:7d5be860de766d289674cc4d0248ef3a2e3a6c68199f8199088565948467fd1a"
+  },
+  "container_acceptance": "containers-v4/checks.json",
+  "source_sha256_at_acceptance": {
+    "docker/Dockerfile.service": "59e1872b25b9f6c444a13ce7bb56cc543ea80cddd4f3c1929a9d17e4de5248fd",
+    "docker/Dockerfile.app": "f305633e317b634282b89361f2b87476e3598936e16f36939dc4e5c25a140b30",
+    "src/service/ci_model.py": "907345d7535d85ca44b8c5ef70878e71ca33021a994249132cc3cabaf685687c",
+    "scripts/verify_phase9_containers.py": "f042ecb1400c6521ca884144ecb4b9a5fe00d190df68e93beccb72968f093e04",
+    "src/agents/support_agent.py": "16dbc3c5b60287b6a7a8f9bc06fa113395be091a93c1a19a5457b638b731d149",
+    "src/streamlit_app.py": "b4597c3b79f3f9870cb6f61b3451756567ff0b18ffcd9f9c1bae977312be0f9b"
+  },
+  "final_source_sha256": {
+    "docker/Dockerfile.service": "59e1872b25b9f6c444a13ce7bb56cc543ea80cddd4f3c1929a9d17e4de5248fd",
+    "docker/Dockerfile.app": "f305633e317b634282b89361f2b87476e3598936e16f36939dc4e5c25a140b30",
+    "src/service/ci_model.py": "907345d7535d85ca44b8c5ef70878e71ca33021a994249132cc3cabaf685687c",
+    "scripts/verify_phase9_containers.py": "f042ecb1400c6521ca884144ecb4b9a5fe00d190df68e93beccb72968f093e04",
+    "src/agents/support_agent.py": "cebd0595c77a4a2755055035cce59d36c3941bb89f3662e7dff07b54c30ba204",
+    "src/streamlit_app.py": "b4597c3b79f3f9870cb6f61b3451756567ff0b18ffcd9f9c1bae977312be0f9b"
+  },
+  "post_acceptance_change": "Ruff blank-line formatting in support_agent.py only; AST matches accepted image",
+  "router_ast_sha256": "18b80f4a534cb9cfb08e72d401b0da6bd17223f711f70aac11c7f7e3d4dc1ea0",
+  "temporary_projects_and_volumes_cleaned": true
+}

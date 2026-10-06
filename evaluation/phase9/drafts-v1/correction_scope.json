@@ -1,0 +1,17 @@
+{
+  "id": "correction_scope",
+  "inputs": [
+    "邮箱收不到信影响整个团队，我已退出重登，请建P2工单。",
+    "更正影响范围：只有本人。请帮忙重置密码，但目前没有重置。"
+  ],
+  "criterion": "更正范围，保留登录事实，重置仅为请求",
+  "draft": {
+    "title": "邮箱收不到信",
+    "description": "邮箱收不到信。用户已退出重登。希望重置密码，但目前没有重置。",
+    "service_name": "邮箱",
+    "impact": "只有本人",
+    "priority": "P2"
+  },
+  "status": "pending",
+  "review": "pending"
+}

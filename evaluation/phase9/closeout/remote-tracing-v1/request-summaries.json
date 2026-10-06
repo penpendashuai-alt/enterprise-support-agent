@@ -1,0 +1,55 @@
+[
+  {
+    "level": "INFO",
+    "event": "support_request",
+    "code_version": "ci",
+    "prompt_sha256": "52083acff7b9e7b49b5fac7fcd2261699f6396b5eaee370c9543f82fd564b325",
+    "config_sha256": "f48a13b06dd088f0723f92c42edfcdb2602ea4295ce3a5fa7781279a18b87fbc",
+    "trace_id": "44801ad9223c20acf2614c7df11cc8ca",
+    "session_hash": "f9c405f52d2c17f140141a7896f54ae9",
+    "nodes": [
+      "router",
+      "router",
+      "router",
+      "retrieve",
+      "handler",
+      "handler"
+    ],
+    "intent": "general_question",
+    "retrieval_mode": "dense",
+    "index_hash": "6dd02ea91de4e09ab16b3e99e415e060",
+    "candidates": 1,
+    "evidence": 1,
+    "cache_status": "miss",
+    "embedding_tokens": 0,
+    "embedding_requests": 0,
+    "model_calls": [
+      {
+        "usage_known": false,
+        "model": "deterministic-fixture",
+        "usage": {}
+      }
+    ],
+    "request_id": "3fae81ae92654f39835d3141915eac74",
+    "run_id": "01a11047-ee33-7ef0-a469-0a3ae7c5340a",
+    "category": "model",
+    "outcome": "success",
+    "status": 200,
+    "total_seconds": 0.9401679699999477,
+    "timings": {
+      "rate_check": 0.0016867159999947035,
+      "thread_wait": 1.0900999996010796e-05,
+      "execution_wait": 9.599000009075098e-06,
+      "business_database": 0.008675274000097488,
+      "ownership": 0.01045127500003673,
+      "ownership_preflight": 0.0016179119999151226,
+      "model_wait": 3.4066999887727434e-05,
+      "router": 0.0058273480000252675,
+      "preferences": 0.0021937859999070497,
+      "handler": 0.006133092000027318,
+      "answer_validation": 0.00020569900004829833,
+      "output_send": 5.925499999648309e-05,
+      "execution": 0.935158630999922
+    }
+  }
+]

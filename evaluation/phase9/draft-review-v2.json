@@ -1,0 +1,94 @@
+{
+  "reviewer": "development-assistant; not independent blind review",
+  "repeat_reason": "v1 omitted structured tool-call output; v2 captures it with identical prompt. Both retained.",
+  "cases": 12,
+  "generated": 11,
+  "faithful_generated": 11,
+  "clarification": 1,
+  "records": [
+    {
+      "case_id": "completion",
+      "record_sha256": "d2e5ec07bf2700f0cd352c701e0b1b372e4fdb4eb3740a0f546a0833dabb56ce",
+      "facts_faithful": true,
+      "task_complete": true,
+      "reason": "最新操作已执行且失败；逐句对照通过"
+    },
+    {
+      "case_id": "conditional",
+      "record_sha256": "5a67853c7e5d02a2d4c7f92f882df267574ee21c27eec923796c39c44090b799",
+      "facts_faithful": true,
+      "task_complete": true,
+      "reason": "条件计划尚未执行；逐句对照通过"
+    },
+    {
+      "case_id": "correction",
+      "record_sha256": "2d45c45134efec756f4953d518312a154fcb6ab8494b3df937fa1e2f83917f78",
+      "facts_faithful": true,
+      "task_complete": true,
+      "reason": "新更正覆盖旧已执行状态；逐句对照通过"
+    },
+    {
+      "case_id": "correction_scope",
+      "record_sha256": "81ee8c1061f348550c7b72c25b75d616adc8a98b9d2bc5a1bf12b86b2f7c273e",
+      "facts_faithful": true,
+      "task_complete": true,
+      "reason": "更正范围，保留登录事实，重置仅为请求；逐句对照通过"
+    },
+    {
+      "case_id": "done",
+      "record_sha256": "292e32140b1775ecef720c0bb5b155d2201e16f7c71061e1b08bdf4ed573f451",
+      "facts_faithful": true,
+      "task_complete": true,
+      "reason": "重启已执行但未解决；逐句对照通过"
+    },
+    {
+      "case_id": "mixed",
+      "record_sha256": "e8e28f6ad832e813cac9d8a4faffb38d776a43f9b2d1ff9773bdf0dc61a47f04",
+      "facts_faithful": true,
+      "task_complete": true,
+      "reason": "登录已执行，权限检查仅为请求；逐句对照通过"
+    },
+    {
+      "case_id": "negative",
+      "record_sha256": "bcf3a9e9859b078cd11c789257fac2287085e47e21ecb46ac318174e147dd3ac",
+      "facts_faithful": true,
+      "task_complete": true,
+      "reason": "禁止将否定操作描述为已执行；逐句对照通过"
+    },
+    {
+      "case_id": "not_done",
+      "record_sha256": "068438ffaca32511bad51278396bc0c8440b008eef6401ceb714c5cd4f0af34f",
+      "facts_faithful": true,
+      "task_complete": true,
+      "reason": "两个否定操作都不得转为已尝试；逐句对照通过"
+    },
+    {
+      "case_id": "plan",
+      "record_sha256": "de83dc2843a135769d5c7cfd32b778471f6ca6afb017555772b74482750adcfd",
+      "facts_faithful": true,
+      "task_complete": true,
+      "reason": "重启为计划，明确未执行；逐句对照通过"
+    },
+    {
+      "case_id": "request",
+      "record_sha256": "3cacd9d29a465d55ef239090f503efaca52d525f1def302eee2f117c737767d7",
+      "facts_faithful": true,
+      "task_complete": true,
+      "reason": "人工检查仅为未来请求；逐句对照通过"
+    },
+    {
+      "case_id": "request_after_action",
+      "record_sha256": "eefcd266f4f9253af4a65a58b6bc24cd782d2cece967e8209500b42980d6181c",
+      "facts_faithful": true,
+      "task_complete": true,
+      "reason": "重装已执行，人工检查未执行；逐句对照通过"
+    },
+    {
+      "case_id": "third_party",
+      "record_sha256": "129170e8be0a8044bd6ecc3d766ff15fa650edb48d4622fd0b3e5b84cec846c3",
+      "facts_faithful": null,
+      "task_complete": false,
+      "reason": "影响范围未明，要求补充；不计入已生成草稿忠实度分母。"
+    }
+  ]
+}

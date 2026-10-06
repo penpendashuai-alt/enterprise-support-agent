@@ -1,0 +1,174 @@
+[
+  {
+    "check": "effective_memory_limits",
+    "at": "2026-10-06T08:07:55.621952+00:00",
+    "compose_command": [
+      "redis-server",
+      "--save",
+      "",
+      "--appendonly",
+      "no",
+      "--maxmemory",
+      "4mb",
+      "--maxmemory-policy",
+      "noeviction"
+    ],
+    "hard_limit_bytes": 134217728,
+    "runtime_config": {
+      "save": "",
+      "maxmemory-policy": "noeviction",
+      "appendonly": "no",
+      "maxmemory": "4194304"
+    },
+    "before": {
+      "memory": {
+        "used_memory": 974576,
+        "used_memory_rss": 10493952,
+        "maxmemory": 4194304,
+        "maxmemory_policy": "noeviction",
+        "mem_not_counted_for_evict": 0
+      },
+      "evicted_keys": 0,
+      "sentinel": {}
+    }
+  },
+  {
+    "check": "noeviction_oom",
+    "at": "2026-10-06T08:08:03.808962+00:00",
+    "oom_type": "OutOfMemoryError",
+    "oom_message": "command not allowed when used memory > 'maxmemory'.",
+    "written_keys": 72,
+    "pressure_budget_bytes": 3145728,
+    "initial_budget_bytes": 4194304,
+    "memory": {
+      "used_memory": 4203880,
+      "used_memory_rss": 11411456,
+      "maxmemory": 3145728,
+      "maxmemory_policy": "noeviction",
+      "mem_not_counted_for_evict": 0
+    },
+    "evicted_keys": 0,
+    "sentinel": {
+      "tokens": "7",
+      "time": "synthetic"
+    }
+  },
+  {
+    "check": "computed_retrieval_survives_cache_set_failure",
+    "at": "2026-10-06T08:08:11.477467+00:00",
+    "status": "ok",
+    "cache": {
+      "write": "unavailable",
+      "status": "miss",
+      "shared": false,
+      "key_digest": "965f7526aae5f2928a1bccf794f188291d8f32f47c0011d9b2c95343b4f6520a"
+    },
+    "evidence": 1,
+    "memory": {
+      "used_memory": 4182888,
+      "used_memory_rss": 12984320,
+      "maxmemory": 3145728,
+      "maxmemory_policy": "noeviction",
+      "mem_not_counted_for_evict": 0
+    },
+    "evicted_keys": 0,
+    "sentinel": {
+      "tokens": "7",
+      "time": "synthetic"
+    }
+  },
+  {
+    "check": "admission_fails_closed_without_model_call",
+    "at": "2026-10-06T08:08:11.901780+00:00",
+    "http_status": 503,
+    "request_id": "51b06503616249c8a8be779628fe3007",
+    "capabilities": {
+      "core": {
+        "status": "ok",
+        "reason": "core_ready"
+      },
+      "question": {
+        "status": "unavailable",
+        "reason": "redis_required"
+      },
+      "approval_and_read": {
+        "status": "degraded",
+        "reason": "local_admission_fallback"
+      },
+      "retrieval": {
+        "status": "ok",
+        "reason": "dense_index_ready"
+      },
+      "cache": {
+        "status": "unavailable",
+        "reason": "redis_memory_limit"
+      },
+      "tracing": {
+        "status": "disabled",
+        "reason": "not_enabled"
+      },
+      "model": {
+        "status": "configured",
+        "reason": "no_paid_probe"
+      }
+    }
+  },
+  {
+    "check": "approval_read_replay_under_oom",
+    "at": "2026-10-06T08:08:19.706813+00:00",
+    "tickets": 1,
+    "container_state": "false true",
+    "memory": {
+      "used_memory": 4182920,
+      "used_memory_rss": 12984320,
+      "maxmemory": 3145728,
+      "maxmemory_policy": "noeviction",
+      "mem_not_counted_for_evict": 0
+    }
+  },
+  {
+    "check": "release_and_recovery",
+    "at": "2026-10-06T08:08:32.802671+00:00",
+    "deleted_own_keys": 73,
+    "memory": {
+      "used_memory": 1277872,
+      "used_memory_rss": 12984320,
+      "maxmemory": 4194304,
+      "maxmemory_policy": "noeviction",
+      "mem_not_counted_for_evict": 0
+    },
+    "evicted_keys": 0,
+    "sentinel": {},
+    "capabilities": {
+      "core": {
+        "status": "ok",
+        "reason": "core_ready"
+      },
+      "question": {
+        "status": "ok",
+        "reason": "model_configured_callability_unprobed"
+      },
+      "approval_and_read": {
+        "status": "ok",
+        "reason": "available"
+      },
+      "retrieval": {
+        "status": "ok",
+        "reason": "dense_index_ready"
+      },
+      "cache": {
+        "status": "ok",
+        "reason": "reachable"
+      },
+      "tracing": {
+        "status": "disabled",
+        "reason": "not_enabled"
+      },
+      "model": {
+        "status": "configured",
+        "reason": "no_paid_probe"
+      }
+    },
+    "paid_calls": 0
+  }
+]

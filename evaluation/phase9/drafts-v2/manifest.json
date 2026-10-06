@@ -1,0 +1,11 @@
+{
+  "started_at": "2026-10-05T14:21:11.642577+00:00",
+  "budget_cny": 20.0,
+  "cases": 12,
+  "scope": "direct prepare_draft; previously seen failure families; non-independent semantic review",
+  "prompt_source_sha256": "750aaddfc6dc07d28d4036030d64c3ee40a7432e9d4707daa2412328c7488041",
+  "finished_at": "2026-10-05T14:21:42.819912+00:00",
+  "physical_calls": 12,
+  "estimated_cny": 0.111816,
+  "unknown_usage": 0
+}

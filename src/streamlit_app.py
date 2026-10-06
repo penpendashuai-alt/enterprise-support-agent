@@ -240,7 +240,8 @@ async def main() -> None:
 
         with st.popover(":material/policy: Privacy", use_container_width=True):
             st.write(
-                "Prompts, responses and feedback in this app are anonymously recorded and saved to LangSmith for product evaluation and improvement purposes only."
+                "会话与工单保存在服务端。默认运行日志和追踪仅记录元数据；"
+                "用户 ID 由客户端声明，此演示不提供完整用户认证。"
             )
 
         @st.dialog("Share/resume chat")

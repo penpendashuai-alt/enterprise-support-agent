@@ -20,10 +20,6 @@ from langchain_core.messages import (
     ToolMessage,
 )
 from langchain_core.runnables import RunnableConfig
-from langfuse import Langfuse  # type: ignore[import-untyped]
-from langfuse.langchain import (
-    CallbackHandler,  # type: ignore[import-untyped]
-)
 from langgraph.types import Command, Interrupt
 from langsmith import Client as LangsmithClient
 from langsmith import uuid7
@@ -31,6 +27,7 @@ from langsmith import uuid7
 from agents import DEFAULT_AGENT, AgentGraph, get_agent, get_all_agent_info, load_agent
 from core import settings
 from execution.middleware import SupportExecutionMiddleware
+from execution.observability import callbacks, close_tracing, initialize_tracing, pseudonym
 from execution.redis_runtime import initialize_redis
 from execution.streaming import SupportStreamingResponse
 from execution.telemetry import ControlError, current
@@ -48,6 +45,8 @@ from schema import (
     UserThreadsInput,
 )
 from service.agui import router as agui_router
+from service.health import capabilities
+from service.health import router as health_router
 from service.support import execution_lock, interrupt_message, pending_payload, support_input
 from service.threads import list_user_threads
 from service.utils import (
@@ -95,6 +94,11 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
     Configurable lifespan that initializes the appropriate database checkpointer, store,
     and agents with async loading - for example for starting up MCP clients.
     """
+    app.state.support_ready = False
+    try:
+        initialize_tracing()
+    except Exception:
+        logger.warning("Tracing initialization unavailable")
     try:
         # Initialize both checkpointer (for short-term memory) and store (for long-term memory)
         async with (
@@ -131,9 +135,16 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
                 agent.checkpointer = saver
                 # Set store for long-term memory (cross-conversation knowledge)
                 agent.store = store
+            app.state.graph_pools = [
+                (obj.conn, table)
+                for obj, table in [(saver, "checkpoints"), (store, "store")]
+                if hasattr(obj, "conn")
+            ]
+            app.state.support_ready = True
             try:
                 yield
             finally:
+                app.state.support_ready = False
                 from rag.retriever import close_retriever
 
                 await close_retriever()
@@ -142,6 +153,8 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
         raise RuntimeError(
             "Database initialization failed; verify connection and business migrations"
         ) from None
+    finally:
+        await close_tracing()
 
 
 app = FastAPI(lifespan=lifespan, generate_unique_id_function=custom_generate_unique_id)
@@ -193,12 +206,14 @@ async def _handle_input(
         ensure_model_available(user_input.model)
         configurable["model"] = user_input.model
 
-    callbacks: list[Any] = []
-    if settings.LANGFUSE_TRACING:
-        # Initialize Langfuse CallbackHandler for Langchain (tracing)
-        langfuse_handler = CallbackHandler()
-
-        callbacks.append(langfuse_handler)
+    if trace := current.get():
+        trace.metadata["session_hash"] = pseudonym(thread_id)
+        if user_input.approval:
+            trace.metadata.update(
+                draft_hash=pseudonym(user_input.approval.draft_id),
+                draft_version=user_input.approval.draft_version,
+                approval_action=user_input.approval.action,
+            )
 
     if user_input.agent_config:
         if agent_id == "support-agent":
@@ -220,9 +235,9 @@ async def _handle_input(
 
     config = RunnableConfig(
         configurable=configurable,
-        metadata={"user_id": user_id, "agent_id": agent_id},
+        metadata={"agent_id": agent_id},
         run_id=run_id,
-        callbacks=callbacks,
+        callbacks=callbacks(),
     )
 
     # Check for interrupts that need to be resumed
@@ -275,7 +290,10 @@ async def _invoke(user_input: UserInput, agent_id: str) -> ChatMessage:
     # in interrupt-agent, or a tool step in research-assistant), it's omitted. Arguably,
     # you'd want to include it. You could update the API to return a list of ChatMessages
     # in that case.
-    agent: AgentGraph = get_agent(agent_id)
+    try:
+        agent: AgentGraph = get_agent(agent_id)
+    except KeyError:
+        raise HTTPException(404, "Agent not enabled") from None
     kwargs, run_id = await _handle_input(user_input, agent, agent_id)
 
     if early := kwargs.pop("support_response", None):
@@ -331,7 +349,10 @@ async def _message_generator(
 
     This is the workhorse method for the /stream endpoint.
     """
-    agent: AgentGraph = get_agent(agent_id)
+    try:
+        agent: AgentGraph = get_agent(agent_id)
+    except KeyError:
+        raise HTTPException(404, "Agent not enabled") from None
     kwargs, run_id = await _handle_input(user_input, agent, agent_id)
 
     if early := kwargs.pop("support_response", None):
@@ -412,7 +433,7 @@ async def _message_generator(
                     chat_message = langchain_to_chat_message(message)
                     chat_message.run_id = str(run_id)
                 except Exception as e:
-                    logger.error(f"Error parsing message: {e}")
+                    logger.error("Message parsing failed: %s", type(e).__name__)
                     yield f"data: {json.dumps({'type': 'error', 'content': 'Unexpected error'})}\n\n"
                     continue
                 # LangGraph re-sends the input message, which feels weird, so drop it
@@ -439,6 +460,8 @@ async def _message_generator(
     except ControlError:
         raise
     except Exception as e:
+        if trace := current.get():
+            trace.outcome = "stream_error"
         logger.error("Error in message generator: %s", type(e).__name__)
         if trace := current.get():
             trace.outcome = "sse_error"
@@ -532,7 +555,10 @@ async def history(input: ChatHistoryInput, agent_id: str = DEFAULT_AGENT) -> Cha
 
     If agent_id is not provided, the default agent will be used.
     """
-    agent: AgentGraph = get_agent(agent_id)
+    try:
+        agent: AgentGraph = get_agent(agent_id)
+    except KeyError:
+        raise HTTPException(404, "Agent not enabled") from None
     await guard_thread(input.thread_id, input.user_id, agent_id)
     config = RunnableConfig(configurable={"thread_id": input.thread_id})
     try:
@@ -567,7 +593,10 @@ async def threads(
     trust model as /history. Put your own authorization in front of this before end
     users can reach it.
     """
-    agent: AgentGraph = get_agent(agent_id)
+    try:
+        agent: AgentGraph = get_agent(agent_id)
+    except KeyError:
+        raise HTTPException(404, "Agent not enabled") from None
     if agent_id == "support-agent":
         user_id = identity(input.user_id)
         try:
@@ -641,21 +670,6 @@ async def tickets_list(user_id: str, limit: int = 20):
         raise HTTPException(503, detail="Ticket storage unavailable") from None
 
 
-@app.get("/health")
-async def health_check():
-    """Health check endpoint."""
-
-    health_status = {"status": "ok"}
-
-    if settings.LANGFUSE_TRACING:
-        try:
-            langfuse = Langfuse()
-            health_status["langfuse"] = "connected" if langfuse.auth_check() else "disconnected"
-        except Exception as e:
-            logger.error(f"Langfuse connection error: {e}")
-            health_status["langfuse"] = "disconnected"
-
-    return health_status
-
-
+app.include_router(health_router)
+router.add_api_route("/health/capabilities", capabilities, methods=["GET"])
 app.include_router(router)

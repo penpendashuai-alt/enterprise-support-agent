@@ -1,0 +1,20 @@
+{
+  "id": "correction",
+  "inputs": [
+    "VPN报错，只有本人，已重启，请建工单。",
+    "更正：还没重启，刚才说错了，只准备下班后试。"
+  ],
+  "criterion": "新更正覆盖旧已执行状态",
+  "draft": {
+    "title": "VPN报错",
+    "description": "VPN报错。用户已说明尚未重启，准备下班后再尝试重启。",
+    "service_name": "VPN",
+    "impact": "只有本人",
+    "priority": "P3"
+  },
+  "status": "pending",
+  "review": "pending",
+  "messages": [
+    "请确认本地演示工单草稿（版本 1）：\n标题：VPN报错\n描述：VPN报错。用户已说明尚未重启，准备下班后再尝试重启。\n服务：VPN\n影响范围：只有本人\n优先级：P3（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。"
+  ]
+}

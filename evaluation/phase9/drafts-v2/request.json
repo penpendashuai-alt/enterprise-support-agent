@@ -1,0 +1,19 @@
+{
+  "id": "request",
+  "inputs": [
+    "请创建VPN故障工单，只有我受影响，请安排人工检查。"
+  ],
+  "criterion": "人工检查仅为未来请求",
+  "draft": {
+    "title": "VPN故障",
+    "description": "用户报告VPN故障，仅本人受影响，希望安排人工检查。",
+    "service_name": "VPN",
+    "impact": "仅本人",
+    "priority": "P3"
+  },
+  "status": "pending",
+  "review": "pending",
+  "messages": [
+    "请确认本地演示工单草稿（版本 1）：\n标题：VPN故障\n描述：用户报告VPN故障，仅本人受影响，希望安排人工检查。\n服务：VPN\n影响范围：仅本人\n优先级：P3（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。"
+  ]
+}

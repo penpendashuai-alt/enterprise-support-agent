@@ -1,0 +1,23 @@
+{
+  "call_id": "01a10b6d-1939-7343-83b4-d3200e67713c",
+  "run_id": "phase9-draft-v1",
+  "case_id": "request",
+  "turn": 0,
+  "provider_kind": "chat",
+  "started_at": "2026-10-05T09:37:41.689636+00:00",
+  "status": "complete",
+  "usage": {
+    "input_tokens": 652,
+    "output_tokens": 114,
+    "total_tokens": 766,
+    "input_token_details": {
+      "cache_read": 0
+    },
+    "output_token_details": {}
+  },
+  "estimated_cny": 0.008946,
+  "reserved_cny": 0.5,
+  "finished_at": "2026-10-05T09:37:43.606663+00:00",
+  "visible_model_output": "",
+  "error_type": null
+}

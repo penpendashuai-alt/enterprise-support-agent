@@ -1,0 +1,104 @@
+{
+  "status": "passed",
+  "transport": "real local OTLP HTTP; locked Langfuse SDK",
+  "remote_langfuse_receipt": "unverified",
+  "synthetic_trace_categories": 4,
+  "spans": 12,
+  "parent_links_valid": true,
+  "sensitive_marker_absent": true,
+  "paid_calls": 0,
+  "records": [
+    {
+      "code_version": "local",
+      "prompt_sha256": "e06f365a4abf014353318abae656bd5b8ee4e9ad5fa3603e7561c85893d46cb5",
+      "config_sha256": "f48a13b06dd088f0723f92c42edfcdb2602ea4295ce3a5fa7781279a18b87fbc",
+      "session_hash": "434bb261d18ca169dded009691f9c027",
+      "cache_status": "miss",
+      "trace_id": "f483b06a4709338744e10b075c6a8791",
+      "model_calls": [
+        {
+          "usage_known": false,
+          "model": "deterministic-fixture",
+          "usage": {}
+        }
+      ],
+      "request_id": "9aae32d99d4d48559ae01b3f278d479e",
+      "run_id": null,
+      "category": "model",
+      "outcome": "success",
+      "status": 200,
+      "total_seconds": 0.043962899944745004,
+      "timings": {}
+    },
+    {
+      "code_version": "local",
+      "prompt_sha256": "e06f365a4abf014353318abae656bd5b8ee4e9ad5fa3603e7561c85893d46cb5",
+      "config_sha256": "f48a13b06dd088f0723f92c42edfcdb2602ea4295ce3a5fa7781279a18b87fbc",
+      "session_hash": "434bb261d18ca169dded009691f9c027",
+      "cache_status": "hit",
+      "trace_id": "a232ba0cfd5c0a6e5d309aee1d007a32",
+      "model_calls": [
+        {
+          "usage_known": false,
+          "model": "deterministic-fixture",
+          "usage": {}
+        }
+      ],
+      "request_id": "f135eb763768413e9a0520b56250aaed",
+      "run_id": null,
+      "category": "model",
+      "outcome": "success",
+      "status": 200,
+      "total_seconds": 0.00249960005749017,
+      "timings": {}
+    },
+    {
+      "code_version": "local",
+      "prompt_sha256": "e06f365a4abf014353318abae656bd5b8ee4e9ad5fa3603e7561c85893d46cb5",
+      "config_sha256": "f48a13b06dd088f0723f92c42edfcdb2602ea4295ce3a5fa7781279a18b87fbc",
+      "session_hash": "434bb261d18ca169dded009691f9c027",
+      "cache_status": "miss",
+      "trace_id": "76c83146071eb15d4287f04f3deda621",
+      "model_calls": [
+        {
+          "usage_known": false,
+          "model": "deterministic-fixture",
+          "usage": {}
+        }
+      ],
+      "request_id": "720a0adc148843c2a66d594a88e089a4",
+      "run_id": null,
+      "category": "approval",
+      "outcome": "success",
+      "status": 200,
+      "total_seconds": 0.002535899984650314,
+      "timings": {}
+    },
+    {
+      "code_version": "local",
+      "prompt_sha256": "e06f365a4abf014353318abae656bd5b8ee4e9ad5fa3603e7561c85893d46cb5",
+      "config_sha256": "f48a13b06dd088f0723f92c42edfcdb2602ea4295ce3a5fa7781279a18b87fbc",
+      "session_hash": "434bb261d18ca169dded009691f9c027",
+      "cache_status": "miss",
+      "trace_id": "89a408647d1460d68509613736ac8a95",
+      "model_calls": [
+        {
+          "usage_known": false,
+          "model": "deterministic-fixture",
+          "usage": {}
+        }
+      ],
+      "request_id": "51935ad711854313a38a51e6ba1c70ef",
+      "run_id": null,
+      "category": "model",
+      "outcome": "dependency_unavailable",
+      "status": 503,
+      "total_seconds": 0.0020475999917834997,
+      "timings": {}
+    }
+  ],
+  "enqueue_600_seconds": 0.03201429999899119,
+  "queue_max_spans": 256,
+  "unreachable_shutdown_seconds": 3.3203832000726834,
+  "unreachable_cleanup_bounded": true
+}

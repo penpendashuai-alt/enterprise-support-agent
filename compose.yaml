@@ -1,99 +1,97 @@
+x-service: &service
+  image: enterprise-support-service:${CODE_VERSION:-local}
+  build:
+    context: .
+    dockerfile: docker/Dockerfile.service
+  env_file: ${ESA_ENV_FILE:-.env.compose}
+  environment: &environment
+    MODE: stable
+    DEPLOYMENT_MODE: "true"
+    ENABLED_AGENTS: '["support-agent"]'
+    DATABASE_TYPE: postgres
+    POSTGRES_HOST: postgres
+    POSTGRES_PORT: "5432"
+    POSTGRES_DB: ${POSTGRES_DB:-enterprise_support}
+    POSTGRES_USER: ${POSTGRES_USER:-support_demo}
+    POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Configure POSTGRES_PASSWORD}
+    AUTH_SECRET: ${AUTH_SECRET:?Configure AUTH_SECRET}
+    REDIS_URL: redis://redis:6379/0
+    REDIS_NAMESPACE: esa:p9
+    ADMISSION_ENABLED: "true"
+    RAG_CACHE_ENABLED: "true"
+    RAG_RETRIEVAL_MODE: dense
+    RAG_DENSE_LEGACY: "false"
+    RAG_DENSE_CANDIDATES: "20"
+    RAG_DENSE_THRESHOLD: "0.65"
+    RAG_CHUNK_SIZE: "800"
+    RAG_CHUNK_OVERLAP: "100"
+    CODE_VERSION: ${CODE_VERSION:-local}
+    LANGCHAIN_TRACING_V2: "false"
+    LOG_LEVEL: INFO
+  stop_grace_period: 40s
+
 services:
   postgres:
-    image: postgres:16
-    ports:
-      - "5432:5432"
+    image: postgres:17.11
     environment:
-      - POSTGRES_USER=${POSTGRES_USER:-postgres}
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-postgres}
-      - POSTGRES_DB=${POSTGRES_DB:-agent_service}
+      POSTGRES_DB: ${POSTGRES_DB:-enterprise_support}
+      POSTGRES_USER: ${POSTGRES_USER:-support_demo}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Configure POSTGRES_PASSWORD}
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - phase9_postgres:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres}"]
+      test: [CMD-SHELL, 'pg_isready -U "$${POSTGRES_USER}" -d "$${POSTGRES_DB}"']
       interval: 5s
-      timeout: 5s
-      retries: 5
-
-  agent_service:
-    build:
-      context: .
-      dockerfile: docker/Dockerfile.service
-    ports:
-      - "8080:8080"
-    env_file:
-      - .env
-    environment:
-      - TICKET_DB_PATH=/app/data/tickets.db
-      - SQLITE_DB_PATH=/app/data/checkpoints.db
+      timeout: 3s
+      retries: 20
+  redis:
+    image: redis:7.0.15-bookworm
+    command: [redis-server, --save, "", --appendonly, "no", --maxmemory, "${REDIS_MAXMEMORY:-64mb}", --maxmemory-policy, noeviction]
+    mem_limit: ${REDIS_CONTAINER_MEMORY:-128m}
+    healthcheck:
+      test: [CMD, redis-cli, ping]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  migrate:
+    <<: *service
+    command: [python, scripts/migrate_support.py]
     depends_on:
       postgres:
         condition: service_healthy
+  agent_service:
+    <<: *service
+    ports:
+      - "127.0.0.1:${SERVICE_PORT:-8080}:8080"
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      redis:
+        condition: service_healthy
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8080/info"]
-      interval: 5s
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health/ready', timeout=3)"]
+      interval: 10s
       timeout: 5s
-      retries: 5
-    # Volume mount of development-only credentials since compose watch doesn't sync ignored files and doesn't do initial sync when the service starts
-    volumes:
-      - ./privatecredentials:/privatecredentials
-      - support_data:/app/data
-    develop:
-      watch:
-        - path: src/agents/
-          action: sync+restart
-          target: /app/agents/
-        - path: src/rag/
-          action: sync+restart
-          target: /app/rag/
-        - path: src/tickets/
-          action: sync+restart
-          target: /app/tickets/
-        - path: src/schema/
-          action: sync+restart
-          target: /app/schema/
-        - path: src/service/
-          action: sync+restart
-          target: /app/service/
-        - path: src/core/
-          action: sync+restart
-          target: /app/core/
-        - path: src/memory/
-          action: sync+restart
-          target: /app/memory/
+      retries: 20
+      start_period: 30s
   streamlit_app:
+    image: enterprise-support-app:${CODE_VERSION:-local}
     build:
       context: .
       dockerfile: docker/Dockerfile.app
-    ports:
-      - "8501:8501"
-    depends_on:
-      - agent_service
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8501/healthz"]
-      interval: 5s
-      timeout: 5s
-      retries: 5
     environment:
-      - AGENT_URL=http://agent_service:8080
-    develop:
-      watch:
-        - path: src/client/
-          action: sync+restart
-          target: /app/client/
-        - path: src/rag/
-          action: sync+restart
-          target: /app/rag/
-        - path: src/tickets/
-          action: sync+restart
-          target: /app/tickets/
-        - path: src/schema/
-          action: sync+restart
-          target: /app/schema/
-        - path: src/streamlit_app.py
-          action: sync+restart
-          target: /app/streamlit_app.py
-
+      AGENT_URL: http://agent_service:8080
+      AUTH_SECRET: ${AUTH_SECRET:?Configure AUTH_SECRET}
+    ports:
+      - "127.0.0.1:${STREAMLIT_PORT:-8501}:8501"
+    depends_on:
+      agent_service:
+        condition: service_healthy
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8501/_stcore/health', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+    stop_grace_period: 15s
 volumes:
-  postgres_data:
-  support_data:
+  phase9_postgres:

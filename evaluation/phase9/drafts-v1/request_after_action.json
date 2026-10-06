@@ -1,0 +1,16 @@
+{
+  "id": "request_after_action",
+  "inputs": [
+    "VPN报809，只有本人，已重装客户端仍失败。请建立工单并安排人工检查。"
+  ],
+  "criterion": "重装已执行，人工检查未执行",
+  "draft": {
+    "title": "VPN 连接报错 809",
+    "description": "VPN 连接报错 809，影响范围仅本人。用户已重装客户端，但连接仍失败。希望建立工单并安排人工检查。",
+    "service_name": "VPN",
+    "impact": "仅本人",
+    "priority": "P3"
+  },
+  "status": "pending",
+  "review": "pending"
+}

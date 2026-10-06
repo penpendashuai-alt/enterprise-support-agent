@@ -70,13 +70,20 @@ class Settings(BaseSettings):
         env_ignore_empty=True,
         extra="ignore",
         validate_default=False,
+        hide_input_in_errors=True,
     )
     MODE: str | None = None
 
     HOST: str = "0.0.0.0"
     PORT: int = 8080
     GRACEFUL_SHUTDOWN_TIMEOUT: int = 30
-    LOG_LEVEL: LogLevel = LogLevel.WARNING
+    LOG_LEVEL: LogLevel = LogLevel.INFO
+    ENABLED_AGENTS: list[str] = ["support-agent"]
+    DEPLOYMENT_MODE: bool = False
+    CI_TEST_MODE: bool = False
+    CODE_VERSION: str = Field(default="local", pattern=r"^[a-zA-Z0-9._-]{1,64}$")
+    TELEMETRY_HASH_KEY: SecretStr | None = None
+    HEALTH_TIMEOUT: float = Field(default=2, gt=0, le=5)
 
     AUTH_SECRET: SecretStr | None = None
 
@@ -184,6 +191,15 @@ class Settings(BaseSettings):
     )
 
     def model_post_init(self, __context: Any) -> None:
+        if self.DEPLOYMENT_MODE:
+            if not self.AUTH_SECRET or self.DATABASE_TYPE != DatabaseType.POSTGRES:
+                raise ValueError("Deployment requires AUTH_SECRET and PostgreSQL")
+            if self.LANGCHAIN_TRACING_V2:
+                raise ValueError("Deployment permits only the filtered Langfuse exporter")
+        if not self.ENABLED_AGENTS or "support-agent" not in self.ENABLED_AGENTS:
+            raise ValueError("ENABLED_AGENTS must include support-agent")
+        if self.CI_TEST_MODE and not self.USE_FAKE_MODEL:
+            raise ValueError("CI_TEST_MODE requires explicit USE_FAKE_MODEL")
         api_keys = {
             Provider.OPENAI: self.OPENAI_API_KEY,
             Provider.OPENAI_COMPATIBLE: self.COMPATIBLE_BASE_URL and self.COMPATIBLE_MODEL,

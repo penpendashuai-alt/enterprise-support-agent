@@ -12,6 +12,7 @@ from starlette.responses import JSONResponse
 
 from core import settings
 from execution.control import runtime
+from execution.observability import request_observation
 from execution.telemetry import ControlError, RequestTrace, current, logger, measure
 from schema import ChatHistoryInput, UserInput
 from support_storage.identity import guard_thread, identity
@@ -33,6 +34,8 @@ class SupportExecutionMiddleware:
         token = current.set(trace)
         begun = finished = False
         monitor = None
+        observation = request_observation(trace)
+        observation.__enter__()
         try:
             if settings.AUTH_SECRET:
                 headers = dict(scope.get("headers", []))
@@ -110,6 +113,12 @@ class SupportExecutionMiddleware:
                     event["headers"] = [
                         *event.get("headers", []),
                         (b"x-request-id", trace.request_id.encode()),
+                        *(
+                            [(b"x-trace-id", trace.metadata["trace_id"].encode())]
+                            if trace.metadata.get("trace_id")
+                            else []
+                        ),
+                        *([(b"x-run-id", trace.run_id.encode())] if trace.run_id else []),
                         (
                             b"server-timing",
                             ", ".join(
@@ -174,6 +183,12 @@ class SupportExecutionMiddleware:
                     headers={
                         "Retry-After": str(error.retry_after),
                         "X-Request-ID": trace.request_id,
+                        **(
+                            {"X-Trace-ID": trace.metadata["trace_id"]}
+                            if trace.metadata.get("trace_id")
+                            else {}
+                        ),
+                        **({"X-Run-ID": trace.run_id} if trace.run_id else {}),
                     },
                 )(scope, receive, send)
             elif not finished:
@@ -193,7 +208,8 @@ class SupportExecutionMiddleware:
                 monitor.cancel()
                 with suppress(asyncio.CancelledError):
                     await monitor
+            observation.__exit__(None, None, None)
             record = trace.record()
-            logger.info("support_request %s", json.dumps(record))
+            logger.info("support_request", extra={"support_record": record})
             runtime().completed.append(record)
             current.reset(token)

@@ -1,5 +1,7 @@
 # Enterprise Support Agent
 
+**Phase 9** aligns deployment with PostgreSQL/Redis, adds local Qdrant and deterministic CI combinations, separates health diagnostics, and filters JSON logs and Langfuse exports to metadata. See the [deployment guide](docs/deployment.md), [operations guide](docs/operations.md), and [actual acceptance status](docs/phase9_deployment_observability.md).
+
 **Phase 8** adds a 60-task Agent evaluation suite, real HTTP/PostgreSQL workflow checks, evidence replay, semantic review, failure attribution and offline reports. Two scoped prompt changes were compared against a frozen baseline. Heldout results did **not** establish an overall quality improvement; missing evidence, unsupported explanations and draft fidelity failures remain documented. See the [Phase 8 evaluation guide](docs/phase8_agent_evaluation.md) for results, costs and limitations.
 
 **Phase 7** adds versioned exact retrieval caching in Redis, atomic service/user rate limits, bounded request/model concurrency, deadlines, and HTTP/SSE cancellation cleanup. See the [Phase 7 implementation and performance guide](docs/phase7_async_redis_performance.md) for local Redis setup, four-way benchmarks, fault recovery and costs. Real retrieval cache hits avoided embedding/search calls; the small real-model comparison did **not** establish an end-to-end speedup. Single-worker scope and existing answer-quality limitations remain.
@@ -51,11 +53,10 @@ source .venv/bin/activate
 streamlit run src/streamlit_app.py
 ```
 
-Run with docker
+Run with Docker after filling `docker/compose.env.example` into `.env.compose`. See [deployment.md](docs/deployment.md) for the migration and index prerequisites.
 
 ```sh
-echo 'OPENAI_API_KEY=your_openai_api_key' >> .env
-docker compose watch
+docker compose --env-file .env.compose -p esa-demo up -d --build --wait
 ```
 
 ### Architecture Diagram
@@ -102,7 +103,7 @@ The repository is structured as follows:
 2. Set up environment variables:
    Create a `.env` file in the root directory. At least one LLM API key or configuration is required. See the [`.env.example` file](./.env.example) for a full list of available environment variables, including a variety of model provider API keys, header-based authentication, LangSmith tracing, testing and development modes, and OpenWeatherMap API key.
 
-3. You can now run the agent service and the Streamlit app locally, either with Docker or just using Python. The Docker setup is recommended for simpler environment setup and immediate reloading of the services when you make changes to your code.
+3. You can now run the agent service and the Streamlit app locally, either with Docker or just using Python. The default Docker setup is stable; use the explicit development override for hot reloading.
 
 ### Additional setup for specific AI providers
 
@@ -125,41 +126,7 @@ If your agents or chosen LLM require file-based credential files or certificates
 
 ### Docker Setup
 
-This project includes a Docker setup for easy development and deployment. The `compose.yaml` file defines three services: `postgres`, `agent_service` and `streamlit_app`. The `Dockerfile` for each service is in their respective directories.
-
-For local development, we recommend using [docker compose watch](https://docs.docker.com/compose/file-watch/). This feature allows for a smoother development experience by automatically updating your containers when changes are detected in your source code.
-
-1. Make sure you have Docker and Docker Compose (>= [v2.23.0](https://docs.docker.com/compose/release-notes/#2230)) installed on your system.
-
-2. Create a `.env` file from the `.env.example`. At minimum, you need to provide an LLM API key (e.g., OPENAI_API_KEY).
-
-   ```sh
-   cp .env.example .env
-   # Edit .env to add your API keys
-   ```
-
-3. Build and launch the services in watch mode:
-
-   ```sh
-   docker compose watch
-   ```
-
-   This will automatically:
-   - Start a PostgreSQL database service that the agent service connects to
-   - Start the agent service with FastAPI
-   - Start the Streamlit app for the user interface
-
-4. The services will now automatically update when you make changes to your code:
-   - Changes in the relevant python files and directories will trigger updates for the relevant services.
-   - NOTE: If you make changes to the `pyproject.toml` or `uv.lock` files, you will need to rebuild the services by running `docker compose up --build`.
-
-5. Access the Streamlit app by navigating to `http://localhost:8501` in your web browser.
-
-6. The agent service API will be available at `http://0.0.0.0:8080`. You can also use the OpenAPI docs at `http://0.0.0.0:8080/redoc`.
-
-7. Use `docker compose down` to stop the services.
-
-This setup allows you to develop and test your changes in real-time without manually restarting the services.
+The default stack runs PostgreSQL 17, Redis, a one-shot migration, Agent Service and Streamlit. See [deployment.md](docs/deployment.md) for the stable startup command, local Qdrant/CI overrides, explicit development reloading, and data-volume boundaries. Do not combine legacy database overrides with the new default stack.
 
 ### Building other apps on the AgentClient
 

@@ -1,0 +1,19 @@
+{
+  "id": "not_done",
+  "inputs": [
+    "VPN连不上，只有本人，我还没重启，也没联系管理员，请建工单。"
+  ],
+  "criterion": "两个否定操作都不得转为已尝试",
+  "draft": {
+    "title": "VPN无法连接",
+    "description": "VPN连不上。影响范围仅本人。用户尚未重启，也未联系管理员。",
+    "service_name": "VPN",
+    "impact": "仅本人",
+    "priority": "P3"
+  },
+  "status": "pending",
+  "review": "pending",
+  "messages": [
+    "请确认本地演示工单草稿（版本 1）：\n标题：VPN无法连接\n描述：VPN连不上。影响范围仅本人。用户尚未重启，也未联系管理员。\n服务：VPN\n影响范围：仅本人\n优先级：P3（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。"
+  ]
+}

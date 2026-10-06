@@ -1,0 +1,63 @@
+[
+  {
+    "check": "nonroot_permissions_unmigrated_schema_refused",
+    "at": "2026-10-06T02:49:33.946848+00:00"
+  },
+  {
+    "check": "startup_auth_migration",
+    "at": "2026-10-06T02:49:42.484445+00:00"
+  },
+  {
+    "check": "retrieval_cache_tools_sse",
+    "at": "2026-10-06T02:49:51.680198+00:00"
+  },
+  {
+    "check": "approval_cancel_edit_idempotency_ownership",
+    "at": "2026-10-06T02:49:52.004708+00:00"
+  },
+  {
+    "check": "restart_agent_service",
+    "at": "2026-10-06T02:50:01.063818+00:00"
+  },
+  {
+    "check": "restart_postgres",
+    "at": "2026-10-06T02:50:02.384850+00:00"
+  },
+  {
+    "check": "restart_redis",
+    "at": "2026-10-06T02:50:03.335370+00:00"
+  },
+  {
+    "check": "restart_qdrant",
+    "at": "2026-10-06T02:50:04.214103+00:00"
+  },
+  {
+    "check": "qdrant_persisted_index_query",
+    "at": "2026-10-06T02:50:05.153471+00:00"
+  },
+  {
+    "check": "dependency_outage_and_recovery",
+    "at": "2026-10-06T02:50:18.714419+00:00"
+  },
+  {
+    "check": "backup_restore_new_database",
+    "at": "2026-10-06T02:50:29.097729+00:00",
+    "table_checksums": {
+      "checkpoint_blobs": "57|64f4d2f9f9c4e2b3577dc9fc045b519a",
+      "checkpoint_migrations": "10|9db86657fcdb3620be00c0dbc25a2af2",
+      "checkpoint_writes": "179|7dc7e5a6c25480d5b515d16ac27726fe",
+      "checkpoints": "51|ce04e5dff334b96634dfbc64922a7218",
+      "store": "1|853284de703e5f8cec43ef6aa24a6547",
+      "store_migrations": "4|879acfd8cbb6ce639e5383198a7a382c",
+      "support_schema_versions": "1|3f4d6351419a1ccd8e49d965eb715da1",
+      "support_sessions": "6|fd96cc96f976093f8db1356eab3d4ad5",
+      "tickets": "2|4bdde6fdc276242b80b47afa0fa8d694",
+      "users": "1|05b3810ace8ffd1827153969e774791f"
+    }
+  },
+  {
+    "check": "failure",
+    "at": "2026-10-06T02:50:30.879620+00:00",
+    "error_type": "RuntimeError"
+  }
+]

@@ -1,0 +1,274 @@
+[
+  {
+    "level": "INFO",
+    "event": "support_request",
+    "code_version": "ci",
+    "prompt_sha256": "7244bfad8fc5d9712ab50ff79e452ae811aa8a836c878ab542dc9f3cb7ce23a1",
+    "config_sha256": "f48a13b06dd088f0723f92c42edfcdb2602ea4295ce3a5fa7781279a18b87fbc",
+    "session_hash": "bd494f18e54277819dc5fc2dff27d8e1",
+    "nodes": [
+      "router",
+      "router",
+      "router",
+      "retrieve",
+      "handler",
+      "handler"
+    ],
+    "intent": "general_question",
+    "retrieval_mode": "dense",
+    "index_hash": "6dd02ea91de4e09ab16b3e99e415e060",
+    "candidates": 1,
+    "evidence": 1,
+    "cache_status": "miss",
+    "embedding_tokens": 0,
+    "embedding_requests": 0,
+    "model_calls": [
+      {
+        "usage_known": false,
+        "model": "deterministic-fixture",
+        "usage": {}
+      }
+    ],
+    "request_id": "a407a0b557e2498db64dd0344877898a",
+    "run_id": "01a10f25-b605-7dc2-85cb-1a6f5e9ebf0f",
+    "category": "model",
+    "outcome": "success",
+    "status": 200,
+    "total_seconds": 0.8956403610000052,
+    "timings": {
+      "rate_check": 0.0018798429999833388,
+      "thread_wait": 1.3185999932829873e-05,
+      "execution_wait": 1.556999995955266e-05,
+      "business_database": 0.008945772999936707,
+      "ownership": 0.011164783000026546,
+      "ownership_preflight": 0.0021958109999786757,
+      "model_wait": 2.1371000116232608e-05,
+      "router": 0.005145292000065638,
+      "preferences": 0.0027539879999949335,
+      "handler": 0.00538017700000637,
+      "answer_validation": 0.00020219200007431937,
+      "output_send": 4.78029999158025e-05,
+      "execution": 0.8901865259999795
+    }
+  },
+  {
+    "level": "INFO",
+    "event": "support_request",
+    "code_version": "ci",
+    "prompt_sha256": "7244bfad8fc5d9712ab50ff79e452ae811aa8a836c878ab542dc9f3cb7ce23a1",
+    "config_sha256": "f48a13b06dd088f0723f92c42edfcdb2602ea4295ce3a5fa7781279a18b87fbc",
+    "session_hash": "bd494f18e54277819dc5fc2dff27d8e1",
+    "nodes": [
+      "router",
+      "router",
+      "router",
+      "retrieve",
+      "handler",
+      "handler"
+    ],
+    "intent": "general_question",
+    "retrieval_mode": "dense",
+    "index_hash": "6dd02ea91de4e09ab16b3e99e415e060",
+    "candidates": 1,
+    "evidence": 1,
+    "cache_status": "hit",
+    "embedding_tokens": 0,
+    "embedding_requests": 0,
+    "model_calls": [
+      {
+        "usage_known": false,
+        "model": "deterministic-fixture",
+        "usage": {}
+      }
+    ],
+    "request_id": "acfa0e9bdd244cd1a033b120e70a8f9e",
+    "run_id": "01a10f25-b983-7202-97b7-29426dda3b9a",
+    "category": "model",
+    "outcome": "success",
+    "status": 200,
+    "total_seconds": 0.0545140579999952,
+    "timings": {
+      "rate_check": 0.00044688599996334233,
+      "thread_wait": 1.1461999974926584e-05,
+      "execution_wait": 8.11500001418608e-06,
+      "business_database": 0.0059028939999734575,
+      "ownership": 0.005936559999895508,
+      "ownership_preflight": 0.0009380879999980607,
+      "model_wait": 1.873700011856272e-05,
+      "router": 0.0014238399999157991,
+      "preferences": 0.001944708999985778,
+      "handler": 0.003576490999989801,
+      "answer_validation": 4.0688999888516264e-05,
+      "output_send": 3.6319999935585656e-05,
+      "execution": 0.05274123199990299
+    }
+  },
+  {
+    "level": "INFO",
+    "event": "support_request",
+    "code_version": "ci",
+    "prompt_sha256": "7244bfad8fc5d9712ab50ff79e452ae811aa8a836c878ab542dc9f3cb7ce23a1",
+    "config_sha256": "f48a13b06dd088f0723f92c42edfcdb2602ea4295ce3a5fa7781279a18b87fbc",
+    "session_hash": "bd494f18e54277819dc5fc2dff27d8e1",
+    "nodes": [
+      "router",
+      "router",
+      "router",
+      "handler",
+      "handler",
+      "tools",
+      "handler",
+      "handler"
+    ],
+    "intent": "service_status",
+    "tools": [
+      "query_service_status"
+    ],
+    "model_calls": [
+      {
+        "usage_known": false,
+        "model": "deterministic-fixture",
+        "usage": {}
+      },
+      {
+        "usage_known": false,
+        "model": "deterministic-fixture",
+        "usage": {}
+      }
+    ],
+    "request_id": "7b12e4e8a3ea469da688209983911dc5",
+    "run_id": "01a10f25-b9bc-7752-9157-39794a800e39",
+    "category": "model",
+    "outcome": "success",
+    "status": 200,
+    "total_seconds": 0.061988162999909946,
+    "timings": {
+      "rate_check": 0.0004198190000579416,
+      "thread_wait": 1.0049999900729745e-05,
+      "execution_wait": 7.865000043238979e-06,
+      "business_database": 0.00659852299997965,
+      "ownership": 0.006632998999862139,
+      "ownership_preflight": 0.0012201899999126908,
+      "model_wait": 2.5591000053282187e-05,
+      "router": 0.0012391919999572565,
+      "preferences": 0.0024494379999850935,
+      "handler": 0.005467816999953357,
+      "output_send": 4.515800003446202e-05,
+      "execution": 0.059874456999978065
+    }
+  },
+  {
+    "level": "INFO",
+    "event": "support_request",
+    "code_version": "ci",
+    "prompt_sha256": "7244bfad8fc5d9712ab50ff79e452ae811aa8a836c878ab542dc9f3cb7ce23a1",
+    "config_sha256": "f48a13b06dd088f0723f92c42edfcdb2602ea4295ce3a5fa7781279a18b87fbc",
+    "session_hash": "ab81896a99df3d1e601d022e9fcdb8ac",
+    "nodes": [
+      "router",
+      "router",
+      "router",
+      "retrieve",
+      "handler",
+      "handler"
+    ],
+    "intent": "general_question",
+    "retrieval_mode": "dense",
+    "index_hash": "6dd02ea91de4e09ab16b3e99e415e060",
+    "candidates": 1,
+    "evidence": 1,
+    "cache_status": "hit",
+    "embedding_tokens": 0,
+    "embedding_requests": 0,
+    "model_calls": [
+      {
+        "usage_known": false,
+        "model": "deterministic-fixture",
+        "usage": {}
+      }
+    ],
+    "request_id": "63f2614b77a84dca8348096cc40c7081",
+    "run_id": "01a10f25-b9fc-76b0-a4f4-cf2d12b6d9bc",
+    "category": "model",
+    "outcome": "success",
+    "status": 200,
+    "total_seconds": 0.05648969700007456,
+    "timings": {
+      "rate_check": 0.00041734900003120856,
+      "thread_wait": 1.1863000054290751e-05,
+      "execution_wait": 7.685000014134857e-06,
+      "business_database": 0.006646450000062032,
+      "ownership": 0.007526175999942097,
+      "ownership_preflight": 0.0009918819999938933,
+      "output_send": 6.486600000243925e-05,
+      "model_wait": 2.0579999841174867e-05,
+      "router": 0.0012244039999131928,
+      "preferences": 0.0014822829999729947,
+      "handler": 0.003413765000004787,
+      "answer_validation": 5.353400001695263e-05,
+      "execution": 0.054625193999982
+    }
+  },
+  {
+    "level": "INFO",
+    "event": "support_request",
+    "code_version": "ci",
+    "prompt_sha256": "7244bfad8fc5d9712ab50ff79e452ae811aa8a836c878ab542dc9f3cb7ce23a1",
+    "config_sha256": "f48a13b06dd088f0723f92c42edfcdb2602ea4295ce3a5fa7781279a18b87fbc",
+    "session_hash": "31e5116712fbb83dd64dcefcc1e0e231",
+    "nodes": [
+      "router",
+      "router"
+    ],
+    "model_calls": [],
+    "request_id": "1f70d669f7d8499aa3d32ae71258d621",
+    "run_id": "01a10f25-ba37-7dd3-a0a4-86a4705dc7da",
+    "category": "model",
+    "outcome": "request_timeout",
+    "status": 504,
+    "total_seconds": 8.003601171000014,
+    "timings": {
+      "rate_check": 0.00046549199998935364,
+      "thread_wait": 1.242400003320654e-05,
+      "execution_wait": 8.69699999839213e-06,
+      "business_database": 0.0067753760000641705,
+      "ownership": 0.0076376170000003185,
+      "ownership_preflight": 0.0013009360000069137,
+      "output_send": 2.055000004475005e-05,
+      "model_wait": 1.0730999974839506e-05,
+      "router": 7.987856115,
+      "execution": 8.001267424000048
+    }
+  },
+  {
+    "level": "INFO",
+    "event": "support_request",
+    "code_version": "ci",
+    "prompt_sha256": "7244bfad8fc5d9712ab50ff79e452ae811aa8a836c878ab542dc9f3cb7ce23a1",
+    "config_sha256": "f48a13b06dd088f0723f92c42edfcdb2602ea4295ce3a5fa7781279a18b87fbc",
+    "session_hash": "0277630330913b07bd98fa028a0c71d9",
+    "nodes": [
+      "router",
+      "router"
+    ],
+    "model_calls": [],
+    "request_id": "f675332f19634b1bbb35ba3c970af831",
+    "run_id": "01a10f25-d97d-7ef3-a56e-dc7eeec3fa9a",
+    "category": "model",
+    "outcome": "http_error",
+    "status": 500,
+    "total_seconds": 0.028737106999983553,
+    "timings": {
+      "rate_check": 0.0005818799999133262,
+      "thread_wait": 1.4248000070438138e-05,
+      "execution_wait": 1.1191999988113821e-05,
+      "business_database": 0.007109805000027336,
+      "ownership": 0.007632559000057881,
+      "ownership_preflight": 0.0013218289999485933,
+      "model_wait": 1.3805999969918048e-05,
+      "router": 0.000880717999962144,
+      "output_send": 4.740300005323661e-05,
+      "execution": 0.026383925999994062
+    }
+  }
+]

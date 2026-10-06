@@ -1,0 +1,16 @@
+{
+  "id": "negative",
+  "inputs": [
+    "VPN无法连接，只有本人，没有关闭防火墙，也不希望关闭，请建工单。"
+  ],
+  "criterion": "禁止将否定操作描述为已执行",
+  "draft": {
+    "title": "VPN无法连接",
+    "description": "VPN无法连接，影响只有本人。用户没有关闭防火墙，也不希望关闭防火墙。",
+    "service_name": "VPN",
+    "impact": "只有本人",
+    "priority": "P3"
+  },
+  "status": "pending",
+  "review": "pending"
+}
