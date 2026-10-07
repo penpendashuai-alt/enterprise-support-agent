@@ -1,0 +1,331 @@
+{
+  "run_id": 37566527592,
+  "code_sha": "8f0919af0e29d369dbf1789cb37c2ad883c98dcf",
+  "artifact_id": 11459001953,
+  "artifact_sha256": "7ebfb53c7eaa5fa1e2e99d92fee777eea7c0877a3676b8c091da09db6859cf9e",
+  "mode": "Deterministic model/embedding; real infrastructure; local OTLP receiver",
+  "paid_calls": 0,
+  "source_files": {
+    "ci-37566527592/checks.json": "0cd38579b4aadd9dac400a5b4593d1dff612ffff0fa12567bc13753fed6bdc36",
+    "closeout/business-tracing-ci-37566527592/checks.json": "9c239abdc01569803c290fbcc442d71cbed3ad7f9ea5efd22fa1a9e2354c5d2b",
+    "closeout/business-tracing-ci-37566527592/trace-evidence.json": "fd145d485f40c439c533847e83a1ec437861f4c37b3b37151ef6a0319119c79a",
+    "closeout/redis-memory-ci-37566527592/checks.json": "d0c18cf81a28f320166f964a87a3c63dcc576365fa91448d063b0c689308e80f"
+  },
+  "checks": {
+    "ci-37566527592/checks.json": [
+      {
+        "check": "nonroot_permissions_unmigrated_schema_refused",
+        "at": "2026-10-07T03:25:14.991862+00:00"
+      },
+      {
+        "check": "startup_auth_migration",
+        "at": "2026-10-07T03:25:21.355249+00:00"
+      },
+      {
+        "check": "retrieval_cache_tools_sse",
+        "at": "2026-10-07T03:25:30.595587+00:00"
+      },
+      {
+        "check": "approval_cancel_edit_idempotency_ownership",
+        "at": "2026-10-07T03:25:30.706101+00:00"
+      },
+      {
+        "check": "restart_agent_service",
+        "at": "2026-10-07T03:25:36.774560+00:00"
+      },
+      {
+        "check": "restart_postgres",
+        "at": "2026-10-07T03:25:38.026293+00:00"
+      },
+      {
+        "check": "restart_redis",
+        "at": "2026-10-07T03:25:38.343374+00:00"
+      },
+      {
+        "check": "restart_qdrant",
+        "at": "2026-10-07T03:25:38.573791+00:00"
+      },
+      {
+        "check": "qdrant_persisted_index_query",
+        "at": "2026-10-07T03:25:39.298394+00:00"
+      },
+      {
+        "check": "dependency_outage_and_recovery",
+        "at": "2026-10-07T03:25:44.326745+00:00"
+      },
+      {
+        "check": "backup_restore_new_database",
+        "at": "2026-10-07T03:25:47.265774+00:00",
+        "table_checksums": {
+          "checkpoint_blobs": "63|b7e57f6332bc95e7dffb74f4194b726c",
+          "checkpoint_migrations": "10|9db86657fcdb3620be00c0dbc25a2af2",
+          "checkpoint_writes": "193|d52a54966533da6b8b7783e59bd742e5",
+          "checkpoints": "57|cf7bd3bff269e803bf20498834f5c6b9",
+          "store": "1|6b2584db612b5e2d0ac474c4796be28d",
+          "store_migrations": "4|879acfd8cbb6ce639e5383198a7a382c",
+          "support_schema_versions": "1|2c5ff0b9ae51975a9d5e83581647a606",
+          "support_sessions": "8|6c1914874e353a9dc96b845cbe78f01a",
+          "tickets": "2|175ad5507238539d8d0e8f1110356e83",
+          "users": "1|f05a416454f135a84061b68a5d334f20"
+        }
+      },
+      {
+        "check": "streamlit_script_service_interaction",
+        "at": "2026-10-07T03:25:48.792064+00:00"
+      },
+      {
+        "check": "runtime_logs_cache_error_timeout_disconnect_filtered",
+        "at": "2026-10-07T03:25:51.808330+00:00",
+        "requests": 54
+      }
+    ],
+    "closeout/business-tracing-ci-37566527592/checks.json": [
+      {
+        "check": "real_service_business_scenarios",
+        "at": "2026-10-07T03:27:28.894591+00:00",
+        "requests": {
+          "question": {
+            "request_id": "e4c9fb4d95a544cfa95863aeea0c5216",
+            "trace_id": "36a168552170a002149caad6839bd14c",
+            "run_id": "01a11466-d8cc-74b0-9fae-692a05f38a4a",
+            "http_status": 200
+          },
+          "cached_question": {
+            "request_id": "3b057ca5f7cc4660aca6e1cd497f6b66",
+            "trace_id": "6a37394371b354cc1d6b2b23d3e6b910",
+            "run_id": "01a11466-da53-75a3-beb5-83b0402a9213",
+            "http_status": 200
+          },
+          "tool": {
+            "request_id": "15f30cef60164a3884cc886d094244d4",
+            "trace_id": "96b06a8823528cbfa0793ef5cf3d7060",
+            "run_id": "01a11466-da66-7e03-a24b-da1ade80dedd",
+            "http_status": 200
+          },
+          "draft": {
+            "request_id": "ccd8ffb2e0ad4d4eb70bc1d5e7606ea6",
+            "trace_id": "39759bcca1015a4dc8476109a4486a8a",
+            "run_id": "01a11466-da7d-7a60-bcb7-b1693e0c7207",
+            "http_status": 200
+          },
+          "approval": {
+            "request_id": "2409f3c12a974a34af0bf4097acc4e50",
+            "trace_id": "3125b5d62f57ce2dfaf3fc52463877aa",
+            "run_id": "01a11466-de7c-7d42-a197-c1c435433d05",
+            "http_status": 200
+          },
+          "router_failure": {
+            "request_id": "5d43c7ae1ec54d79a11264e17d89c955",
+            "trace_id": "a8ace70bb61c8a41f9ae8ab3fa8e9e09",
+            "run_id": "01a11466-de9c-7743-8d29-a0aacf4b82c9",
+            "http_status": 200
+          },
+          "dependency_failure": {
+            "request_id": "a76749fc3a9e4788b84a36cff5c24fae",
+            "trace_id": "887c0725ae196a7f180441eaa91cc4c7",
+            "run_id": null,
+            "http_status": 503
+          }
+        },
+        "receiver": "local",
+        "paid_calls": 0
+      },
+      {
+        "check": "received_queried_and_filtered",
+        "at": "2026-10-07T03:27:33.990977+00:00",
+        "observations": 54,
+        "receiver": "local"
+      },
+      {
+        "check": "receiver_unreachable_business_and_shutdown",
+        "at": "2026-10-07T03:27:46.155251+00:00",
+        "http_status": 200,
+        "shutdown_seconds": 3.4184316590000208,
+        "exit_code": 0
+      }
+    ],
+    "closeout/redis-memory-ci-37566527592/checks.json": [
+      {
+        "check": "effective_memory_limits",
+        "at": "2026-10-07T03:26:26.167025+00:00",
+        "compose_command": [
+          "redis-server",
+          "--save",
+          "",
+          "--appendonly",
+          "no",
+          "--maxmemory",
+          "4mb",
+          "--maxmemory-policy",
+          "noeviction"
+        ],
+        "hard_limit_bytes": 134217728,
+        "runtime_config": {
+          "maxmemory-policy": "noeviction",
+          "appendonly": "no",
+          "save": "",
+          "maxmemory": "4194304"
+        },
+        "before": {
+          "memory": {
+            "used_memory": 974640,
+            "used_memory_rss": 17858560,
+            "maxmemory": 4194304,
+            "maxmemory_policy": "noeviction",
+            "mem_not_counted_for_evict": 0
+          },
+          "evicted_keys": 0,
+          "sentinel": {}
+        }
+      },
+      {
+        "check": "noeviction_oom",
+        "at": "2026-10-07T03:26:32.214620+00:00",
+        "oom_type": "OutOfMemoryError",
+        "oom_message": "command not allowed when used memory > 'maxmemory'.",
+        "written_keys": 72,
+        "pressure_budget_bytes": 3145728,
+        "initial_budget_bytes": 4194304,
+        "memory": {
+          "used_memory": 4203944,
+          "used_memory_rss": 17858560,
+          "maxmemory": 3145728,
+          "maxmemory_policy": "noeviction",
+          "mem_not_counted_for_evict": 0
+        },
+        "evicted_keys": 0,
+        "sentinel": {
+          "tokens": "7",
+          "time": "synthetic"
+        }
+      },
+      {
+        "check": "computed_retrieval_survives_cache_set_failure",
+        "at": "2026-10-07T03:26:38.226954+00:00",
+        "status": "ok",
+        "cache": {
+          "write": "unavailable",
+          "status": "miss",
+          "shared": false,
+          "key_digest": "965f7526aae5f2928a1bccf794f188291d8f32f47c0011d9b2c95343b4f6520a"
+        },
+        "evidence": 1,
+        "memory": {
+          "used_memory": 4182952,
+          "used_memory_rss": 20217856,
+          "maxmemory": 3145728,
+          "maxmemory_policy": "noeviction",
+          "mem_not_counted_for_evict": 0
+        },
+        "evicted_keys": 0,
+        "sentinel": {
+          "tokens": "7",
+          "time": "synthetic"
+        }
+      },
+      {
+        "check": "admission_fails_closed_without_model_call",
+        "at": "2026-10-07T03:26:38.344849+00:00",
+        "http_status": 503,
+        "request_id": "6c3613932eb04bcfa72f7001ccdf5401",
+        "capabilities": {
+          "core": {
+            "status": "ok",
+            "reason": "core_ready"
+          },
+          "question": {
+            "status": "unavailable",
+            "reason": "redis_required"
+          },
+          "approval_and_read": {
+            "status": "degraded",
+            "reason": "local_admission_fallback"
+          },
+          "retrieval": {
+            "status": "ok",
+            "reason": "dense_index_ready"
+          },
+          "cache": {
+            "status": "unavailable",
+            "reason": "redis_memory_limit"
+          },
+          "tracing": {
+            "status": "disabled",
+            "reason": "not_enabled"
+          },
+          "model": {
+            "status": "configured",
+            "reason": "no_paid_probe"
+          }
+        }
+      },
+      {
+        "check": "approval_read_replay_under_oom",
+        "at": "2026-10-07T03:26:43.773953+00:00",
+        "tickets": 1,
+        "container_state": "false true",
+        "memory": {
+          "used_memory": 4182984,
+          "used_memory_rss": 20217856,
+          "maxmemory": 3145728,
+          "maxmemory_policy": "noeviction",
+          "mem_not_counted_for_evict": 0
+        }
+      },
+      {
+        "check": "release_and_recovery",
+        "at": "2026-10-07T03:26:54.805162+00:00",
+        "deleted_own_keys": 73,
+        "memory": {
+          "used_memory": 1277936,
+          "used_memory_rss": 20217856,
+          "maxmemory": 4194304,
+          "maxmemory_policy": "noeviction",
+          "mem_not_counted_for_evict": 0
+        },
+        "evicted_keys": 0,
+        "sentinel": {},
+        "capabilities": {
+          "core": {
+            "status": "ok",
+            "reason": "core_ready"
+          },
+          "question": {
+            "status": "ok",
+            "reason": "model_configured_callability_unprobed"
+          },
+          "approval_and_read": {
+            "status": "ok",
+            "reason": "available"
+          },
+          "retrieval": {
+            "status": "ok",
+            "reason": "dense_index_ready"
+          },
+          "cache": {
+            "status": "ok",
+            "reason": "reachable"
+          },
+          "tracing": {
+            "status": "disabled",
+            "reason": "not_enabled"
+          },
+          "model": {
+            "status": "configured",
+            "reason": "no_paid_probe"
+          }
+        },
+        "paid_calls": 0
+      }
+    ]
+  },
+  "trace_receipt": {
+    "receiver": "local",
+    "remote_receipt": "unverified",
+    "observation_count": 54,
+    "parent_links_valid": true,
+    "sensitive_scan_passed": true,
+    "queried_field_groups": "complete_OTLP_payload",
+    "root_count": 7
+  }
+}

@@ -3,23 +3,68 @@
   "mode": "offline tests and deterministic isolated browser demo",
   "paid_calls": 0,
   "local_checks": {
-    "pytest_full": {"passed": 386, "skipped": 4, "warnings": 17, "seconds": 85.69},
+    "pytest_full": {
+      "passed": 386,
+      "skipped": 4,
+      "warnings": 17,
+      "seconds": 85.69
+    },
     "subsequent_changes": "Added run provenance hashes and bound demo notice to selected model; affected suites rerun",
-    "pytest_affected": {"passed": 28, "warnings": 1, "seconds": 12.15},
+    "pytest_affected": {
+      "passed": 28,
+      "warnings": 1,
+      "seconds": 12.15
+    },
     "ruff_check": "passed",
     "ruff_format": "208 files formatted",
     "pyrefly": "0 errors, 9 suppressed, 5 warnings not shown",
     "pymarkdown": "README, docs, benchmark and delivery markdown passed",
     "benchmark_check": "passed",
     "independent_phase8_rebuild": "six final-v2 reports exactly equal as JSON",
-    "historical_integrity": "1038 historical evaluation files unchanged; see integrity.json"
+    "historical_integrity": "1038 historical evaluation files unchanged; see integrity.json",
+    "benchmark_provenance_followup": {
+      "passed": 9,
+      "seconds": 8.57,
+      "scope": "Regression dataset label, run manifest paths and separate failure attribution; numerical results unchanged"
+    }
   },
   "skips": "Existing opt-in integration checks; actual Docker verification is retained in CI",
   "known_limitations": [
     "No new real-model browser evaluation",
     "No local paid import of the formal knowledge corpus",
-    "No current-stack Hybrid deployment test",
-    "User resume details and interview self-test pending"
+    "No current-stack Hybrid deployment test"
   ],
-  "github": "Pending final implementation commit and corresponding Actions verification"
+  "github": {
+    "run_id": 37566527592,
+    "url": "https://github.com/penpendashuai-alt/enterprise-support-agent/actions/runs/37566527592",
+    "event": "workflow_dispatch",
+    "required_jobs_passed": 5,
+    "python": {
+      "test-python (3.12)": {
+        "passed": 386,
+        "skipped": 4,
+        "warnings": 17
+      },
+      "test-python (3.14)": {
+        "passed": 386,
+        "skipped": 4,
+        "warnings": 406
+      },
+      "test-python (3.13)": {
+        "passed": 386,
+        "skipped": 4,
+        "warnings": 405
+      }
+    },
+    "benchmark_check": "passed on all three Python jobs",
+    "container_business_groups": 13,
+    "redis_memory_groups": 6,
+    "tracing_business_requests": 7,
+    "tracing_observations": 54,
+    "upload_and_cleanup": "passed",
+    "automatic_push_run": "not observed; cause unknown",
+    "pr_trigger": "not tested"
+  },
+  "implementation_sha": "8f0919af0e29d369dbf1789cb37c2ad883c98dcf",
+  "code_and_documentation_boundary": "CI covers implementation SHA; subsequent commit only records documentation and sanitized evidence, no runtime or test changes."
 }

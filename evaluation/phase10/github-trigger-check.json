@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-10-07T03:20:45.686197+00:00",
+  "branch_sha": "1dfc5fe94fd56a33ac07f5e1afcb1265b8e946ee",
+  "workflow": {
+    "id": 369260589,
+    "name": "Build and test",
+    "path": ".github/workflows/test.yml",
+    "state": "active"
+  },
+  "actions_permissions_http": 200,
+  "actions_permissions": {
+    "enabled": true,
+    "allowed_actions": "all",
+    "sha_pinning_required": false
+  },
+  "runs_for_sha": [],
+  "push_trigger_root_cause": "unknown; normal git push succeeded but no automatic run observed at check time",
+  "pr_trigger": "not exercised",
+  "initial_normal_push_sha": "1dfc5fe94fd56a33ac07f5e1afcb1265b8e946ee",
+  "final_implementation_sha": "8f0919af0e29d369dbf1789cb37c2ad883c98dcf",
+  "final_checked_at": "2026-10-07T03:27:59.189645+00:00",
+  "final_manual_run_id": 37566527592,
+  "final_automatic_push_runs_observed": []
+}

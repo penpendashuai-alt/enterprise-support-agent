@@ -46,5 +46,15 @@
     "Synthetic identity and local DEMO tickets",
     "WebSocket functionality tested without packet capture",
     "No production identity, HA, or external ticket integration"
-  ]
+  ],
+  "final_runtime_source_sha256": {
+    "src/service/ci_model.py": "3596c2c621fff78133532edac601e632e4a30ee38682362633c18bcd55ef502b",
+    "src/streamlit_app.py": "00f41148df986e830c350c432f3413f411d454c3c619d795c5ff7ad2b1f7e01a"
+  },
+  "final_images": {
+    "agent_service": "sha256:9ae7fd1adf96cb7e5c46d7cfec0558d371aad05b42904cb0a20f5ed5d7ebcbbb",
+    "streamlit_app": "sha256:997d5ee50d4bcc307555151cfec5288977af6458b31b7e350b8bdc5e670a07b4"
+  },
+  "final_image_refresh_check": "2026-10-07: mode notice, complete history, created ticket and failure messages restored",
+  "local_resources": "esa-p10-demo remains running for review; down without --volumes stops while retaining synthetic data"
 }

@@ -1,0 +1,581 @@
+{
+  "id": 37566527592,
+  "event": "workflow_dispatch",
+  "head_sha": "8f0919af0e29d369dbf1789cb37c2ad883c98dcf",
+  "run_attempt": 1,
+  "status": "completed",
+  "conclusion": "success",
+  "html_url": "https://github.com/penpendashuai-alt/enterprise-support-agent/actions/runs/37566527592",
+  "created_at": "2026-10-07T03:23:32Z",
+  "updated_at": "2026-10-07T03:27:57Z",
+  "checked_at": "2026-10-07T03:27:59.189645+00:00",
+  "jobs": [
+    {
+      "id": 112615407240,
+      "name": "lint-markdown",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/penpendashuai-alt/enterprise-support-agent/actions/runs/37566527592/job/112615407240",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-07T03:23:37Z",
+          "completed_at": "2026-10-07T03:23:38Z"
+        },
+        {
+          "name": "Run actions/checkout@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-07T03:23:38Z",
+          "completed_at": "2026-10-07T03:23:39Z"
+        },
+        {
+          "name": "Set up Python",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-07T03:23:39Z",
+          "completed_at": "2026-10-07T03:23:39Z"
+        },
+        {
+          "name": "Install uv",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-07T03:23:39Z",
+          "completed_at": "2026-10-07T03:23:51Z"
+        },
+        {
+          "name": "Install dependencies with uv",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-07T03:23:51Z",
+          "completed_at": "2026-10-07T03:23:51Z"
+        },
+        {
+          "name": "Lint markdown with pymarkdown",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-07T03:23:51Z",
+          "completed_at": "2026-10-07T03:23:53Z"
+        },
+        {
+          "name": "Post Install uv",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-07T03:23:53Z",
+          "completed_at": "2026-10-07T03:23:54Z"
+        },
+        {
+          "name": "Post Set up Python",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-07T03:23:54Z",
+          "completed_at": "2026-10-07T03:23:54Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-07T03:23:54Z",
+          "completed_at": "2026-10-07T03:23:54Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-07T03:23:54Z",
+          "completed_at": "2026-10-07T03:23:54Z"
+        }
+      ]
+    },
+    {
+      "id": 112615407348,
+      "name": "test-python (3.12)",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/penpendashuai-alt/enterprise-support-agent/actions/runs/37566527592/job/112615407348",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-07T03:23:37Z",
+          "completed_at": "2026-10-07T03:23:38Z"
+        },
+        {
+          "name": "Run actions/checkout@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-07T03:23:38Z",
+          "completed_at": "2026-10-07T03:23:40Z"
+        },
+        {
+          "name": "Set up Python 3.12",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-07T03:23:40Z",
+          "completed_at": "2026-10-07T03:23:40Z"
+        },
+        {
+          "name": "Install uv",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-07T03:23:40Z",
+          "completed_at": "2026-10-07T03:23:46Z"
+        },
+        {
+          "name": "Install dependencies with uv",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-07T03:23:46Z",
+          "completed_at": "2026-10-07T03:23:46Z"
+        },
+        {
+          "name": "Lint and format with ruff",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-07T03:23:46Z",
+          "completed_at": "2026-10-07T03:23:46Z"
+        },
+        {
+          "name": "Type check with pyrefly",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-07T03:23:46Z",
+          "completed_at": "2026-10-07T03:23:47Z"
+        },
+        {
+          "name": "Test with pytest",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-07T03:23:47Z",
+          "completed_at": "2026-10-07T03:25:00Z"
+        },
+        {
+          "name": "Check offline benchmark reproducibility",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-07T03:25:00Z",
+          "completed_at": "2026-10-07T03:25:00Z"
+        },
+        {
+          "name": "Post Install uv",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-10-07T03:25:00Z",
+          "completed_at": "2026-10-07T03:25:01Z"
+        },
+        {
+          "name": "Post Set up Python 3.12",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-10-07T03:25:01Z",
+          "completed_at": "2026-10-07T03:25:01Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18,
+          "started_at": "2026-10-07T03:25:01Z",
+          "completed_at": "2026-10-07T03:25:01Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-10-07T03:25:01Z",
+          "completed_at": "2026-10-07T03:25:01Z"
+        }
+      ]
+    },
+    {
+      "id": 112615407375,
+      "name": "test-python (3.14)",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/penpendashuai-alt/enterprise-support-agent/actions/runs/37566527592/job/112615407375",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-07T03:23:36Z",
+          "completed_at": "2026-10-07T03:23:38Z"
+        },
+        {
+          "name": "Run actions/checkout@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-07T03:23:38Z",
+          "completed_at": "2026-10-07T03:23:39Z"
+        },
+        {
+          "name": "Set up Python 3.14",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-07T03:23:39Z",
+          "completed_at": "2026-10-07T03:23:39Z"
+        },
+        {
+          "name": "Install uv",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-07T03:23:39Z",
+          "completed_at": "2026-10-07T03:23:45Z"
+        },
+        {
+          "name": "Install dependencies with uv",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-07T03:23:45Z",
+          "completed_at": "2026-10-07T03:23:45Z"
+        },
+        {
+          "name": "Lint and format with ruff",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-07T03:23:45Z",
+          "completed_at": "2026-10-07T03:23:45Z"
+        },
+        {
+          "name": "Type check with pyrefly",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-07T03:23:45Z",
+          "completed_at": "2026-10-07T03:23:46Z"
+        },
+        {
+          "name": "Test with pytest",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-07T03:23:46Z",
+          "completed_at": "2026-10-07T03:24:26Z"
+        },
+        {
+          "name": "Check offline benchmark reproducibility",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-07T03:24:26Z",
+          "completed_at": "2026-10-07T03:24:26Z"
+        },
+        {
+          "name": "Post Install uv",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-10-07T03:24:26Z",
+          "completed_at": "2026-10-07T03:24:26Z"
+        },
+        {
+          "name": "Post Set up Python 3.14",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-10-07T03:24:26Z",
+          "completed_at": "2026-10-07T03:24:26Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18,
+          "started_at": "2026-10-07T03:24:26Z",
+          "completed_at": "2026-10-07T03:24:27Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-10-07T03:24:27Z",
+          "completed_at": "2026-10-07T03:24:27Z"
+        }
+      ]
+    },
+    {
+      "id": 112615407379,
+      "name": "test-python (3.13)",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/penpendashuai-alt/enterprise-support-agent/actions/runs/37566527592/job/112615407379",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-07T03:23:38Z",
+          "completed_at": "2026-10-07T03:23:39Z"
+        },
+        {
+          "name": "Run actions/checkout@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-07T03:23:39Z",
+          "completed_at": "2026-10-07T03:23:40Z"
+        },
+        {
+          "name": "Set up Python 3.13",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-07T03:23:40Z",
+          "completed_at": "2026-10-07T03:23:40Z"
+        },
+        {
+          "name": "Install uv",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-07T03:23:40Z",
+          "completed_at": "2026-10-07T03:23:49Z"
+        },
+        {
+          "name": "Install dependencies with uv",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-07T03:23:49Z",
+          "completed_at": "2026-10-07T03:23:50Z"
+        },
+        {
+          "name": "Lint and format with ruff",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-07T03:23:50Z",
+          "completed_at": "2026-10-07T03:23:51Z"
+        },
+        {
+          "name": "Type check with pyrefly",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-07T03:23:51Z",
+          "completed_at": "2026-10-07T03:23:53Z"
+        },
+        {
+          "name": "Test with pytest",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-07T03:23:53Z",
+          "completed_at": "2026-10-07T03:25:02Z"
+        },
+        {
+          "name": "Check offline benchmark reproducibility",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-07T03:25:02Z",
+          "completed_at": "2026-10-07T03:25:03Z"
+        },
+        {
+          "name": "Post Install uv",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-10-07T03:25:03Z",
+          "completed_at": "2026-10-07T03:25:03Z"
+        },
+        {
+          "name": "Post Set up Python 3.13",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-10-07T03:25:03Z",
+          "completed_at": "2026-10-07T03:25:03Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18,
+          "started_at": "2026-10-07T03:25:03Z",
+          "completed_at": "2026-10-07T03:25:03Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-10-07T03:25:03Z",
+          "completed_at": "2026-10-07T03:25:03Z"
+        }
+      ]
+    },
+    {
+      "id": 112615407388,
+      "name": "test-docker",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/penpendashuai-alt/enterprise-support-agent/actions/runs/37566527592/job/112615407388",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-07T03:23:37Z",
+          "completed_at": "2026-10-07T03:23:39Z"
+        },
+        {
+          "name": "Run actions/checkout@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-07T03:23:39Z",
+          "completed_at": "2026-10-07T03:23:41Z"
+        },
+        {
+          "name": "Run actions/setup-python@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-07T03:23:41Z",
+          "completed_at": "2026-10-07T03:23:41Z"
+        },
+        {
+          "name": "Run astral-sh/setup-uv@v10.0.1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-07T03:23:41Z",
+          "completed_at": "2026-10-07T03:23:43Z"
+        },
+        {
+          "name": "Install locked test dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-07T03:23:43Z",
+          "completed_at": "2026-10-07T03:23:48Z"
+        },
+        {
+          "name": "Build both images",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-07T03:23:48Z",
+          "completed_at": "2026-10-07T03:24:30Z"
+        },
+        {
+          "name": "Verify Support Agent with real infrastructure",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-07T03:24:30Z",
+          "completed_at": "2026-10-07T03:25:51Z"
+        },
+        {
+          "name": "Verify Redis memory pressure and recovery",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-07T03:25:51Z",
+          "completed_at": "2026-10-07T03:26:57Z"
+        },
+        {
+          "name": "Verify real Service tracing against local OTLP receiver",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-07T03:26:57Z",
+          "completed_at": "2026-10-07T03:27:47Z"
+        },
+        {
+          "name": "Upload sanitized acceptance records",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-07T03:27:47Z",
+          "completed_at": "2026-10-07T03:27:48Z"
+        },
+        {
+          "name": "Clean only this run's project",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-07T03:27:48Z",
+          "completed_at": "2026-10-07T03:27:49Z"
+        },
+        {
+          "name": "Post Run astral-sh/setup-uv@v10.0.1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20,
+          "started_at": "2026-10-07T03:27:49Z",
+          "completed_at": "2026-10-07T03:27:53Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-10-07T03:27:53Z",
+          "completed_at": "2026-10-07T03:27:53Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 22,
+          "started_at": "2026-10-07T03:27:53Z",
+          "completed_at": "2026-10-07T03:27:54Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 23,
+          "started_at": "2026-10-07T03:27:54Z",
+          "completed_at": "2026-10-07T03:27:54Z"
+        }
+      ]
+    }
+  ],
+  "automatic_push_runs_observed": [],
+  "artifacts": [
+    {
+      "id": 11459001953,
+      "name": "phase9-container-records",
+      "size_in_bytes": 17896,
+      "expired": false,
+      "digest": "sha256:7ebfb53c7eaa5fa1e2e99d92fee777eea7c0877a3676b8c091da09db6859cf9e"
+    }
+  ]
+}
