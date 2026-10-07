@@ -400,11 +400,13 @@ def agent_tasks(sources):
             ctx = context(
                 8,
                 variant,
-                "agent_v1",
+                "phase8_regressions" if split == "regression" else "agent_v1",
                 split,
                 "real_agent_non_independent_review",
                 "evaluation/phase8/README.md",
-                source,
+                ";".join(
+                    (run / "manifest.json").relative_to(sources.root).as_posix() for run in runs
+                ),
                 source,
             )
             structural = sum(t["structural"]["passed"] for t in d["tasks"])
@@ -476,7 +478,9 @@ def agent_tasks(sources):
                         "failure:" + cause,
                         count,
                         n,
-                        "Supplemental-audit primary cause; mutually exclusive per task",
+                        "Frozen-regression primary cause; mutually exclusive per task"
+                        if split == "regression"
+                        else "Supplemental-audit primary cause; mutually exclusive per task",
                         unit="tasks",
                         num=count,
                         den=n,

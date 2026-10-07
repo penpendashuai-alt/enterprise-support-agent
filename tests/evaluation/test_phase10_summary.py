@@ -27,6 +27,9 @@ def test_offline_rebuild_denominators_and_separate_scoring(monkeypatch):
     assert heldout["baseline", "confirmed_task_success_lower_bound"]["numerator"] == "20"
     assert heldout["candidate", "supplemental_draft_audited_success"]["numerator"] == "18"
     assert heldout["baseline", "supplemental_draft_audited_success"]["denominator"] == "24"
+    regressions = [r for r in records if r["split"] == "regression"]
+    assert regressions and all(r["dataset"] == "phase8_regressions" for r in regressions)
+    assert all("manifest.json" in r["config_source"] for r in regressions)
     draft = next(
         r for r in records if r["group"] == "drafts-v2" and r["metric"] == "faithful_generated"
     )
