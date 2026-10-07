@@ -1,0 +1,14 @@
+{
+  "baseline_tracked_files": 1388,
+  "historical_evaluation_files_checked": 1038,
+  "changed_historical_files": [],
+  "relative_links_checked": 155,
+  "broken_relative_links": [],
+  "public_private_path_violations": [],
+  "phone_or_api_key_pattern_matches": [],
+  "privacy_scope": "Current publishable files; known private phone and common API-key pattern. No claim of exhaustive security audit. personal/.env/.cache excluded by Git.",
+  "screenshots": {
+    "media/enterprise-support/approval.png": "0fdfc20af25ec2d5a34cb10bc999cdfe23a0fcb60acbe62a71183b433a158c46",
+    "media/enterprise-support/knowledge.png": "9a363d04b11853054916195e5db41bf90046cb9b3bad539b3786f33d95c6f34c"
+  }
+}

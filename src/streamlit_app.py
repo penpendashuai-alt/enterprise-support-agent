@@ -27,7 +27,7 @@ from voice import VoiceManager
 # The app heavily uses AgentClient to interact with the agent's FastAPI endpoints.
 
 
-APP_TITLE = "Agent Service Toolkit"
+APP_TITLE = "Enterprise Support Agent"
 APP_ICON = "🧰"
 USER_ID_COOKIE = "user_id"
 
@@ -112,6 +112,7 @@ async def main() -> None:
             st.markdown("The service might be booting up. Try again in a few seconds.")
             st.stop()
     agent_client: AgentClient = st.session_state.agent_client
+    mode_notice = st.empty()
 
     # Initialize voice manager (once per session)
     if "voice_manager" not in st.session_state:
@@ -145,7 +146,7 @@ async def main() -> None:
         st.header(f"{APP_ICON} {APP_TITLE}")
 
         ""
-        "Full toolkit for running an AI agent service built with LangGraph, FastAPI and Streamlit"
+        "企业知识库问答与人工审批工单助手"
         ""
 
         if st.button(":material/chat: New Chat", use_container_width=True):
@@ -227,12 +228,14 @@ async def main() -> None:
 
         @st.dialog("Architecture")
         def architecture_dialog() -> None:
-            st.image(
-                "https://github.com/JoshuaC215/agent-service-toolkit/blob/main/media/agent_architecture.png?raw=true"
+            st.write(
+                "浏览器通过 WebSocket 连接 Streamlit；AgentClient 通过 HTTP/SSE 连接 FastAPI 与 Support Agent。"
             )
-            "[View full size on Github](https://github.com/JoshuaC215/agent-service-toolkit/blob/main/media/agent_architecture.png)"
-            st.caption(
-                "App hosted on [Streamlit Cloud](https://share.streamlit.io/) with FastAPI service running in [Azure](https://learn.microsoft.com/en-us/azure/app-service/)"
+            st.write(
+                "检索使用 Qdrant 与 Redis；人工审批后的演示工单持久化到业务库。默认部署为单 worker。"
+            )
+            st.markdown(
+                "[架构与存储职责](https://github.com/penpendashuai-alt/enterprise-support-agent/blob/main/docs/architecture.md)"
             )
 
         if st.button(":material/schema: Architecture", use_container_width=True):
@@ -265,9 +268,14 @@ async def main() -> None:
         if st.button(":material/upload: Share/resume chat", use_container_width=True):
             share_chat_dialog()
 
-        "[View the source code](https://github.com/JoshuaC215/agent-service-toolkit)"
+        "[View the source code](https://github.com/penpendashuai-alt/enterprise-support-agent)"
         st.caption(
-            "Made with :material/favorite: by [Joshua](https://www.linkedin.com/in/joshua-k-carroll/) in Oakland"
+            "Based on [JoshuaC215/agent-service-toolkit](https://github.com/JoshuaC215/agent-service-toolkit), MIT."
+        )
+
+    if model == "fake":
+        mode_notice.info(
+            "确定性演示模式：回答与模型输出为测试替代，流程连接真实演示数据库；不代表真实 LLM 质量。"
         )
 
     # Draw existing messages
@@ -302,6 +310,8 @@ async def main() -> None:
             case _:
                 WELCOME = "Hello! I'm an AI agent. Ask me anything!"
 
+        if model == "fake":
+            WELCOME = "确定性演示可输入：演示制度要求什么？／查询服务状态／VPN／创建演示工单：VPN 连接失败，影响本人，尚未重启，优先级 P3。其他输入不代表真实语言理解。"
         with st.chat_message("ai"):
             st.write(WELCOME)
 
@@ -421,6 +431,7 @@ async def draw_messages(
     # Placeholder for intermediate streaming tokens
     streaming_content = ""
     streaming_placeholder = None
+    last_approval = None
 
     # Iterate over the messages and draw them
     while msg := await anext(messages_agen, None):
@@ -446,12 +457,19 @@ async def draw_messages(
         match msg.type:
             # A message from the user, the easiest case
             case "human":
+                last_approval = None
                 last_message_type = "human"
                 st.chat_message("human").write(msg.content)
 
             # A message from the agent is the most complex case, since we need to
             # handle streaming tokens and tool calls.
             case "ai":
+                approval = (
+                    msg.custom_data if msg.custom_data.get("kind") == "ticket_approval" else None
+                )
+                if approval and last_approval == (approval, msg.content):
+                    continue
+                last_approval = (approval, msg.content) if approval else None
                 # If we're rendering new messages, store the message in session state
                 if is_new:
                     st.session_state.messages.append(msg)

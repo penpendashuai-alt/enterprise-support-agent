@@ -46,6 +46,9 @@ jobs:
       run: |
         uv run pytest --cov=src/ --cov-report=xml
 
+    - name: Check offline benchmark reproducibility
+      run: python scripts/summarize_phase10.py --check
+
   lint-markdown:
     runs-on: ubuntu-latest
 

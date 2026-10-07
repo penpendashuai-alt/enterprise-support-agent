@@ -9,6 +9,31 @@ from schema import ChatHistory, ChatMessage, ThreadSummary, UserThreads
 from schema.models import OpenAIModelName
 
 
+def test_stream_draft_update_and_interrupt_render_once(mock_agent_client):
+    async def stream(**kwargs):
+        for version in (1, 1, 2):
+            yield ChatMessage(
+                type="ai",
+                content=f"审批草稿版本 {version}",
+                run_id="draft-run",
+                custom_data={
+                    "kind": "ticket_approval",
+                    "draft_id": "synthetic",
+                    "draft_version": version,
+                },
+            )
+
+    mock_agent_client.astream = stream
+    at = AppTest.from_file("../../src/streamlit_app.py").run()
+    at.chat_input[0].set_value("创建草稿").run()
+    assert not at.exception
+    assert len(at.session_state.messages) == 3
+    at.run()
+    rendered = [m.value for chat in at.chat_message for m in chat.markdown]
+    assert rendered.count("审批草稿版本 1") == 1
+    assert rendered.count("审批草稿版本 2") == 1
+
+
 def test_support_welcome_and_mock_notice(mock_agent_client):
     from schema import AgentInfo
 

@@ -2,9 +2,13 @@
 
 本目录保留 Synthetic enterprise support dataset / public technical documentation 的 Phase 4 Dense 基线和 Phase 5 对照实验。真实评测使用 DashScope Embedding、Qdrant Cloud、Elasticsearch、Reranker 和聊天模型；Mock 只用于程序行为测试。
 
+## Phase 10
+
+最终 [Benchmark](../benchmarks/results.md)、[技术交付记录](phase10/README.md) 与 [真实浏览器演示](../docs/demo.md)。本阶段只做离线复算和确定性流程验证，没有新增付费模型调用；个人求职材料仅保留本地。
+
 ## Phase 9
 
-部署、健康、日志过滤、草稿事实状态回归与容器演练见 [Phase 9 记录索引](phase9/README.md) 和 [阶段文档](../docs/phase9_deployment_observability.md)。核心收尾完成，Redis 压力、远程追踪 API/界面和 GitHub Actions 结果见 [收尾记录](phase9/closeout/README.md)；浏览器 WebSocket、付费本地正式导入和 Hybrid 运行仍未验证。
+部署、健康、日志过滤、草稿事实状态回归与容器演练见 [Phase 9 记录索引](phase9/README.md) 和 [阶段文档](../docs/phase9_deployment_observability.md)。核心收尾完成，Redis 压力、远程追踪 API/界面和 GitHub Actions 结果见 [收尾记录](phase9/closeout/README.md)。Phase 9 当时未做浏览器 WebSocket 验证，Phase 10 已补充确定性浏览器流程；付费本地正式导入和当前部署的 Hybrid 运行仍未验证。
 
 ## Phase 8
 

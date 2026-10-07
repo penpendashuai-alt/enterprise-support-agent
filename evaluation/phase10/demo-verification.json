@@ -1,0 +1,50 @@
+{
+  "verified_at": "2026-10-07T03:13:47.383846+00:00",
+  "mode": "deterministic CI model and embeddings; real isolated PostgreSQL, Redis, Qdrant",
+  "project": "esa-p10-demo",
+  "paid_calls": 0,
+  "browser": {
+    "dates": [
+      "2026-10-06",
+      "2026-10-07"
+    ],
+    "implementation": "Streamlit browser WebSocket and AgentClient HTTP/SSE; functional interaction, no packet capture",
+    "knowledge_citation_expanded": true,
+    "clarification_then_VPN_tool": true,
+    "draft_edited_v1_to_v2": true,
+    "unsaved_edit_approval_blocked": true,
+    "pending_v2_restored_after_app_and_engine_restart": true,
+    "approved_v2_and_queried_created_ticket": true,
+    "confirmed_record_restored_after_refresh": true,
+    "injected_router_failure_displayed": true,
+    "progress": "Observed tool pending then completed status and final content; token frames separately counted through HTTP/SSE probe"
+  },
+  "backend": {
+    "ticket_id": "DEMO-175CBA5E7A714A58B08CB8F883A7CD4A",
+    "ticket_count_before_replay": 1,
+    "ticket_count_after_replay": 1,
+    "replay_http_status": 200,
+    "same_ticket_returned": true,
+    "pending_approval": null,
+    "postgres_query": "SELECT count(*), min(draft_version), max(draft_version) FROM tickets WHERE user_id='phase10-demo-user';",
+    "postgres_result_count_minversion_maxversion": "1|2|2",
+    "sse_event_counts": {
+      "message": 3,
+      "token": 7
+    }
+  },
+  "independent_phase8_rebuild": {
+    "dev-baseline.json": true,
+    "dev-candidate.json": true,
+    "heldout-baseline.json": true,
+    "heldout-candidate.json": true,
+    "regression-baseline.json": true,
+    "regression-candidate.json": true
+  },
+  "limitations": [
+    "No new real LLM quality evaluation",
+    "Synthetic identity and local DEMO tickets",
+    "WebSocket functionality tested without packet capture",
+    "No production identity, HA, or external ticket integration"
+  ]
+}

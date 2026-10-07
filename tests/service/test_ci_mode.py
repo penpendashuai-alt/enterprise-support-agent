@@ -14,6 +14,7 @@ def test_explicit_ci_model_routes_tools_and_drafts(monkeypatch, tmp_path):
     monkeypatch.setattr(settings, "AUTH_SECRET", None)
     monkeypatch.setattr(settings, "LANGFUSE_TRACING", False)
     monkeypatch.setattr(settings, "SQLITE_DB_PATH", str(tmp_path / "checkpoint.db"))
+    monkeypatch.setattr(settings, "TICKET_DB_PATH", str(tmp_path / "tickets.db"))
     draft = {
         "title": "VPN故障",
         "description": "希望人工检查，尚未重启",
@@ -57,3 +58,43 @@ def test_explicit_ci_model_routes_tools_and_drafts(monkeypatch, tmp_path):
         )
         assert response.status_code == 200
         assert response.json()["custom_data"]["draft"] == draft
+
+
+def test_browser_demo_clarification_and_created_ticket_query(monkeypatch, tmp_path):
+    monkeypatch.setattr(settings, "CI_TEST_MODE", True)
+    monkeypatch.setattr(settings, "USE_FAKE_MODEL", True)
+    monkeypatch.setattr(settings, "DEFAULT_MODEL", FakeModelName.FAKE)
+    monkeypatch.setattr(settings, "AUTH_SECRET", None)
+    monkeypatch.setattr(settings, "LANGFUSE_TRACING", False)
+    monkeypatch.setattr(settings, "SQLITE_DB_PATH", str(tmp_path / "checkpoint.db"))
+    monkeypatch.setattr(settings, "TICKET_DB_PATH", str(tmp_path / "tickets.db"))
+    with TestClient(app) as client:
+
+        def send(**body):
+            response = client.post(
+                "/support-agent/invoke",
+                json={"user_id": "demo", "thread_id": "demo", **body},
+            )
+            assert response.status_code == 200, response.text
+            return response.json()
+
+        assert "请提供" in send(message="查询服务状态")["content"]
+        assert "模拟" in send(message="VPN")["content"]
+        draft = send(message="创建演示工单：VPN 连接失败，影响本人，尚未重启，优先级 P3。")[
+            "custom_data"
+        ]
+        decision = {
+            "draft_id": draft["draft_id"],
+            "draft_version": draft["draft_version"],
+            "action": "approve",
+        }
+        send(approval=decision)
+        tickets = client.get("/support-agent/tickets", params={"user_id": "demo"}).json()["tickets"]
+        assert len(tickets) == 1
+        ticket_id = tickets[0]["ticket_id"]
+        assert ticket_id == ticket_id.upper()
+        result = send(message=f"查询工单 {ticket_id}")
+        assert ticket_id in result["content"]
+        assert "尚未重启" in result["content"]
+        missing = send(message="查询工单 DEMO-" + "F" * 32)
+        assert "未找到" in missing["content"]

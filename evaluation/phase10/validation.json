@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-07",
+  "mode": "offline tests and deterministic isolated browser demo",
+  "paid_calls": 0,
+  "local_checks": {
+    "pytest_full": {"passed": 386, "skipped": 4, "warnings": 17, "seconds": 85.69},
+    "subsequent_changes": "Added run provenance hashes and bound demo notice to selected model; affected suites rerun",
+    "pytest_affected": {"passed": 28, "warnings": 1, "seconds": 12.15},
+    "ruff_check": "passed",
+    "ruff_format": "208 files formatted",
+    "pyrefly": "0 errors, 9 suppressed, 5 warnings not shown",
+    "pymarkdown": "README, docs, benchmark and delivery markdown passed",
+    "benchmark_check": "passed",
+    "independent_phase8_rebuild": "six final-v2 reports exactly equal as JSON",
+    "historical_integrity": "1038 historical evaluation files unchanged; see integrity.json"
+  },
+  "skips": "Existing opt-in integration checks; actual Docker verification is retained in CI",
+  "known_limitations": [
+    "No new real-model browser evaluation",
+    "No local paid import of the formal knowledge corpus",
+    "No current-stack Hybrid deployment test",
+    "User resume details and interview self-test pending"
+  ],
+  "github": "Pending final implementation commit and corresponding Actions verification"
+}
