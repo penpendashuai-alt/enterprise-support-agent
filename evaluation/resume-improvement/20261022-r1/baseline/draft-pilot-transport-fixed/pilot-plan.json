@@ -1,0 +1,48 @@
+{
+  "case_id": "pilot-plan",
+  "input": "请建工单：VPN 从早上开始断连，只影响我。我希望安排网络排查，还没重启客户端。",
+  "result": {
+    "ticket_draft": {
+      "title": "VPN 断连问题",
+      "description": "VPN 从早上开始断连，只影响用户本人。用户尚未重启客户端，希望安排网络排查。",
+      "service_name": "VPN",
+      "impact": "仅本人",
+      "priority": "P3"
+    },
+    "draft_id": "draft-7a6c05e101d14401a444fa56a9495d4d",
+    "draft_version": 1,
+    "approval_status": "pending",
+    "ticket_result": null,
+    "approved_fingerprint": null,
+    "approved_request_key": null,
+    "messages": [
+      {
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：VPN 断连问题\n描述：VPN 从早上开始断连，只影响用户本人。用户尚未重启客户端，希望安排网络排查。\n服务：VPN\n影响范围：仅本人\n优先级：P3（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "additional_kwargs": {
+          "custom_data": {
+            "kind": "ticket_approval",
+            "draft_id": "draft-7a6c05e101d14401a444fa56a9495d4d",
+            "draft_version": 1,
+            "draft": {
+              "title": "VPN 断连问题",
+              "description": "VPN 从早上开始断连，只影响用户本人。用户尚未重启客户端，希望安排网络排查。",
+              "service_name": "VPN",
+              "impact": "仅本人",
+              "priority": "P3"
+            },
+            "approval_status": "pending",
+            "ticket_result": null,
+            "is_demo": true
+          }
+        },
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    ]
+  }
+}

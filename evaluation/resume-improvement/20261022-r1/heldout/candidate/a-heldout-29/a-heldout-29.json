@@ -1,0 +1,71 @@
+{
+  "run_id": "03290a7add25441fa061a7298861380c",
+  "case_id": "a-heldout-29",
+  "attempt": 1,
+  "variant": "candidate",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T12:14:02.787560+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "我不知道设备编号，DEV-001 只是文档示例，不是我的设备。先别猜，告诉我查询需要什么。",
+      "http_status": 200,
+      "seconds": 2.0729597000026843,
+      "http_response_seconds": 2.0692240000025777,
+      "request_id": "3a2ae077fe344856b46132f8cf7a4402",
+      "server_timing": "rate_check;dur=2.625, thread_wait;dur=0.016, execution_wait;dur=0.009, business_database;dur=19.728, ownership;dur=21.497, ownership_preflight;dur=7.804, model_wait;dur=0.013, router;dur=1989.503",
+      "response": {
+        "type": "ai",
+        "content": "请提供您要查询的设备编号，以便我为您查询设备配置信息。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16388-5a41-7381-947b-22600483df99",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "general_question",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": null
+        },
+        "needs_clarification": true,
+        "clarification_question": "请提供您要查询的设备编号，以便我为您查询设备配置信息。"
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-03290a7a-a-heldout-29-alice",
+    "bob": "p8-03290a7a-a-heldout-29-bob"
+  },
+  "threads": {
+    "primary": "4c60bc8a5dfe43138b94ceab8901c7bb",
+    "secondary": "39862888de1a4ef99b1d4c0ace6f1678"
+  },
+  "measurement": true,
+  "cache_condition": "disabled",
+  "seconds": 2.2461768000030133,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "413f6100fd384e1bb9e75f60c20c54ef"
+  ]
+}

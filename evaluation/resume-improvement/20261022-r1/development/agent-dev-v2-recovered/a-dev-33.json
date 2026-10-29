@@ -1,0 +1,408 @@
+{
+  "run_id": "430217efac6747fc930598f5c54120e9",
+  "case_id": "a-dev-33",
+  "attempt": 1,
+  "variant": "candidate-v2",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T11:36:36.268490+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请创建工单：VPN 从下午两点起无法使用，只影响我个人，尚未尝试重启，优先级 P2。 本次场景标记为 a-dev-33。",
+      "http_status": 200,
+      "seconds": 3.6274860999983503,
+      "http_response_seconds": 3.6245044999996026,
+      "request_id": "1fb110849ebd4e3fafbaca07e7aad9b3",
+      "server_timing": "rate_check;dur=1.485, thread_wait;dur=0.017, execution_wait;dur=0.008, business_database;dur=14.758, ownership;dur=16.178, ownership_preflight;dur=2.768, model_wait;dur=0.028, router;dur=1873.802, draft;dur=1700.495",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：VPN 从下午两点起无法使用\n描述：VPN 从下午两点起无法使用。尚未尝试重启。\n服务：VPN\n影响范围：只影响我个人\n优先级：P2（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16366-12b5-7841-bc4f-4211deab3b03",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-c8ca984f12c94fb586d8a8df35afe358",
+          "draft_version": 1,
+          "draft": {
+            "title": "VPN 从下午两点起无法使用",
+            "description": "VPN 从下午两点起无法使用。尚未尝试重启。",
+            "service_name": "VPN",
+            "impact": "只影响我个人",
+            "priority": "P2"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "VPN",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "VPN 从下午两点起无法使用，只影响我个人，尚未尝试重启，优先级 P2",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "VPN 从下午两点起无法使用",
+          "description": "VPN 从下午两点起无法使用。尚未尝试重启。",
+          "service_name": "VPN",
+          "impact": "只影响我个人",
+          "priority": "P2"
+        },
+        "draft_id": "draft-c8ca984f12c94fb586d8a8df35afe358",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    },
+    {
+      "index": 1,
+      "operation": "edit",
+      "user_message": null,
+      "http_status": 200,
+      "seconds": 0.05373129999861703,
+      "http_response_seconds": 0.05072459999792045,
+      "request_id": "2eac28626fca49aead9e08643a55fc49",
+      "server_timing": "rate_check;dur=1.015, thread_wait;dur=0.013, execution_wait;dur=0.012, business_database;dur=15.338, ownership;dur=12.375, ownership_preflight;dur=2.519",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 2）：\n标题：VPN 从下午两点起无法使用\n描述：VPN 从下午两点起无法使用。尚未尝试重启。\n服务：VPN\n影响范围：本人所在的三人小组\n优先级：P2（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16366-2186-75a0-b265-8870e1c17faf",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-c8ca984f12c94fb586d8a8df35afe358",
+          "draft_version": 2,
+          "draft": {
+            "title": "VPN 从下午两点起无法使用",
+            "description": "VPN 从下午两点起无法使用。尚未尝试重启。",
+            "service_name": "VPN",
+            "impact": "本人所在的三人小组",
+            "priority": "P2"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "VPN",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "VPN 从下午两点起无法使用，只影响我个人，尚未尝试重启，优先级 P2",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "VPN 从下午两点起无法使用",
+          "description": "VPN 从下午两点起无法使用。尚未尝试重启。",
+          "service_name": "VPN",
+          "impact": "本人所在的三人小组",
+          "priority": "P2"
+        },
+        "draft_id": "draft-c8ca984f12c94fb586d8a8df35afe358",
+        "draft_version": 2,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    },
+    {
+      "index": 2,
+      "operation": "approve",
+      "user_message": null,
+      "http_status": 409,
+      "seconds": 0.023274699997273274,
+      "http_response_seconds": 0.020879399999103043,
+      "request_id": "70efa423f30f40b4a22baa1696dc3a08",
+      "server_timing": "rate_check;dur=0.981, thread_wait;dur=0.011, execution_wait;dur=0.010, business_database;dur=14.826, ownership;dur=11.831, ownership_preflight;dur=2.412",
+      "response": {
+        "detail": {
+          "code": "stale_version",
+          "message": "草稿已修改，请刷新并确认最新版本。"
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "VPN",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "VPN 从下午两点起无法使用，只影响我个人，尚未尝试重启，优先级 P2",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "VPN 从下午两点起无法使用",
+          "description": "VPN 从下午两点起无法使用。尚未尝试重启。",
+          "service_name": "VPN",
+          "impact": "本人所在的三人小组",
+          "priority": "P2"
+        },
+        "draft_id": "draft-c8ca984f12c94fb586d8a8df35afe358",
+        "draft_version": 2,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    },
+    {
+      "index": 3,
+      "operation": "approve",
+      "user_message": null,
+      "http_status": 200,
+      "seconds": 0.05625059999874793,
+      "http_response_seconds": 0.05354309999893303,
+      "request_id": "a8459167301748719684a99660e084fe",
+      "server_timing": "rate_check;dur=0.939, thread_wait;dur=0.008, execution_wait;dur=0.007, business_database;dur=26.234, ownership;dur=12.076, ownership_preflight;dur=2.504",
+      "response": {
+        "type": "ai",
+        "content": "本地演示工单已创建：DEMO-EC0AE38857FB4453879B59BAF82E5570，状态：open。标题：VPN 从下午两点起无法使用。未提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16366-2322-70f0-a492-2c49a6d42625",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_result",
+          "status": "success",
+          "ticket": {
+            "ticket_id": "DEMO-EC0AE38857FB4453879B59BAF82E5570",
+            "draft_id": "draft-c8ca984f12c94fb586d8a8df35afe358",
+            "draft_version": 2,
+            "thread_id": "347be3bf82d241ae9f498b8deadb88cf",
+            "idempotency_key": "draft-c8ca984f12c94fb586d8a8df35afe358:v2",
+            "fingerprint": "d0ac3f180c19e82658f304c2efed0410f81765e1a427ad03106f32b7e03f2494",
+            "draft": {
+              "title": "VPN 从下午两点起无法使用",
+              "description": "VPN 从下午两点起无法使用。尚未尝试重启。",
+              "service_name": "VPN",
+              "impact": "本人所在的三人小组",
+              "priority": "P2"
+            },
+            "state": "open",
+            "created_at": "2026-10-22T11:36:40.503865+00:00",
+            "user_id": "p8-430217ef-a-dev-33-alice",
+            "source": "postgres"
+          },
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "VPN",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "VPN 从下午两点起无法使用，只影响我个人，尚未尝试重启，优先级 P2",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "VPN 从下午两点起无法使用",
+          "description": "VPN 从下午两点起无法使用。尚未尝试重启。",
+          "service_name": "VPN",
+          "impact": "本人所在的三人小组",
+          "priority": "P2"
+        },
+        "draft_id": "draft-c8ca984f12c94fb586d8a8df35afe358",
+        "draft_version": 2,
+        "approval_status": "completed",
+        "approved_fingerprint": "d0ac3f180c19e82658f304c2efed0410f81765e1a427ad03106f32b7e03f2494",
+        "approved_request_key": "draft-c8ca984f12c94fb586d8a8df35afe358:v2",
+        "ticket_result": {
+          "kind": "ticket_result",
+          "status": "success",
+          "ticket": {
+            "ticket_id": "DEMO-EC0AE38857FB4453879B59BAF82E5570",
+            "draft_id": "draft-c8ca984f12c94fb586d8a8df35afe358",
+            "draft_version": 2,
+            "thread_id": "347be3bf82d241ae9f498b8deadb88cf",
+            "idempotency_key": "draft-c8ca984f12c94fb586d8a8df35afe358:v2",
+            "fingerprint": "d0ac3f180c19e82658f304c2efed0410f81765e1a427ad03106f32b7e03f2494",
+            "draft": {
+              "title": "VPN 从下午两点起无法使用",
+              "description": "VPN 从下午两点起无法使用。尚未尝试重启。",
+              "service_name": "VPN",
+              "impact": "本人所在的三人小组",
+              "priority": "P2"
+            },
+            "state": "open",
+            "created_at": "2026-10-22T11:36:40.503865+00:00",
+            "user_id": "p8-430217ef-a-dev-33-alice",
+            "source": "postgres"
+          },
+          "is_demo": true
+        }
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 1
+    },
+    {
+      "index": 4,
+      "operation": "approve",
+      "user_message": null,
+      "http_status": 200,
+      "seconds": 0.026554899999609916,
+      "http_response_seconds": 0.024044300000241492,
+      "request_id": "419f97add7f043688608ea1fec1bb173",
+      "server_timing": "rate_check;dur=1.020, thread_wait;dur=0.009, execution_wait;dur=0.008, business_database;dur=17.294, ownership;dur=14.099, ownership_preflight;dur=2.635",
+      "response": {
+        "type": "ai",
+        "content": "本地演示工单已创建：DEMO-EC0AE38857FB4453879B59BAF82E5570，状态：open。标题：VPN 从下午两点起无法使用。未提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16366-2407-7410-acc2-7d16b044d076",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_result",
+          "status": "success",
+          "ticket": {
+            "ticket_id": "DEMO-EC0AE38857FB4453879B59BAF82E5570",
+            "draft_id": "draft-c8ca984f12c94fb586d8a8df35afe358",
+            "draft_version": 2,
+            "thread_id": "347be3bf82d241ae9f498b8deadb88cf",
+            "idempotency_key": "draft-c8ca984f12c94fb586d8a8df35afe358:v2",
+            "fingerprint": "d0ac3f180c19e82658f304c2efed0410f81765e1a427ad03106f32b7e03f2494",
+            "draft": {
+              "title": "VPN 从下午两点起无法使用",
+              "description": "VPN 从下午两点起无法使用。尚未尝试重启。",
+              "service_name": "VPN",
+              "impact": "本人所在的三人小组",
+              "priority": "P2"
+            },
+            "state": "open",
+            "created_at": "2026-10-22T11:36:40.503865+00:00",
+            "user_id": "p8-430217ef-a-dev-33-alice",
+            "source": "postgres"
+          },
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "VPN",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "VPN 从下午两点起无法使用，只影响我个人，尚未尝试重启，优先级 P2",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "VPN 从下午两点起无法使用",
+          "description": "VPN 从下午两点起无法使用。尚未尝试重启。",
+          "service_name": "VPN",
+          "impact": "本人所在的三人小组",
+          "priority": "P2"
+        },
+        "draft_id": "draft-c8ca984f12c94fb586d8a8df35afe358",
+        "draft_version": 2,
+        "approval_status": "completed",
+        "approved_fingerprint": "d0ac3f180c19e82658f304c2efed0410f81765e1a427ad03106f32b7e03f2494",
+        "approved_request_key": "draft-c8ca984f12c94fb586d8a8df35afe358:v2",
+        "ticket_result": {
+          "kind": "ticket_result",
+          "status": "success",
+          "ticket": {
+            "ticket_id": "DEMO-EC0AE38857FB4453879B59BAF82E5570",
+            "draft_id": "draft-c8ca984f12c94fb586d8a8df35afe358",
+            "draft_version": 2,
+            "thread_id": "347be3bf82d241ae9f498b8deadb88cf",
+            "idempotency_key": "draft-c8ca984f12c94fb586d8a8df35afe358:v2",
+            "fingerprint": "d0ac3f180c19e82658f304c2efed0410f81765e1a427ad03106f32b7e03f2494",
+            "draft": {
+              "title": "VPN 从下午两点起无法使用",
+              "description": "VPN 从下午两点起无法使用。尚未尝试重启。",
+              "service_name": "VPN",
+              "impact": "本人所在的三人小组",
+              "priority": "P2"
+            },
+            "state": "open",
+            "created_at": "2026-10-22T11:36:40.503865+00:00",
+            "user_id": "p8-430217ef-a-dev-33-alice",
+            "source": "postgres"
+          },
+          "is_demo": true
+        }
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 1
+    }
+  ],
+  "users": {
+    "alice": "p8-430217ef-a-dev-33-alice",
+    "bob": "p8-430217ef-a-dev-33-bob"
+  },
+  "threads": {
+    "primary": "347be3bf82d241ae9f498b8deadb88cf",
+    "secondary": "b1629c6e5256491f9c488f5ef1254a36"
+  },
+  "seconds": 4.629696399999375,
+  "final_ticket_count": 1,
+  "final_draft_version": 2,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "7563e7d37e304bb3812895889bc6b4f7",
+    "168d801fb9f54e3dbf7708a3bef5da5e"
+  ]
+}

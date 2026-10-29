@@ -1,0 +1,79 @@
+{
+  "run_id": "758baa68fcd941d2b1db2f1dcb625b6d",
+  "case_id": "a-heldout-16",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T12:05:14.410910+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请创建工单：我自己邮件退信。已经改过收件地址，但投递照样失败，换地址这个动作成功了不等于送达。",
+      "http_status": 200,
+      "seconds": 4.856592399999499,
+      "http_response_seconds": 4.853055499999755,
+      "request_id": "d096360b17164b5e85ac5ccc07cd978b",
+      "server_timing": "rate_check;dur=2.600, thread_wait;dur=0.013, execution_wait;dur=0.010, business_database;dur=21.474, ownership;dur=23.342, ownership_preflight;dur=7.582, model_wait;dur=0.288, router;dur=2779.714, draft;dur=1998.256",
+      "response": {
+        "type": "ai",
+        "content": "请补充影响范围。工单尚未提交；信息齐全后会展示草稿供你确认。未指定优先级时使用演示默认值 P3。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16380-4a4b-75a1-9764-8e7ccaa7071e",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "邮件退信，已改过收件地址但投递仍失败",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "approval_status": "collecting"
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-758baa68-a-heldout-16-alice",
+    "bob": "p8-758baa68-a-heldout-16-bob"
+  },
+  "threads": {
+    "primary": "de0ca88cd5fc4115a82929c676a12b8d",
+    "secondary": "1c6215a7246e4bceac962850e9b96514"
+  },
+  "measurement": true,
+  "cache_condition": "disabled",
+  "seconds": 5.0302852999993775,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": false,
+    "failures": [
+      {
+        "stage": "approval_storage",
+        "turn": 0,
+        "reason": "response_kind"
+      }
+    ],
+    "metrics": {}
+  },
+  "model_calls": [
+    "a8b6e3767af4423fbc1c2b666ccb7ac5",
+    "3ec4aea62801425fa04eaf477086b6b5"
+  ]
+}

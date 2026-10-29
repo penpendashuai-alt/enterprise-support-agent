@@ -1,0 +1,263 @@
+{
+  "run_id": "d234230fc1e245a6b809a342c215ded7",
+  "case_id": "a-heldout-38",
+  "attempt": 1,
+  "variant": "candidate",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-23T04:18:04.800197+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "创建邮箱工单：客户端从下午两点开始打不开，只有我本人受影响，已重启但没恢复，优先级 P2。 本次场景标记为 a-heldout-38。",
+      "http_status": 200,
+      "seconds": 3.7453453999914927,
+      "http_response_seconds": 3.741201099997852,
+      "request_id": "36382a9cd5cb437e93f37f6db080b128",
+      "server_timing": "rate_check;dur=3.169, thread_wait;dur=0.020, execution_wait;dur=0.013, business_database;dur=22.416, ownership;dur=24.395, ownership_preflight;dur=8.599, model_wait;dur=0.027, router;dur=1766.040, draft;dur=1890.199",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：邮箱客户端无法打开\n描述：客户端从下午两点开始打不开；已重启但没恢复。\n服务：邮箱\n影响范围：只有我本人\n优先级：P2（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a166fa-f3a2-7830-9355-e672b73fa519",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-5d795349eb7b448f8a9f37ebf9069819",
+          "draft_version": 1,
+          "draft": {
+            "title": "邮箱客户端无法打开",
+            "description": "客户端从下午两点开始打不开；已重启但没恢复。",
+            "service_name": "邮箱",
+            "impact": "只有我本人",
+            "priority": "P2"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "邮箱",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "客户端从下午两点开始打不开，只有我本人受影响，已重启但没恢复，优先级 P2",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "邮箱客户端无法打开",
+          "description": "客户端从下午两点开始打不开；已重启但没恢复。",
+          "service_name": "邮箱",
+          "impact": "只有我本人",
+          "priority": "P2"
+        },
+        "draft_id": "draft-5d795349eb7b448f8a9f37ebf9069819",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    },
+    {
+      "index": 1,
+      "operation": "edit",
+      "user_message": null,
+      "http_status": 200,
+      "seconds": 0.05319730000337586,
+      "http_response_seconds": 0.049690899992128834,
+      "request_id": "c11cfbd8ec2f455f9aefbd9cbc4777f1",
+      "server_timing": "rate_check;dur=1.109, thread_wait;dur=0.009, execution_wait;dur=0.007, business_database;dur=16.343, ownership;dur=13.425, ownership_preflight;dur=2.788",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：邮箱客户端无法打开\n描述：客户端从下午两点开始打不开；已重启但没恢复。\n服务：邮箱\n影响范围：只有我本人\n优先级：P2（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a166fb-02d5-7803-989d-12b4a8a79c91",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-5d795349eb7b448f8a9f37ebf9069819",
+          "draft_version": 1,
+          "draft": {
+            "title": "邮箱客户端无法打开",
+            "description": "客户端从下午两点开始打不开；已重启但没恢复。",
+            "service_name": "邮箱",
+            "impact": "只有我本人",
+            "priority": "P2"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "邮箱",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "客户端从下午两点开始打不开，只有我本人受影响，已重启但没恢复，优先级 P2",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "邮箱客户端无法打开",
+          "description": "客户端从下午两点开始打不开；已重启但没恢复。",
+          "service_name": "邮箱",
+          "impact": "只有我本人",
+          "priority": "P2"
+        },
+        "draft_id": "draft-5d795349eb7b448f8a9f37ebf9069819",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    },
+    {
+      "index": 2,
+      "operation": "approve",
+      "user_message": null,
+      "http_status": 200,
+      "seconds": 0.06728620000649244,
+      "http_response_seconds": 0.06399619999865536,
+      "request_id": "ee272f1599514239a651d04d9d55cff3",
+      "server_timing": "rate_check;dur=1.473, thread_wait;dur=0.017, execution_wait;dur=0.009, business_database;dur=31.276, ownership;dur=15.861, ownership_preflight;dur=3.560",
+      "response": {
+        "type": "ai",
+        "content": "本地演示工单已创建：DEMO-C3BFD8C27AFD438B82FB3B7E80A9F25E，状态：open。标题：邮箱客户端无法打开。未提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a166fb-03b8-7301-99cf-767942dff6eb",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_result",
+          "status": "success",
+          "ticket": {
+            "ticket_id": "DEMO-C3BFD8C27AFD438B82FB3B7E80A9F25E",
+            "draft_id": "draft-5d795349eb7b448f8a9f37ebf9069819",
+            "draft_version": 1,
+            "thread_id": "ce51d69f753f4606b17fc649675b42f5",
+            "idempotency_key": "draft-5d795349eb7b448f8a9f37ebf9069819:v1",
+            "fingerprint": "cfefea2622210741a59781807ed76cbff36c0ec4d1e91f563a2d8de46571f85b",
+            "draft": {
+              "title": "邮箱客户端无法打开",
+              "description": "客户端从下午两点开始打不开；已重启但没恢复。",
+              "service_name": "邮箱",
+              "impact": "只有我本人",
+              "priority": "P2"
+            },
+            "state": "open",
+            "created_at": "2026-10-23T04:18:08.980432+00:00",
+            "user_id": "p8-d234230f-a-heldout-38-alice",
+            "source": "postgres"
+          },
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "邮箱",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "客户端从下午两点开始打不开，只有我本人受影响，已重启但没恢复，优先级 P2",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "邮箱客户端无法打开",
+          "description": "客户端从下午两点开始打不开；已重启但没恢复。",
+          "service_name": "邮箱",
+          "impact": "只有我本人",
+          "priority": "P2"
+        },
+        "draft_id": "draft-5d795349eb7b448f8a9f37ebf9069819",
+        "draft_version": 1,
+        "approval_status": "completed",
+        "approved_fingerprint": "cfefea2622210741a59781807ed76cbff36c0ec4d1e91f563a2d8de46571f85b",
+        "approved_request_key": "draft-5d795349eb7b448f8a9f37ebf9069819:v1",
+        "ticket_result": {
+          "kind": "ticket_result",
+          "status": "success",
+          "ticket": {
+            "ticket_id": "DEMO-C3BFD8C27AFD438B82FB3B7E80A9F25E",
+            "draft_id": "draft-5d795349eb7b448f8a9f37ebf9069819",
+            "draft_version": 1,
+            "thread_id": "ce51d69f753f4606b17fc649675b42f5",
+            "idempotency_key": "draft-5d795349eb7b448f8a9f37ebf9069819:v1",
+            "fingerprint": "cfefea2622210741a59781807ed76cbff36c0ec4d1e91f563a2d8de46571f85b",
+            "draft": {
+              "title": "邮箱客户端无法打开",
+              "description": "客户端从下午两点开始打不开；已重启但没恢复。",
+              "service_name": "邮箱",
+              "impact": "只有我本人",
+              "priority": "P2"
+            },
+            "state": "open",
+            "created_at": "2026-10-23T04:18:08.980432+00:00",
+            "user_id": "p8-d234230f-a-heldout-38-alice",
+            "source": "postgres"
+          },
+          "is_demo": true
+        }
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 1
+    }
+  ],
+  "users": {
+    "alice": "p8-d234230f-a-heldout-38-alice",
+    "bob": "p8-d234230f-a-heldout-38-bob"
+  },
+  "threads": {
+    "primary": "ce51d69f753f4606b17fc649675b42f5",
+    "secondary": "e66be8436fdd48a18bff94cea567cd77"
+  },
+  "measurement": true,
+  "cache_condition": "disabled",
+  "seconds": 4.381257599990931,
+  "final_ticket_count": 1,
+  "final_draft_version": 1,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "ef4314a140b140ef988f5e83c81799c6",
+    "bde6bb45159447ea951b0c7197675874"
+  ]
+}

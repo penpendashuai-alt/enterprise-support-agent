@@ -1,0 +1,68 @@
+{
+  "run_id": "5cd45809d0fe459aae50f75b119a80c9",
+  "case_id": "a-dev-31",
+  "attempt": 1,
+  "variant": "candidate-v1",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T08:14:27.116671+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "查一下服务现在有没有故障。",
+      "http_status": 200,
+      "seconds": 2.559160200000406,
+      "request_id": "ba9cd909547b48658214b508926e0518",
+      "server_timing": "rate_check;dur=0.929, thread_wait;dur=0.012, execution_wait;dur=0.010, business_database;dur=13.708, ownership;dur=15.066, ownership_preflight;dur=3.422, model_wait;dur=0.012, router;dur=2506.416",
+      "response": {
+        "type": "ai",
+        "content": "你想查询哪个服务的状态？例如 GitHub、VPN、邮箱或 Jira。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162ac-ff35-73a3-986f-819a9b54b389",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "service_status",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": null
+        },
+        "needs_clarification": true,
+        "clarification_question": "你想查询哪个服务的状态？例如 GitHub、VPN、邮箱或 Jira。"
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-5cd45809-a-dev-31-alice",
+    "bob": "p8-5cd45809-a-dev-31-bob"
+  },
+  "threads": {
+    "primary": "5f40cd03f72245f4b4a6d54e828e1f8f",
+    "secondary": "1c933ccf40c845bda5e6abadd9d24e30"
+  },
+  "seconds": 2.732578199999807,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "978999bf689542529c84b502040b534c"
+  ]
+}

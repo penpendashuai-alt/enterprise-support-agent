@@ -1,0 +1,79 @@
+{
+  "run_id": "f629071488864e85aa6380b07380139f",
+  "case_id": "a-heldout-17",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T12:05:35.035882+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "建工单：我自己电脑启动应用就退出，已经重启和重装。补充更正，重启确实做完了，重装只下载了安装包还没执行。",
+      "http_status": 200,
+      "seconds": 4.455670700001065,
+      "http_response_seconds": 4.451693200000591,
+      "request_id": "e7868be2652244d99e10453aca0d661e",
+      "server_timing": "rate_check;dur=2.534, thread_wait;dur=0.010, execution_wait;dur=0.011, business_database;dur=22.877, ownership;dur=24.735, ownership_preflight;dur=8.316, model_wait;dur=0.309, router;dur=2120.629, draft;dur=2256.744",
+      "response": {
+        "type": "ai",
+        "content": "请补充影响范围。工单尚未提交；信息齐全后会展示草稿供你确认。未指定优先级时使用演示默认值 P3。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16380-9adb-7290-895d-9bc998b5fb77",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "电脑启动应用就退出，已重启，重装只下载了安装包尚未执行",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "approval_status": "collecting"
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-f6290714-a-heldout-17-alice",
+    "bob": "p8-f6290714-a-heldout-17-bob"
+  },
+  "threads": {
+    "primary": "952c6b1e964647f49e060372d91636dd",
+    "secondary": "1f50a4a06fb645dd809c46c9f1aa70d3"
+  },
+  "measurement": true,
+  "cache_condition": "disabled",
+  "seconds": 4.628031199998077,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": false,
+    "failures": [
+      {
+        "stage": "approval_storage",
+        "turn": 0,
+        "reason": "response_kind"
+      }
+    ],
+    "metrics": {}
+  },
+  "model_calls": [
+    "511498db29b74bb0ba603483da6a930b",
+    "7974f4574898446aac5e31b4618b675c"
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "run_id": "430217efac6747fc930598f5c54120e9",
+  "case_id": "a-dev-27",
+  "attempt": 1,
+  "variant": "candidate-v2",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T11:36:12.414718+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请查询设备 DEV-001 的系统与客户端配置。",
+      "http_status": 200,
+      "seconds": 4.8317137000012735,
+      "http_response_seconds": 4.828690999998798,
+      "request_id": "d401912c59c64c55a1ce15173623b1ce",
+      "server_timing": "rate_check;dur=0.841, thread_wait;dur=0.007, execution_wait;dur=0.007, business_database;dur=13.008, ownership;dur=14.238, ownership_preflight;dur=2.469, model_wait;dur=0.038, router;dur=1475.438, preferences;dur=5.112, handler;dur=3305.663",
+      "response": {
+        "type": "ai",
+        "content": "以下是设备 DEV-001 的配置信息（模拟数据，仅用于演示，不代表真实系统）：\n\n| 项目 | 配置 |\n|------|------|\n| 设备编号 | DEV-001 |\n| 操作系统 | Windows 11 |\n| VPN 客户端 | 5.0 |\n| 设备类型 | 笔记本（laptop） |\n\n如需进一步排查，请告诉我具体遇到的问题或要查询的服务名称。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16365-b585-7f83-bd29-e8413f295a23",
+        "response_metadata": {
+          "token_usage": {
+            "completion_tokens": 86,
+            "prompt_tokens": 908,
+            "total_tokens": 994,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cache_write_tokens": null,
+              "cached_tokens": 768
+            },
+            "prompt_cache_hit_tokens": 768,
+            "prompt_cache_miss_tokens": 140
+          },
+          "model_provider": "openai",
+          "model_name": "deepseek-v4-pro",
+          "system_fingerprint": "a307abda487cd1b463329ccb945ce396",
+          "id": "fe132af5-0522-4d3d-aea4-d1c9e3addd1c",
+          "finish_reason": "stop",
+          "logprobs": null
+        },
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "troubleshooting",
+        "entities": {
+          "service_name": null,
+          "device_id": "DEV-001",
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": null
+        },
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "retrieval": null,
+      "tools": [
+        {
+          "name": "get_device_information",
+          "args": {
+            "device_id": "DEV-001"
+          },
+          "id": "call_00_NVfwYKBZGVU4vOLFqBIS1048",
+          "type": "tool_call",
+          "result": {
+            "status": "success",
+            "data": {
+              "device_id": "DEV-001",
+              "os": "Windows 11",
+              "vpn_client": "5.0",
+              "type": "laptop"
+            },
+            "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+            "is_mock": true
+          },
+          "validation_error": false
+        }
+      ],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-430217ef-a-dev-27-alice",
+    "bob": "p8-430217ef-a-dev-27-bob"
+  },
+  "threads": {
+    "primary": "0e8dcd38a04c46cf9d890a85916998d0",
+    "secondary": "85c09c6e469a451daebbe6716e62144a"
+  },
+  "seconds": 5.001061599999957,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {
+      "required_tool_total": 1,
+      "required_tool_completed": 1,
+      "actual_tool_total": 1,
+      "actual_tool_legal": 1,
+      "tool_parameters_valid": 1
+    }
+  },
+  "model_calls": [
+    "710242fdb3b142d9b8ad4d8259fe9228",
+    "ca5ab69cd3534b469590911dfe432ef2",
+    "155104da82aa4f16b1a21722293882b8"
+  ]
+}

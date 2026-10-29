@@ -1,0 +1,76 @@
+{
+  "run_id": "661e1588388341f39110300686cf0e61",
+  "case_id": "a-dev-19",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T08:05:11.209269+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请为我建工单：我个人共享目录打不开。之前助手建议我重登并换网络，那只是建议，我两项都没做。",
+      "http_status": 200,
+      "seconds": 4.540941799999928,
+      "request_id": "66a4bebe14474e64b6961337fb528610",
+      "server_timing": "rate_check;dur=0.879, thread_wait;dur=0.009, execution_wait;dur=0.007, business_database;dur=12.554, ownership;dur=14.148, ownership_preflight;dur=2.534, model_wait;dur=0.022, router;dur=2279.201, draft;dur=2218.848",
+      "response": {
+        "type": "ai",
+        "content": "请补充影响范围。工单尚未提交；信息齐全后会展示草稿供你确认。未指定优先级时使用演示默认值 P3。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162a4-83b0-7e71-bde8-5301d5164e40",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "个人共享目录打不开",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "approval_status": "collecting"
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-661e1588-a-dev-19-alice",
+    "bob": "p8-661e1588-a-dev-19-bob"
+  },
+  "threads": {
+    "primary": "7fa1d4938998489e9fcef421e90eba3d",
+    "secondary": "98cf4c850e69481b9110bdddddef7581"
+  },
+  "seconds": 4.705966100000296,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": false,
+    "failures": [
+      {
+        "stage": "approval_storage",
+        "turn": 0,
+        "reason": "response_kind"
+      }
+    ],
+    "metrics": {}
+  },
+  "model_calls": [
+    "4d3e78181fe6483c97e8a6e197e2c75d",
+    "5bf975beb5764cf29fb9c286344cc3e8"
+  ]
+}

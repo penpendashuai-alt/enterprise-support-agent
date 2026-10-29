@@ -1,0 +1,99 @@
+{
+  "run_id": "5f16b6188c744eaaa2dc9a8d4976458f",
+  "case_id": "a-heldout-17",
+  "attempt": 1,
+  "variant": "candidate",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T12:05:55.860046+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "建工单：我自己电脑启动应用就退出，已经重启和重装。补充更正，重启确实做完了，重装只下载了安装包还没执行。",
+      "http_status": 200,
+      "seconds": 4.362189499999658,
+      "http_response_seconds": 4.358360999998695,
+      "request_id": "9b1bceb8b8924399b118818f3e798a14",
+      "server_timing": "rate_check;dur=2.526, thread_wait;dur=0.010, execution_wait;dur=0.009, business_database;dur=21.011, ownership;dur=23.472, ownership_preflight;dur=8.559, model_wait;dur=0.366, router;dur=1779.393, draft;dur=2496.524",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：电脑启动应用即退出\n描述：现象：电脑启动应用就退出。已执行操作：已重启电脑。已尝试操作：重装只下载了安装包，尚未执行安装。\n服务：未指定\n影响范围：我自己\n优先级：P3（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16380-ec33-7012-b345-721d69286db9",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-12a4653186264615b5cf828410ef4adc",
+          "draft_version": 1,
+          "draft": {
+            "title": "电脑启动应用即退出",
+            "description": "现象：电脑启动应用就退出。已执行操作：已重启电脑。已尝试操作：重装只下载了安装包，尚未执行安装。",
+            "service_name": null,
+            "impact": "我自己",
+            "priority": "P3"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "电脑启动应用就退出，已重启，重装只下载了安装包尚未执行",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "电脑启动应用即退出",
+          "description": "现象：电脑启动应用就退出。已执行操作：已重启电脑。已尝试操作：重装只下载了安装包，尚未执行安装。",
+          "service_name": null,
+          "impact": "我自己",
+          "priority": "P3"
+        },
+        "draft_id": "draft-12a4653186264615b5cf828410ef4adc",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-5f16b618-a-heldout-17-alice",
+    "bob": "p8-5f16b618-a-heldout-17-bob"
+  },
+  "threads": {
+    "primary": "86826682cab64f5ca47feffb13db67dd",
+    "secondary": "11cbc30c28ad4892928b89eb21609d10"
+  },
+  "measurement": true,
+  "cache_condition": "disabled",
+  "seconds": 4.537828599997738,
+  "final_ticket_count": 0,
+  "final_draft_version": 1,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "5bc9cc8d0984423fa93e4b0e912f2e35",
+    "b90528093e8a4dfc9b7a2078604ff7a5"
+  ]
+}

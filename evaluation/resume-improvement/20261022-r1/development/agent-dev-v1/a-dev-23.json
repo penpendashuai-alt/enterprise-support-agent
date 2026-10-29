@@ -1,0 +1,70 @@
+{
+  "run_id": "5cd45809d0fe459aae50f75b119a80c9",
+  "case_id": "a-dev-23",
+  "attempt": 1,
+  "variant": "candidate-v1",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T08:13:48.568712+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请创建工单：服务器页面报错，我还没有核查影响哪些人，也没法确认只有我。",
+      "http_status": 200,
+      "seconds": 4.498624700000619,
+      "request_id": "d74840e68b29460eb8bdf6053f2c3c5f",
+      "server_timing": "rate_check;dur=0.937, thread_wait;dur=0.010, execution_wait;dur=0.008, business_database;dur=14.170, ownership;dur=15.557, ownership_preflight;dur=3.402, model_wait;dur=0.032, router;dur=2428.614, draft;dur=2024.884",
+      "response": {
+        "type": "ai",
+        "content": "请补充影响范围。工单尚未提交；信息齐全后会展示草稿供你确认。未指定优先级时使用演示默认值 P3。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162ac-68a1-7a63-bc1a-9b77d07efedf",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "服务器页面报错，影响范围尚未核查，无法确认是否仅本人受影响",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "approval_status": "collecting"
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-5cd45809-a-dev-23-alice",
+    "bob": "p8-5cd45809-a-dev-23-bob"
+  },
+  "threads": {
+    "primary": "ae5f6eeb5b7448ecb144955266e9c9b5",
+    "secondary": "39305276fe37464b99c39f86821cd3b2"
+  },
+  "seconds": 4.668543999999201,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "10c754c165d34a7781020e0764ff2487",
+    "bcf3af5fc1a044e6a489affdfb032cf3"
+  ]
+}

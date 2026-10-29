@@ -1,0 +1,99 @@
+{
+  "run_id": "9583989f21a642c18b106a53b41820d3",
+  "case_id": "a-heldout-20",
+  "attempt": 1,
+  "variant": "candidate",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T12:07:42.622918+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "我要报障工单：我个人摄像头无画面。假如我拔插过可以写『已重新连接』，但那是假设，我还没拔过。",
+      "http_status": 200,
+      "seconds": 4.014070900000661,
+      "http_response_seconds": 4.00999800000136,
+      "request_id": "3493e641542b42f488a9b3835327a2d0",
+      "server_timing": "rate_check;dur=2.522, thread_wait;dur=0.010, execution_wait;dur=0.009, business_database;dur=21.102, ownership;dur=22.842, ownership_preflight;dur=8.798, model_wait;dur=0.029, router;dur=2234.710, draft;dur=1691.260",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：摄像头无画面\n描述：摄像头无画面。尚未拔插过摄像头。\n服务：未指定\n影响范围：我个人\n优先级：P3（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16382-8d3e-76e2-a0e6-d6936225ad22",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-2f47a5ec4d0b4dcb9d0e62551f6a1ed9",
+          "draft_version": 1,
+          "draft": {
+            "title": "摄像头无画面",
+            "description": "摄像头无画面。尚未拔插过摄像头。",
+            "service_name": null,
+            "impact": "我个人",
+            "priority": "P3"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "个人摄像头无画面（尚未拔插过）",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "摄像头无画面",
+          "description": "摄像头无画面。尚未拔插过摄像头。",
+          "service_name": null,
+          "impact": "我个人",
+          "priority": "P3"
+        },
+        "draft_id": "draft-2f47a5ec4d0b4dcb9d0e62551f6a1ed9",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-9583989f-a-heldout-20-alice",
+    "bob": "p8-9583989f-a-heldout-20-bob"
+  },
+  "threads": {
+    "primary": "7c9272271a04414cac5a2c2f7126a310",
+    "secondary": "17897a85b337411096e4831ca9239074"
+  },
+  "measurement": true,
+  "cache_condition": "disabled",
+  "seconds": 4.192338299999392,
+  "final_ticket_count": 0,
+  "final_draft_version": 1,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "6eaee9cadb014e078f3175eee6b399ec",
+    "28ad7d23b6a64bcf974d34eb6c56eef6"
+  ]
+}

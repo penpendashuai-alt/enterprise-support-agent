@@ -1,0 +1,73 @@
+{
+  "run_id": "ef0d208fbfad4a6f8213b72dbecd1654",
+  "case_id": "a-heldout-23",
+  "attempt": 1,
+  "variant": "candidate",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T12:10:03.205402+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请建故障工单：群里有人说 VPN 连不上，我只转述这条消息，自己和其他人能否连接尚不清楚。",
+      "http_status": 200,
+      "seconds": 4.396201399998972,
+      "http_response_seconds": 4.392565199999808,
+      "request_id": "dfd2589a7b8146f184a0d824eadc7ef3",
+      "server_timing": "rate_check;dur=2.938, thread_wait;dur=0.016, execution_wait;dur=0.011, business_database;dur=20.924, ownership;dur=22.676, ownership_preflight;dur=7.520, model_wait;dur=0.025, router;dur=2193.082, draft;dur=2125.686",
+      "response": {
+        "type": "ai",
+        "content": "请补充影响范围。工单尚未提交；信息齐全后会展示草稿供你确认。未指定优先级时使用演示默认值 P3。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16384-b264-7880-9f25-0961065a2220",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "VPN",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "群里有人说 VPN 连不上，转述该消息，自己和其他人能否连接尚不清楚",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "approval_status": "collecting"
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-ef0d208f-a-heldout-23-alice",
+    "bob": "p8-ef0d208f-a-heldout-23-bob"
+  },
+  "threads": {
+    "primary": "ef7e762b5d5b4850aed42c059f64170c",
+    "secondary": "45b9659307614a0e8c75afefc6d4f350"
+  },
+  "measurement": true,
+  "cache_condition": "disabled",
+  "seconds": 4.569861100000708,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "a36f474d921b4ffbb2b1eaaf10cb2744",
+    "7dd659ffe7064c4fb615f0b701e0c663"
+  ]
+}

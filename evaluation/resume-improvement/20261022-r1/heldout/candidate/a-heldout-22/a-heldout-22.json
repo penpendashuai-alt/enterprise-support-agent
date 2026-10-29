@@ -1,0 +1,99 @@
+{
+  "run_id": "fb6c38f847824cf9a24f8672ce948886",
+  "case_id": "a-heldout-22",
+  "attempt": 1,
+  "variant": "candidate",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T12:09:03.469417+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "登记工单：我个人打印机再次离线，上周重新安装后正常过；今天没重装也没恢复，只打算明天检查。",
+      "http_status": 200,
+      "seconds": 4.140332800001488,
+      "http_response_seconds": 4.136502900000778,
+      "request_id": "ee27e183a77845d5a6e1c06c2763241c",
+      "server_timing": "rate_check;dur=2.838, thread_wait;dur=0.015, execution_wait;dur=0.011, business_database;dur=21.863, ownership;dur=23.470, ownership_preflight;dur=7.980, model_wait;dur=0.031, router;dur=2193.972, draft;dur=1859.603",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：打印机再次离线\n描述：打印机再次离线。上周重新安装后曾恢复正常。今天未重新安装，也未恢复。计划明天检查。\n服务：未指定\n影响范围：我个人\n优先级：P3（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16383-c90c-7a21-a6ef-31a0fd498fb4",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-c3d0cc80a1d54492a02576f74e307aac",
+          "draft_version": 1,
+          "draft": {
+            "title": "打印机再次离线",
+            "description": "打印机再次离线。上周重新安装后曾恢复正常。今天未重新安装，也未恢复。计划明天检查。",
+            "service_name": null,
+            "impact": "我个人",
+            "priority": "P3"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "个人打印机再次离线，上周重新安装后正常过，今天没重装也没恢复",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "打印机再次离线",
+          "description": "打印机再次离线。上周重新安装后曾恢复正常。今天未重新安装，也未恢复。计划明天检查。",
+          "service_name": null,
+          "impact": "我个人",
+          "priority": "P3"
+        },
+        "draft_id": "draft-c3d0cc80a1d54492a02576f74e307aac",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-fb6c38f8-a-heldout-22-alice",
+    "bob": "p8-fb6c38f8-a-heldout-22-bob"
+  },
+  "threads": {
+    "primary": "e64bef21c7954c429b6e7dbceb28ae6b",
+    "secondary": "dd9c0cd42dea4f51a661cd5cf13db884"
+  },
+  "measurement": true,
+  "cache_condition": "disabled",
+  "seconds": 4.313787799997954,
+  "final_ticket_count": 0,
+  "final_draft_version": 1,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "b67a7b17c8654410a3cf253d888ec60b",
+    "2af8d0800d3d473f8a409a8e52d58b94"
+  ]
+}

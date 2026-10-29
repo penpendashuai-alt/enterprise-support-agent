@@ -1,0 +1,69 @@
+{
+  "run_id": "430217efac6747fc930598f5c54120e9",
+  "case_id": "a-dev-31",
+  "attempt": 1,
+  "variant": "candidate-v2",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T11:36:32.116000+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "查一下服务现在有没有故障。",
+      "http_status": 200,
+      "seconds": 1.7567692000011448,
+      "http_response_seconds": 1.754198800001177,
+      "request_id": "e01378ecc48b4758aa809845e44e1b15",
+      "server_timing": "rate_check;dur=0.872, thread_wait;dur=0.007, execution_wait;dur=0.006, business_database;dur=14.667, ownership;dur=16.162, ownership_preflight;dur=3.681, model_wait;dur=0.012, router;dur=1702.785",
+      "response": {
+        "type": "ai",
+        "content": "你想查询哪个服务的状态？例如 GitHub、VPN、邮箱或 Jira。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16366-027c-7f90-9c63-d0fcc50716fe",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "service_status",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": null
+        },
+        "needs_clarification": true,
+        "clarification_question": "你想查询哪个服务的状态？例如 GitHub、VPN、邮箱或 Jira。"
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-430217ef-a-dev-31-alice",
+    "bob": "p8-430217ef-a-dev-31-bob"
+  },
+  "threads": {
+    "primary": "5bfaec354cba44bca3a4b02d4f7d89c9",
+    "secondary": "2e1ded963c754f3ba415134b5d4d6d51"
+  },
+  "seconds": 1.921223800000007,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "7c83273eef2045f18fffa6def08cc474"
+  ]
+}

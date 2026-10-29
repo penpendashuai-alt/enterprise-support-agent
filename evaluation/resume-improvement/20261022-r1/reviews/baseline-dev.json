@@ -1,0 +1,362 @@
+[
+  {
+    "case_id": "a-dev-01",
+    "record_sha256": "92434b9d54c558f08c46afb97370a7caa79ced354d5b311c2086f1ab5dd284fb",
+    "semantic_success": true,
+    "rationale": "VPN 客户端/MFA、保密与退出要求及供应商负责人确认/最小授权均有引用支持。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.418251+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-02",
+    "record_sha256": "b93489e6fb289bb94fef05f9a5c8ac2d9c377b2cea6e215efb0900216ee75c69",
+    "semantic_success": false,
+    "rationale": "复合邮件制度问题的必要条款在候选中但未入证据；仅给无答案，未完成可答任务。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.420461+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-03",
+    "record_sha256": "308fc117a5c3c892a4d0a2a78f614e08649e94711b5e2f9cf4f30c8412819d29",
+    "semantic_success": true,
+    "rationale": "准确说明四级含义、默认 P3、影响范围、修改后新版本确认及无 SLA。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.422601+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-04",
+    "record_sha256": "b4859e8be553f8a60f333f5dd2eca66bbb94e91cd3113927f8285514e9650bbf",
+    "semantic_success": false,
+    "rationale": "错误偏向供应商授权条款，未回答 809 排障与管理员核查，两项要点缺失。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.424510+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-05",
+    "record_sha256": "55f235c28371abefbcde551051531064a2321905f20ed0cbbf0d6552cf2281b5",
+    "semantic_success": true,
+    "rationale": "区分组织 SSO 与仓库授权，保持最小权限与模拟资料边界。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.426945+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-06",
+    "record_sha256": "64d231632bf3a05ee2607d6ff64f4de8c73b94e8e78e6026e0ab98262c1a47d2",
+    "semantic_success": true,
+    "rationale": "说明资产号未知不得编造、完整报修信息与送修数据保护，全部有据。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.429830+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-07",
+    "record_sha256": "0eb8e7e7630dcacecdc2c55433b86f90cdcccbce735d4ef3c091f9a33d8b8f62",
+    "semantic_success": true,
+    "rationale": "完整呈现备用验证/身份核验、会话复核及禁止绕过 MFA。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.432093+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-08",
+    "record_sha256": "b53237d6aab193f18c8d5e7e9e1bf7ccb8c0c20487eab0171d68c35cb2ffa83e",
+    "semantic_success": true,
+    "rationale": "卡纸用户操作、维修升级信息完整，补充离线队列建议明确保持条件，未推断实际故障。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.434073+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-09",
+    "record_sha256": "75c18bdaa3529699e61b5873170e1302a9d664a19b8f71d4eae077563a5e1873",
+    "semantic_success": false,
+    "rationale": "将来源的“不能把域名失败直接当作 VPN 809”扩大为“不能把域名失败直接当作 VPN 故障”，扩大排除范围，属于不忠实概括。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.436080+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-10",
+    "record_sha256": "2f9f8cc3e06fcc7e4bf693a0a808f6fe17a1b0e542937d169f7be6d94177a756",
+    "semantic_success": true,
+    "rationale": "明确所问每日小时数没有依据，没有编造时限；有据补充使用要求。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.437920+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-11",
+    "record_sha256": "fc962fcc11bea566c9d28a837e35980f5de9bf14e74ab9b0b7932aaf59f62840",
+    "semantic_success": true,
+    "rationale": "只说明本轮文档没有保留年限，没有断言真实企业不存在规定。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.440703+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-12",
+    "record_sha256": "f7fb2896e1844ab7b59e5a51819051924f89d57f38c94c5f6a437c40332070da",
+    "semantic_success": true,
+    "rationale": "未知备用机时限明确无足够证据，没有编造 SLA。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.443336+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-13",
+    "record_sha256": "6d41e48fa4845efcd5f0289ee2c936621ee4ac0fad2710458e11e4362adabeec",
+    "semantic_success": true,
+    "rationale": "请求重装与卸载/重装/重启尚未执行均保留，草稿未写库。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.444047+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-14",
+    "record_sha256": "1395f94d2d9e818e623758bfc47c6d546a0830962e2760f076c059d350251db2",
+    "semantic_success": false,
+    "rationale": "已报告个人收件问题仍重复追问影响范围，无可确认草稿。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.444448+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-15",
+    "record_sha256": "80ea6fb03253b99f097f2751f98756c02ac058c6ccb756d25ec4f492d5d9a213",
+    "semantic_success": true,
+    "rationale": "安装驱动的尝试与安装失败区分清楚，未写成已成功重装。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.444844+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-16",
+    "record_sha256": "d84cfa3b21c45734b91846ac0eea86ca66de52dea4aeb92666db9774921dbb34",
+    "semantic_success": true,
+    "rationale": "证书刷新被权限拦截、没有更新得到保留。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.445212+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-17",
+    "record_sha256": "1500ed5ba86a8b7b9d2548fb9183d92441a3330833ced5df186d993e377f5b32",
+    "semantic_success": true,
+    "rationale": "采用最新本人范围；仅查看回收站而未删除，保留团队邮箱为服务对象而非影响人数。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.445585+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-18",
+    "record_sha256": "6dad3fb0aaa44510b9e9eb8917f9ccf6407b639db72ffdbbb08f1f7fb668f747",
+    "semantic_success": true,
+    "rationale": "重装属于测试机，本机未操作；主体与状态正确。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.445952+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-19",
+    "record_sha256": "903cb176224e23de28cd90259558ad52fddbe3f08275a8badc0e523ef653d17b",
+    "semantic_success": false,
+    "rationale": "本人共享目录故障与未执行建议未形成草稿，重复追问影响范围。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.446342+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-20",
+    "record_sha256": "9c72c08c2081d3a6eb2e040c1b03ea8d05ed758839f83ea16bd404f1d2958f24",
+    "semantic_success": false,
+    "rationale": "登记诉求误走排障问答，没有生成所需草稿；未擅自创建。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.448552+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-21",
+    "record_sha256": "10e0d9c7df329e73e861e7ffda0df2d51d3436a6fee5cc96caa71cb30eea5ff3",
+    "semantic_success": true,
+    "rationale": "保留同事昨日重启恢复与本人今日未重启/仍失败的区别。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.448982+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-22",
+    "record_sha256": "82305b3d99e9427f7c210088558a2c01f07ed6baad3e322718285787f099fc7c",
+    "semantic_success": true,
+    "rationale": "他人扩容不被归到本人；本人配额未改且发不出邮件。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.449346+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-23",
+    "record_sha256": "96174269a41d4e2415fb8db6e7bece71a08019cf5a3467cfe01ed1842dcf5e27",
+    "semantic_success": true,
+    "rationale": "明确影响范围未核查，正确澄清，无草稿/写入。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.449787+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-24",
+    "record_sha256": "50c8544890c065ea9d471710c3494a29b282957d20fee1b293f6cd5a23950879",
+    "semantic_success": true,
+    "rationale": "明确范围未知，正确澄清，无草稿/写入。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.450342+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-25",
+    "record_sha256": "0a6c2307350bca7b809ac779491f6881f23d743676ae962c30a1eeb3d4278846",
+    "semantic_success": true,
+    "rationale": "VPN operational 与工具结果一致，明确模拟数据。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.450959+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-26",
+    "record_sha256": "34d1732cda47df4578e4c3e521c65f484f4d4d920f25daf96942975b57f956d1",
+    "semantic_success": true,
+    "rationale": "邮箱 degraded 与发送延迟匹配，明确模拟数据。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.451458+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-27",
+    "record_sha256": "d268e9e9c7f31dab04edc4432652f40f89a5e347790e098d86fe4937e681b224",
+    "semantic_success": false,
+    "rationale": "设备配置误走知识库；未调用设备工具，未完成请求。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.453615+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-28",
+    "record_sha256": "37bc7e8428be0925d6328c3baf13e56e7623f7affea5c24ef8683c970fdf5b79",
+    "semantic_success": false,
+    "rationale": "设备配置误走知识库；未调用设备工具，未完成请求。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.455597+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-29",
+    "record_sha256": "27aa9cda356845542c80690979136865d2467b293c2ea856edd37e988a0a4e3c",
+    "semantic_success": true,
+    "rationale": "INC-1001 in_progress 与固定样例一致，明确模拟来源。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.456179+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-30",
+    "record_sha256": "9e82d6a7296c20a910fd98e0b5d53b416fb5f5eacb404b5f383cb4f0526aff22",
+    "semantic_success": true,
+    "rationale": "INC-1002 resolved 与固定样例一致，明确模拟来源。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.456729+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-31",
+    "record_sha256": "f35f30b331d2e650c61fdcb893ca2dc1bad28b0472acf9443f3cf07784933711",
+    "semantic_success": true,
+    "rationale": "缺服务名先澄清，不猜参数，不调用工具。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.457114+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-32",
+    "record_sha256": "a3c8b7f6cea5f0e1105fefff2124bce11b58f94edb819801670b85d5704faf96",
+    "semantic_success": true,
+    "rationale": "缺工单号先澄清；例号未被执行成查询。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.457521+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-33",
+    "record_sha256": "1303da5c107f58fb2852695abeaf32360a99dddf546903b97a4daf0cf8e2fd19",
+    "semantic_success": false,
+    "rationale": "业务审批/防重均通过；但用户将 impact 改为三人小组后 description 仍写只影响本人，字段事实矛盾，因此不能判完整语义成功。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.458206+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-34",
+    "record_sha256": "87776aadd11e2cadad2b21c389b0a1602908b44bc95a17f4fd37a4fe77788214",
+    "semantic_success": true,
+    "rationale": "取消后第二请求缺范围正确澄清，没有继承旧单，也未写库。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.458683+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-35",
+    "record_sha256": "795d7a870c2fcb851b50230d0cd52da261d26dd180841ccdcca6f7a6f8656e69",
+    "semantic_success": true,
+    "rationale": "外人 history 403，本人恢复当前草稿，批准仅一张且内容保持。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.459171+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-36",
+    "record_sha256": "dda2be947d406201eec2dda58082cfcb42a1e0a0845aadb893c391d3b11c19d1",
+    "semantic_success": true,
+    "rationale": "先澄清范围，再保留 VPN 客户端启动失败并结合本人影响，批准一张。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.459825+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-37",
+    "record_sha256": "1a63c01c3d812232d801cca425a47fca9d94ba4379883aab4fdb9f5bc40db402",
+    "semantic_success": false,
+    "rationale": "旧批准拒绝与防重通过；编辑范围后 description 残留只影响个人，与三人小组字段矛盾。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.460554+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-38",
+    "record_sha256": "b07a54ba042d178b33a82870d8cb9b4992b516fcee3cb218c6657a4722e54dac",
+    "semantic_success": true,
+    "rationale": "取消清空后新问题不继承已结束请求的范围，继续澄清，无写库。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.461365+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-39",
+    "record_sha256": "0f080ef080367cc2ae0437efb5ca0acca700ef8a9642b14f7bfec85f7be30200",
+    "semantic_success": true,
+    "rationale": "不同身份读会话 403，本人恢复批准仅一张。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.462301+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  },
+  {
+    "case_id": "a-dev-40",
+    "record_sha256": "ecbb0d1e6469cfb08d078e62c57614651e1432da88757dbd6405af0ec015d264",
+    "semantic_success": true,
+    "rationale": "缺范围追问后正确合并两轮事实并明确批准，只一张。",
+    "reviewer": "developer_assistant_nonindependent",
+    "reviewed_at": "2026-10-22T11:33:41.462923+00:00",
+    "scope": "all turns, actual tools, selected evidence and final/current draft fields; not blind independent review"
+  }
+]

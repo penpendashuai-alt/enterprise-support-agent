@@ -1,0 +1,191 @@
+{
+  "run_id": "430217efac6747fc930598f5c54120e9",
+  "case_id": "a-dev-34",
+  "attempt": 1,
+  "variant": "candidate-v2",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T11:36:40.915078+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请创建工单：VPN 从下午两点起无法使用，只影响我个人，尚未尝试重启，优先级 P2。 本次场景标记为 a-dev-34。",
+      "http_status": 200,
+      "seconds": 4.277548199999728,
+      "http_response_seconds": 4.2740604000027815,
+      "request_id": "a33cfab9d7754da29023b8877204e4b0",
+      "server_timing": "rate_check;dur=0.986, thread_wait;dur=0.009, execution_wait;dur=0.008, business_database;dur=13.894, ownership;dur=15.483, ownership_preflight;dur=2.421, model_wait;dur=0.023, router;dur=2330.816, draft;dur=1892.646",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：VPN 从下午两点起无法使用\n描述：VPN 从下午两点起无法使用。尚未尝试重启。\n服务：VPN\n影响范围：只影响我个人\n优先级：P2（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16366-24da-78d0-89bd-e9d8b41121cf",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-d130af75309f42a284157ffbcb4906ec",
+          "draft_version": 1,
+          "draft": {
+            "title": "VPN 从下午两点起无法使用",
+            "description": "VPN 从下午两点起无法使用。尚未尝试重启。",
+            "service_name": "VPN",
+            "impact": "只影响我个人",
+            "priority": "P2"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "VPN",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "VPN 从下午两点起无法使用，只影响我个人，尚未尝试重启，优先级 P2",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "VPN 从下午两点起无法使用",
+          "description": "VPN 从下午两点起无法使用。尚未尝试重启。",
+          "service_name": "VPN",
+          "impact": "只影响我个人",
+          "priority": "P2"
+        },
+        "draft_id": "draft-d130af75309f42a284157ffbcb4906ec",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    },
+    {
+      "index": 1,
+      "operation": "cancel",
+      "user_message": null,
+      "http_status": 200,
+      "seconds": 0.07640309999987949,
+      "http_response_seconds": 0.07027480000033393,
+      "request_id": "a7e5726e42cb47e99bbd7fce76fc2595",
+      "server_timing": "rate_check;dur=1.500, thread_wait;dur=0.015, execution_wait;dur=0.016, business_database;dur=27.150, ownership;dur=22.100, ownership_preflight;dur=5.802",
+      "response": {
+        "type": "ai",
+        "content": "已取消本地演示工单草稿，没有创建工单。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16366-363c-7bd1-af8e-3fda9b345a87",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "VPN",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "VPN 从下午两点起无法使用，只影响我个人，尚未尝试重启，优先级 P2",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": null,
+        "draft_id": "draft-d130af75309f42a284157ffbcb4906ec",
+        "draft_version": 1,
+        "approval_status": "cancelled",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    },
+    {
+      "index": 2,
+      "operation": "user",
+      "user_message": "请另建工单：打印程序闪退，开始时间和影响范围都还没有确认。",
+      "http_status": 200,
+      "seconds": 4.095302300000185,
+      "http_response_seconds": 4.092056900000898,
+      "request_id": "7261ba3c15634c8f8eca5e1353c8c2c2",
+      "server_timing": "rate_check;dur=2.101, thread_wait;dur=0.024, execution_wait;dur=0.016, business_database;dur=30.145, ownership;dur=30.219, ownership_preflight;dur=7.477, model_wait;dur=0.044, router;dur=2256.087, draft;dur=1765.338",
+      "response": {
+        "type": "ai",
+        "content": "请补充影响范围。工单尚未提交；信息齐全后会展示草稿供你确认。未指定优先级时使用演示默认值 P3。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16366-3747-7db1-a233-f00b67f39cf7",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "打印程序闪退，开始时间和影响范围都还没有确认",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": null,
+        "draft_id": "draft-d130af75309f42a284157ffbcb4906ec",
+        "draft_version": 1,
+        "approval_status": "collecting",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-430217ef-a-dev-34-alice",
+    "bob": "p8-430217ef-a-dev-34-bob"
+  },
+  "threads": {
+    "primary": "3c104bbb87c74c6e8f8dd05b61b4a4fb",
+    "secondary": "b04c878059744acc9f1b5d712665dfc7"
+  },
+  "seconds": 8.974489899999753,
+  "final_ticket_count": 0,
+  "final_draft_version": 1,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "807b3bca13394bc6969a42904e1bcc07",
+    "b2b5ced08d8b4b46b606f486c501db91",
+    "8a58592d877643c0abaeae5c48633190",
+    "7a5e7c2b7c6642c78f014a491873ef36"
+  ]
+}

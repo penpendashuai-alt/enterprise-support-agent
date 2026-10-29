@@ -1,0 +1,31 @@
+{
+  "at": "2026-10-23T11:30:08.351273+00:00",
+  "action": "snapshot",
+  "user_id": "b5d0cbfd-f715-4da5-a1e2-52bb8629dc60",
+  "thread_id": "01c1dd2a-45d9-4585-864c-41ebc966a3ef",
+  "pending": {
+    "kind": "ticket_approval",
+    "draft_id": "draft-e8b93e1c4e0e4abaa3d38c1366f86ba4",
+    "draft_version": 2,
+    "draft": {
+      "title": "VPN 连接失败",
+      "description": "VPN 从今天下午两点起连接失败。尚未尝试重启。",
+      "service_name": "VPN",
+      "impact": "本人所在的三人小组",
+      "priority": "P2"
+    },
+    "approval_status": "pending",
+    "ticket_result": null,
+    "is_demo": true
+  },
+  "tickets_api": {
+    "tickets": [],
+    "is_demo": true
+  },
+  "tickets_database": [],
+  "checks": {
+    "ticket_count": true,
+    "pending_version": true
+  },
+  "passed": true
+}

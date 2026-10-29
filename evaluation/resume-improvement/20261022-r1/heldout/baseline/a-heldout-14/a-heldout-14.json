@@ -1,0 +1,79 @@
+{
+  "run_id": "40a3c7a1f10e449fae2f543fef21bc71",
+  "case_id": "a-heldout-14",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T12:03:53.519630+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请建权限工单：我个人能读共享文件但不能保存。如果管理员允许才重设权限，现在没有动权限。",
+      "http_status": 200,
+      "seconds": 4.662744200002635,
+      "http_response_seconds": 4.659308500002226,
+      "request_id": "4162c428da964cb0920ee3d34de2fc1a",
+      "server_timing": "rate_check;dur=2.918, thread_wait;dur=0.019, execution_wait;dur=0.014, business_database;dur=20.624, ownership;dur=22.489, ownership_preflight;dur=7.759, model_wait;dur=0.031, router;dur=2379.955, draft;dur=2205.327",
+      "response": {
+        "type": "ai",
+        "content": "请补充影响范围。工单尚未提交；信息齐全后会展示草稿供你确认。未指定优先级时使用演示默认值 P3。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a1637f-0e4f-7fe2-8252-1f20dc70969d",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "个人能读共享文件但不能保存，需管理员允许后才重设权限，目前未动权限",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "approval_status": "collecting"
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-40a3c7a1-a-heldout-14-alice",
+    "bob": "p8-40a3c7a1-a-heldout-14-bob"
+  },
+  "threads": {
+    "primary": "1b43c1a5cb6b4433a2d3b2c04c58ff18",
+    "secondary": "29c92d1098ad483887e9fdd26bd68f26"
+  },
+  "measurement": true,
+  "cache_condition": "disabled",
+  "seconds": 4.8365606000006665,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": false,
+    "failures": [
+      {
+        "stage": "approval_storage",
+        "turn": 0,
+        "reason": "response_kind"
+      }
+    ],
+    "metrics": {}
+  },
+  "model_calls": [
+    "2a97b4dbb74a43f5941a4634ac92ec07",
+    "f18dd7c4485d4d6f8df56330cee86cd9"
+  ]
+}

@@ -1,0 +1,270 @@
+{
+  "status": "complete",
+  "planned": 120,
+  "measured": 120,
+  "conditions": {
+    "off": {
+      "n": 40,
+      "mean_seconds": 0.27213401999943015,
+      "p50_seconds": 0.205944700006512,
+      "p95_seconds_nearest_rank": 0.3595582999987528,
+      "query_cluster_95": {
+        "mean_seconds": [
+          0.20285939499917732,
+          0.3945668599993951
+        ],
+        "p50_seconds": [
+          0.19007810000039171,
+          0.22579000001132954
+        ],
+        "p95_seconds_nearest_rank": [
+          0.28002349998860154,
+          1.9438424999971176
+        ]
+      },
+      "query_count": 20,
+      "evidence_equal": 40,
+      "cache_state_matches": 40,
+      "actual_cache_states": {
+        "none": 40
+      },
+      "actual_hit_latency": {
+        "n": 0,
+        "mean_seconds": null,
+        "p50_seconds": null,
+        "p95_seconds_nearest_rank": null
+      },
+      "actual_hit_provider_attempts": 0,
+      "measurement_provider_attempts": 40,
+      "status_counts": {
+        "insufficient": 4,
+        "ok": 36
+      },
+      "stages": {
+        "dense_index_seconds": {
+          "n": 40,
+          "mean_seconds": 0.015676754999367402,
+          "p50_seconds": 0.01570460000220919,
+          "p95_seconds_nearest_rank": 0.01768649999576155
+        },
+        "dense_seconds": {
+          "n": 40,
+          "mean_seconds": 0.2556497549994674,
+          "p50_seconds": 0.19052540000120644,
+          "p95_seconds_nearest_rank": 0.3451366999943275
+        },
+        "embedding_seconds": {
+          "n": 40,
+          "mean_seconds": 0.24475100749878037,
+          "p50_seconds": 0.17939259999548085,
+          "p95_seconds_nearest_rank": 0.33491189999040216
+        },
+        "qdrant_query_seconds": {
+          "n": 40,
+          "mean_seconds": 0.010767392501657013,
+          "p50_seconds": 0.01004205000208458,
+          "p95_seconds_nearest_rank": 0.012718600002699532
+        },
+        "retrieval_seconds": {
+          "n": 40,
+          "mean_seconds": 0.27200799999918673,
+          "p50_seconds": 0.20583025000087218,
+          "p95_seconds_nearest_rank": 0.35944580000068527
+        }
+      }
+    },
+    "cold": {
+      "n": 40,
+      "mean_seconds": 0.22322851500139224,
+      "p50_seconds": 0.21898420000070473,
+      "p95_seconds_nearest_rank": 0.29973790000076406,
+      "query_cluster_95": {
+        "mean_seconds": [
+          0.21003906250007276,
+          0.2374907575020188
+        ],
+        "p50_seconds": [
+          0.2070597500060103,
+          0.22679770000104327
+        ],
+        "p95_seconds_nearest_rank": [
+          0.243742899998324,
+          0.3426192000042647
+        ]
+      },
+      "query_count": 20,
+      "evidence_equal": 40,
+      "cache_state_matches": 40,
+      "actual_cache_states": {
+        "miss": 40
+      },
+      "actual_hit_latency": {
+        "n": 0,
+        "mean_seconds": null,
+        "p50_seconds": null,
+        "p95_seconds_nearest_rank": null
+      },
+      "actual_hit_provider_attempts": 0,
+      "measurement_provider_attempts": 40,
+      "status_counts": {
+        "insufficient": 4,
+        "ok": 36
+      },
+      "stages": {
+        "dense_index_seconds": {
+          "n": 40,
+          "mean_seconds": 0.015145690000645117,
+          "p50_seconds": 0.015388899992103688,
+          "p95_seconds_nearest_rank": 0.017751400009728968
+        },
+        "dense_seconds": {
+          "n": 40,
+          "mean_seconds": 0.18823500250109645,
+          "p50_seconds": 0.1854215000057593,
+          "p95_seconds_nearest_rank": 0.26733069999318104
+        },
+        "embedding_seconds": {
+          "n": 40,
+          "mean_seconds": 0.17786014000048453,
+          "p50_seconds": 0.17463164999935543,
+          "p95_seconds_nearest_rank": 0.2559208999882685
+        },
+        "index_check_seconds": {
+          "n": 40,
+          "mean_seconds": 0.01579952500069339,
+          "p50_seconds": 0.015983050005161203,
+          "p95_seconds_nearest_rank": 0.017954399998416193
+        },
+        "qdrant_query_seconds": {
+          "n": 40,
+          "mean_seconds": 0.010243059999265825,
+          "p50_seconds": 0.01019119999546092,
+          "p95_seconds_nearest_rank": 0.01242110000748653
+        },
+        "redis_read_seconds": {
+          "n": 40,
+          "mean_seconds": 0.0008660650004458148,
+          "p50_seconds": 0.0007845000000088476,
+          "p95_seconds_nearest_rank": 0.000985699996817857
+        },
+        "redis_write_seconds": {
+          "n": 36,
+          "mean_seconds": 0.0013134805562407968,
+          "p50_seconds": 0.0012187500033178367,
+          "p95_seconds_nearest_rank": 0.0018725000118138269
+        },
+        "retrieval_seconds": {
+          "n": 40,
+          "mean_seconds": 0.2229602450002858,
+          "p50_seconds": 0.2188404500047909,
+          "p95_seconds_nearest_rank": 0.2995761000056518
+        },
+        "shared_wait_seconds": {
+          "n": 40,
+          "mean_seconds": 0.20609533749993716,
+          "p50_seconds": 0.20238155000697589,
+          "p95_seconds_nearest_rank": 0.28291840000019874
+        }
+      }
+    },
+    "warm": {
+      "n": 40,
+      "mean_seconds": 0.04695586749985523,
+      "p50_seconds": 0.01814955000008922,
+      "p95_seconds_nearest_rank": 0.22485830000368878,
+      "query_cluster_95": {
+        "mean_seconds": [
+          0.017857959999309968,
+          0.09431012750064838
+        ],
+        "p50_seconds": [
+          0.017569299998285715,
+          0.018935449996206444
+        ],
+        "p95_seconds_nearest_rank": [
+          0.01996829999552574,
+          0.5242772000055993
+        ]
+      },
+      "query_count": 20,
+      "evidence_equal": 40,
+      "cache_state_matches": 36,
+      "actual_cache_states": {
+        "miss": 4,
+        "hit": 36
+      },
+      "actual_hit_latency": {
+        "n": 36,
+        "mean_seconds": 0.018052844444254233,
+        "p50_seconds": 0.017917049997777212,
+        "p95_seconds_nearest_rank": 0.021502800009329803
+      },
+      "actual_hit_provider_attempts": 0,
+      "measurement_provider_attempts": 4,
+      "status_counts": {
+        "insufficient": 4,
+        "ok": 36
+      },
+      "stages": {
+        "dense_index_seconds": {
+          "n": 4,
+          "mean_seconds": 0.014575625009456417,
+          "p50_seconds": 0.01435965001292061,
+          "p95_seconds_nearest_rank": 0.015420400013681501
+        },
+        "dense_seconds": {
+          "n": 4,
+          "mean_seconds": 0.27462104999722214,
+          "p50_seconds": 0.2075491499999771,
+          "p95_seconds_nearest_rank": 0.4916254999989178
+        },
+        "embedding_seconds": {
+          "n": 4,
+          "mean_seconds": 0.2645627499987313,
+          "p50_seconds": 0.19810095000138972,
+          "p95_seconds_nearest_rank": 0.48128449999785516
+        },
+        "index_check_seconds": {
+          "n": 40,
+          "mean_seconds": 0.015725329998895178,
+          "p50_seconds": 0.015453849991899915,
+          "p95_seconds_nearest_rank": 0.018014300003414974
+        },
+        "qdrant_query_seconds": {
+          "n": 4,
+          "mean_seconds": 0.009941925000021001,
+          "p50_seconds": 0.010186049999902025,
+          "p95_seconds_nearest_rank": 0.010872600003494881
+        },
+        "redis_read_seconds": {
+          "n": 40,
+          "mean_seconds": 0.0019060249978792854,
+          "p50_seconds": 0.0019526499963831156,
+          "p95_seconds_nearest_rank": 0.0023262000031536445
+        },
+        "retrieval_seconds": {
+          "n": 40,
+          "mean_seconds": 0.04684299500149791,
+          "p50_seconds": 0.018035300010524224,
+          "p95_seconds_nearest_rank": 0.22473230000468902
+        },
+        "shared_wait_seconds": {
+          "n": 4,
+          "mean_seconds": 0.2903010499976517,
+          "p50_seconds": 0.22294669999246253,
+          "p95_seconds_nearest_rank": 0.5079267999972217
+        }
+      }
+    }
+  },
+  "warmup_count": 40,
+  "paired_all_responses": {
+    "query_clusters": 20,
+    "warm_minus_off_mean_seconds": -0.22517815249957493,
+    "query_cluster_bootstrap_95": [
+      -0.31644281500120996,
+      -0.16753569750108
+    ],
+    "scope": "Equal weight per paired query; all component measurements including insufficient evidence; no chat; repeats are not independent queries"
+  }
+}

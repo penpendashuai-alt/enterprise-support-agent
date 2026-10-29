@@ -1,0 +1,20 @@
+{
+  "case_id": "pilot-missing",
+  "input": "请建工单：我的电脑打不开项目，影响范围还没查清。",
+  "result": {
+    "approval_status": "collecting",
+    "messages": [
+      {
+        "content": "暂时无法整理有效草稿，请补充问题描述和影响范围后重试。工单尚未提交。",
+        "additional_kwargs": {},
+        "response_metadata": {},
+        "type": "ai",
+        "name": null,
+        "id": null,
+        "tool_calls": [],
+        "invalid_tool_calls": [],
+        "usage_metadata": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "run_id": "d4a24e6dbeaf497aa1b52ea546b343db",
+  "case_id": "a-heldout-13",
+  "attempt": 1,
+  "variant": "candidate",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T12:03:12.189667+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "创建工单：我的会议麦克风没有声音，仅影响本人。如果今晚还不好，我打算明天再卸载应用；现在并没有卸载。",
+      "http_status": 200,
+      "seconds": 5.574207699999533,
+      "http_response_seconds": 5.570696700000553,
+      "request_id": "5ce4c3d9e9744d19b4af270ef00da551",
+      "server_timing": "rate_check;dur=2.813, thread_wait;dur=0.024, execution_wait;dur=0.012, business_database;dur=19.923, ownership;dur=21.590, ownership_preflight;dur=7.180, model_wait;dur=0.028, router;dur=2419.063, draft;dur=3073.276",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：会议麦克风没有声音\n描述：现象：会议麦克风没有声音。用户计划：如果今晚还不好，打算明天再卸载应用；现在并没有卸载。\n服务：未指定\n影响范围：仅影响本人\n优先级：P3（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a1637e-6cdb-7410-8e2f-d63b3f21df40",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-5db30d5c3cc24ba69de18c2fa12d6835",
+          "draft_version": 1,
+          "draft": {
+            "title": "会议麦克风没有声音",
+            "description": "现象：会议麦克风没有声音。用户计划：如果今晚还不好，打算明天再卸载应用；现在并没有卸载。",
+            "service_name": null,
+            "impact": "仅影响本人",
+            "priority": "P3"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "会议麦克风没有声音，仅影响本人",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "会议麦克风没有声音",
+          "description": "现象：会议麦克风没有声音。用户计划：如果今晚还不好，打算明天再卸载应用；现在并没有卸载。",
+          "service_name": null,
+          "impact": "仅影响本人",
+          "priority": "P3"
+        },
+        "draft_id": "draft-5db30d5c3cc24ba69de18c2fa12d6835",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-d4a24e6d-a-heldout-13-alice",
+    "bob": "p8-d4a24e6d-a-heldout-13-bob"
+  },
+  "threads": {
+    "primary": "1d60dc62a6de474d96f2592353adf90b",
+    "secondary": "83045745063a4e03a0c578a832896b22"
+  },
+  "measurement": true,
+  "cache_condition": "disabled",
+  "seconds": 5.742948099999921,
+  "final_ticket_count": 0,
+  "final_draft_version": 1,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "2d11b0f20db04af79a9c349e0fe9250f",
+    "7eb4e252632b477fb02d0bb27de7d855"
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "run_id": "6f5a24de02f344c8ace12b1b8f1da847",
+  "case_id": "a-heldout-32",
+  "attempt": 1,
+  "variant": "candidate",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T12:15:35.659911+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请解释一般意义上的多因素认证，不要查询任何账号或企业状态。",
+      "http_status": 200,
+      "seconds": 5.125867199996719,
+      "http_response_seconds": 5.122652399997605,
+      "request_id": "bc3812b17e064ff38776009e96830585",
+      "server_timing": "rate_check;dur=2.706, thread_wait;dur=0.015, execution_wait;dur=0.010, business_database;dur=24.651, ownership;dur=26.331, ownership_preflight;dur=7.248, model_wait;dur=0.024, router;dur=2053.049, preferences;dur=4.433, handler;dur=2994.052",
+      "response": {
+        "type": "ai",
+        "content": "多因素认证（MFA）是指在登录或进行敏感操作时，要求用户提供两种或两种以上不同类别的验证因素，以确认身份。\n\n常见的三类因素包括：\n\n1. **知识因素**：你知道的信息，例如密码、PIN 码、安全问题的答案。\n2. **持有因素**：你拥有的物品，例如手机、硬件令牌、智能卡、验证器 App 生成的一次性验证码。\n3. **生物因素**：你自身的特征，例如指纹、面部识别、虹膜、声纹。\n\nMFA 的核心作用是：即使攻击者获取了密码，仍然难以通过第二重验证，从而显著降低账户被盗风险。一般建议在邮箱、网银、VPN、企业系统等关键场景启用 MFA。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16389-c509-7b53-9b14-57147d4f7161",
+        "response_metadata": {
+          "token_usage": {
+            "completion_tokens": 157,
+            "prompt_tokens": 403,
+            "total_tokens": 560,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cache_write_tokens": null,
+              "cached_tokens": 384
+            },
+            "prompt_cache_hit_tokens": 384,
+            "prompt_cache_miss_tokens": 19
+          },
+          "model_provider": "openai",
+          "model_name": "deepseek-v4-pro",
+          "system_fingerprint": "a307abda487cd1b463329ccb945ce396",
+          "id": "50764a2a-7302-470d-8426-50e1c3b7df7d",
+          "finish_reason": "stop",
+          "logprobs": null
+        },
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "general_question",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": null
+        },
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-6f5a24de-a-heldout-32-alice",
+    "bob": "p8-6f5a24de-a-heldout-32-bob"
+  },
+  "threads": {
+    "primary": "05cf5850e4024096877bebde957f3262",
+    "secondary": "1d2d7bbf91184e5c8529a93417ccb2c5"
+  },
+  "measurement": true,
+  "cache_condition": "disabled",
+  "seconds": 5.296888000000763,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "f9afaeb486b74bd8b6c12eb770037bc4",
+    "c976416a6b2849e8bd423daafd3bc749"
+  ]
+}

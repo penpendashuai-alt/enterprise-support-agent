@@ -1,0 +1,16 @@
+{
+  "case_id": "browser-5d78bac8828b40a8b4138f700b969ef1",
+  "run_id": "9a41717add7341b88bb3f2711a7c26aa",
+  "path": "/support-agent/stream",
+  "query": "",
+  "method": "POST",
+  "status": 200,
+  "request_body": "{\"approval\":null,\"message\":\"请创建演示工单：VPN从今天下午两点起连接失败，尚未尝试重启。目前影响范围未核实。\",\"model\":\"openai-compatible\",\"thread_id\":\"01c1dd2a-45d9-4585-864c-41ebc966a3ef\",\"user_id\":\"b5d0cbfd-f715-4da5-a1e2-52bb8629dc60\",\"agent_config\":{},\"stream_tokens\":true}",
+  "response_body": "data: {\"type\": \"message\", \"content\": {\"type\": \"ai\", \"content\": \"\\u8bf7\\u8865\\u5145\\u5f71\\u54cd\\u8303\\u56f4\\u3002\\u5de5\\u5355\\u5c1a\\u672a\\u63d0\\u4ea4\\uff1b\\u4fe1\\u606f\\u9f50\\u5168\\u540e\\u4f1a\\u5c55\\u793a\\u8349\\u7a3f\\u4f9b\\u4f60\\u786e\\u8ba4\\u3002\\u672a\\u6307\\u5b9a\\u4f18\\u5148\\u7ea7\\u65f6\\u4f7f\\u7528\\u6f14\\u793a\\u9ed8\\u8ba4\\u503c P3\\u3002\", \"tool_calls\": [], \"tool_call_id\": null, \"run_id\": \"01a16883-2d9b-7e11-86be-9343e0716e81\", \"response_metadata\": {}, \"custom_data\": {}}}\n\ndata: [DONE]\n\n",
+  "response_headers": {
+    "content-type": "text/event-stream; charset=utf-8",
+    "x-request-id": "a6a5555bbf4c47f3a5b568f5c0fae94b",
+    "server-timing": "rate_check;dur=1.451, thread_wait;dur=0.016, execution_wait;dur=0.009, business_database;dur=2.845, ownership;dur=2.866, ownership_preflight;dur=2.870"
+  },
+  "at": "2026-10-23T11:26:33.650789+00:00"
+}

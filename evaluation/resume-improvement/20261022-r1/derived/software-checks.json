@@ -1,0 +1,66 @@
+{
+  "recorded_at": "2026-10-23T16:32:25.713653+00:00",
+  "checks": [
+    {
+      "command": "python -m pytest -q",
+      "local_date": "2026-10-23",
+      "exit_code": 0,
+      "passed": 408,
+      "skipped": 4,
+      "warnings": 17,
+      "elapsed_seconds": 89.13,
+      "log": ".cache/resume-20261022/final-pytest.log",
+      "log_sha256": "63daa8f69f8c4fa7d365f169d11d13a5c7f6f37851f8be7af210ac5792d98bc2",
+      "scope": "Whole repository including upstream tests; not all newly added; not model quality"
+    },
+    {
+      "command": "python -m ruff check",
+      "local_date": "2026-10-24",
+      "exit_code": 0,
+      "log": ".cache/resume-20261022/closeout-ruff.log",
+      "log_sha256": "a4443afdcfb6d7363adb285762515ccf7cf50473b1a05c20c1a50f6bed4d26b0",
+      "result": "All checks passed!"
+    },
+    {
+      "command": "python -m ruff format --check",
+      "local_date": "2026-10-24",
+      "exit_code": 0,
+      "log": ".cache/resume-20261022/closeout-format.log",
+      "log_sha256": "bec96068dcba3dadb2ff02f2772f0af3801558bbec5616cd740b1e15e5a73a06",
+      "result": "230 files already formatted"
+    },
+    {
+      "command": "pyrefly check",
+      "local_date": "2026-10-24",
+      "exit_code": 0,
+      "log": ".cache/resume-20261022/closeout-types.log",
+      "log_sha256": "6aaadccaa7e1c72c9b5d45ec9a92c86f29e7c6b1f11dc62cd762dc8369d34bf4",
+      "result": "INFO Checking project configured at `pyproject.toml`\n INFO 0 errors (9 suppressed, 5 warnings not shown)"
+    },
+    {
+      "command": "pymarkdown scan README.md docs/ evaluation/resume-improvement/20261022-r1/",
+      "local_date": "2026-10-24",
+      "exit_code": 0,
+      "log": ".cache/resume-20261022/closeout-markdown.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "result": ""
+    },
+    {
+      "command": "python scripts/summarize_phase10.py --check",
+      "local_date": "2026-10-24",
+      "exit_code": 0,
+      "log": ".cache/resume-20261022/closeout-historical-summary.log",
+      "log_sha256": "342c920c315cf03f692bba71fa6b7a7b82de8988c4c71ec88df3fbc5d6cd4210",
+      "result": "Benchmark check passed"
+    }
+  ],
+  "source_freeze": "Two product files unchanged from candidate-v2 since heldout; see final-integrity.json",
+  "rerun_policy": "Full pytest retained from final product revision; later edits were reports/demo assertions only",
+  "offline_recomputation": {
+    "quality": "passed",
+    "supporting_evidence": "passed",
+    "agent_performance": "passed",
+    "retrieval_cache": "passed"
+  },
+  "publication_redaction": "Local absolute workspace path removed from displayed type-check result on 2026-10-29; original private log hash retained."
+}

@@ -1,0 +1,69 @@
+{
+  "run_id": "430217efac6747fc930598f5c54120e9",
+  "case_id": "a-dev-32",
+  "attempt": 1,
+  "variant": "candidate-v2",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T11:36:34.055267+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "我想查工单进展，但没带编号。",
+      "http_status": 200,
+      "seconds": 2.0300299000009545,
+      "http_response_seconds": 2.027173700000276,
+      "request_id": "dc1e488f1fc140168788bb2969a8ef5f",
+      "server_timing": "rate_check;dur=1.168, thread_wait;dur=0.010, execution_wait;dur=0.007, business_database;dur=13.223, ownership;dur=14.637, ownership_preflight;dur=2.696, model_wait;dur=0.012, router;dur=1975.715",
+      "response": {
+        "type": "ai",
+        "content": "请提供要查询的工单编号，例如 INC-1001（模拟工单）。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16366-0a0f-7060-a890-6337151f4fd6",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": "query"
+        },
+        "needs_clarification": true,
+        "clarification_question": "请提供要查询的工单编号，例如 INC-1001（模拟工单）。"
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-430217ef-a-dev-32-alice",
+    "bob": "p8-430217ef-a-dev-32-bob"
+  },
+  "threads": {
+    "primary": "13a9f6cc9c6149da900aba606059b155",
+    "secondary": "410110f9e5a14f4c82dd0e0a183093d7"
+  },
+  "seconds": 2.1947894000004453,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "1a96f7ec3aab460d992edc632e5c7494"
+  ]
+}

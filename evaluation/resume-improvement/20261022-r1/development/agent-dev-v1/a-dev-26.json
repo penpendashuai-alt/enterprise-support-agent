@@ -1,0 +1,116 @@
+{
+  "run_id": "5cd45809d0fe459aae50f75b119a80c9",
+  "case_id": "a-dev-26",
+  "attempt": 1,
+  "variant": "candidate-v1",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T08:14:02.891838+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请查一下 邮箱 的服务状态。",
+      "http_status": 200,
+      "seconds": 5.02809840000009,
+      "request_id": "c25f55bb26f441cb95c6b44db39255e8",
+      "server_timing": "rate_check;dur=1.171, thread_wait;dur=0.016, execution_wait;dur=0.009, business_database;dur=19.441, ownership;dur=21.177, ownership_preflight;dur=3.429, model_wait;dur=0.044, router;dur=2191.632, preferences;dur=7.842, handler;dur=2778.271",
+      "response": {
+        "type": "ai",
+        "content": "邮箱服务当前状态为 **降级（degraded）**，表现为邮件发送延迟。\n\n以上为固定模拟数据，仅用于演示，不代表真实系统状态。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162ac-a094-75f3-a67c-4628c1ac88b8",
+        "response_metadata": {
+          "token_usage": {
+            "completion_tokens": 35,
+            "prompt_tokens": 811,
+            "total_tokens": 846,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cache_write_tokens": null,
+              "cached_tokens": 768
+            },
+            "prompt_cache_hit_tokens": 768,
+            "prompt_cache_miss_tokens": 43
+          },
+          "model_provider": "openai",
+          "model_name": "deepseek-v4-pro",
+          "system_fingerprint": "a307abda487cd1b463329ccb945ce396",
+          "id": "a8a29548-5539-4082-b163-2c19478138c3",
+          "finish_reason": "stop",
+          "logprobs": null
+        },
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "service_status",
+        "entities": {
+          "service_name": "邮箱",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": null
+        },
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "retrieval": null,
+      "tools": [
+        {
+          "name": "query_service_status",
+          "args": {
+            "service_name": "邮箱"
+          },
+          "id": "call_00_MVGl5WD3Z0jK0Hqq0HNj6646",
+          "type": "tool_call",
+          "result": {
+            "status": "success",
+            "data": {
+              "service_name": "邮箱",
+              "state": "degraded",
+              "detail": "模拟邮件发送延迟。"
+            },
+            "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+            "is_mock": true
+          },
+          "validation_error": false
+        }
+      ],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-5cd45809-a-dev-26-alice",
+    "bob": "p8-5cd45809-a-dev-26-bob"
+  },
+  "threads": {
+    "primary": "f8999eff61d945559182e9359ea0d90f",
+    "secondary": "b94c95801ce148b79a9be7515bfae2d7"
+  },
+  "seconds": 5.190653800000291,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {
+      "required_tool_total": 1,
+      "required_tool_completed": 1,
+      "actual_tool_total": 1,
+      "actual_tool_legal": 1,
+      "tool_parameters_valid": 1
+    }
+  },
+  "model_calls": [
+    "33278fe010244cee97ba20a54b01f7c7",
+    "2c111429b3f74c15ac308f63024fa70f",
+    "e4f8ac4cfb374e0d926b5ca85dd72f72"
+  ]
+}

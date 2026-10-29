@@ -189,6 +189,9 @@ privatecredentials/*
 
 # Local learning plans, resume guides, and interview notes
 /personal/
+/tmp/
+# Local work diary; public protocols, results and failure records remain versioned.
+/evaluation/resume-improvement/20261022-r1/progress.md
 
 # Node (scripts/agui-client)
 node_modules/

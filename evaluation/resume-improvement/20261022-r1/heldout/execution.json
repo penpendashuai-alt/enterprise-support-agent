@@ -1,0 +1,485 @@
+{
+  "planned": 80,
+  "attempted": [
+    {
+      "case_id": "a-heldout-01",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-01",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-02",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-02",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-03",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-03",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-04",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-04",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-05",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-05",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-06",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-06",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-07",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-07",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-08",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-08",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-09",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-09",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-10",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-10",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-11",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-11",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-12",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-12",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-13",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-13",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-14",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-14",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-15",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-15",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-16",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-16",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-17",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-17",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-18",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-18",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-19",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-19",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-20",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-20",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-21",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-21",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-22",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-22",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-23",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-23",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-24",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-24",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-25",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-25",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-26",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-26",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-27",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-27",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-28",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-28",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-29",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-29",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-30",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-30",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-31",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-31",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-32",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-32",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-33",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-33",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-34",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-34",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-35",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-35",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-36",
+      "variant": "candidate",
+      "exit_code": 1,
+      "finished": false
+    },
+    {
+      "case_id": "a-heldout-36",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-37",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-37",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-38",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-38",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-39",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-39",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-40",
+      "variant": "candidate",
+      "exit_code": 0,
+      "finished": true
+    },
+    {
+      "case_id": "a-heldout-40",
+      "variant": "baseline",
+      "exit_code": 0,
+      "finished": true
+    }
+  ]
+}

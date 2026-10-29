@@ -1,0 +1,68 @@
+{
+  "run_id": "5cd45809d0fe459aae50f75b119a80c9",
+  "case_id": "a-dev-32",
+  "attempt": 1,
+  "variant": "candidate-v1",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T08:14:29.866441+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "我想查工单进展，但没带编号。",
+      "http_status": 200,
+      "seconds": 2.4366260999995575,
+      "request_id": "9a863f19f2c44e84a3986df2ab9f31dd",
+      "server_timing": "rate_check;dur=1.374, thread_wait;dur=0.022, execution_wait;dur=0.010, business_database;dur=15.119, ownership;dur=16.674, ownership_preflight;dur=3.981, model_wait;dur=0.012, router;dur=2377.673",
+      "response": {
+        "type": "ai",
+        "content": "请提供要查询的工单编号，例如 INC-1001（模拟工单）。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162ad-09f4-7070-969c-b83d65a9cb81",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": "query"
+        },
+        "needs_clarification": true,
+        "clarification_question": "请提供要查询的工单编号，例如 INC-1001（模拟工单）。"
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-5cd45809-a-dev-32-alice",
+    "bob": "p8-5cd45809-a-dev-32-bob"
+  },
+  "threads": {
+    "primary": "1367f836064844bcbe11bd139ea5d437",
+    "secondary": "ba84f36d9b24401a820b5ee644cb23b6"
+  },
+  "seconds": 2.608424200000627,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "5bd73aa312214be89a7266169a23c571"
+  ]
+}

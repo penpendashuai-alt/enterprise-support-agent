@@ -1,0 +1,16 @@
+{
+  "case_id": "browser-43648f133b8a4035bf52d9b58ccec18a",
+  "run_id": "9a41717add7341b88bb3f2711a7c26aa",
+  "path": "/support-agent/preferences",
+  "query": "user_id=b5d0cbfd-f715-4da5-a1e2-52bb8629dc60",
+  "method": "GET",
+  "status": 200,
+  "request_body": "",
+  "response_body": "{\"status\":\"default\",\"preferences\":null}",
+  "response_headers": {
+    "content-type": "application/json",
+    "x-request-id": "f58a40f0dd4346128670735e422b7247",
+    "server-timing": "rate_check;dur=1.956, execution_wait;dur=0.022, preferences;dur=4.451"
+  },
+  "at": "2026-10-23T11:19:21.438919+00:00"
+}

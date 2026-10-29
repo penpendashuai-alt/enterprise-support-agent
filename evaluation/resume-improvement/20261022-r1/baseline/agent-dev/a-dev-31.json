@@ -1,0 +1,68 @@
+{
+  "run_id": "661e1588388341f39110300686cf0e61",
+  "case_id": "a-dev-31",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T08:06:12.714858+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "查一下服务现在有没有故障。",
+      "http_status": 200,
+      "seconds": 2.446248799999921,
+      "request_id": "80e4b158133e431ba5e01b2de24b8865",
+      "server_timing": "rate_check;dur=0.960, thread_wait;dur=0.009, execution_wait;dur=0.007, business_database;dur=13.006, ownership;dur=14.444, ownership_preflight;dur=2.482, model_wait;dur=0.010, router;dur=2388.861",
+      "response": {
+        "type": "ai",
+        "content": "你想查询哪个服务的状态？例如 GitHub、VPN、邮箱或 Jira。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162a5-73f2-7c13-8fc2-e60341077bda",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "service_status",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": null
+        },
+        "needs_clarification": true,
+        "clarification_question": "你想查询哪个服务的状态？例如 GitHub、VPN、邮箱或 Jira。"
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-661e1588-a-dev-31-alice",
+    "bob": "p8-661e1588-a-dev-31-bob"
+  },
+  "threads": {
+    "primary": "6aa079c6ff2e4e8b9daba231d6db2987",
+    "secondary": "a4ed4f819f3344a19d6fb7cb0f0d26d4"
+  },
+  "seconds": 2.6168682999996236,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "aeb0e87a678748d78c802257485ae0e4"
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "run_id": "4b3c5eee885d49b5bbea21a4b81a71fb",
+  "case_id": "a-heldout-19",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T12:07:00.107487+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请创建工单：只影响我，远程桌面连接失败。表单例句是『重启后仍失败』，但我的实际情况是从没重启，不能照抄例句。",
+      "http_status": 200,
+      "seconds": 4.787656000000425,
+      "http_response_seconds": 4.783286300000327,
+      "request_id": "8012660d334b44e893432842ae7f2db9",
+      "server_timing": "rate_check;dur=2.851, thread_wait;dur=0.013, execution_wait;dur=0.010, business_database;dur=22.526, ownership;dur=24.609, ownership_preflight;dur=8.388, model_wait;dur=0.618, router;dur=2532.449, draft;dur=2167.474",
+      "response": {
+        "type": "ai",
+        "content": "暂时无法整理有效草稿，请补充问题描述和影响范围后重试。工单尚未提交。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16381-e72c-7200-bc30-05b29783cf57",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "远程桌面连接失败，只影响我，从未重启过",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "approval_status": "collecting"
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-4b3c5eee-a-heldout-19-alice",
+    "bob": "p8-4b3c5eee-a-heldout-19-bob"
+  },
+  "threads": {
+    "primary": "93ad9cde45a64ec3a344fce9efa70d0d",
+    "secondary": "8d5f873bf77748aa84242fd17367ecfa"
+  },
+  "measurement": true,
+  "cache_condition": "disabled",
+  "seconds": 4.959997199999634,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": false,
+    "failures": [
+      {
+        "stage": "approval_storage",
+        "turn": 0,
+        "reason": "response_kind"
+      }
+    ],
+    "metrics": {}
+  },
+  "model_calls": [
+    "91226ea36f8646bbaaf65453ea8456ab",
+    "54336b45d4d941e88a0cb906e020a0ae"
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "run_id": "750ffd7630184801878bbeedc0438c94",
+  "case_id": "a-heldout-26",
+  "attempt": 1,
+  "variant": "candidate",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T12:11:41.939626+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请查询 ERP-ORION 服务现在是否可用。",
+      "http_status": 200,
+      "seconds": 5.834406100002525,
+      "http_response_seconds": 5.830662899999879,
+      "request_id": "c2ff17182ffe4c99a55fe1d2ec606e04",
+      "server_timing": "rate_check;dur=2.227, thread_wait;dur=0.010, execution_wait;dur=0.009, business_database;dur=18.764, ownership;dur=20.565, ownership_preflight;dur=7.362, model_wait;dur=0.042, router;dur=2036.226, preferences;dur=6.629, handler;dur=3722.474",
+      "response": {
+        "type": "ai",
+        "content": "查询结果（模拟数据）：ERP-ORION 不在可查询的服务范围内，未找到该服务的状态记录。\n\n当前可查询的服务仅包括 GitHub、VPN、邮箱/email 和 Jira。如需了解 ERP-ORION 的可用性，请提供该服务对应的正式监控入口或文档，或确认服务名称是否准确。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16386-3410-7c70-9618-992ebbbfa756",
+        "response_metadata": {
+          "token_usage": {
+            "completion_tokens": 71,
+            "prompt_tokens": 794,
+            "total_tokens": 865,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cache_write_tokens": null,
+              "cached_tokens": 640
+            },
+            "prompt_cache_hit_tokens": 640,
+            "prompt_cache_miss_tokens": 154
+          },
+          "model_provider": "openai",
+          "model_name": "deepseek-v4-pro",
+          "system_fingerprint": "a307abda487cd1b463329ccb945ce396",
+          "id": "2e76e4f0-d2e7-4d05-962b-b95ab66c8b35",
+          "finish_reason": "stop",
+          "logprobs": null
+        },
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "service_status",
+        "entities": {
+          "service_name": "ERP-ORION",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": null
+        },
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "retrieval": null,
+      "tools": [
+        {
+          "name": "query_service_status",
+          "args": {
+            "service_name": "ERP-ORION"
+          },
+          "id": "call_00_e1sDqKAbwX6EhBoq6IDk6150",
+          "type": "tool_call",
+          "result": {
+            "status": "not_found",
+            "data": null,
+            "message": "模拟数据未覆盖该服务。",
+            "is_mock": true
+          },
+          "validation_error": false
+        }
+      ],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-750ffd76-a-heldout-26-alice",
+    "bob": "p8-750ffd76-a-heldout-26-bob"
+  },
+  "threads": {
+    "primary": "4d4412c30cbb40278169ac7bff60de51",
+    "secondary": "f55357232e97488cbc49ccdf32a03341"
+  },
+  "measurement": true,
+  "cache_condition": "disabled",
+  "seconds": 6.006812899999204,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {
+      "required_tool_total": 1,
+      "required_tool_completed": 1,
+      "actual_tool_total": 1,
+      "actual_tool_legal": 1,
+      "tool_parameters_valid": 1
+    }
+  },
+  "model_calls": [
+    "d200300526714cc987da9c9eec8652ea",
+    "4bd9916c19d14721a77d6ac15ed47677",
+    "cae78fe3293c4a4a836bf067667a0cbc"
+  ]
+}

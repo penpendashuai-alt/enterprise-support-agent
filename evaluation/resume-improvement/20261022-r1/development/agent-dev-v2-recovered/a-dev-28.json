@@ -1,0 +1,118 @@
+{
+  "run_id": "430217efac6747fc930598f5c54120e9",
+  "case_id": "a-dev-28",
+  "attempt": 1,
+  "variant": "candidate-v2",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T11:36:17.433799+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请查询设备 DEV-002 的系统与客户端配置。",
+      "http_status": 200,
+      "seconds": 5.265856000001804,
+      "http_response_seconds": 5.26319710000098,
+      "request_id": "087cae733e3f4e76abfcb3bda5500bb1",
+      "server_timing": "rate_check;dur=1.196, thread_wait;dur=0.010, execution_wait;dur=0.007, business_database;dur=14.990, ownership;dur=16.369, ownership_preflight;dur=2.633, model_wait;dur=0.035, router;dur=2001.628, preferences;dur=5.530, handler;dur=3213.655",
+      "response": {
+        "type": "ai",
+        "content": "以下是设备 DEV-002 的模拟配置信息（固定模拟数据，仅用于演示，不代表真实系统）：\n\n| 项目 | 配置 |\n|------|------|\n| 设备编号 | DEV-002 |\n| 操作系统 | macOS 15 |\n| VPN 客户端 | 5.1 |\n| 设备类型 | laptop |\n\n如需进一步排查，请告诉我具体遇到的问题或相关服务名称。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16365-c922-76f3-ab42-b49be3270751",
+        "response_metadata": {
+          "token_usage": {
+            "completion_tokens": 82,
+            "prompt_tokens": 909,
+            "total_tokens": 991,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cache_write_tokens": null,
+              "cached_tokens": 768
+            },
+            "prompt_cache_hit_tokens": 768,
+            "prompt_cache_miss_tokens": 141
+          },
+          "model_provider": "openai",
+          "model_name": "deepseek-v4-pro",
+          "system_fingerprint": "a307abda487cd1b463329ccb945ce396",
+          "id": "6c6a8567-60ea-4452-9eb5-c67e8f66c9e0",
+          "finish_reason": "stop",
+          "logprobs": null
+        },
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "troubleshooting",
+        "entities": {
+          "service_name": null,
+          "device_id": "DEV-002",
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": null
+        },
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "retrieval": null,
+      "tools": [
+        {
+          "name": "get_device_information",
+          "args": {
+            "device_id": "DEV-002"
+          },
+          "id": "call_00_mf3ecjdmi3pTofjHCay36438",
+          "type": "tool_call",
+          "result": {
+            "status": "success",
+            "data": {
+              "device_id": "DEV-002",
+              "os": "macOS 15",
+              "vpn_client": "5.1",
+              "type": "laptop"
+            },
+            "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+            "is_mock": true
+          },
+          "validation_error": false
+        }
+      ],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-430217ef-a-dev-28-alice",
+    "bob": "p8-430217ef-a-dev-28-bob"
+  },
+  "threads": {
+    "primary": "9647b90bd20444d6af1ec9a21659ad52",
+    "secondary": "3ec19a4bc42c4280ad231eebf155c5dc"
+  },
+  "seconds": 5.429701000000932,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {
+      "required_tool_total": 1,
+      "required_tool_completed": 1,
+      "actual_tool_total": 1,
+      "actual_tool_legal": 1,
+      "tool_parameters_valid": 1
+    }
+  },
+  "model_calls": [
+    "a4e4dba7bf594c53a4f4f761060de592",
+    "df6e36d080cf4ff9ba7c941f8c516514",
+    "41f134d9f0ea4759b82d29be3c3585d7"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "case_id": "browser-3bc4153c2f3d48c195f88e3f3951f7d3",
+  "run_id": "9a41717add7341b88bb3f2711a7c26aa",
+  "path": "/support-agent/threads",
+  "query": "user_id=b5d0cbfd-f715-4da5-a1e2-52bb8629dc60&limit=20",
+  "method": "GET",
+  "status": 200,
+  "request_body": "",
+  "response_body": "{\"threads\":[{\"thread_id\":\"2a032f5c-4f40-4204-a794-dd1ad88d0ea2\",\"agent_id\":\"support-agent\",\"updated_at\":\"2026-10-23T11:22:38.121316Z\",\"title\":\"请根据演示制度说明工单未指定优先级时的默认等级。\"},{\"thread_id\":\"bd09c05c-f79a-49c4-9bdf-369173c13b3c\",\"agent_id\":\"support-agent\",\"updated_at\":\"2026-10-23T11:20:41.820826Z\",\"title\":\"演示企业今年每人购买GPU的报销额度是多少元？\"},{\"thread_id\":\"6d51db45-c41d-4612-afce-3ec48de74d12\",\"agent_id\":\"support-agent\",\"updated_at\":\"2026-10-23T11:19:13.072917Z\",\"title\":\"按照演示知识库，认证手机遗失且无法收到验证码，应该如何恢复验证？\"}]}",
+  "response_headers": {
+    "content-type": "application/json",
+    "x-request-id": "5a64a9537e7b4d52a935d585a99f608b",
+    "server-timing": "rate_check;dur=1.461, execution_wait;dur=0.014, business_database;dur=3.662"
+  },
+  "at": "2026-10-23T11:22:52.345792+00:00"
+}

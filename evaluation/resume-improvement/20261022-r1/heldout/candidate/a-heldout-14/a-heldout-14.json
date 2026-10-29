@@ -1,0 +1,79 @@
+{
+  "run_id": "8f15ad486f2f4c68969b940c13ad8699",
+  "case_id": "a-heldout-14",
+  "attempt": 1,
+  "variant": "candidate",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T12:03:33.252826+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请建权限工单：我个人能读共享文件但不能保存。如果管理员允许才重设权限，现在没有动权限。",
+      "http_status": 200,
+      "seconds": 4.777475399998366,
+      "http_response_seconds": 4.774135700001352,
+      "request_id": "d69a80c5fafc48c6b5e4eb9346a585a6",
+      "server_timing": "rate_check;dur=2.751, thread_wait;dur=0.015, execution_wait;dur=0.012, business_database;dur=20.366, ownership;dur=21.948, ownership_preflight;dur=7.826, model_wait;dur=0.024, router;dur=2739.080, draft;dur=1962.746",
+      "response": {
+        "type": "ai",
+        "content": "暂时无法整理有效草稿，请补充问题描述和影响范围后重试。工单尚未提交。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a1637e-bf23-7d40-bc11-79affd7773f4",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "个人能读共享文件但不能保存",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "approval_status": "collecting"
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-8f15ad48-a-heldout-14-alice",
+    "bob": "p8-8f15ad48-a-heldout-14-bob"
+  },
+  "threads": {
+    "primary": "44761deb36084f26ad2a5d287e2367d5",
+    "secondary": "2f90470409ee4ac48c7356f249853491"
+  },
+  "measurement": true,
+  "cache_condition": "disabled",
+  "seconds": 4.953855600000679,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": false,
+    "failures": [
+      {
+        "stage": "approval_storage",
+        "turn": 0,
+        "reason": "response_kind"
+      }
+    ],
+    "metrics": {}
+  },
+  "model_calls": [
+    "2cfe6b594e104a0fb011f19bc1ec4210",
+    "4ac9b0cd305e47d2bff0a2e2bc35e53d"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "case_id": "browser-5dd5e21fd7f64477a23b3037766a1ba0",
+  "run_id": "9a41717add7341b88bb3f2711a7c26aa",
+  "path": "/support-agent/approval",
+  "query": "thread_id=01c1dd2a-45d9-4585-864c-41ebc966a3ef&user_id=b5d0cbfd-f715-4da5-a1e2-52bb8629dc60",
+  "method": "GET",
+  "status": 200,
+  "request_body": "",
+  "response_body": "{\"pending\":{\"kind\":\"ticket_approval\",\"draft_id\":\"draft-e8b93e1c4e0e4abaa3d38c1366f86ba4\",\"draft_version\":2,\"draft\":{\"title\":\"VPN 连接失败\",\"description\":\"VPN 从今天下午两点起连接失败。尚未尝试重启。\",\"service_name\":\"VPN\",\"impact\":\"本人所在的三人小组\",\"priority\":\"P2\"},\"approval_status\":\"pending\",\"ticket_result\":null,\"is_demo\":true}}",
+  "response_headers": {
+    "content-type": "application/json",
+    "x-request-id": "0a929c0887534b0cb23a4e26be8002e9",
+    "server-timing": "rate_check;dur=1.581, thread_wait;dur=0.017, execution_wait;dur=0.008, business_database;dur=7.341, ownership;dur=7.394, ownership_preflight;dur=3.465"
+  },
+  "at": "2026-10-23T11:28:27.630199+00:00"
+}

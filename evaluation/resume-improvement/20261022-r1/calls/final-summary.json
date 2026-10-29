@@ -1,0 +1,42 @@
+{
+  "at": "2026-10-23T16:30:38.253438+00:00",
+  "authorized_cny": 60,
+  "estimated_cny": 16.4324485,
+  "by_kind": {
+    "chat": 1000,
+    "embedding": 512
+  },
+  "by_status": {
+    "settled": 1512
+  },
+  "by_stage": {
+    "pilot": {
+      "attempts": 25,
+      "estimated_cny": 0.18980000000000002
+    },
+    "baseline": {
+      "attempts": 161,
+      "estimated_cny": 1.2025089999999998
+    },
+    "development": {
+      "attempts": 200,
+      "estimated_cny": 2.591738999999998
+    },
+    "heldout": {
+      "attempts": 269,
+      "estimated_cny": 2.597152999999998
+    },
+    "performance": {
+      "attempts": 841,
+      "estimated_cny": 9.653423000000004
+    },
+    "demo": {
+      "attempts": 16,
+      "estimated_cny": 0.19782449999999996
+    }
+  },
+  "contract_sha256": "6fc1ef0dbe70b262df5590b8401c615ec72384a8ba0bce15eda6b5d2f5419d9d",
+  "attempts_sha256": "66fba3a19cee009df95b0efb45fc86a39e62e238dcfba39f33d2024c44e8a119",
+  "accounting": "Peak/cache-miss upper estimate, no free-credit assumptions; not an invoice. Unknown usage stops future attempts.",
+  "includes_failed_attempts_and_warmups": true
+}

@@ -1,0 +1,116 @@
+{
+  "run_id": "0e966965c57e4a26ba64cde261886673",
+  "case_id": "pilot-mock-status",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T08:02:40.935014+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "查询 GitHub 服务当前状态。",
+      "http_status": 200,
+      "seconds": 5.95321100000001,
+      "request_id": "97a3e411293f46db8c5b68c2ddac5783",
+      "server_timing": "rate_check;dur=1.203, thread_wait;dur=0.013, execution_wait;dur=0.009, business_database;dur=17.048, ownership;dur=18.626, ownership_preflight;dur=3.273, model_wait;dur=0.036, router;dur=2305.227, preferences;dur=6.687, handler;dur=3594.871",
+      "response": {
+        "type": "ai",
+        "content": "GitHub 服务当前状态（模拟数据）：**运行正常（operational）**。\n\n该结果为固定模拟数据，仅用于演示，不代表真实系统状态。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162a2-38af-7e41-8407-234e6ef414a1",
+        "response_metadata": {
+          "token_usage": {
+            "completion_tokens": 34,
+            "prompt_tokens": 810,
+            "total_tokens": 844,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cache_write_tokens": null,
+              "cached_tokens": 640
+            },
+            "prompt_cache_hit_tokens": 640,
+            "prompt_cache_miss_tokens": 170
+          },
+          "model_provider": "openai",
+          "model_name": "deepseek-v4-pro",
+          "system_fingerprint": "a307abda487cd1b463329ccb945ce396",
+          "id": "cbcf63fb-c5cc-4730-b6c6-010ad4c1ffaa",
+          "finish_reason": "stop",
+          "logprobs": null
+        },
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "service_status",
+        "entities": {
+          "service_name": "GitHub",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": null
+        },
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "retrieval": null,
+      "tools": [
+        {
+          "name": "query_service_status",
+          "args": {
+            "service_name": "GitHub"
+          },
+          "id": "call_00_pVnE7YWY86pHizdfAJn88642",
+          "type": "tool_call",
+          "result": {
+            "status": "success",
+            "data": {
+              "service_name": "GitHub",
+              "state": "operational",
+              "detail": "模拟服务正常。"
+            },
+            "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+            "is_mock": true
+          },
+          "validation_error": false
+        }
+      ],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-0e966965-pilot-mock-status-alice",
+    "bob": "p8-0e966965-pilot-mock-status-bob"
+  },
+  "threads": {
+    "primary": "c5f1d51a3d6d416fbd96f3dafe267e0a",
+    "secondary": "478e3b7c8f544c3999f0c3317700ef7c"
+  },
+  "seconds": 6.119403499999862,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {
+      "required_tool_total": 1,
+      "required_tool_completed": 1,
+      "actual_tool_total": 1,
+      "actual_tool_legal": 1,
+      "tool_parameters_valid": 1
+    }
+  },
+  "model_calls": [
+    "f2dfa3bb0a824727a8412df4a235b7df",
+    "6294f067ccd84a12a501b6f02cff9775",
+    "d720c48e4a6b49dfac01a91c76c52c83"
+  ]
+}

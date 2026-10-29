@@ -1,0 +1,96 @@
+{
+  "run_id": "5cd45809d0fe459aae50f75b119a80c9",
+  "case_id": "a-dev-16",
+  "attempt": 1,
+  "variant": "candidate-v1",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T08:13:14.728271+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "给我建工单：我个人 VPN 不通，尝试刷新证书时被权限拦截，证书没有更新。",
+      "http_status": 200,
+      "seconds": 4.846096600000237,
+      "request_id": "fa29e5cf008d44948f609065cf24c800",
+      "server_timing": "rate_check;dur=1.064, thread_wait;dur=0.011, execution_wait;dur=0.009, business_database;dur=15.820, ownership;dur=17.301, ownership_preflight;dur=3.589, model_wait;dur=0.027, router;dur=2224.347, draft;dur=2563.741",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：VPN 不通且刷新证书被权限拦截\n描述：VPN 不通。尝试刷新证书时被权限拦截，证书没有更新。\n服务：VPN\n影响范围：我个人\n优先级：P3（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162ab-e471-7043-9ce5-9916f42449db",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-283055ee9b3b47629309a9829c521dbc",
+          "draft_version": 1,
+          "draft": {
+            "title": "VPN 不通且刷新证书被权限拦截",
+            "description": "VPN 不通。尝试刷新证书时被权限拦截，证书没有更新。",
+            "service_name": "VPN",
+            "impact": "我个人",
+            "priority": "P3"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "VPN",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "个人 VPN 不通，尝试刷新证书时被权限拦截，证书没有更新",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "VPN 不通且刷新证书被权限拦截",
+          "description": "VPN 不通。尝试刷新证书时被权限拦截，证书没有更新。",
+          "service_name": "VPN",
+          "impact": "我个人",
+          "priority": "P3"
+        },
+        "draft_id": "draft-283055ee9b3b47629309a9829c521dbc",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-5cd45809-a-dev-16-alice",
+    "bob": "p8-5cd45809-a-dev-16-bob"
+  },
+  "threads": {
+    "primary": "9d32bc77474f4fe781cab13d59fb9f06",
+    "secondary": "7898b83f0dea406fba5976d8623dea47"
+  },
+  "seconds": 5.013516900000468,
+  "final_ticket_count": 0,
+  "final_draft_version": 1,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "2b9f2a9bbf464088be40ed786da5f5c9",
+    "d020ba2f16d949738e9c9f12d03e79fd"
+  ]
+}

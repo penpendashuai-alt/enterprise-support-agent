@@ -1,0 +1,76 @@
+{
+  "run_id": "5cd45809d0fe459aae50f75b119a80c9",
+  "case_id": "a-dev-15",
+  "attempt": 1,
+  "variant": "candidate-v1",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T08:13:09.998679+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请登记工单：我一个人的打印机离线。我试着重装驱动，但安装程序中途报错，实际上没装成。",
+      "http_status": 200,
+      "seconds": 4.543826600000102,
+      "request_id": "8f0dbb8a60dd4cef87f72ee48d85638f",
+      "server_timing": "rate_check;dur=1.272, thread_wait;dur=0.013, execution_wait;dur=0.010, business_database;dur=16.471, ownership;dur=18.043, ownership_preflight;dur=4.279, model_wait;dur=0.028, router;dur=2288.594, draft;dur=2204.982",
+      "response": {
+        "type": "ai",
+        "content": "暂时无法整理有效草稿，请补充问题描述和影响范围后重试。工单尚未提交。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162ab-d1f9-7210-aa74-2d41eae7082c",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "打印机离线，重装驱动时安装程序中途报错，实际未安装成功",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "approval_status": "collecting"
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-5cd45809-a-dev-15-alice",
+    "bob": "p8-5cd45809-a-dev-15-bob"
+  },
+  "threads": {
+    "primary": "b3ff09b7455e412a86e76ea21c0e81be",
+    "secondary": "f83a40115de1469cb7e55722f033930b"
+  },
+  "seconds": 4.713321700000051,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": false,
+    "failures": [
+      {
+        "stage": "approval_storage",
+        "turn": 0,
+        "reason": "response_kind"
+      }
+    ],
+    "metrics": {}
+  },
+  "model_calls": [
+    "3a352f6b54a041b8a302312412e987a8",
+    "1089d461966b4b2186d2fe9e14cdd49e"
+  ]
+}

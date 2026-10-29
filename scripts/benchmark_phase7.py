@@ -20,7 +20,7 @@ from psycopg.conninfo import make_conninfo
 ROOT = Path(__file__).resolve().parents[1]
 
 
-async def batch(url, size, concurrency, workload, repeat, namespace):
+async def batch(url, size, concurrency, workload, repeat, namespace, refill_seconds=0):
     limiter = asyncio.Semaphore(concurrency)
     rows = []
     async with httpx.AsyncClient(
@@ -31,7 +31,16 @@ async def batch(url, size, concurrency, workload, repeat, namespace):
             await client.post(
                 "/support-agent/invoke", json={"message": hot_query, "user_id": "warmup-user"}
             )
+        # Refill after the warmup too: this prevents one batch or warmup spending
+        # the next batch's admission budget. Cache namespaces remain distinct.
+        if refill_seconds:
+            await asyncio.sleep(refill_seconds)
         before = (await client.get("/fixture/stats")).json()
+        if refill_seconds and before.get("effective_tokens") != {
+            "service": 40,
+            "benchmark_user": 20,
+        }:
+            raise AssertionError("Admission buckets not full before measured batch")
         started = time.perf_counter()
 
         async def one(i):
@@ -80,6 +89,9 @@ async def batch(url, size, concurrency, workload, repeat, namespace):
         "concurrency": concurrency,
         "workload": workload,
         "repeat": repeat,
+        "bucket_initial_state": "full after refill interval" if refill_seconds else "not reset",
+        "refill_seconds": refill_seconds,
+        "effective_tokens_before": before.get("effective_tokens"),
         "warmup": "one unmeasured request"
         if workload == "hot"
         else "none; distinct batch query prefix",
@@ -133,6 +145,10 @@ def run(args):
         RAG_CACHE_ENABLED=str(args.mode in {"cache", "full"}).lower(),
         ADMISSION_ENABLED=str(args.mode in {"control", "full"}).lower(),
         POSTGRES_MAX_CONNECTIONS_PER_POOL=str(args.pool),
+        RATE_SERVICE_CAPACITY="40",
+        RATE_SERVICE_REFILL="20",
+        RATE_USER_CAPACITY="20",
+        RATE_USER_REFILL="10",
     )
     if args.faults:
         env.update(
@@ -209,11 +225,26 @@ def run(args):
                 )
                 print(json.dumps({"network_checks": "passed"}), flush=True)
             for repeat in range(0 if args.faults else args.rounds):
-                for size in map(int, args.sizes.split(",")):
-                    for concurrency in map(int, args.concurrency.split(",")):
-                        for workload in args.workloads.split(","):
+                sizes = list(map(int, args.sizes.split(",")))
+                levels = list(map(int, args.concurrency.split(",")))
+                workloads = args.workloads.split(",")
+                if args.balanced and repeat % 2:
+                    sizes.reverse()
+                    levels.reverse()
+                    workloads.reverse()
+                for size in sizes:
+                    for concurrency in levels:
+                        for workload in workloads:
                             row = asyncio.run(
-                                batch(url, size, concurrency, workload, repeat, uuid4().hex)
+                                batch(
+                                    url,
+                                    size,
+                                    concurrency,
+                                    workload,
+                                    repeat,
+                                    uuid4().hex,
+                                    args.refill_seconds,
+                                )
                             )
                             report["batches"].append(row)
                             print(
@@ -249,4 +280,6 @@ if __name__ == "__main__":
     p.add_argument("--concurrency", default="5,10,20")
     p.add_argument("--workloads", default="unique,hot,mixed,same_thread")
     p.add_argument("--faults", action="store_true")
+    p.add_argument("--refill-seconds", type=float, default=0)
+    p.add_argument("--balanced", action="store_true")
     run(p.parse_args())

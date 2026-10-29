@@ -1,0 +1,118 @@
+{
+  "run_id": "5cd45809d0fe459aae50f75b119a80c9",
+  "case_id": "a-dev-30",
+  "attempt": 1,
+  "variant": "candidate-v1",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T08:14:21.240273+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "帮我查工单 INC-1002 的进展。",
+      "http_status": 200,
+      "seconds": 5.687853899999936,
+      "request_id": "9a55bb350e814a9b89f46470e79fe991",
+      "server_timing": "rate_check;dur=1.066, thread_wait;dur=0.009, execution_wait;dur=0.008, business_database;dur=13.197, ownership;dur=14.576, ownership_preflight;dur=3.209, model_wait;dur=0.034, router;dur=2275.673, preferences;dur=5.774, handler;dur=3360.895",
+      "response": {
+        "type": "ai",
+        "content": "工单 INC-1002 的进展如下（模拟数据，仅用于演示）：\n\n- **标题**：邮箱发送延迟\n- **状态**：已解决（resolved）\n- **进展**：模拟问题已解决，请重试发送。\n\n如需进一步协助，请告诉我。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162ac-e840-71c0-84be-dc6101d2ab7f",
+        "response_metadata": {
+          "token_usage": {
+            "completion_tokens": 60,
+            "prompt_tokens": 873,
+            "total_tokens": 933,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cache_write_tokens": null,
+              "cached_tokens": 768
+            },
+            "prompt_cache_hit_tokens": 768,
+            "prompt_cache_miss_tokens": 105
+          },
+          "model_provider": "openai",
+          "model_name": "deepseek-v4-pro",
+          "system_fingerprint": "a307abda487cd1b463329ccb945ce396",
+          "id": "d02617a0-6f4b-40c5-8af5-664841f084f6",
+          "finish_reason": "stop",
+          "logprobs": null
+        },
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": "INC-1002",
+          "issue_description": null,
+          "ticket_action": "query"
+        },
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "retrieval": null,
+      "tools": [
+        {
+          "name": "query_existing_ticket",
+          "args": {
+            "ticket_id": "INC-1002"
+          },
+          "id": "call_00_9f7B5ggsj3oEqffMlmGY0571",
+          "type": "tool_call",
+          "result": {
+            "status": "success",
+            "data": {
+              "ticket_id": "INC-1002",
+              "title": "邮箱发送延迟",
+              "state": "resolved",
+              "progress": "模拟问题已解决，请重试发送。"
+            },
+            "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+            "is_mock": true,
+            "source": "fixed_mock_sample"
+          },
+          "validation_error": false
+        }
+      ],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-5cd45809-a-dev-30-alice",
+    "bob": "p8-5cd45809-a-dev-30-bob"
+  },
+  "threads": {
+    "primary": "1eed7f7d11bd4f22af2716019342c24d",
+    "secondary": "a1bf64bdaaf04758b1fa7385743754b0"
+  },
+  "seconds": 5.860077500000443,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {
+      "required_tool_total": 1,
+      "required_tool_completed": 1,
+      "actual_tool_total": 1,
+      "actual_tool_legal": 1,
+      "tool_parameters_valid": 1
+    }
+  },
+  "model_calls": [
+    "818f9e4631b448c3b6b6130fd57bf05e",
+    "c5e9cccb6c7549c799f5e3628843d6f7",
+    "700a1838047e4fc3a9911d2043b0722c"
+  ]
+}

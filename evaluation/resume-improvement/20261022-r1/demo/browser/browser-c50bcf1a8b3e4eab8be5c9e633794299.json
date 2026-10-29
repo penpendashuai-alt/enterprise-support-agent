@@ -1,0 +1,16 @@
+{
+  "case_id": "browser-c50bcf1a8b3e4eab8be5c9e633794299",
+  "run_id": "9a41717add7341b88bb3f2711a7c26aa",
+  "path": "/support-agent/tickets",
+  "query": "user_id=b5d0cbfd-f715-4da5-a1e2-52bb8629dc60",
+  "method": "GET",
+  "status": 200,
+  "request_body": "",
+  "response_body": "{\"tickets\":[],\"is_demo\":true}",
+  "response_headers": {
+    "content-type": "application/json",
+    "x-request-id": "552274875213403ba81554923a1c37f9",
+    "server-timing": "rate_check;dur=1.432, execution_wait;dur=0.012, business_database;dur=3.014"
+  },
+  "at": "2026-10-23T11:27:09.494147+00:00"
+}

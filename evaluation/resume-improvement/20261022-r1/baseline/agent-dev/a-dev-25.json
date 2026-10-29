@@ -1,0 +1,116 @@
+{
+  "run_id": "661e1588388341f39110300686cf0e61",
+  "case_id": "a-dev-25",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T08:05:44.494150+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请查一下 VPN 的服务状态。",
+      "http_status": 200,
+      "seconds": 5.261628300000666,
+      "request_id": "87b31a13750c4c2ba626b6ce0b4a98a2",
+      "server_timing": "rate_check;dur=1.172, thread_wait;dur=0.009, execution_wait;dur=0.008, business_database;dur=13.096, ownership;dur=14.492, ownership_preflight;dur=2.638, model_wait;dur=0.035, router;dur=2108.064, preferences;dur=5.451, handler;dur=3103.362",
+      "response": {
+        "type": "ai",
+        "content": "VPN 服务当前状态为 **正常（operational）**，模拟网关正常。\n\n（以上为固定模拟数据，仅用于演示，不代表真实系统状态。）",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162a5-05b5-7220-bfa0-38d69cf7bb4f",
+        "response_metadata": {
+          "token_usage": {
+            "completion_tokens": 34,
+            "prompt_tokens": 808,
+            "total_tokens": 842,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cache_write_tokens": null,
+              "cached_tokens": 640
+            },
+            "prompt_cache_hit_tokens": 640,
+            "prompt_cache_miss_tokens": 168
+          },
+          "model_provider": "openai",
+          "model_name": "deepseek-v4-pro",
+          "system_fingerprint": "a307abda487cd1b463329ccb945ce396",
+          "id": "a2a1c147-b530-4588-ad64-1a8efd8e779d",
+          "finish_reason": "stop",
+          "logprobs": null
+        },
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "service_status",
+        "entities": {
+          "service_name": "VPN",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": null
+        },
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "retrieval": null,
+      "tools": [
+        {
+          "name": "query_service_status",
+          "args": {
+            "service_name": "VPN"
+          },
+          "id": "call_00_uzplMeLHoVhX4WS7C3Zk4167",
+          "type": "tool_call",
+          "result": {
+            "status": "success",
+            "data": {
+              "service_name": "VPN",
+              "state": "operational",
+              "detail": "模拟网关正常。"
+            },
+            "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+            "is_mock": true
+          },
+          "validation_error": false
+        }
+      ],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-661e1588-a-dev-25-alice",
+    "bob": "p8-661e1588-a-dev-25-bob"
+  },
+  "threads": {
+    "primary": "931fb5b790e946389029f94269ef1423",
+    "secondary": "45ef8b3013a64454b9d7a8d97ecb938d"
+  },
+  "seconds": 5.428788299999724,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {
+      "required_tool_total": 1,
+      "required_tool_completed": 1,
+      "actual_tool_total": 1,
+      "actual_tool_legal": 1,
+      "tool_parameters_valid": 1
+    }
+  },
+  "model_calls": [
+    "984ecf38fcd74bcf9569da14f126c719",
+    "ebaf7145015b4f71bfdec6d53def9546",
+    "d80b9767146340a0b7989fffa09f019d"
+  ]
+}

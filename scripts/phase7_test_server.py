@@ -1,6 +1,7 @@
 """Deterministic HTTP benchmark fixture; real PostgreSQL/Redis, synthetic model and retrieval."""
 
 import asyncio
+import hashlib
 import importlib
 import os
 from types import SimpleNamespace
@@ -126,12 +127,35 @@ if __name__ == "__main__":
             if not hasattr(settings, "ADMISSION_ENABLED"):
                 return output
             from execution.control import runtime as controls
+            from execution.redis_runtime import client
 
             output["control"] = controls().snapshot()
             output["completed"] = list(controls().completed)
             from service.support import _locks
 
             output["thread_locks"] = len(_locks)
+            redis = client()
+            if redis is not None:
+                seconds, micros = await redis.time()
+                timestamp = seconds + micros / 1_000_000
+                buckets = {}
+                for key, capacity, rate in (
+                    ("service", settings.RATE_SERVICE_CAPACITY, settings.RATE_SERVICE_REFILL),
+                    (
+                        hashlib.sha256(b"bench-user").hexdigest(),
+                        settings.RATE_USER_CAPACITY,
+                        settings.RATE_USER_REFILL,
+                    ),
+                ):
+                    tokens, updated = await redis.hmget(
+                        settings.REDIS_NAMESPACE + ":rate:model:" + key, "tokens", "time"
+                    )
+                    buckets[key if key == "service" else "benchmark_user"] = (
+                        min(capacity, float(tokens) + max(0, timestamp - float(updated)) * rate)
+                        if tokens is not None
+                        else capacity
+                    )
+                output["effective_tokens"] = buckets
         except ImportError:
             pass
         return output

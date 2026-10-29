@@ -1,0 +1,1907 @@
+{
+  "retrieval": {
+    "dev": {
+      "counts": {
+        "planned": 60,
+        "healthy": 60,
+        "not_run": 0,
+        "answerable": 45,
+        "complete": 43,
+        "selected_evidence_coverage": 43.0,
+        "evidence_recall_at_5": 45.0,
+        "candidate_evidence_recall": 45.0,
+        "unanswerable": 15,
+        "any_evidence": 4
+      },
+      "complete": {
+        "numerator": 43,
+        "denominator": 45,
+        "value": 0.9555555555555556,
+        "wilson_95_descriptive": [
+          0.8517248923056439,
+          0.9877258732932802
+        ]
+      },
+      "no_answer_any_evidence": {
+        "numerator": 4,
+        "denominator": 15,
+        "value": 0.26666666666666666,
+        "wilson_95_descriptive": [
+          0.10897453325692374,
+          0.5195043405598057
+        ]
+      },
+      "mean_clause_coverage_all_planned": 0.9555555555555556,
+      "candidate_evidence_recall_at_5_all_planned": 1.0,
+      "tasks": [
+        {
+          "case_id": "r-dev-vpn-policy-1",
+          "family_id": "document-vpn-policy",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 0.0,
+            "all_required_evidence": false,
+            "false_refusal_proxy": true
+          }
+        },
+        {
+          "case_id": "r-dev-vpn-policy-2",
+          "family_id": "document-vpn-policy",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-vpn-policy-3",
+          "family_id": "document-vpn-policy",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-email-policy-1",
+          "family_id": "document-email-policy",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 0.5,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 0.5,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-email-policy-2",
+          "family_id": "document-email-policy",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-email-policy-3",
+          "family_id": "document-email-policy",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 0.0,
+            "all_required_evidence": false,
+            "false_refusal_proxy": true
+          }
+        },
+        {
+          "case_id": "r-dev-ticket-priority-1",
+          "family_id": "document-ticket-priority",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-ticket-priority-2",
+          "family_id": "document-ticket-priority",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-ticket-priority-3",
+          "family_id": "document-ticket-priority",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-vpn-809-1",
+          "family_id": "document-vpn-809",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-vpn-809-2",
+          "family_id": "document-vpn-809",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-vpn-809-3",
+          "family_id": "document-vpn-809",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-github-sso-1",
+          "family_id": "document-github-sso",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-github-sso-2",
+          "family_id": "document-github-sso",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 0.5,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 0.5,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-github-sso-3",
+          "family_id": "document-github-sso",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-device-repair-1",
+          "family_id": "document-device-repair",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-device-repair-2",
+          "family_id": "document-device-repair",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 0.5,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 0.5,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-device-repair-3",
+          "family_id": "document-device-repair",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-mfa-lost-1",
+          "family_id": "document-mfa-lost",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-mfa-lost-2",
+          "family_id": "document-mfa-lost",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 0.5,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-mfa-lost-3",
+          "family_id": "document-mfa-lost",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-printer-paper-1",
+          "family_id": "document-printer-paper",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 0.5,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 0.5,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-printer-paper-2",
+          "family_id": "document-printer-paper",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-printer-paper-3",
+          "family_id": "document-printer-paper",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-vpn-dns-1",
+          "family_id": "document-vpn-dns",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-vpn-dns-2",
+          "family_id": "document-vpn-dns",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-vpn-dns-3",
+          "family_id": "document-vpn-dns",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-email-quota-1",
+          "family_id": "document-email-quota",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-email-quota-2",
+          "family_id": "document-email-quota",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-email-quota-3",
+          "family_id": "document-email-quota",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-git-permissions-1",
+          "family_id": "document-git-permissions",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-git-permissions-2",
+          "family_id": "document-git-permissions",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-git-permissions-3",
+          "family_id": "document-git-permissions",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-account-offboard-1",
+          "family_id": "document-account-offboard",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 0.5,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-account-offboard-2",
+          "family_id": "document-account-offboard",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-account-offboard-3",
+          "family_id": "document-account-offboard",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-printer-offline-1",
+          "family_id": "document-printer-offline",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-printer-offline-2",
+          "family_id": "document-printer-offline",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-printer-offline-3",
+          "family_id": "document-printer-offline",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-shared-readonly-1",
+          "family_id": "document-shared-readonly",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-shared-readonly-2",
+          "family_id": "document-shared-readonly",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 0.5,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 0.5,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-shared-readonly-3",
+          "family_id": "document-shared-readonly",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 0.3333333333333333,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 0.5,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-data-link-1",
+          "family_id": "document-data-link",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-data-link-2",
+          "family_id": "document-data-link",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-data-link-3",
+          "family_id": "document-data-link",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-dev-vpn-duration-1",
+          "family_id": "absent-vpn-duration",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": true
+          }
+        },
+        {
+          "case_id": "r-dev-vpn-duration-2",
+          "family_id": "absent-vpn-duration",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": true
+          }
+        },
+        {
+          "case_id": "r-dev-vpn-duration-3",
+          "family_id": "absent-vpn-duration",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": true
+          }
+        },
+        {
+          "case_id": "r-dev-email-retention-1",
+          "family_id": "absent-email-retention",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": false
+          }
+        },
+        {
+          "case_id": "r-dev-email-retention-2",
+          "family_id": "absent-email-retention",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": false
+          }
+        },
+        {
+          "case_id": "r-dev-email-retention-3",
+          "family_id": "absent-email-retention",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": false
+          }
+        },
+        {
+          "case_id": "r-dev-repair-guarantee-1",
+          "family_id": "absent-repair-guarantee",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": false
+          }
+        },
+        {
+          "case_id": "r-dev-repair-guarantee-2",
+          "family_id": "absent-repair-guarantee",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": true
+          }
+        },
+        {
+          "case_id": "r-dev-repair-guarantee-3",
+          "family_id": "absent-repair-guarantee",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": false
+          }
+        },
+        {
+          "case_id": "r-dev-payroll-1",
+          "family_id": "absent-payroll",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": false
+          }
+        },
+        {
+          "case_id": "r-dev-payroll-2",
+          "family_id": "absent-payroll",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": false
+          }
+        },
+        {
+          "case_id": "r-dev-payroll-3",
+          "family_id": "absent-payroll",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": false
+          }
+        },
+        {
+          "case_id": "r-dev-wifi-password-1",
+          "family_id": "absent-wifi-password",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": false
+          }
+        },
+        {
+          "case_id": "r-dev-wifi-password-2",
+          "family_id": "absent-wifi-password",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": false
+          }
+        },
+        {
+          "case_id": "r-dev-wifi-password-3",
+          "family_id": "absent-wifi-password",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": false
+          }
+        }
+      ]
+    },
+    "heldout": {
+      "counts": {
+        "planned": 60,
+        "healthy": 60,
+        "not_run": 0,
+        "answerable": 45,
+        "complete": 38,
+        "selected_evidence_coverage": 40.0,
+        "evidence_recall_at_5": 43.5,
+        "candidate_evidence_recall": 45.0,
+        "unanswerable": 15,
+        "any_evidence": 1
+      },
+      "complete": {
+        "numerator": 38,
+        "denominator": 45,
+        "value": 0.8444444444444444,
+        "wilson_95_descriptive": [
+          0.7121609112760374,
+          0.9225457651524174
+        ]
+      },
+      "no_answer_any_evidence": {
+        "numerator": 1,
+        "denominator": 15,
+        "value": 0.06666666666666667,
+        "wilson_95_descriptive": [
+          0.011866895493268553,
+          0.2981652987378003
+        ]
+      },
+      "mean_clause_coverage_all_planned": 0.8888888888888888,
+      "candidate_evidence_recall_at_5_all_planned": 0.9666666666666667,
+      "tasks": [
+        {
+          "case_id": "r-heldout-github-policy-1",
+          "family_id": "document-github-policy",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-github-policy-2",
+          "family_id": "document-github-policy",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-github-policy-3",
+          "family_id": "document-github-policy",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 0.5,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 0.5,
+            "selected_evidence_coverage": 0.5,
+            "all_required_evidence": false,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-ticket-approval-1",
+          "family_id": "document-ticket-approval",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-ticket-approval-2",
+          "family_id": "document-ticket-approval",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-ticket-approval-3",
+          "family_id": "document-ticket-approval",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 0.5,
+            "all_required_evidence": false,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-data-security-1",
+          "family_id": "document-data-security",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-data-security-2",
+          "family_id": "document-data-security",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 0.0,
+            "all_required_evidence": false,
+            "false_refusal_proxy": true
+          }
+        },
+        {
+          "case_id": "r-heldout-data-security-3",
+          "family_id": "document-data-security",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 0.5,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 0.5,
+            "all_required_evidence": false,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-remote-work-1",
+          "family_id": "document-remote-work",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-remote-work-2",
+          "family_id": "document-remote-work",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-remote-work-3",
+          "family_id": "document-remote-work",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 0.5,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 0.0,
+            "all_required_evidence": false,
+            "false_refusal_proxy": true
+          }
+        },
+        {
+          "case_id": "r-heldout-vpn-691-1",
+          "family_id": "document-vpn-691",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 0.5,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-vpn-691-2",
+          "family_id": "document-vpn-691",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-vpn-691-3",
+          "family_id": "document-vpn-691",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-email-delay-1",
+          "family_id": "document-email-delay",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-email-delay-2",
+          "family_id": "document-email-delay",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-email-delay-3",
+          "family_id": "document-email-delay",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-password-reset-1",
+          "family_id": "document-password-reset",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-password-reset-2",
+          "family_id": "document-password-reset",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-password-reset-3",
+          "family_id": "document-password-reset",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-account-request-1",
+          "family_id": "document-account-request",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-account-request-2",
+          "family_id": "document-account-request",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-account-request-3",
+          "family_id": "document-account-request",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 0.5,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 0.5,
+            "all_required_evidence": false,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-meeting-audio-1",
+          "family_id": "document-meeting-audio",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-meeting-audio-2",
+          "family_id": "document-meeting-audio",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-meeting-audio-3",
+          "family_id": "document-meeting-audio",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-shared-folder-1",
+          "family_id": "document-shared-folder",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-shared-folder-2",
+          "family_id": "document-shared-folder",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-shared-folder-3",
+          "family_id": "document-shared-folder",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-vpn-cert-1",
+          "family_id": "document-vpn-cert",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-vpn-cert-2",
+          "family_id": "document-vpn-cert",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-vpn-cert-3",
+          "family_id": "document-vpn-cert",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-email-ndr-1",
+          "family_id": "document-email-ndr",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 0.0,
+            "all_required_evidence": false,
+            "false_refusal_proxy": true
+          }
+        },
+        {
+          "case_id": "r-heldout-email-ndr-2",
+          "family_id": "document-email-ndr",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-email-ndr-3",
+          "family_id": "document-email-ndr",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-git-ssh-host-1",
+          "family_id": "document-git-ssh-host",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-git-ssh-host-2",
+          "family_id": "document-git-ssh-host",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-git-ssh-host-3",
+          "family_id": "document-git-ssh-host",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-access-expiry-1",
+          "family_id": "document-access-expiry",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-access-expiry-2",
+          "family_id": "document-access-expiry",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-access-expiry-3",
+          "family_id": "document-access-expiry",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-mfa-time-1",
+          "family_id": "document-mfa-time",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-mfa-time-2",
+          "family_id": "document-mfa-time",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-mfa-time-3",
+          "family_id": "document-mfa-time",
+          "healthy": true,
+          "metrics": {
+            "candidate_evidence_recall": 1.0,
+            "evidence_recall_at_5": 1.0,
+            "evidence_mrr_at_5": 1.0,
+            "document_recall_at_5_chunks": 1.0,
+            "document_mrr_at_5_chunks": 1.0,
+            "selected_evidence_coverage": 1.0,
+            "all_required_evidence": true,
+            "false_refusal_proxy": false
+          }
+        },
+        {
+          "case_id": "r-heldout-password-period-1",
+          "family_id": "absent-password-period",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": false
+          }
+        },
+        {
+          "case_id": "r-heldout-password-period-2",
+          "family_id": "absent-password-period",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": false
+          }
+        },
+        {
+          "case_id": "r-heldout-password-period-3",
+          "family_id": "absent-password-period",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": true
+          }
+        },
+        {
+          "case_id": "r-heldout-remote-allowance-1",
+          "family_id": "absent-remote-allowance",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": false
+          }
+        },
+        {
+          "case_id": "r-heldout-remote-allowance-2",
+          "family_id": "absent-remote-allowance",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": false
+          }
+        },
+        {
+          "case_id": "r-heldout-remote-allowance-3",
+          "family_id": "absent-remote-allowance",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": false
+          }
+        },
+        {
+          "case_id": "r-heldout-permission-sla-1",
+          "family_id": "absent-permission-sla",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": false
+          }
+        },
+        {
+          "case_id": "r-heldout-permission-sla-2",
+          "family_id": "absent-permission-sla",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": false
+          }
+        },
+        {
+          "case_id": "r-heldout-permission-sla-3",
+          "family_id": "absent-permission-sla",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": false
+          }
+        },
+        {
+          "case_id": "r-heldout-internal-address-1",
+          "family_id": "absent-internal-address",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": false
+          }
+        },
+        {
+          "case_id": "r-heldout-internal-address-2",
+          "family_id": "absent-internal-address",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": false
+          }
+        },
+        {
+          "case_id": "r-heldout-internal-address-3",
+          "family_id": "absent-internal-address",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": false
+          }
+        },
+        {
+          "case_id": "r-heldout-health-insurance-1",
+          "family_id": "absent-health-insurance",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": false
+          }
+        },
+        {
+          "case_id": "r-heldout-health-insurance-2",
+          "family_id": "absent-health-insurance",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": false
+          }
+        },
+        {
+          "case_id": "r-heldout-health-insurance-3",
+          "family_id": "absent-health-insurance",
+          "healthy": true,
+          "metrics": {
+            "evidence_accepted_without_answer_label": false
+          }
+        }
+      ]
+    }
+  },
+  "agent": {
+    "baseline": {
+      "categories": {
+        "draft_fidelity": {
+          "numerator": 5,
+          "denominator": 12,
+          "value": 0.4166666666666667,
+          "wilson_95_descriptive": [
+            0.19326031365875665,
+            0.6804886874504503
+          ]
+        },
+        "knowledge_boundary": {
+          "numerator": 7,
+          "denominator": 12,
+          "value": 0.5833333333333334,
+          "wilson_95_descriptive": [
+            0.31951131254954973,
+            0.8067396863412435
+          ]
+        },
+        "multiturn_approval": {
+          "numerator": 8,
+          "denominator": 8,
+          "value": 1.0,
+          "wilson_95_descriptive": [
+            0.6755924351161198,
+            1.0
+          ]
+        },
+        "tools_queries": {
+          "numerator": 7,
+          "denominator": 8,
+          "value": 0.875,
+          "wilson_95_descriptive": [
+            0.5291118177871464,
+            0.9775825085499433
+          ]
+        }
+      },
+      "draft_generation_completion": {
+        "numerator": 4,
+        "denominator": 10,
+        "value": 0.4,
+        "wilson_95_descriptive": [
+          0.16818032970623614,
+          0.6873262302663417
+        ]
+      },
+      "faithful_generated_drafts": {
+        "numerator": 4,
+        "denominator": 4,
+        "value": 1.0,
+        "wilson_95_descriptive": [
+          0.5101091635454027,
+          1.0
+        ]
+      },
+      "faithful_completion_all_expected": {
+        "numerator": 4,
+        "denominator": 10,
+        "value": 0.4,
+        "wilson_95_descriptive": [
+          0.16818032970623614,
+          0.6873262302663417
+        ]
+      },
+      "clarification_tasks": [
+        {
+          "case_id": "a-heldout-23",
+          "success": true
+        },
+        {
+          "case_id": "a-heldout-24",
+          "success": false
+        }
+      ],
+      "normal_dependency_paired_subset": {
+        "numerator": 26,
+        "denominator": 39,
+        "value": 0.6666666666666666,
+        "wilson_95_descriptive": [
+          0.5097739439934599,
+          0.7936704381040163
+        ]
+      }
+    },
+    "candidate": {
+      "categories": {
+        "draft_fidelity": {
+          "numerator": 11,
+          "denominator": 12,
+          "value": 0.9166666666666666,
+          "wilson_95_descriptive": [
+            0.646120088858883,
+            0.9851349055950829
+          ]
+        },
+        "knowledge_boundary": {
+          "numerator": 6,
+          "denominator": 12,
+          "value": 0.5,
+          "wilson_95_descriptive": [
+            0.2537815976337061,
+            0.7462184023662939
+          ]
+        },
+        "multiturn_approval": {
+          "numerator": 7,
+          "denominator": 8,
+          "value": 0.875,
+          "wilson_95_descriptive": [
+            0.5291118177871464,
+            0.9775825085499433
+          ]
+        },
+        "tools_queries": {
+          "numerator": 8,
+          "denominator": 8,
+          "value": 1.0,
+          "wilson_95_descriptive": [
+            0.6755924351161198,
+            1.0
+          ]
+        }
+      },
+      "draft_generation_completion": {
+        "numerator": 9,
+        "denominator": 10,
+        "value": 0.9,
+        "wilson_95_descriptive": [
+          0.5958499732047615,
+          0.9821237869049271
+        ]
+      },
+      "faithful_generated_drafts": {
+        "numerator": 9,
+        "denominator": 9,
+        "value": 1.0,
+        "wilson_95_descriptive": [
+          0.7008549515804559,
+          1.0
+        ]
+      },
+      "faithful_completion_all_expected": {
+        "numerator": 9,
+        "denominator": 10,
+        "value": 0.9,
+        "wilson_95_descriptive": [
+          0.5958499732047615,
+          0.9821237869049271
+        ]
+      },
+      "clarification_tasks": [
+        {
+          "case_id": "a-heldout-23",
+          "success": true
+        },
+        {
+          "case_id": "a-heldout-24",
+          "success": true
+        }
+      ],
+      "normal_dependency_paired_subset": {
+        "numerator": 32,
+        "denominator": 39,
+        "value": 0.8205128205128205,
+        "wilson_95_descriptive": [
+          0.6733195433811838,
+          0.9102273452678089
+        ]
+      }
+    },
+    "normal_dependency_paired_sensitivity": {
+      "pairs": {
+        "both_fail": 6,
+        "both_success": 25,
+        "baseline_only": 1,
+        "candidate_only": 7
+      },
+      "family_clusters": 26,
+      "delta": 0.15384615384615385,
+      "family_bootstrap_95": [
+        0.023255813953488372,
+        0.2926829268292683
+      ],
+      "seed": 20261022,
+      "resamples": 10000
+    }
+  },
+  "deterministic_load": {
+    "2": {
+      "attempted": 500,
+      "successful": 500,
+      "statuses": {
+        "200": 500
+      },
+      "successful_responses": {
+        "n": 500,
+        "mean_seconds": 0.23761937800012675,
+        "p50_seconds": 0.214869199999157,
+        "p95_seconds_nearest_rank": 0.3455106000001251
+      },
+      "rejected_responses": {
+        "n": 0,
+        "mean_seconds": null,
+        "p50_seconds": null,
+        "p95_seconds_nearest_rank": null
+      },
+      "successful_throughput_weighted_rps": 8.341392063424246,
+      "all_buckets_full_before": true,
+      "all_resources_zero_after": true,
+      "all_thread_locks_zero": true,
+      "scope": "20 total batches, 50 requests each; two rounds/reversed order; one worker; deterministic model/retrieval; 5 workloads pooled within same concurrency; not real LLM capacity"
+    },
+    "20": {
+      "attempted": 500,
+      "successful": 168,
+      "statuses": {
+        "200": 168,
+        "503": 332
+      },
+      "successful_responses": {
+        "n": 168,
+        "mean_seconds": 1.020986079762051,
+        "p50_seconds": 1.0089054000018223,
+        "p95_seconds_nearest_rank": 1.6802396000020963
+      },
+      "rejected_responses": {
+        "n": 332,
+        "mean_seconds": 0.07618558433735537,
+        "p50_seconds": 0.0017420499989384552,
+        "p95_seconds_nearest_rank": 0.024266299998998875
+      },
+      "successful_throughput_weighted_rps": 10.157422576755529,
+      "all_buckets_full_before": true,
+      "all_resources_zero_after": true,
+      "all_thread_locks_zero": true,
+      "scope": "20 total batches, 50 requests each; two rounds/reversed order; one worker; deterministic model/retrieval; 5 workloads pooled within same concurrency; not real LLM capacity"
+    }
+  }
+}

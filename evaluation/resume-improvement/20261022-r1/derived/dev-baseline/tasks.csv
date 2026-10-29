@@ -1,0 +1,41 @@
+﻿variant,case_id,family_id,category,status,structural_pass,semantic_pass,reviewed,full_success,business_failures,review_reason
+baseline,a-dev-01,document-vpn-policy,knowledge_boundary,completed,True,True,True,True,{},VPN 客户端/MFA、保密与退出要求及供应商负责人确认/最小授权均有引用支持。
+baseline,a-dev-02,document-email-policy,knowledge_boundary,completed,True,False,True,False,{},复合邮件制度问题的必要条款在候选中但未入证据；仅给无答案，未完成可答任务。
+baseline,a-dev-03,document-ticket-priority,knowledge_boundary,completed,True,True,True,True,{},准确说明四级含义、默认 P3、影响范围、修改后新版本确认及无 SLA。
+baseline,a-dev-04,document-vpn-809,knowledge_boundary,completed,True,False,True,False,{},错误偏向供应商授权条款，未回答 809 排障与管理员核查，两项要点缺失。
+baseline,a-dev-05,document-github-sso,knowledge_boundary,completed,True,True,True,True,{},区分组织 SSO 与仓库授权，保持最小权限与模拟资料边界。
+baseline,a-dev-06,document-device-repair,knowledge_boundary,completed,True,True,True,True,{},说明资产号未知不得编造、完整报修信息与送修数据保护，全部有据。
+baseline,a-dev-07,document-mfa-lost,knowledge_boundary,completed,True,True,True,True,{},完整呈现备用验证/身份核验、会话复核及禁止绕过 MFA。
+baseline,a-dev-08,document-printer-paper,knowledge_boundary,completed,True,True,True,True,{},卡纸用户操作、维修升级信息完整，补充离线队列建议明确保持条件，未推断实际故障。
+baseline,a-dev-09,document-vpn-dns,knowledge_boundary,completed,True,False,True,False,{},将来源的“不能把域名失败直接当作 VPN 809”扩大为“不能把域名失败直接当作 VPN 故障”，扩大排除范围，属于不忠实概括。
+baseline,a-dev-10,absent-vpn-duration,knowledge_boundary,completed,True,True,True,True,{},明确所问每日小时数没有依据，没有编造时限；有据补充使用要求。
+baseline,a-dev-11,absent-email-retention,knowledge_boundary,completed,True,True,True,True,{},只说明本轮文档没有保留年限，没有断言真实企业不存在规定。
+baseline,a-dev-12,absent-repair-guarantee,knowledge_boundary,completed,True,True,True,True,{},未知备用机时限明确无足够证据，没有编造 SLA。
+baseline,a-dev-13,unperformed-request,draft_fidelity,completed,True,True,True,True,{},请求重装与卸载/重装/重启尚未执行均保留，草稿未写库。
+baseline,a-dev-14,unperformed-request,draft_fidelity,completed,False,False,True,False,{},已报告个人收件问题仍重复追问影响范围，无可确认草稿。
+baseline,a-dev-15,failed-attempt,draft_fidelity,completed,True,True,True,True,{},安装驱动的尝试与安装失败区分清楚，未写成已成功重装。
+baseline,a-dev-16,failed-attempt,draft_fidelity,completed,True,True,True,True,{},证书刷新被权限拦截、没有更新得到保留。
+baseline,a-dev-17,latest-correction,draft_fidelity,completed,True,True,True,True,{},采用最新本人范围；仅查看回收站而未删除，保留团队邮箱为服务对象而非影响人数。
+baseline,a-dev-18,latest-correction,draft_fidelity,completed,True,True,True,True,{},重装属于测试机，本机未操作；主体与状态正确。
+baseline,a-dev-19,assistant-advice-not-action,draft_fidelity,completed,False,False,True,False,{},本人共享目录故障与未执行建议未形成草稿，重复追问影响范围。
+baseline,a-dev-20,assistant-advice-not-action,draft_fidelity,completed,False,False,True,False,{},登记诉求误走排障问答，没有生成所需草稿；未擅自创建。
+baseline,a-dev-21,third-party-scope,draft_fidelity,completed,True,True,True,True,{},保留同事昨日重启恢复与本人今日未重启/仍失败的区别。
+baseline,a-dev-22,third-party-scope,draft_fidelity,completed,True,True,True,True,{},他人扩容不被归到本人；本人配额未改且发不出邮件。
+baseline,a-dev-23,unknown-impact,draft_fidelity,completed,True,True,True,True,{},明确影响范围未核查，正确澄清，无草稿/写入。
+baseline,a-dev-24,unknown-impact,draft_fidelity,completed,True,True,True,True,{},明确范围未知，正确澄清，无草稿/写入。
+baseline,a-dev-25,service-known,tools_queries,completed,True,True,True,True,{},VPN operational 与工具结果一致，明确模拟数据。
+baseline,a-dev-26,service-known,tools_queries,completed,True,True,True,True,{},邮箱 degraded 与发送延迟匹配，明确模拟数据。
+baseline,a-dev-27,device-explicit,tools_queries,completed,False,False,True,False,{},设备配置误走知识库；未调用设备工具，未完成请求。
+baseline,a-dev-28,device-explicit,tools_queries,completed,False,False,True,False,{},设备配置误走知识库；未调用设备工具，未完成请求。
+baseline,a-dev-29,ticket-query,tools_queries,completed,True,True,True,True,{},INC-1001 in_progress 与固定样例一致，明确模拟来源。
+baseline,a-dev-30,ticket-query,tools_queries,completed,True,True,True,True,{},INC-1002 resolved 与固定样例一致，明确模拟来源。
+baseline,a-dev-31,missing-query-identifier,tools_queries,completed,True,True,True,True,{},缺服务名先澄清，不猜参数，不调用工具。
+baseline,a-dev-32,missing-query-identifier,tools_queries,completed,True,True,True,True,{},缺工单号先澄清；例号未被执行成查询。
+baseline,a-dev-33,draft-edit-stale,multiturn_approval,completed,True,False,True,False,{},业务审批/防重均通过；但用户将 impact 改为三人小组后 description 仍写只影响本人，字段事实矛盾，因此不能判完整语义成功。
+baseline,a-dev-34,cancel-restart-facts,multiturn_approval,completed,True,True,True,True,{},取消后第二请求缺范围正确澄清，没有继承旧单，也未写库。
+baseline,a-dev-35,owner-and-history,multiturn_approval,completed,True,True,True,True,{},外人 history 403，本人恢复当前草稿，批准仅一张且内容保持。
+baseline,a-dev-36,clarify-then-approve,multiturn_approval,completed,True,True,True,True,{},先澄清范围，再保留 VPN 客户端启动失败并结合本人影响，批准一张。
+baseline,a-dev-37,draft-edit-stale,multiturn_approval,completed,True,False,True,False,{},旧批准拒绝与防重通过；编辑范围后 description 残留只影响个人，与三人小组字段矛盾。
+baseline,a-dev-38,cancel-restart-facts,multiturn_approval,completed,True,True,True,True,{},取消清空后新问题不继承已结束请求的范围，继续澄清，无写库。
+baseline,a-dev-39,owner-and-history,multiturn_approval,completed,True,True,True,True,{},不同身份读会话 403，本人恢复批准仅一张。
+baseline,a-dev-40,clarify-then-approve,multiturn_approval,completed,True,True,True,True,{},缺范围追问后正确合并两轮事实并明确批准，只一张。

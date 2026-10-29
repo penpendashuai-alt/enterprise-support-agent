@@ -1,0 +1,70 @@
+{
+  "run_id": "0e966965c57e4a26ba64cde261886673",
+  "case_id": "pilot-clarify",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T08:02:30.879927+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请为我创建打印故障工单，打印程序无法启动，影响范围未知。",
+      "http_status": 200,
+      "seconds": 4.161669400000392,
+      "request_id": "8edf8dc53f8f44f4b4137b94f6080618",
+      "server_timing": "rate_check;dur=0.943, thread_wait;dur=0.009, execution_wait;dur=0.008, business_database;dur=13.012, ownership;dur=14.270, ownership_preflight;dur=3.022, model_wait;dur=0.027, router;dur=2630.343, draft;dur=1489.348",
+      "response": {
+        "type": "ai",
+        "content": "请补充影响范围。工单尚未提交；信息齐全后会展示草稿供你确认。未指定优先级时使用演示默认值 P3。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162a2-1167-7f33-803b-13f7ff982754",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "打印程序无法启动，影响范围未知",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "approval_status": "collecting"
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-0e966965-pilot-clarify-alice",
+    "bob": "p8-0e966965-pilot-clarify-bob"
+  },
+  "threads": {
+    "primary": "1937451976b74cefbf247dd01cccb91e",
+    "secondary": "3f204b8b7cb94f14941851d1297c6359"
+  },
+  "seconds": 4.323162000000593,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "1f85cbb248b148c99475b00f6d6d9cd7",
+    "ca218a0234a14eed9e832dbe3897bcee"
+  ]
+}

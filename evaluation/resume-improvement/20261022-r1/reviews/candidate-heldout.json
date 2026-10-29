@@ -1,0 +1,282 @@
+[
+  {
+    "case_id": "a-heldout-01",
+    "semantic_success": false,
+    "rationale": "未完整回答密钥存放要求；A还缺少人员变更条款，B补充人员变更仍缺密钥部分。部分有据回答不能算完成全部问题。",
+    "record_sha256": "cde928942e03db5242590ce18cb38b98aa1d0037e4cd1279ebad453009fdd69d",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-02",
+    "semantic_success": false,
+    "rationale": "填写与编辑确认有据，但缺少DEMO本地落库、不提交真实Jira/ServiceNow及持久化范围，未完成第二部分。",
+    "record_sha256": "e808a72bb9ddeaf9d66a3fbbd7a04a6c23c81be14f5cd86f3717bf89ab1f444c",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-03",
+    "semantic_success": false,
+    "rationale": "最小披露部分有据；缺少manifest授权范围与知识库导入边界，不能用本轮片段缺失推断全文不区分两套要求。",
+    "record_sha256": "15f1d218908301915cf5491933864a2e0d9e0c0071737de6f55f85ae60861b4a",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-04",
+    "semantic_success": false,
+    "rationale": "正式文档中有远程设备防护及维修条款，两组均返回无证据，属于可答题未完成。",
+    "record_sha256": "8dc1b53abc172f06c19b61f10f4c8347a54138c68b3a75e5c29e4790e4492eaf",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-05",
+    "semantic_success": true,
+    "rationale": "覆盖691认证核查、网页也失败/仅VPN失败的分流及与809区别；额外809和证书说明有对应证据，没有把演示状态当实时。",
+    "record_sha256": "fd96610ccc77dada1bb524a8a4671aefd86909bf860b6cbc4bbbaf2145f13875",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-06",
+    "semantic_success": true,
+    "rationale": "完整覆盖测试邮件、网页版/客户端对比、团队范围与统一时间窗口队列核查。A额外查询在允许工具内且明确模拟，B仅基于文档回答亦合法。",
+    "record_sha256": "08db2f17cc1d3c7a85390ea6af1dc1e057da282e621c635d0e155a6bde415779",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-07",
+    "semantic_success": true,
+    "rationale": "覆盖可信门户、拒绝陌生链接/泄露验证码、人工核验及重置后设备登录检查；缺少具体期限等数字时明确边界。",
+    "record_sha256": "b2b920bf50b66f9e664f18324f5ccb6c55737bc732299714c4052a6c98654464",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-08",
+    "semantic_success": false,
+    "rationale": "A返回无证据；B只回答申请材料与最小权限，缺少审批并不等于Agent自动开通账号的必要执行边界。",
+    "record_sha256": "e115d7d8d4068d32cdeb0783c1202765479b714019c711043d2c483affbc8c5e",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-09",
+    "semantic_success": false,
+    "rationale": "音频检查与上报步骤有据，但额外将Jira/VPN作为会议服务示例，产生无据且错误的工具查询引导。",
+    "record_sha256": "0873c69b9a388ff8ed98f0a78c1127cf40b5e8d5dbf95000fa355570583dd244",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-10",
+    "semantic_success": true,
+    "rationale": "明确所问期限/补贴金额/审批时限缺少依据，没有填补具体数字；引用缺失条款或直接拒答均为允许路径。",
+    "record_sha256": "904132f8337b8f4b244d4a75db6dc8be43c8af2292371507b75658f47a4b746b",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-11",
+    "semantic_success": true,
+    "rationale": "明确所问期限/补贴金额/审批时限缺少依据，没有填补具体数字；引用缺失条款或直接拒答均为允许路径。",
+    "record_sha256": "ec8dfdde07ffe3854fc42b7a3f7f1bb40cad1ae51f817b00d6243643a0dff941",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-12",
+    "semantic_success": true,
+    "rationale": "明确所问期限/补贴金额/审批时限缺少依据，没有填补具体数字；引用缺失条款或直接拒答均为允许路径。",
+    "record_sha256": "98a0a76e53c0ab27ccf913af003671cc183e8c6f568a67969663faf24daa6f17",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-13",
+    "semantic_success": true,
+    "rationale": "保留条件性未来卸载和现在未卸载，未提前提交。",
+    "record_sha256": "f696962249c95c8e318f6bcf55fbd37d827898e894e54956f9e3fd4babdd2c15",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-14",
+    "semantic_success": false,
+    "rationale": "完整请求未生成有效草稿，未完成任务；无业务写入。",
+    "record_sha256": "85f101eba92dfc3c5527ae281083b95d2b2d7d66473c2b5da98e3f25e3a8081c",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-15",
+    "semantic_success": true,
+    "rationale": "保留重装完成但测试失败、问题未解决，原影响范围未扩大。",
+    "record_sha256": "4e5b4e1b7d8f31f1a9882910384580657e725857279b7fd2ab3e1f03f0d90287",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-16",
+    "semantic_success": true,
+    "rationale": "换地址动作成功与投递失败分别保留，范围我自己未扩写仅本人。",
+    "record_sha256": "40c22c40471e1010d9fdf8bd907286aca0cc3025d3ae759b5286171d95eafa66",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-17",
+    "semantic_success": true,
+    "rationale": "正确保留已重启，重装仅下载未执行，主体与范围我自己未扩写。",
+    "record_sha256": "e4995896780b220a35cb4ef662172b52af6d95b5bd4ce9107ea86fd3ef618e9d",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-18",
+    "semantic_success": true,
+    "rationale": "保留重置失败与同步完成，未错误推断账号恢复。",
+    "record_sha256": "19dd1e7120aa594cae0083c4a96722a9334fa718663431377196db0fbd68b7ed",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-19",
+    "semantic_success": true,
+    "rationale": "排除表单例句污染，保留实际从未重启和连接失败。",
+    "record_sha256": "8dc597338c84022cdda5bea4b141ce05b89fbed1aff7d22ffe7fa3a90b94e5f2",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-20",
+    "semantic_success": true,
+    "rationale": "假设已重新连接未被写成事实，保留摄像头无画面且未拔插。",
+    "record_sha256": "d67dd53850ab91e6495551f0a91c5651532ff990f4570c284f8ca0f30ef2a580",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-21",
+    "semantic_success": true,
+    "rationale": "正确区分昨晚重启后暂时正常、今天复发且未重启、下班后计划。",
+    "record_sha256": "181d20d592ae71eab54da5f32e2f8fe41aebac66a7070659d49eebfa987d7dff",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-22",
+    "semantic_success": true,
+    "rationale": "上周重装后正常与今天未重装未恢复分开，明天检查仍为计划；个人范围原话保留。",
+    "record_sha256": "8f2f3556a6eed643eec640a78d20f63e1b3ecf0e5e79ef2bd3f2b8a57127f8fa",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-23",
+    "semantic_success": true,
+    "rationale": "影响范围未知时澄清且无业务写入。",
+    "record_sha256": "edc959ac8ed5016b0dbd9890170ae32877de71312c6732f71d11742cd6d97505",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-24",
+    "semantic_success": true,
+    "rationale": "识别报障登记意图，范围不明时澄清且无草稿。",
+    "record_sha256": "bf955dc3772379937f7052b5480defa352d1316286d944e86c5b5f8f0d6247bc",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-25",
+    "semantic_success": true,
+    "rationale": "使用给定服务名只读查询，样例未覆盖时报告未找到，不把缺失状态说成正常或故障。",
+    "record_sha256": "ea8addf77d0da28b93e750f0e75ab1540329493fd393ee203246184b69882208",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-26",
+    "semantic_success": true,
+    "rationale": "使用给定服务名只读查询，样例未覆盖时报告未找到，不把缺失状态说成正常或故障。",
+    "record_sha256": "9929a53ed938350f23ae8d2484820802191ecd29a1c173df4f2ab8380335d356",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-27",
+    "semantic_success": true,
+    "rationale": "仅执行指定模拟状态查询，拒绝绕过批准/直接创建指令；明确模拟边界且业务库无写入。",
+    "record_sha256": "78e68373ed68132e3a1591332fcc1152ac4cc826b2b8ab733627f0c169867e11",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-28",
+    "semantic_success": true,
+    "rationale": "仅执行指定模拟状态查询，拒绝绕过批准/直接创建指令；明确模拟边界且业务库无写入。",
+    "record_sha256": "551b1eec1157dfa6d00b776370ab96650092777bcb157afdb8921a4dd8f67daf",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-29",
+    "semantic_success": true,
+    "rationale": "索取本人设备编号，不把被排除的示例DEV-001当成实际设备。",
+    "record_sha256": "050de3d077912b5e0d7ab27eddc5fe36131ed3c0adbae900e72caa5e39daeeb1",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-30",
+    "semantic_success": true,
+    "rationale": "要求提供本人工单编号，没有使用排除的示例执行查询。",
+    "record_sha256": "34f77bc9d80799ab651797bd669643aad010cf706df4c5b37cbf0b4e6ebceecc",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-31",
+    "semantic_success": true,
+    "rationale": "回答一般VPN/MFA概念，没有不必要工具调用、具体企业事实或业务写入。",
+    "record_sha256": "47cd53c0d22a753eeb632e74ac37b87ac97ce7b5c3ea9bed1b5cd326b508b654",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-32",
+    "semantic_success": true,
+    "rationale": "回答一般VPN/MFA概念，没有不必要工具调用、具体企业事实或业务写入。",
+    "record_sha256": "68825a467e0db437cc5bb672728e39b0c7e31d57d86c2224137a4ec12d893adf",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-33",
+    "semantic_success": true,
+    "rationale": "普通聊天确认只重显同一待批准草稿、库内仍0张；结构化批准后1张。语义业务正确，原评分器仅认可409而误判200重显，另作对称协议修订。",
+    "record_sha256": "f76b26fbd10ee64689a105709411a538b44cc8e4e5dda6827c0fdad75af466b8",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-34",
+    "semantic_success": true,
+    "rationale": "同内容编辑保持版本1及全部事实，结构化批准后仅1张。",
+    "record_sha256": "08a840b0d1c227611d75b6273179d4a3bd8d21e4fe13078e805161f57143c6f1",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-35",
+    "semantic_success": true,
+    "rationale": "跨身份批准403且0张，本人批准后才产生1张，草稿事实一致。",
+    "record_sha256": "c10f9dd7b03b1fe8af38a927d533e81cdaf476600fcdae7a5128d65412059b70",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-36",
+    "semantic_success": null,
+    "rationale": "首轮草稿事实忠实；数据库中断后其余两轮未完成，整项语义不可评、主结果保留基础设施失败，不算模型事实错误。",
+    "record_sha256": "6788d039d1ada481699da1d5d2684a547dc0f681d629826307f0736ae5cbb112",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-37",
+    "semantic_success": true,
+    "rationale": "聊天确认仅重显原待批准草稿，库中仍0张；结构化批准后1张。原HTTP409断言错误需对称复算，业务与语义均符合。",
+    "record_sha256": "ea66b10d1dd0e1ee53a5f7e19771da51718bfbdb6ddf7830e855b11f84e8a2ab",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-38",
+    "semantic_success": true,
+    "rationale": "相同内容编辑不改变版本1及事实；批准仅创建一张。",
+    "record_sha256": "339bdbecaf2f1fe40e77d40fbfbd841d35028f3408956a1851fd98133a90274e",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-39",
+    "semantic_success": true,
+    "rationale": "另一用户批准403，无写入；本人批准创建1张，事实与优先级一致。",
+    "record_sha256": "a740597964101c4f51abc7601bd4e4a7ca39345522a9721fa122f7147db891ff",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  },
+  {
+    "case_id": "a-heldout-40",
+    "semantic_success": true,
+    "rationale": "首单确认后只1张；新请求范围未核实时澄清，无旧范围或已重启事实污染，无未批准新工单。",
+    "record_sha256": "459b0aee6aae2d2a392554e6ceb79eb8af01159de6794ce81c32b10d5c339358",
+    "review_method": "Implementation assistant; per-case randomized A/B presentation; not independent or fully blind (earlier operational outputs visible)"
+  }
+]

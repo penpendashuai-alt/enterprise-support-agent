@@ -1,0 +1,93 @@
+{
+  "scope": "Final real-model browser + scoped API/SQL, not aggregate model quality",
+  "local_date": "2026-10-24",
+  "assertions": {
+    "approved-v2-db.json": {
+      "checks": {
+        "ticket_count": true
+      },
+      "sha256": "0dcba691ea32602b2a55e2ded736d1b56ab1e6da66a5a822246e6d10f0b39a30"
+    },
+    "draft-v1-db.json": {
+      "checks": {
+        "ticket_count": true,
+        "pending_version": true
+      },
+      "sha256": "d6399ea9969e0ba45a16f4a2e384d0f2228ec175f3ea8da3db1941006d711d27"
+    },
+    "draft-v2-db.json": {
+      "checks": {
+        "ticket_count": true,
+        "pending_version": true
+      },
+      "sha256": "455dd0b236cd88431251f2f3b62909fa38e6315a3fb07940f37dca671c6a6342"
+    },
+    "missing-impact-db.json": {
+      "checks": {
+        "ticket_count": true
+      },
+      "sha256": "c9d621222c7a4d64bde918043e1a78a97e9968f23aa1cd7467dc773bd29dc26b"
+    },
+    "mock-device-db.json": {
+      "checks": {
+        "ticket_count": true
+      },
+      "sha256": "9dc00884748d98fcec8db41598f80afc343cdb0d68cf2f0b6326987a2a9d12f8"
+    },
+    "no-answer-db.json": {
+      "checks": {
+        "ticket_count": true
+      },
+      "sha256": "b29b888f4253bb5b231444c49c5c03e7de7256701a5e5eb333242086557f2a69"
+    },
+    "overnight-pending-db.json": {
+      "checks": {
+        "ticket_count": true,
+        "pending_version": true
+      },
+      "sha256": "80bfb5bf1b0d6d60ab27b6be555e098811a9fd60bccaca14d583544d358ed22a"
+    },
+    "repeated-v2-db.json": {
+      "checks": {
+        "ticket_count": true,
+        "same_persisted_ticket": true
+      },
+      "sha256": "d7a22ea09dee9668b0de6ed8900a57d72fd98599a57a9ec364acf4ab00ac5734"
+    },
+    "restarted-pending-db.json": {
+      "checks": {
+        "ticket_count": true,
+        "pending_version": true
+      },
+      "sha256": "2b0216ff23bd3b09ac80d86a598067c19198620d89a94c8f95742ea8fdc5c96d"
+    },
+    "stale-v1-db.json": {
+      "checks": {
+        "ticket_count": true,
+        "pending_version": true,
+        "stale_rejected": true
+      },
+      "sha256": "f6399497869867925c6d595b73b8541eb73edc43027ac238870122f788fb8266"
+    },
+    "unavailable-db.json": {
+      "checks": {
+        "ticket_count": true
+      },
+      "sha256": "e1dff86169050b3c1e206ca55cc59b1002fd59badc682c505388f10fcc0e8c01"
+    }
+  },
+  "ticket_id": "DEMO-4E30F3F36E8E4ADB81D11B139A9187B9",
+  "browser_visual_checks": {
+    "pending_recovered": "pending-recovered.png",
+    "completed_recovered": "ticket-completed-recovered.png",
+    "formal_citations": "knowledge-recovered.png",
+    "no_answer": "no-answer.png",
+    "unavailable": "retrieval-unavailable.png",
+    "mock_device": "mock-device.png"
+  },
+  "limits": [
+    "MFA answer contains an unsupported extra rationale",
+    "Mock read-only business tools",
+    "Non-independent assistant review; see demo/README.md"
+  ]
+}

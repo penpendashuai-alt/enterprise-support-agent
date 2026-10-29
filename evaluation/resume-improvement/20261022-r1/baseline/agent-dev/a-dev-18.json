@@ -1,0 +1,96 @@
+{
+  "run_id": "661e1588388341f39110300686cf0e61",
+  "case_id": "a-dev-18",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T08:05:05.868126+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请新建工单：VPN 断连，我刚说客户端已重装。纠正一下，重装的是测试机，本机还没动，只影响我的本机。",
+      "http_status": 200,
+      "seconds": 5.162870799999837,
+      "request_id": "1be4032fed074c7781a952d31cf9ae0b",
+      "server_timing": "rate_check;dur=1.101, thread_wait;dur=0.008, execution_wait;dur=0.007, business_database;dur=13.668, ownership;dur=15.255, ownership_preflight;dur=2.431, model_wait;dur=0.022, router;dur=2407.549, draft;dur=2703.001",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：VPN 断连\n描述：VPN 出现断连现象。用户已重装测试机上的客户端；本机尚未重装，未做任何操作。希望处理 VPN 断连问题。\n服务：VPN\n影响范围：仅影响用户本机\n优先级：P3（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162a4-6ed4-7450-816c-5b6f6797efc3",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-2d264ea1e0d14404ae866c654897c6d5",
+          "draft_version": 1,
+          "draft": {
+            "title": "VPN 断连",
+            "description": "VPN 出现断连现象。用户已重装测试机上的客户端；本机尚未重装，未做任何操作。希望处理 VPN 断连问题。",
+            "service_name": "VPN",
+            "impact": "仅影响用户本机",
+            "priority": "P3"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "VPN",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "VPN 断连，本机客户端尚未重装，仅影响本机",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "VPN 断连",
+          "description": "VPN 出现断连现象。用户已重装测试机上的客户端；本机尚未重装，未做任何操作。希望处理 VPN 断连问题。",
+          "service_name": "VPN",
+          "impact": "仅影响用户本机",
+          "priority": "P3"
+        },
+        "draft_id": "draft-2d264ea1e0d14404ae866c654897c6d5",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-661e1588-a-dev-18-alice",
+    "bob": "p8-661e1588-a-dev-18-bob"
+  },
+  "threads": {
+    "primary": "b9acf3a12ef1458dbdf9155b974241d5",
+    "secondary": "0dbadc1847164b4cbbabb823611d513b"
+  },
+  "seconds": 5.328253300000142,
+  "final_ticket_count": 0,
+  "final_draft_version": 1,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "48d6e2fc09d34122adb3ab1ad5185a77",
+    "05592419a52c40c5b769d4825ae47300"
+  ]
+}

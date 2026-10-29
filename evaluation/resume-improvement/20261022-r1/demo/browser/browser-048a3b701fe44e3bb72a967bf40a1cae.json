@@ -1,0 +1,15 @@
+{
+  "case_id": "browser-048a3b701fe44e3bb72a967bf40a1cae",
+  "run_id": "9a41717add7341b88bb3f2711a7c26aa",
+  "path": "/support-agent/approval",
+  "query": "thread_id=01c1dd2a-45d9-4585-864c-41ebc966a3ef&user_id=b5d0cbfd-f715-4da5-a1e2-52bb8629dc60",
+  "method": "GET",
+  "status": 404,
+  "request_body": "",
+  "response_body": "{\"detail\":\"Support session not found\"}",
+  "response_headers": {
+    "x-request-id": "1402fa35f6bf477c90105b3280264fa4",
+    "content-type": "application/json"
+  },
+  "at": "2026-10-23T11:25:06.933718+00:00"
+}

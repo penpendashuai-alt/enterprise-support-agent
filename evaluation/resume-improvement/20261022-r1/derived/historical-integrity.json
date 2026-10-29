@@ -1,0 +1,28 @@
+{
+  "files": 1052,
+  "unchanged_bytes": 1032,
+  "newline_only": [
+    "evaluation/datasets/generation_v1.json",
+    "evaluation/phase10/README.md",
+    "evaluation/phase6/answer-review.md",
+    "evaluation/phase7/README.md",
+    "evaluation/phase8/README.md",
+    "evaluation/phase8/rubric.md",
+    "evaluation/results/phase4/answer-review.md",
+    "evaluation/results/phase5/agent-answer-review.md",
+    "evaluation/phase9/closeout/github-run-37436624165/ci-37436624165/checks.json",
+    "evaluation/phase9/closeout/github-run-37436624165/ci-37436624165/request-summaries.json",
+    "evaluation/phase9/closeout/github-run-37436624165/closeout/business-tracing-ci-37436624165/checks.json",
+    "evaluation/phase9/closeout/github-run-37436624165/closeout/business-tracing-ci-37436624165/request-summaries.json",
+    "evaluation/phase9/closeout/github-run-37436624165/closeout/business-tracing-ci-37436624165/trace-evidence.json",
+    "evaluation/phase9/closeout/github-run-37436624165/closeout/redis-memory-ci-37436624165/checks.json",
+    "evaluation/phase9/closeout/github-run-37436624165/closeout/redis-memory-ci-37436624165/request-summaries.json",
+    "benchmarks/agent_tasks.csv",
+    "benchmarks/latency.csv",
+    "benchmarks/results.md",
+    "benchmarks/retrieval.csv",
+    "benchmarks/sources.json"
+  ],
+  "failures": [],
+  "passed": true
+}

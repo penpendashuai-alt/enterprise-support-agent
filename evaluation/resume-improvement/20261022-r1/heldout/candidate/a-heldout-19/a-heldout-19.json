@@ -1,0 +1,99 @@
+{
+  "run_id": "c35e94dd51d04df986a0ab10b8279ff1",
+  "case_id": "a-heldout-19",
+  "attempt": 1,
+  "variant": "candidate",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T12:07:22.196500+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请创建工单：只影响我，远程桌面连接失败。表单例句是『重启后仍失败』，但我的实际情况是从没重启，不能照抄例句。",
+      "http_status": 200,
+      "seconds": 4.1538423000019975,
+      "http_response_seconds": 4.150048499999684,
+      "request_id": "a1d0ba49250049bfbbc1aaeafc810dda",
+      "server_timing": "rate_check;dur=3.132, thread_wait;dur=0.017, execution_wait;dur=0.011, business_database;dur=21.329, ownership;dur=23.166, ownership_preflight;dur=7.557, model_wait;dur=0.031, router;dur=2073.888, draft;dur=1991.629",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：远程桌面连接失败\n描述：远程桌面连接失败。未执行过重启操作。\n服务：远程桌面\n影响范围：只影响我\n优先级：P3（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16382-3d75-7fc2-89b1-470c88928e4e",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-994dacb905614ddfa4a8a0689e1f0306",
+          "draft_version": 1,
+          "draft": {
+            "title": "远程桌面连接失败",
+            "description": "远程桌面连接失败。未执行过重启操作。",
+            "service_name": "远程桌面",
+            "impact": "只影响我",
+            "priority": "P3"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "只影响我，远程桌面连接失败，从未重启过",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "远程桌面连接失败",
+          "description": "远程桌面连接失败。未执行过重启操作。",
+          "service_name": "远程桌面",
+          "impact": "只影响我",
+          "priority": "P3"
+        },
+        "draft_id": "draft-994dacb905614ddfa4a8a0689e1f0306",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-c35e94dd-a-heldout-19-alice",
+    "bob": "p8-c35e94dd-a-heldout-19-bob"
+  },
+  "threads": {
+    "primary": "3a626bfe2d044b74a370cf3c31dd4f51",
+    "secondary": "acbb1c74db4f42d48bb549ef161ff3e8"
+  },
+  "measurement": true,
+  "cache_condition": "disabled",
+  "seconds": 4.319844699999521,
+  "final_ticket_count": 0,
+  "final_draft_version": 1,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "73931496f1ff4e44a03037f4b7ef20af",
+    "6d84826739104e11b379692d96667986"
+  ]
+}

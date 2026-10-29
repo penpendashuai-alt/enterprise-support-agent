@@ -1,0 +1,16 @@
+{
+  "case_id": "browser-cd598bee4adb46c3a8cebf1281b1c011",
+  "run_id": "9a41717add7341b88bb3f2711a7c26aa",
+  "path": "/support-agent/threads",
+  "query": "user_id=b5d0cbfd-f715-4da5-a1e2-52bb8629dc60&limit=20",
+  "method": "GET",
+  "status": 200,
+  "request_body": "",
+  "response_body": "{\"threads\":[{\"thread_id\":\"6d51db45-c41d-4612-afce-3ec48de74d12\",\"agent_id\":\"support-agent\",\"updated_at\":\"2026-10-23T11:19:13.072917Z\",\"title\":\"按照演示知识库，认证手机遗失且无法收到验证码，应该如何恢复验证？\"}]}",
+  "response_headers": {
+    "content-type": "application/json",
+    "x-request-id": "3cc30c83361e45d99368036e1a72d64e",
+    "server-timing": "rate_check;dur=1.423, execution_wait;dur=0.019, business_database;dur=4.019"
+  },
+  "at": "2026-10-23T11:19:21.404011+00:00"
+}

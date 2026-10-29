@@ -1,0 +1,99 @@
+{
+  "run_id": "b989792e3d4f4dc7913457d599a36055",
+  "case_id": "a-heldout-15",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T12:04:13.934370+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "开工单：只影响我，VPN 登录失败。重装已经完成，但是连通性测试失败了，不能写成问题已解决。",
+      "http_status": 200,
+      "seconds": 4.067945700000564,
+      "http_response_seconds": 4.064269099999365,
+      "request_id": "59759889b38f41589f749eacb31155b4",
+      "server_timing": "rate_check;dur=2.907, thread_wait;dur=0.014, execution_wait;dur=0.012, business_database;dur=21.207, ownership;dur=23.091, ownership_preflight;dur=7.561, model_wait;dur=0.026, router;dur=2197.378, draft;dur=1782.633",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：VPN 登录失败\n描述：VPN 登录失败。用户已完成重装，但连通性测试失败，问题未解决。\n服务：VPN\n影响范围：只影响本人\n优先级：P3（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a1637f-5e0f-7832-bdf8-93224c9f88d3",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-8df475bed4da4fa18296a7d48e6c8979",
+          "draft_version": 1,
+          "draft": {
+            "title": "VPN 登录失败",
+            "description": "VPN 登录失败。用户已完成重装，但连通性测试失败，问题未解决。",
+            "service_name": "VPN",
+            "impact": "只影响本人",
+            "priority": "P3"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "VPN",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "VPN 登录失败，重装已完成但连通性测试失败，问题未解决",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "VPN 登录失败",
+          "description": "VPN 登录失败。用户已完成重装，但连通性测试失败，问题未解决。",
+          "service_name": "VPN",
+          "impact": "只影响本人",
+          "priority": "P3"
+        },
+        "draft_id": "draft-8df475bed4da4fa18296a7d48e6c8979",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-b989792e-a-heldout-15-alice",
+    "bob": "p8-b989792e-a-heldout-15-bob"
+  },
+  "threads": {
+    "primary": "25f8a3db58fb43598ac24c9979d8af8b",
+    "secondary": "130d2a0ec56d4cfaabf779b26d17194d"
+  },
+  "measurement": true,
+  "cache_condition": "disabled",
+  "seconds": 4.246650500001124,
+  "final_ticket_count": 0,
+  "final_draft_version": 1,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "35f9c89de3674805a4777bdb4d2fefce",
+    "e844c458c59f4571a7365ff1eb6c3060"
+  ]
+}

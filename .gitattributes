@@ -4,3 +4,9 @@ src/rag/embeddings.py text eol=crlf
 src/rag/loader.py text eol=crlf
 src/rag/retriever.py text eol=crlf
 src/rag/vector_store.py text eol=crlf
+# Preserve frozen campaign byte hashes when cloning on Windows or Linux.
+evaluation/resume-improvement/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+evaluation/resume-improvement/**/*.json linguist-generated=true
+evaluation/resume-improvement/**/*.csv linguist-generated=true
+src/agents/support_agent.py text eol=crlf
+src/agents/ticket_flow.py text eol=crlf

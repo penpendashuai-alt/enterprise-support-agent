@@ -1,0 +1,16 @@
+{
+  "case_id": "browser-bf000d9c0e6b4c06b6b461f8d780b25e",
+  "run_id": "9a41717add7341b88bb3f2711a7c26aa",
+  "path": "/support-agent/stream",
+  "query": "",
+  "method": "POST",
+  "status": 200,
+  "request_body": "{\"approval\":null,\"message\":\"请根据演示制度说明工单未指定优先级时的默认等级。\",\"model\":\"openai-compatible\",\"thread_id\":\"2a032f5c-4f40-4204-a794-dd1ad88d0ea2\",\"user_id\":\"b5d0cbfd-f715-4da5-a1e2-52bb8629dc60\",\"agent_config\":{},\"stream_tokens\":true}",
+  "response_body": "data: {\"type\": \"message\", \"content\": {\"type\": \"ai\", \"content\": \"\\u77e5\\u8bc6\\u5e93\\u68c0\\u7d22\\u6682\\u4e0d\\u53ef\\u7528\\uff0c\\u65e0\\u6cd5\\u636e\\u6b64\\u786e\\u8ba4\\u4f01\\u4e1a\\u5236\\u5ea6\\u6216\\u6587\\u6863\\u7ed3\\u8bba\\u3002\\u8bf7\\u7a0d\\u540e\\u91cd\\u8bd5\\uff1b\\u8fd9\\u4e0d\\u4ee3\\u8868\\u77e5\\u8bc6\\u5e93\\u6ca1\\u6709\\u76f8\\u5173\\u8d44\\u6599\\u3002\", \"tool_calls\": [], \"tool_call_id\": null, \"run_id\": \"01a1687f-a4a1-7fb3-9bd8-0fe47daacdbd\", \"response_metadata\": {}, \"custom_data\": {\"cache\": {\"status\": \"miss\"}, \"kind\": \"knowledge_answer\", \"retrieval_status\": \"unavailable\", \"query\": \"\\u5de5\\u5355\\u672a\\u6307\\u5b9a\\u4f18\\u5148\\u7ea7\\u65f6\\u7684\\u9ed8\\u8ba4\\u7b49\\u7ea7\", \"index_version\": null, \"collection\": null, \"citations\": [], \"candidates\": [], \"citation_check\": \"no_answer\", \"error_code\": \"qdrant_unavailable\", \"timings\": {\"retrieval_seconds\": 10.455633499994292}, \"usage\": {}, \"requested_mode\": \"dense\", \"actual_mode\": \"dense\", \"snapshot_id\": null, \"backend_versions\": {}, \"failures\": []}}}\n\ndata: [DONE]\n\n",
+  "response_headers": {
+    "content-type": "text/event-stream; charset=utf-8",
+    "x-request-id": "4acac115c89147adbedc7e817f7f76a1",
+    "server-timing": "rate_check;dur=1.451, thread_wait;dur=0.014, execution_wait;dur=0.008, business_database;dur=3.438, ownership;dur=3.463, ownership_preflight;dur=3.468"
+  },
+  "at": "2026-10-23T11:22:50.725054+00:00"
+}

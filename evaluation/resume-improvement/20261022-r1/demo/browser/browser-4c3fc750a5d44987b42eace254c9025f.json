@@ -1,0 +1,16 @@
+{
+  "case_id": "browser-4c3fc750a5d44987b42eace254c9025f",
+  "run_id": "9a41717add7341b88bb3f2711a7c26aa",
+  "path": "/support-agent/invoke",
+  "query": "",
+  "method": "POST",
+  "status": 409,
+  "request_body": "{\"thread_id\":\"01c1dd2a-45d9-4585-864c-41ebc966a3ef\",\"user_id\":\"b5d0cbfd-f715-4da5-a1e2-52bb8629dc60\",\"approval\":{\"draft_id\":\"draft-e8b93e1c4e0e4abaa3d38c1366f86ba4\",\"draft_version\":1,\"action\":\"approve\"}}",
+  "response_body": "{\"detail\":{\"code\":\"stale_version\",\"message\":\"草稿已修改，请刷新并确认最新版本。\"}}",
+  "response_headers": {
+    "content-type": "application/json",
+    "x-request-id": "d4634f96ebfb45139448552a6a606409",
+    "server-timing": "rate_check;dur=1.613, thread_wait;dur=0.011, execution_wait;dur=0.008, business_database;dur=17.367, ownership;dur=14.907, ownership_preflight;dur=2.701"
+  },
+  "at": "2026-10-23T11:28:52.211506+00:00"
+}

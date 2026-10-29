@@ -1,0 +1,6186 @@
+{
+  "version": "resume-performance-confirm-v1",
+  "description": "20 query clusters; 100 measurements per condition; 20 warmup tasks excluded, each directly precedes its query block to fit the unchanged 300s cache TTL; balanced off/warm order across query/repeat; actual cache hits and query rewrites recorded; one worker/concurrency=1; no TTFT; upper accounting shares performance budget",
+  "cases": [
+    {
+      "case_id": "perf-confirm-warm-r-dev-email-policy-3-warmup",
+      "family_id": "document-email-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm",
+        "warmup"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：既要对外发送敏感内容，又收到可疑邮件，规范分别要求什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-email-policy-3-r1",
+      "family_id": "document-email-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：既要对外发送敏感内容，又收到可疑邮件，规范分别要求什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-email-policy-3-r1",
+      "family_id": "document-email-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：既要对外发送敏感内容，又收到可疑邮件，规范分别要求什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-email-policy-3-r2",
+      "family_id": "document-email-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：既要对外发送敏感内容，又收到可疑邮件，规范分别要求什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-email-policy-3-r2",
+      "family_id": "document-email-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：既要对外发送敏感内容，又收到可疑邮件，规范分别要求什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-email-policy-3-r3",
+      "family_id": "document-email-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：既要对外发送敏感内容，又收到可疑邮件，规范分别要求什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-email-policy-3-r3",
+      "family_id": "document-email-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：既要对外发送敏感内容，又收到可疑邮件，规范分别要求什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-email-policy-3-r4",
+      "family_id": "document-email-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：既要对外发送敏感内容，又收到可疑邮件，规范分别要求什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-email-policy-3-r4",
+      "family_id": "document-email-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：既要对外发送敏感内容，又收到可疑邮件，规范分别要求什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-email-policy-3-r5",
+      "family_id": "document-email-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：既要对外发送敏感内容，又收到可疑邮件，规范分别要求什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-email-policy-3-r5",
+      "family_id": "document-email-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：既要对外发送敏感内容，又收到可疑邮件，规范分别要求什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-github-sso-3-warmup",
+      "family_id": "document-github-sso",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm",
+        "warmup"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：组织 SSO 登录和单仓库访问失败应分别如何核查？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-github-sso-3-r1",
+      "family_id": "document-github-sso",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：组织 SSO 登录和单仓库访问失败应分别如何核查？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-github-sso-3-r1",
+      "family_id": "document-github-sso",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：组织 SSO 登录和单仓库访问失败应分别如何核查？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-github-sso-3-r2",
+      "family_id": "document-github-sso",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：组织 SSO 登录和单仓库访问失败应分别如何核查？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-github-sso-3-r2",
+      "family_id": "document-github-sso",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：组织 SSO 登录和单仓库访问失败应分别如何核查？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-github-sso-3-r3",
+      "family_id": "document-github-sso",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：组织 SSO 登录和单仓库访问失败应分别如何核查？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-github-sso-3-r3",
+      "family_id": "document-github-sso",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：组织 SSO 登录和单仓库访问失败应分别如何核查？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-github-sso-3-r4",
+      "family_id": "document-github-sso",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：组织 SSO 登录和单仓库访问失败应分别如何核查？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-github-sso-3-r4",
+      "family_id": "document-github-sso",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：组织 SSO 登录和单仓库访问失败应分别如何核查？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-github-sso-3-r5",
+      "family_id": "document-github-sso",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：组织 SSO 登录和单仓库访问失败应分别如何核查？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-github-sso-3-r5",
+      "family_id": "document-github-sso",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：组织 SSO 登录和单仓库访问失败应分别如何核查？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-github-sso-1-warmup",
+      "family_id": "document-github-sso",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm",
+        "warmup"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：浏览器可登录 GitHub 却进不了组织，如何区分问题位置？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-github-sso-1-r1",
+      "family_id": "document-github-sso",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：浏览器可登录 GitHub 却进不了组织，如何区分问题位置？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-github-sso-1-r1",
+      "family_id": "document-github-sso",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：浏览器可登录 GitHub 却进不了组织，如何区分问题位置？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-github-sso-1-r2",
+      "family_id": "document-github-sso",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：浏览器可登录 GitHub 却进不了组织，如何区分问题位置？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-github-sso-1-r2",
+      "family_id": "document-github-sso",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：浏览器可登录 GitHub 却进不了组织，如何区分问题位置？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-github-sso-1-r3",
+      "family_id": "document-github-sso",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：浏览器可登录 GitHub 却进不了组织，如何区分问题位置？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-github-sso-1-r3",
+      "family_id": "document-github-sso",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：浏览器可登录 GitHub 却进不了组织，如何区分问题位置？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-github-sso-1-r4",
+      "family_id": "document-github-sso",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：浏览器可登录 GitHub 却进不了组织，如何区分问题位置？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-github-sso-1-r4",
+      "family_id": "document-github-sso",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：浏览器可登录 GitHub 却进不了组织，如何区分问题位置？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-github-sso-1-r5",
+      "family_id": "document-github-sso",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：浏览器可登录 GitHub 却进不了组织，如何区分问题位置？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-github-sso-1-r5",
+      "family_id": "document-github-sso",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：浏览器可登录 GitHub 却进不了组织，如何区分问题位置？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-printer-paper-1-warmup",
+      "family_id": "document-printer-paper",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm",
+        "warmup"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：打印任务卡纸时，继续发任务和用力拉纸是否合适？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-printer-paper-1-r1",
+      "family_id": "document-printer-paper",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：打印任务卡纸时，继续发任务和用力拉纸是否合适？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-printer-paper-1-r1",
+      "family_id": "document-printer-paper",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：打印任务卡纸时，继续发任务和用力拉纸是否合适？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-printer-paper-1-r2",
+      "family_id": "document-printer-paper",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：打印任务卡纸时，继续发任务和用力拉纸是否合适？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-printer-paper-1-r2",
+      "family_id": "document-printer-paper",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：打印任务卡纸时，继续发任务和用力拉纸是否合适？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-printer-paper-1-r3",
+      "family_id": "document-printer-paper",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：打印任务卡纸时，继续发任务和用力拉纸是否合适？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-printer-paper-1-r3",
+      "family_id": "document-printer-paper",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：打印任务卡纸时，继续发任务和用力拉纸是否合适？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-printer-paper-1-r4",
+      "family_id": "document-printer-paper",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：打印任务卡纸时，继续发任务和用力拉纸是否合适？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-printer-paper-1-r4",
+      "family_id": "document-printer-paper",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：打印任务卡纸时，继续发任务和用力拉纸是否合适？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-printer-paper-1-r5",
+      "family_id": "document-printer-paper",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：打印任务卡纸时，继续发任务和用力拉纸是否合适？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-printer-paper-1-r5",
+      "family_id": "document-printer-paper",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：打印任务卡纸时，继续发任务和用力拉纸是否合适？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-ticket-priority-3-warmup",
+      "family_id": "document-ticket-priority",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm",
+        "warmup"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：P1 到 P4 的含义、默认级别及改级别后的确认规则是什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-ticket-priority-3-r1",
+      "family_id": "document-ticket-priority",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：P1 到 P4 的含义、默认级别及改级别后的确认规则是什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-ticket-priority-3-r1",
+      "family_id": "document-ticket-priority",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：P1 到 P4 的含义、默认级别及改级别后的确认规则是什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-ticket-priority-3-r2",
+      "family_id": "document-ticket-priority",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：P1 到 P4 的含义、默认级别及改级别后的确认规则是什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-ticket-priority-3-r2",
+      "family_id": "document-ticket-priority",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：P1 到 P4 的含义、默认级别及改级别后的确认规则是什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-ticket-priority-3-r3",
+      "family_id": "document-ticket-priority",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：P1 到 P4 的含义、默认级别及改级别后的确认规则是什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-ticket-priority-3-r3",
+      "family_id": "document-ticket-priority",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：P1 到 P4 的含义、默认级别及改级别后的确认规则是什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-ticket-priority-3-r4",
+      "family_id": "document-ticket-priority",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：P1 到 P4 的含义、默认级别及改级别后的确认规则是什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-ticket-priority-3-r4",
+      "family_id": "document-ticket-priority",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：P1 到 P4 的含义、默认级别及改级别后的确认规则是什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-ticket-priority-3-r5",
+      "family_id": "document-ticket-priority",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：P1 到 P4 的含义、默认级别及改级别后的确认规则是什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-ticket-priority-3-r5",
+      "family_id": "document-ticket-priority",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：P1 到 P4 的含义、默认级别及改级别后的确认规则是什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-mfa-lost-1-warmup",
+      "family_id": "document-mfa-lost",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm",
+        "warmup"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：认证手机遗失且没法收验证码，应如何恢复验证？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-mfa-lost-1-r1",
+      "family_id": "document-mfa-lost",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：认证手机遗失且没法收验证码，应如何恢复验证？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-mfa-lost-1-r1",
+      "family_id": "document-mfa-lost",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：认证手机遗失且没法收验证码，应如何恢复验证？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-mfa-lost-1-r2",
+      "family_id": "document-mfa-lost",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：认证手机遗失且没法收验证码，应如何恢复验证？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-mfa-lost-1-r2",
+      "family_id": "document-mfa-lost",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：认证手机遗失且没法收验证码，应如何恢复验证？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-mfa-lost-1-r3",
+      "family_id": "document-mfa-lost",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：认证手机遗失且没法收验证码，应如何恢复验证？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-mfa-lost-1-r3",
+      "family_id": "document-mfa-lost",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：认证手机遗失且没法收验证码，应如何恢复验证？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-mfa-lost-1-r4",
+      "family_id": "document-mfa-lost",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：认证手机遗失且没法收验证码，应如何恢复验证？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-mfa-lost-1-r4",
+      "family_id": "document-mfa-lost",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：认证手机遗失且没法收验证码，应如何恢复验证？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-mfa-lost-1-r5",
+      "family_id": "document-mfa-lost",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：认证手机遗失且没法收验证码，应如何恢复验证？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-mfa-lost-1-r5",
+      "family_id": "document-mfa-lost",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：认证手机遗失且没法收验证码，应如何恢复验证？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-policy-3-warmup",
+      "family_id": "document-vpn-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm",
+        "warmup"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：用 VPN 远程办公和给供应商新增权限分别遵循什么步骤？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-vpn-policy-3-r1",
+      "family_id": "document-vpn-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：用 VPN 远程办公和给供应商新增权限分别遵循什么步骤？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-policy-3-r1",
+      "family_id": "document-vpn-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：用 VPN 远程办公和给供应商新增权限分别遵循什么步骤？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-policy-3-r2",
+      "family_id": "document-vpn-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：用 VPN 远程办公和给供应商新增权限分别遵循什么步骤？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-vpn-policy-3-r2",
+      "family_id": "document-vpn-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：用 VPN 远程办公和给供应商新增权限分别遵循什么步骤？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-vpn-policy-3-r3",
+      "family_id": "document-vpn-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：用 VPN 远程办公和给供应商新增权限分别遵循什么步骤？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-policy-3-r3",
+      "family_id": "document-vpn-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：用 VPN 远程办公和给供应商新增权限分别遵循什么步骤？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-policy-3-r4",
+      "family_id": "document-vpn-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：用 VPN 远程办公和给供应商新增权限分别遵循什么步骤？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-vpn-policy-3-r4",
+      "family_id": "document-vpn-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：用 VPN 远程办公和给供应商新增权限分别遵循什么步骤？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-vpn-policy-3-r5",
+      "family_id": "document-vpn-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：用 VPN 远程办公和给供应商新增权限分别遵循什么步骤？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-policy-3-r5",
+      "family_id": "document-vpn-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：用 VPN 远程办公和给供应商新增权限分别遵循什么步骤？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-git-permissions-1-warmup",
+      "family_id": "document-git-permissions",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm",
+        "warmup"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：登录正常但 push 返回 403，首先区分什么并检查哪些信息？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-git-permissions-1-r1",
+      "family_id": "document-git-permissions",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：登录正常但 push 返回 403，首先区分什么并检查哪些信息？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-git-permissions-1-r1",
+      "family_id": "document-git-permissions",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：登录正常但 push 返回 403，首先区分什么并检查哪些信息？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-git-permissions-1-r2",
+      "family_id": "document-git-permissions",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：登录正常但 push 返回 403，首先区分什么并检查哪些信息？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-git-permissions-1-r2",
+      "family_id": "document-git-permissions",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：登录正常但 push 返回 403，首先区分什么并检查哪些信息？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-git-permissions-1-r3",
+      "family_id": "document-git-permissions",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：登录正常但 push 返回 403，首先区分什么并检查哪些信息？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-git-permissions-1-r3",
+      "family_id": "document-git-permissions",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：登录正常但 push 返回 403，首先区分什么并检查哪些信息？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-git-permissions-1-r4",
+      "family_id": "document-git-permissions",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：登录正常但 push 返回 403，首先区分什么并检查哪些信息？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-git-permissions-1-r4",
+      "family_id": "document-git-permissions",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：登录正常但 push 返回 403，首先区分什么并检查哪些信息？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-git-permissions-1-r5",
+      "family_id": "document-git-permissions",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：登录正常但 push 返回 403，首先区分什么并检查哪些信息？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-git-permissions-1-r5",
+      "family_id": "document-git-permissions",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：登录正常但 push 返回 403，首先区分什么并检查哪些信息？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-ticket-priority-1-warmup",
+      "family_id": "document-ticket-priority",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm",
+        "warmup"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：没指定等级但提供了影响范围，演示工单默认级别是什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-ticket-priority-1-r1",
+      "family_id": "document-ticket-priority",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：没指定等级但提供了影响范围，演示工单默认级别是什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-ticket-priority-1-r1",
+      "family_id": "document-ticket-priority",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：没指定等级但提供了影响范围，演示工单默认级别是什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-ticket-priority-1-r2",
+      "family_id": "document-ticket-priority",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：没指定等级但提供了影响范围，演示工单默认级别是什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-ticket-priority-1-r2",
+      "family_id": "document-ticket-priority",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：没指定等级但提供了影响范围，演示工单默认级别是什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-ticket-priority-1-r3",
+      "family_id": "document-ticket-priority",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：没指定等级但提供了影响范围，演示工单默认级别是什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-ticket-priority-1-r3",
+      "family_id": "document-ticket-priority",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：没指定等级但提供了影响范围，演示工单默认级别是什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-ticket-priority-1-r4",
+      "family_id": "document-ticket-priority",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：没指定等级但提供了影响范围，演示工单默认级别是什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-ticket-priority-1-r4",
+      "family_id": "document-ticket-priority",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：没指定等级但提供了影响范围，演示工单默认级别是什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-ticket-priority-1-r5",
+      "family_id": "document-ticket-priority",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：没指定等级但提供了影响范围，演示工单默认级别是什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-ticket-priority-1-r5",
+      "family_id": "document-ticket-priority",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：没指定等级但提供了影响范围，演示工单默认级别是什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-dns-1-warmup",
+      "family_id": "document-vpn-dns",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm",
+        "warmup"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：隧道已经连通但内网域名打不开，应先分开记录哪些结果？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-dns-1-r1",
+      "family_id": "document-vpn-dns",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：隧道已经连通但内网域名打不开，应先分开记录哪些结果？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-vpn-dns-1-r1",
+      "family_id": "document-vpn-dns",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：隧道已经连通但内网域名打不开，应先分开记录哪些结果？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-vpn-dns-1-r2",
+      "family_id": "document-vpn-dns",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：隧道已经连通但内网域名打不开，应先分开记录哪些结果？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-dns-1-r2",
+      "family_id": "document-vpn-dns",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：隧道已经连通但内网域名打不开，应先分开记录哪些结果？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-dns-1-r3",
+      "family_id": "document-vpn-dns",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：隧道已经连通但内网域名打不开，应先分开记录哪些结果？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-vpn-dns-1-r3",
+      "family_id": "document-vpn-dns",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：隧道已经连通但内网域名打不开，应先分开记录哪些结果？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-vpn-dns-1-r4",
+      "family_id": "document-vpn-dns",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：隧道已经连通但内网域名打不开，应先分开记录哪些结果？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-dns-1-r4",
+      "family_id": "document-vpn-dns",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：隧道已经连通但内网域名打不开，应先分开记录哪些结果？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-dns-1-r5",
+      "family_id": "document-vpn-dns",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：隧道已经连通但内网域名打不开，应先分开记录哪些结果？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-vpn-dns-1-r5",
+      "family_id": "document-vpn-dns",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：隧道已经连通但内网域名打不开，应先分开记录哪些结果？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-policy-1-warmup",
+      "family_id": "document-vpn-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm",
+        "warmup"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：出差用酒店无线网连接内部资源，客户端和认证有什么要求？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-vpn-policy-1-r1",
+      "family_id": "document-vpn-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：出差用酒店无线网连接内部资源，客户端和认证有什么要求？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-policy-1-r1",
+      "family_id": "document-vpn-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：出差用酒店无线网连接内部资源，客户端和认证有什么要求？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-policy-1-r2",
+      "family_id": "document-vpn-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：出差用酒店无线网连接内部资源，客户端和认证有什么要求？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-vpn-policy-1-r2",
+      "family_id": "document-vpn-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：出差用酒店无线网连接内部资源，客户端和认证有什么要求？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-vpn-policy-1-r3",
+      "family_id": "document-vpn-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：出差用酒店无线网连接内部资源，客户端和认证有什么要求？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-policy-1-r3",
+      "family_id": "document-vpn-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：出差用酒店无线网连接内部资源，客户端和认证有什么要求？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-policy-1-r4",
+      "family_id": "document-vpn-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：出差用酒店无线网连接内部资源，客户端和认证有什么要求？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-vpn-policy-1-r4",
+      "family_id": "document-vpn-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：出差用酒店无线网连接内部资源，客户端和认证有什么要求？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-vpn-policy-1-r5",
+      "family_id": "document-vpn-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：出差用酒店无线网连接内部资源，客户端和认证有什么要求？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-policy-1-r5",
+      "family_id": "document-vpn-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：出差用酒店无线网连接内部资源，客户端和认证有什么要求？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-printer-offline-1-warmup",
+      "family_id": "document-printer-offline",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm",
+        "warmup"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：打印机显示 offline，要先核对什么，是否按卡纸拆机？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-printer-offline-1-r1",
+      "family_id": "document-printer-offline",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：打印机显示 offline，要先核对什么，是否按卡纸拆机？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-printer-offline-1-r1",
+      "family_id": "document-printer-offline",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：打印机显示 offline，要先核对什么，是否按卡纸拆机？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-printer-offline-1-r2",
+      "family_id": "document-printer-offline",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：打印机显示 offline，要先核对什么，是否按卡纸拆机？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-printer-offline-1-r2",
+      "family_id": "document-printer-offline",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：打印机显示 offline，要先核对什么，是否按卡纸拆机？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-printer-offline-1-r3",
+      "family_id": "document-printer-offline",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：打印机显示 offline，要先核对什么，是否按卡纸拆机？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-printer-offline-1-r3",
+      "family_id": "document-printer-offline",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：打印机显示 offline，要先核对什么，是否按卡纸拆机？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-printer-offline-1-r4",
+      "family_id": "document-printer-offline",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：打印机显示 offline，要先核对什么，是否按卡纸拆机？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-printer-offline-1-r4",
+      "family_id": "document-printer-offline",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：打印机显示 offline，要先核对什么，是否按卡纸拆机？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-printer-offline-1-r5",
+      "family_id": "document-printer-offline",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：打印机显示 offline，要先核对什么，是否按卡纸拆机？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-printer-offline-1-r5",
+      "family_id": "document-printer-offline",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：打印机显示 offline，要先核对什么，是否按卡纸拆机？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-data-link-1-warmup",
+      "family_id": "document-data-link",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm",
+        "warmup"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：敏感文件分享链接对接收人和有效期有哪些要求？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-data-link-1-r1",
+      "family_id": "document-data-link",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：敏感文件分享链接对接收人和有效期有哪些要求？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-data-link-1-r1",
+      "family_id": "document-data-link",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：敏感文件分享链接对接收人和有效期有哪些要求？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-data-link-1-r2",
+      "family_id": "document-data-link",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：敏感文件分享链接对接收人和有效期有哪些要求？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-data-link-1-r2",
+      "family_id": "document-data-link",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：敏感文件分享链接对接收人和有效期有哪些要求？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-data-link-1-r3",
+      "family_id": "document-data-link",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：敏感文件分享链接对接收人和有效期有哪些要求？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-data-link-1-r3",
+      "family_id": "document-data-link",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：敏感文件分享链接对接收人和有效期有哪些要求？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-data-link-1-r4",
+      "family_id": "document-data-link",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：敏感文件分享链接对接收人和有效期有哪些要求？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-data-link-1-r4",
+      "family_id": "document-data-link",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：敏感文件分享链接对接收人和有效期有哪些要求？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-data-link-1-r5",
+      "family_id": "document-data-link",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：敏感文件分享链接对接收人和有效期有哪些要求？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-data-link-1-r5",
+      "family_id": "document-data-link",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：敏感文件分享链接对接收人和有效期有哪些要求？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-809-1-warmup",
+      "family_id": "document-vpn-809",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm",
+        "warmup"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：Windows 报 VPN 809，先核对哪些现象，能直接判断原因吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-809-1-r1",
+      "family_id": "document-vpn-809",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：Windows 报 VPN 809，先核对哪些现象，能直接判断原因吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-vpn-809-1-r1",
+      "family_id": "document-vpn-809",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：Windows 报 VPN 809，先核对哪些现象，能直接判断原因吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-vpn-809-1-r2",
+      "family_id": "document-vpn-809",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：Windows 报 VPN 809，先核对哪些现象，能直接判断原因吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-809-1-r2",
+      "family_id": "document-vpn-809",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：Windows 报 VPN 809，先核对哪些现象，能直接判断原因吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-809-1-r3",
+      "family_id": "document-vpn-809",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：Windows 报 VPN 809，先核对哪些现象，能直接判断原因吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-vpn-809-1-r3",
+      "family_id": "document-vpn-809",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：Windows 报 VPN 809，先核对哪些现象，能直接判断原因吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-vpn-809-1-r4",
+      "family_id": "document-vpn-809",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：Windows 报 VPN 809，先核对哪些现象，能直接判断原因吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-809-1-r4",
+      "family_id": "document-vpn-809",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：Windows 报 VPN 809，先核对哪些现象，能直接判断原因吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-809-1-r5",
+      "family_id": "document-vpn-809",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：Windows 报 VPN 809，先核对哪些现象，能直接判断原因吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-vpn-809-1-r5",
+      "family_id": "document-vpn-809",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：Windows 报 VPN 809，先核对哪些现象，能直接判断原因吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-shared-readonly-1-warmup",
+      "family_id": "document-shared-readonly",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm",
+        "warmup"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：共享文件可读但保存失败，需区分哪几类原因？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-shared-readonly-1-r1",
+      "family_id": "document-shared-readonly",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：共享文件可读但保存失败，需区分哪几类原因？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-shared-readonly-1-r1",
+      "family_id": "document-shared-readonly",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：共享文件可读但保存失败，需区分哪几类原因？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-shared-readonly-1-r2",
+      "family_id": "document-shared-readonly",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：共享文件可读但保存失败，需区分哪几类原因？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-shared-readonly-1-r2",
+      "family_id": "document-shared-readonly",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：共享文件可读但保存失败，需区分哪几类原因？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-shared-readonly-1-r3",
+      "family_id": "document-shared-readonly",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：共享文件可读但保存失败，需区分哪几类原因？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-shared-readonly-1-r3",
+      "family_id": "document-shared-readonly",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：共享文件可读但保存失败，需区分哪几类原因？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-shared-readonly-1-r4",
+      "family_id": "document-shared-readonly",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：共享文件可读但保存失败，需区分哪几类原因？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-shared-readonly-1-r4",
+      "family_id": "document-shared-readonly",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：共享文件可读但保存失败，需区分哪几类原因？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-shared-readonly-1-r5",
+      "family_id": "document-shared-readonly",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：共享文件可读但保存失败，需区分哪几类原因？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-shared-readonly-1-r5",
+      "family_id": "document-shared-readonly",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：共享文件可读但保存失败，需区分哪几类原因？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-email-policy-1-warmup",
+      "family_id": "document-email-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm",
+        "warmup"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：向客户发送办公邮件，敏感附件与收件范围应如何处理？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-email-policy-1-r1",
+      "family_id": "document-email-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：向客户发送办公邮件，敏感附件与收件范围应如何处理？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-email-policy-1-r1",
+      "family_id": "document-email-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：向客户发送办公邮件，敏感附件与收件范围应如何处理？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-email-policy-1-r2",
+      "family_id": "document-email-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：向客户发送办公邮件，敏感附件与收件范围应如何处理？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-email-policy-1-r2",
+      "family_id": "document-email-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：向客户发送办公邮件，敏感附件与收件范围应如何处理？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-email-policy-1-r3",
+      "family_id": "document-email-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：向客户发送办公邮件，敏感附件与收件范围应如何处理？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-email-policy-1-r3",
+      "family_id": "document-email-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：向客户发送办公邮件，敏感附件与收件范围应如何处理？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-email-policy-1-r4",
+      "family_id": "document-email-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：向客户发送办公邮件，敏感附件与收件范围应如何处理？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-email-policy-1-r4",
+      "family_id": "document-email-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：向客户发送办公邮件，敏感附件与收件范围应如何处理？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-email-policy-1-r5",
+      "family_id": "document-email-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：向客户发送办公邮件，敏感附件与收件范围应如何处理？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-email-policy-1-r5",
+      "family_id": "document-email-policy",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：向客户发送办公邮件，敏感附件与收件范围应如何处理？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-device-repair-1-warmup",
+      "family_id": "document-device-repair",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm",
+        "warmup"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：电脑电池鼓包要报修，应该提供什么、还能继续用吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-device-repair-1-r1",
+      "family_id": "document-device-repair",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：电脑电池鼓包要报修，应该提供什么、还能继续用吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-device-repair-1-r1",
+      "family_id": "document-device-repair",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：电脑电池鼓包要报修，应该提供什么、还能继续用吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-device-repair-1-r2",
+      "family_id": "document-device-repair",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：电脑电池鼓包要报修，应该提供什么、还能继续用吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-device-repair-1-r2",
+      "family_id": "document-device-repair",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：电脑电池鼓包要报修，应该提供什么、还能继续用吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-device-repair-1-r3",
+      "family_id": "document-device-repair",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：电脑电池鼓包要报修，应该提供什么、还能继续用吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-device-repair-1-r3",
+      "family_id": "document-device-repair",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：电脑电池鼓包要报修，应该提供什么、还能继续用吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-device-repair-1-r4",
+      "family_id": "document-device-repair",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：电脑电池鼓包要报修，应该提供什么、还能继续用吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-device-repair-1-r4",
+      "family_id": "document-device-repair",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：电脑电池鼓包要报修，应该提供什么、还能继续用吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-device-repair-1-r5",
+      "family_id": "document-device-repair",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：电脑电池鼓包要报修，应该提供什么、还能继续用吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-device-repair-1-r5",
+      "family_id": "document-device-repair",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：电脑电池鼓包要报修，应该提供什么、还能继续用吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-email-quota-1-warmup",
+      "family_id": "document-email-quota",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm",
+        "warmup"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：出现 mailbox full 时如何核对占用，清理前注意什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-email-quota-1-r1",
+      "family_id": "document-email-quota",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：出现 mailbox full 时如何核对占用，清理前注意什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-email-quota-1-r1",
+      "family_id": "document-email-quota",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：出现 mailbox full 时如何核对占用，清理前注意什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-email-quota-1-r2",
+      "family_id": "document-email-quota",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：出现 mailbox full 时如何核对占用，清理前注意什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-email-quota-1-r2",
+      "family_id": "document-email-quota",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：出现 mailbox full 时如何核对占用，清理前注意什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-email-quota-1-r3",
+      "family_id": "document-email-quota",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：出现 mailbox full 时如何核对占用，清理前注意什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-email-quota-1-r3",
+      "family_id": "document-email-quota",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：出现 mailbox full 时如何核对占用，清理前注意什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-email-quota-1-r4",
+      "family_id": "document-email-quota",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：出现 mailbox full 时如何核对占用，清理前注意什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-email-quota-1-r4",
+      "family_id": "document-email-quota",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：出现 mailbox full 时如何核对占用，清理前注意什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-email-quota-1-r5",
+      "family_id": "document-email-quota",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：出现 mailbox full 时如何核对占用，清理前注意什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-email-quota-1-r5",
+      "family_id": "document-email-quota",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：出现 mailbox full 时如何核对占用，清理前注意什么？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-809-3-warmup",
+      "family_id": "document-vpn-809",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm",
+        "warmup"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：VPN 809 从用户检查到管理员网络核查应怎样衔接？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-vpn-809-3-r1",
+      "family_id": "document-vpn-809",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：VPN 809 从用户检查到管理员网络核查应怎样衔接？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-809-3-r1",
+      "family_id": "document-vpn-809",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：VPN 809 从用户检查到管理员网络核查应怎样衔接？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-809-3-r2",
+      "family_id": "document-vpn-809",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：VPN 809 从用户检查到管理员网络核查应怎样衔接？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-vpn-809-3-r2",
+      "family_id": "document-vpn-809",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：VPN 809 从用户检查到管理员网络核查应怎样衔接？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-vpn-809-3-r3",
+      "family_id": "document-vpn-809",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：VPN 809 从用户检查到管理员网络核查应怎样衔接？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-809-3-r3",
+      "family_id": "document-vpn-809",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：VPN 809 从用户检查到管理员网络核查应怎样衔接？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-809-3-r4",
+      "family_id": "document-vpn-809",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：VPN 809 从用户检查到管理员网络核查应怎样衔接？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-vpn-809-3-r4",
+      "family_id": "document-vpn-809",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：VPN 809 从用户检查到管理员网络核查应怎样衔接？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-vpn-809-3-r5",
+      "family_id": "document-vpn-809",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：VPN 809 从用户检查到管理员网络核查应怎样衔接？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-vpn-809-3-r5",
+      "family_id": "document-vpn-809",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：VPN 809 从用户检查到管理员网络核查应怎样衔接？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-account-offboard-1-warmup",
+      "family_id": "document-account-offboard",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm",
+        "warmup"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：有人在聊天中说员工离职，可以直接停用并删数据吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-account-offboard-1-r1",
+      "family_id": "document-account-offboard",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：有人在聊天中说员工离职，可以直接停用并删数据吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-account-offboard-1-r1",
+      "family_id": "document-account-offboard",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：有人在聊天中说员工离职，可以直接停用并删数据吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-account-offboard-1-r2",
+      "family_id": "document-account-offboard",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：有人在聊天中说员工离职，可以直接停用并删数据吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-account-offboard-1-r2",
+      "family_id": "document-account-offboard",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：有人在聊天中说员工离职，可以直接停用并删数据吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-account-offboard-1-r3",
+      "family_id": "document-account-offboard",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：有人在聊天中说员工离职，可以直接停用并删数据吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-account-offboard-1-r3",
+      "family_id": "document-account-offboard",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：有人在聊天中说员工离职，可以直接停用并删数据吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-account-offboard-1-r4",
+      "family_id": "document-account-offboard",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：有人在聊天中说员工离职，可以直接停用并删数据吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-account-offboard-1-r4",
+      "family_id": "document-account-offboard",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：有人在聊天中说员工离职，可以直接停用并删数据吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-warm-r-dev-account-offboard-1-r5",
+      "family_id": "document-account-offboard",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "warm"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：有人在聊天中说员工离职，可以直接停用并删数据吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    },
+    {
+      "case_id": "perf-confirm-off-r-dev-account-offboard-1-r5",
+      "family_id": "document-account-offboard",
+      "split": "regression",
+      "category": "performance",
+      "tags": [
+        "off"
+      ],
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请根据演示企业知识库说明：有人在聊天中说员工离职，可以直接停用并删数据吗？",
+          "allowed_tools": [
+            "query_service_status",
+            "get_device_information"
+          ],
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [
+        {
+          "point_id": "faithful",
+          "description": "回答所问条款，引用必须与内容匹配；失败/不完整回答单独报告，不作为成功时延",
+          "evidence_any_of": []
+        }
+      ],
+      "answerability": "answerable"
+    }
+  ]
+}

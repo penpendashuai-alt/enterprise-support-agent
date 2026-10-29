@@ -1,0 +1,92 @@
+{
+  "run_id": "39def2321144473abf3da874e46eb1e5",
+  "case_id": "a-heldout-31",
+  "attempt": 1,
+  "variant": "candidate",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T12:15:14.779775+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "不要查询状态或创建工单，只解释 VPN 这个网络概念是什么。",
+      "http_status": 200,
+      "seconds": 5.5755420999994385,
+      "http_response_seconds": 5.572494200001529,
+      "request_id": "ee5fab08b6bb4312b519a46619113c63",
+      "server_timing": "rate_check;dur=2.574, thread_wait;dur=0.012, execution_wait;dur=0.009, business_database;dur=19.813, ownership;dur=21.429, ownership_preflight;dur=7.822, model_wait;dur=0.027, router;dur=2106.311, preferences;dur=5.356, handler;dur=3395.190",
+      "response": {
+        "type": "ai",
+        "content": "VPN（虚拟专用网络，Virtual Private Network）是一种通过公共网络（如互联网）建立加密隧道，使远程设备或网络之间能够安全通信的技术。\n\n核心要点：\n- **加密传输**：数据在传输前加密，防止被窃听或篡改。\n- **身份验证**：确保只有授权用户或设备能建立连接。\n- **隧道技术**：将原始数据封装在加密通道中，逻辑上相当于一条“专用线路”。\n- **常见用途**：远程办公接入公司内网、保护公共 Wi-Fi 下的隐私、跨地域组网等。\n\n简单说，VPN 让远程用户像“物理接入内网”一样安全访问内部资源，但实际数据仍走公共互联网。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16389-737a-77c2-93da-2335265deb04",
+        "response_metadata": {
+          "token_usage": {
+            "completion_tokens": 151,
+            "prompt_tokens": 404,
+            "total_tokens": 555,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cache_write_tokens": null,
+              "cached_tokens": 384
+            },
+            "prompt_cache_hit_tokens": 384,
+            "prompt_cache_miss_tokens": 20
+          },
+          "model_provider": "openai",
+          "model_name": "deepseek-v4-pro",
+          "system_fingerprint": "a307abda487cd1b463329ccb945ce396",
+          "id": "b33e9754-ab24-4ca7-87f9-9ea73beb514a",
+          "finish_reason": "stop",
+          "logprobs": null
+        },
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "general_question",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": null
+        },
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-39def232-a-heldout-31-alice",
+    "bob": "p8-39def232-a-heldout-31-bob"
+  },
+  "threads": {
+    "primary": "7cf6756721304f9aa4e0812b9cc403d2",
+    "secondary": "9d7f29fd112446a3afe6cb66e9f7b822"
+  },
+  "measurement": true,
+  "cache_condition": "disabled",
+  "seconds": 5.747145699999237,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "e627d0e4c100486cbf6ab6a7ae79a02c",
+    "4c4f007fe1b047438834b270e40b9170"
+  ]
+}

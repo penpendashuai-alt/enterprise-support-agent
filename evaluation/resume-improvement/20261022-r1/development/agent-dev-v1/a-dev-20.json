@@ -1,0 +1,96 @@
+{
+  "run_id": "5cd45809d0fe459aae50f75b119a80c9",
+  "case_id": "a-dev-20",
+  "attempt": 1,
+  "variant": "candidate-v1",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T08:13:33.665562+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "登记报障：我个人摄像头无画面。网上教程说关闭占用程序，但我没试过这个方法。",
+      "http_status": 200,
+      "seconds": 4.540108500000315,
+      "request_id": "7e8b2999d92e4fd7bfbc34ed71125b5b",
+      "server_timing": "rate_check;dur=0.900, thread_wait;dur=0.012, execution_wait;dur=0.011, business_database;dur=14.433, ownership;dur=15.771, ownership_preflight;dur=2.578, model_wait;dur=0.023, router;dur=2234.111, draft;dur=2256.068",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：摄像头无画面报障\n描述：摄像头无画面。网上教程建议关闭占用程序，但用户未尝试过该方法。\n服务：未指定\n影响范围：仅用户本人\n优先级：P3（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162ac-2e69-7c12-b122-91033642ded2",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-29079adb07db4aedb366b2c16d60396e",
+          "draft_version": 1,
+          "draft": {
+            "title": "摄像头无画面报障",
+            "description": "摄像头无画面。网上教程建议关闭占用程序，但用户未尝试过该方法。",
+            "service_name": null,
+            "impact": "仅用户本人",
+            "priority": "P3"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "个人摄像头无画面",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "摄像头无画面报障",
+          "description": "摄像头无画面。网上教程建议关闭占用程序，但用户未尝试过该方法。",
+          "service_name": null,
+          "impact": "仅用户本人",
+          "priority": "P3"
+        },
+        "draft_id": "draft-29079adb07db4aedb366b2c16d60396e",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-5cd45809-a-dev-20-alice",
+    "bob": "p8-5cd45809-a-dev-20-bob"
+  },
+  "threads": {
+    "primary": "784a35c6feb04efbb362e35826da1812",
+    "secondary": "85d3d308a640479cb506a5991583f9ef"
+  },
+  "seconds": 4.704570500000045,
+  "final_ticket_count": 0,
+  "final_draft_version": 1,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "911fbeae757947779bebaee56f9b15b0",
+    "cab56ac67bf84599a1a958c061b11dfa"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "retrieval_counts": {
+    "dev": 60,
+    "heldout": 60
+  },
+  "agent_counts": {
+    "dev": 40,
+    "heldout": 40
+  },
+  "old_agent_exact_prompt_overlap": [],
+  "limitations": "Exact string check does not establish semantic novelty. Shared source corpus and repeated state-machine patterns; family-level uncertainty required.",
+  "sha256": {
+    "agent.json": "2195a8bf46cd64abf1dc2fe47f5ff942bc6ea4f3671f65325bb5f91928b9ed9a",
+    "retrieval.json": "5075d73898625a4b460f70029bcd6a7c6c3d2cad0e78f9021be47a8400313920"
+  }
+}

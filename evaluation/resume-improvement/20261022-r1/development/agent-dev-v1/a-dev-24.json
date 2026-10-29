@@ -1,0 +1,70 @@
+{
+  "run_id": "5cd45809d0fe459aae50f75b119a80c9",
+  "case_id": "a-dev-24",
+  "attempt": 1,
+  "variant": "candidate-v1",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T08:13:53.253046+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "给我登记工单：GitHub 访问报 403。影响范围目前未知，晚些时候才能确认。",
+      "http_status": 200,
+      "seconds": 4.548765199999252,
+      "request_id": "a1b04bc6c7f54ca5a7458c973e3c70b1",
+      "server_timing": "rate_check;dur=0.918, thread_wait;dur=0.010, execution_wait;dur=0.008, business_database;dur=14.026, ownership;dur=15.401, ownership_preflight;dur=3.326, model_wait;dur=0.024, router;dur=2363.760, draft;dur=2139.506",
+      "response": {
+        "type": "ai",
+        "content": "请补充影响范围。工单尚未提交；信息齐全后会展示草稿供你确认。未指定优先级时使用演示默认值 P3。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162ac-7aed-7f31-8c5e-19dd982cf71a",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "GitHub",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "GitHub 访问报 403，影响范围目前未知，晚些时候才能确认",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "approval_status": "collecting"
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-5cd45809-a-dev-24-alice",
+    "bob": "p8-5cd45809-a-dev-24-bob"
+  },
+  "threads": {
+    "primary": "acc280dbcec9459abd6a7d328f883ad6",
+    "secondary": "73b34e373986458182b2071f9e33411d"
+  },
+  "seconds": 4.7142440999996325,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "492c137ea94445f8a37f17c7c1528e4e",
+    "52b834275afe416fabcd0793924bc015"
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "run_id": "661e1588388341f39110300686cf0e61",
+  "case_id": "a-dev-29",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T08:06:00.452335+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "帮我查工单 INC-1001 的进展。",
+      "http_status": 200,
+      "seconds": 6.32412530000056,
+      "request_id": "2e34b5c1f7694d0eb1b0a22b124d60fb",
+      "server_timing": "rate_check;dur=0.872, thread_wait;dur=0.007, execution_wait;dur=0.006, business_database;dur=12.314, ownership;dur=13.609, ownership_preflight;dur=2.408, model_wait;dur=0.034, router;dur=2374.164, preferences;dur=6.057, handler;dur=3900.598",
+      "response": {
+        "type": "ai",
+        "content": "工单 **INC-1001** 的进展如下（模拟数据，仅用于演示）：\n\n- **标题**：VPN 连接失败\n- **状态**：处理中（in_progress）\n- **进展**：模拟网络支持组正在检查 VPN 配置。\n\n如需进一步协助（例如补充设备编号或故障描述），可以告诉我。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162a5-440b-7190-85f4-b85c31501ac9",
+        "response_metadata": {
+          "token_usage": {
+            "completion_tokens": 72,
+            "prompt_tokens": 875,
+            "total_tokens": 947,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cache_write_tokens": null,
+              "cached_tokens": 768
+            },
+            "prompt_cache_hit_tokens": 768,
+            "prompt_cache_miss_tokens": 107
+          },
+          "model_provider": "openai",
+          "model_name": "deepseek-v4-pro",
+          "system_fingerprint": "a307abda487cd1b463329ccb945ce396",
+          "id": "83df34fe-fd78-4d75-b8e3-64b3177b6b62",
+          "finish_reason": "stop",
+          "logprobs": null
+        },
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": "INC-1001",
+          "issue_description": null,
+          "ticket_action": "query"
+        },
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "retrieval": null,
+      "tools": [
+        {
+          "name": "query_existing_ticket",
+          "args": {
+            "ticket_id": "INC-1001"
+          },
+          "id": "call_00_g8M50Ff7ySrpUZTaCQwH7634",
+          "type": "tool_call",
+          "result": {
+            "status": "success",
+            "data": {
+              "ticket_id": "INC-1001",
+              "title": "VPN 连接失败",
+              "state": "in_progress",
+              "progress": "模拟网络支持组正在检查 VPN 配置。"
+            },
+            "message": "固定模拟数据，仅用于演示，不代表真实系统。",
+            "is_mock": true,
+            "source": "fixed_mock_sample"
+          },
+          "validation_error": false
+        }
+      ],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-661e1588-a-dev-29-alice",
+    "bob": "p8-661e1588-a-dev-29-bob"
+  },
+  "threads": {
+    "primary": "b6315b7f588f4cd4970418484098f997",
+    "secondary": "df390a9e7abe4587a9b2992440781c8a"
+  },
+  "seconds": 6.485060500000145,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {
+      "required_tool_total": 1,
+      "required_tool_completed": 1,
+      "actual_tool_total": 1,
+      "actual_tool_legal": 1,
+      "tool_parameters_valid": 1
+    }
+  },
+  "model_calls": [
+    "c6e731e5a9484f6cabea00e4f79fc757",
+    "b8d565b7b21c4f6e9f0c135d717363cc",
+    "df9a34e9c3514d009fc543d5266d6f29"
+  ]
+}

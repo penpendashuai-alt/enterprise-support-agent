@@ -1,0 +1,96 @@
+{
+  "run_id": "661e1588388341f39110300686cf0e61",
+  "case_id": "a-dev-15",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T08:04:50.521860+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请登记工单：我一个人的打印机离线。我试着重装驱动，但安装程序中途报错，实际上没装成。",
+      "http_status": 200,
+      "seconds": 5.1343786999996155,
+      "request_id": "26e4aaefe92f435787a3e4c1769bf2e7",
+      "server_timing": "rate_check;dur=1.011, thread_wait;dur=0.009, execution_wait;dur=0.007, business_database;dur=13.344, ownership;dur=14.893, ownership_preflight;dur=2.865, model_wait;dur=0.026, router;dur=2473.714, draft;dur=2606.275",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：打印机离线，重装驱动失败\n描述：用户一个人的打印机处于离线状态。用户尝试重装驱动，但安装程序中途报错，实际上未安装成功。\n服务：未指定\n影响范围：仅本人\n优先级：P3（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162a4-32e1-74e0-8585-67fb68acb171",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-c6c7dfb2e9454bd29516923ea05bfc02",
+          "draft_version": 1,
+          "draft": {
+            "title": "打印机离线，重装驱动失败",
+            "description": "用户一个人的打印机处于离线状态。用户尝试重装驱动，但安装程序中途报错，实际上未安装成功。",
+            "service_name": null,
+            "impact": "仅本人",
+            "priority": "P3"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "打印机离线，重装驱动时安装程序中途报错，未安装成功",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "打印机离线，重装驱动失败",
+          "description": "用户一个人的打印机处于离线状态。用户尝试重装驱动，但安装程序中途报错，实际上未安装成功。",
+          "service_name": null,
+          "impact": "仅本人",
+          "priority": "P3"
+        },
+        "draft_id": "draft-c6c7dfb2e9454bd29516923ea05bfc02",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-661e1588-a-dev-15-alice",
+    "bob": "p8-661e1588-a-dev-15-bob"
+  },
+  "threads": {
+    "primary": "82eab3e82df3482eb216fbcdeb6007f2",
+    "secondary": "200ddcb7d3754f03a1a210471d6e0a0d"
+  },
+  "seconds": 5.295666999999412,
+  "final_ticket_count": 0,
+  "final_draft_version": 1,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "c120e92a334b4d1d9eb13e830c38b4ee",
+    "0be40583c6e04656aab331aa4e1b3689"
+  ]
+}

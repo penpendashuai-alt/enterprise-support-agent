@@ -1,0 +1,1174 @@
+{
+  "planned": 60,
+  "unexecuted": [],
+  "warmup_count": 20,
+  "conditions": {
+    "off": {
+      "attempted": 20,
+      "reviewed": 0,
+      "successful": 0,
+      "cache_states": {
+        "none": 20
+      },
+      "http_statuses": {
+        "200": 20
+      },
+      "all_http_responses": {
+        "n": 20,
+        "mean_seconds": 3.970386750000034,
+        "p50_seconds": 3.8137356500010355,
+        "p95_seconds_nearest_rank": 6.774800899991533
+      },
+      "successful_responses": {
+        "n": 0,
+        "mean_seconds": null,
+        "p50_seconds": null,
+        "p95_seconds_nearest_rank": null
+      },
+      "query_cluster_95_all_responses": {
+        "mean_seconds": [
+          3.4411573299992595,
+          4.567841875000158
+        ],
+        "p50_seconds": [
+          3.5259205999973346,
+          4.249913700004981
+        ],
+        "p95_seconds_nearest_rank": [
+          4.485408100008499,
+          7.1894555000035325
+        ]
+      },
+      "unique_queries": 20,
+      "stages_all_responses": {
+        "answer_validation": {
+          "n": 20,
+          "mean_seconds": 0.0001218,
+          "p50_seconds": 0.00011700000000000001,
+          "p95_seconds_nearest_rank": 0.000179
+        },
+        "business_database": {
+          "n": 20,
+          "mean_seconds": 0.01461115,
+          "p50_seconds": 0.0145215,
+          "p95_seconds_nearest_rank": 0.017502
+        },
+        "execution_wait": {
+          "n": 20,
+          "mean_seconds": 8.1e-06,
+          "p50_seconds": 8e-06,
+          "p95_seconds_nearest_rank": 1e-05
+        },
+        "handler": {
+          "n": 17,
+          "mean_seconds": 2.297578411764706,
+          "p50_seconds": 2.0104960000000003,
+          "p95_seconds_nearest_rank": 5.055589
+        },
+        "model_wait": {
+          "n": 20,
+          "mean_seconds": 2.32e-05,
+          "p50_seconds": 2.3500000000000002e-05,
+          "p95_seconds_nearest_rank": 3.4e-05
+        },
+        "ownership": {
+          "n": 20,
+          "mean_seconds": 0.01613345,
+          "p50_seconds": 0.0159525,
+          "p95_seconds_nearest_rank": 0.019282
+        },
+        "ownership_preflight": {
+          "n": 20,
+          "mean_seconds": 0.002826,
+          "p50_seconds": 0.0027765000000000003,
+          "p95_seconds_nearest_rank": 0.0034049999999999996
+        },
+        "preferences": {
+          "n": 17,
+          "mean_seconds": 0.0033111764705882354,
+          "p50_seconds": 0.002891,
+          "p95_seconds_nearest_rank": 0.006928
+        },
+        "rate_check": {
+          "n": 20,
+          "mean_seconds": 0.00101375,
+          "p50_seconds": 0.000962,
+          "p95_seconds_nearest_rank": 0.0013700000000000001
+        },
+        "router": {
+          "n": 20,
+          "mean_seconds": 1.7581139000000001,
+          "p50_seconds": 1.77848,
+          "p95_seconds_nearest_rank": 2.072641
+        },
+        "thread_wait": {
+          "n": 20,
+          "mean_seconds": 1.0399999999999999e-05,
+          "p50_seconds": 8.999999999999999e-06,
+          "p95_seconds_nearest_rank": 1.4e-05
+        }
+      },
+      "requests": [
+        {
+          "case_id": "perf-pilot-off-r-dev-email-policy-3-r1",
+          "query_cluster": "a77dd7ea040c33dc892b99cbd46dbb7dc9c32dc64480ce3660317ed866d6d4a8",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 2.3342728999996325,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "no_answer",
+          "cache": "none",
+          "stage_seconds": {
+            "rate_check": 0.0009649999999999999,
+            "thread_wait": 1e-05,
+            "execution_wait": 8e-06,
+            "business_database": 0.013545999999999999,
+            "ownership": 0.015026,
+            "ownership_preflight": 0.0027400000000000002,
+            "model_wait": 1.1e-05,
+            "router": 2.084264,
+            "answer_validation": 7.9e-05
+          }
+        },
+        {
+          "case_id": "perf-pilot-off-r-dev-github-sso-3-r1",
+          "query_cluster": "e99a868288893b86a0b52972d43d71f3f99f31c0b2056e4ecdee82a828de0b3d",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 7.1894555000035325,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "none",
+          "stage_seconds": {
+            "rate_check": 0.0010249999999999999,
+            "thread_wait": 8e-06,
+            "execution_wait": 8e-06,
+            "business_database": 0.015608,
+            "ownership": 0.017046,
+            "ownership_preflight": 0.002591,
+            "model_wait": 3.9e-05,
+            "router": 1.8721590000000001,
+            "preferences": 0.006928,
+            "handler": 5.055589,
+            "answer_validation": 0.000116
+          }
+        },
+        {
+          "case_id": "perf-pilot-off-r-dev-github-sso-1-r1",
+          "query_cluster": "c45729f5f1e7eeee7dae11634ed27418c62be91c5e9f084ce32af820349dd6d8",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 6.774800899991533,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "none",
+          "stage_seconds": {
+            "rate_check": 0.000838,
+            "thread_wait": 1.3e-05,
+            "execution_wait": 8e-06,
+            "business_database": 0.013045999999999999,
+            "ownership": 0.014435,
+            "ownership_preflight": 0.002682,
+            "model_wait": 3.4e-05,
+            "router": 1.7791130000000002,
+            "preferences": 0.006082,
+            "handler": 4.724129,
+            "answer_validation": 0.000114
+          }
+        },
+        {
+          "case_id": "perf-pilot-off-r-dev-printer-paper-1-r1",
+          "query_cluster": "f4bcf80a78e87a90514dec0fb94439f63b74595009c651eff92c8ee1ba48e068",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 3.3893360999936704,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "none",
+          "stage_seconds": {
+            "rate_check": 0.0010329999999999998,
+            "thread_wait": 1.4e-05,
+            "execution_wait": 1e-05,
+            "business_database": 0.014054,
+            "ownership": 0.015596,
+            "ownership_preflight": 0.0030459999999999997,
+            "model_wait": 3.1e-05,
+            "router": 1.394884,
+            "preferences": 0.002891,
+            "handler": 1.679939,
+            "answer_validation": 0.00011700000000000001
+          }
+        },
+        {
+          "case_id": "perf-pilot-off-r-dev-ticket-priority-3-r1",
+          "query_cluster": "08f17a650c2e82ed3bd4922d36f4fb6eee90cb7f1a9dd03402375beafbd06546",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 3.5085842999978922,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "none",
+          "stage_seconds": {
+            "rate_check": 0.000885,
+            "thread_wait": 1.3e-05,
+            "execution_wait": 1e-05,
+            "business_database": 0.014288,
+            "ownership": 0.015644,
+            "ownership_preflight": 0.00281,
+            "model_wait": 2.1000000000000002e-05,
+            "router": 1.422348,
+            "preferences": 0.002592,
+            "handler": 1.837126,
+            "answer_validation": 0.00011899999999999999
+          }
+        },
+        {
+          "case_id": "perf-pilot-off-r-dev-mfa-lost-1-r1",
+          "query_cluster": "de69f6d9f46aa595ef117aa6ddb9eb0b2b60364056605c4454ca54405008129e",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 4.172152700004517,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "none",
+          "stage_seconds": {
+            "rate_check": 0.001046,
+            "thread_wait": 1.3e-05,
+            "execution_wait": 1e-05,
+            "business_database": 0.015005000000000001,
+            "ownership": 0.016274999999999998,
+            "ownership_preflight": 0.003008,
+            "model_wait": 2.2e-05,
+            "router": 1.5908499999999999,
+            "preferences": 0.002665,
+            "handler": 2.207432,
+            "answer_validation": 0.000112
+          }
+        },
+        {
+          "case_id": "perf-pilot-off-r-dev-vpn-policy-3-r1",
+          "query_cluster": "9f03c87ea43998452610b467add484447ebf498c10b47e6674d8a41f54c47fdc",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 4.249219899997115,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "none",
+          "stage_seconds": {
+            "rate_check": 0.0011539999999999999,
+            "thread_wait": 1.1e-05,
+            "execution_wait": 7e-06,
+            "business_database": 0.016027,
+            "ownership": 0.017763,
+            "ownership_preflight": 0.0035259999999999996,
+            "model_wait": 2.4e-05,
+            "router": 1.847126,
+            "preferences": 0.002988,
+            "handler": 2.1389720000000003,
+            "answer_validation": 0.000154
+          }
+        },
+        {
+          "case_id": "perf-pilot-off-r-dev-git-permissions-1-r1",
+          "query_cluster": "e011cf257c80d97d3da45c00bb0dcbccf3280c7a3b87fc93174ea8dfa1a93897",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 4.031938200001605,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "none",
+          "stage_seconds": {
+            "rate_check": 0.0010069999999999999,
+            "thread_wait": 8e-06,
+            "execution_wait": 8e-06,
+            "business_database": 0.012521000000000001,
+            "ownership": 0.014074999999999999,
+            "ownership_preflight": 0.0025139999999999997,
+            "model_wait": 2.3e-05,
+            "router": 1.780558,
+            "preferences": 0.0028889999999999996,
+            "handler": 1.9586459999999999,
+            "answer_validation": 0.000115
+          }
+        },
+        {
+          "case_id": "perf-pilot-off-r-dev-ticket-priority-1-r1",
+          "query_cluster": "efa6a7fdfac117da7cadf6024ff8baa2ca2e2a12194eaeeb4c1825c3fcb8ceaa",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 2.874423100001877,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "none",
+          "stage_seconds": {
+            "rate_check": 0.000861,
+            "thread_wait": 8.999999999999999e-06,
+            "execution_wait": 7e-06,
+            "business_database": 0.015458,
+            "ownership": 0.016841000000000002,
+            "ownership_preflight": 0.002657,
+            "model_wait": 2.4e-05,
+            "router": 1.800645,
+            "preferences": 0.002535,
+            "handler": 0.859677,
+            "answer_validation": 0.00011700000000000001
+          }
+        },
+        {
+          "case_id": "perf-pilot-off-r-dev-vpn-dns-1-r1",
+          "query_cluster": "ecf34185f31ef2e633054fba7a917fea69c5a9b57c87a1d7fddc0b3e311c8c74",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 3.758140200006892,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "none",
+          "stage_seconds": {
+            "rate_check": 0.000887,
+            "thread_wait": 8e-06,
+            "execution_wait": 7e-06,
+            "business_database": 0.013553,
+            "ownership": 0.014843,
+            "ownership_preflight": 0.0024289999999999997,
+            "model_wait": 2.4e-05,
+            "router": 1.427902,
+            "preferences": 0.002645,
+            "handler": 2.030862,
+            "answer_validation": 0.00014199999999999998
+          }
+        },
+        {
+          "case_id": "perf-pilot-off-r-dev-vpn-policy-1-r1",
+          "query_cluster": "af16e6fd080d4b605d6dec4a016fe8401c62cc01ec334581102d7aacf7884beb",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 1.894245099989348,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "no_answer",
+          "cache": "none",
+          "stage_seconds": {
+            "rate_check": 0.001031,
+            "thread_wait": 1.2e-05,
+            "execution_wait": 1e-05,
+            "business_database": 0.019886,
+            "ownership": 0.021897,
+            "ownership_preflight": 0.0034049999999999996,
+            "model_wait": 1.1e-05,
+            "router": 1.6850589999999999,
+            "answer_validation": 7.3e-05
+          }
+        },
+        {
+          "case_id": "perf-pilot-off-r-dev-printer-offline-1-r1",
+          "query_cluster": "c7955c6c45e6de401d3564f11bf488ec66f43bc2750ad05cc16651f78a52021d",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 4.690283200005069,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "none",
+          "stage_seconds": {
+            "rate_check": 0.0013700000000000001,
+            "thread_wait": 1.7e-05,
+            "execution_wait": 8e-06,
+            "business_database": 0.013673,
+            "ownership": 0.0152,
+            "ownership_preflight": 0.002951,
+            "model_wait": 2.8e-05,
+            "router": 1.769788,
+            "preferences": 0.003383,
+            "handler": 2.680793,
+            "answer_validation": 0.000118
+          }
+        },
+        {
+          "case_id": "perf-pilot-off-r-dev-data-link-1-r1",
+          "query_cluster": "5f983f38258f4bbf781c856a8a1ad6c2d2b382ed014c7236a61a2012a05cb235",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 3.543256899996777,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "none",
+          "stage_seconds": {
+            "rate_check": 0.000875,
+            "thread_wait": 8e-06,
+            "execution_wait": 7e-06,
+            "business_database": 0.010974,
+            "ownership": 0.012343999999999999,
+            "ownership_preflight": 0.002778,
+            "model_wait": 2.2e-05,
+            "router": 1.7719690000000001,
+            "preferences": 0.0033889999999999997,
+            "handler": 1.543259,
+            "answer_validation": 0.000121
+          }
+        },
+        {
+          "case_id": "perf-pilot-off-r-dev-vpn-809-1-r1",
+          "query_cluster": "adc6a3c992ce9dcf4009deb7e75272b5d44c4ea1ed5e67a6ab6a43e078a96843",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 5.013377399998717,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "none",
+          "stage_seconds": {
+            "rate_check": 0.000959,
+            "thread_wait": 8e-06,
+            "execution_wait": 7e-06,
+            "business_database": 0.012679000000000001,
+            "ownership": 0.014166999999999999,
+            "ownership_preflight": 0.002902,
+            "model_wait": 1.9e-05,
+            "router": 1.878833,
+            "preferences": 0.003042,
+            "handler": 2.87675,
+            "answer_validation": 0.000136
+          }
+        },
+        {
+          "case_id": "perf-pilot-off-r-dev-shared-readonly-1-r1",
+          "query_cluster": "c3a440aaba98073f0a78cbf7e7962e3656c0b6e9bf9ab6c5cf63cae4b058dd10",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 4.250607500012848,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "none",
+          "stage_seconds": {
+            "rate_check": 0.000933,
+            "thread_wait": 8.999999999999999e-06,
+            "execution_wait": 8e-06,
+            "business_database": 0.017502,
+            "ownership": 0.019282,
+            "ownership_preflight": 0.002775,
+            "model_wait": 2.6e-05,
+            "router": 1.9533340000000001,
+            "preferences": 0.002655,
+            "handler": 2.0104960000000003,
+            "answer_validation": 0.000133
+          }
+        },
+        {
+          "case_id": "perf-pilot-off-r-dev-email-policy-1-r1",
+          "query_cluster": "c48daf97610810043c4aa7712968b4256d3912530e04ee56c43678e67dc85041",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 3.6932027000002563,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "none",
+          "stage_seconds": {
+            "rate_check": 0.001751,
+            "thread_wait": 1.4e-05,
+            "execution_wait": 8.999999999999999e-06,
+            "business_database": 0.016535,
+            "ownership": 0.018123999999999998,
+            "ownership_preflight": 0.003,
+            "model_wait": 2.2e-05,
+            "router": 2.072641,
+            "preferences": 0.003215,
+            "handler": 1.3731849999999999,
+            "answer_validation": 0.000185
+          }
+        },
+        {
+          "case_id": "perf-pilot-off-r-dev-device-repair-1-r1",
+          "query_cluster": "f3f63bc637f9abefd3f263852732d0d58c8ec3a25d2286f6b4c9e2401a896717",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 3.869331099995179,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "none",
+          "stage_seconds": {
+            "rate_check": 0.000907,
+            "thread_wait": 8e-06,
+            "execution_wait": 7e-06,
+            "business_database": 0.014755,
+            "ownership": 0.016260999999999998,
+            "ownership_preflight": 0.002548,
+            "model_wait": 2.3e-05,
+            "router": 1.721279,
+            "preferences": 0.002555,
+            "handler": 1.9415930000000001,
+            "answer_validation": 0.000114
+          }
+        },
+        {
+          "case_id": "perf-pilot-off-r-dev-email-quota-1-r1",
+          "query_cluster": "784e96b1ce766a2001d3f19baffb816c970474749716356703fb9efab4a9e892",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 4.485408100008499,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "none",
+          "stage_seconds": {
+            "rate_check": 0.000862,
+            "thread_wait": 8.999999999999999e-06,
+            "execution_wait": 8e-06,
+            "business_database": 0.015013,
+            "ownership": 0.016475999999999998,
+            "ownership_preflight": 0.002706,
+            "model_wait": 2.4e-05,
+            "router": 1.8091700000000002,
+            "preferences": 0.0027919999999999998,
+            "handler": 2.4174670000000003,
+            "answer_validation": 0.000179
+          }
+        },
+        {
+          "case_id": "perf-pilot-off-r-dev-vpn-809-3-r1",
+          "query_cluster": "59c672bacdeabbf29f6590d72302be8e6c9349f57fd349dffa6b58c7c6ad5796",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 1.9979697999951895,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "no_answer",
+          "cache": "none",
+          "stage_seconds": {
+            "rate_check": 0.000989,
+            "thread_wait": 8.999999999999999e-06,
+            "execution_wait": 8e-06,
+            "business_database": 0.015291,
+            "ownership": 0.017011,
+            "ownership_preflight": 0.002661,
+            "model_wait": 1.1e-05,
+            "router": 1.777847,
+            "answer_validation": 8e-05
+          }
+        },
+        {
+          "case_id": "perf-pilot-off-r-dev-account-offboard-1-r1",
+          "query_cluster": "c28d67caecfc3aa36f4720dfb7a43b3763e4029b68c27330c178e0882e94b75d",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 3.687729400000535,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "none",
+          "stage_seconds": {
+            "rate_check": 0.000897,
+            "thread_wait": 7e-06,
+            "execution_wait": 7e-06,
+            "business_database": 0.012809,
+            "ownership": 0.014362999999999999,
+            "ownership_preflight": 0.002791,
+            "model_wait": 2.5e-05,
+            "router": 1.722509,
+            "preferences": 0.003044,
+            "handler": 1.722918,
+            "answer_validation": 0.000112
+          }
+        }
+      ]
+    },
+    "warm": {
+      "attempted": 20,
+      "reviewed": 0,
+      "successful": 0,
+      "cache_states": {
+        "miss": 4,
+        "hit": 16
+      },
+      "http_statuses": {
+        "200": 20
+      },
+      "all_http_responses": {
+        "n": 20,
+        "mean_seconds": 3.8264265199984946,
+        "p50_seconds": 3.744396649992268,
+        "p95_seconds_nearest_rank": 5.012669599993387
+      },
+      "successful_responses": {
+        "n": 0,
+        "mean_seconds": null,
+        "p50_seconds": null,
+        "p95_seconds_nearest_rank": null
+      },
+      "query_cluster_95_all_responses": {
+        "mean_seconds": [
+          3.3819923899995046,
+          4.343375929998001
+        ],
+        "p50_seconds": [
+          3.5561930500043673,
+          4.122792449998087
+        ],
+        "p95_seconds_nearest_rank": [
+          4.369574399999692,
+          7.216347900000983
+        ]
+      },
+      "unique_queries": 20,
+      "stages_all_responses": {
+        "answer_validation": {
+          "n": 20,
+          "mean_seconds": 0.0001331,
+          "p50_seconds": 0.00011949999999999999,
+          "p95_seconds_nearest_rank": 0.00017199999999999998
+        },
+        "business_database": {
+          "n": 20,
+          "mean_seconds": 0.01709005,
+          "p50_seconds": 0.0140125,
+          "p95_seconds_nearest_rank": 0.018361000000000002
+        },
+        "execution_wait": {
+          "n": 20,
+          "mean_seconds": 1.03e-05,
+          "p50_seconds": 8e-06,
+          "p95_seconds_nearest_rank": 1.1e-05
+        },
+        "handler": {
+          "n": 17,
+          "mean_seconds": 2.242385882352941,
+          "p50_seconds": 2.0530019999999998,
+          "p95_seconds_nearest_rank": 5.325164
+        },
+        "model_wait": {
+          "n": 20,
+          "mean_seconds": 2.355e-05,
+          "p50_seconds": 2.3e-05,
+          "p95_seconds_nearest_rank": 3.4e-05
+        },
+        "ownership": {
+          "n": 20,
+          "mean_seconds": 0.01856985,
+          "p50_seconds": 0.0154795,
+          "p95_seconds_nearest_rank": 0.020883
+        },
+        "ownership_preflight": {
+          "n": 20,
+          "mean_seconds": 0.00293795,
+          "p50_seconds": 0.0028905,
+          "p95_seconds_nearest_rank": 0.0038599999999999997
+        },
+        "preferences": {
+          "n": 17,
+          "mean_seconds": 0.003138705882352941,
+          "p50_seconds": 0.002892,
+          "p95_seconds_nearest_rank": 0.006486
+        },
+        "rate_check": {
+          "n": 20,
+          "mean_seconds": 0.0010062,
+          "p50_seconds": 0.0009895,
+          "p95_seconds_nearest_rank": 0.001186
+        },
+        "router": {
+          "n": 20,
+          "mean_seconds": 1.8114137000000001,
+          "p50_seconds": 1.8211220000000001,
+          "p95_seconds_nearest_rank": 2.115785
+        },
+        "thread_wait": {
+          "n": 20,
+          "mean_seconds": 1.0199999999999999e-05,
+          "p50_seconds": 8.999999999999999e-06,
+          "p95_seconds_nearest_rank": 1.4e-05
+        }
+      },
+      "requests": [
+        {
+          "case_id": "perf-pilot-warm-r-dev-email-policy-3-r1",
+          "query_cluster": "a77dd7ea040c33dc892b99cbd46dbb7dc9c32dc64480ce3660317ed866d6d4a8",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 2.246781199995894,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "no_answer",
+          "cache": "miss",
+          "stage_seconds": {
+            "rate_check": 0.000941,
+            "thread_wait": 7e-06,
+            "execution_wait": 7e-06,
+            "business_database": 0.01436,
+            "ownership": 0.016088,
+            "ownership_preflight": 0.002634,
+            "model_wait": 1.1e-05,
+            "router": 1.986608,
+            "answer_validation": 0.000115
+          }
+        },
+        {
+          "case_id": "perf-pilot-warm-r-dev-github-sso-3-r1",
+          "query_cluster": "e99a868288893b86a0b52972d43d71f3f99f31c0b2056e4ecdee82a828de0b3d",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 4.402616500010481,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "hit",
+          "stage_seconds": {
+            "rate_check": 0.0010149999999999998,
+            "thread_wait": 8.999999999999999e-06,
+            "execution_wait": 8e-06,
+            "business_database": 0.011741,
+            "ownership": 0.012961,
+            "ownership_preflight": 0.0024700000000000004,
+            "model_wait": 2.6e-05,
+            "router": 1.9606320000000002,
+            "preferences": 0.004188,
+            "handler": 2.383998,
+            "answer_validation": 0.000118
+          }
+        },
+        {
+          "case_id": "perf-pilot-warm-r-dev-github-sso-1-r1",
+          "query_cluster": "c45729f5f1e7eeee7dae11634ed27418c62be91c5e9f084ce32af820349dd6d8",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 7.216347900000983,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "hit",
+          "stage_seconds": {
+            "rate_check": 0.001186,
+            "thread_wait": 1.4e-05,
+            "execution_wait": 1e-05,
+            "business_database": 0.018361000000000002,
+            "ownership": 0.020883,
+            "ownership_preflight": 0.002992,
+            "model_wait": 4.2999999999999995e-05,
+            "router": 1.8183340000000001,
+            "preferences": 0.006486,
+            "handler": 5.325164,
+            "answer_validation": 0.000114
+          }
+        },
+        {
+          "case_id": "perf-pilot-warm-r-dev-printer-paper-1-r1",
+          "query_cluster": "f4bcf80a78e87a90514dec0fb94439f63b74595009c651eff92c8ee1ba48e068",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 4.369574399999692,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "hit",
+          "stage_seconds": {
+            "rate_check": 0.000983,
+            "thread_wait": 7e-06,
+            "execution_wait": 7e-06,
+            "business_database": 0.014,
+            "ownership": 0.015547,
+            "ownership_preflight": 0.002644,
+            "model_wait": 2.2e-05,
+            "router": 2.115785,
+            "preferences": 0.002663,
+            "handler": 2.1920949999999997,
+            "answer_validation": 0.000148
+          }
+        },
+        {
+          "case_id": "perf-pilot-warm-r-dev-ticket-priority-3-r1",
+          "query_cluster": "08f17a650c2e82ed3bd4922d36f4fb6eee90cb7f1a9dd03402375beafbd06546",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 3.5960958000068786,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "hit",
+          "stage_seconds": {
+            "rate_check": 0.000982,
+            "thread_wait": 8e-06,
+            "execution_wait": 7e-06,
+            "business_database": 0.012662000000000001,
+            "ownership": 0.014077,
+            "ownership_preflight": 0.002796,
+            "model_wait": 2.2e-05,
+            "router": 1.75356,
+            "preferences": 0.0033610000000000003,
+            "handler": 1.781935,
+            "answer_validation": 0.00011700000000000001
+          }
+        },
+        {
+          "case_id": "perf-pilot-warm-r-dev-mfa-lost-1-r1",
+          "query_cluster": "de69f6d9f46aa595ef117aa6ddb9eb0b2b60364056605c4454ca54405008129e",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 3.700551899994025,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "hit",
+          "stage_seconds": {
+            "rate_check": 0.0009559999999999999,
+            "thread_wait": 8.999999999999999e-06,
+            "execution_wait": 8e-06,
+            "business_database": 0.018071999999999998,
+            "ownership": 0.019542999999999998,
+            "ownership_preflight": 0.003032,
+            "model_wait": 2.4e-05,
+            "router": 1.8239100000000001,
+            "preferences": 0.0025800000000000003,
+            "handler": 1.813443,
+            "answer_validation": 0.000148
+          }
+        },
+        {
+          "case_id": "perf-pilot-warm-r-dev-vpn-policy-3-r1",
+          "query_cluster": "9f03c87ea43998452610b467add484447ebf498c10b47e6674d8a41f54c47fdc",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 4.011977300004219,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "hit",
+          "stage_seconds": {
+            "rate_check": 0.000925,
+            "thread_wait": 1.2e-05,
+            "execution_wait": 1.1e-05,
+            "business_database": 0.013303,
+            "ownership": 0.014567,
+            "ownership_preflight": 0.002663,
+            "model_wait": 2.2e-05,
+            "router": 2.029592,
+            "preferences": 0.003354,
+            "handler": 1.9235440000000001,
+            "answer_validation": 0.000115
+          }
+        },
+        {
+          "case_id": "perf-pilot-warm-r-dev-git-permissions-1-r1",
+          "query_cluster": "e011cf257c80d97d3da45c00bb0dcbccf3280c7a3b87fc93174ea8dfa1a93897",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 3.841397899988806,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "hit",
+          "stage_seconds": {
+            "rate_check": 0.001009,
+            "thread_wait": 8e-06,
+            "execution_wait": 7e-06,
+            "business_database": 0.012111,
+            "ownership": 0.013534000000000001,
+            "ownership_preflight": 0.002386,
+            "model_wait": 2.2e-05,
+            "router": 1.388782,
+            "preferences": 0.003442,
+            "handler": 2.39407,
+            "answer_validation": 0.000118
+          }
+        },
+        {
+          "case_id": "perf-pilot-warm-r-dev-ticket-priority-1-r1",
+          "query_cluster": "efa6a7fdfac117da7cadf6024ff8baa2ca2e2a12194eaeeb4c1825c3fcb8ceaa",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 3.2201129000022775,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "hit",
+          "stage_seconds": {
+            "rate_check": 0.001089,
+            "thread_wait": 1.4e-05,
+            "execution_wait": 8.999999999999999e-06,
+            "business_database": 0.014088,
+            "ownership": 0.01557,
+            "ownership_preflight": 0.0030659999999999997,
+            "model_wait": 2.9e-05,
+            "router": 1.838303,
+            "preferences": 0.00263,
+            "handler": 1.3183040000000001,
+            "answer_validation": 0.00011899999999999999
+          }
+        },
+        {
+          "case_id": "perf-pilot-warm-r-dev-vpn-dns-1-r1",
+          "query_cluster": "ecf34185f31ef2e633054fba7a917fea69c5a9b57c87a1d7fddc0b3e311c8c74",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 3.516290300001856,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "hit",
+          "stage_seconds": {
+            "rate_check": 0.000843,
+            "thread_wait": 8e-06,
+            "execution_wait": 7e-06,
+            "business_database": 0.013805999999999999,
+            "ownership": 0.015116,
+            "ownership_preflight": 0.003033,
+            "model_wait": 2.5e-05,
+            "router": 1.4016110000000002,
+            "preferences": 0.0025859999999999998,
+            "handler": 2.0530019999999998,
+            "answer_validation": 0.000129
+          }
+        },
+        {
+          "case_id": "perf-pilot-warm-r-dev-vpn-policy-1-r1",
+          "query_cluster": "af16e6fd080d4b605d6dec4a016fe8401c62cc01ec334581102d7aacf7884beb",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 2.1199007999966852,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "no_answer",
+          "cache": "miss",
+          "stage_seconds": {
+            "rate_check": 0.0009320000000000001,
+            "thread_wait": 8.999999999999999e-06,
+            "execution_wait": 7e-06,
+            "business_database": 0.015295999999999999,
+            "ownership": 0.016767,
+            "ownership_preflight": 0.0038599999999999997,
+            "model_wait": 1.7e-05,
+            "router": 1.8157070000000002,
+            "answer_validation": 0.000101
+          }
+        },
+        {
+          "case_id": "perf-pilot-warm-r-dev-printer-offline-1-r1",
+          "query_cluster": "c7955c6c45e6de401d3564f11bf488ec66f43bc2750ad05cc16651f78a52021d",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 4.580383699998492,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "hit",
+          "stage_seconds": {
+            "rate_check": 0.001177,
+            "thread_wait": 1.1e-05,
+            "execution_wait": 8e-06,
+            "business_database": 0.012679000000000001,
+            "ownership": 0.013974,
+            "ownership_preflight": 0.002569,
+            "model_wait": 2.5e-05,
+            "router": 2.206801,
+            "preferences": 0.002892,
+            "handler": 2.3135689999999998,
+            "answer_validation": 0.000125
+          }
+        },
+        {
+          "case_id": "perf-pilot-warm-r-dev-data-link-1-r1",
+          "query_cluster": "5f983f38258f4bbf781c856a8a1ad6c2d2b382ed014c7236a61a2012a05cb235",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 3.763642099991557,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "hit",
+          "stage_seconds": {
+            "rate_check": 0.0009649999999999999,
+            "thread_wait": 8.999999999999999e-06,
+            "execution_wait": 8e-06,
+            "business_database": 0.015109,
+            "ownership": 0.016573,
+            "ownership_preflight": 0.002487,
+            "model_wait": 2.3e-05,
+            "router": 1.47276,
+            "preferences": 0.002533,
+            "handler": 2.230601,
+            "answer_validation": 0.00017199999999999998
+          }
+        },
+        {
+          "case_id": "perf-pilot-warm-r-dev-vpn-809-1-r1",
+          "query_cluster": "adc6a3c992ce9dcf4009deb7e75272b5d44c4ea1ed5e67a6ab6a43e078a96843",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 5.012669599993387,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "miss",
+          "stage_seconds": {
+            "rate_check": 0.0008399999999999999,
+            "thread_wait": 1.2e-05,
+            "execution_wait": 4.6e-05,
+            "business_database": 0.017414000000000002,
+            "ownership": 0.018949999999999998,
+            "ownership_preflight": 0.0031520000000000003,
+            "model_wait": 2.4e-05,
+            "router": 1.837234,
+            "preferences": 0.002548,
+            "handler": 2.891529,
+            "answer_validation": 0.000162
+          }
+        },
+        {
+          "case_id": "perf-pilot-warm-r-dev-shared-readonly-1-r1",
+          "query_cluster": "c3a440aaba98073f0a78cbf7e7962e3656c0b6e9bf9ab6c5cf63cae4b058dd10",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 3.5978109999996377,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "hit",
+          "stage_seconds": {
+            "rate_check": 0.000996,
+            "thread_wait": 8e-06,
+            "execution_wait": 8e-06,
+            "business_database": 0.067736,
+            "ownership": 0.069133,
+            "ownership_preflight": 0.002763,
+            "model_wait": 2.6e-05,
+            "router": 1.60683,
+            "preferences": 0.0029300000000000003,
+            "handler": 1.871968,
+            "answer_validation": 0.000199
+          }
+        },
+        {
+          "case_id": "perf-pilot-warm-r-dev-email-policy-1-r1",
+          "query_cluster": "c48daf97610810043c4aa7712968b4256d3912530e04ee56c43678e67dc85041",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 3.454140300003928,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "hit",
+          "stage_seconds": {
+            "rate_check": 0.000857,
+            "thread_wait": 1.2e-05,
+            "execution_wait": 8.999999999999999e-06,
+            "business_database": 0.013859,
+            "ownership": 0.015191000000000001,
+            "ownership_preflight": 0.0032679999999999996,
+            "model_wait": 2.3e-05,
+            "router": 1.6524,
+            "preferences": 0.002801,
+            "handler": 1.741965,
+            "answer_validation": 0.00011999999999999999
+          }
+        },
+        {
+          "case_id": "perf-pilot-warm-r-dev-device-repair-1-r1",
+          "query_cluster": "f3f63bc637f9abefd3f263852732d0d58c8ec3a25d2286f6b4c9e2401a896717",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 3.725151199992979,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "hit",
+          "stage_seconds": {
+            "rate_check": 0.0011020000000000001,
+            "thread_wait": 1.2e-05,
+            "execution_wait": 1e-05,
+            "business_database": 0.013382999999999999,
+            "ownership": 0.014891999999999999,
+            "ownership_preflight": 0.002791,
+            "model_wait": 2e-05,
+            "router": 1.8308879999999998,
+            "preferences": 0.002375,
+            "handler": 1.832881,
+            "answer_validation": 0.000116
+          }
+        },
+        {
+          "case_id": "perf-pilot-warm-r-dev-email-quota-1-r1",
+          "query_cluster": "784e96b1ce766a2001d3f19baffb816c970474749716356703fb9efab4a9e892",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 4.233607599991956,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "hit",
+          "stage_seconds": {
+            "rate_check": 0.001067,
+            "thread_wait": 8e-06,
+            "execution_wait": 8e-06,
+            "business_database": 0.012835000000000001,
+            "ownership": 0.014185,
+            "ownership_preflight": 0.002985,
+            "model_wait": 3.4e-05,
+            "router": 1.794532,
+            "preferences": 0.003054,
+            "handler": 2.37976,
+            "answer_validation": 0.000165
+          }
+        },
+        {
+          "case_id": "perf-pilot-warm-r-dev-vpn-809-3-r1",
+          "query_cluster": "59c672bacdeabbf29f6590d72302be8e6c9349f57fd349dffa6b58c7c6ad5796",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 2.071812399997725,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "no_answer",
+          "cache": "miss",
+          "stage_seconds": {
+            "rate_check": 0.001195,
+            "thread_wait": 1.4e-05,
+            "execution_wait": 1.1e-05,
+            "business_database": 0.016960999999999997,
+            "ownership": 0.018434000000000002,
+            "ownership_preflight": 0.0038889999999999997,
+            "model_wait": 1.2e-05,
+            "router": 1.77977,
+            "answer_validation": 0.00010899999999999999
+          }
+        },
+        {
+          "case_id": "perf-pilot-warm-r-dev-account-offboard-1-r1",
+          "query_cluster": "c28d67caecfc3aa36f4720dfb7a43b3763e4029b68c27330c178e0882e94b75d",
+          "status": "completed",
+          "http_status": 200,
+          "seconds": 3.847665599998436,
+          "semantic_success": null,
+          "success": false,
+          "citation_check": "valid_numbers",
+          "cache": "hit",
+          "stage_seconds": {
+            "rate_check": 0.001064,
+            "thread_wait": 1.3e-05,
+            "execution_wait": 1e-05,
+            "business_database": 0.014025000000000001,
+            "ownership": 0.015412,
+            "ownership_preflight": 0.003279,
+            "model_wait": 2.1000000000000002e-05,
+            "router": 2.1142350000000003,
+            "preferences": 0.002935,
+            "handler": 1.6727319999999999,
+            "answer_validation": 0.000152
+          }
+        }
+      ]
+    }
+  },
+  "ttft": "not applicable: complete response buffered and validated",
+  "scope": "Single-worker serial synthetic questions; all response latency includes incorrect answers; successful latency requires explicit non-independent semantic review; intended warm condition may miss due to query rewrite or TTL. No production traffic inference."
+}

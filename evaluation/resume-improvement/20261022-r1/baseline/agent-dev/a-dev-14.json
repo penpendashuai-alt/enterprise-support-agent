@@ -1,0 +1,76 @@
+{
+  "run_id": "661e1588388341f39110300686cf0e61",
+  "case_id": "a-dev-14",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T08:04:45.825527+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "建一个邮箱工单：我个人收不到外部邮件。请帮我检查规则，检查目前还没开始；不要写成我已经检查过。",
+      "http_status": 200,
+      "seconds": 4.519847499999742,
+      "request_id": "77c7766fab674b16aa4b617b3e9909f2",
+      "server_timing": "rate_check;dur=1.107, thread_wait;dur=0.009, execution_wait;dur=0.008, business_database;dur=14.239, ownership;dur=16.154, ownership_preflight;dur=2.905, model_wait;dur=0.021, router;dur=2352.189, draft;dur=2120.676",
+      "response": {
+        "type": "ai",
+        "content": "请补充影响范围。工单尚未提交；信息齐全后会展示草稿供你确认。未指定优先级时使用演示默认值 P3。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162a4-2089-7f30-aadc-cadc940a5111",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "邮箱",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "个人收不到外部邮件，需要检查规则，检查目前还没开始",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "approval_status": "collecting"
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-661e1588-a-dev-14-alice",
+    "bob": "p8-661e1588-a-dev-14-bob"
+  },
+  "threads": {
+    "primary": "ad9f99d0ac1948d6803a47d20e5797db",
+    "secondary": "ff324683b20c4dc7be72455f12d1963b"
+  },
+  "seconds": 4.683977599999707,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": false,
+    "failures": [
+      {
+        "stage": "approval_storage",
+        "turn": 0,
+        "reason": "response_kind"
+      }
+    ],
+    "metrics": {}
+  },
+  "model_calls": [
+    "aae7c7803969468d83527571cacd4490",
+    "0f98727a9973420c92df29c06334c5a1"
+  ]
+}

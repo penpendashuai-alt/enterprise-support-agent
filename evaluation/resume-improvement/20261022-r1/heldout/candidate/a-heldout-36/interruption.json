@@ -1,0 +1,12 @@
+{
+  "case_id": "a-heldout-36",
+  "classification": "infrastructure_error",
+  "record_sha256": "6788d039d1ada481699da1d5d2684a547dc0f681d629826307f0736ae5cbb112",
+  "primary_outcome": "failed_retained_without_replay",
+  "reason": "PostgreSQL server closed connection after first draft; audit finally also raised PoolTimeout during Docker migration interruption",
+  "completed_turns": 1,
+  "unknown_provider_usage": false,
+  "raw_record_preserved": true,
+  "documented_at": "2026-10-23T04:16:24.007366+00:00",
+  "followup": "Continue remaining planned slots; any recovery replay is supplemental, outside primary 40-pair result"
+}

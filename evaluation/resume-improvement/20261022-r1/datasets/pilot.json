@@ -1,0 +1,348 @@
+{
+  "version": "resume-pilot-v1",
+  "description": "Independent connectivity only; excluded from official dev and heldout. Process restart checked in final demo.",
+  "cases": [
+    {
+      "case_id": "pilot-knowledge",
+      "family_id": "pilot-knowledge",
+      "split": "dev",
+      "category": "connection_pilot",
+      "tags": [],
+      "version": "agent-v1",
+      "source": "assistant-authored synthetic scenario; not independently annotated",
+      "layer": "agent",
+      "answerability": "not_applicable",
+      "turns": [
+        {
+          "operation": "user",
+          "text": "演示知识库中，会议摄像头无画面应先检查哪些项目？",
+          "user": "alice",
+          "thread": "primary",
+          "stream": false,
+          "values": {},
+          "allowed_intents": [],
+          "required_tools": [],
+          "allowed_tools": [
+            "query_service_status"
+          ],
+          "expected_http": 200,
+          "expected_kind": null,
+          "expected_entities": {},
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [],
+      "forbidden_claims": [],
+      "final_ticket_count": 0,
+      "final_draft_version": null,
+      "review_required": true,
+      "fault": "none",
+      "expected_termination": "completed",
+      "dependencies": [
+        "postgres",
+        "redis",
+        "chat",
+        "optional_qdrant_embedding",
+        "mock_read_only_tools"
+      ]
+    },
+    {
+      "case_id": "pilot-no-answer",
+      "family_id": "pilot-no-answer",
+      "split": "dev",
+      "category": "connection_pilot",
+      "tags": [],
+      "version": "agent-v1",
+      "source": "assistant-authored synthetic scenario; not independently annotated",
+      "layer": "agent",
+      "answerability": "not_applicable",
+      "turns": [
+        {
+          "operation": "user",
+          "text": "公司每人每年的培训报销额度具体是多少元？",
+          "user": "alice",
+          "thread": "primary",
+          "stream": false,
+          "values": {},
+          "allowed_intents": [],
+          "required_tools": [],
+          "allowed_tools": [],
+          "expected_http": 200,
+          "expected_kind": null,
+          "expected_entities": {},
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [],
+      "forbidden_claims": [],
+      "final_ticket_count": 0,
+      "final_draft_version": null,
+      "review_required": true,
+      "fault": "none",
+      "expected_termination": "completed",
+      "dependencies": [
+        "postgres",
+        "redis",
+        "chat",
+        "optional_qdrant_embedding",
+        "mock_read_only_tools"
+      ]
+    },
+    {
+      "case_id": "pilot-unavailable",
+      "family_id": "pilot-unavailable",
+      "split": "dev",
+      "category": "connection_pilot",
+      "tags": [],
+      "version": "agent-v1",
+      "source": "assistant-authored synthetic scenario; not independently annotated",
+      "layer": "agent",
+      "answerability": "not_applicable",
+      "turns": [
+        {
+          "operation": "user",
+          "text": "按企业规范，远程办公设备需要哪些防护？",
+          "user": "alice",
+          "thread": "primary",
+          "stream": false,
+          "values": {},
+          "allowed_intents": [],
+          "required_tools": [],
+          "allowed_tools": [],
+          "expected_http": 200,
+          "expected_kind": null,
+          "expected_entities": {},
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [],
+      "forbidden_claims": [],
+      "final_ticket_count": 0,
+      "final_draft_version": null,
+      "review_required": true,
+      "fault": "retrieval_unavailable",
+      "expected_termination": "completed",
+      "dependencies": [
+        "postgres",
+        "redis",
+        "chat",
+        "optional_qdrant_embedding",
+        "mock_read_only_tools"
+      ]
+    },
+    {
+      "case_id": "pilot-clarify",
+      "family_id": "pilot-clarify",
+      "split": "dev",
+      "category": "connection_pilot",
+      "tags": [],
+      "version": "agent-v1",
+      "source": "assistant-authored synthetic scenario; not independently annotated",
+      "layer": "agent",
+      "answerability": "not_applicable",
+      "turns": [
+        {
+          "operation": "user",
+          "text": "请为我创建打印故障工单，打印程序无法启动，影响范围未知。",
+          "user": "alice",
+          "thread": "primary",
+          "stream": false,
+          "values": {},
+          "allowed_intents": [],
+          "required_tools": [],
+          "allowed_tools": [],
+          "expected_http": 200,
+          "expected_kind": null,
+          "expected_entities": {},
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [],
+      "forbidden_claims": [],
+      "final_ticket_count": 0,
+      "final_draft_version": null,
+      "review_required": true,
+      "fault": "none",
+      "expected_termination": "completed",
+      "dependencies": [
+        "postgres",
+        "redis",
+        "chat",
+        "optional_qdrant_embedding",
+        "mock_read_only_tools"
+      ]
+    },
+    {
+      "case_id": "pilot-approval",
+      "family_id": "pilot-approval",
+      "split": "dev",
+      "category": "connection_pilot",
+      "tags": [],
+      "version": "agent-v1",
+      "source": "assistant-authored synthetic scenario; not independently annotated",
+      "layer": "agent",
+      "answerability": "not_applicable",
+      "turns": [
+        {
+          "operation": "user",
+          "text": "新建测试工单：邮箱昨天开始无法收取邮件，仅本人受影响，没做重装，优先级 P2。",
+          "user": "alice",
+          "thread": "primary",
+          "stream": false,
+          "values": {},
+          "allowed_intents": [],
+          "required_tools": [],
+          "allowed_tools": [],
+          "expected_http": 200,
+          "expected_kind": "ticket_approval",
+          "expected_entities": {},
+          "expected_ticket_count": 0
+        },
+        {
+          "operation": "edit",
+          "text": null,
+          "user": "alice",
+          "thread": "primary",
+          "stream": false,
+          "values": {
+            "impact": "所在小组四人"
+          },
+          "allowed_intents": [],
+          "required_tools": [],
+          "allowed_tools": [],
+          "expected_http": 200,
+          "expected_kind": null,
+          "expected_entities": {},
+          "expected_ticket_count": 0
+        },
+        {
+          "operation": "approve",
+          "text": null,
+          "user": "alice",
+          "thread": "primary",
+          "stream": false,
+          "values": {
+            "approval_version_offset": -1
+          },
+          "allowed_intents": [],
+          "required_tools": [],
+          "allowed_tools": [],
+          "expected_http": 409,
+          "expected_kind": null,
+          "expected_entities": {},
+          "expected_ticket_count": 0
+        },
+        {
+          "operation": "history",
+          "text": null,
+          "user": "alice",
+          "thread": "primary",
+          "stream": false,
+          "values": {},
+          "allowed_intents": [],
+          "required_tools": [],
+          "allowed_tools": [],
+          "expected_http": 200,
+          "expected_kind": null,
+          "expected_entities": {},
+          "expected_ticket_count": 0
+        },
+        {
+          "operation": "approve",
+          "text": null,
+          "user": "alice",
+          "thread": "primary",
+          "stream": false,
+          "values": {},
+          "allowed_intents": [],
+          "required_tools": [],
+          "allowed_tools": [],
+          "expected_http": 200,
+          "expected_kind": null,
+          "expected_entities": {},
+          "expected_ticket_count": 1
+        },
+        {
+          "operation": "approve",
+          "text": null,
+          "user": "alice",
+          "thread": "primary",
+          "stream": false,
+          "values": {},
+          "allowed_intents": [],
+          "required_tools": [],
+          "allowed_tools": [],
+          "expected_http": 200,
+          "expected_kind": null,
+          "expected_entities": {},
+          "expected_ticket_count": 1
+        }
+      ],
+      "points": [],
+      "forbidden_claims": [],
+      "final_ticket_count": 1,
+      "final_draft_version": 2,
+      "review_required": true,
+      "fault": "none",
+      "expected_termination": "completed",
+      "dependencies": [
+        "postgres",
+        "redis",
+        "chat",
+        "optional_qdrant_embedding",
+        "mock_read_only_tools"
+      ]
+    },
+    {
+      "case_id": "pilot-mock-status",
+      "family_id": "pilot-mock-status",
+      "split": "dev",
+      "category": "connection_pilot",
+      "tags": [],
+      "version": "agent-v1",
+      "source": "assistant-authored synthetic scenario; not independently annotated",
+      "layer": "agent",
+      "answerability": "not_applicable",
+      "turns": [
+        {
+          "operation": "user",
+          "text": "查询 GitHub 服务当前状态。",
+          "user": "alice",
+          "thread": "primary",
+          "stream": false,
+          "values": {},
+          "allowed_intents": [],
+          "required_tools": [
+            {
+              "name": "query_service_status",
+              "arguments": {
+                "service_name": "GitHub"
+              }
+            }
+          ],
+          "allowed_tools": [
+            "query_service_status"
+          ],
+          "expected_http": 200,
+          "expected_kind": null,
+          "expected_entities": {},
+          "expected_ticket_count": 0
+        }
+      ],
+      "points": [],
+      "forbidden_claims": [],
+      "final_ticket_count": 0,
+      "final_draft_version": null,
+      "review_required": true,
+      "fault": "none",
+      "expected_termination": "completed",
+      "dependencies": [
+        "postgres",
+        "redis",
+        "chat",
+        "optional_qdrant_embedding",
+        "mock_read_only_tools"
+      ]
+    }
+  ]
+}

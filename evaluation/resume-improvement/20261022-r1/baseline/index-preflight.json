@@ -1,0 +1,19 @@
+{
+  "kind": "index_manifest",
+  "owner": "enterprise-support-agent",
+  "status": "ready",
+  "index_version": "9ce657399b560e4dfc560134d8c84270fb2c861e2965727cfe38b2212aee0d6d",
+  "snapshot_id": "5b61873311a832a29a4289ef9607daf4391004fd8c00af146fd397bc19bf682c",
+  "corpus_hash": "5b61873311a832a29a4289ef9607daf4391004fd8c00af146fd397bc19bf682c",
+  "chunk_count": 72,
+  "contract": {
+    "provider": "dashscope",
+    "model": "text-embedding-v3",
+    "dimensions": 1024,
+    "distance": "cosine",
+    "chunk_size": 800,
+    "overlap": 100,
+    "preprocessing": "text-v1",
+    "chunker": "paragraph-char-v1"
+  }
+}

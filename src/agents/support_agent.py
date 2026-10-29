@@ -98,10 +98,13 @@ ALLOWED_TOOLS: dict[str, tuple[str, ...]] = {
 }
 
 ROUTER_PROMPT = """你是企业 IT 支持的内部路由器，只输出规定的结构化结果。
+检索查询必须保留用户原问题的对象、错误码、限制条件和各个子问题。完整独立的问题尽量保留原句，不改成关键词列表、不额外补入“审批流程”等原文没有的概念；只在确有指代或省略时用相关用户历史补全。
 knowledge_required 和 retrieval_query 必须输出。公司制度、内部操作指南以及 troubleshooting 故障排查需要知识库；检索问题结合相关历史补全为独立问题，例如“公司 VPN 使用要求”之后“那邮箱呢”应查询公司邮箱使用要求。普通概念问题如“VPN是什么”无需检索。service_status 和 ticket_request 只处理业务，不检索。无需检索时 retrieval_query=null。
 四类意图：general_question 一般知识或政策；troubleshooting 故障排查；
 service_status 服务运行状态查询；ticket_request 工单查询或创建诉求。
 明确要求创建/提交工单时优先 ticket_request，ticket_action=create，同时保留故障描述。
+要求“登记报障”“记录一个故障单”等登记动作同样属于创建诉求；只描述故障或询问如何排查不等于创建。是否创建不由出现“工单”两个字决定，更不能把引述或否定中的动作当成授权。
+仅查询用户明确给出的设备编号的配置/信息时，使用 troubleshooting 意图，完整提取 device_id，knowledge_required=false、retrieval_query=null，交给只读设备工具。设备实际配置不能从知识文档推断。若同时询问文档排障步骤才需要检索；不要把设备示例编号当作用户编号。
 查询工单时 ticket_action=query。其他意图的 ticket_action 和 ticket_id 必须清空。
 结合用户消息、澄清问题和上一轮实体理解续问：例如“服务挂了吗？”之后只回答“GitHub”，
 仍是 service_status。若用户改问其他问题，完整替换实体，不能沿用旧服务、设备或工单。
@@ -218,8 +221,18 @@ async def route_request(state: SupportState, config: RunnableConfig) -> dict:
     if trace := current.get():
         trace.metadata["intent"] = decision.intent
     needs_clarification = decision.needs_clarification or bool(question)
+    # A read-only device lookup shares the troubleshooting tool allowlist, but
+    # static documents cannot answer the device's current configuration. Keep
+    # forced retrieval for actual symptoms and for explicit document requests.
+    device_lookup_only = (
+        decision.intent == "troubleshooting"
+        and bool(entities.device_id)
+        and not entities.issue_description
+        and not decision.knowledge_required
+    )
     knowledge_required = (
-        decision.knowledge_required or decision.intent == "troubleshooting"
+        decision.knowledge_required
+        or (decision.intent == "troubleshooting" and not device_lookup_only)
     ) and decision.intent not in {"service_status", "ticket_request"}
     return {
         "knowledge_required": knowledge_required,

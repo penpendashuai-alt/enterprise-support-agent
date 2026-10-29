@@ -1,0 +1,71 @@
+{
+  "run_id": "8c2538260036404f9e425bfe17ca9cb8",
+  "case_id": "a-heldout-30",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T12:14:36.588519+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "工单号还没找到，INC-1001 是同事举的例子不是我的。查我自己的进展前还需要什么？",
+      "http_status": 200,
+      "seconds": 2.5585424000018975,
+      "http_response_seconds": 2.5554058000016084,
+      "request_id": "d1232ab0a1114ae2845d65235c971e94",
+      "server_timing": "rate_check;dur=2.677, thread_wait;dur=0.013, execution_wait;dur=0.010, business_database;dur=19.815, ownership;dur=21.417, ownership_preflight;dur=7.899, model_wait;dur=0.016, router;dur=2475.418",
+      "response": {
+        "type": "ai",
+        "content": "请提供要查询的工单编号，例如 INC-1001（模拟工单）。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16388-de4b-7a91-9766-d923d1ccc74a",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": "query"
+        },
+        "needs_clarification": true,
+        "clarification_question": "请提供要查询的工单编号，例如 INC-1001（模拟工单）。"
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-8c253826-a-heldout-30-alice",
+    "bob": "p8-8c253826-a-heldout-30-bob"
+  },
+  "threads": {
+    "primary": "ee66c3440efa4f2dbc58a7da358f2ab5",
+    "secondary": "42c809e839684548aa9a173a5ec30eaf"
+  },
+  "measurement": true,
+  "cache_condition": "disabled",
+  "seconds": 2.730341899998166,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "9db9c42adb3e4ea1a1f02d468a3ee03b"
+  ]
+}

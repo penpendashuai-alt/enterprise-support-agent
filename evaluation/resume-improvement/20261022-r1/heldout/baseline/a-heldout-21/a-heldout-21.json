@@ -1,0 +1,99 @@
+{
+  "run_id": "d59c3cb294db46eab21b2c7c0044eba5",
+  "case_id": "a-heldout-21",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T12:08:22.631524+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "创建工单：昨晚我重启后 VPN 好了一会儿，今天又坏了，只影响我。今天没重启，准备下班后再试。",
+      "http_status": 200,
+      "seconds": 4.339565500002209,
+      "http_response_seconds": 4.334980800002086,
+      "request_id": "2ced8777747e4d9d9aac58418947b9ea",
+      "server_timing": "rate_check;dur=2.699, thread_wait;dur=0.011, execution_wait;dur=0.009, business_database;dur=22.252, ownership;dur=23.981, ownership_preflight;dur=8.765, model_wait;dur=0.033, router;dur=2050.469, draft;dur=2200.155",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：VPN 连接不稳定，重启后短暂恢复又失效\n描述：昨晚重启后 VPN 恢复正常了一段时间，今天又坏了。今天没有重启，准备下班后再尝试。\n服务：VPN\n影响范围：只影响本人\n优先级：P3（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16383-2989-71e3-9c66-f7f54d23ed6d",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-4db90338473f495fae02ba2a01756497",
+          "draft_version": 1,
+          "draft": {
+            "title": "VPN 连接不稳定，重启后短暂恢复又失效",
+            "description": "昨晚重启后 VPN 恢复正常了一段时间，今天又坏了。今天没有重启，准备下班后再尝试。",
+            "service_name": "VPN",
+            "impact": "只影响本人",
+            "priority": "P3"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "VPN",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "昨晚重启后 VPN 好了一会儿，今天又坏了，只影响我。今天没重启，准备下班后再试。",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "VPN 连接不稳定，重启后短暂恢复又失效",
+          "description": "昨晚重启后 VPN 恢复正常了一段时间，今天又坏了。今天没有重启，准备下班后再尝试。",
+          "service_name": "VPN",
+          "impact": "只影响本人",
+          "priority": "P3"
+        },
+        "draft_id": "draft-4db90338473f495fae02ba2a01756497",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-d59c3cb2-a-heldout-21-alice",
+    "bob": "p8-d59c3cb2-a-heldout-21-bob"
+  },
+  "threads": {
+    "primary": "a19870d3c6024028854e2917699815c1",
+    "secondary": "a61b1a8cd53343f7bab55f6fa13824e3"
+  },
+  "measurement": true,
+  "cache_condition": "disabled",
+  "seconds": 4.516462900002807,
+  "final_ticket_count": 0,
+  "final_draft_version": 1,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "459181965ac94be0b8debd3e1dc2ce66",
+    "95a648c0120c417cb6e93ca759b5161d"
+  ]
+}

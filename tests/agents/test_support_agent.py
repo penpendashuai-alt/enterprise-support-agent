@@ -102,6 +102,55 @@ def assert_paired(messages):
 
 
 @pytest.mark.asyncio
+async def test_device_lookup_does_not_depend_on_static_retrieval(monkeypatch):
+    graph = setup_graph(
+        monkeypatch,
+        [
+            route(
+                "troubleshooting",
+                entities={"device_id": "DEV-002"},
+                knowledge_required=False,
+                retrieval_query=None,
+            ),
+            call("get_device_information", {"device_id": "DEV-002"}),
+            AIMessage(content="模拟数据：macOS 15，VPN 客户端 5.1。"),
+        ],
+    )
+    retrieve = AsyncMock(side_effect=RuntimeError("Static index is offline"))
+    monkeypatch.setattr("rag.retriever.retrieve", retrieve)
+    result = await ask(graph, "查询 DEV-002 的配置")
+    retrieve.assert_not_called()
+    assert not result["knowledge_required"]
+    assert result["retrieval"] is None
+    assert result["messages"][-1].content == "模拟数据：macOS 15，VPN 客户端 5.1。"
+    assert any(
+        isinstance(m, ToolMessage) and m.name == "get_device_information"
+        for m in result["messages"]
+    )
+
+
+@pytest.mark.asyncio
+@pytest.mark.parametrize("knowledge,issue", [(False, "无法连接"), (True, None)])
+async def test_device_symptoms_or_document_question_still_requires_evidence(
+    monkeypatch, knowledge, issue
+):
+    graph = setup_graph(
+        monkeypatch,
+        [
+            route(
+                "troubleshooting",
+                entities={"device_id": "DEV-002", "issue_description": issue},
+                knowledge_required=knowledge,
+            ),
+            AIMessage(content="根据演示指南检查网络 [1]"),
+        ],
+    )
+    result = await ask(graph, "设备故障或文档查询")
+    assert result["knowledge_required"]
+    assert result["retrieval"]["status"] == "ok"
+
+
+@pytest.mark.asyncio
 @pytest.mark.parametrize(
     "intent,entities,tool,args",
     [

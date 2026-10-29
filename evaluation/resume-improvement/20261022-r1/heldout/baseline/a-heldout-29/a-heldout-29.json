@@ -1,0 +1,71 @@
+{
+  "run_id": "1897b9860ec644f3911ff71966bb14f8",
+  "case_id": "a-heldout-29",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T12:13:45.383703+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "我不知道设备编号，DEV-001 只是文档示例，不是我的设备。先别猜，告诉我查询需要什么。",
+      "http_status": 200,
+      "seconds": 2.6492852000010316,
+      "http_response_seconds": 2.6461574000022665,
+      "request_id": "8f746805420a4a94ad68add917d8266b",
+      "server_timing": "rate_check;dur=2.785, thread_wait;dur=0.013, execution_wait;dur=0.010, business_database;dur=19.109, ownership;dur=20.942, ownership_preflight;dur=7.712, model_wait;dur=0.012, router;dur=2566.060",
+      "response": {
+        "type": "ai",
+        "content": "请问您想查询什么？如果是查询工单，请提供工单编号；如果是查询服务状态，请提供服务名称；如果是故障排查，请描述故障现象。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16388-1646-7882-b05d-68ff2b92d86d",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "general_question",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": null
+        },
+        "needs_clarification": true,
+        "clarification_question": "请问您想查询什么？如果是查询工单，请提供工单编号；如果是查询服务状态，请提供服务名称；如果是故障排查，请描述故障现象。"
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-1897b986-a-heldout-29-alice",
+    "bob": "p8-1897b986-a-heldout-29-bob"
+  },
+  "threads": {
+    "primary": "7f3d5e408e234de7af095d3f54c9150f",
+    "secondary": "bb884862fc23424f950f29116e10c8a0"
+  },
+  "measurement": true,
+  "cache_condition": "disabled",
+  "seconds": 2.8182089000001724,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "052b3dd8b20540b7b68fb76dea1acd1e"
+  ]
+}

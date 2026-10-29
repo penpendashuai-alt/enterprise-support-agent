@@ -1,0 +1,16 @@
+{
+  "case_id": "browser-8dfd71ef5def411cb1e78954e85a40a8",
+  "run_id": "c0e8d6886a084e7d809a89bb6bce922a",
+  "path": "/support-agent/tickets",
+  "query": "user_id=b5d0cbfd-f715-4da5-a1e2-52bb8629dc60",
+  "method": "GET",
+  "status": 200,
+  "request_body": "",
+  "response_body": "{\"tickets\":[{\"ticket_id\":\"DEMO-4E30F3F36E8E4ADB81D11B139A9187B9\",\"draft_id\":\"draft-e8b93e1c4e0e4abaa3d38c1366f86ba4\",\"draft_version\":2,\"thread_id\":\"01c1dd2a-45d9-4585-864c-41ebc966a3ef\",\"idempotency_key\":\"draft-e8b93e1c4e0e4abaa3d38c1366f86ba4:v2\",\"fingerprint\":\"d87be4036aa8120edd83f797dcff3acdc52b834125cd0806c32c89ea7a9135dd\",\"draft\":{\"title\":\"VPN 连接失败\",\"description\":\"VPN 从今天下午两点起连接失败。尚未尝试重启。\",\"service_name\":\"VPN\",\"impact\":\"本人所在的三人小组\",\"priority\":\"P2\"},\"state\":\"open\",\"created_at\":\"2026-10-23T16:23:15.212890+00:00\",\"user_id\":\"b5d0cbfd-f715-4da5-a1e2-52bb8629dc60\",\"source\":\"postgres\"}],\"is_demo\":true}",
+  "response_headers": {
+    "content-type": "application/json",
+    "x-request-id": "1d6963e2d2bc4e15925d56972207d207",
+    "server-timing": "rate_check;dur=1.581, execution_wait;dur=0.011, business_database;dur=3.633"
+  },
+  "at": "2026-10-23T16:23:46.634949+00:00"
+}

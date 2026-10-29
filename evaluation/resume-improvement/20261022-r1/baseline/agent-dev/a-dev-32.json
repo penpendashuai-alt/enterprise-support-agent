@@ -1,0 +1,68 @@
+{
+  "run_id": "661e1588388341f39110300686cf0e61",
+  "case_id": "a-dev-32",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T08:06:15.347682+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "我想查工单进展，但没带编号。",
+      "http_status": 200,
+      "seconds": 2.2147213999996893,
+      "request_id": "e288f642dbef4667a20a36643c1f07eb",
+      "server_timing": "rate_check;dur=1.384, thread_wait;dur=0.012, execution_wait;dur=0.008, business_database;dur=14.764, ownership;dur=16.905, ownership_preflight;dur=3.094, model_wait;dur=0.012, router;dur=2156.863",
+      "response": {
+        "type": "ai",
+        "content": "请提供要查询的工单编号，例如 INC-1001（模拟工单）。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162a5-7e3d-7b33-ba4c-ba38a778a019",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": "query"
+        },
+        "needs_clarification": true,
+        "clarification_question": "请提供要查询的工单编号，例如 INC-1001（模拟工单）。"
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-661e1588-a-dev-32-alice",
+    "bob": "p8-661e1588-a-dev-32-bob"
+  },
+  "threads": {
+    "primary": "a124cdb91b2a4a8986a381128b19bbe7",
+    "secondary": "712598d3e9cb45efb20cbbe0b1fa1d94"
+  },
+  "seconds": 2.3773191000000224,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "e7860da2a88146b9812ee21a95367c8c"
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "classification": "infrastructure_unavailable_before_measurement",
+  "detail": "Docker engine not running at cache experiment startup; Qdrant manifest unavailable; no measurements or provider attempts made",
+  "recovery": "Restart existing campaign containers, retain this output and use fresh recovered directory"
+}

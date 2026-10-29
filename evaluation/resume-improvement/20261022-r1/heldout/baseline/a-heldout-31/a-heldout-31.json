@@ -1,0 +1,92 @@
+{
+  "run_id": "63cf5daae7c34ca9827f0c4f3db4c11d",
+  "case_id": "a-heldout-31",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T12:14:53.988939+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "不要查询状态或创建工单，只解释 VPN 这个网络概念是什么。",
+      "http_status": 200,
+      "seconds": 5.942995000001247,
+      "http_response_seconds": 5.9394836999999825,
+      "request_id": "0bce048444fe4e25a1c12c27a3ea2602",
+      "server_timing": "rate_check;dur=2.607, thread_wait;dur=0.013, execution_wait;dur=0.010, business_database;dur=19.264, ownership;dur=21.006, ownership_preflight;dur=7.230, model_wait;dur=0.026, router;dur=2162.715, preferences;dur=4.428, handler;dur=3705.549",
+      "response": {
+        "type": "ai",
+        "content": "VPN（虚拟专用网络，Virtual Private Network）是一种通过公共网络（如互联网）建立加密隧道，使设备或网络之间能够安全传输数据的技术。\n\n主要作用包括：\n\n- **加密通信**：对传输的数据进行加密，防止在公共网络中被窃听或篡改。\n- **身份验证**：确保只有经过授权的用户或设备才能接入。\n- **远程访问**：让员工在外网也能安全访问公司内部资源，就像在办公室内网一样。\n- **隐藏真实地址**：对外显示的是 VPN 服务器的地址，而不是用户设备的真实地址。\n\n常见类型有：\n\n- **远程访问 VPN**：个人设备连接到公司网络。\n- **站点到站点 VPN**：连接两个不同地点的网络，例如总部与分支机构之间。\n\n简单理解：VPN 就像在公共道路上开了一条专用的加密通道，外人看不到里面传输的内容。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16389-2243-7c83-8d78-7829bb83e8a0",
+        "response_metadata": {
+          "token_usage": {
+            "completion_tokens": 180,
+            "prompt_tokens": 404,
+            "total_tokens": 584,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cache_write_tokens": null,
+              "cached_tokens": 256
+            },
+            "prompt_cache_hit_tokens": 256,
+            "prompt_cache_miss_tokens": 148
+          },
+          "model_provider": "openai",
+          "model_name": "deepseek-v4-pro",
+          "system_fingerprint": "a307abda487cd1b463329ccb945ce396",
+          "id": "12fa4f2d-212a-46ce-b4ed-7e9960d328bc",
+          "finish_reason": "stop",
+          "logprobs": null
+        },
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "general_question",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": null
+        },
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-63cf5daa-a-heldout-31-alice",
+    "bob": "p8-63cf5daa-a-heldout-31-bob"
+  },
+  "threads": {
+    "primary": "14563b7933fc4c24ad48e66b35e4495f",
+    "secondary": "8121e303998b4493bf16f97e33941368"
+  },
+  "measurement": true,
+  "cache_condition": "disabled",
+  "seconds": 6.118095100002392,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "7c356e7a043a42338165db68cd2a80a2",
+    "4f31fe8c39604790913966598275fa16"
+  ]
+}

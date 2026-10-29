@@ -1,0 +1,8 @@
+{
+  "status": "infrastructure_error_before_first_case",
+  "error": "Docker engine unavailable; PostgreSQL connection timeout",
+  "planned_cases": 40,
+  "executed_cases": 0,
+  "physical_model_attempts": 0,
+  "restart_policy": "preserve failure; after dependency recovery use a fresh run directory, same source and protocol"
+}

@@ -1,0 +1,513 @@
+{
+  "run_id": "0e966965c57e4a26ba64cde261886673",
+  "case_id": "pilot-approval",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T08:02:35.215736+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "新建测试工单：邮箱昨天开始无法收取邮件，仅本人受影响，没做重装，优先级 P2。",
+      "http_status": 200,
+      "seconds": 4.532258599999295,
+      "request_id": "9767f7661afa41828558cb1566054d7a",
+      "server_timing": "rate_check;dur=0.942, thread_wait;dur=0.009, execution_wait;dur=0.008, business_database;dur=13.193, ownership;dur=14.810, ownership_preflight;dur=2.515, model_wait;dur=0.022, router;dur=2397.531, draft;dur=2085.473",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：邮箱无法收取邮件\n描述：邮箱从昨天开始无法收取邮件。仅本人受影响。用户未执行重装操作。\n服务：邮箱\n影响范围：仅本人\n优先级：P2（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162a2-2256-7431-b251-dcf0f00b011e",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-5a6beb7cc5974766be7b482cf20cc5e3",
+          "draft_version": 1,
+          "draft": {
+            "title": "邮箱无法收取邮件",
+            "description": "邮箱从昨天开始无法收取邮件。仅本人受影响。用户未执行重装操作。",
+            "service_name": "邮箱",
+            "impact": "仅本人",
+            "priority": "P2"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "邮箱",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "邮箱昨天开始无法收取邮件，仅本人受影响，未重装，优先级P2",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "邮箱无法收取邮件",
+          "description": "邮箱从昨天开始无法收取邮件。仅本人受影响。用户未执行重装操作。",
+          "service_name": "邮箱",
+          "impact": "仅本人",
+          "priority": "P2"
+        },
+        "draft_id": "draft-5a6beb7cc5974766be7b482cf20cc5e3",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    },
+    {
+      "index": 1,
+      "operation": "edit",
+      "user_message": null,
+      "http_status": 200,
+      "seconds": 0.055321599999842874,
+      "request_id": "0e97090dc8ec43319e75f13d428d8123",
+      "server_timing": "rate_check;dur=1.119, thread_wait;dur=0.008, execution_wait;dur=0.008, business_database;dur=19.359, ownership;dur=16.465, ownership_preflight;dur=2.779",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 2）：\n标题：邮箱无法收取邮件\n描述：邮箱从昨天开始无法收取邮件。仅本人受影响。用户未执行重装操作。\n服务：邮箱\n影响范围：所在小组四人\n优先级：P2（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162a2-34af-74c2-a11a-89a3589c4df8",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-5a6beb7cc5974766be7b482cf20cc5e3",
+          "draft_version": 2,
+          "draft": {
+            "title": "邮箱无法收取邮件",
+            "description": "邮箱从昨天开始无法收取邮件。仅本人受影响。用户未执行重装操作。",
+            "service_name": "邮箱",
+            "impact": "所在小组四人",
+            "priority": "P2"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "邮箱",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "邮箱昨天开始无法收取邮件，仅本人受影响，未重装，优先级P2",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "邮箱无法收取邮件",
+          "description": "邮箱从昨天开始无法收取邮件。仅本人受影响。用户未执行重装操作。",
+          "service_name": "邮箱",
+          "impact": "所在小组四人",
+          "priority": "P2"
+        },
+        "draft_id": "draft-5a6beb7cc5974766be7b482cf20cc5e3",
+        "draft_version": 2,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    },
+    {
+      "index": 2,
+      "operation": "approve",
+      "user_message": null,
+      "http_status": 409,
+      "seconds": 0.02757740000015474,
+      "request_id": "1af0213f60d64f219ee1965589dfb3ea",
+      "server_timing": "rate_check;dur=1.125, thread_wait;dur=0.011, execution_wait;dur=0.008, business_database;dur=17.367, ownership;dur=14.458, ownership_preflight;dur=2.933",
+      "response": {
+        "detail": {
+          "code": "stale_version",
+          "message": "草稿已修改，请刷新并确认最新版本。"
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "邮箱",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "邮箱昨天开始无法收取邮件，仅本人受影响，未重装，优先级P2",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "邮箱无法收取邮件",
+          "description": "邮箱从昨天开始无法收取邮件。仅本人受影响。用户未执行重装操作。",
+          "service_name": "邮箱",
+          "impact": "所在小组四人",
+          "priority": "P2"
+        },
+        "draft_id": "draft-5a6beb7cc5974766be7b482cf20cc5e3",
+        "draft_version": 2,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    },
+    {
+      "index": 3,
+      "operation": "history",
+      "user_message": null,
+      "http_status": 200,
+      "seconds": 0.020614500000192493,
+      "request_id": "ea061359df3c4683918bdf5fc2e70fc5",
+      "server_timing": "rate_check;dur=1.211, thread_wait;dur=0.015, execution_wait;dur=0.012, business_database;dur=6.594, ownership;dur=6.629, ownership_preflight;dur=2.591",
+      "response": {
+        "messages": [
+          {
+            "type": "human",
+            "content": "新建测试工单：邮箱昨天开始无法收取邮件，仅本人受影响，没做重装，优先级 P2。",
+            "tool_calls": [],
+            "tool_call_id": null,
+            "run_id": null,
+            "response_metadata": {},
+            "custom_data": {}
+          },
+          {
+            "type": "ai",
+            "content": "请确认本地演示工单草稿（版本 1）：\n标题：邮箱无法收取邮件\n描述：邮箱从昨天开始无法收取邮件。仅本人受影响。用户未执行重装操作。\n服务：邮箱\n影响范围：仅本人\n优先级：P2（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+            "tool_calls": [],
+            "tool_call_id": null,
+            "run_id": null,
+            "response_metadata": {},
+            "custom_data": {
+              "kind": "ticket_approval",
+              "draft_id": "draft-5a6beb7cc5974766be7b482cf20cc5e3",
+              "draft_version": 1,
+              "draft": {
+                "title": "邮箱无法收取邮件",
+                "description": "邮箱从昨天开始无法收取邮件。仅本人受影响。用户未执行重装操作。",
+                "service_name": "邮箱",
+                "impact": "仅本人",
+                "priority": "P2"
+              },
+              "approval_status": "pending",
+              "ticket_result": null,
+              "is_demo": true
+            }
+          },
+          {
+            "type": "human",
+            "content": "工单审批：edit，草稿 draft-5a6beb7cc5974766be7b482cf20cc5e3，版本 1。",
+            "tool_calls": [],
+            "tool_call_id": null,
+            "run_id": null,
+            "response_metadata": {},
+            "custom_data": {}
+          },
+          {
+            "type": "ai",
+            "content": "请确认本地演示工单草稿（版本 2）：\n标题：邮箱无法收取邮件\n描述：邮箱从昨天开始无法收取邮件。仅本人受影响。用户未执行重装操作。\n服务：邮箱\n影响范围：所在小组四人\n优先级：P2（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+            "tool_calls": [],
+            "tool_call_id": null,
+            "run_id": null,
+            "response_metadata": {},
+            "custom_data": {
+              "kind": "ticket_approval",
+              "draft_id": "draft-5a6beb7cc5974766be7b482cf20cc5e3",
+              "draft_version": 2,
+              "draft": {
+                "title": "邮箱无法收取邮件",
+                "description": "邮箱从昨天开始无法收取邮件。仅本人受影响。用户未执行重装操作。",
+                "service_name": "邮箱",
+                "impact": "所在小组四人",
+                "priority": "P2"
+              },
+              "approval_status": "pending",
+              "ticket_result": null,
+              "is_demo": true
+            }
+          }
+        ]
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "邮箱",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "邮箱昨天开始无法收取邮件，仅本人受影响，未重装，优先级P2",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "邮箱无法收取邮件",
+          "description": "邮箱从昨天开始无法收取邮件。仅本人受影响。用户未执行重装操作。",
+          "service_name": "邮箱",
+          "impact": "所在小组四人",
+          "priority": "P2"
+        },
+        "draft_id": "draft-5a6beb7cc5974766be7b482cf20cc5e3",
+        "draft_version": 2,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    },
+    {
+      "index": 4,
+      "operation": "approve",
+      "user_message": null,
+      "http_status": 200,
+      "seconds": 0.05668439999953989,
+      "request_id": "a319c514c71b42f1b22b8336e4248cde",
+      "server_timing": "rate_check;dur=0.913, thread_wait;dur=0.007, execution_wait;dur=0.007, business_database;dur=26.947, ownership;dur=12.922, ownership_preflight;dur=2.315",
+      "response": {
+        "type": "ai",
+        "content": "本地演示工单已创建：DEMO-58E513B437824B14971F0D1698AEDBBC，状态：open。标题：邮箱无法收取邮件。未提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162a2-3708-7f20-bc8f-9579fc21ea21",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_result",
+          "status": "success",
+          "ticket": {
+            "ticket_id": "DEMO-58E513B437824B14971F0D1698AEDBBC",
+            "draft_id": "draft-5a6beb7cc5974766be7b482cf20cc5e3",
+            "draft_version": 2,
+            "thread_id": "dbff670ceeee4d36b35763c8a86d7902",
+            "idempotency_key": "draft-5a6beb7cc5974766be7b482cf20cc5e3:v2",
+            "fingerprint": "24ecd89a519285d88501d94ebea6ca28da892f26b8d2aa3c17144d1e6304abbf",
+            "draft": {
+              "title": "邮箱无法收取邮件",
+              "description": "邮箱从昨天开始无法收取邮件。仅本人受影响。用户未执行重装操作。",
+              "service_name": "邮箱",
+              "impact": "所在小组四人",
+              "priority": "P2"
+            },
+            "state": "open",
+            "created_at": "2026-10-22T08:02:40.542460+00:00",
+            "user_id": "p8-0e966965-pilot-approval-alice",
+            "source": "postgres"
+          },
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "邮箱",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "邮箱昨天开始无法收取邮件，仅本人受影响，未重装，优先级P2",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "邮箱无法收取邮件",
+          "description": "邮箱从昨天开始无法收取邮件。仅本人受影响。用户未执行重装操作。",
+          "service_name": "邮箱",
+          "impact": "所在小组四人",
+          "priority": "P2"
+        },
+        "draft_id": "draft-5a6beb7cc5974766be7b482cf20cc5e3",
+        "draft_version": 2,
+        "approval_status": "completed",
+        "approved_fingerprint": "24ecd89a519285d88501d94ebea6ca28da892f26b8d2aa3c17144d1e6304abbf",
+        "approved_request_key": "draft-5a6beb7cc5974766be7b482cf20cc5e3:v2",
+        "ticket_result": {
+          "kind": "ticket_result",
+          "status": "success",
+          "ticket": {
+            "ticket_id": "DEMO-58E513B437824B14971F0D1698AEDBBC",
+            "draft_id": "draft-5a6beb7cc5974766be7b482cf20cc5e3",
+            "draft_version": 2,
+            "thread_id": "dbff670ceeee4d36b35763c8a86d7902",
+            "idempotency_key": "draft-5a6beb7cc5974766be7b482cf20cc5e3:v2",
+            "fingerprint": "24ecd89a519285d88501d94ebea6ca28da892f26b8d2aa3c17144d1e6304abbf",
+            "draft": {
+              "title": "邮箱无法收取邮件",
+              "description": "邮箱从昨天开始无法收取邮件。仅本人受影响。用户未执行重装操作。",
+              "service_name": "邮箱",
+              "impact": "所在小组四人",
+              "priority": "P2"
+            },
+            "state": "open",
+            "created_at": "2026-10-22T08:02:40.542460+00:00",
+            "user_id": "p8-0e966965-pilot-approval-alice",
+            "source": "postgres"
+          },
+          "is_demo": true
+        }
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 1
+    },
+    {
+      "index": 5,
+      "operation": "approve",
+      "user_message": null,
+      "http_status": 200,
+      "seconds": 0.025203000000146858,
+      "request_id": "5dffda4f2ce347019826dc53ba3e6401",
+      "server_timing": "rate_check;dur=0.999, thread_wait;dur=0.011, execution_wait;dur=0.010, business_database;dur=16.057, ownership;dur=13.185, ownership_preflight;dur=2.584",
+      "response": {
+        "type": "ai",
+        "content": "本地演示工单已创建：DEMO-58E513B437824B14971F0D1698AEDBBC，状态：open。标题：邮箱无法收取邮件。未提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162a2-37e7-7b92-a2c3-68ec4096d218",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_result",
+          "status": "success",
+          "ticket": {
+            "ticket_id": "DEMO-58E513B437824B14971F0D1698AEDBBC",
+            "draft_id": "draft-5a6beb7cc5974766be7b482cf20cc5e3",
+            "draft_version": 2,
+            "thread_id": "dbff670ceeee4d36b35763c8a86d7902",
+            "idempotency_key": "draft-5a6beb7cc5974766be7b482cf20cc5e3:v2",
+            "fingerprint": "24ecd89a519285d88501d94ebea6ca28da892f26b8d2aa3c17144d1e6304abbf",
+            "draft": {
+              "title": "邮箱无法收取邮件",
+              "description": "邮箱从昨天开始无法收取邮件。仅本人受影响。用户未执行重装操作。",
+              "service_name": "邮箱",
+              "impact": "所在小组四人",
+              "priority": "P2"
+            },
+            "state": "open",
+            "created_at": "2026-10-22T08:02:40.542460+00:00",
+            "user_id": "p8-0e966965-pilot-approval-alice",
+            "source": "postgres"
+          },
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "邮箱",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "邮箱昨天开始无法收取邮件，仅本人受影响，未重装，优先级P2",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "邮箱无法收取邮件",
+          "description": "邮箱从昨天开始无法收取邮件。仅本人受影响。用户未执行重装操作。",
+          "service_name": "邮箱",
+          "impact": "所在小组四人",
+          "priority": "P2"
+        },
+        "draft_id": "draft-5a6beb7cc5974766be7b482cf20cc5e3",
+        "draft_version": 2,
+        "approval_status": "completed",
+        "approved_fingerprint": "24ecd89a519285d88501d94ebea6ca28da892f26b8d2aa3c17144d1e6304abbf",
+        "approved_request_key": "draft-5a6beb7cc5974766be7b482cf20cc5e3:v2",
+        "ticket_result": {
+          "kind": "ticket_result",
+          "status": "success",
+          "ticket": {
+            "ticket_id": "DEMO-58E513B437824B14971F0D1698AEDBBC",
+            "draft_id": "draft-5a6beb7cc5974766be7b482cf20cc5e3",
+            "draft_version": 2,
+            "thread_id": "dbff670ceeee4d36b35763c8a86d7902",
+            "idempotency_key": "draft-5a6beb7cc5974766be7b482cf20cc5e3:v2",
+            "fingerprint": "24ecd89a519285d88501d94ebea6ca28da892f26b8d2aa3c17144d1e6304abbf",
+            "draft": {
+              "title": "邮箱无法收取邮件",
+              "description": "邮箱从昨天开始无法收取邮件。仅本人受影响。用户未执行重装操作。",
+              "service_name": "邮箱",
+              "impact": "所在小组四人",
+              "priority": "P2"
+            },
+            "state": "open",
+            "created_at": "2026-10-22T08:02:40.542460+00:00",
+            "user_id": "p8-0e966965-pilot-approval-alice",
+            "source": "postgres"
+          },
+          "is_demo": true
+        }
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 1
+    }
+  ],
+  "users": {
+    "alice": "p8-0e966965-pilot-approval-alice",
+    "bob": "p8-0e966965-pilot-approval-bob"
+  },
+  "threads": {
+    "primary": "dbff670ceeee4d36b35763c8a86d7902",
+    "secondary": "068c59ec11ae49baa1e766b045386af8"
+  },
+  "seconds": 5.707172600000376,
+  "final_ticket_count": 1,
+  "final_draft_version": 2,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "8e21636f5e5e41d5bbb5de84cafd1f13",
+    "1706e50411af4e96bea43adfe5e59aa4"
+  ]
+}

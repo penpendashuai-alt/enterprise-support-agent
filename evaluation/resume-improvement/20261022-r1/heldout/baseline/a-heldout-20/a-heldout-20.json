@@ -1,0 +1,79 @@
+{
+  "run_id": "a5f75ce91a5049b0899f773ad0397fee",
+  "case_id": "a-heldout-20",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T12:08:03.306466+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "我要报障工单：我个人摄像头无画面。假如我拔插过可以写『已重新连接』，但那是假设，我还没拔过。",
+      "http_status": 200,
+      "seconds": 3.58883920000153,
+      "http_response_seconds": 3.5854905000014696,
+      "request_id": "1a2a2b3ce9c941108fd9471c6feffc1d",
+      "server_timing": "rate_check;dur=2.675, thread_wait;dur=0.012, execution_wait;dur=0.010, business_database;dur=19.948, ownership;dur=21.730, ownership_preflight;dur=7.193, model_wait;dur=0.062, router;dur=1674.709, draft;dur=1838.147",
+      "response": {
+        "type": "ai",
+        "content": "请补充影响范围。工单尚未提交；信息齐全后会展示草稿供你确认。未指定优先级时使用演示默认值 P3。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16382-de09-7812-a3e3-117c53b300b7",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "个人摄像头无画面",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "approval_status": "collecting"
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-a5f75ce9-a-heldout-20-alice",
+    "bob": "p8-a5f75ce9-a-heldout-20-bob"
+  },
+  "threads": {
+    "primary": "192edac9adf64d55b2e9982478ccc1ac",
+    "secondary": "22bff97fb2dd4ed0a9358c1bedf7e076"
+  },
+  "measurement": true,
+  "cache_condition": "disabled",
+  "seconds": 3.757408299999952,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": false,
+    "failures": [
+      {
+        "stage": "approval_storage",
+        "turn": 0,
+        "reason": "response_kind"
+      }
+    ],
+    "metrics": {}
+  },
+  "model_calls": [
+    "d528c66fed4a46b3aeb9f359a24d70a2",
+    "09d5bcedefbc4aa29fbb350d8d9f6809"
+  ]
+}

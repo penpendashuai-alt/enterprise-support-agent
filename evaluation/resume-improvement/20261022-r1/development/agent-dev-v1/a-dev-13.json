@@ -1,0 +1,96 @@
+{
+  "run_id": "5cd45809d0fe459aae50f75b119a80c9",
+  "case_id": "a-dev-13",
+  "attempt": 1,
+  "variant": "candidate-v1",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T08:13:00.216081+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请创建 VPN 工单：每次连接都在登录页退出，只影响我。麻烦安排重装客户端，我还没有卸载、重装或重启过。",
+      "http_status": 200,
+      "seconds": 5.006932799999959,
+      "request_id": "3f8ca267156b43acb62f3e313a645c6d",
+      "server_timing": "rate_check;dur=1.011, thread_wait;dur=0.009, execution_wait;dur=0.008, business_database;dur=14.361, ownership;dur=16.168, ownership_preflight;dur=3.485, model_wait;dur=0.023, router;dur=2485.146, draft;dur=2466.858",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：VPN 每次连接都在登录页退出\n描述：现象：每次连接 VPN 都在登录页退出。影响范围：只影响用户本人。用户尚未执行卸载、重装或重启操作。希望执行的操作：安排重装客户端。\n服务：VPN\n影响范围：只影响我\n优先级：P3（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162ab-abc0-7f21-bced-5d0d737e80a5",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-798c462739c94a2db37329b8afdd079d",
+          "draft_version": 1,
+          "draft": {
+            "title": "VPN 每次连接都在登录页退出",
+            "description": "现象：每次连接 VPN 都在登录页退出。影响范围：只影响用户本人。用户尚未执行卸载、重装或重启操作。希望执行的操作：安排重装客户端。",
+            "service_name": "VPN",
+            "impact": "只影响我",
+            "priority": "P3"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "VPN",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "每次连接都在登录页退出，只影响我。需要安排重装客户端，尚未卸载、重装或重启过。",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "VPN 每次连接都在登录页退出",
+          "description": "现象：每次连接 VPN 都在登录页退出。影响范围：只影响用户本人。用户尚未执行卸载、重装或重启操作。希望执行的操作：安排重装客户端。",
+          "service_name": "VPN",
+          "impact": "只影响我",
+          "priority": "P3"
+        },
+        "draft_id": "draft-798c462739c94a2db37329b8afdd079d",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-5cd45809-a-dev-13-alice",
+    "bob": "p8-5cd45809-a-dev-13-bob"
+  },
+  "threads": {
+    "primary": "e855b73dd90e46ad9fbd6c20caea64d6",
+    "secondary": "12b49467ea2349f88cf5600ceb2cf8fe"
+  },
+  "seconds": 5.183019199999762,
+  "final_ticket_count": 0,
+  "final_draft_version": 1,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "12fa92938cb34d84a1ce97ae8bc4cde4",
+    "42c64be51e49425d966d7a739bce56f8"
+  ]
+}

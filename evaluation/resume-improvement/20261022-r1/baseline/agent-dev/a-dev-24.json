@@ -1,0 +1,70 @@
+{
+  "run_id": "661e1588388341f39110300686cf0e61",
+  "case_id": "a-dev-24",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T08:05:40.013316+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "给我登记工单：GitHub 访问报 403。影响范围目前未知，晚些时候才能确认。",
+      "http_status": 200,
+      "seconds": 4.304073399999652,
+      "request_id": "f415b515e44f4f728ac0f319873c7b9e",
+      "server_timing": "rate_check;dur=1.265, thread_wait;dur=0.014, execution_wait;dur=0.011, business_database;dur=13.815, ownership;dur=15.410, ownership_preflight;dur=3.108, model_wait;dur=0.043, router;dur=2361.910, draft;dur=1898.217",
+      "response": {
+        "type": "ai",
+        "content": "请补充影响范围。工单尚未提交；信息齐全后会展示草稿供你确认。未指定优先级时使用演示默认值 P3。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162a4-f436-7253-a177-65244fc03d84",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "GitHub",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "GitHub 访问报 403，影响范围未知",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "approval_status": "collecting"
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-661e1588-a-dev-24-alice",
+    "bob": "p8-661e1588-a-dev-24-bob"
+  },
+  "threads": {
+    "primary": "71bcd3198877454193b287247e5f7c85",
+    "secondary": "5bc0519fac534c8d958d07f25deef997"
+  },
+  "seconds": 4.467475000000377,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "c21630fe35714e96b8242414ad3e77e8",
+    "0d99bf75d7a44a91ad88d040eead475e"
+  ]
+}

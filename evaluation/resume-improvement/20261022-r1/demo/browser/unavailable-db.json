@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-23T11:23:36.463153+00:00",
+  "action": "snapshot",
+  "user_id": "b5d0cbfd-f715-4da5-a1e2-52bb8629dc60",
+  "thread_id": "2a032f5c-4f40-4204-a794-dd1ad88d0ea2",
+  "pending": null,
+  "tickets_api": {
+    "tickets": [],
+    "is_demo": true
+  },
+  "tickets_database": [],
+  "checks": {
+    "ticket_count": true
+  },
+  "passed": true
+}

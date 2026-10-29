@@ -1,0 +1,16 @@
+{
+  "case_id": "browser-3d074b4b147e45168dbcad72f4be4a9a",
+  "run_id": "9a41717add7341b88bb3f2711a7c26aa",
+  "path": "/support-agent/invoke",
+  "query": "",
+  "method": "POST",
+  "status": 200,
+  "request_body": "{\"approval\":{\"draft_id\":\"draft-e8b93e1c4e0e4abaa3d38c1366f86ba4\",\"draft_version\":1,\"action\":\"edit\",\"draft\":{\"title\":\"VPN 连接失败\",\"description\":\"VPN 从今天下午两点起连接失败。尚未尝试重启。\",\"service_name\":\"VPN\",\"impact\":\"本人所在的三人小组\",\"priority\":\"P2\"}},\"message\":null,\"model\":\"openai-compatible\",\"thread_id\":\"01c1dd2a-45d9-4585-864c-41ebc966a3ef\",\"user_id\":\"b5d0cbfd-f715-4da5-a1e2-52bb8629dc60\",\"agent_config\":{}}",
+  "response_body": "{\"type\":\"ai\",\"content\":\"请确认本地演示工单草稿（版本 2）：\\n标题：VPN 连接失败\\n描述：VPN 从今天下午两点起连接失败。尚未尝试重启。\\n服务：VPN\\n影响范围：本人所在的三人小组\\n优先级：P2（演示优先级，无 SLA 承诺）\\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。\",\"tool_calls\":[],\"tool_call_id\":null,\"run_id\":\"01a16884-f63e-79e2-8305-89afac804e22\",\"response_metadata\":{},\"custom_data\":{\"kind\":\"ticket_approval\",\"draft_id\":\"draft-e8b93e1c4e0e4abaa3d38c1366f86ba4\",\"draft_version\":2,\"draft\":{\"title\":\"VPN 连接失败\",\"description\":\"VPN 从今天下午两点起连接失败。尚未尝试重启。\",\"service_name\":\"VPN\",\"impact\":\"本人所在的三人小组\",\"priority\":\"P2\"},\"approval_status\":\"pending\",\"ticket_result\":null,\"is_demo\":true}}",
+  "response_headers": {
+    "content-type": "application/json",
+    "x-request-id": "e6e5e8a6455447acbbb50097676cd27c",
+    "server-timing": "rate_check;dur=1.547, thread_wait;dur=0.013, execution_wait;dur=0.009, business_database;dur=21.455, ownership;dur=18.196, ownership_preflight;dur=4.163"
+  },
+  "at": "2026-10-23T11:28:26.742562+00:00"
+}

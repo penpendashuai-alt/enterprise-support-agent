@@ -1,0 +1,692 @@
+[
+  {
+    "group_id": "36bf575644ac26593f71690ff8a4b253bee19d3fd96b7fbc65be39653e6bd1fe",
+    "semantic_success": false,
+    "reason": "可答条款被拒答，未完成所问内容"
+  },
+  {
+    "group_id": "d5176cb38b4b698042ce189e3b27c4d4c05bcc130cb92f16f47de2b4252dbeb5",
+    "semantic_success": true,
+    "reason": "分别覆盖SSO身份/会话/MFA核查与仓库组织/权限/SSO核查，引用匹配；模拟查询标明边界"
+  },
+  {
+    "group_id": "9b8469b5125973e3e2cb4ac0220ed98dc623be4895662bef0c327a701dc3c1da",
+    "semantic_success": true,
+    "reason": "分别覆盖SSO身份/会话/MFA核查与仓库组织/权限/SSO核查，引用匹配；模拟查询标明边界"
+  },
+  {
+    "group_id": "6ceb20e781d5cfd66c2e1aaa8460ab6e8a41cdf62afe2b4b201ccacd7c3eab57",
+    "semantic_success": true,
+    "reason": "分别覆盖SSO身份/会话/MFA核查与仓库组织/权限/SSO核查，引用匹配；模拟查询标明边界"
+  },
+  {
+    "group_id": "ce1aab80eef9aaa7a446620af1a1272ad8f2e4ca8b6e0e8b61eb368784fd3ccf",
+    "semantic_success": true,
+    "reason": "分别覆盖SSO身份/会话/MFA核查与仓库组织/权限/SSO核查，引用匹配；模拟查询标明边界"
+  },
+  {
+    "group_id": "3e79b902f0fc170e5c85fa9336de2f15fe5785d4ef86cdfcf41cc6c3f83c24c1",
+    "semantic_success": true,
+    "reason": "分别覆盖SSO身份/会话/MFA核查与仓库组织/权限/SSO核查，引用匹配；模拟查询标明边界"
+  },
+  {
+    "group_id": "7d1833a5de75b486d87ce569fbcef073c4349cdcc10c3a8ff2a080026b0da80d",
+    "semantic_success": true,
+    "reason": "分别覆盖SSO身份/会话/MFA核查与仓库组织/权限/SSO核查，引用匹配；模拟查询标明边界"
+  },
+  {
+    "group_id": "51197e3e258751c52d4727748a27f89d458a1cc342702717ade906efe6fcbc27",
+    "semantic_success": true,
+    "reason": "分别覆盖SSO身份/会话/MFA核查与仓库组织/权限/SSO核查，引用匹配；模拟查询标明边界"
+  },
+  {
+    "group_id": "cbd77c77d14f464d8db137afce7e4c27b831571c40ca6d232e5e3cf780485b4c",
+    "semantic_success": true,
+    "reason": "覆盖所问操作与限制，引用支持；模拟状态边界明确"
+  },
+  {
+    "group_id": "ba4f81519968017636779a4a1a0256dae802f4ccc090b9335530fffe283b88e3",
+    "semantic_success": true,
+    "reason": "覆盖所问操作与限制，引用支持；模拟状态边界明确"
+  },
+  {
+    "group_id": "96783ebd90455ff1d8f360b6253d7e90c181dee540eff994492c08d5b32c6b3e",
+    "semantic_success": true,
+    "reason": "覆盖所问操作与限制，引用支持；模拟状态边界明确"
+  },
+  {
+    "group_id": "4cfc3a477ad6526adb225414490c5ce2057b092c0af0dd735d3818ff41944e8b",
+    "semantic_success": true,
+    "reason": "覆盖所问操作与限制，引用支持；模拟状态边界明确"
+  },
+  {
+    "group_id": "6ba1a4b0cc941d14725539ad3dfe481dc529852de896daf9dbc4122e051166fc",
+    "semantic_success": true,
+    "reason": "覆盖所问操作与限制，引用支持；模拟状态边界明确"
+  },
+  {
+    "group_id": "874f36aafc6d3811bf146ff15c345e5403b05b85c04be16f90ed620450b5e7be",
+    "semantic_success": true,
+    "reason": "覆盖所问操作与限制，引用支持；模拟状态边界明确"
+  },
+  {
+    "group_id": "4c1b9f0bbb7b5feb1f0f743b7b4204710d2d210e4fad8f9d5e9412ec995d5416",
+    "semantic_success": true,
+    "reason": "覆盖所问操作与限制，引用支持；模拟状态边界明确"
+  },
+  {
+    "group_id": "31300202743b7892d0c6f23b93296fa8ffad73dd8a009febbe5f818b314d2901",
+    "semantic_success": false,
+    "reason": "将浏览器可登录推断为MFA/会话基本正常，超出应逐项核查的证据"
+  },
+  {
+    "group_id": "f3e3ccf4d1efbc38cdf427f158ef7fe001daad1916a814a5b8cd075e21ee6ef7",
+    "semantic_success": true,
+    "reason": "覆盖所问操作与限制，引用支持；模拟状态边界明确"
+  },
+  {
+    "group_id": "43470574ee7dc8bca801017895215ff1b3a603bf95d0b9884f8b35374fd8576f",
+    "semantic_success": true,
+    "reason": "覆盖所问操作与限制，引用支持；模拟状态边界明确"
+  },
+  {
+    "group_id": "dda38f32635d5edcf4ea8437f6d9879682aa20b3797f184f611abe34ce056623",
+    "semantic_success": false,
+    "reason": "把SSO后仍无权限确定归因为组织成员/仓库授权，证据仅支持继续核查而非排除其他原因"
+  },
+  {
+    "group_id": "f27887fe28db27d9a4607c7260553cea0e935d2c471dbb8f46ad2a4e8329dabb",
+    "semantic_success": true,
+    "reason": "覆盖所问操作与限制，引用支持；模拟状态边界明确"
+  },
+  {
+    "group_id": "5c6b8705329cf88ef4bb479886c5fde3f08faeaaedac2476534cb373d9c50dcd",
+    "semantic_success": true,
+    "reason": "覆盖所问操作与限制，引用支持；模拟状态边界明确"
+  },
+  {
+    "group_id": "c8809d370f281e9cd1cbb43804d50f5d3d67076e85db9d4f14b97191b05ad460",
+    "semantic_success": true,
+    "reason": "覆盖所问操作与限制，引用支持；模拟状态边界明确"
+  },
+  {
+    "group_id": "ea3b743bd5e368dc059bac54547234ec27dd4e855bfb0ed1238308ff1600dd3b",
+    "semantic_success": true,
+    "reason": "覆盖所问操作与限制，引用支持；模拟状态边界明确"
+  },
+  {
+    "group_id": "2ae0657f41b1c8c93876a0ad847d7bf3dd1a4b471430f1b1c21820418ea5f7d4",
+    "semantic_success": true,
+    "reason": "覆盖所问操作与限制，引用支持；模拟状态边界明确"
+  },
+  {
+    "group_id": "5a179a7fcbce13df1cd53be851998afa9d36ddf5da076b4b2c8027107948663c",
+    "semantic_success": true,
+    "reason": "覆盖所问操作与限制，引用支持；模拟状态边界明确"
+  },
+  {
+    "group_id": "f8c977be38dcda3c061295be4f1abbb1ab8770ecc3bafb6922becdca4530b937",
+    "semantic_success": true,
+    "reason": "回答对应停止任务/避免强拉、优先级重新确认或MFA备用/IT恢复条款，引用匹配、无未经支持的具体流程"
+  },
+  {
+    "group_id": "e2942dba3f8c5f1a5178afb70c508046dd2f4d10a142f12409747f2cc16f2897",
+    "semantic_success": true,
+    "reason": "回答对应停止任务/避免强拉、优先级重新确认或MFA备用/IT恢复条款，引用匹配、无未经支持的具体流程"
+  },
+  {
+    "group_id": "75d1828825350b4764ef22d81eb3bf5d8e81865ae62142526ba64a08487c78b5",
+    "semantic_success": true,
+    "reason": "回答对应停止任务/避免强拉、优先级重新确认或MFA备用/IT恢复条款，引用匹配、无未经支持的具体流程"
+  },
+  {
+    "group_id": "f42898499110bce4a24e30389fbccf7bf091ef08bb8896476d383bf7baa2e780",
+    "semantic_success": true,
+    "reason": "回答对应停止任务/避免强拉、优先级重新确认或MFA备用/IT恢复条款，引用匹配、无未经支持的具体流程"
+  },
+  {
+    "group_id": "290089f0043df946f058249da1c97bbc47558fa80012eb82cc0483d0e033fa81",
+    "semantic_success": true,
+    "reason": "回答对应停止任务/避免强拉、优先级重新确认或MFA备用/IT恢复条款，引用匹配、无未经支持的具体流程"
+  },
+  {
+    "group_id": "393f93ee98e7f48948a5b63f1e83ae5997ba1f64cad8cfd1c39c3b389a854d0a",
+    "semantic_success": true,
+    "reason": "回答对应停止任务/避免强拉、优先级重新确认或MFA备用/IT恢复条款，引用匹配、无未经支持的具体流程"
+  },
+  {
+    "group_id": "bd6293c79fc6bd69d84b0f035834fca64d4d02ffcf65e6d187d46d6fd7729c2c",
+    "semantic_success": true,
+    "reason": "回答对应停止任务/避免强拉、优先级重新确认或MFA备用/IT恢复条款，引用匹配、无未经支持的具体流程"
+  },
+  {
+    "group_id": "d5550ffed4ef894a023444e185209a44e1add87530f1c6d8733bd5d50180bf0b",
+    "semantic_success": true,
+    "reason": "回答对应停止任务/避免强拉、优先级重新确认或MFA备用/IT恢复条款，引用匹配、无未经支持的具体流程"
+  },
+  {
+    "group_id": "c42269fd3d77d503f526ce50bebc37b87949b1ce9f38a11fe7238c3c836549aa",
+    "semantic_success": true,
+    "reason": "回答对应停止任务/避免强拉、优先级重新确认或MFA备用/IT恢复条款，引用匹配、无未经支持的具体流程"
+  },
+  {
+    "group_id": "c7d742562255d32981c36a4aa4a1c50fb39c11b749c7a02ca936d636e9cd4e1a",
+    "semantic_success": true,
+    "reason": "回答对应停止任务/避免强拉、优先级重新确认或MFA备用/IT恢复条款，引用匹配、无未经支持的具体流程"
+  },
+  {
+    "group_id": "8b6cc522ca6d480104bafd60959b95fa9942106f2808c31977664b74e6e6154d",
+    "semantic_success": true,
+    "reason": "回答对应停止任务/避免强拉、优先级重新确认或MFA备用/IT恢复条款，引用匹配、无未经支持的具体流程"
+  },
+  {
+    "group_id": "3db04b9c8edd08e9b65b88616fcfc4798ae82b3b51c09225c7030a6c02bbd3b8",
+    "semantic_success": true,
+    "reason": "回答对应停止任务/避免强拉、优先级重新确认或MFA备用/IT恢复条款，引用匹配、无未经支持的具体流程"
+  },
+  {
+    "group_id": "2422a6fe948ba64137f0602d1985772ebe23d97bf3a70742911a9d2867f0c5c4",
+    "semantic_success": true,
+    "reason": "回答对应停止任务/避免强拉、优先级重新确认或MFA备用/IT恢复条款，引用匹配、无未经支持的具体流程"
+  },
+  {
+    "group_id": "6318366650e296cb30139cad81dfb05dffbdc9a377f6afdb1681f02fd07702ea",
+    "semantic_success": true,
+    "reason": "回答对应停止任务/避免强拉、优先级重新确认或MFA备用/IT恢复条款，引用匹配、无未经支持的具体流程"
+  },
+  {
+    "group_id": "27e42807dee670cf1d627fbc6fdba66fd2f814334203c15472941984f7d282ba",
+    "semantic_success": true,
+    "reason": "回答对应停止任务/避免强拉、优先级重新确认或MFA备用/IT恢复条款，引用匹配、无未经支持的具体流程"
+  },
+  {
+    "group_id": "607f99170d5f2784ef370b975fba2cbf4c22524753986bfe88f16f99f297ae94",
+    "semantic_success": true,
+    "reason": "回答对应停止任务/避免强拉、优先级重新确认或MFA备用/IT恢复条款，引用匹配、无未经支持的具体流程"
+  },
+  {
+    "group_id": "364edc0679fc4fecf9c1ca511b5c687e6b1f69d400f34be0483b985c3612d84b",
+    "semantic_success": true,
+    "reason": "回答对应停止任务/避免强拉、优先级重新确认或MFA备用/IT恢复条款，引用匹配、无未经支持的具体流程"
+  },
+  {
+    "group_id": "91670490a7b581e455e67e14108a75c1fdb35a6562c59c2ffcf6ae86703de0e6",
+    "semantic_success": true,
+    "reason": "回答对应停止任务/避免强拉、优先级重新确认或MFA备用/IT恢复条款，引用匹配、无未经支持的具体流程"
+  },
+  {
+    "group_id": "da4f3e7c0a48b4b11c1ec27fabad3d11f146d993c02eb9d3aacb8dca5deed00e",
+    "semantic_success": true,
+    "reason": "回答对应停止任务/避免强拉、优先级重新确认或MFA备用/IT恢复条款，引用匹配、无未经支持的具体流程"
+  },
+  {
+    "group_id": "3d0b4dea77c13a467997a488fdb02aa504f2f6d3f3248c5e0e099882ee1bce35",
+    "semantic_success": true,
+    "reason": "回答对应停止任务/避免强拉、优先级重新确认或MFA备用/IT恢复条款，引用匹配、无未经支持的具体流程"
+  },
+  {
+    "group_id": "23d79fc03ba28c31ef7c322d368c77699a84ff1cf7683a152dba15bd6eb33fcb",
+    "semantic_success": true,
+    "reason": "完整覆盖所问MFA恢复、VPN访问/供应商最小权限或403认证与授权区分，引用对应事实"
+  },
+  {
+    "group_id": "1b8b362c2edc2ed2f5b342dd5c5ff366046c3b61f7af1e807625a2a4a192e44a",
+    "semantic_success": true,
+    "reason": "完整覆盖所问MFA恢复、VPN访问/供应商最小权限或403认证与授权区分，引用对应事实"
+  },
+  {
+    "group_id": "fa69313dcc0b1425c4fbb10dabdf2a120ad5d7485e706a56d3dbeb160732c58a",
+    "semantic_success": true,
+    "reason": "完整覆盖所问MFA恢复、VPN访问/供应商最小权限或403认证与授权区分，引用对应事实"
+  },
+  {
+    "group_id": "b7a762130f3cadcedf2c8d5cf33fc7680d3d71986eb685be4c657af82f09c5f4",
+    "semantic_success": true,
+    "reason": "完整覆盖所问MFA恢复、VPN访问/供应商最小权限或403认证与授权区分，引用对应事实"
+  },
+  {
+    "group_id": "079f0874bc52b71881ef000930470bc107774c37e726da49492aa332f7808bd6",
+    "semantic_success": true,
+    "reason": "完整覆盖所问MFA恢复、VPN访问/供应商最小权限或403认证与授权区分，引用对应事实"
+  },
+  {
+    "group_id": "49db411e4276900939408d6ce4de559f59b2c88f770bc0519eb6f48f488d6a8b",
+    "semantic_success": true,
+    "reason": "完整覆盖所问MFA恢复、VPN访问/供应商最小权限或403认证与授权区分，引用对应事实"
+  },
+  {
+    "group_id": "11d6c9457feb52ad4ab7d2871ec1801fe1bc126c6412848ab85c330c73a7b69a",
+    "semantic_success": true,
+    "reason": "完整覆盖所问MFA恢复、VPN访问/供应商最小权限或403认证与授权区分，引用对应事实"
+  },
+  {
+    "group_id": "1602ed0343358e8a221f6acbc87e966323048b585eee975df2eea8b857658001",
+    "semantic_success": true,
+    "reason": "完整覆盖所问MFA恢复、VPN访问/供应商最小权限或403认证与授权区分，引用对应事实"
+  },
+  {
+    "group_id": "7a66a0e28da2a9dee5bf25bfaa5c83bcbaf94f1a918076ecd9b127387434f986",
+    "semantic_success": true,
+    "reason": "完整覆盖所问MFA恢复、VPN访问/供应商最小权限或403认证与授权区分，引用对应事实"
+  },
+  {
+    "group_id": "650e6b0cea927c7ca0a41b14fc7919d5b6d9d5f9ac3fefa12b16f9e350225004",
+    "semantic_success": true,
+    "reason": "完整覆盖所问MFA恢复、VPN访问/供应商最小权限或403认证与授权区分，引用对应事实"
+  },
+  {
+    "group_id": "08b6f0df254a37c0eee15e4649be058884f0237613c7db874d52c83771ea4db4",
+    "semantic_success": true,
+    "reason": "完整回答认证/仓库授权区分与核查项目或默认P3，引用匹配"
+  },
+  {
+    "group_id": "305f9950f8ff538c59bef38cd05f2c36d9fb5bdd87a6870b7fb3a9aa681ff481",
+    "semantic_success": true,
+    "reason": "完整回答认证/仓库授权区分与核查项目或默认P3，引用匹配"
+  },
+  {
+    "group_id": "ea851cdfb9e398d242734d4412cf882e0e2b8cfc00aff3d0e7c55a1d3ee1aba7",
+    "semantic_success": true,
+    "reason": "完整回答认证/仓库授权区分与核查项目或默认P3，引用匹配"
+  },
+  {
+    "group_id": "126fca2461606fac3bb9a83ccfd38ce00bdb31f8906afcb7a2a9c00dbc08ac78",
+    "semantic_success": true,
+    "reason": "完整回答认证/仓库授权区分与核查项目或默认P3，引用匹配"
+  },
+  {
+    "group_id": "b8d404842cca14d258bea6b48fc1909410632eabcbc4d9b3efc64d16a6763f2d",
+    "semantic_success": true,
+    "reason": "完整回答认证/仓库授权区分与核查项目或默认P3，引用匹配"
+  },
+  {
+    "group_id": "cf28e303446d0ddf5dddff7f1af30c1a28b3f114c24c7b14ea2f0afdec990af4",
+    "semantic_success": true,
+    "reason": "完整回答认证/仓库授权区分与核查项目或默认P3，引用匹配"
+  },
+  {
+    "group_id": "84aeb52c0d5c606fe31da11641840ca5982162307104ffc9e18ca829622fb3a9",
+    "semantic_success": true,
+    "reason": "完整回答认证/仓库授权区分与核查项目或默认P3，引用匹配"
+  },
+  {
+    "group_id": "5439d928bcbda392d1df16e35994ad5510366a74c4276fb50129a8a031344027",
+    "semantic_success": true,
+    "reason": "完整回答认证/仓库授权区分与核查项目或默认P3，引用匹配"
+  },
+  {
+    "group_id": "68cccf4618a8b04afd0b53cf5c95d8d96fc30a67653dd1ede1fdf91cd7151680",
+    "semantic_success": true,
+    "reason": "完整回答认证/仓库授权区分与核查项目或默认P3，引用匹配"
+  },
+  {
+    "group_id": "e80eb1ad2fddbbdcede03194bee4a64be5fb652d8c2d7501bb8d829dc5347049",
+    "semantic_success": true,
+    "reason": "完整回答认证/仓库授权区分与核查项目或默认P3，引用匹配"
+  },
+  {
+    "group_id": "e18672847c08f4c324c6ccfa3e7fcde7b54a1a8168cf57363e724af895f86dcc",
+    "semantic_success": true,
+    "reason": "完整回答认证/仓库授权区分与核查项目或默认P3，引用匹配"
+  },
+  {
+    "group_id": "3e5ca5c3eb7a281606deb451e4323eb956890542b72888ecc00b3d828d2dccb8",
+    "semantic_success": true,
+    "reason": "覆盖默认P3或打印机电源/网络/队列与不直接按卡纸拆机的要求，引用匹配"
+  },
+  {
+    "group_id": "c7f1758208c660d4ee4f92aaa48dad57fa29ba6e251e745fce5f3625deeb7eee",
+    "semantic_success": false,
+    "reason": "把VPN 809的特定边界扩写为一般VPN故障，超出原文"
+  },
+  {
+    "group_id": "a8f824f00b7ab2ac18c946225087d101722b172ccd56dc0587648e83d486ac6e",
+    "semantic_success": false,
+    "reason": "把VPN 809的特定边界扩写为一般VPN故障，超出原文"
+  },
+  {
+    "group_id": "bb509c473344196d2b47259c8e0df3d7aa22b84640a9051594ce1d286e01545f",
+    "semantic_success": false,
+    "reason": "把VPN 809的特定边界扩写为一般VPN故障，超出原文"
+  },
+  {
+    "group_id": "f721dee74f50a83036995dd2b61578022a42bfa3c65622dfa70aa1c186e5ae42",
+    "semantic_success": false,
+    "reason": "把VPN 809的特定边界扩写为一般VPN故障，超出原文"
+  },
+  {
+    "group_id": "2457220fa3a06b47586161ecd558f47a1aa1554a5074fcd43280392491af3a1d",
+    "semantic_success": false,
+    "reason": "把VPN 809的特定边界扩写为一般VPN故障，超出原文"
+  },
+  {
+    "group_id": "da74a0c7e4bcd24549da6bdb07c8a9f417a9d5434d98407d08548931edbf22cb",
+    "semantic_success": false,
+    "reason": "把VPN 809的特定边界扩写为一般VPN故障，超出原文"
+  },
+  {
+    "group_id": "fbddde054b27e3096dd4a4396952847518393dd7ab3b70c0d9f9885bbbb4ca74",
+    "semantic_success": false,
+    "reason": "把VPN 809的特定边界扩写为一般VPN故障，超出原文"
+  },
+  {
+    "group_id": "622b7a1e85058ad45f7bf2ccc0128077be0649073fc6b305f956667301c301cb",
+    "semantic_success": false,
+    "reason": "把VPN 809的特定边界扩写为一般VPN故障，超出原文"
+  },
+  {
+    "group_id": "db8edebe22c44f929f0a0cb82c8064a8121357627a0e9af8ba49ebc3f1290567",
+    "semantic_success": false,
+    "reason": "可答的VPN客户端/MFA条款被拒答"
+  },
+  {
+    "group_id": "b1d44a5215f12e3dfa770417a3252cb5dd3aadabb74e307bc7909621ab77dce0",
+    "semantic_success": true,
+    "reason": "覆盖默认P3或打印机电源/网络/队列与不直接按卡纸拆机的要求，引用匹配"
+  },
+  {
+    "group_id": "710aff5938ba128a00393cf48b018e3a16537cc8b3378747cdce6c0bd9a8061e",
+    "semantic_success": true,
+    "reason": "覆盖默认P3或打印机电源/网络/队列与不直接按卡纸拆机的要求，引用匹配"
+  },
+  {
+    "group_id": "06aa1637aecc7df92fbfe30c7fb2d2983293b067f4e809a0d0f3b831824faca7",
+    "semantic_success": true,
+    "reason": "覆盖默认P3或打印机电源/网络/队列与不直接按卡纸拆机的要求，引用匹配"
+  },
+  {
+    "group_id": "2d0bcd190f769c6a7636b334e6ab2f14865a8bff8a52013c60d98288f8d80e83",
+    "semantic_success": true,
+    "reason": "覆盖默认P3或打印机电源/网络/队列与不直接按卡纸拆机的要求，引用匹配"
+  },
+  {
+    "group_id": "aff7a5dccd01b2ba887eda78472931c740b4b26c730ce267c40661ab3db7b18d",
+    "semantic_success": true,
+    "reason": "覆盖默认P3或打印机电源/网络/队列与不直接按卡纸拆机的要求，引用匹配"
+  },
+  {
+    "group_id": "7c139a25440df25be2603463d3afba078af444bd338aca139ff8d0de9de841f8",
+    "semantic_success": true,
+    "reason": "完整覆盖打印机离线先查电源网络队列/不直接拆机，或敏感链接接收人及业务有效期限制，引用支持"
+  },
+  {
+    "group_id": "e5d4c61660d37afa2f4a37c0a5c7e50b746d5556a8bfb454bf769b629fab953f",
+    "semantic_success": true,
+    "reason": "完整覆盖打印机离线先查电源网络队列/不直接拆机，或敏感链接接收人及业务有效期限制，引用支持"
+  },
+  {
+    "group_id": "d42aaa8514d6bcb339ecba6bdc4ca28ff427d2cadb6d7dc3c5b6cc75afca85ab",
+    "semantic_success": true,
+    "reason": "完整覆盖打印机离线先查电源网络队列/不直接拆机，或敏感链接接收人及业务有效期限制，引用支持"
+  },
+  {
+    "group_id": "9e90a7f72204859bac12d9ca33ee89fad06c17c6c37c03402641ec438330668f",
+    "semantic_success": true,
+    "reason": "完整覆盖打印机离线先查电源网络队列/不直接拆机，或敏感链接接收人及业务有效期限制，引用支持"
+  },
+  {
+    "group_id": "822435b336cfc15cdd1f1962d4e3e29928723c14d5353c55a8a979f29b43a855",
+    "semantic_success": true,
+    "reason": "完整覆盖打印机离线先查电源网络队列/不直接拆机，或敏感链接接收人及业务有效期限制，引用支持"
+  },
+  {
+    "group_id": "1e84391e432cc28e6d06a1495d00cd61be00f49a68de60bb7b7ff5ee6bf97133",
+    "semantic_success": true,
+    "reason": "完整覆盖打印机离线先查电源网络队列/不直接拆机，或敏感链接接收人及业务有效期限制，引用支持"
+  },
+  {
+    "group_id": "53704c69073371edf4237c022c7ca5790ed0885b505d8a3c1d1eba8ba79f1467",
+    "semantic_success": true,
+    "reason": "完整覆盖打印机离线先查电源网络队列/不直接拆机，或敏感链接接收人及业务有效期限制，引用支持"
+  },
+  {
+    "group_id": "24f522501e65ccba6fc46c38c8b7ebf632d3be3b8269c8ef5db0077aaeebb317",
+    "semantic_success": true,
+    "reason": "完整覆盖打印机离线先查电源网络队列/不直接拆机，或敏感链接接收人及业务有效期限制，引用支持"
+  },
+  {
+    "group_id": "c75a83c4ff63eea9c218a8e9662e4b2abc3b468427cc83b5e5803911c5cfee2a",
+    "semantic_success": true,
+    "reason": "完整覆盖打印机离线先查电源网络队列/不直接拆机，或敏感链接接收人及业务有效期限制，引用支持"
+  },
+  {
+    "group_id": "538f549a69f8eb27cea434564db215cc7cbaa2db48c32b083441c56266206c56",
+    "semantic_success": true,
+    "reason": "完整覆盖打印机离线先查电源网络队列/不直接拆机，或敏感链接接收人及业务有效期限制，引用支持"
+  },
+  {
+    "group_id": "c91ec7171da0cd49396e968296e1f50e0a047d12d3c7a7b10118f3dd490dcb14",
+    "semantic_success": true,
+    "reason": "覆盖809初始检查、不能仅据错误码定因和管理员安全边界，未将模拟或静态指南当实时状态"
+  },
+  {
+    "group_id": "d39cadafbd2d98bb9ee2a97ef84c98afdfcf73b9ffa2d8499be77196d289408f",
+    "semantic_success": true,
+    "reason": "覆盖809初始检查、不能仅据错误码定因和管理员安全边界，未将模拟或静态指南当实时状态"
+  },
+  {
+    "group_id": "5ff22f44416cbd2362b888569e7c9d5d75e9c1dde3d1925420f41a9ee748d729",
+    "semantic_success": true,
+    "reason": "覆盖809初始检查、不能仅据错误码定因和管理员安全边界，未将模拟或静态指南当实时状态"
+  },
+  {
+    "group_id": "7f91d8ffdd86302e339d1aec15dff272f59e542f4cf7f6fcf58b66f23c3c650f",
+    "semantic_success": true,
+    "reason": "覆盖809初始检查、不能仅据错误码定因和管理员安全边界，未将模拟或静态指南当实时状态"
+  },
+  {
+    "group_id": "6baaa23c74b08934dd9ad8329119254b3fddf99d70c5c3cb847802f19e9eb6f9",
+    "semantic_success": true,
+    "reason": "覆盖809初始检查、不能仅据错误码定因和管理员安全边界，未将模拟或静态指南当实时状态"
+  },
+  {
+    "group_id": "7617a0e64479da182a25a77fd79749ab1564f8644de5174eeedf293e2091cec7",
+    "semantic_success": true,
+    "reason": "覆盖809初始检查、不能仅据错误码定因和管理员安全边界，未将模拟或静态指南当实时状态"
+  },
+  {
+    "group_id": "b6c477826e582b95d78fc36947087e30879ca8f0ab54a88db7dcd7b296c37d28",
+    "semantic_success": true,
+    "reason": "覆盖809初始检查、不能仅据错误码定因和管理员安全边界，未将模拟或静态指南当实时状态"
+  },
+  {
+    "group_id": "f9bd5c66a60a4773ef35d62780b084a14948203586bb975ee46427fdf753e078",
+    "semantic_success": true,
+    "reason": "覆盖809初始检查、不能仅据错误码定因和管理员安全边界，未将模拟或静态指南当实时状态"
+  },
+  {
+    "group_id": "3b9dd0195213ac67879b0b853686f037b26d2a8dce9a3e8c3fa3dd307db6a038",
+    "semantic_success": true,
+    "reason": "对应809核查边界或共享只读属性/文件锁/目录写权限，覆盖所问且引用匹配"
+  },
+  {
+    "group_id": "b9306bd54669ea380a1554e1a0804aaaaa3a880e5055034ac80296774252a30c",
+    "semantic_success": true,
+    "reason": "对应809核查边界或共享只读属性/文件锁/目录写权限，覆盖所问且引用匹配"
+  },
+  {
+    "group_id": "77810d09c21bbee371dac806afa1965411eeb38585ebe638a709168f8f529130",
+    "semantic_success": true,
+    "reason": "对应809核查边界或共享只读属性/文件锁/目录写权限，覆盖所问且引用匹配"
+  },
+  {
+    "group_id": "8f4d9ec2d02aa94e39868867094620e766e754fb0f516f7d09ce795d099ba9a6",
+    "semantic_success": true,
+    "reason": "对应809核查边界或共享只读属性/文件锁/目录写权限，覆盖所问且引用匹配"
+  },
+  {
+    "group_id": "1d9c3bc3094b0aaa04d050b4cce2f3e857db0ae5a60d3d781329eaf221cb8216",
+    "semantic_success": true,
+    "reason": "对应809核查边界或共享只读属性/文件锁/目录写权限，覆盖所问且引用匹配"
+  },
+  {
+    "group_id": "a259600e32bf1fcd0a0cad598f9692e0e0b6aa47dfe8e45dac4c4a5a54dfe615",
+    "semantic_success": true,
+    "reason": "对应809核查边界或共享只读属性/文件锁/目录写权限，覆盖所问且引用匹配"
+  },
+  {
+    "group_id": "db972bc7dc5c2b94cdafc572b8ff9cd975222242a1d9001b46b69d8c60c037e5",
+    "semantic_success": true,
+    "reason": "对应809核查边界或共享只读属性/文件锁/目录写权限，覆盖所问且引用匹配"
+  },
+  {
+    "group_id": "22a20f14cd0c7931ab05e6d484e7a64fa0eda2f378e573407763a9a1a55ba159",
+    "semantic_success": true,
+    "reason": "对应809核查边界或共享只读属性/文件锁/目录写权限，覆盖所问且引用匹配"
+  },
+  {
+    "group_id": "24a5e09d3e4f8c0c7e69b742dc25cc40fad89b08adba31d759e0084599add6df",
+    "semantic_success": true,
+    "reason": "覆盖外发敏感邮件附件与收件范围规则，或电池鼓包报修必备信息及停止使用要求，引用匹配"
+  },
+  {
+    "group_id": "585b7dbd22c146a2df3270bae106147ca07ee4c8ca2c3782fffec11db95e05b7",
+    "semantic_success": true,
+    "reason": "覆盖外发敏感邮件附件与收件范围规则，或电池鼓包报修必备信息及停止使用要求，引用匹配"
+  },
+  {
+    "group_id": "7a3278e1f8d5470f1d6f7810ef3b4e3765d228b8cce612ce7b12f86c4840af3f",
+    "semantic_success": true,
+    "reason": "覆盖外发敏感邮件附件与收件范围规则，或电池鼓包报修必备信息及停止使用要求，引用匹配"
+  },
+  {
+    "group_id": "fd422708851d4b4f3c1db6fbf263a76cc62237e2cae78481f6860f07819f4533",
+    "semantic_success": true,
+    "reason": "覆盖外发敏感邮件附件与收件范围规则，或电池鼓包报修必备信息及停止使用要求，引用匹配"
+  },
+  {
+    "group_id": "2a9810060232f712a8864f59aa3913240c69b33e1ba684332d881e7f7d565ed7",
+    "semantic_success": true,
+    "reason": "覆盖外发敏感邮件附件与收件范围规则，或电池鼓包报修必备信息及停止使用要求，引用匹配"
+  },
+  {
+    "group_id": "0d0a8665d7c8f092e25c9aff885109388005fc0efd8dcf89a17d915da63a440c",
+    "semantic_success": true,
+    "reason": "覆盖外发敏感邮件附件与收件范围规则，或电池鼓包报修必备信息及停止使用要求，引用匹配"
+  },
+  {
+    "group_id": "3c965c4065905f63e80f8fd11ee6179adb113bfe827a2483fe1aabcde10b06ef",
+    "semantic_success": true,
+    "reason": "覆盖外发敏感邮件附件与收件范围规则，或电池鼓包报修必备信息及停止使用要求，引用匹配"
+  },
+  {
+    "group_id": "77957e9fa79592eaa9e4aa807f3b2caf5a024b022492bd484ebb8004f88b9cb3",
+    "semantic_success": true,
+    "reason": "覆盖外发敏感邮件附件与收件范围规则，或电池鼓包报修必备信息及停止使用要求，引用匹配"
+  },
+  {
+    "group_id": "5be9fbb85517e35b11f872a02d15badc945d1d53298f8b1b311bccdeb4abd517",
+    "semantic_success": true,
+    "reason": "覆盖外发敏感邮件附件与收件范围规则，或电池鼓包报修必备信息及停止使用要求，引用匹配"
+  },
+  {
+    "group_id": "6da41f598dd22b5c9a19d3419e3e77209a0b1760872746e18c3d5af706097799",
+    "semantic_success": true,
+    "reason": "覆盖外发敏感邮件附件与收件范围规则，或电池鼓包报修必备信息及停止使用要求，引用匹配"
+  },
+  {
+    "group_id": "765049af69f1d870e6dcbc6e2c561f4d78e7eaef0deecc40b45a75a9e2374f90",
+    "semantic_success": true,
+    "reason": "覆盖外发敏感邮件附件与收件范围规则，或电池鼓包报修必备信息及停止使用要求，引用匹配"
+  },
+  {
+    "group_id": "11779bc57ac75322074d648b3f6cc82a4d2b67a16bf1fff29488e97ea58c98af",
+    "semantic_success": true,
+    "reason": "覆盖外发敏感邮件附件与收件范围规则，或电池鼓包报修必备信息及停止使用要求，引用匹配"
+  },
+  {
+    "group_id": "7d6b6671aeebd0cc14a2373e26a9a4f8611c641e93ad33073c2bee324a8c5a43",
+    "semantic_success": true,
+    "reason": "覆盖外发敏感邮件附件与收件范围规则，或电池鼓包报修必备信息及停止使用要求，引用匹配"
+  },
+  {
+    "group_id": "4ca7548c19485d8e19dc2911a8c0b5bfface9093e232cc3e0c4d5fda30b82556",
+    "semantic_success": true,
+    "reason": "覆盖邮箱容量/回收站/清理前保留记录，或离职授权停用与数据留存边界，引用匹配"
+  },
+  {
+    "group_id": "195e1064cd3133b322ca0ac63f6baf0cbd95b369f7d8a79a4d7bfe2592843955",
+    "semantic_success": true,
+    "reason": "覆盖邮箱容量/回收站/清理前保留记录，或离职授权停用与数据留存边界，引用匹配"
+  },
+  {
+    "group_id": "603c063f95c6084a5b60fe86bcf8d89426f265fd6d7106d64761e7ce6dfb0dfb",
+    "semantic_success": true,
+    "reason": "覆盖邮箱容量/回收站/清理前保留记录，或离职授权停用与数据留存边界，引用匹配"
+  },
+  {
+    "group_id": "2ac4fa25e073178ec669359dedc8dbda46a0ca6dbcf61bc744908e67e91720b8",
+    "semantic_success": true,
+    "reason": "覆盖邮箱容量/回收站/清理前保留记录，或离职授权停用与数据留存边界，引用匹配"
+  },
+  {
+    "group_id": "e418ea153120e0e6a9d4978715f689028b57be0da8afd4943b9ab817522a50eb",
+    "semantic_success": true,
+    "reason": "覆盖邮箱容量/回收站/清理前保留记录，或离职授权停用与数据留存边界，引用匹配"
+  },
+  {
+    "group_id": "ceaac7ba451fd8700bb4afdc3fec8d3b90980bdd0aa223adc5197d40b50d9d38",
+    "semantic_success": true,
+    "reason": "覆盖邮箱容量/回收站/清理前保留记录，或离职授权停用与数据留存边界，引用匹配"
+  },
+  {
+    "group_id": "1bb1495a010b0a0e37e86866280ef82cad7b5544a2116d7a4833bab696181756",
+    "semantic_success": true,
+    "reason": "覆盖邮箱容量/回收站/清理前保留记录，或离职授权停用与数据留存边界，引用匹配"
+  },
+  {
+    "group_id": "221bc55674afce3204b8cb46cbfe3e793d3a26e1ce7b07b5e935406a22d57b09",
+    "semantic_success": true,
+    "reason": "覆盖邮箱容量/回收站/清理前保留记录，或离职授权停用与数据留存边界，引用匹配"
+  },
+  {
+    "group_id": "f4ac024bd42fd4fd127d902521a6cbd8bf9f91280cc7e772e56e5c3eb2e74582",
+    "semantic_success": true,
+    "reason": "覆盖邮箱容量/回收站/清理前保留记录，或离职授权停用与数据留存边界，引用匹配"
+  },
+  {
+    "group_id": "9956759e6b42fd6992a1cba85e0b0c7e90872c8696cc4cd94ebf8bb4d455e3c0",
+    "semantic_success": true,
+    "reason": "覆盖邮箱容量/回收站/清理前保留记录，或离职授权停用与数据留存边界，引用匹配"
+  },
+  {
+    "group_id": "4716c04dce7c6bce0133e204d12eb329e7ff93c3462c5b0fe31f3ace01c492dc",
+    "semantic_success": false,
+    "reason": "可答的809用户与管理员核查衔接被拒答"
+  },
+  {
+    "group_id": "dcdf98b8202f6092f0d8bc9ff355997fdd2ceb2b5dfd096829eddd6fc3e96e4a",
+    "semantic_success": true,
+    "reason": "覆盖邮箱容量/回收站/清理前保留记录，或离职授权停用与数据留存边界，引用匹配"
+  },
+  {
+    "group_id": "6dea071afcaef31da7f436610d48aaa563cc802d9a83f68b70befd9539526dcc",
+    "semantic_success": true,
+    "reason": "覆盖邮箱容量/回收站/清理前保留记录，或离职授权停用与数据留存边界，引用匹配"
+  },
+  {
+    "group_id": "282215c35c831e09f7e36faa5c6c4a4df9700f709b7868ece3b6273ddb0956ed",
+    "semantic_success": true,
+    "reason": "覆盖邮箱容量/回收站/清理前保留记录，或离职授权停用与数据留存边界，引用匹配"
+  },
+  {
+    "group_id": "6f0bdc046a9feeebfa87426e6ee8413a19d3d7e13c5c858d6112d95d3fb11189",
+    "semantic_success": true,
+    "reason": "覆盖邮箱容量/回收站/清理前保留记录，或离职授权停用与数据留存边界，引用匹配"
+  },
+  {
+    "group_id": "be602c2615046cca26c71b45f82fc5eb2c233569940b8effbda08e99ffcece86",
+    "semantic_success": true,
+    "reason": "覆盖邮箱容量/回收站/清理前保留记录，或离职授权停用与数据留存边界，引用匹配"
+  },
+  {
+    "group_id": "aeca4f7868785007313c8c470b9779eecf4fd2073fe31a1a0074d066fd0d2296",
+    "semantic_success": true,
+    "reason": "覆盖邮箱容量/回收站/清理前保留记录，或离职授权停用与数据留存边界，引用匹配"
+  },
+  {
+    "group_id": "9e9e90673d0f3d7470b1964c3569d36a56e3df9084150783ca85287846d490dc",
+    "semantic_success": true,
+    "reason": "覆盖邮箱容量/回收站/清理前保留记录，或离职授权停用与数据留存边界，引用匹配"
+  }
+]

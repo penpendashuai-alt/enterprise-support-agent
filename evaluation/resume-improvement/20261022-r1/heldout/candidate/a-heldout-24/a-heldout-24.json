@@ -1,0 +1,73 @@
+{
+  "run_id": "21859eb1acb3470c82d29d3c79972899",
+  "case_id": "a-heldout-24",
+  "attempt": 1,
+  "variant": "candidate",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T12:10:23.223362+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "想登记会议报障：会议室应用报错，但我不知道影响一个人还是所有参会人，等核实再说。",
+      "http_status": 200,
+      "seconds": 4.012076300001354,
+      "http_response_seconds": 4.008356000002095,
+      "request_id": "5f7a2bd1da1e47fab9c871f34640a3cf",
+      "server_timing": "rate_check;dur=2.522, thread_wait;dur=0.011, execution_wait;dur=0.009, business_database;dur=21.456, ownership;dur=23.853, ownership_preflight;dur=8.538, model_wait;dur=0.031, router;dur=2267.855, draft;dur=1667.950",
+      "response": {
+        "type": "ai",
+        "content": "请补充影响范围。工单尚未提交；信息齐全后会展示草稿供你确认。未指定优先级时使用演示默认值 P3。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16385-0096-7e92-b8d2-b918eb02ad61",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "会议室应用",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "会议室应用报错，影响范围待核实",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "approval_status": "collecting"
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-21859eb1-a-heldout-24-alice",
+    "bob": "p8-21859eb1-a-heldout-24-bob"
+  },
+  "threads": {
+    "primary": "0d30167578b74026bf4dce9ae7ee1ed0",
+    "secondary": "a69184afbbc448f18fe3e9cfd6fcb9bf"
+  },
+  "measurement": true,
+  "cache_condition": "disabled",
+  "seconds": 4.177666000003228,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "3a746d88f36d4539b6c76af65580cf8d",
+    "c3abd40f8ce9455abc06c68efe25866c"
+  ]
+}

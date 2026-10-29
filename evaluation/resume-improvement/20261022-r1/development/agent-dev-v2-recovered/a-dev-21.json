@@ -1,0 +1,97 @@
+{
+  "run_id": "430217efac6747fc930598f5c54120e9",
+  "case_id": "a-dev-21",
+  "attempt": 1,
+  "variant": "candidate-v2",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T11:35:46.022346+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "帮我建 VPN 工单，只影响我。同事昨天重启后恢复了，我今天没重启而且还连不上。",
+      "http_status": 200,
+      "seconds": 3.921461100002489,
+      "http_response_seconds": 3.9185501000029035,
+      "request_id": "01d4c289d8d0465da3ad6047c0b1e6b7",
+      "server_timing": "rate_check;dur=0.825, thread_wait;dur=0.008, execution_wait;dur=0.007, business_database;dur=13.230, ownership;dur=14.529, ownership_preflight;dur=3.059, model_wait;dur=0.022, router;dur=2033.813, draft;dur=1839.732",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：VPN 连接故障\n描述：VPN 连不上。同事昨天重启后恢复了；我今天没有重启，仍然连不上。\n服务：VPN\n影响范围：只影响我\n优先级：P3（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16365-4e6e-7d21-8e85-7e86b67708f8",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-ebdd30d4fd504e139ab765ce14076de3",
+          "draft_version": 1,
+          "draft": {
+            "title": "VPN 连接故障",
+            "description": "VPN 连不上。同事昨天重启后恢复了；我今天没有重启，仍然连不上。",
+            "service_name": "VPN",
+            "impact": "只影响我",
+            "priority": "P3"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "VPN",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "VPN 连不上，只影响本人；同事昨天重启后恢复，本人今天未重启仍连不上",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "VPN 连接故障",
+          "description": "VPN 连不上。同事昨天重启后恢复了；我今天没有重启，仍然连不上。",
+          "service_name": "VPN",
+          "impact": "只影响我",
+          "priority": "P3"
+        },
+        "draft_id": "draft-ebdd30d4fd504e139ab765ce14076de3",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-430217ef-a-dev-21-alice",
+    "bob": "p8-430217ef-a-dev-21-bob"
+  },
+  "threads": {
+    "primary": "a565080ed2da4495a6ebdb38c299c062",
+    "secondary": "23f508eeb3424558811ef912e08553d0"
+  },
+  "seconds": 4.083863600000768,
+  "final_ticket_count": 0,
+  "final_draft_version": 1,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "0815362c3aa64641a47b90918b073b0a",
+    "eac6d28b877c4551aadfdb1d9f80ab18"
+  ]
+}

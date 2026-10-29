@@ -1,0 +1,97 @@
+{
+  "run_id": "430217efac6747fc930598f5c54120e9",
+  "case_id": "a-dev-19",
+  "attempt": 1,
+  "variant": "candidate-v2",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T11:35:37.910229+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请为我建工单：我个人共享目录打不开。之前助手建议我重登并换网络，那只是建议，我两项都没做。",
+      "http_status": 200,
+      "seconds": 3.814374699999462,
+      "http_response_seconds": 3.8120692999982566,
+      "request_id": "f8a58f0589a946d09f1860186a765921",
+      "server_timing": "rate_check;dur=1.258, thread_wait;dur=0.018, execution_wait;dur=0.014, business_database;dur=18.668, ownership;dur=20.642, ownership_preflight;dur=4.798, model_wait;dur=0.027, router;dur=1798.981, draft;dur=1952.563",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：共享目录打不开\n描述：现象：我个人共享目录打不开。此前助手建议重登并更换网络，仅为建议，两项均未执行。\n服务：共享目录\n影响范围：我个人\n优先级：P3（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16365-2ec1-7bd3-a3ee-e8287f49212c",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-e5df017dd63c45ea8d40715027a6695d",
+          "draft_version": 1,
+          "draft": {
+            "title": "共享目录打不开",
+            "description": "现象：我个人共享目录打不开。此前助手建议重登并更换网络，仅为建议，两项均未执行。",
+            "service_name": "共享目录",
+            "impact": "我个人",
+            "priority": "P3"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "个人共享目录打不开",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "共享目录打不开",
+          "description": "现象：我个人共享目录打不开。此前助手建议重登并更换网络，仅为建议，两项均未执行。",
+          "service_name": "共享目录",
+          "impact": "我个人",
+          "priority": "P3"
+        },
+        "draft_id": "draft-e5df017dd63c45ea8d40715027a6695d",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-430217ef-a-dev-19-alice",
+    "bob": "p8-430217ef-a-dev-19-bob"
+  },
+  "threads": {
+    "primary": "55eea3cd91af4464a3f2691b1b966e2c",
+    "secondary": "4fb1619d91b746eaaa9e0d0109d52dcb"
+  },
+  "seconds": 3.9812568000015744,
+  "final_ticket_count": 0,
+  "final_draft_version": 1,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "a853cc67f8f94e8eb892286c2419c8c0",
+    "c539dfe04e404b0e9691808e55dec0c2"
+  ]
+}

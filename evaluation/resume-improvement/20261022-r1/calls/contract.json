@@ -1,0 +1,42 @@
+{
+  "version": "physical-http-v1",
+  "authorized_on": "2026-10-22",
+  "total_cny": 60,
+  "allow_concurrent": false,
+  "stages": {
+    "pilot": 3,
+    "baseline": 10,
+    "development": 12,
+    "heldout": 10,
+    "performance": 22,
+    "demo": 3
+  },
+  "providers": {
+    "chat": {
+      "host": "api.deepseek.com",
+      "path": "/chat/completions",
+      "model": "deepseek-v4-pro",
+      "input_per_million_cny": 9,
+      "output_per_million_cny": 27,
+      "max_attempts": 1200,
+      "max_output_tokens": 1800
+    },
+    "embedding": {
+      "host": "dashscope.aliyuncs.com",
+      "path": "/compatible-mode/v1/embeddings",
+      "model": "text-embedding-v3",
+      "input_per_million_cny": 0.5,
+      "output_per_million_cny": 0,
+      "max_attempts": 700
+    }
+  },
+  "price_checked_on": "2026-10-22",
+  "price_sources": [
+    "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+    "https://help.aliyun.com/zh/model-studio/embedding"
+  ],
+  "estimate_scope": "Peak/cache-miss upper estimate, no free-credit assumptions; not an invoice. Unknown usage stops future attempts.",
+  "chat_retries": 0,
+  "paid_rerank_calls": 0,
+  "paid_judge_calls": 0
+}

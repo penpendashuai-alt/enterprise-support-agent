@@ -35,7 +35,11 @@ async def run(args, dataset, cases):
         raise ValueError("Use a fresh run directory; no automatic task replay")
     args.output.mkdir(parents=True)
     run_id = uuid4().hex
-    ledger = Ledger(args.ledger, run_id, args.budget, args.max_calls)
+    ledger = (
+        args.ledger_factory(run_id)
+        if getattr(args, "ledger_factory", None)
+        else Ledger(args.ledger, run_id, args.budget, args.max_calls)
+    )
     if settings.COMPATIBLE_MODEL != "deepseek-v4-pro":
         raise ValueError("Pricing contract covers only deepseek-v4-pro")
     config = get_settings()
@@ -43,13 +47,13 @@ async def run(args, dataset, cases):
     assert config.RAG_DENSE_CANDIDATES == 20 and config.RAG_DENSE_THRESHOLD == 0.65
     settings.RAG_CACHE_ENABLED = args.cache
     settings.ADMISSION_ENABLED = True
-    settings.REDIS_NAMESPACE = "esa:p8:" + run_id
+    settings.REDIS_NAMESPACE = getattr(args, "namespace_prefix", "esa:p8:") + run_id
     settings.AUTH_SECRET = None
     settings.LANGFUSE_TRACING = False
-    settings.SUPPORT_DEMO_SAMPLES = False
+    settings.SUPPORT_DEMO_SAMPLES = getattr(args, "demo_samples", False)
     settings.REQUEST_TIMEOUT = 120
     connection = json.loads(args.connection_json.read_text(encoding="utf-8"))
-    db = "phase8_" + run_id
+    db = getattr(args, "database_prefix", "phase8_") + run_id
     with psycopg.connect(make_conninfo(**connection), autocommit=True, connect_timeout=5) as conn:
         conn.execute(sql.SQL("CREATE DATABASE {}").format(sql.Identifier(db)))
     configure({**connection, "dbname": db})
@@ -63,14 +67,18 @@ async def run(args, dataset, cases):
     service.get_all_agent_info = lambda: [
         AgentInfo(key="support-agent", description="Phase 8 isolated evaluation")
     ]
-    model = support.get_support_model({}).model_copy(
-        update={
-            "temperature": 0,
-            "max_tokens": 1800,
-            "max_retries": 0,
-            "stream_usage": True,
-            "callbacks": [ledger],
-        }
+    model = (
+        ledger.model()
+        if getattr(args, "ledger_factory", None)
+        else support.get_support_model({}).model_copy(
+            update={
+                "temperature": 0,
+                "max_tokens": 1800,
+                "max_retries": 0,
+                "stream_usage": True,
+                "callbacks": [ledger],
+            }
+        )
     )
     support.get_support_model = lambda _: model
     finalize = answers.finalize
@@ -126,6 +134,10 @@ async def run(args, dataset, cases):
             "max_retries": 0,
             "thinking": "disabled",
             "cache": args.cache,
+            "cache_strategy": "per-case off/warm tags"
+            if getattr(args, "performance", False)
+            else "fixed",
+            "cache_ttl_seconds": settings.RAG_CACHE_TTL,
             "admission": True,
             "worker_count": 1,
             "pool_per_role": 1,
@@ -159,6 +171,8 @@ async def run(args, dataset, cases):
             for case in cases:
                 if ledger.exhausted:
                     break
+                if getattr(args, "performance", False):
+                    settings.RAG_CACHE_ENABLED = "warm" in case.tags
                 ledger.case_id = case.case_id
                 users = {
                     role: f"p8-{run_id[:8]}-{case.case_id}-{role}" for role in ("alice", "bob")
@@ -175,6 +189,14 @@ async def run(args, dataset, cases):
                     "turns": [],
                     "users": users,
                     "threads": threads,
+                    "measurement": "warmup" not in case.tags,
+                    "cache_condition": "warm"
+                    if "warm" in case.tags
+                    else "off"
+                    if getattr(args, "performance", False)
+                    else "enabled"
+                    if args.cache
+                    else "disabled",
                 }
                 draft = None
                 started = perf_counter()
@@ -232,6 +254,12 @@ async def run(args, dataset, cases):
                                 "draft_version": draft["draft_version"],
                                 "action": turn.operation,
                             }
+                            if getattr(args, "ledger_factory", None):
+                                decision["draft_version"] += (
+                                    turn.values.get("approval_version_offset", 0)
+                                    if turn.operation == "approve"
+                                    else 0
+                                )
                             if turn.operation == "edit":
                                 decision["draft"] = {**draft["draft"], **turn.values}
                             request["approval"] = decision
@@ -260,6 +288,7 @@ async def run(args, dataset, cases):
                                 kwargs["json"] = turn.values
                         point = perf_counter()
                         response = await client.request(method, path, **kwargs)
+                        http_response_seconds = perf_counter() - point
                         events = []
                         sse_error = None
                         if turn.stream and response.status_code == 200:
@@ -317,7 +346,9 @@ async def run(args, dataset, cases):
                             "user_message": turn.text,
                             "http_status": response.status_code,
                             "seconds": perf_counter() - point,
+                            "http_response_seconds": http_response_seconds,
                             "request_id": response.headers.get("x-request-id"),
+                            "server_timing": response.headers.get("server-timing"),
                             "response": body,
                             "state": serial,
                             "retrieval": state.get("retrieval"),
@@ -330,7 +361,11 @@ async def run(args, dataset, cases):
                         if body.get("custom_data", {}).get("kind") == "ticket_approval":
                             draft = body["custom_data"]
                         record["turns"].append(row)
-                        if args.cache and (row.get("retrieval") or {}).get("status") == "ok":
+                        if (
+                            args.cache
+                            and getattr(args, "cache_probe", True)
+                            and (row.get("retrieval") or {}).get("status") == "ok"
+                        ):
                             cold = row["retrieval"]
                             warm = await original_retrieve(cold["query"])
                             row["cache_probe"] = {
@@ -406,3 +441,5 @@ async def run(args, dataset, cases):
             for case_id in report["records"]
         ]
         write(args.output / "reviews.pending.json", export_reviews(records))
+        if getattr(ledger, "export", None):
+            ledger.export()

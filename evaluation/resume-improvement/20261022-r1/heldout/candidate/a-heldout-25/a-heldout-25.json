@@ -1,0 +1,115 @@
+{
+  "run_id": "49366e0715034e74a5fe3815c76e1702",
+  "case_id": "a-heldout-25",
+  "attempt": 1,
+  "variant": "candidate",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T12:11:21.686185+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请查询 CRM-MARS 服务现在是否可用。",
+      "http_status": 200,
+      "seconds": 5.360935900000186,
+      "http_response_seconds": 5.357291000000259,
+      "request_id": "837ba0c4e90d4c2a84847a662cb20abe",
+      "server_timing": "rate_check;dur=2.713, thread_wait;dur=0.017, execution_wait;dur=0.011, business_database;dur=21.436, ownership;dur=23.197, ownership_preflight;dur=8.159, model_wait;dur=0.047, router;dur=2001.879, preferences;dur=10.157, handler;dur=3271.646",
+      "response": {
+        "type": "ai",
+        "content": "查询结果：模拟数据未覆盖 CRM-MARS 服务，因此无法确认其当前状态。\n\n说明：本工具仅覆盖 GitHub、VPN、邮箱/email 和 Jira 这几类固定模拟服务，CRM-MARS 不在其中。如需了解该服务的实际可用性，请提供正式的服务监控文档或联系相关管理员核查。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16385-e4f7-7033-876f-3daac8655f28",
+        "response_metadata": {
+          "token_usage": {
+            "completion_tokens": 71,
+            "prompt_tokens": 791,
+            "total_tokens": 862,
+            "completion_tokens_details": null,
+            "prompt_tokens_details": {
+              "audio_tokens": null,
+              "cache_write_tokens": null,
+              "cached_tokens": 768
+            },
+            "prompt_cache_hit_tokens": 768,
+            "prompt_cache_miss_tokens": 23
+          },
+          "model_provider": "openai",
+          "model_name": "deepseek-v4-pro",
+          "system_fingerprint": "a307abda487cd1b463329ccb945ce396",
+          "id": "3e0651f6-2869-441c-a62b-ef12639436b2",
+          "finish_reason": "stop",
+          "logprobs": null
+        },
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "service_status",
+        "entities": {
+          "service_name": "CRM-MARS",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": null,
+          "ticket_action": null
+        },
+        "needs_clarification": false,
+        "clarification_question": null
+      },
+      "retrieval": null,
+      "tools": [
+        {
+          "name": "query_service_status",
+          "args": {
+            "service_name": "CRM-MARS"
+          },
+          "id": "call_00_paTMkqFXMKNS3wFZAsvE0323",
+          "type": "tool_call",
+          "result": {
+            "status": "not_found",
+            "data": null,
+            "message": "模拟数据未覆盖该服务。",
+            "is_mock": true
+          },
+          "validation_error": false
+        }
+      ],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-49366e07-a-heldout-25-alice",
+    "bob": "p8-49366e07-a-heldout-25-bob"
+  },
+  "threads": {
+    "primary": "ef93a19ce3674e7d890fe6bac6829d7a",
+    "secondary": "e9c4b08d78b34d51a5a185d621356c05"
+  },
+  "measurement": true,
+  "cache_condition": "disabled",
+  "seconds": 5.528425900000002,
+  "final_ticket_count": 0,
+  "final_draft_version": null,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {
+      "required_tool_total": 1,
+      "required_tool_completed": 1,
+      "actual_tool_total": 1,
+      "actual_tool_legal": 1,
+      "tool_parameters_valid": 1
+    }
+  },
+  "model_calls": [
+    "950482cccbcd414eafe008fb5b8952b0",
+    "aff57cd29a9d43b1b3baa08d233df47f",
+    "c64388d8812f4b3693cdbbe72f88c188"
+  ]
+}

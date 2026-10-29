@@ -1,0 +1,36 @@
+{
+  "at": "2026-10-23T16:32:32.083391+00:00",
+  "candidate_v2_product_sha256": {
+    "src/agents/support_agent.py": "7e115e4dcb615e38e42bb5f7609c7d483e8ec04e5d347d164ef02d4d01f382de",
+    "src/agents/ticket_flow.py": "83a85b4bb9a6bb2ba9a03f413798f0f38450179e5c2ff209af9d5ac50a5f9e8e"
+  },
+  "historical_files": 1052,
+  "historical_byte_exact": 1032,
+  "historical_newline_only": [
+    "evaluation/datasets/generation_v1.json",
+    "evaluation/phase10/README.md",
+    "evaluation/phase6/answer-review.md",
+    "evaluation/phase7/README.md",
+    "evaluation/phase8/README.md",
+    "evaluation/phase8/rubric.md",
+    "evaluation/results/phase4/answer-review.md",
+    "evaluation/results/phase5/agent-answer-review.md",
+    "evaluation/phase9/closeout/github-run-37436624165/ci-37436624165/checks.json",
+    "evaluation/phase9/closeout/github-run-37436624165/ci-37436624165/request-summaries.json",
+    "evaluation/phase9/closeout/github-run-37436624165/closeout/business-tracing-ci-37436624165/checks.json",
+    "evaluation/phase9/closeout/github-run-37436624165/closeout/business-tracing-ci-37436624165/request-summaries.json",
+    "evaluation/phase9/closeout/github-run-37436624165/closeout/business-tracing-ci-37436624165/trace-evidence.json",
+    "evaluation/phase9/closeout/github-run-37436624165/closeout/redis-memory-ci-37436624165/checks.json",
+    "evaluation/phase9/closeout/github-run-37436624165/closeout/redis-memory-ci-37436624165/request-summaries.json",
+    "benchmarks/agent_tasks.csv",
+    "benchmarks/latency.csv",
+    "benchmarks/results.md",
+    "benchmarks/retrieval.csv",
+    "benchmarks/sources.json"
+  ],
+  "historical_content_changes": 0,
+  "campaign_markdown_broken_links": [],
+  "git_head": "bfb68a0895bd1576522cb4ddaefd55ef2b40fa8b",
+  "git_diff_check": "passed; Windows autocrlf informational warnings only",
+  "passed": true
+}

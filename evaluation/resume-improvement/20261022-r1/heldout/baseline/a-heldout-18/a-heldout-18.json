@@ -1,0 +1,99 @@
+{
+  "run_id": "f45f48f3cd1e4b609dd380cc2dba8632",
+  "case_id": "a-heldout-18",
+  "attempt": 1,
+  "variant": "baseline",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T12:06:38.198016+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请登记：我的账号无法登录，只影响本人。我做过密码重置和手机时间同步。更正，密码重置失败没改成，手机时间同步已完成。",
+      "http_status": 200,
+      "seconds": 4.074809599998844,
+      "http_response_seconds": 4.070792399998027,
+      "request_id": "636ad7b44c1f4a4290b63c7c5b67a321",
+      "server_timing": "rate_check;dur=2.864, thread_wait;dur=0.021, execution_wait;dur=0.011, business_database;dur=20.390, ownership;dur=22.124, ownership_preflight;dur=8.014, model_wait;dur=0.264, router;dur=2095.225, draft;dur=1894.729",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：账号无法登录\n描述：用户账号无法登录，仅影响本人。用户曾尝试密码重置但失败未改成；已完成手机时间同步。\n服务：未指定\n影响范围：仅影响本人\n优先级：P3（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16381-9195-7e42-a175-79dfe78f011d",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-ed91faf43a564e989294807b0ce22745",
+          "draft_version": 1,
+          "draft": {
+            "title": "账号无法登录",
+            "description": "用户账号无法登录，仅影响本人。用户曾尝试密码重置但失败未改成；已完成手机时间同步。",
+            "service_name": null,
+            "impact": "仅影响本人",
+            "priority": "P3"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "账号无法登录，仅影响本人；密码重置失败未改成，手机时间同步已完成",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "账号无法登录",
+          "description": "用户账号无法登录，仅影响本人。用户曾尝试密码重置但失败未改成；已完成手机时间同步。",
+          "service_name": null,
+          "impact": "仅影响本人",
+          "priority": "P3"
+        },
+        "draft_id": "draft-ed91faf43a564e989294807b0ce22745",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-f45f48f3-a-heldout-18-alice",
+    "bob": "p8-f45f48f3-a-heldout-18-bob"
+  },
+  "threads": {
+    "primary": "526823971f77498999d50037dd49c4bb",
+    "secondary": "35f084ad62104b2c8d3302ab68c524ff"
+  },
+  "measurement": true,
+  "cache_condition": "disabled",
+  "seconds": 4.242095400000835,
+  "final_ticket_count": 0,
+  "final_draft_version": 1,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "71cfcdacff95466abc816faddca59da9",
+    "d8e3d23cfd7545ab9dcaa6859db5ab9e"
+  ]
+}

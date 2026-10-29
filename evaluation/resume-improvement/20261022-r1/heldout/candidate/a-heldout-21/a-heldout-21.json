@@ -1,0 +1,99 @@
+{
+  "run_id": "7aa008aeabcf40478d45a9d2e45bc5e9",
+  "case_id": "a-heldout-21",
+  "attempt": 1,
+  "variant": "candidate",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T12:08:42.685469+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "创建工单：昨晚我重启后 VPN 好了一会儿，今天又坏了，只影响我。今天没重启，准备下班后再试。",
+      "http_status": 200,
+      "seconds": 4.777678800001013,
+      "http_response_seconds": 4.773703800001385,
+      "request_id": "73e80badd13d42ee9d5afb8810680bc5",
+      "server_timing": "rate_check;dur=2.718, thread_wait;dur=0.016, execution_wait;dur=0.011, business_database;dur=20.728, ownership;dur=22.415, ownership_preflight;dur=8.021, model_wait;dur=0.029, router;dur=2459.873, draft;dur=2232.234",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：VPN 连接故障\n描述：昨晚重启后 VPN 恢复正常了一会儿，今天又坏了。今天没有重启，准备下班后再试。\n服务：VPN\n影响范围：只影响我\n优先级：P3（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a16383-77dc-76d1-add2-bb8449f2e354",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-b2d167cc5ea3466fb264364c058d7b26",
+          "draft_version": 1,
+          "draft": {
+            "title": "VPN 连接故障",
+            "description": "昨晚重启后 VPN 恢复正常了一会儿，今天又坏了。今天没有重启，准备下班后再试。",
+            "service_name": "VPN",
+            "impact": "只影响我",
+            "priority": "P3"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "VPN",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "昨晚重启后 VPN 好了一会儿，今天又坏了，只影响我。今天没重启，准备下班后再试。",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "VPN 连接故障",
+          "description": "昨晚重启后 VPN 恢复正常了一会儿，今天又坏了。今天没有重启，准备下班后再试。",
+          "service_name": "VPN",
+          "impact": "只影响我",
+          "priority": "P3"
+        },
+        "draft_id": "draft-b2d167cc5ea3466fb264364c058d7b26",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-7aa008ae-a-heldout-21-alice",
+    "bob": "p8-7aa008ae-a-heldout-21-bob"
+  },
+  "threads": {
+    "primary": "b7fd79bf88b54ff09ccf88caf86f038f",
+    "secondary": "4ac6187b60f94304981eb0e17a835d2d"
+  },
+  "measurement": true,
+  "cache_condition": "disabled",
+  "seconds": 4.94881439999881,
+  "final_ticket_count": 0,
+  "final_draft_version": 1,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "f2c2c4ed5f85443bba20c83d2f05b854",
+    "c393e95f03f2486880c64644d219a24f"
+  ]
+}

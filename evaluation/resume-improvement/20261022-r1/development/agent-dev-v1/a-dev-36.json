@@ -1,0 +1,234 @@
+{
+  "run_id": "5cd45809d0fe459aae50f75b119a80c9",
+  "case_id": "a-dev-36",
+  "attempt": 1,
+  "variant": "candidate-v1",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T08:14:53.356016+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "请创建VPN报障工单，客户端启动失败，影响范围暂时不清楚。 本次场景标记为 a-dev-36。",
+      "http_status": 200,
+      "seconds": 4.145563799999763,
+      "request_id": "82a6be030bc3453ea7f5d4dbd8d47486",
+      "server_timing": "rate_check;dur=0.918, thread_wait;dur=0.008, execution_wait;dur=0.007, business_database;dur=13.021, ownership;dur=14.350, ownership_preflight;dur=3.076, model_wait;dur=0.033, router;dur=2137.141, draft;dur=1965.074",
+      "response": {
+        "type": "ai",
+        "content": "请补充影响范围。工单尚未提交；信息齐全后会展示草稿供你确认。未指定优先级时使用演示默认值 P3。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162ad-65b4-7c10-9b0d-d382563664b4",
+        "response_metadata": {},
+        "custom_data": {}
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "VPN",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "VPN客户端启动失败，影响范围暂时不清楚",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "approval_status": "collecting"
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    },
+    {
+      "index": 1,
+      "operation": "user",
+      "user_message": "影响范围确认了，只有我本人。",
+      "http_status": 200,
+      "seconds": 4.539661300000262,
+      "request_id": "c6c91d81b3c54011ad146c730677ee0d",
+      "server_timing": "rate_check;dur=1.102, thread_wait;dur=0.009, execution_wait;dur=0.008, business_database;dur=15.229, ownership;dur=15.273, ownership_preflight;dur=2.833, model_wait;dur=0.023, router;dur=2322.378, draft;dur=2162.708",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：VPN客户端启动失败\n描述：VPN客户端启动失败。影响范围：只有本人。\n服务：VPN\n影响范围：只有本人\n优先级：P3（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162ad-768e-7411-9b0e-2a9ab4b84b74",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-4188fd4ceba34bfbbb345efc7aeef685",
+          "draft_version": 1,
+          "draft": {
+            "title": "VPN客户端启动失败",
+            "description": "VPN客户端启动失败。影响范围：只有本人。",
+            "service_name": "VPN",
+            "impact": "只有本人",
+            "priority": "P3"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "VPN",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "VPN客户端启动失败，影响范围仅用户本人",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "VPN客户端启动失败",
+          "description": "VPN客户端启动失败。影响范围：只有本人。",
+          "service_name": "VPN",
+          "impact": "只有本人",
+          "priority": "P3"
+        },
+        "draft_id": "draft-4188fd4ceba34bfbbb345efc7aeef685",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    },
+    {
+      "index": 2,
+      "operation": "approve",
+      "user_message": null,
+      "http_status": 200,
+      "seconds": 0.06385839999984455,
+      "request_id": "79780618a87348cfb74c8329a10bfc0e",
+      "server_timing": "rate_check;dur=1.065, thread_wait;dur=0.009, execution_wait;dur=0.008, business_database;dur=29.404, ownership;dur=15.309, ownership_preflight;dur=3.443",
+      "response": {
+        "type": "ai",
+        "content": "本地演示工单已创建：DEMO-883302CFAC934A6F8FE2187F0E87D120，状态：open。标题：VPN客户端启动失败。未提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162ad-88f2-7b31-9dfc-87c7688147c8",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_result",
+          "status": "success",
+          "ticket": {
+            "ticket_id": "DEMO-883302CFAC934A6F8FE2187F0E87D120",
+            "draft_id": "draft-4188fd4ceba34bfbbb345efc7aeef685",
+            "draft_version": 1,
+            "thread_id": "19642e44ab514f1bbc5cf63ff847b2f2",
+            "idempotency_key": "draft-4188fd4ceba34bfbbb345efc7aeef685:v1",
+            "fingerprint": "77327b32f451ce182881f40407446c0dbfa51f89355354bee73fed7abe910681",
+            "draft": {
+              "title": "VPN客户端启动失败",
+              "description": "VPN客户端启动失败。影响范围：只有本人。",
+              "service_name": "VPN",
+              "impact": "只有本人",
+              "priority": "P3"
+            },
+            "state": "open",
+            "created_at": "2026-10-22T08:15:02.411505+00:00",
+            "user_id": "p8-5cd45809-a-dev-36-alice",
+            "source": "postgres"
+          },
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "VPN",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "VPN客户端启动失败，影响范围仅用户本人",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "VPN客户端启动失败",
+          "description": "VPN客户端启动失败。影响范围：只有本人。",
+          "service_name": "VPN",
+          "impact": "只有本人",
+          "priority": "P3"
+        },
+        "draft_id": "draft-4188fd4ceba34bfbbb345efc7aeef685",
+        "draft_version": 1,
+        "approval_status": "completed",
+        "approved_fingerprint": "77327b32f451ce182881f40407446c0dbfa51f89355354bee73fed7abe910681",
+        "approved_request_key": "draft-4188fd4ceba34bfbbb345efc7aeef685:v1",
+        "ticket_result": {
+          "kind": "ticket_result",
+          "status": "success",
+          "ticket": {
+            "ticket_id": "DEMO-883302CFAC934A6F8FE2187F0E87D120",
+            "draft_id": "draft-4188fd4ceba34bfbbb345efc7aeef685",
+            "draft_version": 1,
+            "thread_id": "19642e44ab514f1bbc5cf63ff847b2f2",
+            "idempotency_key": "draft-4188fd4ceba34bfbbb345efc7aeef685:v1",
+            "fingerprint": "77327b32f451ce182881f40407446c0dbfa51f89355354bee73fed7abe910681",
+            "draft": {
+              "title": "VPN客户端启动失败",
+              "description": "VPN客户端启动失败。影响范围：只有本人。",
+              "service_name": "VPN",
+              "impact": "只有本人",
+              "priority": "P3"
+            },
+            "state": "open",
+            "created_at": "2026-10-22T08:15:02.411505+00:00",
+            "user_id": "p8-5cd45809-a-dev-36-alice",
+            "source": "postgres"
+          },
+          "is_demo": true
+        }
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 1
+    }
+  ],
+  "users": {
+    "alice": "p8-5cd45809-a-dev-36-alice",
+    "bob": "p8-5cd45809-a-dev-36-bob"
+  },
+  "threads": {
+    "primary": "19642e44ab514f1bbc5cf63ff847b2f2",
+    "secondary": "d430f68102bd4120ae82736a12cb8e5d"
+  },
+  "seconds": 9.25295989999995,
+  "final_ticket_count": 1,
+  "final_draft_version": 1,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "1fa01ae73535426a8a2273b6d3ab1e88",
+    "30299dc0230743809766f9badd8613f6",
+    "5d80b30a41d24903bda4c4081fcc9076",
+    "2352f5cdf81941a1a545e1eba81e5f45"
+  ]
+}

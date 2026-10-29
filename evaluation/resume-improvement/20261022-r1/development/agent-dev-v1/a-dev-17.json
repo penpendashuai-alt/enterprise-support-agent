@@ -1,0 +1,96 @@
+{
+  "run_id": "5cd45809d0fe459aae50f75b119a80c9",
+  "case_id": "a-dev-17",
+  "attempt": 1,
+  "variant": "candidate-v1",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T08:13:19.757355+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "开工单：团队邮箱一直报错，我说已清理回收站。更正：只影响我，回收站只是点开查看，没删任何邮件。",
+      "http_status": 200,
+      "seconds": 4.58175299999948,
+      "request_id": "28b3573507b54d2db4dae660d6a244ee",
+      "server_timing": "rate_check;dur=1.600, thread_wait;dur=0.017, execution_wait;dur=0.009, business_database;dur=17.056, ownership;dur=18.661, ownership_preflight;dur=4.164, model_wait;dur=0.066, router;dur=2365.649, draft;dur=2157.780",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：团队邮箱一直报错\n描述：团队邮箱一直报错。用户已点开回收站查看，但未删除任何邮件。影响范围仅用户本人。\n服务：邮箱\n影响范围：只影响我\n优先级：P3（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162ab-f817-75c3-acab-8e2f3bc0c5dd",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-7bababf3c97d453fbdae8b95d823ea16",
+          "draft_version": 1,
+          "draft": {
+            "title": "团队邮箱一直报错",
+            "description": "团队邮箱一直报错。用户已点开回收站查看，但未删除任何邮件。影响范围仅用户本人。",
+            "service_name": "邮箱",
+            "impact": "只影响我",
+            "priority": "P3"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": null,
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "团队邮箱一直报错，仅影响我本人；回收站只是点开查看，未删除任何邮件",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "团队邮箱一直报错",
+          "description": "团队邮箱一直报错。用户已点开回收站查看，但未删除任何邮件。影响范围仅用户本人。",
+          "service_name": "邮箱",
+          "impact": "只影响我",
+          "priority": "P3"
+        },
+        "draft_id": "draft-7bababf3c97d453fbdae8b95d823ea16",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-5cd45809-a-dev-17-alice",
+    "bob": "p8-5cd45809-a-dev-17-bob"
+  },
+  "threads": {
+    "primary": "a63273c0759840f09e20737be453ce41",
+    "secondary": "ba0c53664970475494ef7a649469fa26"
+  },
+  "seconds": 4.747154699999555,
+  "final_ticket_count": 0,
+  "final_draft_version": 1,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "3e6712822efd4c57a96fe78fe45834b4",
+    "f52fd8b88ab948bd9cc0a0b0166e8e0c"
+  ]
+}

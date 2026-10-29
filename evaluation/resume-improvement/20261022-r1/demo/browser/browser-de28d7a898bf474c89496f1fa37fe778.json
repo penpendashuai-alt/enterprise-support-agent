@@ -1,0 +1,16 @@
+{
+  "case_id": "browser-de28d7a898bf474c89496f1fa37fe778",
+  "run_id": "c0e8d6886a084e7d809a89bb6bce922a",
+  "path": "/support-agent/invoke",
+  "query": "",
+  "method": "POST",
+  "status": 200,
+  "request_body": "{\"approval\":{\"draft_id\":\"draft-e8b93e1c4e0e4abaa3d38c1366f86ba4\",\"draft_version\":2,\"action\":\"approve\",\"draft\":null},\"message\":null,\"model\":\"openai-compatible\",\"thread_id\":\"01c1dd2a-45d9-4585-864c-41ebc966a3ef\",\"user_id\":\"b5d0cbfd-f715-4da5-a1e2-52bb8629dc60\",\"agent_config\":{}}",
+  "response_body": "{\"type\":\"ai\",\"content\":\"本地演示工单已创建：DEMO-4E30F3F36E8E4ADB81D11B139A9187B9，状态：open。标题：VPN 连接失败。未提交到真实企业系统。\",\"tool_calls\":[],\"tool_call_id\":null,\"run_id\":\"01a16992-dde0-7a40-b750-5782eb63a589\",\"response_metadata\":{},\"custom_data\":{\"kind\":\"ticket_result\",\"status\":\"success\",\"ticket\":{\"ticket_id\":\"DEMO-4E30F3F36E8E4ADB81D11B139A9187B9\",\"draft_id\":\"draft-e8b93e1c4e0e4abaa3d38c1366f86ba4\",\"draft_version\":2,\"thread_id\":\"01c1dd2a-45d9-4585-864c-41ebc966a3ef\",\"idempotency_key\":\"draft-e8b93e1c4e0e4abaa3d38c1366f86ba4:v2\",\"fingerprint\":\"d87be4036aa8120edd83f797dcff3acdc52b834125cd0806c32c89ea7a9135dd\",\"draft\":{\"title\":\"VPN 连接失败\",\"description\":\"VPN 从今天下午两点起连接失败。尚未尝试重启。\",\"service_name\":\"VPN\",\"impact\":\"本人所在的三人小组\",\"priority\":\"P2\"},\"state\":\"open\",\"created_at\":\"2026-10-23T16:23:15.212890+00:00\",\"user_id\":\"b5d0cbfd-f715-4da5-a1e2-52bb8629dc60\",\"source\":\"postgres\"},\"is_demo\":true}}",
+  "response_headers": {
+    "content-type": "application/json",
+    "x-request-id": "fbd7cd23cfa347198a5fc366aeaeb093",
+    "server-timing": "rate_check;dur=1.882, thread_wait;dur=0.017, execution_wait;dur=0.009, business_database;dur=35.364, ownership;dur=20.684, ownership_preflight;dur=3.732"
+  },
+  "at": "2026-10-23T16:23:15.247876+00:00"
+}

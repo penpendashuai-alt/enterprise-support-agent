@@ -1,0 +1,96 @@
+{
+  "run_id": "5cd45809d0fe459aae50f75b119a80c9",
+  "case_id": "a-dev-14",
+  "attempt": 1,
+  "variant": "candidate-v1",
+  "layer": "agent",
+  "status": "completed",
+  "started_at": "2026-10-22T08:13:05.414728+00:00",
+  "turns": [
+    {
+      "index": 0,
+      "operation": "user",
+      "user_message": "建一个邮箱工单：我个人收不到外部邮件。请帮我检查规则，检查目前还没开始；不要写成我已经检查过。",
+      "http_status": 200,
+      "seconds": 4.401666300000215,
+      "request_id": "6e1d6efc854c409bb5593c9724645e3c",
+      "server_timing": "rate_check;dur=1.126, thread_wait;dur=0.009, execution_wait;dur=0.009, business_database;dur=16.313, ownership;dur=17.983, ownership_preflight;dur=3.626, model_wait;dur=0.026, router;dur=2413.989, draft;dur=1927.699",
+      "response": {
+        "type": "ai",
+        "content": "请确认本地演示工单草稿（版本 1）：\n标题：个人收不到外部邮件\n描述：我个人收不到外部邮件。希望检查邮箱规则；目前尚未开始检查。\n服务：邮箱\n影响范围：我个人\n优先级：P3（演示优先级，无 SLA 承诺）\n请使用确认创建、修改草稿或取消操作。工单尚未确认创建；不会提交到真实企业系统。",
+        "tool_calls": [],
+        "tool_call_id": null,
+        "run_id": "01a162ab-c00f-71f0-bc13-746f536cc71b",
+        "response_metadata": {},
+        "custom_data": {
+          "kind": "ticket_approval",
+          "draft_id": "draft-2e761dc99bf44eadaae794f2e2046235",
+          "draft_version": 1,
+          "draft": {
+            "title": "个人收不到外部邮件",
+            "description": "我个人收不到外部邮件。希望检查邮箱规则；目前尚未开始检查。",
+            "service_name": "邮箱",
+            "impact": "我个人",
+            "priority": "P3"
+          },
+          "approval_status": "pending",
+          "ticket_result": null,
+          "is_demo": true
+        }
+      },
+      "state": {
+        "knowledge_required": false,
+        "retrieval_query": null,
+        "intent": "ticket_request",
+        "entities": {
+          "service_name": "邮箱",
+          "device_id": null,
+          "ticket_id": null,
+          "issue_description": "个人收不到外部邮件，需要检查规则（检查目前还没开始）",
+          "ticket_action": "create"
+        },
+        "needs_clarification": false,
+        "clarification_question": null,
+        "ticket_draft": {
+          "title": "个人收不到外部邮件",
+          "description": "我个人收不到外部邮件。希望检查邮箱规则；目前尚未开始检查。",
+          "service_name": "邮箱",
+          "impact": "我个人",
+          "priority": "P3"
+        },
+        "draft_id": "draft-2e761dc99bf44eadaae794f2e2046235",
+        "draft_version": 1,
+        "approval_status": "pending",
+        "approved_fingerprint": null,
+        "approved_request_key": null,
+        "ticket_result": null
+      },
+      "retrieval": null,
+      "tools": [],
+      "validation_records": [],
+      "sse_events": [],
+      "sse_error": null,
+      "ticket_count": 0
+    }
+  ],
+  "users": {
+    "alice": "p8-5cd45809-a-dev-14-alice",
+    "bob": "p8-5cd45809-a-dev-14-bob"
+  },
+  "threads": {
+    "primary": "247a0d3f0ff9494fb231f47273d87ec3",
+    "secondary": "eca6fa4f12ed4f3297a314cebb1ae82b"
+  },
+  "seconds": 4.567879600000197,
+  "final_ticket_count": 0,
+  "final_draft_version": 1,
+  "structural": {
+    "passed": true,
+    "failures": [],
+    "metrics": {}
+  },
+  "model_calls": [
+    "fce434529ce341df8dca884fef63a16c",
+    "bdee37cb1e0941ec98286758111c115c"
+  ]
+}

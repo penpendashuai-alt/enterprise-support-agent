@@ -1,0 +1,16 @@
+{
+  "case_id": "browser-8f09425bc3754a4ca26f09ae29103870",
+  "run_id": "9a41717add7341b88bb3f2711a7c26aa",
+  "path": "/support-agent/approval",
+  "query": "thread_id=01c1dd2a-45d9-4585-864c-41ebc966a3ef&user_id=b5d0cbfd-f715-4da5-a1e2-52bb8629dc60",
+  "method": "GET",
+  "status": 200,
+  "request_body": "",
+  "response_body": "{\"pending\":null}",
+  "response_headers": {
+    "content-type": "application/json",
+    "x-request-id": "88deef5f330d4df2b6236ec213e89d99",
+    "server-timing": "rate_check;dur=1.378, thread_wait;dur=0.013, execution_wait;dur=0.009, business_database;dur=5.282, ownership;dur=5.319, ownership_preflight;dur=2.821"
+  },
+  "at": "2026-10-23T11:26:35.263186+00:00"
+}

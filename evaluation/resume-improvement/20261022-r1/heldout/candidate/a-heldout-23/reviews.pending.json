@@ -1,0 +1,23 @@
+[
+  {
+    "run_id": "ef0d208fbfad4a6f8213b72dbecd1654",
+    "case_id": "a-heldout-23",
+    "attempt": 1,
+    "record_sha256": "edc959ac8ed5016b0dbd9890170ae32877de71312c6732f71d11742cd6d97505",
+    "status": "pending",
+    "reviewer_type": "developer_assistant_nonindependent",
+    "reviewer": "",
+    "reviewed_at": null,
+    "rubric_version": "phase8-rubric-v1",
+    "points": {},
+    "evidence_complete": "uncertain",
+    "claims": [],
+    "missing_citations": null,
+    "refusal": "uncertain",
+    "semantic_success": "uncertain",
+    "primary_cause": null,
+    "secondary_causes": [],
+    "rationale": "",
+    "uncertainties": []
+  }
+]
