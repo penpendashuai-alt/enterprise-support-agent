@@ -36,4 +36,4 @@ Phase 8 的 P1 问题中可能找到了相关文档但缺少关键块；合法�
 
 Phase 7 精确缓存避免命中查询的外部 Embedding/搜索调用，但模型仍需路由和生成；4 个真实 Agent 样本/组没有证明端到端提速。不同实验环境的组件 P95 不合并；历史成本仅按返回 usage 估价。
 
-Phase 5 实际 ES 验证为本机 Windows 服务，当前 Docker 下 Hybrid 组合未重新运行。本地正式知识库付费导入仍未执行；Phase 9/10 的 Qdrant 演示只有显式标注的 CI fixture，不等于 72 块正式索引质量验证。
+Phase 5 实际 ES 验证为本机 Windows 服务，当前 Docker 下 Hybrid 组合未重新运行。Phase 9/10 当时的 Qdrant 演示仅使用显式标注的 CI fixture。2026-10-22～24 已从原冻结快照导入本地正式 72 块，完成新留出检索、缓存性能及真实模型浏览器验证；见 [最新报告](../evaluation/resume-improvement/20261022-r1/README.md)。本轮未重跑七组检索对照，不跨实验环境合并时延。

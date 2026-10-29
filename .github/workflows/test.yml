@@ -49,6 +49,31 @@ jobs:
     - name: Check offline benchmark reproducibility
       run: python scripts/summarize_phase10.py --check
 
+    - name: Recompute support-agent quality and performance evidence
+      shell: bash
+      run: |
+        campaign=evaluation/resume-improvement/20261022-r1
+        python scripts/summarize_resume_campaign.py --split heldout --baseline "$campaign/heldout/baseline" --candidate "$campaign/heldout/candidate" --baseline-reviews "$campaign/reviews/baseline-heldout.json" --candidate-reviews "$campaign/reviews/candidate-heldout.json" --apply-protocol-amendments --output .cache/evidence-check/quality
+        python scripts/summarize_resume_performance.py agent --input "$campaign/performance/agent-confirm" --reviews "$campaign/reviews/performance-confirm.json" --output .cache/evidence-check/agent.json
+        python scripts/summarize_resume_performance.py cache --input "$campaign/performance/retrieval-cache-recovered/report.json" --output .cache/evidence-check/cache.json
+        python - <<'PY'
+        import json
+        from pathlib import Path
+
+        root = Path("evaluation/resume-improvement/20261022-r1/derived")
+        rebuilt = Path(".cache/evidence-check")
+        pairs = {
+            "quality/quality.json": "heldout-corrected-protocol/quality.json",
+            "agent.json": "performance-confirm.json",
+            "cache.json": "retrieval-cache.json",
+        }
+        for actual, expected in pairs.items():
+            assert json.loads((rebuilt / actual).read_text(encoding="utf-8")) == json.loads(
+                (root / expected).read_text(encoding="utf-8")
+            ), f"Evidence mismatch: {expected}"
+        print("Frozen quality and performance evidence reproduced")
+        PY
+
   lint-markdown:
     runs-on: ubuntu-latest
 
@@ -69,7 +94,7 @@ jobs:
         UV_SYSTEM_PYTHON: 1
     - name: Lint markdown with pymarkdown
       run: |
-        uv run pymarkdown scan README.md docs/
+        uv run pymarkdown scan README.md docs/ evaluation/resume-improvement/20261022-r1/
 
   test-docker:
     runs-on: ubuntu-latest

@@ -14,6 +14,7 @@ privatecredentials/*
 
 # Keep private planning and local execution data out of build contexts.
 personal/
+tmp/
 *.db-wal
 *.db-shm
 *.db-journal

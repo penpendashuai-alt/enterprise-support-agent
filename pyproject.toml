@@ -1,7 +1,7 @@
 [project]
 name = "agent-service-toolkit"
 version = "0.1.0"
-description = "Full toolkit for running an AI agent service built with LangGraph, FastAPI and Streamlit"
+description = "Enterprise IT support agent with grounded RAG, human-approved tickets and recoverable workflows"
 readme = "README.md"
 authors = [{ name = "Joshua Carroll", email = "carroll.joshk@gmail.com" }]
 classifiers = [

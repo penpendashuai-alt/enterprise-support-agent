@@ -2,13 +2,17 @@
 
 本目录保留 Synthetic enterprise support dataset / public technical documentation 的 Phase 4 Dense 基线和 Phase 5 对照实验。真实评测使用 DashScope Embedding、Qdrant Cloud、Elasticsearch、Reranker 和聊天模型；Mock 只用于程序行为测试。
 
+## 最新：2026-10 质量与性能验证
+
+[完整报告](resume-improvement/20261022-r1/README.md) · [改进案例](resume-improvement/20261022-r1/case-studies.md) · [真实模型演示](resume-improvement/20261022-r1/demo/README.md)。新增 80 个 Agent 任务、120 条检索查询及配对性能验证，草稿留出生成且忠实完成 4/10 → 9/10；整体结论、失败记录与分母均在报告中保留。以下为各阶段历史结果，不与新实验混算。
+
 ## Phase 10
 
 最终 [Benchmark](../benchmarks/results.md)、[技术交付记录](phase10/README.md) 与 [真实浏览器演示](../docs/demo.md)。本阶段只做离线复算和确定性流程验证，没有新增付费模型调用；个人求职材料仅保留本地。
 
 ## Phase 9
 
-部署、健康、日志过滤、草稿事实状态回归与容器演练见 [Phase 9 记录索引](phase9/README.md) 和 [阶段文档](../docs/phase9_deployment_observability.md)。核心收尾完成，Redis 压力、远程追踪 API/界面和 GitHub Actions 结果见 [收尾记录](phase9/closeout/README.md)。Phase 9 当时未做浏览器 WebSocket 验证，Phase 10 已补充确定性浏览器流程；付费本地正式导入和当前部署的 Hybrid 运行仍未验证。
+部署、健康、日志过滤、草稿事实状态回归与容器演练见 [Phase 9 记录索引](phase9/README.md) 和 [阶段文档](../docs/phase9_deployment_observability.md)。核心收尾完成，Redis 压力、远程追踪 API/界面和 GitHub Actions 结果见 [收尾记录](phase9/closeout/README.md)。Phase 9 当时未做浏览器 WebSocket 验证，Phase 10 已补充确定性浏览器流程；当时未做正式本地知识导入；2026-10 已补充正式 72 块导入与真实模型演示，当前部署的 Hybrid 运行仍未验证。
 
 ## Phase 8
 
